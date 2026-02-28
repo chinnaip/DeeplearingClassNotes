@@ -1,0 +1,8157 @@
+WEBVTT
+
+1
+00:14:16.745 --> 00:14:17.555
+Good evening to all,
+
+2
+00:14:18.095 --> 00:14:19.095
+Sir.
+
+3
+00:14:21.495 --> 00:14:24.725
+All good evening,
+
+4
+00:14:27.225 --> 00:14:30.365
+uh, sun, is it getting reflected in the Dr. Sun?
+
+5
+00:14:31.025 --> 00:14:34.725
+Uh, sir, that I think you have made changes in some other
+
+6
+00:14:35.835 --> 00:14:36.835
+File. Let me
+
+7
+00:14:36.835 --> 00:14:37.725
+look into it.
+
+8
+00:14:41.295 --> 00:14:43.525
+Check in. No network introduction only.
+
+9
+00:14:43.605 --> 00:14:48.585
+I have done it before starting the propagation.
+
+10
+00:14:49.245 --> 00:14:51.525
+Ah, yes, sir. The, just
+
+11
+00:14:51.815 --> 00:14:54.805
+after that, uh, title page of web application. I'm
+
+12
+00:14:55.595 --> 00:14:56.595
+Okay. Okay.
+
+13
+00:14:56.595 --> 00:15:00.895
+Okay. So yes, we are in the same file.
+
+14
+00:15:01.055 --> 00:15:01.735
+I can see you.
+
+15
+00:15:05.785 --> 00:15:06.205
+Yes, sir.
+
+16
+00:15:06.365 --> 00:15:09.035
+I think, uh, which slide number it is, sir?
+
+17
+00:15:11.335 --> 00:15:15.965
+Let me check. 8 59.
+
+18
+00:15:17.995 --> 00:15:21.785
+Um, this is, let me see. Uh,
+
+19
+00:15:24.135 --> 00:15:25.905
+Yeah, slide number 50.
+
+20
+00:15:26.935 --> 00:15:28.945
+Okay. 50. Yes. Yes.
+
+21
+00:15:29.155 --> 00:15:33.145
+52. Uh, 57.
+
+22
+00:15:33.645 --> 00:15:35.385
+Yes, sir. Yes. Those things.
+
+23
+00:15:35.885 --> 00:15:37.905
+Yes, it's fine, sir.
+
+24
+00:15:40.675 --> 00:15:42.165
+Yeah, you can share the screen.
+
+25
+00:15:44.475 --> 00:15:46.005
+Okay. I, I'll share, sir. It's,
+
+26
+00:16:12.385 --> 00:16:12.805
+yes, sir.
+
+27
+00:16:13.635 --> 00:16:18.485
+Yeah, just go to the previous slide. Okay. Okay.
+
+28
+00:16:19.875 --> 00:16:22.445
+Okay, tk, uh, shall we start?
+
+29
+00:16:26.625 --> 00:16:28.125
+Yes, sir. We can start. I guess.
+
+30
+00:16:48.045 --> 00:16:49.785
+So, uh, good evening all.
+
+31
+00:16:49.925 --> 00:16:53.225
+Um, um, a quick recap.
+
+32
+00:16:53.325 --> 00:16:58.105
+Uh, I think we discussed about, uh, we started
+
+33
+00:16:58.175 --> 00:17:02.385
+with, uh, the basic computing element, perceptron,
+
+34
+00:17:03.635 --> 00:17:06.105
+where the step function
+
+35
+00:17:06.285 --> 00:17:08.545
+or hard limiting function is the output function.
+
+36
+00:17:10.665 --> 00:17:14.225
+A single layer of perceptron can deal
+
+37
+00:17:14.225 --> 00:17:15.985
+with linearly separable classes.
+
+38
+00:17:17.565 --> 00:17:21.265
+If the classes are not linearly separable, then we need
+
+39
+00:17:21.265 --> 00:17:23.585
+to add more layers of perception.
+
+40
+00:17:24.805 --> 00:17:28.145
+Uh, and again, the, the, the class
+
+41
+00:17:28.205 --> 00:17:30.945
+of problems which are not linearly, sufferable are again,
+
+42
+00:17:30.945 --> 00:17:34.705
+divided into two broad categories, which are, um,
+
+43
+00:17:35.285 --> 00:17:37.705
+convex in nature and which are non convex in nature,
+
+44
+00:17:38.635 --> 00:17:39.945
+which are convex in nature.
+
+45
+00:17:39.945 --> 00:17:42.585
+Then I can have one more layer of perception, two layers
+
+46
+00:17:42.605 --> 00:17:46.625
+of perception, one input layer, um, that will help us
+
+47
+00:17:46.725 --> 00:17:48.785
+to deal with the machine learning tasks,
+
+48
+00:17:48.935 --> 00:17:50.685
+which are not linearly separable,
+
+49
+00:17:50.825 --> 00:17:55.205
+but the hyper surfaces can form convex surfaces.
+
+50
+00:17:57.725 --> 00:18:02.185
+The non convex part, we have to add one more, um,
+
+51
+00:18:03.315 --> 00:18:04.425
+layer of perception.
+
+52
+00:18:04.565 --> 00:18:07.265
+And with that three layers of perception, one input layer,
+
+53
+00:18:07.265 --> 00:18:09.345
+that is called as a multi-layer perception.
+
+54
+00:18:09.855 --> 00:18:13.145
+With that, we are able to overcome the challenges of
+
+55
+00:18:13.145 --> 00:18:15.185
+what are called the representation problems,
+
+56
+00:18:15.925 --> 00:18:19.425
+how the problems we used to see we are, we are able
+
+57
+00:18:19.425 --> 00:18:23.425
+to represent that, uh, that we say we will be able to
+
+58
+00:18:23.945 --> 00:18:26.265
+construct the hyper surface, non-line hyper surface,
+
+59
+00:18:26.395 --> 00:18:28.785
+which can separate the data points of,
+
+60
+00:18:28.805 --> 00:18:29.825
+uh, different classes.
+
+61
+00:18:32.205 --> 00:18:36.825
+And so this resulted in,
+
+62
+00:18:37.805 --> 00:18:39.345
+uh, now coming up
+
+63
+00:18:39.345 --> 00:18:42.305
+with a new multi-layer feed forward neural network
+
+64
+00:18:42.345 --> 00:18:47.185
+architecture, where framework wise, it showed that
+
+65
+00:18:48.045 --> 00:18:50.505
+it is indeed possible to, um,
+
+66
+00:18:52.865 --> 00:18:57.165
+um, come up with a neural network model, uh,
+
+67
+00:18:57.175 --> 00:19:00.405
+which can deal with problems of different complexity,
+
+68
+00:19:00.485 --> 00:19:03.815
+linearly supportable, not linear supportable,
+
+69
+00:19:03.815 --> 00:19:04.895
+but con in nature.
+
+70
+00:19:07.315 --> 00:19:10.365
+Next one is not linear is non convex also.
+
+71
+00:19:10.625 --> 00:19:14.525
+So all that degree of con complexities we can deal
+
+72
+00:19:14.665 --> 00:19:16.245
+by taking multi-layer percept.
+
+73
+00:19:19.255 --> 00:19:22.755
+Now the issue is, uh, that the, that resulted in solving,
+
+74
+00:19:22.985 --> 00:19:27.675
+getting some high hypothesis solution for, uh,
+
+75
+00:19:28.295 --> 00:19:29.395
+the hard problems.
+
+76
+00:19:29.825 --> 00:19:34.395
+Okay. And so
+
+77
+00:19:34.585 --> 00:19:37.875
+with that, people are able to say, yes,
+
+78
+00:19:38.015 --> 00:19:39.995
+now we can deal with such problems.
+
+79
+00:19:40.775 --> 00:19:45.675
+But it in turn resulted in a very important
+
+80
+00:19:46.935 --> 00:19:49.715
+big bottleneck in the neural network theory.
+
+81
+00:19:50.805 --> 00:19:55.585
+Uh, and that is what, uh, resulted in the
+
+82
+00:19:56.735 --> 00:19:58.465
+development of a new algorithm
+
+83
+00:19:58.565 --> 00:20:01.105
+for training such a multi-layer perceptron called
+
+84
+00:20:01.105 --> 00:20:02.185
+as bap propagation.
+
+85
+00:20:03.675 --> 00:20:04.815
+The genesis behind
+
+86
+00:20:04.815 --> 00:20:07.615
+that I will explain then Tar Sunil will take
+
+87
+00:20:07.615 --> 00:20:08.815
+over the rest of the part.
+
+88
+00:20:09.405 --> 00:20:13.455
+Next slide. Sunil here
+
+89
+00:20:13.955 --> 00:20:18.775
+for no, uh, just for, um, a simplicity sake,
+
+90
+00:20:19.215 --> 00:20:23.455
+I have taken from this book, uh, a three layer network where
+
+91
+00:20:23.985 --> 00:20:26.815
+there is one input layer, which is all the
+
+92
+00:20:27.365 --> 00:20:30.895
+neurons are linear in nature, output functions are linear,
+
+93
+00:20:31.365 --> 00:20:35.935
+whereas there are two perceptron layers output layer,
+
+94
+00:20:35.955 --> 00:20:38.175
+and the in between one layer is there,
+
+95
+00:20:38.175 --> 00:20:39.495
+which is cause the hidden layer,
+
+96
+00:20:39.715 --> 00:20:41.815
+the nomenclature given is hidden layer.
+
+97
+00:20:42.825 --> 00:20:47.005
+And with that, uh, so suppose you just take a three layer
+
+98
+00:20:47.045 --> 00:20:51.085
+feed form network will linearly inseparable problems,
+
+99
+00:20:51.225 --> 00:20:56.125
+but, uh, which where the hyper we can form convex surfaces
+
+100
+00:20:56.155 --> 00:20:58.885
+with the, at the hyper surfaces at the output
+
+101
+00:20:58.885 --> 00:21:00.885
+of the, they can be dead.
+
+102
+00:21:02.275 --> 00:21:06.735
+But the very important, uh, thing, uh, they found out was
+
+103
+00:21:06.825 --> 00:21:08.975
+after proposing this framework,
+
+104
+00:21:12.145 --> 00:21:17.085
+see when machine learning tasks are
+
+105
+00:21:17.085 --> 00:21:20.085
+given, since input outputs are given for training network,
+
+106
+00:21:20.085 --> 00:21:21.605
+that is a supervised learning task.
+
+107
+00:21:23.095 --> 00:21:26.355
+Now, when machine learning tasks are given, they,
+
+108
+00:21:26.355 --> 00:21:28.035
+you are given input data points
+
+109
+00:21:28.215 --> 00:21:30.195
+and the corresponding output data points.
+
+110
+00:21:31.315 --> 00:21:33.575
+If you recall perception learning law,
+
+111
+00:21:35.045 --> 00:21:37.385
+if you know the target output
+
+112
+00:21:38.675 --> 00:21:41.015
+and the actual output coming out of this neuron,
+
+113
+00:21:41.315 --> 00:21:42.335
+you can find the error.
+
+114
+00:21:42.715 --> 00:21:44.575
+If you know the error, you can adjust the weights
+
+115
+00:21:44.575 --> 00:21:48.415
+for the links leading to that particular output neuron.
+
+116
+00:21:51.545 --> 00:21:54.645
+But the challenge is, if I go to the hidden layer,
+
+117
+00:21:56.215 --> 00:21:58.335
+I don't know what should be the output of this.
+
+118
+00:21:59.865 --> 00:22:02.915
+This is a very, very important point to appreciate.
+
+119
+00:22:02.915 --> 00:22:07.275
+The rest of the explanation that we do what is given
+
+120
+00:22:07.335 --> 00:22:10.115
+to us in a given machine learning task is only the input
+
+121
+00:22:10.115 --> 00:22:12.475
+to the input layer and the output to the output layer.
+
+122
+00:22:14.125 --> 00:22:17.465
+So once I have the target output for the output layer
+
+123
+00:22:17.605 --> 00:22:20.625
+and apply the input data, it flows from left to right.
+
+124
+00:22:20.625 --> 00:22:21.905
+That's why it's called feet far.
+
+125
+00:22:23.125 --> 00:22:24.705
+And at the output of each
+
+126
+00:22:24.705 --> 00:22:26.225
+of the neurons in the output layer,
+
+127
+00:22:26.245 --> 00:22:27.865
+you get the actual output.
+
+128
+00:22:28.005 --> 00:22:32.445
+Yes. Then once I have target output B
+
+129
+00:22:32.445 --> 00:22:35.645
+and the actual output test B minus S delta error, I get,
+
+130
+00:22:36.005 --> 00:22:38.085
+I can adjust the weights of the links leading
+
+131
+00:22:38.345 --> 00:22:40.045
+to the neurons in the output layer.
+
+132
+00:22:41.005 --> 00:22:43.545
+But if I go to the hidden layer, I don't know
+
+133
+00:22:43.545 --> 00:22:45.185
+what is the target output there
+
+134
+00:22:46.085 --> 00:22:48.095
+because it is not available to us.
+
+135
+00:22:49.925 --> 00:22:51.295
+This is a very important point.
+
+136
+00:22:51.755 --> 00:22:55.135
+At the hidden layer, we don't know the target output
+
+137
+00:22:55.815 --> 00:22:57.835
+if I don't know the target output.
+
+138
+00:22:59.085 --> 00:23:03.465
+Uh, uh, because even though structurally we show
+
+139
+00:23:04.035 --> 00:23:06.625
+these output nodes are not directly available
+
+140
+00:23:06.725 --> 00:23:10.685
+for external tapping, what we have is only the input nodes
+
+141
+00:23:10.685 --> 00:23:12.205
+for the input layer and the outputs
+
+142
+00:23:12.205 --> 00:23:14.565
+of the output layer are only visible to the external wire.
+
+143
+00:23:15.065 --> 00:23:16.245
+The hidden layer is hidden.
+
+144
+00:23:16.245 --> 00:23:17.925
+That's why the name hidden has come.
+
+145
+00:23:18.145 --> 00:23:21.125
+You don't have access to the outputs of those
+
+146
+00:23:21.675 --> 00:23:22.845
+neurons in the hidden layer.
+
+147
+00:23:26.595 --> 00:23:29.935
+And since I don't know the target output
+
+148
+00:23:30.075 --> 00:23:35.055
+of the hidden layer neurons, so
+
+149
+00:23:35.125 --> 00:23:39.455
+accordingly, I cannot compute the, the, uh, error
+
+150
+00:23:39.565 --> 00:23:40.975
+between the target output
+
+151
+00:23:40.975 --> 00:23:45.925
+and the actual, if I don't know, know the error.
+
+152
+00:23:47.275 --> 00:23:48.955
+I cannot apply perceptron learning
+
+153
+00:23:49.015 --> 00:23:50.515
+to the hidden layer neurons.
+
+154
+00:23:50.515 --> 00:23:53.475
+So accordingly, I will not be able to adjust weights for the
+
+155
+00:23:54.405 --> 00:23:56.955
+links leading to the neurons hidden layer.
+
+156
+00:23:57.765 --> 00:24:00.015
+This is a very, very, very important statement.
+
+157
+00:24:01.095 --> 00:24:03.475
+And the same thing, suppose you pictorially,
+
+158
+00:24:03.475 --> 00:24:06.515
+you can visualize, I will put one more hidden layer here,
+
+159
+00:24:06.515 --> 00:24:08.435
+hidden layer one, layer two,
+
+160
+00:24:12.015 --> 00:24:14.075
+But, but for both the hidden layers,
+
+161
+00:24:14.235 --> 00:24:15.635
+I don't have the target output.
+
+162
+00:24:16.175 --> 00:24:19.075
+So accordingly, I will not be able to adjust weight
+
+163
+00:24:19.135 --> 00:24:22.755
+for both the hidden layer, one, hidden layer, uh, two, uh,
+
+164
+00:24:22.925 --> 00:24:26.195
+links leading, leading links leading to those hidden layers.
+
+165
+00:24:27.745 --> 00:24:30.755
+Okay, so, uh, so,
+
+166
+00:24:31.095 --> 00:24:34.595
+and even though framework wise they told no,
+
+167
+00:24:35.135 --> 00:24:37.795
+you take three layer, I can do convex problems
+
+168
+00:24:37.935 --> 00:24:39.035
+and I take four layer.
+
+169
+00:24:39.075 --> 00:24:41.235
+I can do non convex problems also,
+
+170
+00:24:41.895 --> 00:24:46.835
+but the, we ended up, we are able to give some solution,
+
+171
+00:24:47.235 --> 00:24:48.955
+hypothetical solution for
+
+172
+00:24:51.055 --> 00:24:52.265
+hard problems.
+
+173
+00:24:53.435 --> 00:24:56.885
+Whereas it, this resulted in another problem,
+
+174
+00:24:57.035 --> 00:25:00.685
+what is called, uh, unable to adjust the weights of
+
+175
+00:25:01.575 --> 00:25:03.245
+links leading to a done layer one
+
+176
+00:25:03.245 --> 00:25:06.455
+and two, uh, in the case of four layer network,
+
+177
+00:25:06.455 --> 00:25:09.415
+hidden layer one, one layer in case of three layer network.
+
+178
+00:25:10.095 --> 00:25:13.575
+'cause I don't know the target. Okay?
+
+179
+00:25:16.355 --> 00:25:21.325
+So as a result of that, I'm not able to learn the weights
+
+180
+00:25:21.325 --> 00:25:26.205
+of the links leading to the, uh, links of the done layer.
+
+181
+00:25:27.705 --> 00:25:31.565
+And this problem is called as hard learning problem.
+
+182
+00:25:32.275 --> 00:25:36.805
+This problem is called as a hard learning problem. Okay?
+
+183
+00:25:37.665 --> 00:25:39.965
+And so as a result of that,
+
+184
+00:25:41.025 --> 00:25:45.855
+the whole neural network field know, uh,
+
+185
+00:25:46.445 --> 00:25:49.295
+took a backseat for nearly a decade or so.
+
+186
+00:25:49.515 --> 00:25:52.495
+People don't know how to train such a network, just like,
+
+187
+00:25:53.155 --> 00:25:55.775
+uh, deep learning networks, frameworks or propose,
+
+188
+00:25:55.795 --> 00:25:58.215
+but people don't know to train the deep neural network
+
+189
+00:25:58.275 --> 00:25:59.655
+models in the same way.
+
+190
+00:26:00.585 --> 00:26:03.135
+These feedforward networks, even though architectures
+
+191
+00:26:03.135 --> 00:26:07.905
+or proposals, There is no way they can
+
+192
+00:26:08.105 --> 00:26:09.705
+demonstrate how to train such network.
+
+193
+00:26:10.985 --> 00:26:12.045
+And this problem
+
+194
+00:26:12.195 --> 00:26:13.565
+therefore propose it as
+
+195
+00:26:13.565 --> 00:26:15.405
+what is called a hard learning problem.
+
+196
+00:26:17.125 --> 00:26:19.295
+Hard problem means a representation problem,
+
+197
+00:26:20.205 --> 00:26:22.335
+hard learning problem is learning.
+
+198
+00:26:22.825 --> 00:26:26.335
+Difficulty in learning are training the feedforward neural
+
+199
+00:26:26.335 --> 00:26:28.335
+network, and that's where know,
+
+200
+00:26:28.335 --> 00:26:30.735
+nearly one decade people try different algorithm.
+
+201
+00:26:30.755 --> 00:26:32.095
+Nobody is able to do.
+
+202
+00:26:33.355 --> 00:26:36.055
+That's why the whole neural network field was stands still.
+
+203
+00:26:36.765 --> 00:26:41.215
+Finally, after a decade of, uh, silence,
+
+204
+00:26:43.265 --> 00:26:46.805
+the bap propagation learning was learning algorithm was
+
+205
+00:26:47.085 --> 00:26:48.815
+proposed, and,
+
+206
+00:26:49.115 --> 00:26:52.295
+and that is how again, it gave a rebirth
+
+207
+00:26:52.475 --> 00:26:54.095
+to the neural network field.
+
+208
+00:26:54.835 --> 00:26:56.815
+And according, you know, feed forward network,
+
+209
+00:27:01.015 --> 00:27:04.595
+the work car algorithm for training, the feed
+
+210
+00:27:04.595 --> 00:27:07.035
+for network is the B application learning algorithm.
+
+211
+00:27:08.245 --> 00:27:11.145
+And they overcame, they came up with a method for
+
+212
+00:27:11.915 --> 00:27:16.505
+overcoming the hard learning problem in the case of feed
+
+213
+00:27:16.505 --> 00:27:18.625
+for neural network that we'll see.
+
+214
+00:27:18.775 --> 00:27:19.865
+Next slide. Uh, sweet.
+
+215
+00:27:21.255 --> 00:27:22.505
+What they did was,
+
+216
+00:27:24.455 --> 00:27:26.915
+see the hard limiting function was there in the,
+
+217
+00:27:27.175 --> 00:27:28.235
+uh, perceptron.
+
+218
+00:27:29.535 --> 00:27:32.395
+If I have an hard limiting function step function
+
+219
+00:27:33.175 --> 00:27:36.945
+from your high school, uh, differential, uh,
+
+220
+00:27:36.945 --> 00:27:38.465
+high school calculus, if you see,
+
+221
+00:27:39.365 --> 00:27:42.505
+if I have a discontinuous function, like a step function,
+
+222
+00:27:44.525 --> 00:27:48.605
+I do not know the derivative at the discontinuous place
+
+223
+00:27:49.705 --> 00:27:51.685
+and at all other points, no.
+
+224
+00:27:51.715 --> 00:27:55.245
+Suppose if you remember a step function, which is say zero
+
+225
+00:27:55.265 --> 00:27:56.405
+and one or minus one
+
+226
+00:27:56.405 --> 00:27:58.885
+and one, there is an horizontal line at zero and one,
+
+227
+00:27:59.305 --> 00:28:01.525
+and there is a transition happening at the origin.
+
+228
+00:28:05.625 --> 00:28:08.215
+Every wave, the slope is zero, except
+
+229
+00:28:08.215 --> 00:28:09.655
+that the discontinuous point
+
+230
+00:28:10.195 --> 00:28:12.615
+you consider this itself a step function will be like this,
+
+231
+00:28:13.075 --> 00:28:16.135
+the zero line and the vertical line,
+
+232
+00:28:16.155 --> 00:28:17.895
+and there is an horizontal line coming there.
+
+233
+00:28:18.445 --> 00:28:20.575
+When, when the, the constant value,
+
+234
+00:28:20.595 --> 00:28:23.215
+the differential is zero, they will take a line at
+
+235
+00:28:23.215 --> 00:28:24.695
+that point as a discontinuity.
+
+236
+00:28:26.165 --> 00:28:30.735
+Okay? So, so as a result of that, uh,
+
+237
+00:28:32.995 --> 00:28:35.655
+we, uh, the, um,
+
+238
+00:28:37.795 --> 00:28:40.295
+Of course just for a target output only
+
+239
+00:28:40.295 --> 00:28:41.615
+for the output layer is okay,
+
+240
+00:28:42.615 --> 00:28:47.155
+but in spite of, in, in, in, in lie of that step function,
+
+241
+00:28:47.275 --> 00:28:49.515
+I need a non-linear function as the output function.
+
+242
+00:28:50.245 --> 00:28:52.425
+So they propose what are called sigal
+
+243
+00:28:52.665 --> 00:28:54.105
+functions as the output function.
+
+244
+00:28:54.105 --> 00:28:57.075
+These are also non-linear sigal function,
+
+245
+00:28:57.075 --> 00:28:59.715
+but they're differential non-zero differences there.
+
+246
+00:28:59.815 --> 00:29:02.995
+For example, if I take a logistic function,
+
+247
+00:29:03.255 --> 00:29:05.075
+it varies from zero to one.
+
+248
+00:29:05.865 --> 00:29:07.635
+This is the logistic function definition.
+
+249
+00:29:07.715 --> 00:29:09.435
+F of X is zero to one, one
+
+250
+00:29:09.495 --> 00:29:13.155
+by one plus exponential minus two BIX, where BIX
+
+251
+00:29:13.615 --> 00:29:16.395
+as a function of x, this varies from zero to one.
+
+252
+00:29:16.535 --> 00:29:18.555
+You substitute beta equal to zero,
+
+253
+00:29:19.265 --> 00:29:20.715
+then I will have one by one.
+
+254
+00:29:21.295 --> 00:29:24.715
+So, so one plus this exponential
+
+255
+00:29:24.715 --> 00:29:26.475
+of my two beta, that will be two.
+
+256
+00:29:26.665 --> 00:29:28.795
+This is one, one plus one by two.
+
+257
+00:29:29.095 --> 00:29:32.785
+At that point, it is 0.5 and beta X.
+
+258
+00:29:33.685 --> 00:29:37.025
+Uh, for example, X is zero, 80 point
+
+259
+00:29:37.025 --> 00:29:40.665
+or minus zero is one, one plus one is two.
+
+260
+00:29:40.685 --> 00:29:43.085
+One by two is 0.5. RT X equal to zero.
+
+261
+00:29:43.275 --> 00:29:45.405
+Beta X will be this eight.
+
+262
+00:29:45.405 --> 00:29:47.485
+Exponential of minus two beta X will be
+
+263
+00:29:47.905 --> 00:29:49.485
+one, one plus one is two.
+
+264
+00:29:49.485 --> 00:29:51.525
+That's how one by two will be 0.5.
+
+265
+00:29:51.905 --> 00:29:55.365
+And as you go on, increase the X value, it rises quickly
+
+266
+00:29:55.465 --> 00:29:56.525
+and saturates to one.
+
+267
+00:29:56.675 --> 00:29:59.085
+Similarly, X goes in the negative direction,
+
+268
+00:29:59.795 --> 00:30:01.405
+quickly goes down.
+
+269
+00:30:01.545 --> 00:30:05.925
+And, but what is important is, see if I take the
+
+270
+00:30:06.445 --> 00:30:10.205
+differential of this F dash x, this is f dash x second
+
+271
+00:30:11.005 --> 00:30:12.365
+function, you take, no,
+
+272
+00:30:12.365 --> 00:30:15.165
+there is a non-zero differential available here,
+
+273
+00:30:16.465 --> 00:30:18.305
+non-zero differential available here.
+
+274
+00:30:18.765 --> 00:30:22.025
+So in this region, it is possible to differentiate.
+
+275
+00:30:23.005 --> 00:30:27.305
+If it is possible to differentiate then the error
+
+276
+00:30:27.455 --> 00:30:31.595
+that is computed at the output layer with the help
+
+277
+00:30:31.615 --> 00:30:34.315
+of this differentiable output function.
+
+278
+00:30:35.355 --> 00:30:37.915
+I can pass on that, uh, error
+
+279
+00:30:38.015 --> 00:30:40.195
+to the previous layer, previously done layer.
+
+280
+00:30:40.905 --> 00:30:45.715
+Okay? And mathematically they showed that the,
+
+281
+00:30:46.135 --> 00:30:49.035
+can you go back to the previous, uh, slide, uh, Sunni
+
+282
+00:30:50.355 --> 00:30:52.035
+previous, uh, uh, this slide.
+
+283
+00:30:52.415 --> 00:30:56.075
+See now in the output layer, I make, uh, um,
+
+284
+00:30:56.795 --> 00:30:59.635
+a nonlinear output sigmoidal function.
+
+285
+00:31:00.145 --> 00:31:01.675
+Then this becomes differential.
+
+286
+00:31:02.225 --> 00:31:03.715
+Then I can express the error.
+
+287
+00:31:03.815 --> 00:31:07.955
+At this point, the done layer output as the,
+
+288
+00:31:08.615 --> 00:31:13.435
+in terms of the difference of the, the error here will be
+
+289
+00:31:14.105 --> 00:31:16.075
+expressed in terms of the errors
+
+290
+00:31:16.375 --> 00:31:18.275
+or the output of each of the neurons.
+
+291
+00:31:18.575 --> 00:31:21.315
+But in the differential form, I take the differential form
+
+292
+00:31:21.335 --> 00:31:23.115
+and submit the mathematically they have shown.
+
+293
+00:31:23.615 --> 00:31:26.515
+So even though I don't know the target output
+
+294
+00:31:26.515 --> 00:31:29.195
+of the done layer, I can bap propagate the error
+
+295
+00:31:29.265 --> 00:31:30.395
+from the output layer.
+
+296
+00:31:30.945 --> 00:31:33.835
+Okay? That is why the name called BAP propagation learning
+
+297
+00:31:33.835 --> 00:31:35.155
+algorithm came into picture.
+
+298
+00:31:35.905 --> 00:31:38.855
+Okay, next slide. Uh,
+
+299
+00:31:38.995 --> 00:31:41.295
+either you can see both are sigal function.
+
+300
+00:31:41.475 --> 00:31:43.975
+Either you can use this logistic function
+
+301
+00:31:43.975 --> 00:31:45.535
+or the T hyperbolic function.
+
+302
+00:31:45.535 --> 00:31:47.135
+If I go over tana hyperbolic function,
+
+303
+00:31:47.475 --> 00:31:49.095
+it varies from minus one to plus one
+
+304
+00:31:49.095 --> 00:31:50.495
+because this is the equation tan,
+
+305
+00:31:50.845 --> 00:31:52.855
+then it's differential is the F dash
+
+306
+00:31:52.855 --> 00:31:54.015
+effects will be like this.
+
+307
+00:31:54.365 --> 00:31:57.095
+What do you see that now for a small region
+
+308
+00:31:57.115 --> 00:32:01.855
+around origin X equal to zero, there is a non-zero, uh,
+
+309
+00:32:01.855 --> 00:32:03.535
+differential function with the help of that.
+
+310
+00:32:03.555 --> 00:32:07.135
+By operating the, uh, output values in that range,
+
+311
+00:32:07.655 --> 00:32:09.135
+I can back propagate the error
+
+312
+00:32:09.515 --> 00:32:11.255
+of the output layer to the previous layer.
+
+313
+00:32:11.365 --> 00:32:14.295
+Same way you can continue further previous layers also.
+
+314
+00:32:14.525 --> 00:32:15.575
+Okay, next slide.
+
+315
+00:32:17.495 --> 00:32:20.435
+And these points, I told this hard learning problem.
+
+316
+00:32:21.525 --> 00:32:24.105
+So pattern mapping involves finding weight.
+
+317
+00:32:24.105 --> 00:32:28.775
+Given a set of involve, it should be known
+
+318
+00:32:28.775 --> 00:32:31.295
+that no, the desired output for in the hidden
+
+319
+00:32:31.395 --> 00:32:33.775
+and the output layers it necessary to know.
+
+320
+00:32:34.155 --> 00:32:36.575
+But once the desired output is known, error
+
+321
+00:32:36.715 --> 00:32:39.765
+for each unit may be used to guide the output rates leading
+
+322
+00:32:39.785 --> 00:32:43.165
+to this desired output on available only
+
+323
+00:32:43.305 --> 00:32:44.765
+for the output units in the,
+
+324
+00:32:45.025 --> 00:32:46.845
+for the units in the output layer, not
+
+325
+00:32:46.845 --> 00:32:49.045
+for the units In the A layer, this statement is important.
+
+326
+00:32:49.675 --> 00:32:51.885
+Desired output is known only
+
+327
+00:32:51.945 --> 00:32:53.445
+for the units in the output layer,
+
+328
+00:32:53.665 --> 00:32:55.645
+but not the units in the A layer.
+
+329
+00:32:56.115 --> 00:32:58.645
+Okay, so a
+
+330
+00:32:59.515 --> 00:33:01.925
+accordingly no, a learning rule
+
+331
+00:33:02.155 --> 00:33:04.725
+that depends on the difference between the desired open,
+
+332
+00:33:04.725 --> 00:33:07.085
+the actual output is not feasible in this case.
+
+333
+00:33:08.305 --> 00:33:11.205
+So accordingly, no, the problem of updating weights
+
+334
+00:33:11.785 --> 00:33:14.005
+in the done layer became impossible.
+
+335
+00:33:14.625 --> 00:33:17.525
+And hence it is supposed as a hard learning problem.
+
+336
+00:33:18.765 --> 00:33:21.655
+Hard problem is different compared to hard learning problem.
+
+337
+00:33:22.195 --> 00:33:24.775
+If you're not able to represent in the architecture,
+
+338
+00:33:24.775 --> 00:33:26.575
+they're called as the hard problems.
+
+339
+00:33:27.155 --> 00:33:29.455
+But if you're not able to adjust the weights of some
+
+340
+00:33:29.455 --> 00:33:30.615
+of the hidden layers, then it
+
+341
+00:33:30.615 --> 00:33:31.935
+becomes a hard learning problem.
+
+342
+00:33:32.765 --> 00:33:34.135
+Okay, next slide.
+
+343
+00:33:37.285 --> 00:33:40.465
+So for that purpose, as I explained there, instead
+
+344
+00:33:40.465 --> 00:33:42.745
+of using a step function, they came up
+
+345
+00:33:42.745 --> 00:33:44.185
+with a differential output function.
+
+346
+00:33:44.945 --> 00:33:47.845
+So this hard learning problem can be solved using a
+
+347
+00:33:47.845 --> 00:33:51.045
+differential nonlinear output function for each
+
+348
+00:33:51.045 --> 00:33:53.445
+of the unit in the hidden layer and output layers.
+
+349
+00:33:54.305 --> 00:33:57.525
+So the corresponding learning law is based
+
+350
+00:33:57.525 --> 00:33:59.925
+around propagating the error from the output layer
+
+351
+00:33:59.945 --> 00:34:02.085
+to the hidden layers for updating the weights.
+
+352
+00:34:02.905 --> 00:34:05.325
+So this is an error correcting law also collect
+
+353
+00:34:05.355 --> 00:34:06.925
+generalized delta rule.
+
+354
+00:34:07.525 --> 00:34:11.655
+Generalized delta rule means, uh, the uh, uh,
+
+355
+00:34:12.105 --> 00:34:14.855
+delta rule is nothing about percept and discreet percept
+
+356
+00:34:14.855 --> 00:34:18.255
+and learning law we have, but the discrete ness of percept
+
+357
+00:34:18.255 --> 00:34:20.815
+and learning law is applicable only to the output layer.
+
+358
+00:34:21.635 --> 00:34:26.455
+But I can, by converting the hard limiting
+
+359
+00:34:26.475 --> 00:34:29.815
+output functionality, differential output function, I can
+
+360
+00:34:30.435 --> 00:34:34.055
+extend that delta learning law, um, um,
+
+361
+00:34:35.445 --> 00:34:37.695
+into the previous layers also.
+
+362
+00:34:38.075 --> 00:34:40.895
+And that's why it's called a generalized delta learning law.
+
+363
+00:34:41.365 --> 00:34:44.775
+Okay? Means I can pass on that delta learning law too.
+
+364
+00:34:45.275 --> 00:34:47.375
+Uh, generalize it to the hidden layers,
+
+365
+00:34:47.445 --> 00:34:49.295
+also ends the name generalize delta.
+
+366
+00:34:50.165 --> 00:34:53.975
+Okay, next slide. So
+
+367
+00:34:54.525 --> 00:34:57.775
+what is the BAP application learning algorithm framework?
+
+368
+00:34:58.835 --> 00:35:00.135
+It is the learning algorithm.
+
+369
+00:35:00.315 --> 00:35:02.655
+The propose is for the multi-layer feed for network.
+
+370
+00:35:03.075 --> 00:35:05.935
+It is also termed as generalize delta rule.
+
+371
+00:35:07.075 --> 00:35:11.735
+Um, a gradient descent along the error surface arrive to a,
+
+372
+00:35:11.845 --> 00:35:13.495
+that is okay, that is a different thing.
+
+373
+00:35:14.425 --> 00:35:16.175
+Error. We know spare difference
+
+374
+00:35:16.175 --> 00:35:17.775
+between the output and the actual output.
+
+375
+00:35:17.775 --> 00:35:19.255
+Obtain the output layer of the network.
+
+376
+00:35:20.125 --> 00:35:23.935
+Then you estimate the gradient descend along the error
+
+377
+00:35:23.935 --> 00:35:26.495
+surface to increment weight connecting the unit.
+
+378
+00:35:26.755 --> 00:35:30.415
+And so what we do is,
+
+379
+00:35:31.605 --> 00:35:33.945
+for example, the change in the weight
+
+380
+00:35:35.705 --> 00:35:37.085
+is proportional too.
+
+381
+00:35:38.305 --> 00:35:40.325
+The partial derivative with reference
+
+382
+00:35:40.325 --> 00:35:43.445
+to the ER partial derivative with reference to the error
+
+383
+00:35:44.425 --> 00:35:47.125
+and that use it as a change in the rate.
+
+384
+00:35:47.315 --> 00:35:50.285
+This delta earlier, it used to be the discrete delta,
+
+385
+00:35:50.465 --> 00:35:53.365
+no target output minus this one.
+
+386
+00:35:53.365 --> 00:35:56.245
+That ER is there directly proportional the data.
+
+387
+00:35:56.385 --> 00:35:59.165
+Now it is made as a derivative proportional
+
+388
+00:35:59.185 --> 00:36:00.605
+to the derivative of the TR.
+
+389
+00:36:00.955 --> 00:36:03.325
+That is, this is the change they made
+
+390
+00:36:03.955 --> 00:36:05.965
+when they came up with this propagation.
+
+391
+00:36:07.415 --> 00:36:08.565
+We'll go to the next slide.
+
+392
+00:36:08.905 --> 00:36:13.865
+Um, so deriving the expressions
+
+393
+00:36:14.005 --> 00:36:16.825
+for this delta WAJ for different layers.
+
+394
+00:36:17.575 --> 00:36:19.945
+Suppose if you consider a multi-layer perception
+
+395
+00:36:19.945 --> 00:36:23.145
+with three layers output, one hidden three layers,
+
+396
+00:36:23.515 --> 00:36:27.265
+input one hidden and output, that is what has shown
+
+397
+00:36:27.265 --> 00:36:29.625
+that figure, that three layer network has shown.
+
+398
+00:36:30.345 --> 00:36:33.205
+The first layer will go back to that slider.
+
+399
+00:36:33.425 --> 00:36:37.105
+Um, Sunil, Ah,
+
+400
+00:36:37.565 --> 00:36:41.145
+the first layer is represented 1, 2, 3, et cetera.
+
+401
+00:36:41.145 --> 00:36:42.505
+Small I and capital I.
+
+402
+00:36:42.615 --> 00:36:45.145
+Capital i number of neurons in the input layer,
+
+403
+00:36:45.765 --> 00:36:48.225
+the hidden layer, the neurons are represented
+
+404
+00:36:48.225 --> 00:36:50.385
+by J small J one, two, et cetera.
+
+405
+00:36:50.385 --> 00:36:53.385
+Capital J, small J is the index similar,
+
+406
+00:36:53.445 --> 00:36:55.705
+the neurons in output layer as one, two,
+
+407
+00:36:55.795 --> 00:36:57.305
+small K, et cetera, capital.
+
+408
+00:36:57.895 --> 00:37:00.625
+Okay, that is how the notation, we'll go back to
+
+409
+00:37:00.625 --> 00:37:03.715
+that go forward next.
+
+410
+00:37:04.135 --> 00:37:07.155
+Ah, c, the first layer as capital I,
+
+411
+00:37:07.155 --> 00:37:10.715
+linear input units indexed by small I second layer
+
+412
+00:37:10.815 --> 00:37:12.115
+as capital J.
+
+413
+00:37:12.115 --> 00:37:14.475
+Linear nonlinear units indexed by J
+
+414
+00:37:14.855 --> 00:37:16.755
+and the third layer as capital K,
+
+415
+00:37:16.755 --> 00:37:18.475
+nonlinear units indexed by small
+
+416
+00:37:18.635 --> 00:37:22.285
+KEFM
+
+417
+00:37:22.625 --> 00:37:25.805
+Is the given is given at the input layer.
+
+418
+00:37:25.825 --> 00:37:28.765
+And the desired output is BFM is available
+
+419
+00:37:28.875 --> 00:37:30.125
+only at the output layer.
+
+420
+00:37:31.285 --> 00:37:33.745
+So error between the desired output, BFM
+
+421
+00:37:33.745 --> 00:37:34.905
+and the actual output.
+
+422
+00:37:35.065 --> 00:37:38.385
+B dash M is available only at the output layer.
+
+423
+00:37:39.175 --> 00:37:42.715
+So use this error to adjust the weights from the input units
+
+424
+00:37:42.815 --> 00:37:44.635
+to input hidden units.
+
+425
+00:37:44.695 --> 00:37:47.155
+That's why now there are weights in the two layers.
+
+426
+00:37:48.175 --> 00:37:50.715
+One, the weights leading from the output
+
+427
+00:37:50.715 --> 00:37:52.595
+of the ED layer to the output layer.
+
+428
+00:37:52.595 --> 00:37:54.115
+They're called WKJ
+
+429
+00:37:54.505 --> 00:37:57.595
+because you see now J is the ED layer, neuron
+
+430
+00:37:58.115 --> 00:37:59.475
+K is the output layer neuron.
+
+431
+00:37:59.865 --> 00:38:03.875
+Similarly, the the neuro weights from input layer I to
+
+432
+00:38:04.475 --> 00:38:09.115
+ed layer J is WHJJ super split is given just
+
+433
+00:38:09.115 --> 00:38:13.115
+to differentiate between, uh, the two set of weights.
+
+434
+00:38:13.545 --> 00:38:14.795
+Okay, next slide.
+
+435
+00:38:17.855 --> 00:38:21.675
+So now we'll see I'm quickly recalling the
+
+436
+00:38:22.315 --> 00:38:26.235
+discrete percept on learning law that we discussed earlier,
+
+437
+00:38:27.235 --> 00:38:29.775
+uh, because we are using a step function there.
+
+438
+00:38:29.775 --> 00:38:32.055
+That's why it's called discrete percept learning, blah,
+
+439
+00:38:32.585 --> 00:38:34.295
+delta WL is nothing
+
+440
+00:38:34.435 --> 00:38:36.925
+but e equal to ETA delta
+
+441
+00:38:37.685 --> 00:38:41.245
+A delta is bi minus signal of W transpo.
+
+442
+00:38:41.355 --> 00:38:42.445
+This we discussed earlier.
+
+443
+00:38:44.475 --> 00:38:48.285
+Then, uh, for this is for the particular neuron,
+
+444
+00:38:48.865 --> 00:38:53.405
+and the J link in the neuron is given WIJ.
+
+445
+00:38:54.115 --> 00:38:57.215
+And this is what, uh, every neuron link.
+
+446
+00:38:57.365 --> 00:38:59.135
+This is the weight application parameter.
+
+447
+00:38:59.135 --> 00:39:00.935
+This is, this is just, I'm recalling
+
+448
+00:39:00.935 --> 00:39:02.055
+that what we discussed today.
+
+449
+00:39:02.355 --> 00:39:05.135
+Please remember this equation here.
+
+450
+00:39:06.155 --> 00:39:08.855
+Uh, the weight application equation is given
+
+451
+00:39:09.035 --> 00:39:13.175
+by target output minus the actual output
+
+452
+00:39:13.175 --> 00:39:15.495
+where actual output output function is a step function,
+
+453
+00:39:15.515 --> 00:39:16.895
+signum function multiplied
+
+454
+00:39:16.895 --> 00:39:19.615
+by the input A go to the next slide.
+
+455
+00:39:21.425 --> 00:39:25.725
+In the continuous perception law, our delta learning law,
+
+456
+00:39:26.185 --> 00:39:27.645
+please make a note of this.
+
+457
+00:39:27.645 --> 00:39:29.645
+Instead of signum function, I'm using ef,
+
+458
+00:39:30.055 --> 00:39:33.485
+where f can be any non differentiable output function.
+
+459
+00:39:34.085 --> 00:39:35.965
+Sig modal is a differential output function.
+
+460
+00:39:36.825 --> 00:39:41.365
+Now, the change in the error is made proportional to
+
+461
+00:39:41.985 --> 00:39:45.755
+the error, uh, multiplied by
+
+462
+00:39:46.415 --> 00:39:50.355
+the differential of the actual output.
+
+463
+00:39:50.855 --> 00:39:54.675
+Uh, this is differential differential with reference to
+
+464
+00:39:54.675 --> 00:39:57.595
+that particular weight do by do w with reference
+
+465
+00:39:57.595 --> 00:39:59.035
+to the w transpo.
+
+466
+00:39:59.465 --> 00:40:02.315
+This term is extra. F dash term is extra.
+
+467
+00:40:02.665 --> 00:40:04.715
+This is not there in the discreet learning law.
+
+468
+00:40:05.175 --> 00:40:08.995
+Now, what we are doing is we are making the change in the
+
+469
+00:40:08.995 --> 00:40:13.435
+weight also proportional to the, uh, partial
+
+470
+00:40:13.955 --> 00:40:17.365
+derivative of the error, um,
+
+471
+00:40:17.945 --> 00:40:19.045
+at the output layer.
+
+472
+00:40:20.165 --> 00:40:23.105
+But that at any point of time, I can express
+
+473
+00:40:23.105 --> 00:40:25.505
+that error in terms of the output layer.
+
+474
+00:40:26.085 --> 00:40:28.545
+So that is how the whole derivation is there.
+
+475
+00:40:28.545 --> 00:40:30.825
+Maybe that is beyond the scope of your course.
+
+476
+00:40:31.685 --> 00:40:34.705
+If somebody's interested, can watch some videos.
+
+477
+00:40:34.855 --> 00:40:37.625
+They're explaining no, a three layer network, they take
+
+478
+00:40:37.645 --> 00:40:39.625
+and show it, but F dash exceed
+
+479
+00:40:39.865 --> 00:40:40.985
+derivative with reference to X.
+
+480
+00:40:41.655 --> 00:40:46.305
+Okay? I think derivative with reference to j uh,
+
+481
+00:40:46.645 --> 00:40:48.345
+if you take a dash X, but
+
+482
+00:40:48.345 --> 00:40:51.025
+otherwise, so you where
+
+483
+00:40:51.765 --> 00:40:54.265
+si is the actual output at the iTune.
+
+484
+00:40:54.605 --> 00:40:57.825
+So now what we are trying to do here is
+
+485
+00:40:58.445 --> 00:41:01.625
+we convert a discreet perception learning law into a
+
+486
+00:41:01.625 --> 00:41:03.465
+continuous perception learning law
+
+487
+00:41:03.645 --> 00:41:06.145
+or delta learning law, where
+
+488
+00:41:06.765 --> 00:41:11.315
+the change in the way it is proportional to earlier,
+
+489
+00:41:11.505 --> 00:41:13.115
+like that they are put in the target
+
+490
+00:41:13.255 --> 00:41:16.015
+and this one multiplied by
+
+491
+00:41:17.335 --> 00:41:22.155
+the differential of the, uh, output,
+
+492
+00:41:22.155 --> 00:41:23.595
+differential of the output.
+
+493
+00:41:23.905 --> 00:41:26.275
+That is what, uh, uh, we are going to do.
+
+494
+00:41:26.615 --> 00:41:30.155
+So with the help of that, uh, you can pass on.
+
+495
+00:41:30.615 --> 00:41:33.035
+For example, uh, just to summarize,
+
+496
+00:41:35.055 --> 00:41:37.575
+I compute the error only at the output layer.
+
+497
+00:41:39.665 --> 00:41:44.505
+I, I express that error pass back, propagate that error
+
+498
+00:41:46.145 --> 00:41:47.995
+into the output of the hidden layer one.
+
+499
+00:41:49.535 --> 00:41:51.945
+Then once I have the back propagated error at the hidden
+
+500
+00:41:51.945 --> 00:41:55.225
+layer one, I can adjust the weight for the, uh,
+
+501
+00:41:55.965 --> 00:41:58.025
+le links leading to the hidden layer one.
+
+502
+00:41:58.735 --> 00:42:02.145
+Then I can back propagate the error from
+
+503
+00:42:03.125 --> 00:42:06.265
+the hidden layer one to the output of the hidden layer two.
+
+504
+00:42:06.755 --> 00:42:09.265
+Using that, I can adjust the weights for the one.
+
+505
+00:42:09.885 --> 00:42:14.865
+And you, you, you can see, I can express the weights
+
+506
+00:42:14.865 --> 00:42:17.425
+that any of the done layer in terms of the error,
+
+507
+00:42:18.005 --> 00:42:22.425
+the output layer, that is what, uh, is, uh, the
+
+508
+00:42:23.205 --> 00:42:26.505
+uh, um, basic breaking idea
+
+509
+00:42:26.505 --> 00:42:28.025
+of the ba propagation learning block.
+
+510
+00:42:28.295 --> 00:42:31.345
+What is that? The two for, for, for one decade,
+
+511
+00:42:32.805 --> 00:42:35.385
+except this F dash w transpose ea,
+
+512
+00:42:35.385 --> 00:42:36.665
+everything else was there.
+
+513
+00:42:37.335 --> 00:42:38.825
+They were not knowing what to do.
+
+514
+00:42:38.825 --> 00:42:40.745
+Once they brought this differential output function,
+
+515
+00:42:40.945 --> 00:42:42.265
+suddenly they were able
+
+516
+00:42:42.265 --> 00:42:44.425
+to train the network in the this one.
+
+517
+00:42:45.095 --> 00:42:48.735
+Next slide is, uh, I think
+
+518
+00:42:48.915 --> 00:42:50.175
+before this you go back.
+
+519
+00:42:50.845 --> 00:42:52.975
+Just to summarize, um,
+
+520
+00:42:55.035 --> 00:42:57.295
+In a multi-layer feedforward neural network,
+
+521
+00:42:58.675 --> 00:43:02.935
+we can b propagate the errors from the output layer
+
+522
+00:43:03.955 --> 00:43:05.375
+to hidden layer outputs.
+
+523
+00:43:05.805 --> 00:43:07.135
+Once IB propagate
+
+524
+00:43:08.325 --> 00:43:12.105
+and I have the error now presented the hidden layer using
+
+525
+00:43:12.105 --> 00:43:14.505
+them, you can adjust the weights at the hidden layer.
+
+526
+00:43:15.915 --> 00:43:17.935
+But I was telling no B propagate the error.
+
+527
+00:43:18.135 --> 00:43:20.175
+B propagate the error, but I'm telling it is a
+
+528
+00:43:20.175 --> 00:43:21.295
+feed forward neural network.
+
+529
+00:43:21.745 --> 00:43:25.295
+There is no way a signal flow will happen always in the
+
+530
+00:43:25.685 --> 00:43:26.895
+feed forward network.
+
+531
+00:43:27.035 --> 00:43:29.775
+The signal flow happens from the input to the output layer.
+
+532
+00:43:30.155 --> 00:43:32.695
+Now, I said many times that propagation of error,
+
+533
+00:43:33.265 --> 00:43:35.295
+which which gives in the mind that no,
+
+534
+00:43:35.425 --> 00:43:38.255
+there is a connection going back from the output layer
+
+535
+00:43:38.315 --> 00:43:39.415
+to the input layer.
+
+536
+00:43:39.415 --> 00:43:41.935
+That is not happening mathematically.
+
+537
+00:43:41.955 --> 00:43:45.265
+We are expressing the, uh,
+
+538
+00:43:45.485 --> 00:43:49.025
+out error value at the output of the hidden layer in terms
+
+539
+00:43:49.085 --> 00:43:51.585
+of the error value at the output layer.
+
+540
+00:43:52.055 --> 00:43:54.505
+Similarly, the mathematically,
+
+541
+00:43:54.505 --> 00:43:56.625
+we are expressing the error at the output of the first
+
+542
+00:43:56.725 --> 00:43:58.905
+and second layer to be output of the,
+
+543
+00:43:59.315 --> 00:44:00.585
+there is a derivation there,
+
+544
+00:44:00.585 --> 00:44:03.305
+but it is beyond the scope of your, uh,
+
+545
+00:44:03.885 --> 00:44:07.145
+no course if somebody's interested can study it.
+
+546
+00:44:07.655 --> 00:44:10.905
+Okay? I think with this I'll stop maybe, uh, I request,
+
+547
+00:44:10.965 --> 00:44:12.945
+uh, Sunil to take over.
+
+548
+00:44:15.385 --> 00:44:16.605
+Uh, yes, thank you sir.
+
+549
+00:44:19.145 --> 00:44:21.645
+If anyone has any questions so far, you can Yeah,
+
+550
+00:44:22.025 --> 00:44:23.365
+Please let me know.
+
+551
+00:44:27.165 --> 00:44:30.265
+The f fs f least the sigma function only,
+
+552
+00:44:30.885 --> 00:44:33.205
+not only function if dash is its DER user
+
+553
+00:44:33.345 --> 00:44:34.605
+or it's a loss function.
+
+554
+00:44:35.145 --> 00:44:36.145
+If here
+
+555
+00:44:37.435 --> 00:44:40.205
+This output function to produce the neuron output,
+
+556
+00:44:40.205 --> 00:44:41.725
+there's an output function required.
+
+557
+00:44:42.275 --> 00:44:44.285
+Okay? In the traditional perception,
+
+558
+00:44:44.285 --> 00:44:47.845
+we were using only be that step function, okay? Okay.
+
+559
+00:44:48.745 --> 00:44:52.125
+At layer, huh? At the output layer, sir?
+
+560
+00:44:52.425 --> 00:44:53.925
+At the output layer, there is only,
+
+561
+00:44:54.265 --> 00:44:58.045
+but you can't now, uh, now that output layer also now needs
+
+562
+00:44:58.045 --> 00:45:00.485
+to be replaced with a non-linear output function.
+
+563
+00:45:01.525 --> 00:45:05.095
+Okay? Uh, of course you can keep, if you want still
+
+564
+00:45:05.395 --> 00:45:06.815
+for a classification task,
+
+565
+00:45:06.835 --> 00:45:08.695
+you can still keep it as a step function.
+
+566
+00:45:09.085 --> 00:45:11.895
+Yeah, because that weight adjustment I can do,
+
+567
+00:45:12.315 --> 00:45:13.695
+but the hidden layers, you have
+
+568
+00:45:13.695 --> 00:45:15.535
+to convert them into differential output,
+
+569
+00:45:15.535 --> 00:45:16.975
+differential output functions.
+
+570
+00:45:18.365 --> 00:45:20.985
+So the we see in the slide is only for output layers.
+
+571
+00:45:21.015 --> 00:45:23.665
+Otherwise, uh, the hidden layer will be having sigma
+
+572
+00:45:23.665 --> 00:45:25.585
+that, uh, this is for
+
+573
+00:45:25.725 --> 00:45:27.145
+Hidden layer we'll be having.
+
+574
+00:45:27.765 --> 00:45:30.225
+Ah, correct, correct, correct, correct, correct, correct.
+
+575
+00:45:30.565 --> 00:45:33.225
+No, these, these, these formulas are for the hidden layers.
+
+576
+00:45:33.885 --> 00:45:34.905
+Oh, okay. Okay.
+
+577
+00:45:35.265 --> 00:45:37.105
+'cause you can't differentiate, uh,
+
+578
+00:45:37.245 --> 00:45:39.665
+the output function if it is a step function, no.
+
+579
+00:45:40.115 --> 00:45:42.165
+Correct. Okay. Correct. This f dash will be zero.
+
+580
+00:45:43.645 --> 00:45:44.935
+Okay. Okay.
+
+581
+00:45:45.115 --> 00:45:49.775
+See, I already have the, uh, already I have the error
+
+582
+00:45:50.335 --> 00:45:51.815
+directly computed at the output layer,
+
+583
+00:45:52.305 --> 00:45:53.305
+Right?
+
+584
+00:45:53.745 --> 00:45:56.605
+And I want to express that in the form of
+
+585
+00:45:57.145 --> 00:45:59.725
+representative error at the output of within layer.
+
+586
+00:46:00.595 --> 00:46:02.245
+Okay? Uh,
+
+587
+00:46:02.275 --> 00:46:04.925
+that I can compute only when I have a
+
+588
+00:46:04.925 --> 00:46:07.165
+differential output function.
+
+589
+00:46:08.635 --> 00:46:11.685
+Okay? Okay. Yeah.
+
+590
+00:46:12.885 --> 00:46:14.925
+I just wanted to confirm how it's different from the
+
+591
+00:46:14.925 --> 00:46:16.165
+error function itself, right?
+
+592
+00:46:16.165 --> 00:46:17.565
+So the last function we have, right?
+
+593
+00:46:18.145 --> 00:46:20.965
+Uh, so is it, is it any related to
+
+594
+00:46:21.375 --> 00:46:22.375
+Which last function?
+
+595
+00:46:23.465 --> 00:46:25.805
+The error, right? The error basically is the
+
+596
+00:46:25.805 --> 00:46:27.045
+last function will have,
+
+597
+00:46:27.145 --> 00:46:32.045
+Ah, see the error, uh, see what we are talking is,
+
+598
+00:46:32.905 --> 00:46:36.965
+um, the cf r, nothing but the output function.
+
+599
+00:46:37.055 --> 00:46:38.925
+There is, in neuronal function,
+
+600
+00:46:38.925 --> 00:46:40.365
+there is an output function required,
+
+601
+00:46:40.855 --> 00:46:41.965
+Right? Okay. We are
+
+602
+00:46:41.965 --> 00:46:43.885
+Talking about this f represent the output
+
+603
+00:46:44.165 --> 00:46:45.165
+Function. Okay, sir? Yeah,
+
+604
+00:46:45.165 --> 00:46:46.485
+that's clear. Thanks. Um,
+
+605
+00:46:47.305 --> 00:46:51.405
+Of, we will see the, when, when, with example,
+
+606
+00:46:51.575 --> 00:46:54.285
+Sunil says we will see how it, uh, goes.
+
+607
+00:46:54.305 --> 00:46:56.965
+But there is a theory, but I don't want to, uh,
+
+608
+00:46:57.385 --> 00:46:58.845
+go detail with that.
+
+609
+00:46:59.955 --> 00:47:02.035
+Okay, sir. Thank you. Thank you.
+
+610
+00:47:03.255 --> 00:47:04.755
+Excuse me, sir. One more though.
+
+611
+00:47:06.095 --> 00:47:09.275
+Yes, Sir. Actually, this ash is partial
+
+612
+00:47:09.715 --> 00:47:11.835
+Derivative or, uh, Partial derivative.
+
+613
+00:47:11.835 --> 00:47:15.475
+Partial derivative, okay. Partial derivative location.
+
+614
+00:47:15.665 --> 00:47:16.555
+Okay, next slide.
+
+615
+00:47:23.785 --> 00:47:27.305
+Hmm, maybe Sunil, you may have
+
+616
+00:47:27.305 --> 00:47:30.845
+to clarify when in these examples, uh,
+
+617
+00:47:30.845 --> 00:47:33.045
+where do we can use step function?
+
+618
+00:47:33.045 --> 00:47:36.965
+Where do we use? Uh, yes sir. This one? Yeah.
+
+619
+00:47:37.915 --> 00:47:41.575
+Fine, sir. Thank you. Alright, so, uh,
+
+620
+00:47:42.485 --> 00:47:45.855
+I'll take you through one, one example with one data set
+
+621
+00:47:45.855 --> 00:47:48.815
+and scenario, and then with that I'll try to explain
+
+622
+00:47:48.995 --> 00:47:51.855
+how this back propagation works for one iteration.
+
+623
+00:47:53.275 --> 00:47:57.175
+And, uh, at the end, we will also see the,
+
+624
+00:47:58.255 --> 00:48:01.835
+uh, uh, demo in PyTorch that how to implement this, uh,
+
+625
+00:48:01.835 --> 00:48:04.195
+back propagation, right?
+
+626
+00:48:04.455 --> 00:48:07.995
+So this is the overall structure Whater has explained.
+
+627
+00:48:07.995 --> 00:48:12.315
+Just now that we have the feed forward neural networks here,
+
+628
+00:48:12.335 --> 00:48:17.155
+it is shown left to right, the input is here, X one, x,
+
+629
+00:48:17.435 --> 00:48:20.915
+x one, and X two is an input, and this is the input layer.
+
+630
+00:48:20.915 --> 00:48:23.955
+Then we have first hidden layer, which is shown here in
+
+631
+00:48:24.705 --> 00:48:29.315
+blue, and we have the second hidden layer shown in green,
+
+632
+00:48:30.415 --> 00:48:33.515
+and we have the output layer, which is in purple.
+
+633
+00:48:33.895 --> 00:48:36.955
+So that is how we have, uh, uh, you can, uh, treat it
+
+634
+00:48:36.955 --> 00:48:39.115
+as four layers, including the hidden layers.
+
+635
+00:48:39.305 --> 00:48:44.165
+Okay? So now ev in, at every layer, first of all,
+
+636
+00:48:44.165 --> 00:48:47.245
+what you have to understand that, uh, you,
+
+637
+00:48:47.265 --> 00:48:50.165
+you will have some number of neurons, as you can see here,
+
+638
+00:48:50.165 --> 00:48:53.045
+it is indicated as three neurons at first layer,
+
+639
+00:48:53.595 --> 00:48:56.925
+four neurons at second layer, one neuron at
+
+640
+00:48:57.815 --> 00:48:59.245
+final layer or output layer.
+
+641
+00:48:59.265 --> 00:49:00.965
+You can say that, okay?
+
+642
+00:49:00.985 --> 00:49:04.485
+And the way neuron works, it is same,
+
+643
+00:49:05.385 --> 00:49:06.645
+the working principle
+
+644
+00:49:06.645 --> 00:49:09.725
+of the neurons are not changing in the sense we calculate
+
+645
+00:49:09.825 --> 00:49:13.485
+the Z, which is nothing but the weighted sum, okay?
+
+646
+00:49:13.545 --> 00:49:15.885
+And in, uh, which, which also includes the bias
+
+647
+00:49:16.745 --> 00:49:19.365
+and that we follow, we pass it through the, um,
+
+648
+00:49:19.895 --> 00:49:22.325
+activation function F, right?
+
+649
+00:49:22.665 --> 00:49:25.045
+So if you can recall from the perceptron,
+
+650
+00:49:25.075 --> 00:49:28.125
+this f was always step function, right?
+
+651
+00:49:28.545 --> 00:49:31.285
+But that, that, that itself, sir, was, uh, explaining
+
+652
+00:49:31.285 --> 00:49:32.925
+that step function because you cannot
+
+653
+00:49:32.955 --> 00:49:34.845
+differentiate the step function.
+
+654
+00:49:36.365 --> 00:49:39.465
+So later on, we have kept all these functions.
+
+655
+00:49:39.465 --> 00:49:44.265
+What you see here in this layer, this layer at as well
+
+656
+00:49:44.265 --> 00:49:46.985
+as in the output layer, that all these stiff functions
+
+657
+00:49:46.985 --> 00:49:48.185
+are differentiable.
+
+658
+00:49:48.645 --> 00:49:52.305
+Uh, all these functions are differentiable, um, functions.
+
+659
+00:49:52.305 --> 00:49:54.625
+That is what we have kept, so that, uh, at the time
+
+660
+00:49:54.625 --> 00:49:56.185
+of the back propagation, it'll help us.
+
+661
+00:49:56.295 --> 00:49:58.425
+I'll explain that one. How, how does it work?
+
+662
+00:49:59.405 --> 00:50:01.265
+So what happened with the Feedforward network,
+
+663
+00:50:01.445 --> 00:50:03.025
+you get the prediction, right?
+
+664
+00:50:03.055 --> 00:50:04.105
+It's a network, it's a,
+
+665
+00:50:04.105 --> 00:50:05.745
+it's a machine learning model, neural network.
+
+666
+00:50:06.205 --> 00:50:08.665
+And hence it will give us a prediction.
+
+667
+00:50:08.725 --> 00:50:11.345
+Now, this prediction, we compare with our true value,
+
+668
+00:50:11.375 --> 00:50:13.545
+because that is what we do in, in, in case
+
+669
+00:50:13.545 --> 00:50:15.905
+of the supervisory learning, right?
+
+670
+00:50:15.965 --> 00:50:18.305
+So we have a prediction, we have a true value,
+
+671
+00:50:18.405 --> 00:50:19.665
+and we calculate the loss.
+
+672
+00:50:20.565 --> 00:50:22.545
+So suppose prediction is five,
+
+673
+00:50:22.725 --> 00:50:24.585
+and we have to calculate eight.
+
+674
+00:50:24.615 --> 00:50:28.325
+Then loss will be, absolute loss will be three. Okay?
+
+675
+00:50:28.325 --> 00:50:29.565
+Eight minutes, five is equal to three.
+
+676
+00:50:29.625 --> 00:50:34.445
+Say that now, once you get a loss here, okay?
+
+677
+00:50:34.745 --> 00:50:39.165
+Now think from the perspective that why this loss is why,
+
+678
+00:50:39.265 --> 00:50:41.405
+why this loss from where this loss has come,
+
+679
+00:50:41.515 --> 00:50:44.285
+because we have never fed the wrong input
+
+680
+00:50:45.145 --> 00:50:49.085
+and whatever output we are expecting, that is also with us.
+
+681
+00:50:49.665 --> 00:50:53.365
+So input output is already available with us in our data,
+
+682
+00:50:54.865 --> 00:50:56.605
+but then also we are getting a loss.
+
+683
+00:50:56.625 --> 00:50:59.285
+We are not able to predict what we want to predict.
+
+684
+00:50:59.595 --> 00:51:02.205
+That means that somewhere in this network,
+
+685
+00:51:02.355 --> 00:51:04.245
+something has gone wrong.
+
+686
+00:51:04.495 --> 00:51:07.325
+Right? Now, what, what, what,
+
+687
+00:51:07.325 --> 00:51:10.125
+what can go wrong in this particular network input output
+
+688
+00:51:10.125 --> 00:51:13.085
+anyway, it is fixed for a given data set, right?
+
+689
+00:51:13.705 --> 00:51:15.845
+So that we can't be changing, right?
+
+690
+00:51:16.145 --> 00:51:18.965
+So input output you will have fixed in your data set.
+
+691
+00:51:18.965 --> 00:51:20.525
+Then if you see in this particular network,
+
+692
+00:51:20.945 --> 00:51:24.685
+you have these connections, these weights in the form
+
+693
+00:51:24.685 --> 00:51:26.605
+of weights and biases between input
+
+694
+00:51:26.605 --> 00:51:29.605
+and hidden layer, first hidden layer, second hidden layer,
+
+695
+00:51:29.605 --> 00:51:31.245
+second hidden layer and output layer.
+
+696
+00:51:31.535 --> 00:51:34.285
+These are the weights, the way we have initialized them
+
+697
+00:51:35.285 --> 00:51:37.455
+that might have gone wrong, okay?
+
+698
+00:51:37.565 --> 00:51:38.575
+That might have gone wrong.
+
+699
+00:51:38.575 --> 00:51:42.655
+That is just, uh, uh, you can say that the, uh, uh,
+
+700
+00:51:43.315 --> 00:51:44.855
+uh, hypothesis what I have.
+
+701
+00:51:45.475 --> 00:51:47.895
+So then what we can do, the,
+
+702
+00:51:47.965 --> 00:51:50.215
+what we can do is we can adjust these weight
+
+703
+00:51:50.215 --> 00:51:52.375
+because I need to get the output Y by,
+
+704
+00:51:52.395 --> 00:51:53.855
+but I'm getting Y dash.
+
+705
+00:51:54.515 --> 00:51:56.255
+So, uh, we, we got to know
+
+706
+00:51:56.255 --> 00:51:58.295
+that these weights are responsible
+
+707
+00:51:58.525 --> 00:52:03.295
+because we have not initialized them in a way, uh, uh,
+
+708
+00:52:03.355 --> 00:52:05.375
+in a way, uh, so that it could have
+
+709
+00:52:06.005 --> 00:52:08.695
+converted the mapping right from X to Y.
+
+710
+00:52:09.275 --> 00:52:12.015
+So the only possibility is that we need
+
+711
+00:52:12.015 --> 00:52:13.095
+to change these weights.
+
+712
+00:52:13.115 --> 00:52:14.855
+We need to change these weight. That's itself is called
+
+713
+00:52:14.855 --> 00:52:16.935
+as the learning for this neural network, right?
+
+714
+00:52:17.795 --> 00:52:19.255
+So what we do, that's
+
+715
+00:52:19.255 --> 00:52:20.295
+where this back propagation
+
+716
+00:52:20.295 --> 00:52:21.615
+algorithm comes into the picture.
+
+717
+00:52:22.755 --> 00:52:25.935
+So what we start thinking that, okay, here we have a loss.
+
+718
+00:52:26.595 --> 00:52:28.135
+Now, this loss we are getting,
+
+719
+00:52:28.275 --> 00:52:29.855
+and who is responsible for it?
+
+720
+00:52:29.945 --> 00:52:32.855
+These weights are responsible for this particular loss.
+
+721
+00:52:33.195 --> 00:52:36.175
+So if I slightly change the weights, it may happen
+
+722
+00:52:36.245 --> 00:52:39.095
+that whatever output I'm, uh, I, I'm looking for
+
+723
+00:52:39.095 --> 00:52:40.935
+that I'll get in, in the form of prediction.
+
+724
+00:52:41.995 --> 00:52:43.775
+So what I'll start doing, I'll start
+
+725
+00:52:44.295 --> 00:52:45.535
+changing these parameters
+
+726
+00:52:45.795 --> 00:52:48.215
+or, uh, parameters like say weights or biases.
+
+727
+00:52:48.795 --> 00:52:52.855
+So I'll slightly change these parameters on of this layer,
+
+728
+00:52:52.925 --> 00:52:54.455
+this layer and this layer, okay?
+
+729
+00:52:54.795 --> 00:52:58.215
+And once suppose all these parameters are changed again,
+
+730
+00:52:58.235 --> 00:53:00.775
+we will feed, say that the same input, you can check
+
+731
+00:53:01.395 --> 00:53:05.215
+or you can feed the next input also in, in your dataset.
+
+732
+00:53:05.565 --> 00:53:06.575
+Okay? So you see
+
+733
+00:53:06.575 --> 00:53:09.095
+that there is a feed forward propagation, which always happens.
+
+734
+00:53:09.185 --> 00:53:10.695
+First, you get the loss,
+
+735
+00:53:11.275 --> 00:53:13.455
+and to reduce this loss,
+
+736
+00:53:13.645 --> 00:53:15.695
+then you start changing these weights.
+
+737
+00:53:15.835 --> 00:53:19.615
+You start changing these weights, obviously with, uh, uh,
+
+738
+00:53:20.155 --> 00:53:21.695
+for keeping, okay?
+
+739
+00:53:21.695 --> 00:53:22.775
+How much loss you have got.
+
+740
+00:53:22.795 --> 00:53:26.645
+That's why we take partial derivative of loss with respect
+
+741
+00:53:26.645 --> 00:53:29.445
+to these weights, because we have to see that, okay,
+
+742
+00:53:29.745 --> 00:53:34.045
+if I change loss a little bit, how much change, it'll,
+
+743
+00:53:34.135 --> 00:53:37.125
+sorry, if I change weight a little bit,
+
+744
+00:53:37.185 --> 00:53:38.965
+how much change it'll bring to the loss.
+
+745
+00:53:39.035 --> 00:53:40.845
+That itself is a partial derivative, right?
+
+746
+00:53:41.545 --> 00:53:44.965
+So that's why we slightly change these weights,
+
+747
+00:53:44.965 --> 00:53:47.285
+and we do the partial, and that's, that's
+
+748
+00:53:47.285 --> 00:53:49.965
+what it is shown here in the back propagation, layer
+
+749
+00:53:50.025 --> 00:53:52.445
+by layer, we try to update these weights,
+
+750
+00:53:52.445 --> 00:53:55.325
+and then again, we do the same process, feed forward again,
+
+751
+00:53:55.325 --> 00:53:57.685
+calculate the loss, and this process continues.
+
+752
+00:53:58.065 --> 00:53:59.885
+You can do it for some number of filtration,
+
+753
+00:53:59.905 --> 00:54:01.445
+and you'll see that, okay, loss is changing
+
+754
+00:54:01.545 --> 00:54:03.485
+or not reducing, or not, okay?
+
+755
+00:54:03.485 --> 00:54:05.205
+Accordingly, you can take the next curve.
+
+756
+00:54:05.625 --> 00:54:08.125
+So this is what happens in the case of training
+
+757
+00:54:08.185 --> 00:54:09.965
+of a neural network, okay?
+
+758
+00:54:10.105 --> 00:54:12.085
+Now, it can be any la any,
+
+759
+00:54:12.305 --> 00:54:14.365
+any layers which you can add in between.
+
+760
+00:54:14.385 --> 00:54:16.165
+It can be here we have the two layers,
+
+761
+00:54:16.165 --> 00:54:17.285
+which you have added in between,
+
+762
+00:54:17.865 --> 00:54:20.205
+but can go three layer, four layer, 10 layer,
+
+763
+00:54:20.365 --> 00:54:22.575
+a hundred layers, whatever it is, right?
+
+764
+00:54:22.955 --> 00:54:24.775
+In the large language models, you will see
+
+765
+00:54:24.775 --> 00:54:28.375
+that people have tried this one with 96 layers,
+
+766
+00:54:29.085 --> 00:54:30.135
+more than a hundred layers,
+
+767
+00:54:30.675 --> 00:54:32.455
+and this is fully connected layer.
+
+768
+00:54:32.455 --> 00:54:35.135
+There. We have used even more complicated kind
+
+769
+00:54:35.135 --> 00:54:37.455
+of architectures, but this is what happened
+
+770
+00:54:37.455 --> 00:54:40.135
+with the feed proper forward and backward preparation.
+
+771
+00:54:41.205 --> 00:54:45.065
+Now, what I will do is I will take one example, okay?
+
+772
+00:54:45.225 --> 00:54:49.345
+I will, and this example where we have two inputs, IQ
+
+773
+00:54:49.805 --> 00:54:51.305
+and C, GP of a student,
+
+774
+00:54:51.485 --> 00:54:52.665
+and we need to predict
+
+775
+00:54:53.295 --> 00:54:56.105
+what will be the package of a student.
+
+776
+00:54:56.645 --> 00:55:00.065
+And these are, say that four set of, uh, uh, of input
+
+777
+00:55:00.065 --> 00:55:02.225
+or per pair we have in our data set, okay?
+
+778
+00:55:02.225 --> 00:55:03.865
+And we are going to use this one,
+
+779
+00:55:04.065 --> 00:55:07.545
+although we are not going to show for every, uh, every row,
+
+780
+00:55:07.565 --> 00:55:09.625
+but I'll show you for the first row, okay?
+
+781
+00:55:09.725 --> 00:55:11.345
+So just, just for the demo purpose.
+
+782
+00:55:12.205 --> 00:55:14.705
+So, and what, what we'll do is we will try
+
+783
+00:55:14.705 --> 00:55:18.445
+to create a similar network, three inputs.
+
+784
+00:55:18.535 --> 00:55:20.405
+Three inputs. Why I am saying that X one,
+
+785
+00:55:20.445 --> 00:55:22.485
+X two will come in, will come from iq,
+
+786
+00:55:22.485 --> 00:55:25.325
+and C-G-P-A-X three will be my bias, which is going
+
+787
+00:55:25.325 --> 00:55:26.485
+to be fixed, okay?
+
+788
+00:55:27.105 --> 00:55:29.805
+So I will create this, this particular network first,
+
+789
+00:55:30.345 --> 00:55:33.525
+and there will be one hidden layer with the two neuron,
+
+790
+00:55:33.645 --> 00:55:36.805
+H one and H two, and there will be one output layer
+
+791
+00:55:37.255 --> 00:55:40.245
+where you will have single neuron, which is saying, which,
+
+792
+00:55:40.245 --> 00:55:44.125
+which will tell you, okay, how much LPA, uh, what,
+
+793
+00:55:44.125 --> 00:55:45.805
+what will be the LPA for a given input.
+
+794
+00:55:46.115 --> 00:55:49.085
+Okay? So this is the architecture which I'm going
+
+795
+00:55:49.085 --> 00:55:50.205
+to build fine.
+
+796
+00:55:50.825 --> 00:55:52.965
+Now, when it comes to the activation function,
+
+797
+00:55:53.155 --> 00:55:57.045
+I'll use a activation function in the head and layer, okay?
+
+798
+00:55:57.545 --> 00:56:01.165
+And I'll use linear activation function at the output layer.
+
+799
+00:56:01.635 --> 00:56:05.285
+Okay? So, uh, this is, this is, this is what is the plan,
+
+800
+00:56:05.505 --> 00:56:07.725
+and we are going to build a fully connected network.
+
+801
+00:56:07.945 --> 00:56:10.285
+So how it'll look like, it'll look something like this.
+
+802
+00:56:11.145 --> 00:56:13.925
+So I have two inputs, IQ and CGPA,
+
+803
+00:56:14.545 --> 00:56:16.885
+and obviously one more input in the form of bias,
+
+804
+00:56:17.015 --> 00:56:18.885
+which will be fixed as one.
+
+805
+00:56:18.905 --> 00:56:22.325
+So B one and B two and B three. All these B are biases.
+
+806
+00:56:22.785 --> 00:56:25.125
+We are going to fix H one, so to, to,
+
+807
+00:56:25.145 --> 00:56:26.285
+to a particular neuron.
+
+808
+00:56:26.285 --> 00:56:27.605
+So here there are three neurons.
+
+809
+00:56:27.605 --> 00:56:30.285
+In the hidden layer, you have two neurons, H one s two,
+
+810
+00:56:30.785 --> 00:56:32.805
+and in the output layer you have single neuron,
+
+811
+00:56:32.805 --> 00:56:35.125
+which is why, because you are going to,
+
+812
+00:56:35.635 --> 00:56:37.565
+it's a regression type of problem, isn't it?
+
+813
+00:56:37.785 --> 00:56:40.885
+So, uh, we are going to keep here a single neuron,
+
+814
+00:56:40.885 --> 00:56:42.085
+which will give us the output
+
+815
+00:56:42.085 --> 00:56:44.485
+and whatever output this neuron will give, we are going
+
+816
+00:56:44.485 --> 00:56:48.445
+to pass it to the linear, uh, uh, activation function.
+
+817
+00:56:48.865 --> 00:56:51.485
+So the output will be same, the, uh,
+
+818
+00:56:51.675 --> 00:56:53.485
+what we're getting, uh, from this neuron.
+
+819
+00:56:54.895 --> 00:56:56.675
+And in the hidden layer, we will have an, uh,
+
+820
+00:56:56.965 --> 00:56:58.995
+radio activation function, right?
+
+821
+00:56:59.095 --> 00:57:00.595
+Uh, that we are going to use it.
+
+822
+00:57:01.215 --> 00:57:03.715
+Now, we'll see that how the power propagation works,
+
+823
+00:57:03.815 --> 00:57:06.515
+and then how the backward propagation, uh, uh,
+
+824
+00:57:06.615 --> 00:57:08.155
+we will, we'll see that.
+
+825
+00:57:08.175 --> 00:57:11.915
+How does it work? So what will happen, uh, input X one,
+
+826
+00:57:12.155 --> 00:57:15.395
+X two i, Q, and C, GPA, and these are the weights.
+
+827
+00:57:15.895 --> 00:57:19.725
+So that W one one, W one, two, uh, are the weights,
+
+828
+00:57:19.725 --> 00:57:22.525
+which is coming from the first input that is called iq,
+
+829
+00:57:22.645 --> 00:57:23.805
+W one one, W one two.
+
+830
+00:57:24.065 --> 00:57:28.005
+And from cz PA, we have the weight W2 one, W 22 from B one,
+
+831
+00:57:28.085 --> 00:57:29.565
+B two, also, you have one, one weights,
+
+832
+00:57:29.565 --> 00:57:31.645
+which is coming similarly from H one S two also,
+
+833
+00:57:32.225 --> 00:57:33.325
+uh, our weights are coming.
+
+834
+00:57:33.345 --> 00:57:35.125
+So what I have done is I have given some
+
+835
+00:57:35.765 --> 00:57:37.125
+notation to these weights.
+
+836
+00:57:37.245 --> 00:57:41.325
+W one one, W one, two, going to H one, W2 one, W2 two, going
+
+837
+00:57:41.325 --> 00:57:43.965
+to H two V one, and V two going to Y.
+
+838
+00:57:44.625 --> 00:57:45.685
+So these are the weights.
+
+839
+00:57:45.685 --> 00:57:49.365
+What I have now, few more things in the forward PA pass.
+
+840
+00:57:49.395 --> 00:57:51.965
+What, what we'll do, what will happen to this H one,
+
+841
+00:57:52.285 --> 00:57:54.325
+H one will take the weighted sum, right?
+
+842
+00:57:54.475 --> 00:57:57.245
+That means that X one will get multiplied with W one,
+
+843
+00:57:57.245 --> 00:58:00.725
+one X two will get multiplied with W one two,
+
+844
+00:58:01.625 --> 00:58:05.045
+and B one will get multi B one, uh, will get multiplied
+
+845
+00:58:05.045 --> 00:58:08.325
+with, or B one, uh, with multiplied would say
+
+846
+00:58:08.325 --> 00:58:09.965
+that there is a weight called B one itself.
+
+847
+00:58:10.035 --> 00:58:13.005
+Okay? So I'm telling the B one is a weight, uh,
+
+848
+00:58:13.065 --> 00:58:15.925
+and one with the B one will be B one itself.
+
+849
+00:58:16.385 --> 00:58:19.885
+So hence you will get here W one one X one
+
+850
+00:58:20.445 --> 00:58:24.085
+W one one X one plus W one two X two plus B one H at H one.
+
+851
+00:58:24.475 --> 00:58:27.485
+Similarly, if HH two, you will get W2 one X one,
+
+852
+00:58:27.685 --> 00:58:28.925
+W2 two X two B two.
+
+853
+00:58:29.065 --> 00:58:30.165
+So it's a weight sum, right?
+
+854
+00:58:30.505 --> 00:58:33.685
+And then once you get that one, you pass it a function,
+
+855
+00:58:34.725 --> 00:58:36.405
+although it showed at a sigma,
+
+856
+00:58:36.405 --> 00:58:38.605
+but it's not sigmoid here, just a representation
+
+857
+00:58:38.665 --> 00:58:41.005
+of a function here, we are going to use a
+
+858
+00:58:41.805 --> 00:58:43.725
+activation function, as I have already
+
+859
+00:58:43.725 --> 00:58:44.845
+told in the previous slide.
+
+860
+00:58:45.505 --> 00:58:46.845
+So obviously then what we'll get,
+
+861
+00:58:46.845 --> 00:58:49.365
+we'll get some output from H one, H two, once we'll pass it
+
+862
+00:58:49.365 --> 00:58:50.925
+through this particular activation function.
+
+863
+00:58:51.145 --> 00:58:53.925
+Now, whatever output we'll pass, we'll get from H one S two,
+
+864
+00:58:53.925 --> 00:58:56.005
+we'll pass it as an input to the next layer.
+
+865
+00:58:56.585 --> 00:58:59.165
+So that output will get multiplied with V one.
+
+866
+00:58:59.265 --> 00:59:03.315
+So V one into H one, V two into H two plus V three.
+
+867
+00:59:03.335 --> 00:59:06.045
+Now this is going to be my what. Okay?
+
+868
+00:59:06.185 --> 00:59:09.645
+So what I've done is I have done the calculations for you,
+
+869
+00:59:10.305 --> 00:59:11.365
+you can see that later,
+
+870
+00:59:11.665 --> 00:59:14.445
+and do it by yourself also, just to understand, okay,
+
+871
+00:59:14.465 --> 00:59:17.125
+how exactly it happens, how, what is the flow and all,
+
+872
+00:59:17.275 --> 00:59:21.845
+because you can do it for the, uh, uh, very complex network.
+
+873
+00:59:21.945 --> 00:59:23.125
+But this is a very simple network,
+
+874
+00:59:23.225 --> 00:59:26.125
+and you should do the practice by on with your hands so
+
+875
+00:59:26.125 --> 00:59:28.445
+that those things, you will understand it better.
+
+876
+00:59:29.145 --> 00:59:31.085
+So X one is 80, and X two is eight.
+
+877
+00:59:31.085 --> 00:59:33.805
+In the first row of my dataset, if you can recall, 80
+
+878
+00:59:33.865 --> 00:59:35.325
+and eight and output is three.
+
+879
+00:59:35.515 --> 00:59:38.365
+That is what I'm going to use. B one, B two. B three is one.
+
+880
+00:59:38.505 --> 00:59:39.925
+And these are the weights values.
+
+881
+00:59:40.705 --> 00:59:44.805
+So what I have done is I have passed, uh, uh, this, this,
+
+882
+00:59:44.815 --> 00:59:48.605
+first of all, I've calculated W one one x one W one two,
+
+883
+00:59:48.645 --> 00:59:52.445
+X two B one, which has come, um, which has, which has come,
+
+884
+00:59:52.585 --> 00:59:55.565
+uh, so this one, 1.6 plus four plus one, which has come
+
+885
+00:59:55.565 --> 00:59:57.685
+to 6.6, which is a positive number.
+
+886
+00:59:58.265 --> 01:00:01.885
+So if you'll pass it through the relu, it'll take the output
+
+887
+01:00:01.885 --> 01:00:03.405
+as 6.6, right?
+
+888
+01:00:03.405 --> 01:00:06.285
+Because the activation function, as we have seen earlier,
+
+889
+01:00:06.745 --> 01:00:08.485
+it is max of zero comma,
+
+890
+01:00:09.005 --> 01:00:10.845
+whatever is this particular output is set.
+
+891
+01:00:11.145 --> 01:00:13.445
+So if that is positive, the output of the relu will be
+
+892
+01:00:13.445 --> 01:00:15.085
+that number, it's jet itself.
+
+893
+01:00:15.625 --> 01:00:18.845
+And if it is negative, obviously the zero is maximum.
+
+894
+01:00:18.945 --> 01:00:20.125
+So zero will be the output.
+
+895
+01:00:20.345 --> 01:00:23.445
+So here from H one, we are getting the output at 6.6.
+
+896
+01:00:24.135 --> 01:00:26.085
+After passing through the activation function,
+
+897
+01:00:26.345 --> 01:00:28.205
+and from S two, we are getting 1.8.
+
+898
+01:00:28.465 --> 01:00:30.845
+Now, what we'll do finally at the output layer,
+
+899
+01:00:30.905 --> 01:00:32.205
+we will solve this equation.
+
+900
+01:00:32.305 --> 01:00:33.725
+Now we have all the value H one S two,
+
+901
+01:00:33.725 --> 01:00:35.485
+we have, we wanna be two.
+
+902
+01:00:35.485 --> 01:00:37.245
+Anyway, we have, these are the weights,
+
+903
+01:00:37.785 --> 01:00:40.045
+and we get the output at 10.36.
+
+904
+01:00:40.045 --> 01:00:43.005
+So this is my prediction at the output layer right?
+
+905
+01:00:43.185 --> 01:00:45.445
+Now, once you get the prediction, the next thing is
+
+906
+01:00:45.445 --> 01:00:46.445
+to calculate the loss.
+
+907
+01:00:47.105 --> 01:00:49.085
+So once we have this prediction at why,
+
+908
+01:00:49.145 --> 01:00:52.045
+why hat we calculate the loss, say that I'm Cal
+
+909
+01:00:52.045 --> 01:00:53.405
+because it is a regression based problem,
+
+910
+01:00:53.825 --> 01:00:56.085
+so I'm using mean square loss, okay?
+
+911
+01:00:56.785 --> 01:00:58.965
+And, uh, how, what is the mean square loss?
+
+912
+01:00:59.105 --> 01:01:00.925
+So you y minus Y cap,
+
+913
+01:01:01.065 --> 01:01:03.205
+and you will say the square of that one,
+
+914
+01:01:03.205 --> 01:01:06.165
+which is coming y value, you have three y cap is coming
+
+915
+01:01:06.185 --> 01:01:07.205
+as 10.36.
+
+916
+01:01:07.205 --> 01:01:09.245
+So this value will come as 54.16.
+
+917
+01:01:10.105 --> 01:01:13.005
+Now here, I'm taking only square error, uh,
+
+918
+01:01:13.265 --> 01:01:14.525
+not the mean square error
+
+919
+01:01:14.525 --> 01:01:16.245
+because I just have one data point.
+
+920
+01:01:16.265 --> 01:01:18.965
+So all, although I'll take the mean, it'll be the same
+
+921
+01:01:18.965 --> 01:01:20.565
+because end value is one here.
+
+922
+01:01:20.565 --> 01:01:23.205
+In this case, if suppose you will pass, say
+
+923
+01:01:23.205 --> 01:01:24.925
+that in the batch three inputs together,
+
+924
+01:01:24.995 --> 01:01:27.125
+then this end value will come into the consideration
+
+925
+01:01:27.125 --> 01:01:28.165
+here, and it's one itself.
+
+926
+01:01:28.465 --> 01:01:31.115
+So this, this value will be, uh,
+
+927
+01:01:31.295 --> 01:01:33.075
+the mean square in this particular case.
+
+928
+01:01:33.215 --> 01:01:34.675
+Now, this error is so high.
+
+929
+01:01:35.175 --> 01:01:36.235
+So the best case
+
+930
+01:01:36.295 --> 01:01:38.635
+for the regression is when there is zero, right?
+
+931
+01:01:39.095 --> 01:01:41.635
+But then we are at 54, it's too high,
+
+932
+01:01:41.655 --> 01:01:43.355
+and then we have to reduce this error.
+
+933
+01:01:43.355 --> 01:01:44.475
+That's the whole intention.
+
+934
+01:01:44.975 --> 01:01:46.475
+So who is the responsible for this?
+
+935
+01:01:46.535 --> 01:01:49.715
+As I have talked, maybe, uh, these weights,
+
+936
+01:01:49.715 --> 01:01:52.675
+the way we have initialized, that's where we have,
+
+937
+01:01:52.855 --> 01:01:54.155
+we might have done some mistakes
+
+938
+01:01:54.175 --> 01:01:55.595
+and hence we'll make an effort
+
+939
+01:01:56.335 --> 01:01:58.155
+to change all these parameters.
+
+940
+01:01:58.255 --> 01:02:00.835
+Now, we don't know, okay, by changing V one
+
+941
+01:02:01.055 --> 01:02:03.475
+or V two, it may, it may happen
+
+942
+01:02:03.475 --> 01:02:05.475
+that it'll improve the error drastically,
+
+943
+01:02:05.625 --> 01:02:09.315
+that it'll reduce error, but that, that clue we don't have.
+
+944
+01:02:09.335 --> 01:02:13.715
+So what we'll do, we will change every parameter associated
+
+945
+01:02:13.715 --> 01:02:16.355
+with net associated with this network, okay?
+
+946
+01:02:16.775 --> 01:02:21.425
+And we will change every parameter up slightly just to see
+
+947
+01:02:21.425 --> 01:02:23.425
+that, okay, uh, what happens
+
+948
+01:02:24.005 --> 01:02:27.305
+in there error whether we increase or we decrease, okay?
+
+949
+01:02:27.305 --> 01:02:29.345
+That is how we slightly change.
+
+950
+01:02:29.365 --> 01:02:32.145
+So we use the partial derivative for that one. Okay?
+
+951
+01:02:32.145 --> 01:02:33.745
+So now it comes to the back propagation.
+
+952
+01:02:33.745 --> 01:02:36.145
+So far we have seen, okay, how the forward propagations are
+
+953
+01:02:36.145 --> 01:02:37.145
+being calculated.
+
+954
+01:02:38.325 --> 01:02:40.705
+So as I said, why do we get a loss
+
+955
+01:02:41.205 --> 01:02:43.945
+and why back replication is needed that I think
+
+956
+01:02:43.945 --> 01:02:45.705
+that motivation is clear, right?
+
+957
+01:02:46.245 --> 01:02:49.105
+So now, now here it comes the bap replication algorithm,
+
+958
+01:02:49.885 --> 01:02:52.505
+and just, just follow me, although the notations
+
+959
+01:02:52.505 --> 01:02:55.145
+and all will look a little, uh, complicated,
+
+960
+01:02:55.285 --> 01:02:58.825
+but then I will take you through the, uh, uh, take you
+
+961
+01:02:58.825 --> 01:03:02.065
+through the animation and with the pictures to show you
+
+962
+01:03:02.645 --> 01:03:05.465
+how exactly the error flows back
+
+963
+01:03:05.685 --> 01:03:08.495
+or back propagate in the network, okay?
+
+964
+01:03:08.495 --> 01:03:10.855
+With the, with the pictures. But then a little bit
+
+965
+01:03:10.855 --> 01:03:13.015
+of notation, that is what you have to follow, okay?
+
+966
+01:03:13.515 --> 01:03:17.295
+So say that the loss is being, uh, denoted
+
+967
+01:03:17.315 --> 01:03:18.735
+by this L.
+
+968
+01:03:19.355 --> 01:03:21.255
+So what we need to compute, if you see
+
+969
+01:03:21.255 --> 01:03:23.935
+that in this whole network, this is my network right now,
+
+970
+01:03:24.245 --> 01:03:25.655
+what is the parameters we have?
+
+971
+01:03:25.675 --> 01:03:28.375
+We have V one, V two, B three, okay?
+
+972
+01:03:28.835 --> 01:03:32.095
+And if I come to the previous layer, I have W one,
+
+973
+01:03:32.095 --> 01:03:35.375
+one W one two, W2, one W2 two and B one and B two.
+
+974
+01:03:35.435 --> 01:03:37.615
+Now these are the parameters. How many parameters?
+
+975
+01:03:37.615 --> 01:03:39.335
+We have three parameters in this layer,
+
+976
+01:03:40.275 --> 01:03:43.175
+and four plus two six parameters in this layer,
+
+977
+01:03:43.235 --> 01:03:44.815
+six plus three nine parameters.
+
+978
+01:03:44.815 --> 01:03:46.855
+That is what we need to update. Okay?
+
+979
+01:03:47.435 --> 01:03:52.055
+So when in order to update the parameter, first of all,
+
+980
+01:03:52.155 --> 01:03:57.065
+we need to see that, okay, how much, how much, uh, uh,
+
+981
+01:03:57.485 --> 01:04:01.025
+uh, what is the, uh, you can say that, uh, uh,
+
+982
+01:04:01.885 --> 01:04:05.265
+if I will change, support this B three a little bit, okay?
+
+983
+01:04:05.405 --> 01:04:07.945
+Uh, then what will be the change in L?
+
+984
+01:04:08.645 --> 01:04:10.985
+So what I want to calculate is I want
+
+985
+01:04:10.985 --> 01:04:14.345
+to calculate the error, partial derivative of the error
+
+986
+01:04:14.655 --> 01:04:16.145
+with respect to say B three,
+
+987
+01:04:16.175 --> 01:04:18.465
+because I told you right in the previous slide here,
+
+988
+01:04:19.205 --> 01:04:20.425
+why we are getting this error.
+
+989
+01:04:20.925 --> 01:04:22.465
+We are why we are getting the error here.
+
+990
+01:04:22.465 --> 01:04:23.905
+Maybe V one is responsible,
+
+991
+01:04:24.365 --> 01:04:26.345
+or V two is responsible for that, okay?
+
+992
+01:04:26.345 --> 01:04:28.465
+Or B three is responsible, okay? All error.
+
+993
+01:04:28.715 --> 01:04:31.305
+Maybe these are the weights with, uh,
+
+994
+01:04:31.305 --> 01:04:34.185
+the way we have initialized them, that's
+
+995
+01:04:34.185 --> 01:04:35.465
+where we must have gone wrong.
+
+996
+01:04:36.205 --> 01:04:38.825
+The right combination of these parameters we don't have,
+
+997
+01:04:38.885 --> 01:04:40.305
+and hence we are getting the error.
+
+998
+01:04:40.845 --> 01:04:45.025
+So we are, we start changing every parameter slightly.
+
+999
+01:04:45.845 --> 01:04:50.225
+So partial derivative of loss with respect to say B three.
+
+1000
+01:04:50.445 --> 01:04:53.705
+So parcel derivative of loss with respect to B three.
+
+1001
+01:04:53.705 --> 01:04:57.465
+What does it mean if I slightly change B three? Okay?
+
+1002
+01:04:57.495 --> 01:05:00.065
+What will be the change in the law loss?
+
+1003
+01:05:00.255 --> 01:05:03.705
+Okay, so you just assume that you have y uh, access
+
+1004
+01:05:03.705 --> 01:05:05.305
+and xxi, okay?
+
+1005
+01:05:05.595 --> 01:05:07.225
+Where we calculate the slope.
+
+1006
+01:05:07.445 --> 01:05:10.665
+So if you change slightly x, what will be the change in Y?
+
+1007
+01:05:10.975 --> 01:05:13.425
+Okay? That is what slope says. Slope always says.
+
+1008
+01:05:13.485 --> 01:05:15.825
+So this partial derivative is nothing but a slope.
+
+1009
+01:05:16.015 --> 01:05:18.045
+It's a gradient with nothing but a slope.
+
+1010
+01:05:18.465 --> 01:05:22.005
+So what we calculate, if I slightly change B three,
+
+1011
+01:05:22.155 --> 01:05:23.845
+what will be the change in the
+
+1012
+01:05:24.435 --> 01:05:26.845
+what will the change in the loss similarly for B one,
+
+1013
+01:05:26.845 --> 01:05:28.365
+similarly for B two and so on,
+
+1014
+01:05:28.365 --> 01:05:30.165
+for all the parameter, and that's why this partial.
+
+1015
+01:05:30.505 --> 01:05:33.885
+So what, so if you see this notation, this first one,
+
+1016
+01:05:33.885 --> 01:05:36.485
+what we need to compute is partial derivative of loss
+
+1017
+01:05:36.635 --> 01:05:39.585
+with respect to V one and then V two.
+
+1018
+01:05:39.805 --> 01:05:42.585
+So VK K represents one and two, okay?
+
+1019
+01:05:43.055 --> 01:05:45.345
+Similarly, if I talk about these weights,
+
+1020
+01:05:45.565 --> 01:05:48.545
+so partial derivative of loss with respect to W one, one,
+
+1021
+01:05:48.665 --> 01:05:50.345
+W one, two, W2, one, W2, two.
+
+1022
+01:05:50.345 --> 01:05:53.545
+So it's represent, represented WIG. Okay?
+
+1023
+01:05:53.925 --> 01:05:55.545
+1, 1, 1, 2, 2, 1, 2, 2.
+
+1024
+01:05:56.285 --> 01:05:59.625
+And finally, this partial derivative of loss with respect
+
+1025
+01:05:59.625 --> 01:06:02.825
+to B, bk, BK represents B one, B two, B three.
+
+1026
+01:06:03.055 --> 01:06:07.425
+Okay? So that is how, uh, this, this key values are, uh,
+
+1027
+01:06:07.555 --> 01:06:08.705
+going say that, okay?
+
+1028
+01:06:09.205 --> 01:06:13.305
+And once suppose we have these values that, okay, how much,
+
+1029
+01:06:13.685 --> 01:06:15.185
+uh, partial derivative, okay?
+
+1030
+01:06:15.455 --> 01:06:18.385
+What will be that, uh, slope? Okay?
+
+1031
+01:06:18.535 --> 01:06:19.665
+What will be that gradient?
+
+1032
+01:06:19.665 --> 01:06:21.105
+So these are all called as gradient.
+
+1033
+01:06:21.175 --> 01:06:24.145
+Then we can change these parameters with this update.
+
+1034
+01:06:24.685 --> 01:06:28.905
+So VK will be VK minus, uh, we use the learning rate right
+
+1035
+01:06:29.935 --> 01:06:32.665
+into this particular, uh, uh, partial
+
+1036
+01:06:33.425 --> 01:06:34.505
+whatever we are calculating here.
+
+1037
+01:06:34.565 --> 01:06:36.865
+So, and we'll do it for all the parameter we can
+
+1038
+01:06:36.865 --> 01:06:38.065
+also, because we have to change.
+
+1039
+01:06:38.805 --> 01:06:42.985
+So, uh, this left side, whatever you have, this is the new,
+
+1040
+01:06:43.605 --> 01:06:45.585
+new, new pa, new weight, you can say that.
+
+1041
+01:06:45.605 --> 01:06:47.825
+And this right side VK value is the old weight.
+
+1042
+01:06:48.005 --> 01:06:52.145
+So from the old, how much I, I I'm subtracting, okay?
+
+1043
+01:06:52.205 --> 01:06:54.385
+So it may be slightly change
+
+1044
+01:06:54.385 --> 01:06:58.465
+because this value is what we are expecting is, uh, this,
+
+1045
+01:06:59.005 --> 01:07:01.625
+uh, slight change that is what, uh, the slope, what
+
+1046
+01:07:01.625 --> 01:07:04.225
+what I'm expecting is should be, uh,
+
+1047
+01:07:04.295 --> 01:07:06.185
+very less then only I can observe, okay?
+
+1048
+01:07:06.185 --> 01:07:09.265
+How much, how much change which is happening here in this,
+
+1049
+01:07:09.605 --> 01:07:12.585
+uh, at the output layer in the next iteration, right?
+
+1050
+01:07:12.845 --> 01:07:13.865
+So this is the update tool.
+
+1051
+01:07:13.865 --> 01:07:16.345
+So there are two step process which we are going to follow.
+
+1052
+01:07:16.595 --> 01:07:18.985
+First step is to calculate this part, elevator tips
+
+1053
+01:07:18.985 --> 01:07:21.065
+and second step update these parameters
+
+1054
+01:07:21.215 --> 01:07:22.385
+with this update rule.
+
+1055
+01:07:23.285 --> 01:07:27.485
+Now, the question comes here, can we compute
+
+1056
+01:07:28.355 --> 01:07:31.645
+partial derivative of loss with respect to vk
+
+1057
+01:07:32.765 --> 01:07:36.065
+or with respect to WIJ or with respect to bk?
+
+1058
+01:07:37.055 --> 01:07:38.305
+Okay? Can we compute it?
+
+1059
+01:07:38.845 --> 01:07:40.345
+And if at all we compute it, how,
+
+1060
+01:07:40.365 --> 01:07:41.625
+how can we compute it, right?
+
+1061
+01:07:41.625 --> 01:07:43.745
+So that is what we have to see now, okay?
+
+1062
+01:07:43.745 --> 01:07:47.145
+And that's where, uh, your, uh, concentration is required.
+
+1063
+01:07:47.365 --> 01:07:51.905
+So first of all, uh, you may not be able to calculate these,
+
+1064
+01:07:52.765 --> 01:07:54.185
+uh, these, uh, derivative,
+
+1065
+01:07:54.185 --> 01:07:56.225
+partial derivative directly, okay?
+
+1066
+01:07:57.005 --> 01:08:00.465
+Why? Because loss you have calculated at output layer,
+
+1067
+01:08:00.885 --> 01:08:02.945
+and loss was always with win.
+
+1068
+01:08:03.285 --> 01:08:05.985
+Why and why? Cap, okay?
+
+1069
+01:08:05.985 --> 01:08:08.505
+Loss was always between these two pyramid, why
+
+1070
+01:08:08.525 --> 01:08:13.145
+and why cap loss was not between say that, uh, uh,
+
+1071
+01:08:13.735 --> 01:08:18.365
+loss has, uh, not between W one one, okay?
+
+1072
+01:08:18.365 --> 01:08:21.125
+And the output, what you're supposed to get, okay? Mm-hmm.
+
+1073
+01:08:21.195 --> 01:08:22.645
+Loss was not between V one
+
+1074
+01:08:22.665 --> 01:08:24.925
+and whatever output you're supposed to get, loss was
+
+1075
+01:08:24.925 --> 01:08:26.365
+between whatever prediction you are getting
+
+1076
+01:08:26.425 --> 01:08:28.765
+and whatever, uh, ground truth you have.
+
+1077
+01:08:29.345 --> 01:08:32.965
+So we have to start from this, uh, uh,
+
+1078
+01:08:33.135 --> 01:08:34.405
+final output itself,
+
+1079
+01:08:34.425 --> 01:08:38.405
+and we have to see that how, how we can use, uh,
+
+1080
+01:08:38.405 --> 01:08:40.245
+this partial derivative, uh,
+
+1081
+01:08:40.305 --> 01:08:42.285
+and we can, we can still change the,
+
+1082
+01:08:42.285 --> 01:08:43.485
+these, these parameters.
+
+1083
+01:08:43.485 --> 01:08:45.485
+That is what we have to see next. Okay?
+
+1084
+01:08:45.485 --> 01:08:47.825
+So first of all, see this is,
+
+1085
+01:08:47.825 --> 01:08:51.585
+this is the flow which we are going to follow, okay?
+
+1086
+01:08:52.005 --> 01:08:54.585
+So what I want to say is my loss
+
+1087
+01:08:55.255 --> 01:08:58.025
+depends on the prediction, isn't it?
+
+1088
+01:08:58.045 --> 01:09:01.465
+You can see here loss function was y minus y hat, okay?
+
+1089
+01:09:01.485 --> 01:09:02.985
+The actual minus prediction,
+
+1090
+01:09:03.325 --> 01:09:05.265
+and obviously we have used here the square,
+
+1091
+01:09:05.805 --> 01:09:07.705
+so it is Y minus y hat square.
+
+1092
+01:09:08.165 --> 01:09:09.705
+So this is why actual loss.
+
+1093
+01:09:10.085 --> 01:09:13.475
+So my laws depend on Y hat fine.
+
+1094
+01:09:14.375 --> 01:09:18.555
+And if you see that, the Y hat here depends on these five
+
+1095
+01:09:19.215 --> 01:09:20.275
+values, okay?
+
+1096
+01:09:20.275 --> 01:09:21.515
+These five pyramid, these five
+
+1097
+01:09:21.515 --> 01:09:23.515
+values, what are these values?
+
+1098
+01:09:23.655 --> 01:09:26.035
+So you see this, this y hat here in this network,
+
+1099
+01:09:26.135 --> 01:09:27.795
+it is connected with B three.
+
+1100
+01:09:28.295 --> 01:09:32.075
+It is connected with V one, it is connected with V, uh,
+
+1101
+01:09:32.235 --> 01:09:37.115
+V one, V two, and this V one is coming from H one and H two.
+
+1102
+01:09:37.775 --> 01:09:41.315
+So this output neuron where you are getting the yha
+
+1103
+01:09:41.935 --> 01:09:44.795
+is actually depending on these five, so
+
+1104
+01:09:44.905 --> 01:09:47.035
+what will be the yha say that yhat will be 10
+
+1105
+01:09:47.135 --> 01:09:48.475
+or yhat will be 20.
+
+1106
+01:09:48.855 --> 01:09:51.435
+It depends on all these five parameters, okay?
+
+1107
+01:09:51.435 --> 01:09:53.595
+What is B three? What is H one? What is S two?
+
+1108
+01:09:53.595 --> 01:09:55.835
+What is V one and what is V two? Okay?
+
+1109
+01:09:55.975 --> 01:09:59.195
+If any of these parameter will change, y hat will change.
+
+1110
+01:09:59.665 --> 01:10:01.955
+That means that Y hat depends on all these five,
+
+1111
+01:10:02.335 --> 01:10:03.955
+and that is what is represented here.
+
+1112
+01:10:04.665 --> 01:10:09.435
+That my loss depends on, uh, this prediction yha,
+
+1113
+01:10:09.815 --> 01:10:12.675
+but YHA depends on V one, V two, H one, S two,
+
+1114
+01:10:12.675 --> 01:10:14.925
+and B three, right?
+
+1115
+01:10:15.615 --> 01:10:16.765
+Makes sense, I guess, right?
+
+1116
+01:10:17.545 --> 01:10:19.805
+And if you see that, I will now focus
+
+1117
+01:10:20.805 --> 01:10:24.225
+all the parameters which are between this hidden layer
+
+1118
+01:10:24.225 --> 01:10:28.145
+and output layer, and I'll try to update that and to update.
+
+1119
+01:10:28.195 --> 01:10:31.855
+First I will par, I'll do the partial derivative applause
+
+1120
+01:10:31.855 --> 01:10:33.855
+with respect to these three parameter, okay?
+
+1121
+01:10:33.855 --> 01:10:36.415
+That is the first thing what we, so from the network,
+
+1122
+01:10:36.555 --> 01:10:39.375
+if you see that, uh, this YY hat equation,
+
+1123
+01:10:39.555 --> 01:10:42.095
+it depends on V one, H one, V two, H two, and P three.
+
+1124
+01:10:42.095 --> 01:10:43.695
+That is what is shown in this particular figure.
+
+1125
+01:10:43.755 --> 01:10:46.255
+The same equation is now represented in this figure
+
+1126
+01:10:46.275 --> 01:10:47.895
+for the better understanding, okay?
+
+1127
+01:10:48.435 --> 01:10:50.615
+And this red line, what you're seeing, red arrow,
+
+1128
+01:10:51.105 --> 01:10:53.615
+these arrow, these are the arrows which we are going
+
+1129
+01:10:53.615 --> 01:10:56.935
+to first work on, and then we'll go on H one S two,
+
+1130
+01:10:56.935 --> 01:10:58.895
+and then we'll change W one W parameters
+
+1131
+01:10:58.895 --> 01:11:01.695
+and B one B two s, we, we'll go one level back, okay?
+
+1132
+01:11:01.795 --> 01:11:04.215
+So that's the first thing. So let us see that one.
+
+1133
+01:11:04.555 --> 01:11:09.235
+So now the point is, uh, first of all, uh, so
+
+1134
+01:11:09.265 --> 01:11:14.035
+what I said, my loss depends on Y hat, okay?
+
+1135
+01:11:14.055 --> 01:11:18.665
+So if you see the loss equation, it is Y minus yha square.
+
+1136
+01:11:19.245 --> 01:11:23.065
+So partial derivative of loss with respect to yhat.
+
+1137
+01:11:23.065 --> 01:11:25.545
+Now, this is the only direct access we have
+
+1138
+01:11:25.725 --> 01:11:27.145
+for the loss, isn't it?
+
+1139
+01:11:27.295 --> 01:11:30.185
+Because loss is directly depending on yhat,
+
+1140
+01:11:30.185 --> 01:11:31.625
+so I can calculate this one.
+
+1141
+01:11:31.965 --> 01:11:35.585
+So partial derivative of loss with respect to yha will come
+
+1142
+01:11:35.585 --> 01:11:38.225
+as, so it's, it's just like access square, right?
+
+1143
+01:11:38.325 --> 01:11:41.065
+So it'll be two in two y height minus Y, okay?
+
+1144
+01:11:41.065 --> 01:11:43.345
+And this, we are going to use it for further when we will,
+
+1145
+01:11:43.765 --> 01:11:46.385
+uh, uh, expand our partial derivative part.
+
+1146
+01:11:47.085 --> 01:11:51.755
+So now see that this part is done loss to yhat.
+
+1147
+01:11:51.755 --> 01:11:52.755
+We have already traveled.
+
+1148
+01:11:53.295 --> 01:11:57.925
+Now, the point is, uh, from yhat depends on V one,
+
+1149
+01:11:58.525 --> 01:12:00.445
+V two, and B three, okay?
+
+1150
+01:12:00.445 --> 01:12:02.925
+So I'm talking about this layer right now.
+
+1151
+01:12:03.185 --> 01:12:05.925
+I'm not talking about the, uh, first layer, okay?
+
+1152
+01:12:05.925 --> 01:12:07.645
+So I will talk about it later.
+
+1153
+01:12:08.345 --> 01:12:10.245
+So first I will see that how
+
+1154
+01:12:10.265 --> 01:12:14.165
+to calculate the partial derivative of laws with respect
+
+1155
+01:12:14.165 --> 01:12:18.455
+to V one and how to calculate the partial derivative laws
+
+1156
+01:12:18.565 --> 01:12:19.855
+with respect to B2C.
+
+1157
+01:12:19.855 --> 01:12:21.335
+There is no direct access, okay?
+
+1158
+01:12:21.515 --> 01:12:24.695
+So loss is not directly depending on V two loss directly
+
+1159
+01:12:24.695 --> 01:12:27.575
+depends on why, but why depends on V one, V two, okay?
+
+1160
+01:12:28.115 --> 01:12:31.295
+So what I will do is I will, uh,
+
+1161
+01:12:31.365 --> 01:12:32.655
+look at this particular equation.
+
+1162
+01:12:33.135 --> 01:12:34.175
+Y hat is equal two,
+
+1163
+01:12:34.735 --> 01:12:38.015
+y hat is equal two V one H one V two S two plus B three.
+
+1164
+01:12:38.155 --> 01:12:41.535
+So what I'll do is I'll calculate partial derivative of loss
+
+1165
+01:12:41.535 --> 01:12:44.925
+with respect to, uh, uh, this one y hat,
+
+1166
+01:12:45.305 --> 01:12:49.125
+and then I'll calculate partial derivative of, uh,
+
+1167
+01:12:49.805 --> 01:12:53.205
+y hat here with respect to say V one
+
+1168
+01:12:53.865 --> 01:12:56.565
+or with respect to V two or with respect to B three.
+
+1169
+01:12:56.865 --> 01:12:58.845
+Why? Because V one, V two
+
+1170
+01:12:58.845 --> 01:13:01.685
+and B three, these are the parameters which is available
+
+1171
+01:13:01.785 --> 01:13:02.925
+in this particular equation.
+
+1172
+01:13:03.045 --> 01:13:05.405
+V one, H one, V two, S two, B, V three, and three.
+
+1173
+01:13:05.625 --> 01:13:07.485
+So this part we can always calculate, right?
+
+1174
+01:13:07.485 --> 01:13:12.045
+This one, partial derivative of yha with respect to V one,
+
+1175
+01:13:12.045 --> 01:13:14.085
+what will be that H one, isn't it?
+
+1176
+01:13:14.235 --> 01:13:17.045
+That will that, because all these will be the constant
+
+1177
+01:13:17.065 --> 01:13:18.125
+and hence it will be zero.
+
+1178
+01:13:18.905 --> 01:13:21.485
+And here you have, you are only led with the H one.
+
+1179
+01:13:21.485 --> 01:13:24.645
+So partial derivative of yhat with respect to
+
+1180
+01:13:25.325 --> 01:13:27.565
+V one will be S one, and that is what is written here.
+
+1181
+01:13:28.105 --> 01:13:30.885
+And similarly, partial derivative of y hat with respect
+
+1182
+01:13:30.885 --> 01:13:34.485
+to S two will be V two, sorry, uh, of V two with respect
+
+1183
+01:13:34.485 --> 01:13:35.845
+to, uh, V two.
+
+1184
+01:13:36.505 --> 01:13:38.445
+Uh, actually it should be V two. Okay?
+
+1185
+01:13:38.995 --> 01:13:41.365
+This, this, uh, I, I'll change that one
+
+1186
+01:13:41.465 --> 01:13:42.845
+before uploading this.
+
+1187
+01:13:43.705 --> 01:13:46.845
+Uh, so this should be V two, so it'll be H two, right?
+
+1188
+01:13:46.865 --> 01:13:48.165
+And that is what is written here.
+
+1189
+01:13:48.825 --> 01:13:52.045
+And similarly, partial derivative of yhat with respect
+
+1190
+01:13:52.045 --> 01:13:54.245
+to B three will be one, okay?
+
+1191
+01:13:54.245 --> 01:13:56.765
+Because these two component will be zero zero
+
+1192
+01:13:56.765 --> 01:14:01.085
+because this constant, uh, when we are with respect
+
+1193
+01:14:01.085 --> 01:14:03.525
+to B three, we are doing then this part,
+
+1194
+01:14:03.675 --> 01:14:05.525
+this component will be constant.
+
+1195
+01:14:05.545 --> 01:14:08.885
+So zero, this will be zero left with only B three.
+
+1196
+01:14:09.065 --> 01:14:13.125
+So partial dis a partial derivative of yha with respect
+
+1197
+01:14:13.125 --> 01:14:14.605
+to B three will be one.
+
+1198
+01:14:15.145 --> 01:14:16.485
+So now how we are going,
+
+1199
+01:14:16.785 --> 01:14:20.125
+so we are calculating this equation, partial derivative
+
+1200
+01:14:20.125 --> 01:14:22.565
+of loss with respect to V one, when we have to calculate,
+
+1201
+01:14:22.705 --> 01:14:25.445
+so actually we are going doing the chain rule, right?
+
+1202
+01:14:25.785 --> 01:14:28.325
+So partial derivative of loss with respect to yhat,
+
+1203
+01:14:28.325 --> 01:14:30.125
+because that is the only direct text we have,
+
+1204
+01:14:30.385 --> 01:14:33.125
+but partial derivative y hatt with respect to V one,
+
+1205
+01:14:33.125 --> 01:14:35.485
+we can originate because this, this arrow you can follow,
+
+1206
+01:14:35.835 --> 01:14:39.325
+okay, from loss to YHY hatt to V one, this we can go,
+
+1207
+01:14:39.325 --> 01:14:41.245
+this is the channel which we have to follow,
+
+1208
+01:14:41.705 --> 01:14:43.045
+and that is what we have calculated.
+
+1209
+01:14:43.065 --> 01:14:44.965
+And hence we have got, this is Azure derivative,
+
+1210
+01:14:44.965 --> 01:14:47.365
+and we are going to utilize this derivative later
+
+1211
+01:14:47.425 --> 01:14:50.085
+to update our V one and V two update part.
+
+1212
+01:14:50.115 --> 01:14:53.645
+I'll show you later. And similarly, for V two, this is,
+
+1213
+01:14:53.645 --> 01:14:56.405
+this is what is the partial derivative only changes.
+
+1214
+01:14:56.705 --> 01:14:58.005
+In here we have H one.
+
+1215
+01:14:58.005 --> 01:14:59.925
+Here we have H two, and with V three,
+
+1216
+01:14:59.925 --> 01:15:02.045
+we have here one first part is same,
+
+1217
+01:15:02.045 --> 01:15:04.285
+because in the first part we have partial derivative clause
+
+1218
+01:15:04.285 --> 01:15:06.725
+with respect to yhat, which is common for all the three.
+
+1219
+01:15:07.315 --> 01:15:09.245
+Okay? So hopefully this much is clear.
+
+1220
+01:15:09.625 --> 01:15:12.245
+Is there any query in this particular slide so far?
+
+1221
+01:15:12.585 --> 01:15:13.325
+You can ask me,
+
+1222
+01:15:17.635 --> 01:15:18.135
+yes, sir.
+
+1223
+01:15:18.845 --> 01:15:20.615
+Yeah, please. What is the query?
+
+1224
+01:15:26.955 --> 01:15:29.075
+A any, any query you have or it, it's fine.
+
+1225
+01:15:31.005 --> 01:15:33.695
+Yeah, sir, it is fine, sir. Yeah. Okay.
+
+1226
+01:15:34.675 --> 01:15:37.855
+Now we are going to extend the same logic, okay?
+
+1227
+01:15:37.915 --> 01:15:40.175
+Uh, this, this, uh, this tag, uh,
+
+1228
+01:15:40.245 --> 01:15:42.655
+I'll show you diagrammatic representation,
+
+1229
+01:15:43.155 --> 01:15:45.135
+but how to go one level down.
+
+1230
+01:15:45.755 --> 01:15:48.615
+So we are still, we are right now between output layer
+
+1231
+01:15:48.615 --> 01:15:50.455
+and hidden layer, and these are the three parameters,
+
+1232
+01:15:50.455 --> 01:15:53.575
+which we are trying to find the partial derivative, okay?
+
+1233
+01:15:53.575 --> 01:15:56.415
+With respect, uh, with respect to these three parameters.
+
+1234
+01:15:56.715 --> 01:15:58.135
+But now we'll go one level down.
+
+1235
+01:15:58.315 --> 01:16:01.855
+So now you see this, this layer is done. Okay?
+
+1236
+01:16:01.995 --> 01:16:04.655
+Now we need to find, we are at H one,
+
+1237
+01:16:05.195 --> 01:16:06.495
+and then I'll show you for H two.
+
+1238
+01:16:06.765 --> 01:16:09.575
+Okay? So now we are at H one,
+
+1239
+01:16:09.575 --> 01:16:13.775
+because if you see here, uh, this y was depending on V one,
+
+1240
+01:16:14.255 --> 01:16:16.135
+V two, and then why, why, sorry,
+
+1241
+01:16:16.215 --> 01:16:17.895
+Y hat was depending on V one, V two,
+
+1242
+01:16:17.895 --> 01:16:20.375
+and it was also depending on H one, S two, V three, first,
+
+1243
+01:16:20.395 --> 01:16:21.535
+we have solved for these three.
+
+1244
+01:16:21.875 --> 01:16:24.735
+Now we'll proceed for H one and H two. Okay?
+
+1245
+01:16:25.355 --> 01:16:28.295
+So now H one S two, if you, if you can see here,
+
+1246
+01:16:28.615 --> 01:16:31.375
+H one S two is the output which you're getting from the
+
+1247
+01:16:31.415 --> 01:16:33.175
+hidden layer neurons, okay?
+
+1248
+01:16:33.475 --> 01:16:36.295
+It is not the parameters, it is an output,
+
+1249
+01:16:36.765 --> 01:16:39.615
+like yhat is an output from the output neuron.
+
+1250
+01:16:39.895 --> 01:16:43.975
+H one S two is also an output from the hidden layer neurons.
+
+1251
+01:16:44.565 --> 01:16:47.775
+Okay? So, uh, we are not going to update
+
+1252
+01:16:48.835 --> 01:16:51.615
+the H one S two when we are doing the back propagation,
+
+1253
+01:16:51.795 --> 01:16:53.575
+but we are updating V one, V two B three
+
+1254
+01:16:53.575 --> 01:16:54.895
+because these were the parameters.
+
+1255
+01:16:55.005 --> 01:16:58.415
+Okay? So now let us see that what we are going to do.
+
+1256
+01:16:58.835 --> 01:17:03.015
+So at the H one. At the H one. So we have to see that. Okay?
+
+1257
+01:17:03.315 --> 01:17:07.455
+Uh, this H one is now connected with what?
+
+1258
+01:17:07.815 --> 01:17:11.845
+H one is connected with X one, which is IQ X two,
+
+1259
+01:17:11.845 --> 01:17:14.085
+which is CZPA and B one, which is one.
+
+1260
+01:17:14.835 --> 01:17:16.285
+Okay? This is how, these are the three
+
+1261
+01:17:16.285 --> 01:17:17.605
+parameters which are connected.
+
+1262
+01:17:17.605 --> 01:17:19.245
+Now with the H one is the same case.
+
+1263
+01:17:19.355 --> 01:17:21.485
+What we have seen for yhat, we are V one,
+
+1264
+01:17:21.565 --> 01:17:22.765
+V two, and B three are connected.
+
+1265
+01:17:22.765 --> 01:17:25.885
+Similar, DH one is now connected with W one one,
+
+1266
+01:17:26.005 --> 01:17:27.045
+W one two, and B one.
+
+1267
+01:17:27.125 --> 01:17:28.325
+These are the three parameters,
+
+1268
+01:17:28.325 --> 01:17:29.965
+which is connected with the H one.
+
+1269
+01:17:30.305 --> 01:17:34.565
+So like for, uh, uh, when we were here at the output layer,
+
+1270
+01:17:34.825 --> 01:17:38.925
+we calculated the gradient of loss with respect
+
+1271
+01:17:38.945 --> 01:17:42.945
+to V one, V two, and B three with a chain rule.
+
+1272
+01:17:43.135 --> 01:17:44.745
+Similarly, when we are here,
+
+1273
+01:17:45.115 --> 01:17:48.425
+we'll calculate the partial derivative applause with respect
+
+1274
+01:17:48.425 --> 01:17:50.465
+to W one one, W one, two, and B one.
+
+1275
+01:17:50.895 --> 01:17:54.145
+Okay? Uh, uh, at, at, when we are at H one,
+
+1276
+01:17:54.145 --> 01:17:55.465
+similarly, we'll repeat for H two.
+
+1277
+01:17:55.465 --> 01:17:57.745
+I'll show you how to, so first of all, look,
+
+1278
+01:17:57.745 --> 01:18:00.465
+look at these two, these two equation.
+
+1279
+01:18:01.005 --> 01:18:02.625
+So what is happening here at H one?
+
+1280
+01:18:02.625 --> 01:18:04.265
+First of all, you are doing this one,
+
+1281
+01:18:04.465 --> 01:18:06.825
+W one one gets multiplied with X one, W one,
+
+1282
+01:18:06.825 --> 01:18:09.105
+two gets multiplied with X two,
+
+1283
+01:18:09.405 --> 01:18:11.145
+and B one gets multiplied with one.
+
+1284
+01:18:11.165 --> 01:18:13.105
+And hence, you get one value here, which is
+
+1285
+01:18:13.985 --> 01:18:14.985
+represented here, Z one
+
+1286
+01:18:15.245 --> 01:18:17.665
+and this Z one, you are passing through activation function.
+
+1287
+01:18:17.665 --> 01:18:19.425
+Here we are using radio activation function,
+
+1288
+01:18:19.615 --> 01:18:20.625
+getting the H one.
+
+1289
+01:18:20.645 --> 01:18:23.585
+So this is how you are getting the H one value, okay?
+
+1290
+01:18:24.005 --> 01:18:27.305
+The output from the hidden layer, the H one value, okay?
+
+1291
+01:18:27.405 --> 01:18:29.945
+Now, now we need to change the parameter,
+
+1292
+01:18:30.025 --> 01:18:31.505
+W one one, W one, two, B one.
+
+1293
+01:18:31.505 --> 01:18:33.945
+So if at all, we want to change the parameter, W one,
+
+1294
+01:18:33.945 --> 01:18:37.705
+how can we, uh, how can we, uh, see for changing W one, one,
+
+1295
+01:18:37.945 --> 01:18:38.945
+W one two, B one.
+
+1296
+01:18:39.125 --> 01:18:40.625
+You first have to come to that one,
+
+1297
+01:18:40.885 --> 01:18:44.065
+and to come to the ZED one, you've, you have to come
+
+1298
+01:18:44.065 --> 01:18:45.585
+to this of Zed one.
+
+1299
+01:18:45.725 --> 01:18:48.345
+And then, uh, two, and that is what is the H one, right?
+
+1300
+01:18:48.565 --> 01:18:51.025
+So we'll take this path again, I want
+
+1301
+01:18:51.025 --> 01:18:52.985
+to show the path in which we are going to follow,
+
+1302
+01:18:53.405 --> 01:18:55.865
+and hence we'll change W one one, W one, two, and P one.
+
+1303
+01:18:56.015 --> 01:18:58.675
+Okay? So L was,
+
+1304
+01:18:58.895 --> 01:19:01.595
+the loss was depending on Yhat, right?
+
+1305
+01:19:01.855 --> 01:19:04.275
+And YHA was depending on these five parameters,
+
+1306
+01:19:04.275 --> 01:19:07.195
+we have already calculated the gradient for these three,
+
+1307
+01:19:07.635 --> 01:19:09.035
+V one, V two, and V three.
+
+1308
+01:19:09.035 --> 01:19:11.875
+That is already, we have stored, we'll do the update
+
+1309
+01:19:11.895 --> 01:19:13.275
+for V one, V two, V three, late.
+
+1310
+01:19:13.855 --> 01:19:14.915
+Now we are going little back.
+
+1311
+01:19:15.095 --> 01:19:17.235
+Now H one and H two is also left.
+
+1312
+01:19:17.655 --> 01:19:22.075
+So when we start seeing H one, so H one is not a parameter,
+
+1313
+01:19:22.075 --> 01:19:25.155
+so it was an output which we're getting from Z one.
+
+1314
+01:19:25.695 --> 01:19:29.395
+So relu of Z one was the, was giving my, the H one, right?
+
+1315
+01:19:29.935 --> 01:19:32.475
+And Z one was depending on further, further,
+
+1316
+01:19:32.495 --> 01:19:35.475
+it was depending on these five values, W one one, W one two,
+
+1317
+01:19:35.515 --> 01:19:36.515
+X one, X two, B one.
+
+1318
+01:19:36.665 --> 01:19:39.435
+Same thing. Right in place of why if I,
+
+1319
+01:19:39.435 --> 01:19:40.435
+you will remove this one.
+
+1320
+01:19:40.535 --> 01:19:42.195
+You can treat it as this is a neuron,
+
+1321
+01:19:42.195 --> 01:19:45.555
+and this, depending on these five parameters, same thing.
+
+1322
+01:19:46.055 --> 01:19:48.715
+So now, but the point is how to write the chain rule, okay?
+
+1323
+01:19:48.715 --> 01:19:51.195
+Because my loss is not directly depending on W one
+
+1324
+01:19:51.195 --> 01:19:52.355
+one, W one two or B one.
+
+1325
+01:19:52.645 --> 01:19:55.995
+These are parameters which we have to partially, uh, we,
+
+1326
+01:19:56.135 --> 01:19:59.315
+we have to change, but my loss is not directly depending.
+
+1327
+01:19:59.315 --> 01:20:01.315
+So what we'll do, we'll follow this, this path.
+
+1328
+01:20:01.615 --> 01:20:03.595
+The red, the red arrow, you have to follow,
+
+1329
+01:20:04.045 --> 01:20:06.995
+we'll calculate the partial derivative of laws with respect
+
+1330
+01:20:07.045 --> 01:20:11.005
+to yhat, then partial derivative of yhat with respect
+
+1331
+01:20:11.005 --> 01:20:15.325
+to H one, then partial derivative of H one with respect
+
+1332
+01:20:15.345 --> 01:20:18.725
+to Z one, then partial derivative of Z one with respect
+
+1333
+01:20:18.745 --> 01:20:20.165
+to W one two.
+
+1334
+01:20:20.165 --> 01:20:22.205
+That's all. This is what we are going to follow.
+
+1335
+01:20:22.825 --> 01:20:25.125
+So this is very clear how you are going
+
+1336
+01:20:25.365 --> 01:20:27.245
+to write this equation, and this equation
+
+1337
+01:20:27.275 --> 01:20:28.565
+will make sense for you, right?
+
+1338
+01:20:28.565 --> 01:20:31.005
+That why, how it has come, right?
+
+1339
+01:20:31.625 --> 01:20:34.525
+So same thing I've written here, partial derivative of loss
+
+1340
+01:20:34.525 --> 01:20:37.645
+with respect to W one, two is equal two loss with respect
+
+1341
+01:20:37.645 --> 01:20:40.765
+to y hat, y hat is depending on H one, okay?
+
+1342
+01:20:41.205 --> 01:20:42.565
+H one is depending on Z one
+
+1343
+01:20:43.225 --> 01:20:45.205
+and Z one is depending on W one too.
+
+1344
+01:20:46.025 --> 01:20:49.005
+That's all. Now, this part we already have calculated
+
+1345
+01:20:49.005 --> 01:20:52.685
+because it was two into Y hat minus Y one, H one.
+
+1346
+01:20:52.685 --> 01:20:55.165
+We have also calculated when with respect to H one,
+
+1347
+01:20:55.165 --> 01:20:57.365
+we were calculating the output was V one.
+
+1348
+01:20:57.905 --> 01:21:01.045
+Now part cell derivative of H one with respect to Z one.
+
+1349
+01:21:01.765 --> 01:21:03.135
+That is what we need to calculate.
+
+1350
+01:21:03.135 --> 01:21:06.655
+So this is what this, this blue part, you have to see H one
+
+1351
+01:21:06.655 --> 01:21:08.415
+with respect to Z one.
+
+1352
+01:21:08.835 --> 01:21:12.215
+So it, it is the par, it is the activation function part.
+
+1353
+01:21:12.215 --> 01:21:14.055
+It's partial derivative. That is what you have
+
+1354
+01:21:14.055 --> 01:21:15.295
+to calculate, okay?
+
+1355
+01:21:15.715 --> 01:21:20.295
+So, uh, partial derivative of, uh, Z one is, uh,
+
+1356
+01:21:20.515 --> 01:21:21.895
+one, okay?
+
+1357
+01:21:22.275 --> 01:21:27.015
+So if I, I'll just, I'll just show you Relu, uh, derivative,
+
+1358
+01:21:27.445 --> 01:21:28.815
+find real derivative.
+
+1359
+01:21:28.835 --> 01:21:29.935
+How does it look like so
+
+1360
+01:21:29.935 --> 01:21:33.015
+that you will understand this, uh, see this.
+
+1361
+01:21:33.795 --> 01:21:37.375
+So actually the relu function is this fine.
+
+1362
+01:21:37.475 --> 01:21:40.135
+So for negative value, it gives the zero value.
+
+1363
+01:21:40.715 --> 01:21:42.215
+And for positive, it gives this,
+
+1364
+01:21:42.215 --> 01:21:43.575
+this red line, what you're seeing.
+
+1365
+01:21:43.955 --> 01:21:46.175
+If, uh, the positive value is one
+
+1366
+01:21:46.175 --> 01:21:47.575
+or portfolio one positive value
+
+1367
+01:21:47.575 --> 01:21:48.695
+is two, or output will be two.
+
+1368
+01:21:48.755 --> 01:21:51.695
+So that way positive value itself is the output for relu.
+
+1369
+01:21:51.835 --> 01:21:54.535
+But when you calculate the derivative of this relu, it is
+
+1370
+01:21:55.395 --> 01:21:59.135
+one for all the positive, zero for all the negative.
+
+1371
+01:22:00.115 --> 01:22:03.095
+And it is, again, there is a problem here,
+
+1372
+01:22:03.225 --> 01:22:05.855
+which we'll see later on how people have solved.
+
+1373
+01:22:06.795 --> 01:22:09.455
+If the output is zero, the derivative, uh,
+
+1374
+01:22:09.475 --> 01:22:10.775
+you can't differentiate it, right?
+
+1375
+01:22:10.775 --> 01:22:13.815
+Because here it is, but, uh, at least in this network,
+
+1376
+01:22:13.815 --> 01:22:15.295
+we are not in that situation.
+
+1377
+01:22:15.315 --> 01:22:18.975
+So I have used the, so there are many solutions for
+
+1378
+01:22:18.975 --> 01:22:21.415
+that which people have used in terms of say, leaky relu
+
+1379
+01:22:21.415 --> 01:22:23.575
+or many other forms of relu, which we'll talk later.
+
+1380
+01:22:23.925 --> 01:22:27.655
+Okay? But here I wanted to show, this is how the derivative
+
+1381
+01:22:27.675 --> 01:22:28.735
+of the relu looks like.
+
+1382
+01:22:28.795 --> 01:22:31.215
+For all the positive value, the derivative is one
+
+1383
+01:22:31.355 --> 01:22:33.615
+for the all, the negative value derivative will be zero.
+
+1384
+01:22:33.885 --> 01:22:38.545
+Okay? Now, come back here. Okay, so sir,
+
+1385
+01:22:38.805 --> 01:22:40.905
+One, uh, sorry to interrupt one question because
+
+1386
+01:22:40.905 --> 01:22:42.025
+otherwise you'll go too far.
+
+1387
+01:22:42.075 --> 01:22:43.385
+It'll be difficult for me to follow.
+
+1388
+01:22:43.735 --> 01:22:47.345
+Alright, so the last one, uh, like the derivative of Z one,
+
+1389
+01:22:47.405 --> 01:22:50.025
+uh, depending upon W one, two have put it.
+
+1390
+01:22:50.025 --> 01:22:51.945
+Why only one to why not one, one as well?
+
+1391
+01:22:52.685 --> 01:22:54.825
+No, that is also there, but in the next slide,
+
+1392
+01:22:55.335 --> 01:22:56.335
+Okay? Okay, yeah, fine
+
+1393
+01:22:56.335 --> 01:22:57.225
+then. Okay. Yeah.
+
+1394
+01:22:57.365 --> 01:23:00.185
+The one by one, I'm, I'm showing you, so, yeah, sure.
+
+1395
+01:23:00.295 --> 01:23:01.545
+Okay. Yeah, that's fine. Thank you.
+
+1396
+01:23:01.925 --> 01:23:03.825
+Yes, yes. Actually, this,
+
+1397
+01:23:03.825 --> 01:23:05.605
+this first slide is for one, one only.
+
+1398
+01:23:05.715 --> 01:23:09.005
+Here, you see this red line? Actually, I missed that.
+
+1399
+01:23:09.345 --> 01:23:10.885
+So this is one, one.
+
+1400
+01:23:11.195 --> 01:23:14.085
+Next slide is for one, two, and next slide is for B one,
+
+1401
+01:23:14.085 --> 01:23:15.805
+because these are the parameters we have.
+
+1402
+01:23:16.235 --> 01:23:20.125
+Okay? So yeah, so this is for one, one, uh, yeah.
+
+1403
+01:23:20.225 --> 01:23:21.325
+So what will happen?
+
+1404
+01:23:21.385 --> 01:23:24.925
+So what will calculate partial derivative of, uh, uh,
+
+1405
+01:23:25.065 --> 01:23:28.165
+we have already come from here, partial derivative of clause
+
+1406
+01:23:28.165 --> 01:23:31.085
+with respect to Y hat, partial derivative of yha
+
+1407
+01:23:31.085 --> 01:23:34.565
+with respect to H one, H one, with respect to zed one
+
+1408
+01:23:35.105 --> 01:23:37.925
+and the zed one with respect to W one one.
+
+1409
+01:23:38.185 --> 01:23:40.565
+And this is the same. You can see that this
+
+1410
+01:23:41.095 --> 01:23:43.285
+chain rule is written and this is what we have to solve.
+
+1411
+01:23:43.585 --> 01:23:47.005
+If we want to calculate this, uh, uh, partial change
+
+1412
+01:23:47.745 --> 01:23:49.805
+of L with respect to W.
+
+1413
+01:23:49.905 --> 01:23:53.205
+So what will be the change in loss if I slightly, uh,
+
+1414
+01:23:53.205 --> 01:23:55.125
+if there will be a slight change in W one.
+
+1415
+01:23:55.235 --> 01:23:56.645
+Okay, so that if at all you want
+
+1416
+01:23:56.645 --> 01:23:58.685
+to calculate this whole chain rule you have to solve,
+
+1417
+01:23:58.985 --> 01:24:00.805
+and we have all the, all these values.
+
+1418
+01:24:01.305 --> 01:24:05.245
+So first value, we have second value, we have, so relu, uh,
+
+1419
+01:24:05.245 --> 01:24:07.285
+partial derivative of this relu will be,
+
+1420
+01:24:07.285 --> 01:24:10.885
+if Z one is positive, you will have one in place of this.
+
+1421
+01:24:11.185 --> 01:24:12.405
+If this value is negative,
+
+1422
+01:24:12.405 --> 01:24:13.845
+you'll have zero in place of this.
+
+1423
+01:24:13.845 --> 01:24:15.365
+If it is zero, the whole term will be zero.
+
+1424
+01:24:15.695 --> 01:24:17.765
+Whole derivative is going to be zero, okay?
+
+1425
+01:24:17.945 --> 01:24:20.765
+If it is one, then this value will be one that's all.
+
+1426
+01:24:20.905 --> 01:24:23.405
+And partial derivative of this part.
+
+1427
+01:24:23.405 --> 01:24:25.965
+You see, the last one, Z one with respect to W one,
+
+1428
+01:24:25.965 --> 01:24:28.045
+one will be X one, because this term
+
+1429
+01:24:28.045 --> 01:24:29.405
+and this term will be zero zero.
+
+1430
+01:24:29.405 --> 01:24:31.565
+They're all constant for W one one with respect
+
+1431
+01:24:31.565 --> 01:24:32.765
+to W one one, when you are solving
+
+1432
+01:24:33.025 --> 01:24:35.925
+and only X one is left with, so X one will come here,
+
+1433
+01:24:36.465 --> 01:24:38.845
+and this, these all values we have will substitute,
+
+1434
+01:24:38.845 --> 01:24:41.765
+we'll get this value, partially loss with respect to W one.
+
+1435
+01:24:42.235 --> 01:24:43.285
+I'll repeat it for W.
+
+1436
+01:24:43.385 --> 01:24:46.485
+One, two only changes the last one, first three,
+
+1437
+01:24:46.485 --> 01:24:47.645
+partial of same.
+
+1438
+01:24:47.905 --> 01:24:49.805
+Now with respect to W, one, two will do,
+
+1439
+01:24:49.825 --> 01:24:51.285
+and hence here we have X two.
+
+1440
+01:24:51.285 --> 01:24:52.805
+That's all, that's everything is same.
+
+1441
+01:24:53.145 --> 01:24:55.205
+And similarly, the only change with respect
+
+1442
+01:24:55.205 --> 01:24:58.605
+to B one is here we have B one, and this value will B one,
+
+1443
+01:24:58.605 --> 01:25:01.165
+because B one with respect to B one will give you one.
+
+1444
+01:25:01.385 --> 01:25:03.325
+And these two terms are constant anyway, so
+
+1445
+01:25:04.095 --> 01:25:05.125
+it'll not into play.
+
+1446
+01:25:05.795 --> 01:25:08.655
+So yes, now you have all the parameters,
+
+1447
+01:25:08.785 --> 01:25:12.175
+which you are supposed to update their gradients.
+
+1448
+01:25:12.195 --> 01:25:16.615
+Now, you know, so you know B one, V two, B three, W one,
+
+1449
+01:25:16.735 --> 01:25:20.295
+W one, two, and uh, B one, okay?
+
+1450
+01:25:20.965 --> 01:25:23.575
+Yeah, H one. Now, uh, so no, uh,
+
+1451
+01:25:23.575 --> 01:25:24.895
+three more parameters are there.
+
+1452
+01:25:24.895 --> 01:25:27.295
+Sorry. With respect to H one, we have done all these things.
+
+1453
+01:25:27.295 --> 01:25:29.735
+Similarly, you have to do for the S two also,
+
+1454
+01:25:29.845 --> 01:25:32.135
+because the Y is also depending on S two,
+
+1455
+01:25:32.135 --> 01:25:33.255
+for H one, you have solved.
+
+1456
+01:25:33.475 --> 01:25:34.735
+For S two, also, you need to solve.
+
+1457
+01:25:34.835 --> 01:25:39.615
+So next you will see for the S two, for the H two, okay,
+
+1458
+01:25:39.765 --> 01:25:43.335
+this is the H two with the S two, W2 one, W2 are connected.
+
+1459
+01:25:43.815 --> 01:25:45.615
+V two is also connected. Okay?
+
+1460
+01:25:45.755 --> 01:25:49.575
+And S two with the connection of V two is leading us to the
+
+1461
+01:25:50.305 --> 01:25:54.575
+final, uh, output Y yhat and loss is depending on this yhat.
+
+1462
+01:25:54.575 --> 01:25:56.255
+So this is the path we are going to follow.
+
+1463
+01:25:56.325 --> 01:25:59.375
+Loss will depend on yhat, YHA will depend on H two.
+
+1464
+01:25:59.775 --> 01:26:03.685
+H two will depend on the Z two, which is re
+
+1465
+01:26:04.185 --> 01:26:06.045
+of whatever value you are getting fine.
+
+1466
+01:26:06.745 --> 01:26:10.645
+And then Z two will depend on W2 one, W2 two and B two.
+
+1467
+01:26:10.745 --> 01:26:12.125
+And that same thing you can see
+
+1468
+01:26:12.125 --> 01:26:13.205
+now in this particular picture.
+
+1469
+01:26:13.875 --> 01:26:16.405
+Okay? Same thing. First level, these are the parameter,
+
+1470
+01:26:16.405 --> 01:26:18.285
+but now we are only concentrating on S two.
+
+1471
+01:26:18.285 --> 01:26:21.245
+So you have to follow only this red arrow. Okay?
+
+1472
+01:26:21.245 --> 01:26:22.525
+So S two depends on Z two
+
+1473
+01:26:22.525 --> 01:26:24.645
+and Z two is depending on all these parameter,
+
+1474
+01:26:24.645 --> 01:26:27.845
+five parameters one by one will solve for W2 and W2 two,
+
+1475
+01:26:27.845 --> 01:26:29.565
+and B two X one, X two is an input.
+
+1476
+01:26:29.625 --> 01:26:31.525
+So you don't have to solve for the X one, X two
+
+1477
+01:26:31.835 --> 01:26:34.005
+because this is just an input, it's not a parameter.
+
+1478
+01:26:34.305 --> 01:26:36.365
+So you, you are not supposed to update those.
+
+1479
+01:26:37.195 --> 01:26:40.765
+Alright, so now, uh, same, same equation.
+
+1480
+01:26:40.945 --> 01:26:44.525
+So here you see partial derivative of loss with respect
+
+1481
+01:26:44.525 --> 01:26:47.085
+to Y hat, y hat with respect to S two.
+
+1482
+01:26:47.475 --> 01:26:49.525
+Okay? Here, Y hat with respect to S two
+
+1483
+01:26:49.785 --> 01:26:51.645
+and S two with respect to Z two here,
+
+1484
+01:26:51.885 --> 01:26:53.565
+S two is depending on s uh, Z two.
+
+1485
+01:26:53.565 --> 01:26:55.245
+So this, this equation and Z two is depending
+
+1486
+01:26:55.245 --> 01:26:56.285
+on double one, okay?
+
+1487
+01:26:56.285 --> 01:26:59.125
+It's very simple. I think now you, you're able to follow
+
+1488
+01:26:59.155 --> 01:27:01.565
+that how we are writing the chain tool, fine
+
+1489
+01:27:01.865 --> 01:27:05.205
+and all, all these derivative, derivative is not very, uh,
+
+1490
+01:27:05.205 --> 01:27:07.645
+difficult, but only thing is writing the chain tool is
+
+1491
+01:27:07.745 --> 01:27:12.165
+little bit, uh, people get, uh, uh, um, confused sometimes
+
+1492
+01:27:12.425 --> 01:27:14.285
+how to go back and how to write, okay, where,
+
+1493
+01:27:14.285 --> 01:27:15.725
+and all it is depending or not.
+
+1494
+01:27:16.145 --> 01:27:18.725
+So if you will draw this kind of structure, right?
+
+1495
+01:27:18.725 --> 01:27:19.765
+So you'll not get confused,
+
+1496
+01:27:20.235 --> 01:27:22.325
+then finding the derivative is very easy, right?
+
+1497
+01:27:22.355 --> 01:27:25.605
+It's not difficult because this derivative we already have,
+
+1498
+01:27:26.265 --> 01:27:28.245
+uh, second derivative we already have,
+
+1499
+01:27:28.245 --> 01:27:30.565
+because at this layer we have found all the derivative.
+
+1500
+01:27:30.565 --> 01:27:32.045
+When it comes to Z two, it's a relu.
+
+1501
+01:27:32.265 --> 01:27:36.045
+So if Z, uh, oh, here again, uh, this, this would be Z two.
+
+1502
+01:27:36.275 --> 01:27:38.805
+Okay, I'll change this one again, this will be Z two.
+
+1503
+01:27:38.825 --> 01:27:41.605
+So if Z two is positive, the value will be one here.
+
+1504
+01:27:41.665 --> 01:27:44.845
+That's all. So it's a, uh, you can see dash, right?
+
+1505
+01:27:44.845 --> 01:27:47.485
+So it represents the, it is a partial derivative
+
+1506
+01:27:47.485 --> 01:27:49.405
+with respect to this particular function.
+
+1507
+01:27:49.405 --> 01:27:52.525
+Okay? And finally, with respect to Z two, it'll be X two.
+
+1508
+01:27:52.525 --> 01:27:53.605
+It's not X one. Okay?
+
+1509
+01:27:53.605 --> 01:27:56.085
+I'll change this because I was doing this copy paste.
+
+1510
+01:27:56.085 --> 01:27:58.845
+So everything has comes, I'll change. So I'll update this.
+
+1511
+01:27:59.775 --> 01:28:02.155
+So yeah, then finally you will, uh, okay, sorry,
+
+1512
+01:28:02.155 --> 01:28:04.195
+first time we are doing with respect to X one itself.
+
+1513
+01:28:04.195 --> 01:28:06.715
+So this is X one. Next time it is X two, it is correct.
+
+1514
+01:28:06.935 --> 01:28:10.565
+And third time it'll be one because it is B two. Okay?
+
+1515
+01:28:10.825 --> 01:28:13.885
+So now you have all the, uh, partial derivative,
+
+1516
+01:28:14.005 --> 01:28:18.125
+which we are supposed to calculate in order to, uh, uh, uh,
+
+1517
+01:28:18.305 --> 01:28:19.805
+update all these parameters.
+
+1518
+01:28:19.805 --> 01:28:22.805
+Parameters are V one, V two, B three,
+
+1519
+01:28:23.025 --> 01:28:26.085
+and then parameters are W one, one, W one 12, B one,
+
+1520
+01:28:26.085 --> 01:28:28.045
+and here W2 one, W2 two and B two.
+
+1521
+01:28:28.045 --> 01:28:29.165
+All these other parameters.
+
+1522
+01:28:29.165 --> 01:28:32.885
+And for every parameter we have calculated this,
+
+1523
+01:28:32.915 --> 01:28:33.965
+this partial debit.
+
+1524
+01:28:34.865 --> 01:28:38.915
+Okay? And now I am, uh, again taking you, uh, just, just
+
+1525
+01:28:38.915 --> 01:28:41.915
+to recap that, what we have done so far, so that, uh,
+
+1526
+01:28:42.425 --> 01:28:44.675
+then I'll show you how to update these parameters.
+
+1527
+01:28:45.135 --> 01:28:48.235
+So we started with this, uh, what we did,
+
+1528
+01:28:48.235 --> 01:28:51.395
+we have taken first row from our dataset, X one, X two,
+
+1529
+01:28:51.395 --> 01:28:54.275
+and y biases value were 1, 1, 1, set weights.
+
+1530
+01:28:54.425 --> 01:28:57.915
+What initialized randomly with these for our pass.
+
+1531
+01:28:58.565 --> 01:28:59.955
+First we got Z one here,
+
+1532
+01:29:00.495 --> 01:29:02.005
+and then we pass it through the relu.
+
+1533
+01:29:02.005 --> 01:29:04.765
+We got H one. You can see Z one was 6.6.
+
+1534
+01:29:04.925 --> 01:29:08.125
+H one was also 6.6 because positive value.
+
+1535
+01:29:08.145 --> 01:29:09.885
+So the output will be that value itself.
+
+1536
+01:29:10.025 --> 01:29:12.925
+And what will be the partial derivative of this,
+
+1537
+01:29:12.925 --> 01:29:15.725
+this function, relu of Z one one, because it is positive.
+
+1538
+01:29:15.785 --> 01:29:18.365
+So derivative of this Z one will be one, okay?
+
+1539
+01:29:18.395 --> 01:29:20.285
+That we are going to use in the back propagation.
+
+1540
+01:29:20.595 --> 01:29:22.765
+Similarly, Z two S two we got here,
+
+1541
+01:29:23.425 --> 01:29:26.045
+and then y hat, then we calculated the loss,
+
+1542
+01:29:26.055 --> 01:29:29.565
+which was coming, which were, which was coming as 54.17.
+
+1543
+01:29:30.145 --> 01:29:34.635
+Now. Now, what we have to do is once we have got all these,
+
+1544
+01:29:34.815 --> 01:29:38.995
+uh, derivative, uh, uh, uh,
+
+1545
+01:29:40.575 --> 01:29:43.555
+uh, you, uh, sorry, uh, here, now what we are, uh,
+
+1546
+01:29:43.735 --> 01:29:45.115
+all these equations we got, right?
+
+1547
+01:29:45.215 --> 01:29:47.715
+So you see that all these equations we have first got it.
+
+1548
+01:29:48.095 --> 01:29:50.955
+Now we need just need to substitute these value for every,
+
+1549
+01:29:51.495 --> 01:29:53.635
+uh, whether it's the partial derivative of laws
+
+1550
+01:29:53.635 --> 01:29:56.235
+with W one two, then this is the equation we have got,
+
+1551
+01:29:56.575 --> 01:29:57.995
+we have to substitute all the value
+
+1552
+01:29:58.055 --> 01:29:59.395
+and find, okay, what is the,
+
+1553
+01:29:59.705 --> 01:30:01.315
+what is this partial derivative is
+
+1554
+01:30:01.315 --> 01:30:02.395
+coming for all the parameter.
+
+1555
+01:30:02.395 --> 01:30:04.355
+That is what I'm doing now, okay, here.
+
+1556
+01:30:05.095 --> 01:30:07.915
+So for partial derivative loss with respect to V one,
+
+1557
+01:30:08.595 --> 01:30:10.325
+this was the equation which we al already,
+
+1558
+01:30:10.325 --> 01:30:13.885
+we have already solved, and it was coming as two and two.
+
+1559
+01:30:14.505 --> 01:30:17.525
+Why hat minus y, this partial derivative loss with respect
+
+1560
+01:30:17.525 --> 01:30:19.685
+to y hat is two and two y hat minus y.
+
+1561
+01:30:20.505 --> 01:30:23.805
+And if you will solve this one, it'll come at 14.72.
+
+1562
+01:30:23.855 --> 01:30:27.365
+It'll substitute what is Y hat, what is y multiply by two.
+
+1563
+01:30:27.365 --> 01:30:29.165
+It is, it'll come at 14.72,
+
+1564
+01:30:29.165 --> 01:30:31.125
+which I'm writing here as one value.
+
+1565
+01:30:31.185 --> 01:30:32.445
+We have already, okay,
+
+1566
+01:30:32.595 --> 01:30:35.965
+because as one S two also we have got that is 6.6.
+
+1567
+01:30:36.205 --> 01:30:38.885
+I have shown you in the, I guess previous slide here,
+
+1568
+01:30:39.085 --> 01:30:41.525
+H one is 6.6 as two was 1.8.
+
+1569
+01:30:41.595 --> 01:30:43.005
+That is what I'm substituting.
+
+1570
+01:30:43.105 --> 01:30:44.845
+So this particular, uh,
+
+1571
+01:30:44.845 --> 01:30:47.725
+partial derivative is coming at 97.152.
+
+1572
+01:30:47.995 --> 01:30:51.485
+Similarly for V two, and I'll substitute, I'll get 26.496,
+
+1573
+01:30:52.025 --> 01:30:54.805
+and for B three, I'll get 14.72.
+
+1574
+01:30:54.925 --> 01:30:56.245
+I have all these equations ready,
+
+1575
+01:30:56.345 --> 01:30:59.085
+so I cannot simply substitute the value and get there.
+
+1576
+01:30:59.155 --> 01:31:01.165
+What is the partial derivative, which is coming in?
+
+1577
+01:31:02.255 --> 01:31:05.905
+I'll repeat it, I'll repeat it for, uh, the previous layer
+
+1578
+01:31:06.235 --> 01:31:08.145
+where I was finding partial derivative of loss
+
+1579
+01:31:08.145 --> 01:31:09.345
+with respect to W one one.
+
+1580
+01:31:09.345 --> 01:31:10.945
+And this was the equation. If you can recall,
+
+1581
+01:31:11.375 --> 01:31:12.505
+this was the chain rule.
+
+1582
+01:31:12.815 --> 01:31:14.625
+When we solved this chain rule, this was the equation.
+
+1583
+01:31:14.645 --> 01:31:17.425
+We got two and two y hat minus Y into V one.
+
+1584
+01:31:18.215 --> 01:31:22.705
+From this we got relu dash jed one, and here we have X one.
+
+1585
+01:31:22.975 --> 01:31:25.305
+Okay? And if you'll substitute all these values,
+
+1586
+01:31:25.525 --> 01:31:27.625
+you'll get 1 4, 1 3 0.12.
+
+1587
+01:31:28.215 --> 01:31:31.225
+Similarly, for partial delivery blocks, with respect
+
+1588
+01:31:31.225 --> 01:31:33.905
+to one two, you will get 1 41 0.312.
+
+1589
+01:31:34.375 --> 01:31:37.185
+Okay? Here we have it. So it is 1, 1 4, 1 3.
+
+1590
+01:31:37.335 --> 01:31:40.505
+Here we are just eight. So 1, 4, 1 0.31, two. It is good.
+
+1591
+01:31:40.975 --> 01:31:42.985
+Similarly, if you substitute all these,
+
+1592
+01:31:43.165 --> 01:31:44.545
+all these value, all these value, right?
+
+1593
+01:31:44.765 --> 01:31:46.425
+You'll get 14.832.
+
+1594
+01:31:46.725 --> 01:31:50.265
+And now I I, I also did for the other three parameter,
+
+1595
+01:31:50.385 --> 01:31:52.625
+W2 one, W2, two P and P two.
+
+1596
+01:31:53.015 --> 01:31:55.785
+Okay? So all these gradient we calculated,
+
+1597
+01:31:55.845 --> 01:31:57.465
+and these are the, uh,
+
+1598
+01:31:57.485 --> 01:31:59.365
+the values which we are getting from that.
+
+1599
+01:31:59.545 --> 01:32:02.085
+Now, the only part which is left is updating,
+
+1600
+01:32:02.965 --> 01:32:04.205
+updating these parameters.
+
+1601
+01:32:04.625 --> 01:32:07.405
+So left side, what you see, all the gradients value,
+
+1602
+01:32:08.195 --> 01:32:10.185
+these many gradients we have calculated.
+
+1603
+01:32:10.565 --> 01:32:14.835
+And now what we'll do is we'll use this update rule theta
+
+1604
+01:32:15.455 --> 01:32:18.035
+as we call to theta minus partial derivative,
+
+1605
+01:32:18.155 --> 01:32:20.995
+or partial, uh, sorry, theta minus uh,
+
+1606
+01:32:21.275 --> 01:32:23.875
+learning rate into partial derivative of loss with respect
+
+1607
+01:32:23.875 --> 01:32:25.235
+to theta.
+
+1608
+01:32:25.415 --> 01:32:27.155
+And theta will be first time V one.
+
+1609
+01:32:27.155 --> 01:32:29.275
+Then it'll be V two, then it'll be B three.
+
+1610
+01:32:29.275 --> 01:32:33.515
+Then it'll be W one one, W one two, W2, one W2 two B one
+
+1611
+01:32:33.515 --> 01:32:35.715
+and B two one by one, I mean,
+
+1612
+01:32:36.315 --> 01:32:37.635
+although it'll happen in parallel.
+
+1613
+01:32:37.935 --> 01:32:40.435
+So, but we have to substitute for each parameter.
+
+1614
+01:32:40.435 --> 01:32:43.715
+We have to solve this equation for each of these parameters.
+
+1615
+01:32:43.785 --> 01:32:44.955
+What we want to update,
+
+1616
+01:32:45.175 --> 01:32:46.635
+and that is what I'm showing you here.
+
+1617
+01:32:47.025 --> 01:32:48.835
+Only thing is this learning rate I have taken
+
+1618
+01:32:48.895 --> 01:32:51.835
+as one in two 10 to the power minus four, okay?
+
+1619
+01:32:51.885 --> 01:32:54.115
+Minus four. I will give you the reason for that.
+
+1620
+01:32:54.575 --> 01:32:57.355
+But then I have substituted the learning rate here, 10
+
+1621
+01:32:57.355 --> 01:32:59.435
+to the power minus four theta value,
+
+1622
+01:32:59.605 --> 01:33:02.835
+which is the initial value of the V one here, which was,
+
+1623
+01:33:03.015 --> 01:33:05.875
+you can see here, V one initial value was 1.2.
+
+1624
+01:33:06.015 --> 01:33:08.235
+You see this same value have updated.
+
+1625
+01:33:08.415 --> 01:33:11.115
+Now, what is the new value? V one, we are getting 1.19.
+
+1626
+01:33:11.115 --> 01:33:14.955
+So from 1.2, it is changing as 1.19
+
+1627
+01:33:15.635 --> 01:33:19.355
+V two from 0.8, it's changing as 0.79
+
+1628
+01:33:20.065 --> 01:33:21.955
+from V three from one,
+
+1629
+01:33:21.955 --> 01:33:25.075
+because initially all the biases value we have taken as one.
+
+1630
+01:33:25.135 --> 01:33:27.795
+So then it is changing as the weight for the bias,
+
+1631
+01:33:28.025 --> 01:33:32.835
+it's changing as 0.99 W one one from 0.02,
+
+1632
+01:33:32.835 --> 01:33:36.995
+it's changing at minus 0.12 W 12.5.
+
+1633
+01:33:37.055 --> 01:33:41.475
+It is changing 2.48 B one from one changing to 0.99
+
+1634
+01:33:42.115 --> 01:33:44.075
+W2, 1.0 0.04
+
+1635
+01:33:44.075 --> 01:33:47.195
+to minus 0.05 minus 0.3
+
+1636
+01:33:47.335 --> 01:33:50.315
+to minus 0.30 and 1 2, 0 point.
+
+1637
+01:33:50.495 --> 01:33:51.715
+So these are the change.
+
+1638
+01:33:52.295 --> 01:33:55.115
+One thing, what you should observe is there is only slight
+
+1639
+01:33:55.115 --> 01:33:56.835
+change, which, which we are trying to do.
+
+1640
+01:33:57.015 --> 01:34:00.155
+We are not trying to do a big change, okay?
+
+1641
+01:34:00.305 --> 01:34:03.595
+Because we want to, if you, uh, going further, uh,
+
+1642
+01:34:03.835 --> 01:34:06.035
+although we have talked that in the linear regression,
+
+1643
+01:34:06.105 --> 01:34:08.315
+that okay, how this loss function
+
+1644
+01:34:08.735 --> 01:34:13.595
+and, uh, what is the role of the convex, uh, curve, uh, so
+
+1645
+01:34:13.595 --> 01:34:15.995
+that we will be knowing that whether we are going to our,
+
+1646
+01:34:16.055 --> 01:34:18.675
+uh, global mini GLI minimum
+
+1647
+01:34:18.735 --> 01:34:19.835
+or not, we want
+
+1648
+01:34:19.835 --> 01:34:22.315
+to do a slight change in all these parameters
+
+1649
+01:34:22.375 --> 01:34:25.155
+and run the feed forward network again
+
+1650
+01:34:25.155 --> 01:34:26.475
+and calculate the loss again.
+
+1651
+01:34:26.475 --> 01:34:28.075
+And that is what I'm going to do next.
+
+1652
+01:34:28.375 --> 01:34:31.195
+So with this updated parameters, V one, V two, V three,
+
+1653
+01:34:31.195 --> 01:34:34.075
+and all these nine parameters, what I'm going
+
+1654
+01:34:34.075 --> 01:34:36.035
+to do is I'm again going to run the,
+
+1655
+01:34:36.135 --> 01:34:37.395
+run the forward propagation.
+
+1656
+01:34:37.615 --> 01:34:39.915
+So these are all the old parameters.
+
+1657
+01:34:40.535 --> 01:34:43.595
+And when we last time, uh,
+
+1658
+01:34:43.775 --> 01:34:46.835
+run this feed word feedforward network, I end up
+
+1659
+01:34:46.835 --> 01:34:49.315
+with this material 54.1696.
+
+1660
+01:34:50.135 --> 01:34:51.755
+Now, what I'm doing is I am,
+
+1661
+01:34:51.995 --> 01:34:55.275
+I have updated all these parameters, nine parameters, right?
+
+1662
+01:34:55.855 --> 01:34:57.035
+All these parameters, and then,
+
+1663
+01:34:57.040 --> 01:35:00.835
+then I'm again doing the forward propagation, right?
+
+1664
+01:35:00.935 --> 01:35:02.515
+And then it is coming, uh, the,
+
+1665
+01:35:02.665 --> 01:35:04.395
+then I'm calculating the yha,
+
+1666
+01:35:04.655 --> 01:35:06.635
+and then I'm calculating the loss at the last,
+
+1667
+01:35:06.635 --> 01:35:10.075
+which is coming as 4.0 0 5 8 9 0.
+
+1668
+01:35:10.175 --> 01:35:12.195
+Now see what, what has happened?
+
+1669
+01:35:13.735 --> 01:35:17.925
+First time when we randomly initialize the weights, okay?
+
+1670
+01:35:18.465 --> 01:35:22.335
+The, uh, uh, loss for the,
+
+1671
+01:35:22.335 --> 01:35:24.495
+the output which came was 10.36,
+
+1672
+01:35:24.875 --> 01:35:29.015
+and for that loss came was 54.1696.
+
+1673
+01:35:29.275 --> 01:35:31.495
+Second time, when we have adjusted the weight,
+
+1674
+01:35:32.715 --> 01:35:36.935
+the output came as 0.99 and loss came as 4.00.
+
+1675
+01:35:36.945 --> 01:35:40.295
+There is a huge change in the loss from 54 to four
+
+1676
+01:35:40.675 --> 01:35:44.175
+by adjusting the weed just for one para, one, one iteration,
+
+1677
+01:35:44.435 --> 01:35:45.855
+and only for first row.
+
+1678
+01:35:46.415 --> 01:35:49.535
+I have not even used the second row of my, of my data
+
+1679
+01:35:49.555 --> 01:35:51.415
+and third row of my data, okay?
+
+1680
+01:35:51.415 --> 01:35:53.575
+That is one thing you have to observe is yes.
+
+1681
+01:35:53.755 --> 01:35:55.615
+So what you can say that your back preparation is
+
+1682
+01:35:55.615 --> 01:35:56.895
+working, uh, right?
+
+1683
+01:35:56.925 --> 01:35:59.575
+Then it is able to go towards the global minimum
+
+1684
+01:35:59.705 --> 01:36:01.975
+where the loss value, which is zero, that is
+
+1685
+01:36:01.975 --> 01:36:03.375
+what we have to achieve, right?
+
+1686
+01:36:03.595 --> 01:36:04.775
+So it is going towards it.
+
+1687
+01:36:05.115 --> 01:36:06.815
+If you run it for say, that few more number
+
+1688
+01:36:06.815 --> 01:36:08.215
+of hydration, it may achieve that also.
+
+1689
+01:36:08.215 --> 01:36:12.815
+Secondly, I want you to focus on this, this comment, uh,
+
+1690
+01:36:13.515 --> 01:36:17.295
+uh, here, these two point, see, I have taken this, uh,
+
+1691
+01:36:17.525 --> 01:36:20.895
+partial, uh, sorry, learning rate as one into
+
+1692
+01:36:21.475 --> 01:36:22.495
+10, to the power minus.
+
+1693
+01:36:22.495 --> 01:36:25.815
+So 10 to the power minus four, which is nothing of 0.0004.
+
+1694
+01:36:26.155 --> 01:36:28.575
+Now, that is the learning rate value, what I have taken.
+
+1695
+01:36:29.155 --> 01:36:31.495
+So the question is why I have taken that much, why,
+
+1696
+01:36:31.515 --> 01:36:33.815
+why I have taken that learning rate, uh,
+
+1697
+01:36:33.835 --> 01:36:36.215
+and how do I know that that learning rate I have to take?
+
+1698
+01:36:36.355 --> 01:36:40.655
+So first thing is you have to, uh, remember one thing that
+
+1699
+01:36:41.175 --> 01:36:42.495
+I, the intention is
+
+1700
+01:36:42.675 --> 01:36:44.855
+to slightly change all these parameters value
+
+1701
+01:36:44.955 --> 01:36:47.335
+to not change it drastically, okay?
+
+1702
+01:36:47.885 --> 01:36:50.375
+That we either negative side or positive side.
+
+1703
+01:36:50.455 --> 01:36:52.575
+I don't want to change, say that initial value
+
+1704
+01:36:52.635 --> 01:36:56.255
+for the W 1, 1, 0 0 2, I don't want to make it directly 20
+
+1705
+01:36:57.195 --> 01:36:58.575
+in the next titration.
+
+1706
+01:36:58.895 --> 01:37:00.775
+I want to do slight change, okay?
+
+1707
+01:37:01.115 --> 01:37:02.935
+And with that slide chain, I want to see that, okay,
+
+1708
+01:37:02.935 --> 01:37:05.295
+how much, uh, my, my error is improving
+
+1709
+01:37:05.315 --> 01:37:06.855
+or not, which I will continue.
+
+1710
+01:37:07.595 --> 01:37:08.615
+So that is first thing.
+
+1711
+01:37:08.955 --> 01:37:13.575
+Now, what has happened is my, uh, X two, uh,
+
+1712
+01:37:13.635 --> 01:37:17.695
+my X two, if you see here, uh, sorry, X one, it was 80
+
+1713
+01:37:18.235 --> 01:37:19.575
+and X two is eight.
+
+1714
+01:37:20.435 --> 01:37:23.375
+Or I guess, uh, just opposite, I don't know.
+
+1715
+01:37:23.475 --> 01:37:26.935
+So one is going in the scale of tens,
+
+1716
+01:37:27.235 --> 01:37:30.415
+and uh, one is going just like between one to, uh,
+
+1717
+01:37:30.415 --> 01:37:31.655
+because CZP, right?
+
+1718
+01:37:31.675 --> 01:37:33.335
+It is always between one to 10 maybe,
+
+1719
+01:37:33.715 --> 01:37:36.935
+but the, this IQ value will be, uh, like it is 19
+
+1720
+01:37:36.935 --> 01:37:37.935
+and a hundred and so on.
+
+1721
+01:37:38.075 --> 01:37:40.495
+So the, is the scale, scale, scale
+
+1722
+01:37:40.515 --> 01:37:42.215
+of these two features were not proper.
+
+1723
+01:37:42.315 --> 01:37:43.695
+It was not in the same range.
+
+1724
+01:37:43.995 --> 01:37:46.135
+Now, see that that was the reason, okay?
+
+1725
+01:37:46.135 --> 01:37:47.895
+That was the reason. What I did.
+
+1726
+01:37:48.175 --> 01:37:52.975
+I may, I, I chosen my, uh, uh, uh, this learning rate,
+
+1727
+01:37:53.115 --> 01:37:54.135
+uh, very small.
+
+1728
+01:37:54.475 --> 01:37:57.325
+If I have not, I would've not chosen this learning rate very
+
+1729
+01:37:57.325 --> 01:37:59.085
+small, like 10 to the power minus four.
+
+1730
+01:37:59.675 --> 01:38:02.085
+What, what would've happened? Look at here, this one.
+
+1731
+01:38:02.505 --> 01:38:04.925
+So this value, if it is not very small,
+
+1732
+01:38:05.515 --> 01:38:08.845
+this value the gradient value, you see, it is so, so big.
+
+1733
+01:38:08.855 --> 01:38:11.005
+These all gradients value are too big.
+
+1734
+01:38:11.425 --> 01:38:16.165
+So if you have old value minus 1.2, minus 97.3,
+
+1735
+01:38:16.265 --> 01:38:19.045
+the corresponding V one, what you will get will be too high,
+
+1736
+01:38:19.385 --> 01:38:21.325
+and there will be huge change in this.
+
+1737
+01:38:21.625 --> 01:38:22.925
+All of these parameters, right?
+
+1738
+01:38:23.505 --> 01:38:25.645
+And this, this is happening just
+
+1739
+01:38:25.645 --> 01:38:27.805
+because my both, the scale
+
+1740
+01:38:27.945 --> 01:38:29.445
+of both the features are not seen,
+
+1741
+01:38:30.285 --> 01:38:32.025
+and hence in the machine learning, deep learning,
+
+1742
+01:38:32.325 --> 01:38:34.545
+at least in the neural network is suggested that
+
+1743
+01:38:34.565 --> 01:38:36.745
+before going for the fallback propagation,
+
+1744
+01:38:37.085 --> 01:38:41.745
+you do the scaling and you try to, uh, uh, uh, uh, do the,
+
+1745
+01:38:41.765 --> 01:38:43.025
+uh, all the parameters,
+
+1746
+01:38:43.045 --> 01:38:44.545
+all the features should be in the same range.
+
+1747
+01:38:44.725 --> 01:38:46.865
+And, uh, then, then, uh, the,
+
+1748
+01:38:47.245 --> 01:38:49.185
+the algorithm will learn faster.
+
+1749
+01:38:49.255 --> 01:38:51.545
+Like it is happening in this case from 54,
+
+1750
+01:38:52.045 --> 01:38:53.105
+it has come to four.
+
+1751
+01:38:54.265 --> 01:38:56.265
+Although the trick here, what I have played here,
+
+1752
+01:38:56.385 --> 01:38:58.625
+I have taken this learning rate very small,
+
+1753
+01:38:58.685 --> 01:39:02.385
+but usually you don't know what will be the, uh,
+
+1754
+01:39:02.495 --> 01:39:05.225
+what will be your, uh, internal gradients
+
+1755
+01:39:05.225 --> 01:39:07.065
+and all, so you can't be seeing every time
+
+1756
+01:39:07.125 --> 01:39:08.625
+and adjusting this learning rate, right?
+
+1757
+01:39:09.045 --> 01:39:11.825
+So what you do, you work with the features itself,
+
+1758
+01:39:12.005 --> 01:39:14.065
+you make it in the same range, okay?
+
+1759
+01:39:14.245 --> 01:39:18.105
+And then apply some learning rate, which is 0.1, uh,
+
+1760
+01:39:18.415 --> 01:39:19.545
+0.01.
+
+1761
+01:39:19.755 --> 01:39:21.225
+These are the small values, right?
+
+1762
+01:39:21.605 --> 01:39:23.225
+For the learning rate, and that we apply
+
+1763
+01:39:23.245 --> 01:39:25.385
+and we get this change in the parameter,
+
+1764
+01:39:25.485 --> 01:39:28.025
+and then we see that, okay, how much weight is improving?
+
+1765
+01:39:28.525 --> 01:39:32.225
+So large raw feature magnitude produce very large gradients
+
+1766
+01:39:32.245 --> 01:39:33.345
+for corresponding weights.
+
+1767
+01:39:33.725 --> 01:39:37.065
+So consider feature scaling or gradient clipping
+
+1768
+01:39:37.605 --> 01:39:39.905
+or a smaller end or a smaller initialization.
+
+1769
+01:39:40.005 --> 01:39:42.265
+So if that is the case where the features are not in a
+
+1770
+01:39:42.265 --> 01:39:44.905
+similar range, these are all some of the, some
+
+1771
+01:39:44.905 --> 01:39:46.225
+of the solutions for that.
+
+1772
+01:39:46.225 --> 01:39:48.105
+That is what I have updated in this case.
+
+1773
+01:39:48.645 --> 01:39:51.385
+One step improvement in loss does not always mean
+
+1774
+01:39:51.385 --> 01:39:52.505
+better generalization.
+
+1775
+01:39:52.605 --> 01:39:56.425
+It happened here by effectively collapse, uh, uh, uh,
+
+1776
+01:39:56.525 --> 01:39:58.465
+collab collapsing, hidden activation.
+
+1777
+01:39:58.465 --> 01:40:00.465
+So here, what has happened, one more thing, I want
+
+1778
+01:40:00.465 --> 01:40:03.225
+to take you Zed one and zed two, once it came.
+
+1779
+01:40:03.725 --> 01:40:06.985
+So I passed the JED one through the activation function
+
+1780
+01:40:07.765 --> 01:40:11.185
+and partial derivative of Zed one, which is here,
+
+1781
+01:40:11.465 --> 01:40:12.745
+negative has come as zero.
+
+1782
+01:40:12.805 --> 01:40:14.745
+So what has happened, essentially in this case
+
+1783
+01:40:15.375 --> 01:40:17.265
+that I'll go back output,
+
+1784
+01:40:17.395 --> 01:40:19.585
+which is coming at H one, H one becomes zero.
+
+1785
+01:40:19.965 --> 01:40:22.785
+So there is nothing which is going here, right?
+
+1786
+01:40:22.965 --> 01:40:26.305
+And why is predicting the value, which is very small,
+
+1787
+01:40:26.305 --> 01:40:28.505
+zero point, I think nine nine I guess, right?
+
+1788
+01:40:28.845 --> 01:40:31.745
+So in this case, it has worked like this, right?
+
+1789
+01:40:32.225 --> 01:40:34.825
+I I, I was just showing you the, uh, flow, the numbers
+
+1790
+01:40:34.925 --> 01:40:36.825
+and all are not important, right?
+
+1791
+01:40:36.885 --> 01:40:38.705
+But then this is how the back propagation works,
+
+1792
+01:40:38.845 --> 01:40:41.025
+and that is what the intention to show.
+
+1793
+01:40:41.915 --> 01:40:44.335
+Now, I'll stop first to take you some questions, right?
+
+1794
+01:40:44.965 --> 01:40:48.935
+Yeah. And then, um, what I'll do is I'll not go ahead
+
+1795
+01:40:48.935 --> 01:40:51.255
+with the demo today because it's already nine 11.
+
+1796
+01:40:51.365 --> 01:40:52.495
+I'll take the questions rather,
+
+1797
+01:40:53.065 --> 01:40:55.005
+and in the next class when you'll start, we'll start
+
+1798
+01:40:55.005 --> 01:40:57.045
+with this demo, but this demo will be available
+
+1799
+01:40:57.115 --> 01:40:59.485
+with you prior, maybe after this class itself.
+
+1800
+01:40:59.705 --> 01:41:01.325
+You can do the practice and then come
+
+1801
+01:41:01.745 --> 01:41:04.005
+and you can come with the more questions so that we can
+
+1802
+01:41:04.535 --> 01:41:05.965
+start with those in the next class.
+
+1803
+01:41:05.995 --> 01:41:08.405
+Yeah. Now I'm open for the questions. Sir.
+
+1804
+01:41:08.665 --> 01:41:10.725
+Sir, I have one question on this, uh,
+
+1805
+01:41:10.835 --> 01:41:11.925
+back provocation, sir.
+
+1806
+01:41:12.305 --> 01:41:14.525
+As said, where we are computing this back provocation,
+
+1807
+01:41:14.665 --> 01:41:16.325
+we are taking this derivative
+
+1808
+01:41:16.325 --> 01:41:18.285
+of the activation function of the hidden layers.
+
+1809
+01:41:18.905 --> 01:41:21.565
+So, but we can also consider the activation function
+
+1810
+01:41:21.565 --> 01:41:22.885
+of the final output layer.
+
+1811
+01:41:22.955 --> 01:41:23.925
+Yeah, yeah. We have, so that we
+
+1812
+01:41:23.925 --> 01:41:25.005
+are not using the derivative.
+
+1813
+01:41:25.265 --> 01:41:27.165
+Uh, we, we have to, but as I said,
+
+1814
+01:41:28.055 --> 01:41:30.955
+for this particular network, I use reactivation function at
+
+1815
+01:41:30.955 --> 01:41:31.955
+the hidden and layer as linear.
+
+1816
+01:41:32.855 --> 01:41:34.995
+So, uh, yes. So that's why. So that's
+
+1817
+01:41:34.995 --> 01:41:37.115
+Why it, Okay, uh, that's why it is, uh,
+
+1818
+01:41:37.635 --> 01:41:38.755
+I have not shown here,
+
+1819
+01:41:38.775 --> 01:41:40.155
+but actually you have to consider
+
+1820
+01:41:40.155 --> 01:41:42.715
+that also when you will use the sig there,
+
+1821
+01:41:42.775 --> 01:41:43.955
+you have to show that also.
+
+1822
+01:41:43.985 --> 01:41:46.515
+Yeah, but I have not shown that.
+
+1823
+01:41:46.515 --> 01:41:48.555
+Yeah, but actually it's happening.
+
+1824
+01:41:48.945 --> 01:41:51.975
+Yeah, it's a good catch.
+
+1825
+01:41:52.955 --> 01:41:54.855
+So what is, uh, gradient clipping,
+
+1826
+01:41:55.985 --> 01:41:57.885
+Uh, uh, gradient clipping?
+
+1827
+01:41:57.955 --> 01:42:00.685
+I'll explain that. It's, it's, some of these are all, some
+
+1828
+01:42:00.685 --> 01:42:04.685
+of the, you can say that, uh, uh, you can say that, uh, uh,
+
+1829
+01:42:05.085 --> 01:42:06.285
+improvements, uh,
+
+1830
+01:42:06.305 --> 01:42:09.925
+or we say that regularization techniques, okay?
+
+1831
+01:42:09.925 --> 01:42:11.685
+Where the gradients are very high
+
+1832
+01:42:12.305 --> 01:42:14.485
+or like, you can see that right here, it,
+
+1833
+01:42:14.505 --> 01:42:16.525
+it was coming in 97, which is very high, right?
+
+1834
+01:42:16.525 --> 01:42:20.325
+So you can clip, you can actually define that if my range
+
+1835
+01:42:20.345 --> 01:42:22.965
+for the gradient will go more than two, more than five,
+
+1836
+01:42:23.065 --> 01:42:25.765
+you can actually put that threshold, you can clip that.
+
+1837
+01:42:25.905 --> 01:42:27.125
+If it is going more than that,
+
+1838
+01:42:27.285 --> 01:42:28.885
+I will bring back to that value itself.
+
+1839
+01:42:29.025 --> 01:42:30.965
+So that's, so it's already scaling?
+
+1840
+01:42:31.475 --> 01:42:33.845
+Yeah, it is a descaling, yeah. Okay.
+
+1841
+01:42:34.305 --> 01:42:37.845
+Got it, sir. Thank you. Sorry, in the same line,
+
+1842
+01:42:37.885 --> 01:42:41.525
+I wanted to ask, what is small initialization,
+
+1843
+01:42:41.525 --> 01:42:43.405
+which is mentioned in that slide,
+
+1844
+01:42:43.915 --> 01:42:45.125
+Last slide, Yes.
+
+1845
+01:42:45.185 --> 01:42:47.965
+The, there a small initialization.
+
+1846
+01:42:49.075 --> 01:42:53.415
+Uh, so, uh, I think I said a smaller
+
+1847
+01:42:54.415 --> 01:42:57.655
+n uh, what is, sorry, it a or the smaller initialization.
+
+1848
+01:42:57.675 --> 01:42:59.335
+Initialization usually happen
+
+1849
+01:42:59.805 --> 01:43:01.295
+with respect to the parameters.
+
+1850
+01:43:01.725 --> 01:43:05.415
+Okay? So the parameters are also sometimes if you take here,
+
+1851
+01:43:05.655 --> 01:43:07.535
+although I've taken care of that part
+
+1852
+01:43:07.865 --> 01:43:09.895
+where I've taken all these parameters
+
+1853
+01:43:09.895 --> 01:43:11.055
+value very small, right?
+
+1854
+01:43:11.245 --> 01:43:13.295
+0.02, 0.4, 0.5,
+
+1855
+01:43:13.555 --> 01:43:15.655
+but sometimes suppose you, you never know,
+
+1856
+01:43:15.655 --> 01:43:17.215
+like it is 1.2, okay?
+
+1857
+01:43:17.505 --> 01:43:20.735
+Which is, which is comparatively high as compared to 0.02.
+
+1858
+01:43:20.735 --> 01:43:23.255
+So what I say, all these initialization of the parameter,
+
+1859
+01:43:23.795 --> 01:43:26.295
+we usually do very small, okay?
+
+1860
+01:43:26.505 --> 01:43:29.295
+Don't keep high. If you'll keep this part high, then
+
+1861
+01:43:29.295 --> 01:43:30.855
+what will happen, you will end up
+
+1862
+01:43:30.855 --> 01:43:32.135
+with the numbers like that.
+
+1863
+01:43:32.315 --> 01:43:34.575
+Um, but the gradient value, which is very high,
+
+1864
+01:43:34.835 --> 01:43:36.335
+and that will create the other problems.
+
+1865
+01:43:36.835 --> 01:43:41.495
+So it's not always the, uh, input features,
+
+1866
+01:43:41.665 --> 01:43:44.055
+which has to be in a proper range.
+
+1867
+01:43:44.155 --> 01:43:48.495
+It also the parameters, which should be in a smaller range,
+
+1868
+01:43:48.525 --> 01:43:50.215
+like zero to one or minus one,
+
+1869
+01:43:50.215 --> 01:43:51.685
+two plus one or something like that.
+
+1870
+01:43:51.985 --> 01:43:55.205
+So that, so that small initialization is, uh,
+
+1871
+01:43:55.205 --> 01:43:56.765
+pointing towards the parameters
+
+1872
+01:43:56.795 --> 01:43:58.765
+that your parameters value also should be very,
+
+1873
+01:43:59.265 --> 01:44:01.525
+it should be small, yeah. To start with.
+
+1874
+01:44:02.355 --> 01:44:06.365
+Yeah, sure, sir. Thank you. Uh, sir.
+
+1875
+01:44:06.375 --> 01:44:09.765
+Using this back provocation methodology, sir, uh, like
+
+1876
+01:44:09.765 --> 01:44:10.965
+during the process, uh,
+
+1877
+01:44:10.985 --> 01:44:15.165
+so the network learns which are the most impact neurons
+
+1878
+01:44:15.615 --> 01:44:16.885
+whose weights are getting changed
+
+1879
+01:44:16.885 --> 01:44:19.125
+accordingly, we are able to have a better, uh, output.
+
+1880
+01:44:19.625 --> 01:44:24.045
+So that also we can able to infer, uh, like we have a, uh,
+
+1881
+01:44:24.155 --> 01:44:25.925
+here we have only two hidden layers.
+
+1882
+01:44:26.025 --> 01:44:27.325
+Uh, 1, 1 1 hidden layer.
+
+1883
+01:44:27.785 --> 01:44:29.965
+If you have two hidden layers, also this, uh,
+
+1884
+01:44:30.335 --> 01:44:33.405
+error will propagate from output layer back
+
+1885
+01:44:33.405 --> 01:44:34.525
+to the input weights.
+
+1886
+01:44:34.865 --> 01:44:37.045
+So to during the process back provocation.
+
+1887
+01:44:37.145 --> 01:44:39.085
+We can also infer that the,
+
+1888
+01:44:39.355 --> 01:44:42.845
+that which is the neurons which have the most impact based
+
+1889
+01:44:42.845 --> 01:44:45.565
+on which the weight changes accordingly, the output, uh,
+
+1890
+01:44:46.185 --> 01:44:49.725
+has a reduced, uh, error, maybe better loss function.
+
+1891
+01:44:49.725 --> 01:44:51.805
+Maybe, uh, maybe you can track that. Okay.
+
+1892
+01:44:51.805 --> 01:44:53.805
+You can track that, right? Yes.
+
+1893
+01:44:53.825 --> 01:44:56.925
+For example, here, what we have understood at
+
+1894
+01:44:57.015 --> 01:44:59.405
+after first iteration, H one s two value is coming
+
+1895
+01:44:59.425 --> 01:45:00.685
+as zero, right?
+
+1896
+01:45:01.185 --> 01:45:04.565
+So the impact, if you will see impact, if you can,
+
+1897
+01:45:04.585 --> 01:45:07.885
+you can say that that, uh, the para,
+
+1898
+01:45:08.105 --> 01:45:11.525
+the weights in this layer may not have that much impact
+
+1899
+01:45:11.825 --> 01:45:14.605
+by changing the weights in this layer itself,
+
+1900
+01:45:14.945 --> 01:45:17.845
+we have achieved a better value as compared
+
+1901
+01:45:17.845 --> 01:45:19.205
+to the previous one, although it is not a
+
+1902
+01:45:19.205 --> 01:45:20.325
+good example, right?
+
+1903
+01:45:20.325 --> 01:45:21.605
+And it is not a general example,
+
+1904
+01:45:22.185 --> 01:45:25.285
+but yes, you can infer that like that, okay?
+
+1905
+01:45:25.425 --> 01:45:28.245
+And if you can track that one, uh, by, uh,
+
+1906
+01:45:28.495 --> 01:45:31.565
+after every iteration, actually you can print these waves
+
+1907
+01:45:32.065 --> 01:45:33.805
+for, for, for every neuron,
+
+1908
+01:45:34.145 --> 01:45:36.845
+for every layer, and you can see that.
+
+1909
+01:45:37.305 --> 01:45:39.325
+But going forward, it is a small network.
+
+1910
+01:45:39.745 --> 01:45:42.085
+It is still understandable going forward.
+
+1911
+01:45:42.155 --> 01:45:43.805
+When it is, it becomes very deep.
+
+1912
+01:45:43.825 --> 01:45:45.925
+It is very difficult to comprehend any of these things.
+
+1913
+01:45:46.185 --> 01:45:47.365
+Yes, yes, Correct?
+
+1914
+01:45:47.945 --> 01:45:51.565
+Yes. Can,
+
+1915
+01:45:51.665 --> 01:45:53.285
+can you go back few slides, sir?
+
+1916
+01:45:53.345 --> 01:45:57.725
+Uh, I think back. Back, yeah. Yeah.
+
+1917
+01:45:58.065 --> 01:46:01.245
+So I mean, before you started the last slide, right?
+
+1918
+01:46:01.325 --> 01:46:03.925
+I joined a bit late. Probably lost some context for that.
+
+1919
+01:46:04.545 --> 01:46:06.125
+The last slide of prisoner sales.
+
+1920
+01:46:07.395 --> 01:46:08.605
+Okay. Okay, last slide.
+
+1921
+01:46:08.745 --> 01:46:10.205
+So, so here I started
+
+1922
+01:46:10.395 --> 01:46:12.725
+with this feed forward when I explained
+
+1923
+01:46:12.725 --> 01:46:14.005
+Yeah, before that, yeah.
+
+1924
+01:46:14.025 --> 01:46:17.005
+Yes, before that, okay. Yeah. Before, before this.
+
+1925
+01:46:18.775 --> 01:46:20.235
+Oh, before this, uh, this one?
+
+1926
+01:46:20.745 --> 01:46:23.395
+Yeah. One more. One more, one more. Okay. This one?
+
+1927
+01:46:23.395 --> 01:46:24.555
+Yeah. Yeah. This one I didn't,
+
+1928
+01:46:24.555 --> 01:46:26.515
+I didn't get this delta weight formula
+
+1929
+01:46:26.735 --> 01:46:27.795
+we are showing up here, right?
+
+1930
+01:46:27.925 --> 01:46:29.315
+Uhhuh, this is what I was asking.
+
+1931
+01:46:29.345 --> 01:46:30.475
+What is this function here?
+
+1932
+01:46:30.815 --> 01:46:32.995
+Is it the last function or it's, uh, no,
+
+1933
+01:46:32.995 --> 01:46:34.515
+No, I told that time also.
+
+1934
+01:46:34.705 --> 01:46:36.475
+Okay. And then activation function.
+
+1935
+01:46:37.105 --> 01:46:39.395
+Okay? This f Is an activation function,
+
+1936
+01:46:40.015 --> 01:46:42.395
+and this F dash is the
+
+1937
+01:46:43.355 --> 01:46:44.435
+Ative of activation function.
+
+1938
+01:46:45.015 --> 01:46:48.675
+Yes. Yes. Okay. Yeah.
+
+1939
+01:46:49.085 --> 01:46:50.245
+It is red this slide,
+
+1940
+01:46:52.445 --> 01:46:54.665
+But when you are showing the, the weight delta
+
+1941
+01:46:54.765 --> 01:46:57.345
+of the weights are calculated based on loss function, right?
+
+1942
+01:46:57.925 --> 01:46:59.665
+Uh, I was just trying to correlate
+
+1943
+01:47:00.145 --> 01:47:02.185
+Actually, when you will calculate this partial derivative,
+
+1944
+01:47:02.205 --> 01:47:04.665
+you will calculate this partial derivative with respect
+
+1945
+01:47:04.665 --> 01:47:08.425
+to loss, with means partial derivative of loss with respect
+
+1946
+01:47:08.565 --> 01:47:10.385
+to some parameter, okay?
+
+1947
+01:47:10.915 --> 01:47:13.825
+Right? So that is not shown, uh, uh, uh, shown here,
+
+1948
+01:47:13.845 --> 01:47:15.065
+but actually it is happening.
+
+1949
+01:47:15.205 --> 01:47:16.945
+The same thing here. It is not shown
+
+1950
+01:47:16.945 --> 01:47:17.985
+with respect to the loss.
+
+1951
+01:47:18.425 --> 01:47:21.065
+I mean, sorry, uh, for loss with respect to some parameter,
+
+1952
+01:47:21.065 --> 01:47:23.785
+but this is the same thing is derivative with respect to X.
+
+1953
+01:47:24.205 --> 01:47:25.425
+So derivative of what?
+
+1954
+01:47:26.385 --> 01:47:27.705
+Derivative of loss
+
+1955
+01:47:28.485 --> 01:47:30.865
+and, uh, yeah, the same thing, which I have told there.
+
+1956
+01:47:31.335 --> 01:47:34.245
+Okay? Okay, sir. Good, thanks.
+
+1957
+01:47:38.305 --> 01:47:40.885
+Yeah. Any other query from anyone?
+
+1958
+01:47:42.465 --> 01:47:43.605
+So hopefully I,
+
+1959
+01:47:44.045 --> 01:47:48.285
+although, uh, uh, uh, this PAC propagation, uh, it, it is,
+
+1960
+01:47:48.465 --> 01:47:50.405
+is complex, I understand.
+
+1961
+01:47:51.065 --> 01:47:52.725
+And, uh, we will not be able
+
+1962
+01:47:52.725 --> 01:47:55.925
+to show this back propagation when we'll go actually to the,
+
+1963
+01:47:56.625 --> 01:47:59.525
+uh, even deeper architecture further for CNN,
+
+1964
+01:48:00.105 --> 01:48:01.885
+uh, like in this way.
+
+1965
+01:48:01.905 --> 01:48:03.885
+But this is what is the principle of the back propagation,
+
+1966
+01:48:03.895 --> 01:48:06.845
+which you have to now visualize every time when we say back
+
+1967
+01:48:06.845 --> 01:48:09.485
+propagation and the chain rule, this is what is happening.
+
+1968
+01:48:09.745 --> 01:48:12.845
+So now it may give you some, some more sense that, okay,
+
+1969
+01:48:12.845 --> 01:48:15.325
+what is happening and how these weights are updated,
+
+1970
+01:48:15.715 --> 01:48:17.205
+what is this partial derivative
+
+1971
+01:48:17.425 --> 01:48:19.805
+and how this, what is the chain rule, okay?
+
+1972
+01:48:19.805 --> 01:48:23.525
+And how the weights at the input layer being mapped
+
+1973
+01:48:23.525 --> 01:48:25.485
+to the loss, which is coming at the output layer.
+
+1974
+01:48:25.505 --> 01:48:28.005
+All those things I get, you must have got some clarity
+
+1975
+01:48:28.345 --> 01:48:31.565
+and you'll get more clarity once you will do this hands-on.
+
+1976
+01:48:31.745 --> 01:48:34.485
+And those, uh, collab notebook is attached with this,
+
+1977
+01:48:34.865 --> 01:48:36.445
+and we'll share that up to this class.
+
+1978
+01:48:36.475 --> 01:48:37.475
+Yeah.
+
+1979
+01:48:38.045 --> 01:48:42.625
+Ruby is available. Yes, sir. I'm here.
+
+1980
+01:48:44.005 --> 01:48:45.785
+No, why from your side? Ruby,
+
+1981
+01:48:47.245 --> 01:48:48.745
+Sir, I lost my job today.
+
+1982
+01:48:50.045 --> 01:48:52.545
+Oh my God. Sorry, sorry. Oh,
+
+1983
+01:48:54.005 --> 01:48:56.585
+Uh, so sir, I wanted to reach out to you.
+
+1984
+01:48:56.585 --> 01:48:59.145
+Maybe I'll ask your WhatsApp number from someone Now,
+
+1985
+01:48:59.145 --> 01:49:03.705
+maybe I need a project, uh, from your incubation seller,
+
+1986
+01:49:03.705 --> 01:49:05.665
+something, because now I don't have a No
+
+1987
+01:49:05.665 --> 01:49:06.665
+Problem. Don't
+
+1988
+01:49:06.665 --> 01:49:08.385
+worry. You'll talk tomorrow, huh?
+
+1989
+01:49:08.885 --> 01:49:10.225
+Yes, sir. Thank you. Uh,
+
+1990
+01:49:10.565 --> 01:49:12.625
+I'm time typing my mobile number here.
+
+1991
+01:49:13.245 --> 01:49:15.345
+Yes, sir. Which is, uh, my WhatsApp number.
+
+1992
+01:49:16.285 --> 01:49:18.065
+Yes, sir. I'll take it, sir.
+
+1993
+01:49:21.165 --> 01:49:22.905
+So still in a state of shock, sir.
+
+1994
+01:49:23.845 --> 01:49:25.185
+Uh, don't worry.
+
+1995
+01:49:25.605 --> 01:49:28.185
+So whatever happens, it's for good thing only,
+
+1996
+01:49:28.615 --> 01:49:29.625
+Hopefully Sir
+
+1997
+01:49:30.115 --> 01:49:33.785
+Uhhuh, I, I,
+
+1998
+01:49:34.405 --> 01:49:35.745
+is the layoff happening? Uh,
+
+1999
+01:49:36.395 --> 01:49:37.395
+Sorry.
+
+2000
+01:49:37.695 --> 01:49:40.465
+Yeah, kind of. You know, the company has lost some two,
+
+2001
+01:49:40.465 --> 01:49:41.505
+three key accounts.
+
+2002
+01:49:42.365 --> 01:49:44.305
+So now, I mean, they're panicking
+
+2003
+01:49:44.305 --> 01:49:45.305
+and they're just, uh,
+
+2004
+01:49:45.805 --> 01:49:49.575
+taking some rash decisions, so mm-hmm.
+
+2005
+01:49:51.215 --> 01:49:53.795
+That's okay. So don't worry.
+
+2006
+01:49:54.215 --> 01:49:55.555
+So I think, uh, see,
+
+2007
+01:49:55.555 --> 01:49:57.635
+they're really going in a different direction.
+
+2008
+01:49:57.635 --> 01:49:58.635
+That's what I feel.
+
+2009
+01:49:59.835 --> 01:50:03.275
+The requirements are so acute, but,
+
+2010
+01:50:03.275 --> 01:50:04.275
+Uh, oh, yes, sir.
+
+2011
+01:50:04.385 --> 01:50:08.635
+Totally. Some needs knee jerk reaction they're doing.
+
+2012
+01:50:10.215 --> 01:50:12.155
+Yes. And then higher positions are, I mean,
+
+2013
+01:50:12.505 --> 01:50:14.155
+very vulnerable to all this, right?
+
+2014
+01:50:14.265 --> 01:50:15.915
+Correct. Correct, correct, correct. Yeah.
+
+2015
+01:50:16.665 --> 01:50:21.145
+So that's, uh, and, uh, uh,
+
+2016
+01:50:21.575 --> 01:50:24.065
+this one, um, uh, Sunil, can you, uh,
+
+2017
+01:50:24.135 --> 01:50:25.465
+type my mobile number there?
+
+2018
+01:50:25.565 --> 01:50:29.025
+I'm not able to do it in the mobile here.
+
+2019
+01:50:30.135 --> 01:50:31.955
+Yes, yes. Uh, yes.
+
+2020
+01:50:32.665 --> 01:50:36.795
+That my WhatsApp number 9 9 5 4 0 0 8 1 3 8.
+
+2021
+01:50:37.665 --> 01:50:40.125
+Uh, yes. I'm finding where the chat chat works.
+
+2022
+01:50:40.415 --> 01:50:42.405
+Trans, no. Huh? Yes.
+
+2023
+01:50:42.405 --> 01:50:43.685
+Pardon me, sir. Right.
+
+2024
+01:50:44.185 --> 01:50:48.045
+Uh, I'm, I trying to find, where is the chat? Chat box
+
+2025
+01:50:48.235 --> 01:50:49.235
+That below, below. You'll
+
+2026
+01:50:49.235 --> 01:50:50.605
+see that ribbon, no black ribbon.
+
+2027
+01:50:51.275 --> 01:50:54.445
+Otherwise, sir, you speak it aloud. We are all not
+
+2028
+01:50:54.835 --> 01:50:55.805
+Here. Here? Yes.
+
+2029
+01:50:56.235 --> 01:50:58.445
+Nine, nine, someone, Someone has already reached chat.
+
+2030
+01:50:59.155 --> 01:51:02.245
+Okay? Thank You. Okay. Thank you. Thank you.
+
+2031
+01:51:03.235 --> 01:51:04.885
+Yeah, we'll talk sometime tomorrow.
+
+2032
+01:51:05.225 --> 01:51:08.685
+Yes, sir. I'll send you a message. Thank you, sir. Thank
+
+2033
+01:51:08.685 --> 01:51:09.685
+You. Thank you all. Thank
+
+2034
+01:51:09.685 --> 01:51:09.845
+you.
+
+2035
+01:51:10.715 --> 01:51:13.165
+Wait, wait, sir, don't, uh, lose the chat
+
+2036
+01:51:13.165 --> 01:51:15.845
+because then we'll don't lose the chat immediately.
+
+2037
+01:51:16.385 --> 01:51:18.045
+We this? Yeah. Now.
+
+2038
+01:51:19.995 --> 01:51:21.685
+Okay. Thank, thank you, sir.
+
+2039
+01:51:22.055 --> 01:51:24.205
+Thank you, Sir. Goodnight.
