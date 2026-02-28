@@ -1,0 +1,7716 @@
+WEBVTT
+
+1
+00:15:45.255 --> 00:15:45.975
+Good morning to
+
+2
+00:15:48.445 --> 00:15:49.445
+Good Morning.
+
+3
+00:15:50.605 --> 00:15:51.335
+Good morning, sir.
+
+4
+00:16:24.005 --> 00:16:26.295
+Good morning, sir. Good morning. Good morning, God.
+
+5
+00:16:27.285 --> 00:16:29.375
+Morning, sir. Morning,
+
+6
+00:17:03.995 --> 00:17:04.935
+uh, Dr.
+
+7
+00:17:05.105 --> 00:17:06.935
+Sunil? Yes. I, yes.
+
+8
+00:17:07.925 --> 00:17:10.255
+Will you share the screen or shall I share?
+
+9
+00:17:12.325 --> 00:17:13.055
+I'll share, sir.
+
+10
+00:17:48.365 --> 00:17:48.855
+Yeah, so
+
+11
+00:17:48.855 --> 00:17:50.525
+We can, we can start from here, sir.
+
+12
+00:17:51.595 --> 00:17:55.005
+Yeah. Yeah. So whenever you say I'll,
+
+13
+00:17:57.825 --> 00:17:58.825
+We can start, sir. I
+
+14
+00:17:58.825 --> 00:18:00.685
+guess already. Two, three minutes done.
+
+15
+00:18:32.935 --> 00:18:35.345
+Okay. Um,
+
+16
+00:18:35.935 --> 00:18:36.935
+Good morning. All.
+
+17
+00:18:36.935 --> 00:18:39.945
+Uh, so, so far, um,
+
+18
+00:18:40.685 --> 00:18:43.985
+we explained about, uh, uh, the
+
+19
+00:18:45.025 --> 00:18:49.785
+progress in terms of, uh, um, impro, uh, know,
+
+20
+00:18:49.785 --> 00:18:53.665
+increasing the, uh, architecture, um, of
+
+21
+00:18:54.645 --> 00:18:57.105
+it forward neural network and training such network.
+
+22
+00:18:58.125 --> 00:19:01.105
+We started with, um, a single layer perceptron,
+
+23
+00:19:01.715 --> 00:19:05.385
+which can deal with, uh, linearly separable classes.
+
+24
+00:19:06.655 --> 00:19:11.225
+Then we added, uh, um, one more perceptron layer,
+
+25
+00:19:11.225 --> 00:19:15.625
+which can deal with linearly inseparable problems,
+
+26
+00:19:15.645 --> 00:19:17.105
+but there are convex in nature.
+
+27
+00:19:17.495 --> 00:19:18.905
+Then we added on more layer,
+
+28
+00:19:19.635 --> 00:19:21.825
+which results in multi-layer perception.
+
+29
+00:19:22.995 --> 00:19:27.055
+Mm. With that multi-layer perception, any type of, uh,
+
+30
+00:19:27.055 --> 00:19:28.415
+pattern machine learning task
+
+31
+00:19:28.435 --> 00:19:29.935
+or patternation task can be handed.
+
+32
+00:19:31.275 --> 00:19:35.255
+Uh, however, we ended up with that structure, we ended up
+
+33
+00:19:35.255 --> 00:19:37.055
+with hard learning problem, so that's
+
+34
+00:19:37.055 --> 00:19:40.375
+where propagation learning algorithm was proposed.
+
+35
+00:19:41.555 --> 00:19:45.295
+And so explained in detail about know how to train
+
+36
+00:19:46.205 --> 00:19:49.135
+apro learning algorithm and, uh, different ways,
+
+37
+00:19:49.795 --> 00:19:53.815
+and also how to, uh, how it ensures convergence,
+
+38
+00:19:54.005 --> 00:19:57.135
+different methods for, you know, training the
+
+39
+00:19:58.125 --> 00:20:00.575
+multi-layer perception, all those things he explained.
+
+40
+00:20:03.075 --> 00:20:07.455
+See, after this, people started thinking, uh,
+
+41
+00:20:07.675 --> 00:20:12.415
+can we, um, increase the complexity of the network,
+
+42
+00:20:13.995 --> 00:20:17.855
+um, such that we can, we,
+
+43
+00:20:18.195 --> 00:20:20.415
+we may be able to do, uh,
+
+44
+00:20:21.365 --> 00:20:24.695
+more complex pattern recognition tasks compared to
+
+45
+00:20:24.695 --> 00:20:27.735
+what is being currently done by multi-layer perceptron.
+
+46
+00:20:29.155 --> 00:20:32.455
+Um, essentially from three layer perceptron,
+
+47
+00:20:32.475 --> 00:20:35.375
+can you increase it to multiple more, many more layers?
+
+48
+00:20:36.355 --> 00:20:40.575
+And also, can I have more neurons in each layer compared to
+
+49
+00:20:40.575 --> 00:20:42.615
+what is being visualized currently in the
+
+50
+00:20:42.965 --> 00:20:44.215
+multi-layer perceptron?
+
+51
+00:20:45.075 --> 00:20:49.205
+And that thought led to, uh, the proposal
+
+52
+00:20:49.305 --> 00:20:53.205
+of many new, uh, architectures in the neural network theory,
+
+53
+00:20:53.455 --> 00:20:57.045
+which were termed as advanced concept in, um,
+
+54
+00:20:57.145 --> 00:21:02.125
+neural networks, which were later converted into,
+
+55
+00:21:02.425 --> 00:21:04.805
+uh, this, the later standard terminology
+
+56
+00:21:04.805 --> 00:21:06.285
+that became deep networks.
+
+57
+00:21:07.985 --> 00:21:12.115
+And later, they're,
+
+58
+00:21:12.115 --> 00:21:14.355
+they're all called as deep learning field.
+
+59
+00:21:14.425 --> 00:21:16.995
+That all comes under the deep learning car out
+
+60
+00:21:16.995 --> 00:21:18.915
+and made a separate field called deep learning.
+
+61
+00:21:19.975 --> 00:21:22.595
+Now, we will see from this class onwards
+
+62
+00:21:22.655 --> 00:21:26.995
+how the transition was made from the conventional
+
+63
+00:21:27.015 --> 00:21:29.875
+or artificial networks to deep networks.
+
+64
+00:21:30.055 --> 00:21:31.875
+So that is what, uh, uh,
+
+65
+00:21:32.375 --> 00:21:34.635
+the journey will start into the deep learning area.
+
+66
+00:21:35.465 --> 00:21:40.395
+Next slide. De C, um,
+
+67
+00:21:41.235 --> 00:21:43.555
+I, I might have mentioned in one of the earlier classes,
+
+68
+00:21:44.375 --> 00:21:48.075
+but just for no information, um,
+
+69
+00:21:49.065 --> 00:21:51.595
+this bpro once the bap propag, see,
+
+70
+00:21:51.775 --> 00:21:55.435
+the first breakthrough in the artificial network theory was
+
+71
+00:21:56.115 --> 00:21:58.555
+a coming up with a perception model, neuron model
+
+72
+00:21:58.555 --> 00:22:02.435
+of perceptron, uh, which has a learning capability
+
+73
+00:22:02.585 --> 00:22:04.715
+that is treated as the first breakthrough
+
+74
+00:22:04.715 --> 00:22:05.875
+in the neur networks field.
+
+75
+00:22:06.695 --> 00:22:09.155
+And again, when the feed
+
+76
+00:22:09.175 --> 00:22:11.515
+for new network architecture was proposed,
+
+77
+00:22:12.065 --> 00:22:14.115
+they ended up in the hard learning challenge.
+
+78
+00:22:15.015 --> 00:22:18.115
+And, uh, the second breakthrough came in the neur networks
+
+79
+00:22:18.115 --> 00:22:20.475
+field in terms of the provocation learning algorithm.
+
+80
+00:22:22.725 --> 00:22:25.355
+After that, even though people visualize it
+
+81
+00:22:25.355 --> 00:22:29.715
+as advanced neural network com, neural networks as a, um,
+
+82
+00:22:30.875 --> 00:22:35.035
+a concept for, um, increase to deal
+
+83
+00:22:35.035 --> 00:22:37.395
+with increased complex pattern recognition tasks,
+
+84
+00:22:38.135 --> 00:22:42.035
+but they were unable to demonstrate practically, uh,
+
+85
+00:22:42.665 --> 00:22:44.955
+ability to train such big networks
+
+86
+00:22:45.865 --> 00:22:48.595
+accordingly, there was no improved performance achieved.
+
+87
+00:22:49.255 --> 00:22:50.715
+So as a result of that, no,
+
+88
+00:22:51.095 --> 00:22:53.035
+the interest in the neural network field went
+
+89
+00:22:53.035 --> 00:22:54.355
+down late nineties.
+
+90
+00:22:55.535 --> 00:22:59.155
+Uh, even the shalon neural networks also, even though
+
+91
+00:22:59.825 --> 00:23:04.395
+that is early nineties, everything people are talking about,
+
+92
+00:23:04.395 --> 00:23:07.875
+neuro, neuro systems, neurons, neural network systems,
+
+93
+00:23:08.005 --> 00:23:10.475
+fuzzy systems, neuro fuzzy systems like that,
+
+94
+00:23:10.525 --> 00:23:12.715
+there are a lot of hype there at that point of time,
+
+95
+00:23:13.615 --> 00:23:16.475
+in spite of all of that, the performance
+
+96
+00:23:16.495 --> 00:23:18.675
+of any system based on neuro
+
+97
+00:23:18.815 --> 00:23:20.475
+or neuro for Z, all those things,
+
+98
+00:23:21.375 --> 00:23:25.035
+or even, uh, in some cases only comparable
+
+99
+00:23:25.035 --> 00:23:28.195
+to the alternative models or even inferior in many tasks.
+
+100
+00:23:28.895 --> 00:23:30.515
+So that's where no people felt to,
+
+101
+00:23:30.515 --> 00:23:31.595
+no, no, no, this will not work.
+
+102
+00:23:31.595 --> 00:23:32.875
+And they left the field.
+
+103
+00:23:34.175 --> 00:23:38.675
+Few groups, only few groups, which were very proponents
+
+104
+00:23:38.675 --> 00:23:40.115
+of this neural network, uh,
+
+105
+00:23:40.325 --> 00:23:43.715
+field from the beginning means we were there with the thicks
+
+106
+00:23:43.715 --> 00:23:45.965
+and thins of the neural network field network.
+
+107
+00:23:45.965 --> 00:23:49.205
+From the initial developments, they continued to work,
+
+108
+00:23:49.545 --> 00:23:50.605
+uh, in the neural network.
+
+109
+00:23:51.505 --> 00:23:54.045
+Now exploring why we are not able
+
+110
+00:23:54.065 --> 00:23:56.085
+to train in a deep network.
+
+111
+00:23:56.835 --> 00:23:59.565
+Okay, these are, for example, one
+
+112
+00:23:59.565 --> 00:24:03.525
+of the famous thing is such a free hint, uh, group, uh,
+
+113
+00:24:03.565 --> 00:24:04.765
+from city of Toronto.
+
+114
+00:24:05.275 --> 00:24:10.205
+They continue to work, uh, uh, in the new network area,
+
+115
+00:24:10.985 --> 00:24:14.125
+uh, exploring the possibility of declining deep network.
+
+116
+00:24:14.595 --> 00:24:19.445
+Similarly, Ben's group, uh, again, in Canada, university
+
+117
+00:24:19.465 --> 00:24:21.365
+of, I don't know, Magill
+
+118
+00:24:21.365 --> 00:24:23.525
+or something, some university, they're also working,
+
+119
+00:24:23.625 --> 00:24:24.845
+and a few more groups.
+
+120
+00:24:25.435 --> 00:24:29.365
+They were silently working on how to make
+
+121
+00:24:29.505 --> 00:24:32.285
+or train how to train these networks.
+
+122
+00:24:33.785 --> 00:24:37.405
+So that is the late nineties, two, early 2000,
+
+123
+00:24:37.405 --> 00:24:38.685
+nearly 15 years.
+
+124
+00:24:38.915 --> 00:24:42.765
+They were silently working on how do we come up
+
+125
+00:24:42.765 --> 00:24:45.445
+with a method for, how do we demonstrate
+
+126
+00:24:45.445 --> 00:24:48.885
+that it is indeed possible to train in a deep network, and
+
+127
+00:24:48.885 --> 00:24:51.725
+accordingly it should show significantly better performance.
+
+128
+00:24:54.855 --> 00:24:57.955
+Um, now towards the turn of the century,
+
+129
+00:24:59.795 --> 00:25:04.165
+um, what happened is, um, um,
+
+130
+00:25:05.305 --> 00:25:06.965
+uh, they,
+
+131
+00:25:07.095 --> 00:25:09.405
+there are two more developments happened in
+
+132
+00:25:09.405 --> 00:25:10.485
+the technology field.
+
+133
+00:25:10.625 --> 00:25:12.885
+One is because more
+
+134
+00:25:12.885 --> 00:25:16.785
+and more applications were digitized in many
+
+135
+00:25:16.785 --> 00:25:20.825
+of the practical tasks, the digital data amount
+
+136
+00:25:20.825 --> 00:25:24.745
+of digital data available became so big that now,
+
+137
+00:25:25.125 --> 00:25:26.785
+now there is no data scarcity
+
+138
+00:25:26.805 --> 00:25:28.665
+for training the deep networks.
+
+139
+00:25:30.005 --> 00:25:32.785
+And the second thing is, uh, so of the century,
+
+140
+00:25:32.965 --> 00:25:37.145
+we also got this GPUs, which have much more powerful
+
+141
+00:25:37.695 --> 00:25:40.025
+computing abilities compared to CPUs.
+
+142
+00:25:40.765 --> 00:25:43.585
+So that with the help of that, I can find this,
+
+143
+00:25:44.305 --> 00:25:46.025
+I can process this large data
+
+144
+00:25:46.725 --> 00:25:49.585
+and these two additional
+
+145
+00:25:50.385 --> 00:25:52.785
+features being made available in the early 2000.
+
+146
+00:25:54.565 --> 00:25:58.225
+And the continued exploration community was looking into
+
+147
+00:25:58.285 --> 00:26:01.225
+how do I refine the bap propagation algorithm,
+
+148
+00:26:02.145 --> 00:26:06.085
+b propagation process to train the deeper networks.
+
+149
+00:26:06.705 --> 00:26:10.085
+So, um, for example, the repayment, the did,
+
+150
+00:26:10.155 --> 00:26:12.965
+they did not know, remove the bap propagation algorithm.
+
+151
+00:26:13.755 --> 00:26:17.285
+They studied when I'm using abrupt provision algorithm
+
+152
+00:26:17.465 --> 00:26:20.565
+to train the deeper network where I am going wrong.
+
+153
+00:26:21.635 --> 00:26:23.895
+And at that point, can I initiate something?
+
+154
+00:26:24.235 --> 00:26:26.895
+One of the things they did was in a conventional,
+
+155
+00:26:26.895 --> 00:26:29.455
+multi-layered perception, when we are training the network,
+
+156
+00:26:30.315 --> 00:26:32.855
+we begin with the random initialization of weights.
+
+157
+00:26:34.045 --> 00:26:38.805
+Okay? Uh, then they thought,
+
+158
+00:26:39.705 --> 00:26:42.685
+can we do a clever initialization of weights?
+
+159
+00:26:42.685 --> 00:26:45.845
+Means instead of random, can we have a mechanism
+
+160
+00:26:46.585 --> 00:26:48.765
+to initialize the weights of the network, such
+
+161
+00:26:48.765 --> 00:26:51.965
+that they're already, they already know something about the
+
+162
+00:26:52.475 --> 00:26:55.165
+task that I'm doing means they know more about the data
+
+163
+00:26:55.235 --> 00:26:56.965
+that I'm going to use it for timing.
+
+164
+00:26:57.115 --> 00:26:59.765
+That is that clever initialization of the, uh,
+
+165
+00:26:59.795 --> 00:27:01.165
+methods they explore.
+
+166
+00:27:01.985 --> 00:27:06.205
+And, uh, also they explored about, you know, um,
+
+167
+00:27:06.465 --> 00:27:10.005
+the output function, uh, which we're using, uh, uh,
+
+168
+00:27:11.205 --> 00:27:14.365
+logistic function, uh, sigmoidal, uh, function.
+
+169
+00:27:14.945 --> 00:27:17.005
+Um, can I modify
+
+170
+00:27:17.225 --> 00:27:20.165
+or use alternative output function
+
+171
+00:27:20.505 --> 00:27:22.805
+to help better propagation of the error?
+
+172
+00:27:25.165 --> 00:27:26.915
+These were the two important, um,
+
+173
+00:27:28.235 --> 00:27:31.075
+modification they did to the algorithm.
+
+174
+00:27:32.235 --> 00:27:34.455
+So with that, all these things increase the data
+
+175
+00:27:34.455 --> 00:27:38.855
+availability and computing power and, um, modification
+
+176
+00:27:38.955 --> 00:27:41.855
+or refinements to the propagation process algorithm.
+
+177
+00:27:41.865 --> 00:27:46.095
+There is no change process, uh, uh,
+
+178
+00:27:46.595 --> 00:27:49.655
+and with the high increase in computing time, we are able
+
+179
+00:27:49.655 --> 00:27:54.425
+to, um, uh, uh,
+
+180
+00:27:54.765 --> 00:27:56.545
+reduce the experimentation time
+
+181
+00:27:56.645 --> 00:27:59.105
+and with all came in hand in hand.
+
+182
+00:27:59.685 --> 00:28:03.265
+So that is how the transition started towards
+
+183
+00:28:03.285 --> 00:28:04.305
+the deeper networks.
+
+184
+00:28:05.175 --> 00:28:05.985
+Next slide, sir.
+
+185
+00:28:09.355 --> 00:28:10.405
+This is what I have told.
+
+186
+00:28:10.945 --> 00:28:13.325
+One is, uh, at the turn of the century,
+
+187
+00:28:13.415 --> 00:28:17.085
+there are several advances, again, brought back popularity
+
+188
+00:28:17.145 --> 00:28:18.245
+to the neural networks.
+
+189
+00:28:19.595 --> 00:28:21.615
+Not all of these are no algorithm centric.
+
+190
+00:28:21.645 --> 00:28:24.735
+It's not that, no, the random, they, uh, came up
+
+191
+00:28:24.735 --> 00:28:26.695
+with a breakthrough new algorithm
+
+192
+00:28:26.835 --> 00:28:30.405
+for training the deeper networks, what made, uh,
+
+193
+00:28:30.465 --> 00:28:32.245
+two important additional developments
+
+194
+00:28:32.245 --> 00:28:33.925
+or increased data availability
+
+195
+00:28:34.065 --> 00:28:35.925
+and increase computational power
+
+196
+00:28:36.665 --> 00:28:40.085
+and, uh, changes to basic web propagation process,
+
+197
+00:28:40.335 --> 00:28:42.725
+which in terms of clever methods for initializing
+
+198
+00:28:43.585 --> 00:28:47.845
+and also, you know, changing the output function,
+
+199
+00:28:47.845 --> 00:28:52.125
+all those things, so increase the data computational power
+
+200
+00:28:52.125 --> 00:28:56.165
+and reduce the testing time, we all contributed
+
+201
+00:28:56.345 --> 00:29:00.805
+to coming up with a method for, uh, um, uh,
+
+202
+00:29:01.035 --> 00:29:05.365
+improving the, uh, now uhtraining process
+
+203
+00:29:05.545 --> 00:29:06.685
+for the deep networks.
+
+204
+00:29:06.685 --> 00:29:10.515
+Next slide. Now,
+
+205
+00:29:11.545 --> 00:29:15.755
+essentially after that, uh, uh, they were able
+
+206
+00:29:15.755 --> 00:29:18.795
+to demonstrate that it's, we'll see that in the later part
+
+207
+00:29:18.795 --> 00:29:20.755
+of the, they were unable.
+
+208
+00:29:20.755 --> 00:29:23.435
+They were able to demonstrate that with all
+
+209
+00:29:23.435 --> 00:29:26.435
+that interventions we were able to try in a deeper network,
+
+210
+00:29:27.575 --> 00:29:30.875
+um, and show the performances significantly better compared
+
+211
+00:29:30.875 --> 00:29:33.475
+to simple multi-layer perceptance.
+
+212
+00:29:34.935 --> 00:29:38.425
+Then after that, no, uh, till today, this is this,
+
+213
+00:29:38.535 --> 00:29:40.185
+they mastered in 2006.
+
+214
+00:29:40.615 --> 00:29:45.365
+From 2006 to now about two decades, we are completing by,
+
+215
+00:29:45.705 --> 00:29:48.965
+uh, another one month or so in two decades.
+
+216
+00:29:49.275 --> 00:29:51.165
+There's a lot of improvements
+
+217
+00:29:51.165 --> 00:29:53.085
+that have happened in the deep learning area.
+
+218
+00:29:54.625 --> 00:29:58.245
+So, and they were indeed able to now
+
+219
+00:29:58.845 --> 00:30:03.055
+successfully demonstrate that these deep networks
+
+220
+00:30:04.415 --> 00:30:07.435
+can represent increasingly complex functions
+
+221
+00:30:08.175 --> 00:30:09.955
+within the input and output data.
+
+222
+00:30:10.505 --> 00:30:11.995
+Accordingly, we can use it
+
+223
+00:30:12.055 --> 00:30:14.715
+for doing complex pattern recognition tasks
+
+224
+00:30:15.255 --> 00:30:16.875
+or complex machine learning tasks.
+
+225
+00:30:16.875 --> 00:30:21.315
+We want to see, okay, we'll see what are those
+
+226
+00:30:21.865 --> 00:30:23.555
+complex pattern regression tasks.
+
+227
+00:30:24.585 --> 00:30:28.645
+Um, they can be broadly classified
+
+228
+00:30:29.515 --> 00:30:30.645
+into three categories.
+
+229
+00:30:31.585 --> 00:30:33.205
+One is, um,
+
+230
+00:30:33.865 --> 00:30:37.485
+the complex pattern recognition task done by humans,
+
+231
+00:30:39.485 --> 00:30:42.865
+but, uh, because of the, uh, you know,
+
+232
+00:30:43.525 --> 00:30:47.505
+the cognitive system we are enrolled with and day in
+
+233
+00:30:47.505 --> 00:30:51.865
+and day out exposure to this task, over time,
+
+234
+00:30:52.715 --> 00:30:54.865
+these tasks become effortless for humans.
+
+235
+00:30:56.085 --> 00:30:59.825
+For example, um, visual observation of a scene
+
+236
+00:31:00.445 --> 00:31:02.705
+by our visual sensory mechanism.
+
+237
+00:31:03.675 --> 00:31:05.405
+It's an effortless job for that.
+
+238
+00:31:05.875 --> 00:31:08.285
+Suppose in that location, if I put a video camera
+
+239
+00:31:08.465 --> 00:31:11.965
+and ask to do, develop a no,
+
+240
+00:31:12.355 --> 00:31:15.845
+what we call actionable intelligence from the visual scene,
+
+241
+00:31:16.625 --> 00:31:20.005
+uh, it'll not be, uh, possible like humans.
+
+242
+00:31:20.755 --> 00:31:24.005
+Similarly, humans can recognize speech even in a very noisy
+
+243
+00:31:24.155 --> 00:31:28.725
+environment, and still that's a challenge for, um,
+
+244
+00:31:29.245 --> 00:31:32.485
+machines during the era of neural networks.
+
+245
+00:31:33.925 --> 00:31:37.145
+But for humans, it is very easy, uh, generating speech,
+
+246
+00:31:37.205 --> 00:31:38.625
+visual scene observation,
+
+247
+00:31:38.645 --> 00:31:40.425
+and deriving actionable intelligence
+
+248
+00:31:41.445 --> 00:31:46.225
+or, um, uh, producing speech or recognizing the speech.
+
+249
+00:31:46.285 --> 00:31:49.185
+All those things are, uh, one set
+
+250
+00:31:49.205 --> 00:31:51.065
+of pattern recognition tasks.
+
+251
+00:31:52.565 --> 00:31:57.015
+Uh, our machine learning tasks, which are easy
+
+252
+00:31:57.155 --> 00:31:58.495
+and effortless for humans,
+
+253
+00:31:59.785 --> 00:32:03.445
+but they, they proved to be very hard task
+
+254
+00:32:03.585 --> 00:32:06.685
+or complex task for shallow neural networks,
+
+255
+00:32:07.855 --> 00:32:08.945
+deep neural networks.
+
+256
+00:32:08.945 --> 00:32:12.035
+They were able to demonstrate that, uh,
+
+257
+00:32:12.265 --> 00:32:16.475
+they can tackle these complex ization tasks, uh,
+
+258
+00:32:16.865 --> 00:32:19.955
+like humans, very human-like task automation.
+
+259
+00:32:19.955 --> 00:32:22.675
+They can do, they can now analyze the scenes.
+
+260
+00:32:22.745 --> 00:32:25.555
+They can recognize speech, generate speech
+
+261
+00:32:25.895 --> 00:32:30.515
+and their performances, like they tutor the performance
+
+262
+00:32:30.515 --> 00:32:31.835
+of human level performance.
+
+263
+00:32:34.585 --> 00:32:37.195
+That is one class of complex petion task.
+
+264
+00:32:39.555 --> 00:32:42.925
+Next, increase the, uh, complexity complex, uh,
+
+265
+00:32:42.925 --> 00:32:47.125
+patternation tasks are, uh, creative content generation.
+
+266
+00:32:47.745 --> 00:32:52.205
+See, uh, humans have enrolled ability for creative
+
+267
+00:32:52.795 --> 00:32:56.855
+content generation, but they require relatively more time
+
+268
+00:32:57.155 --> 00:32:59.495
+or more involvement compared to
+
+269
+00:33:00.555 --> 00:33:03.415
+the patronization task that I described earlier.
+
+270
+00:33:04.435 --> 00:33:07.015
+For example, I want to generate a figure,
+
+271
+00:33:08.405 --> 00:33:10.705
+or I want to generate a poem, okay?
+
+272
+00:33:11.365 --> 00:33:14.265
+Um, or I want to write a piece of note
+
+273
+00:33:14.725 --> 00:33:18.945
+or speech that's a creative content generation, okay?
+
+274
+00:33:19.455 --> 00:33:22.305
+That creative content generation, uh,
+
+275
+00:33:24.245 --> 00:33:27.825
+is, um, also a, a complex pattern technician task,
+
+276
+00:33:29.085 --> 00:33:32.385
+but requires literally more time compared to these tasks.
+
+277
+00:33:32.455 --> 00:33:35.065
+What I do, visual scene analysis, uh,
+
+278
+00:33:35.185 --> 00:33:38.425
+auditory scene analysis, all those things, okay?
+
+279
+00:33:39.485 --> 00:33:43.545
+And, uh, people know when we were doing
+
+280
+00:33:43.645 --> 00:33:46.065
+before in the earlier era of Shalon Neur networks,
+
+281
+00:33:48.545 --> 00:33:51.085
+the first level of task itself we were not able to solve.
+
+282
+00:33:51.085 --> 00:33:53.325
+That's why we were not even thinking about this creative
+
+283
+00:33:53.325 --> 00:33:54.725
+content generation task.
+
+284
+00:33:55.305 --> 00:33:59.685
+But now, uh, since they solved this problem first level,
+
+285
+00:33:59.785 --> 00:34:03.645
+in the second level of complexity problems, now, uh,
+
+286
+00:34:03.795 --> 00:34:07.045
+deep learning models are able to create new content,
+
+287
+00:34:07.305 --> 00:34:08.365
+create new content.
+
+288
+00:34:09.305 --> 00:34:12.245
+For example, uh, best example, we have chat, g, pt
+
+289
+00:34:12.585 --> 00:34:14.925
+or perplexity or any of these tools,
+
+290
+00:34:15.435 --> 00:34:17.965
+they can generate new content, okay?
+
+291
+00:34:18.625 --> 00:34:23.445
+Um, no, with growing success, we are able to use them.
+
+292
+00:34:23.705 --> 00:34:28.645
+Uh, no, it, it, I will say them as a, uh, first cut
+
+293
+00:34:29.865 --> 00:34:34.255
+draft, easily available for us within a fraction of, uh,
+
+294
+00:34:34.605 --> 00:34:36.895
+hour for us to edit
+
+295
+00:34:37.035 --> 00:34:40.415
+and make a quick finalize contact for us.
+
+296
+00:34:40.645 --> 00:34:42.535
+Okay? That is the creative content generation.
+
+297
+00:34:44.755 --> 00:34:49.675
+The next one is, the third one is, um, now there are tasks
+
+298
+00:34:51.185 --> 00:34:54.295
+where for humans, it,
+
+299
+00:34:54.355 --> 00:34:56.495
+it is becoming highly impossible.
+
+300
+00:34:57.235 --> 00:34:59.335
+For example, the field of data science
+
+301
+00:34:59.335 --> 00:35:02.415
+and AI itself, when I'm talking about data science,
+
+302
+00:35:02.515 --> 00:35:03.695
+I'm talking about billions
+
+303
+00:35:03.695 --> 00:35:06.335
+of data points being collected on a regular basis
+
+304
+00:35:06.395 --> 00:35:08.615
+for a particular pattern recognition
+
+305
+00:35:08.615 --> 00:35:09.615
+or machine learning task.
+
+306
+00:35:10.635 --> 00:35:13.775
+In that scenario, you can't even load those data points
+
+307
+00:35:13.835 --> 00:35:15.495
+to your, uh, computer terminal
+
+308
+00:35:15.675 --> 00:35:16.695
+and start analyzing
+
+309
+00:35:16.845 --> 00:35:20.015
+what you are doing earlier using spreadsheet, if
+
+310
+00:35:20.015 --> 00:35:24.455
+that is the case, how to deal with such large heaps of data.
+
+311
+00:35:25.375 --> 00:35:27.235
+Now, deep learning models are able to do that.
+
+312
+00:35:27.785 --> 00:35:31.435
+They do that and generate you actionable intelligence
+
+313
+00:35:31.455 --> 00:35:33.515
+and throw this out in the form of visual,
+
+314
+00:35:33.615 --> 00:35:35.915
+visual representation for you, okay?
+
+315
+00:35:36.305 --> 00:35:38.965
+Then you see, know, uh, depending on, um,
+
+316
+00:35:41.705 --> 00:35:46.605
+the, uh, the visualization patterns that generate, you know,
+
+317
+00:35:46.665 --> 00:35:51.125
+the base or reference, uh, visualization patterns
+
+318
+00:35:51.585 --> 00:35:53.565
+and the new pattern that is being thrown out
+
+319
+00:35:53.585 --> 00:35:55.925
+by processing the data, by automatically,
+
+320
+00:35:56.185 --> 00:35:57.565
+by the deep learning model,
+
+321
+00:35:58.665 --> 00:36:00.765
+if there is a no change in the pattern,
+
+322
+00:36:01.585 --> 00:36:02.925
+and from your domain knowledge
+
+323
+00:36:02.925 --> 00:36:05.685
+or expertise, you can take a call on what to be done for
+
+324
+00:36:05.685 --> 00:36:08.405
+that particular, okay?
+
+325
+00:36:08.825 --> 00:36:12.605
+So that is what the humanly impossible tasks also,
+
+326
+00:36:12.605 --> 00:36:13.645
+now they started doing.
+
+327
+00:36:14.745 --> 00:36:19.125
+It is not that, no, this is not, uh, intellectually it is,
+
+328
+00:36:19.275 --> 00:36:22.165
+even though it is not challenging, but, uh,
+
+329
+00:36:22.165 --> 00:36:26.485
+because of the volume of data, it is not possible, uh, to
+
+330
+00:36:28.255 --> 00:36:30.265
+deal with such data in a manual manner.
+
+331
+00:36:30.605 --> 00:36:32.985
+That's where I say humanly impossible task,
+
+332
+00:36:33.885 --> 00:36:37.385
+and that also the deep learning models are able to, so
+
+333
+00:36:37.385 --> 00:36:41.145
+that is how these are the capabilities now we are enjoying
+
+334
+00:36:41.725 --> 00:36:43.825
+in as a field of deep learning.
+
+335
+00:36:44.445 --> 00:36:47.865
+And this all be became because, became reality
+
+336
+00:36:48.575 --> 00:36:51.425
+because of the ability to train the deep networks.
+
+337
+00:36:52.365 --> 00:36:56.905
+And, uh, this is what they dream dreamt in the late,
+
+338
+00:36:56.975 --> 00:36:59.505
+late nineties when the proposal is advanced
+
+339
+00:37:00.045 --> 00:37:02.465
+neural network models, which we later called
+
+340
+00:37:02.465 --> 00:37:04.465
+as deep learning or deep networks.
+
+341
+00:37:05.365 --> 00:37:06.945
+People visualize it like that.
+
+342
+00:37:07.165 --> 00:37:08.865
+We should be able to do all these tasks,
+
+343
+00:37:09.365 --> 00:37:11.505
+but they struggled, uh, to train the network.
+
+344
+00:37:11.505 --> 00:37:15.845
+That's where the whole interest went down. Next slide.
+
+345
+00:37:15.865 --> 00:37:19.035
+Uh, Sunil, this is
+
+346
+00:37:19.035 --> 00:37:21.115
+what I told, uh, no, next slide.
+
+347
+00:37:25.105 --> 00:37:27.765
+Now then, what was that challenge?
+
+348
+00:37:28.665 --> 00:37:30.485
+To train a deep learning model
+
+349
+00:37:30.625 --> 00:37:35.015
+or deep network there, there's a well-known, very famous
+
+350
+00:37:35.765 --> 00:37:37.615
+problem that was associated
+
+351
+00:37:37.615 --> 00:37:39.215
+with the deep learning model training
+
+352
+00:37:39.285 --> 00:37:43.135
+that is called vanishing or exploding gradient problem.
+
+353
+00:37:43.925 --> 00:37:48.495
+Okay? This was the main hidden obstacle, uh,
+
+354
+00:37:50.435 --> 00:37:54.575
+for enabling or training the deep learning models.
+
+355
+00:37:56.075 --> 00:37:58.535
+And that is what knowing this session, I think, uh,
+
+356
+00:37:58.825 --> 00:38:00.575
+Sunni sir will explain in detail,
+
+357
+00:38:00.675 --> 00:38:02.815
+but I'll just give the introduction for that.
+
+358
+00:38:04.185 --> 00:38:06.435
+What happens is, uh, if you recall
+
+359
+00:38:06.505 --> 00:38:09.235
+what we discussed earlier in the multi-layer perception,
+
+360
+00:38:10.465 --> 00:38:15.055
+there are three perception layers, uh, just for imagination.
+
+361
+00:38:15.055 --> 00:38:17.655
+Suppose there is an input layer after that.
+
+362
+00:38:17.655 --> 00:38:20.415
+There is a first layer, first perception layer.
+
+363
+00:38:20.415 --> 00:38:23.615
+Yeah, I call it as a firsted layer, which let me call it as,
+
+364
+00:38:24.035 --> 00:38:25.415
+um, hidden layer one
+
+365
+00:38:26.555 --> 00:38:28.615
+and the next hidden layer, central layer,
+
+366
+00:38:28.695 --> 00:38:30.015
+I call it hidden layer two,
+
+367
+00:38:30.795 --> 00:38:34.075
+and the next hidden layer is hidden layer three, uh,
+
+368
+00:38:34.215 --> 00:38:36.325
+not hidden layer three, it is output layers.
+
+369
+00:38:37.595 --> 00:38:41.205
+Yeah, output layer one, two, yeah, output layer. Okay?
+
+370
+00:38:41.665 --> 00:38:43.325
+So there are totally four layers
+
+371
+00:38:43.325 --> 00:38:46.245
+of the network without multi-layer three perceptions are
+
+372
+00:38:46.245 --> 00:38:47.925
+there from the input layer.
+
+373
+00:38:48.235 --> 00:38:50.405
+Next hidden layer one, hidden layer two, and output layer.
+
+374
+00:38:50.745 --> 00:38:52.405
+All these three are perception layers.
+
+375
+00:38:53.465 --> 00:38:56.645
+Now, what happens, uh, the, we, we, we,
+
+376
+00:38:56.785 --> 00:38:59.565
+we overcame the problem of, uh,
+
+377
+00:39:00.085 --> 00:39:02.525
+training multiplayer perception, hard learning problem
+
+378
+00:39:04.715 --> 00:39:08.985
+using web propagation learning where, uh, instead of, uh,
+
+379
+00:39:09.485 --> 00:39:14.065
+um, the sigmoidal function, uh, sorry,
+
+380
+00:39:14.375 --> 00:39:17.105
+hard limiting function, we came up with sigmoidal functions,
+
+381
+00:39:17.515 --> 00:39:22.185
+which had non-zero, um, differentiation, um,
+
+382
+00:39:23.465 --> 00:39:24.905
+derivative or gradient.
+
+383
+00:39:25.005 --> 00:39:27.705
+As a result of that, I can pass the error in the output
+
+384
+00:39:27.705 --> 00:39:30.545
+layer two hidden layer one output,
+
+385
+00:39:30.545 --> 00:39:34.425
+and in layer two output, once I have that error, I can use
+
+386
+00:39:34.425 --> 00:39:38.265
+for adjusting the weights of the, um, links connected to
+
+387
+00:39:38.265 --> 00:39:40.185
+that hidden layer 1 90 10, layer two.
+
+388
+00:39:41.655 --> 00:39:44.835
+But when the increase of the network, what happened,
+
+389
+00:39:44.895 --> 00:39:48.435
+you see, I'm passing the error as a process of derivative.
+
+390
+00:39:49.175 --> 00:39:51.195
+We all know from our cal class
+
+391
+00:39:51.195 --> 00:39:54.435
+that when I take a derivative, the value decreases, okay?
+
+392
+00:39:54.665 --> 00:39:58.635
+Gradually, if you take, uh, in, in, in, um, uh,
+
+393
+00:39:59.265 --> 00:40:03.035
+propagation learning algorithm, we are going through, uh,
+
+394
+00:40:03.035 --> 00:40:05.755
+what we call chain rule, uh, first derivative,
+
+395
+00:40:05.755 --> 00:40:08.235
+second derivative, third derivative, derivative, derivative.
+
+396
+00:40:08.235 --> 00:40:11.155
+That's happening. So as, as we increase the derivative,
+
+397
+00:40:11.295 --> 00:40:14.275
+as you are moving towards the hidden layers in the input
+
+398
+00:40:14.275 --> 00:40:15.715
+layer towards the input layer,
+
+399
+00:40:16.735 --> 00:40:19.115
+the the gradient value reduces
+
+400
+00:40:20.075 --> 00:40:23.195
+whatever the computer error reduces when it reduces.
+
+401
+00:40:23.775 --> 00:40:26.075
+So one, one thing we know, the common way
+
+402
+00:40:26.075 --> 00:40:28.795
+of perception learning is, uh,
+
+403
+00:40:29.295 --> 00:40:32.115
+the target output minus the actual output,
+
+404
+00:40:32.425 --> 00:40:33.515
+that error is there.
+
+405
+00:40:33.735 --> 00:40:36.955
+If that error is zero, we stop the training.
+
+406
+00:40:37.655 --> 00:40:41.275
+Now, what is happening is the assumption is we have learned
+
+407
+00:40:41.295 --> 00:40:43.475
+the information, but now in the case, what is happening is
+
+408
+00:40:43.475 --> 00:40:47.075
+because of this decrease in the error, uh,
+
+409
+00:40:47.075 --> 00:40:50.515
+because of the partial derivative, uh, we are taking
+
+410
+00:40:50.655 --> 00:40:55.235
+as you move, um, as you move towards, uh,
+
+411
+00:40:55.235 --> 00:40:57.995
+hidden layers which are closer towards the input layer,
+
+412
+00:40:58.975 --> 00:41:00.675
+the gradients become so small,
+
+413
+00:41:01.335 --> 00:41:04.555
+we say the gradients get vanished, okay?
+
+414
+00:41:05.535 --> 00:41:09.435
+Or if you vanish your gradients, you further start deriving,
+
+415
+00:41:09.535 --> 00:41:10.755
+it becomes a random value,
+
+416
+00:41:11.255 --> 00:41:13.835
+and it may explode also some random values.
+
+417
+00:41:14.535 --> 00:41:18.695
+So both have no meaning from
+
+418
+00:41:19.215 --> 00:41:20.935
+training point of view, learning point of view,
+
+419
+00:41:20.935 --> 00:41:24.495
+because now once they become a, take a very small barrier,
+
+420
+00:41:24.605 --> 00:41:26.975
+very large value, which has no relation
+
+421
+00:41:26.995 --> 00:41:30.215
+to the actual error generated between the target output
+
+422
+00:41:30.215 --> 00:41:34.285
+and the actual output, then use that value to adjust your,
+
+423
+00:41:34.285 --> 00:41:35.605
+if it is incredibly small,
+
+424
+00:41:36.155 --> 00:41:37.685
+then you don't adjust the weights.
+
+425
+00:41:37.915 --> 00:41:40.565
+That means to say the weights leading to
+
+426
+00:41:40.595 --> 00:41:43.445
+that particular layer are not being adjusted.
+
+427
+00:41:44.905 --> 00:41:48.355
+Alternatively, randomly it has become large by exploded.
+
+428
+00:41:49.125 --> 00:41:51.435
+Using that exploded value adjust the,
+
+429
+00:41:52.305 --> 00:41:53.435
+that also has no meaning.
+
+430
+00:41:54.235 --> 00:41:57.615
+So as a result of that, what was happening is no suppose,
+
+431
+00:41:58.115 --> 00:42:01.855
+um, there are, uh, um, if, if I
+
+432
+00:42:02.445 --> 00:42:06.335
+visualize a deep network as several modules, module one,
+
+433
+00:42:06.335 --> 00:42:08.535
+module two, module three, like module one,
+
+434
+00:42:08.635 --> 00:42:09.735
+10 layers are there.
+
+435
+00:42:09.765 --> 00:42:13.295
+Same say, uh, the several
+
+436
+00:42:13.395 --> 00:42:15.895
+of these modules are not being trained.
+
+437
+00:42:15.955 --> 00:42:17.655
+As a result of that, there a gap,
+
+438
+00:42:17.945 --> 00:42:20.735
+there is no way I can pass the information flow from the
+
+439
+00:42:20.735 --> 00:42:22.335
+input layer towards the output layer
+
+440
+00:42:22.335 --> 00:42:23.495
+because they're not trained.
+
+441
+00:42:24.035 --> 00:42:26.495
+So when they're not trained, the signal flow doesn't happen,
+
+442
+00:42:26.675 --> 00:42:29.055
+and then accordingly, they cannot do machine learning.
+
+443
+00:42:31.425 --> 00:42:35.485
+So now this exponential error signal, um,
+
+444
+00:42:35.785 --> 00:42:39.205
+the BA propagated error signal decreases exponentially
+
+445
+00:42:39.665 --> 00:42:42.925
+or increases exponentially increase exponentially is only
+
+446
+00:42:42.925 --> 00:42:45.365
+because of now computational complexity
+
+447
+00:42:45.365 --> 00:42:47.445
+and also limitation of the digital computation.
+
+448
+00:42:48.355 --> 00:42:52.765
+Okay? So that is what happens with the first,
+
+449
+00:42:53.145 --> 00:42:56.245
+uh, error inability to bap propagation.
+
+450
+00:42:56.545 --> 00:42:58.725
+So as a result of that, I'm not able to
+
+451
+00:42:59.305 --> 00:43:01.725
+bap propagate the errors to when the length
+
+452
+00:43:01.725 --> 00:43:06.565
+of the network be goes beyond 3, 2, 3, 4, like that, okay?
+
+453
+00:43:06.915 --> 00:43:09.085
+According, you know, there is a poor model learning
+
+454
+00:43:09.825 --> 00:43:14.365
+and, uh, so I think we might have also touched
+
+455
+00:43:14.555 --> 00:43:18.005
+upon how do we stop training The multi-layer perception
+
+456
+00:43:18.405 --> 00:43:20.805
+network is one way the error becomes minimum.
+
+457
+00:43:21.465 --> 00:43:24.085
+If the error is not becoming minimum
+
+458
+00:43:24.665 --> 00:43:27.285
+and it's flatten half, then we take,
+
+459
+00:43:27.285 --> 00:43:28.725
+that is also another criteria.
+
+460
+00:43:29.065 --> 00:43:31.725
+If the change in the error from the previous situation
+
+461
+00:43:31.725 --> 00:43:33.805
+to next situation is less than certain value,
+
+462
+00:43:34.355 --> 00:43:37.405
+then it cannot further, uh, learn anything, you stop it.
+
+463
+00:43:37.745 --> 00:43:40.085
+Now, poor convergence, it'll happen. Poor performance.
+
+464
+00:43:40.105 --> 00:43:42.005
+So premature converge, it is happening.
+
+465
+00:43:44.645 --> 00:43:46.335
+This unstable gradient behavior
+
+466
+00:43:47.335 --> 00:43:49.695
+resulted in not able to try in the network.
+
+467
+00:43:50.525 --> 00:43:51.865
+So this was the problem.
+
+468
+00:43:52.455 --> 00:43:54.105
+Just as a layman tell me if I say,
+
+469
+00:43:54.105 --> 00:43:57.895
+suppose if it has same six layers, hidden layer one
+
+470
+00:43:57.895 --> 00:44:01.615
+to hidden layer five in the hidden layer block,
+
+471
+00:44:02.395 --> 00:44:05.095
+one input layer is there one, uh,
+
+472
+00:44:05.755 --> 00:44:07.615
+six layer is the output layer.
+
+473
+00:44:09.275 --> 00:44:13.455
+Now, if I try to train such a, a six layer,
+
+474
+00:44:14.275 --> 00:44:18.705
+um, perception network, uh, from the output layer,
+
+475
+00:44:18.705 --> 00:44:20.465
+maybe hidden layer five weights,
+
+476
+00:44:20.465 --> 00:44:23.825
+maybe trying even layer four becomes poor hidden layer
+
+477
+00:44:23.875 --> 00:44:26.025
+3, 2, 1, we are not able to train.
+
+478
+00:44:26.135 --> 00:44:29.705
+Naturally, there is a gap. Signal flow cannot happen. Okay?
+
+479
+00:44:30.325 --> 00:44:31.605
+So because of this,
+
+480
+00:44:31.985 --> 00:44:34.245
+people are not knowing how to deal with that.
+
+481
+00:44:34.395 --> 00:44:35.765
+That is the problem they face
+
+482
+00:44:36.545 --> 00:44:38.925
+for nearly more than a decade on how
+
+483
+00:44:38.925 --> 00:44:40.245
+to train the deep networks.
+
+484
+00:44:40.475 --> 00:44:45.245
+Next slide. This is what I,
+
+485
+00:44:45.565 --> 00:44:49.285
+I told you this, um, deep,
+
+486
+00:44:49.395 --> 00:44:50.965
+deep neur network was unable
+
+487
+00:44:50.965 --> 00:44:54.445
+to back propagate useful gradient information termed
+
+488
+00:44:54.445 --> 00:44:57.165
+as it became exponentially small,
+
+489
+00:44:57.215 --> 00:45:00.485
+which is technically termed as managing gradient
+
+490
+00:45:00.505 --> 00:45:03.605
+or exponentially large exploding grad exploding gradient
+
+491
+00:45:03.605 --> 00:45:07.645
+will happen because our binary word length in a registered
+
+492
+00:45:07.645 --> 00:45:09.965
+lens, everything, no, uh, if you were,
+
+493
+00:45:10.305 --> 00:45:12.965
+you go on differentiating that decimal point
+
+494
+00:45:12.965 --> 00:45:15.205
+after explodes, then it becomes some random one.
+
+495
+00:45:15.305 --> 00:45:19.605
+So that is what, uh, so, uh,
+
+496
+00:45:19.945 --> 00:45:22.565
+as a result of this inability of the models with many layers
+
+497
+00:45:22.625 --> 00:45:24.285
+to learn a given pattern information
+
+498
+00:45:24.385 --> 00:45:26.765
+or prematurely converge to some poor solution.
+
+499
+00:45:29.175 --> 00:45:33.985
+Next slide. So then people started
+
+500
+00:45:33.985 --> 00:45:37.625
+analyzing, you know, how do I make this, um, uh,
+
+501
+00:45:38.175 --> 00:45:39.425
+deep network to climb?
+
+502
+00:45:40.005 --> 00:45:42.945
+The first thing they identify the root cause they identified
+
+503
+00:45:43.135 --> 00:45:44.905
+that is this gradient problem.
+
+504
+00:45:45.865 --> 00:45:48.475
+This is what is, it is becoming either vanishing gradient
+
+505
+00:45:48.475 --> 00:45:49.635
+or exploding gradient.
+
+506
+00:45:50.295 --> 00:45:51.875
+How do I preserve that gradient
+
+507
+00:45:51.875 --> 00:45:56.135
+to an appreciable value representing the output error, okay?
+
+508
+00:45:56.515 --> 00:45:58.975
+For that, of course, they tried many things.
+
+509
+00:45:59.245 --> 00:46:02.535
+Finally, the successful thing was, uh,
+
+510
+00:46:04.195 --> 00:46:08.655
+you replace sigmoidal output function
+
+511
+00:46:08.805 --> 00:46:11.735
+with a real output function, okay?
+
+512
+00:46:13.505 --> 00:46:15.655
+First, we replace a step output function,
+
+513
+00:46:15.655 --> 00:46:19.735
+which was there in the basic percept run with the, um, uh,
+
+514
+00:46:20.255 --> 00:46:21.655
+sigmoidal output function
+
+515
+00:46:21.655 --> 00:46:26.335
+because it has a non-zero, uh, differential value.
+
+516
+00:46:26.445 --> 00:46:29.735
+When I take F dash x where f physio sidal function
+
+517
+00:46:30.515 --> 00:46:33.735
+in non-zero output, uh, as a result of that, I'm able
+
+518
+00:46:33.735 --> 00:46:35.255
+to back propagate the errors to the,
+
+519
+00:46:36.555 --> 00:46:39.415
+but what happened was this non, if you recall,
+
+520
+00:46:39.575 --> 00:46:42.635
+I think SAR may show in one slide, the,
+
+521
+00:46:43.295 --> 00:46:44.475
+the differential value
+
+522
+00:46:44.575 --> 00:46:47.115
+of the sigal function also is non-zero,
+
+523
+00:46:47.115 --> 00:46:50.955
+only over a small range of, uh, input X values.
+
+524
+00:46:51.095 --> 00:46:52.355
+Beyond that, it becomes zero.
+
+525
+00:46:52.615 --> 00:46:55.195
+If it is zero, then again, you're not able to ate.
+
+526
+00:46:55.455 --> 00:46:57.635
+If the values are beyond that range,
+
+527
+00:46:58.105 --> 00:46:59.675
+they wanted an output function,
+
+528
+00:47:00.165 --> 00:47:04.435
+which has a differential appreciable differential value
+
+529
+00:47:04.755 --> 00:47:06.155
+gradient and very high value.
+
+530
+00:47:06.505 --> 00:47:08.315
+That is where one of the thing they came up
+
+531
+00:47:08.315 --> 00:47:09.355
+with the function.
+
+532
+00:47:09.735 --> 00:47:13.395
+If you see relo function, um, the slope is always one,
+
+533
+00:47:13.695 --> 00:47:16.835
+so naturally it'll not, uh, it'll overcome the effect
+
+534
+00:47:16.835 --> 00:47:18.915
+of the vanishing or exploding gradient.
+
+535
+00:47:18.915 --> 00:47:20.875
+That is where the first thing the replace it
+
+536
+00:47:20.875 --> 00:47:22.115
+is output function.
+
+537
+00:47:22.855 --> 00:47:26.695
+The second thing they did was, instead
+
+538
+00:47:26.695 --> 00:47:31.325
+of random initialization, is it possible to, uh,
+
+539
+00:47:33.425 --> 00:47:38.125
+um, adjust the weights of the neural network
+
+540
+00:47:38.305 --> 00:47:41.925
+before employing the bap propagation algorithm means
+
+541
+00:47:42.155 --> 00:47:46.685
+pre-train the weights, uh, with the reference to the
+
+542
+00:47:47.215 --> 00:47:49.485
+input data that is available, input output data
+
+543
+00:47:49.485 --> 00:47:52.525
+that is available, pre-trained means already have exposed
+
+544
+00:47:52.635 --> 00:47:54.565
+that data not through the bap propagation
+
+545
+00:47:54.585 --> 00:47:56.365
+by some other procedure such
+
+546
+00:47:56.365 --> 00:47:58.885
+that they already learned some information about the,
+
+547
+00:47:59.115 --> 00:48:00.885
+that particular, uh, data point,
+
+548
+00:48:01.105 --> 00:48:02.205
+and that is what, you know,
+
+549
+00:48:02.355 --> 00:48:05.245
+they explored different weight initialization mechanism
+
+550
+00:48:05.905 --> 00:48:09.845
+and these two, uh, enabled them to
+
+551
+00:48:11.085 --> 00:48:13.365
+overcome the problem of vanishing
+
+552
+00:48:13.365 --> 00:48:14.605
+or exploding gradient problem,
+
+553
+00:48:14.705 --> 00:48:17.885
+and they finally demonstrated that it is indeed possible
+
+554
+00:48:17.885 --> 00:48:20.165
+to train the, uh, deep network.
+
+555
+00:48:20.595 --> 00:48:25.315
+Next slide. Yeah, that's what, uh,
+
+556
+00:48:25.315 --> 00:48:27.155
+alternate weight initialization
+
+557
+00:48:27.215 --> 00:48:29.195
+and alternate activ activation.
+
+558
+00:48:29.335 --> 00:48:31.115
+That's where no, I initially, I told
+
+559
+00:48:31.935 --> 00:48:34.675
+we did not throw away the BA propagation learning algorithm.
+
+560
+00:48:35.505 --> 00:48:37.725
+We only found out what is going wrong
+
+561
+00:48:37.835 --> 00:48:39.765
+that is vanishing in the exporting gradient problem.
+
+562
+00:48:40.305 --> 00:48:41.885
+And then what is the solution for that?
+
+563
+00:48:41.905 --> 00:48:44.165
+One is alternate activation function
+
+564
+00:48:44.265 --> 00:48:46.445
+or output function, alternative
+
+565
+00:48:46.445 --> 00:48:47.605
+weight installation mechanism.
+
+566
+00:48:48.425 --> 00:48:52.925
+So the alternative weight installation mechanism they came
+
+567
+00:48:52.925 --> 00:48:55.805
+up with was unsupervised pre-training,
+
+568
+00:48:56.855 --> 00:48:59.685
+which is done in a layer wise training manner.
+
+569
+00:49:00.515 --> 00:49:02.685
+Okay? And uh,
+
+570
+00:49:03.035 --> 00:49:06.725
+then later the explored supervisor counterpart also, instead
+
+571
+00:49:06.725 --> 00:49:09.765
+of suppose I, I told no, I have a six layer network,
+
+572
+00:49:10.585 --> 00:49:12.725
+one input layer as a seven layer network.
+
+573
+00:49:13.425 --> 00:49:15.565
+We, among them six are perception layers.
+
+574
+00:49:16.225 --> 00:49:19.645
+Um, so now when I want to train the six layer,
+
+575
+00:49:20.645 --> 00:49:22.325
+I train each layer separately.
+
+576
+00:49:22.325 --> 00:49:24.805
+That is called layer wise separately in some other process,
+
+577
+00:49:25.705 --> 00:49:29.245
+and then command, just like no modular construction, we do,
+
+578
+00:49:29.705 --> 00:49:33.085
+you, you build that each module separately somewhere,
+
+579
+00:49:33.155 --> 00:49:35.045
+cast it and bring it and direct it here.
+
+580
+00:49:35.515 --> 00:49:38.445
+That is the way they follow layer wise training. Okay?
+
+581
+00:49:38.985 --> 00:49:42.685
+And then at that point, what happened, even
+
+582
+00:49:43.345 --> 00:49:46.125
+to some extent, uh, the vanishing
+
+583
+00:49:46.125 --> 00:49:48.765
+or exploiting Bulgarian problem is there to some extent,
+
+584
+00:49:49.105 --> 00:49:51.805
+but since these are already explored in a layer waste
+
+585
+00:49:52.045 --> 00:49:55.485
+training manner, they represent the input data information.
+
+586
+00:49:55.485 --> 00:49:58.085
+That's why they were able to overcome the, uh,
+
+587
+00:49:58.095 --> 00:50:00.245
+difficulty in training the model.
+
+588
+00:50:00.915 --> 00:50:05.085
+Okay? And the alternative activ function was they used a
+
+589
+00:50:05.085 --> 00:50:09.205
+rectifier rectified linear unit activation function instead
+
+590
+00:50:09.205 --> 00:50:12.365
+of that hyperbolic tangent or SIG model function.
+
+591
+00:50:12.715 --> 00:50:16.325
+Okay? I think rail are already shown somewhere.
+
+592
+00:50:16.465 --> 00:50:19.565
+It will explain again, so it's like a linear function,
+
+593
+00:50:19.905 --> 00:50:22.405
+easier to try and less likely to saturate,
+
+594
+00:50:22.405 --> 00:50:23.565
+but an nonlinear function
+
+595
+00:50:23.565 --> 00:50:25.805
+because the negative values we are forcing it to save.
+
+596
+00:50:26.795 --> 00:50:27.845
+Okay, next.
+
+597
+00:50:31.795 --> 00:50:36.405
+Next. Yeah, I think, uh, Sunil,
+
+598
+00:50:36.665 --> 00:50:40.005
+any, any, any, uh, other questions up to this point?
+
+599
+00:50:40.425 --> 00:50:40.925
+Any of you?
+
+600
+00:50:49.915 --> 00:50:54.445
+Any questions? Uh, no, sir.
+
+601
+00:50:54.905 --> 00:50:57.125
+It is clear. Yeah. Okay. Thank you.
+
+602
+00:50:57.385 --> 00:50:59.645
+Uh, I think now the SIR will explain about
+
+603
+00:50:59.645 --> 00:51:00.805
+the vanishing gradient problem.
+
+604
+00:51:01.015 --> 00:51:02.015
+Thank you.
+
+605
+00:51:02.755 --> 00:51:06.775
+Fine, sir. Thank you, sir. Okay,
+
+606
+00:51:07.235 --> 00:51:10.095
+so I'll continue from here that,
+
+607
+00:51:10.235 --> 00:51:11.455
+and first of all, try
+
+608
+00:51:11.455 --> 00:51:14.815
+to see the vanishing gradient problem in little more detail
+
+609
+00:51:15.905 --> 00:51:17.605
+and, uh, yeah,
+
+610
+00:51:18.105 --> 00:51:20.085
+Uh, just one question I have here, sir.
+
+611
+00:51:20.145 --> 00:51:21.925
+Uh, why is it, uh,
+
+612
+00:51:22.125 --> 00:51:24.565
+relu preferred over the tanish for vanishing gradient?
+
+613
+00:51:24.565 --> 00:51:27.845
+Sir, even though the relu can cause the dead neurons?
+
+614
+00:51:29.535 --> 00:51:31.645
+Hmm, uh,
+
+615
+00:51:32.645 --> 00:51:34.085
+I think sir will explain that.
+
+616
+00:51:34.625 --> 00:51:38.925
+Uh, essentially, um, we wake, um,
+
+617
+00:51:39.465 --> 00:51:44.325
+uh, maybe, um, if I have a slide, uh, Sunil,
+
+618
+00:51:44.345 --> 00:51:49.205
+uh, uh, the way, um, I showed, uh, uh, the differential
+
+619
+00:51:49.205 --> 00:51:50.805
+of the sigal function somewhere.
+
+620
+00:51:51.155 --> 00:51:53.165
+Yeah, I, I think we have shown it, sir,
+
+621
+00:51:54.155 --> 00:51:58.425
+Earlier we have shown it, Uh,
+
+622
+00:51:58.965 --> 00:52:00.105
+In the previous slide deck,
+
+623
+00:52:00.525 --> 00:52:03.905
+Uh, in the previous slide deck, it was yes, second,
+
+624
+00:52:27.725 --> 00:52:30.065
+Ah, that's slide This one, sir.
+
+625
+00:52:30.445 --> 00:52:32.145
+Yes. Okay,
+
+626
+00:52:34.845 --> 00:52:35.845
+Next.
+
+627
+00:52:36.035 --> 00:52:40.735
+Ah, CC suppose if I take sigal function, okay,
+
+628
+00:52:40.985 --> 00:52:43.375
+which we are using in conventional provisional learning,
+
+629
+00:52:43.375 --> 00:52:45.135
+either you can go with logistic function
+
+630
+00:52:45.135 --> 00:52:47.535
+or hyperbole logistic, the shape
+
+631
+00:52:47.535 --> 00:52:50.695
+of the function remains same in case of logistic function.
+
+632
+00:52:50.795 --> 00:52:53.375
+The function value output function value goes from zero
+
+633
+00:52:53.435 --> 00:52:56.175
+to one, whereas this is going from minus one to one,
+
+634
+00:52:56.595 --> 00:52:58.335
+but as x value increase,
+
+635
+00:52:58.335 --> 00:52:59.735
+that the X is the activation value
+
+636
+00:52:59.735 --> 00:53:00.775
+is coming out of the neuron.
+
+637
+00:53:00.855 --> 00:53:02.935
+FFX is the neuron output, okay?
+
+638
+00:53:03.395 --> 00:53:07.495
+If you see no, uh, as say for x, uh,
+
+639
+00:53:07.555 --> 00:53:12.055
+as it becomes slightly large, the the FFX value saturates,
+
+640
+00:53:12.445 --> 00:53:15.775
+that means to say, if I take that, uh, differential
+
+641
+00:53:15.775 --> 00:53:18.095
+of the F dash X in the next function,
+
+642
+00:53:18.595 --> 00:53:22.255
+the non-zero value is there only this bell shape,
+
+643
+00:53:22.255 --> 00:53:23.375
+reverse bell shape curve.
+
+644
+00:53:23.375 --> 00:53:24.575
+You have bell shape curve.
+
+645
+00:53:24.575 --> 00:53:27.725
+You have have, okay, beyond this, if you have X value,
+
+646
+00:53:28.395 --> 00:53:30.645
+then you cannot propagate that back
+
+647
+00:53:30.645 --> 00:53:32.965
+because that gradient has become zero.
+
+648
+00:53:33.585 --> 00:53:37.325
+You are, uh, so, and same thing that nature remains.
+
+649
+00:53:37.325 --> 00:53:41.005
+Same for, um, um, the other tangent, uh,
+
+650
+00:53:41.005 --> 00:53:45.085
+verbal function also that means to the range of operation
+
+651
+00:53:45.825 --> 00:53:50.005
+for the neural neuron output will be only a very small range
+
+652
+00:53:50.005 --> 00:53:52.685
+around x equal to zero around the origin.
+
+653
+00:53:53.875 --> 00:53:56.775
+But as I move towards the inner layer,
+
+654
+00:53:56.885 --> 00:54:00.335
+this x value may become larger, the exceed that limit,
+
+655
+00:54:00.475 --> 00:54:02.855
+and if then that derivative is zero,
+
+656
+00:54:02.975 --> 00:54:04.295
+I will not be able to pass on.
+
+657
+00:54:04.865 --> 00:54:07.295
+There may be some slide, uh, Sunil,
+
+658
+00:54:07.295 --> 00:54:12.015
+where you showed the rail output function ally,
+
+659
+00:54:12.095 --> 00:54:15.975
+I saw somewhere, Ah, somewhere.
+
+660
+00:54:18.865 --> 00:54:21.085
+See if you take this rail output function,
+
+661
+00:54:21.085 --> 00:54:22.805
+this is the nature of the output function.
+
+662
+00:54:23.305 --> 00:54:26.725
+Uh, it is linear from zero on positive value
+
+663
+00:54:27.265 --> 00:54:28.645
+and zero in the negative value.
+
+664
+00:54:30.285 --> 00:54:32.165
+Hello? Is it okay?
+
+665
+00:54:32.745 --> 00:54:35.805
+Yes, sir. Ah, so now suppose you take the,
+
+666
+00:54:35.995 --> 00:54:40.205
+because of this sudden cut zero BA below one, and
+
+667
+00:54:40.205 --> 00:54:42.525
+because this one, uh, beyond zero,
+
+668
+00:54:43.065 --> 00:54:45.605
+it qualifies the definition of an nonlinear function.
+
+669
+00:54:46.495 --> 00:54:48.355
+And whereas when I take the slope,
+
+670
+00:54:48.935 --> 00:54:52.235
+you see now you have a constant slope one, okay?
+
+671
+00:54:52.495 --> 00:54:57.115
+Any value X instead of Z is uh, x there any value of X
+
+672
+00:54:57.215 --> 00:55:00.355
+or Z, you take, you always have a constant value slope.
+
+673
+00:55:00.725 --> 00:55:01.955
+Slope will never become zero.
+
+674
+00:55:02.335 --> 00:55:06.425
+So then naturally the gradient effect will reduce, okay?
+
+675
+00:55:07.205 --> 00:55:09.305
+And I need an output function, which is non-linear,
+
+676
+00:55:09.305 --> 00:55:10.385
+otherwise I will not be able
+
+677
+00:55:10.385 --> 00:55:11.625
+to deal complex pet transmission.
+
+678
+00:55:11.625 --> 00:55:14.945
+That is how we move from, uh, uh, linear
+
+679
+00:55:15.005 --> 00:55:16.145
+to non-linear function
+
+680
+00:55:16.145 --> 00:55:20.425
+because the output function has to be, uh,
+
+681
+00:55:20.755 --> 00:55:25.025
+non-linear as per the basic functioning of the neuron to con
+
+682
+00:55:25.165 --> 00:55:27.145
+to conduct any patternation task.
+
+683
+00:55:27.495 --> 00:55:29.665
+This qualifies both non-linear as well
+
+684
+00:55:29.665 --> 00:55:32.265
+as the slope is more or constant. So
+
+685
+00:55:33.125 --> 00:55:34.125
+Yes, sir.
+
+686
+00:55:34.195 --> 00:55:34.625
+Thank you.
+
+687
+00:55:42.275 --> 00:55:43.295
+So you are muted, sir.
+
+688
+00:55:45.285 --> 00:55:46.375
+Certainly you're muted.
+
+689
+00:55:48.475 --> 00:55:51.285
+Yeah, sorry. So just wanted to add what sir was telling
+
+690
+00:55:51.355 --> 00:55:55.245
+that if at this point of time at this, uh, uh, point, uh,
+
+691
+00:55:55.265 --> 00:56:00.085
+in this, uh, uh, uh, where you said that it becomes, uh,
+
+692
+00:56:00.085 --> 00:56:01.685
+dead, okay, dead neuron, right?
+
+693
+00:56:01.945 --> 00:56:04.445
+Mm-hmm. Which is correct, because if you take the derivative
+
+694
+00:56:04.445 --> 00:56:06.925
+of zero here, uh, you will not get anything.
+
+695
+00:56:06.985 --> 00:56:09.045
+And that's where there are different forms of the,
+
+696
+00:56:09.565 --> 00:56:11.565
+which is proposed, okay?
+
+697
+00:56:11.565 --> 00:56:15.445
+Which slightly deviates completely as uh, zero
+
+698
+00:56:15.505 --> 00:56:16.645
+for the negative value,
+
+699
+00:56:17.425 --> 00:56:21.645
+and it goes a little, I mean, it takes some data to instead
+
+700
+00:56:21.645 --> 00:56:24.645
+of becoming completely zero on zero and
+
+701
+00:56:24.645 --> 00:56:27.685
+after, in the negative part, there are some different forms
+
+702
+00:56:27.705 --> 00:56:31.325
+of the re relu, which will learn later part of the time
+
+703
+00:56:31.955 --> 00:56:34.125
+like leaky relu, uh, or, um,
+
+704
+00:56:35.065 --> 00:56:38.525
+and a few more forms are there that takes care of that also,
+
+705
+00:56:38.525 --> 00:56:40.205
+that, uh, to, uh,
+
+706
+00:56:40.205 --> 00:56:42.245
+because at zero, I understand what you said,
+
+707
+00:56:42.245 --> 00:56:43.485
+that it becomes debt, right?
+
+708
+00:56:44.185 --> 00:56:46.685
+Was it the question? If it is, if I'm getting correct?
+
+709
+00:56:47.465 --> 00:56:48.965
+Yes, sir. That's, that was the question.
+
+710
+00:56:49.235 --> 00:56:52.925
+Yeah, fine, fine. Okay, thanks.
+
+711
+00:56:53.915 --> 00:56:54.885
+Okay, then I will,
+
+712
+00:57:06.465 --> 00:57:10.935
+Okay, So the plan is for the next, uh,
+
+713
+00:57:11.635 --> 00:57:14.135
+uh, another 45 minutes or so what we have,
+
+714
+00:57:14.715 --> 00:57:17.135
+but first we'll try to understand the vanishing gradient
+
+715
+00:57:17.135 --> 00:57:19.575
+problem by taking some a NN
+
+716
+00:57:20.155 --> 00:57:22.735
+and we'll have some four, five layers of the, uh,
+
+717
+00:57:23.115 --> 00:57:26.215
+neural network, I mean very simplest neural network, just
+
+718
+00:57:26.215 --> 00:57:29.695
+to show that how exactly the gradient vanishes
+
+719
+00:57:30.445 --> 00:57:33.135
+once you back propagate with this deep, deep, uh,
+
+720
+00:57:33.315 --> 00:57:34.615
+uh, deep neural network.
+
+721
+00:57:35.795 --> 00:57:39.375
+Um, so that is, uh, first thing we'll understand it, uh,
+
+722
+00:57:40.055 --> 00:57:44.615
+visually means we are going to irate, uh, reiterate our, uh,
+
+723
+00:57:44.765 --> 00:57:47.335
+forward propagation and back part propagation.
+
+724
+00:57:47.675 --> 00:57:50.335
+And then with that we'll understand this vanishing gradient.
+
+725
+00:57:51.235 --> 00:57:53.775
+And then once we'll understand this theoretically,
+
+726
+00:57:53.925 --> 00:57:57.295
+then we'll also switch on to the, uh, hands-on
+
+727
+00:57:57.295 --> 00:57:58.775
+where we'll see that, okay,
+
+728
+00:57:58.775 --> 00:58:00.175
+what is the value which is coming
+
+729
+00:58:00.435 --> 00:58:03.175
+and what are the, with the plots, we'll try
+
+730
+00:58:03.175 --> 00:58:06.855
+to understand the when, when the, uh, gradient vanishes,
+
+731
+00:58:06.885 --> 00:58:09.815
+then how it becomes, uh, the slope becomes zero,
+
+732
+00:58:09.875 --> 00:58:12.895
+and all those things we'll try to visualize so that our, uh,
+
+733
+00:58:12.895 --> 00:58:15.055
+clarity on this vanishing gradient problem will
+
+734
+00:58:15.055 --> 00:58:16.535
+be, uh, complete.
+
+735
+00:58:16.555 --> 00:58:18.455
+So that is, that is what is the plan for today,
+
+736
+00:58:19.595 --> 00:58:22.295
+and if time permits, we'll also go into the solutions
+
+737
+00:58:22.315 --> 00:58:23.735
+for this vanishing gradient problem.
+
+738
+00:58:24.045 --> 00:58:26.215
+Otherwise, we'll see that in the next class.
+
+739
+00:58:28.825 --> 00:58:32.485
+So, uh, vanishing gradient problem adds, uh,
+
+740
+00:58:33.285 --> 00:58:36.005
+already told during the back propagation gradients are
+
+741
+00:58:36.005 --> 00:58:37.245
+computed layer by layer
+
+742
+00:58:37.545 --> 00:58:39.165
+and uh, uh, in the,
+
+743
+00:58:39.165 --> 00:58:41.365
+from the output layer towards the input layer.
+
+744
+00:58:42.265 --> 00:58:45.445
+And for that, we use the chain rule and chain rule.
+
+745
+00:58:45.445 --> 00:58:47.845
+All of us has already seen that in the chain rule.
+
+746
+00:58:47.845 --> 00:58:50.045
+What we do, we have many gradients,
+
+747
+00:58:50.045 --> 00:58:52.445
+which we are doing the multiplications,
+
+748
+00:58:53.225 --> 00:58:55.965
+and if the multiple multiplicative factors
+
+749
+00:58:56.945 --> 00:58:58.325
+are less than one,
+
+750
+00:58:58.975 --> 00:59:01.805
+their product across many layers can shrink
+
+751
+00:59:01.875 --> 00:59:03.445
+exponentially towards zero.
+
+752
+00:59:03.625 --> 00:59:05.405
+Now, that is the vanishing gradient problem.
+
+753
+00:59:06.385 --> 00:59:10.285
+So it'll result as very small gradient for early layers.
+
+754
+00:59:10.785 --> 00:59:14.325
+And just because the early layers gradients are very small,
+
+755
+00:59:14.835 --> 00:59:16.445
+weights will hardly update.
+
+756
+00:59:16.905 --> 00:59:18.285
+And if the weights are not changing,
+
+757
+00:59:19.325 --> 00:59:21.845
+although you will go with the iteration by iteration
+
+758
+00:59:21.905 --> 00:59:25.285
+or epox to ep, you will not see much change
+
+759
+00:59:25.505 --> 00:59:27.925
+or any change in the loss reduction.
+
+760
+00:59:27.945 --> 00:59:30.165
+Now, this is the impact, what you will see from
+
+761
+00:59:30.165 --> 00:59:31.205
+the vanishing gradient problem.
+
+762
+00:59:31.225 --> 00:59:33.125
+That's why it is very important
+
+763
+00:59:33.185 --> 00:59:35.445
+to tackle the vanishing gradient problem.
+
+764
+00:59:35.915 --> 00:59:37.965
+Okay? And main culprits
+
+765
+00:59:37.965 --> 00:59:40.765
+for this vanishing gradient problems are like sigmoid,
+
+766
+00:59:40.765 --> 00:59:42.925
+which we have just explained that y it is because
+
+767
+00:59:42.925 --> 00:59:44.645
+after certain point on the X
+
+768
+00:59:44.825 --> 00:59:49.205
+or Z, which is on the x axis, your y be saturated.
+
+769
+00:59:49.305 --> 00:59:52.565
+So y becomes is always one or, uh, very close to one.
+
+770
+00:59:52.665 --> 00:59:54.805
+And for that one, if you calculate the slope,
+
+771
+00:59:54.805 --> 00:59:58.405
+because it is saturated like horizontal line, so the slope
+
+772
+00:59:58.425 --> 00:59:59.485
+of that becomes zero.
+
+773
+00:59:59.715 --> 01:00:02.725
+Okay? So this is one of the main culprits for that.
+
+774
+01:00:02.835 --> 01:00:06.285
+Poor initialization is another problem, which may lead
+
+775
+01:00:06.285 --> 01:00:09.405
+to the vanishing gradient problem as well
+
+776
+01:00:09.405 --> 01:00:10.525
+as the deep networks.
+
+777
+01:00:10.855 --> 01:00:14.725
+We'll see that that deep network itself can be sometimes the
+
+778
+01:00:14.745 --> 01:00:17.205
+region for the vanishing gradient problem, obviously.
+
+779
+01:00:17.505 --> 01:00:18.765
+So the solution for
+
+780
+01:00:18.765 --> 01:00:21.845
+that could be like convert the deep network
+
+781
+01:00:22.625 --> 01:00:25.205
+to the shallow network, but uh, yeah,
+
+782
+01:00:25.205 --> 01:00:26.725
+that may have another problem, right?
+
+783
+01:00:26.785 --> 01:00:29.845
+So all these things are some of the regions
+
+784
+01:00:29.905 --> 01:00:33.005
+of getting the vanishing gradient problem in your network.
+
+785
+01:00:33.985 --> 01:00:37.405
+So just to understand it in a little, uh, uh,
+
+786
+01:00:38.035 --> 01:00:39.165
+more in depth,
+
+787
+01:00:39.665 --> 01:00:42.005
+and what we have done is I've taken this
+
+788
+01:00:42.685 --> 01:00:44.685
+simplest deep neural network example
+
+789
+01:00:44.775 --> 01:00:46.285
+where I have four layers.
+
+790
+01:00:46.425 --> 01:00:48.965
+You can see that I have one input, okay?
+
+791
+01:00:48.965 --> 01:00:52.245
+Along with that, I have four layers, a one, a two, a three,
+
+792
+01:00:52.245 --> 01:00:56.245
+and a four, and all these four layers are hidden layers,
+
+793
+01:00:56.825 --> 01:00:58.605
+and fourth layers are uh, uh,
+
+794
+01:00:58.605 --> 01:01:01.205
+this fourth layer is also my output layer.
+
+795
+01:01:01.225 --> 01:01:04.325
+So whatever is the output coming from a four
+
+796
+01:01:05.025 --> 01:01:06.565
+is equal to my y hat.
+
+797
+01:01:06.565 --> 01:01:07.885
+That is my final output,
+
+798
+01:01:07.885 --> 01:01:09.405
+which is coming from this particular network.
+
+799
+01:01:10.265 --> 01:01:12.365
+Now, just to make it very simple
+
+800
+01:01:12.705 --> 01:01:17.685
+and show you a little mathematics part, also, uh,
+
+801
+01:01:18.005 --> 01:01:20.085
+I have kept only one neuron in each layer,
+
+802
+01:01:20.145 --> 01:01:21.645
+but now you can imagine, right?
+
+803
+01:01:21.705 --> 01:01:23.085
+If we are having these four layers,
+
+804
+01:01:23.145 --> 01:01:25.485
+you can keep two neurons, three neurons,
+
+805
+01:01:25.485 --> 01:01:26.845
+10 neurons, a hundred neurons.
+
+806
+01:01:26.845 --> 01:01:27.885
+Now whatever you want, right?
+
+807
+01:01:28.305 --> 01:01:30.445
+So you can design the neuro network as per,
+
+808
+01:01:30.585 --> 01:01:31.645
+as per your requirement.
+
+809
+01:01:31.665 --> 01:01:33.365
+But here, just for demo,
+
+810
+01:01:33.865 --> 01:01:35.925
+we have taken just one neuron in each
+
+811
+01:01:35.925 --> 01:01:37.005
+layer, but we have four layers.
+
+812
+01:01:38.195 --> 01:01:41.325
+That is one thing. Now, another thing is that in each
+
+813
+01:01:41.325 --> 01:01:44.245
+of these layer, we have the sig wide function
+
+814
+01:01:44.245 --> 01:01:47.965
+with which we have, uh, uh, uh, used just to show
+
+815
+01:01:47.965 --> 01:01:49.285
+that sigmoid, how
+
+816
+01:01:49.405 --> 01:01:52.565
+how does it Im impact on the gradient, okay?
+
+817
+01:01:52.705 --> 01:01:55.885
+So, uh, that's why the sigmoid layers are,
+
+818
+01:01:55.985 --> 01:01:58.845
+are being used in, in each of these hidden layers.
+
+819
+01:01:59.945 --> 01:02:03.645
+Uh, then the weights, again, the weight just for simplicity,
+
+820
+01:02:03.705 --> 01:02:06.925
+the weights between input first layer, first
+
+821
+01:02:06.985 --> 01:02:08.485
+and layer second hidden layer
+
+822
+01:02:09.065 --> 01:02:12.725
+and so on is initialized with 0.5, the single weight
+
+823
+01:02:12.725 --> 01:02:13.725
+that is 0.5.
+
+824
+01:02:14.425 --> 01:02:17.925
+So these are some, uh, initializations what we have done
+
+825
+01:02:17.985 --> 01:02:20.045
+and say that this is the network, what we are going
+
+826
+01:02:20.045 --> 01:02:21.645
+to start with.
+
+827
+01:02:22.105 --> 01:02:26.515
+So, uh, quickly understand how does the forward pass work.
+
+828
+01:02:26.625 --> 01:02:31.035
+That X one here, which is one, gets multiplied with bl
+
+829
+01:02:31.335 --> 01:02:36.035
+and it results the weighted sum, which I say as Zed one, say
+
+830
+01:02:36.035 --> 01:02:37.595
+that Zed one, okay?
+
+831
+01:02:37.655 --> 01:02:40.475
+And zed one. Then we pass it through the activation function
+
+832
+01:02:40.585 --> 01:02:42.835
+that is sigmoid in this particular case
+
+833
+01:02:43.415 --> 01:02:45.755
+result us in A one.
+
+834
+01:02:45.905 --> 01:02:48.355
+Okay? So from Zed one, we are getting a one,
+
+835
+01:02:48.695 --> 01:02:50.915
+but for that one we are passing it through the sigmoid.
+
+836
+01:02:50.915 --> 01:02:53.115
+You can see that this function sigma
+
+837
+01:02:53.835 --> 01:02:55.955
+represents here the sigmoid, and that is nothing
+
+838
+01:02:56.095 --> 01:02:58.355
+but one divided one plus E to the power minus Z.
+
+839
+01:02:58.355 --> 01:03:01.715
+This we already know. So whatever value will come from Zed
+
+840
+01:03:01.715 --> 01:03:03.755
+one, we'll pass it through this activation function.
+
+841
+01:03:03.975 --> 01:03:06.995
+Now, a one, uh, which is the output
+
+842
+01:03:07.095 --> 01:03:09.515
+for this particular neuron, will act as an input
+
+843
+01:03:09.515 --> 01:03:11.315
+for the next layer neuron,
+
+844
+01:03:11.695 --> 01:03:14.795
+and then A one gets multiplied with the weight,
+
+845
+01:03:14.965 --> 01:03:16.355
+gives us Z two,
+
+846
+01:03:16.815 --> 01:03:21.395
+and that we pass it through the sigmoid gives us the A two.
+
+847
+01:03:21.585 --> 01:03:23.835
+Okay? You can understand, right, the sequential flow
+
+848
+01:03:23.835 --> 01:03:26.635
+and the weighted surplus bias, uh, that is
+
+849
+01:03:26.635 --> 01:03:29.755
+what we are calculating in, in, in each of these neuron.
+
+850
+01:03:30.215 --> 01:03:32.355
+Now, there is no, uh, there is no bias here, but
+
+851
+01:03:32.755 --> 01:03:33.755
+although we could have added,
+
+852
+01:03:33.855 --> 01:03:36.995
+but just again, uh, just to make it very simple bias value,
+
+853
+01:03:37.145 --> 01:03:39.075
+also, I have, uh, taken at zero.
+
+854
+01:03:39.075 --> 01:03:40.315
+So there is no bias part here.
+
+855
+01:03:41.095 --> 01:03:44.355
+So likewise, what we are doing is we calculate at every
+
+856
+01:03:44.455 --> 01:03:47.115
+neuron the weighted value, weighted sum value,
+
+857
+01:03:47.305 --> 01:03:48.355
+that is called zedi,
+
+858
+01:03:48.775 --> 01:03:52.835
+and then we, uh, calculate it's uh, uh, activation value
+
+859
+01:03:52.835 --> 01:03:53.875
+that is called ai.
+
+860
+01:03:54.095 --> 01:03:57.155
+So that's why we have Jet one A one here, then jet two,
+
+861
+01:03:57.195 --> 01:03:58.995
+A two here, jet three, A three here,
+
+862
+01:03:58.995 --> 01:04:00.155
+and jet four, A four here,
+
+863
+01:04:00.335 --> 01:04:04.195
+and finally, whatever is the A four that gives us the output
+
+864
+01:04:04.195 --> 01:04:05.395
+as y hat, okay?
+
+865
+01:04:05.395 --> 01:04:07.395
+This is a simple forward propagation,
+
+866
+01:04:07.395 --> 01:04:08.475
+which we have been seeing.
+
+867
+01:04:08.715 --> 01:04:10.915
+I don't see any problem in this,
+
+868
+01:04:10.915 --> 01:04:12.755
+this flow of the forward pass.
+
+869
+01:04:13.455 --> 01:04:16.955
+Now, once we calculate the forward pass, then the next,
+
+870
+01:04:17.975 --> 01:04:20.475
+the next step is to calculate the loss, right?
+
+871
+01:04:20.535 --> 01:04:22.955
+So loss value, uh, we have to calculate
+
+872
+01:04:22.955 --> 01:04:25.115
+between the prediction and the target.
+
+873
+01:04:25.295 --> 01:04:28.675
+Now, say that target value is zero just for, for the case
+
+874
+01:04:28.675 --> 01:04:30.875
+because it is say that classification problem
+
+875
+01:04:31.095 --> 01:04:33.435
+and the class is zero, um,
+
+876
+01:04:33.895 --> 01:04:35.715
+or say that it is zero rather than, uh,
+
+877
+01:04:35.715 --> 01:04:37.315
+going into the class part.
+
+878
+01:04:37.485 --> 01:04:38.515
+Let's say that it is zero.
+
+879
+01:04:39.455 --> 01:04:43.915
+So, uh, why, why, uh, why?
+
+880
+01:04:44.315 --> 01:04:46.275
+Whatever we will get as a, as a prediction,
+
+881
+01:04:46.575 --> 01:04:48.475
+we will then calculate the loss.
+
+882
+01:04:48.655 --> 01:04:53.035
+And this loss is this loss is a square,
+
+883
+01:04:53.295 --> 01:04:57.195
+square, uh, error y hat minus y square.
+
+884
+01:04:57.255 --> 01:05:01.395
+You can see that, right? Only this term is extra, uh, just
+
+885
+01:05:01.395 --> 01:05:03.035
+because I want to do some calculations
+
+886
+01:05:03.045 --> 01:05:04.075
+later part of the time.
+
+887
+01:05:04.135 --> 01:05:07.595
+So when I will take the partial derivative of the loss,
+
+888
+01:05:08.145 --> 01:05:11.515
+what will happen, because it is y hat minus y square,
+
+889
+01:05:11.925 --> 01:05:15.075
+it'll become two into y hat minus y, isn't it?
+
+890
+01:05:15.075 --> 01:05:16.915
+Partial derivative of excess square is called
+
+891
+01:05:16.915 --> 01:05:18.285
+to two x, right?
+
+892
+01:05:18.425 --> 01:05:20.565
+So in the same way, partial derivative
+
+893
+01:05:20.565 --> 01:05:23.685
+of y hat minus YS square will be two into y hat minus Y,
+
+894
+01:05:23.865 --> 01:05:25.485
+and the two will come in the nominator
+
+895
+01:05:25.585 --> 01:05:28.365
+and divided by two will cancel out each other hands.
+
+896
+01:05:28.745 --> 01:05:31.725
+My equation, what I'll get from this one will be relatively
+
+897
+01:05:31.725 --> 01:05:34.965
+simple and that will help me to, to do the calculator.
+
+898
+01:05:34.965 --> 01:05:36.645
+That's why one by two is taken here.
+
+899
+01:05:36.645 --> 01:05:38.645
+Otherwise, uh, there is no intention
+
+900
+01:05:38.665 --> 01:05:39.765
+of taking this one by two.
+
+901
+01:05:39.765 --> 01:05:41.765
+So it is optional, we can remove it also.
+
+902
+01:05:42.065 --> 01:05:43.605
+So do not get confused that, okay,
+
+903
+01:05:43.605 --> 01:05:45.765
+last time when we took the loss function,
+
+904
+01:05:45.865 --> 01:05:47.925
+it was quite error, but what is this one by two?
+
+905
+01:05:48.025 --> 01:05:50.045
+So it is taken just for a convenience,
+
+906
+01:05:50.195 --> 01:05:54.085
+otherwise, uh, there is no significant of this, uh, right?
+
+907
+01:05:54.105 --> 01:05:56.165
+If you don't take this one also, then also it'll work.
+
+908
+01:05:56.785 --> 01:05:58.205
+So here, what we are doing is
+
+909
+01:05:58.205 --> 01:06:02.005
+because my y is equal to zero, y hat will be some value.
+
+910
+01:06:02.385 --> 01:06:06.205
+Now we are taking the uh, uh, the qui error
+
+911
+01:06:06.385 --> 01:06:08.445
+and it'll nothing be nothing
+
+912
+01:06:08.465 --> 01:06:11.765
+but, uh, y hat minus YY is equal two zero.
+
+913
+01:06:11.865 --> 01:06:15.045
+So it'll result in y hat and y hat is nothing but my A four.
+
+914
+01:06:15.225 --> 01:06:17.405
+So that is what is written over here. Okay?
+
+915
+01:06:17.905 --> 01:06:20.565
+So now with this, what we have done is we have done the
+
+916
+01:06:20.565 --> 01:06:23.245
+forward pass, and even we have calculated the loss.
+
+917
+01:06:23.465 --> 01:06:25.645
+Now we will go for the back propagation, okay?
+
+918
+01:06:27.015 --> 01:06:29.715
+And here, just all the values are being substituted
+
+919
+01:06:29.815 --> 01:06:32.795
+and shown that, okay, what will be the Z one,
+
+920
+01:06:33.175 --> 01:06:36.155
+the first layer, and what will be the corresponding A one?
+
+921
+01:06:36.785 --> 01:06:39.315
+Okay? So then what will be the Z two
+
+922
+01:06:39.615 --> 01:06:43.275
+and corresponding A two, find what will be the,
+
+923
+01:06:44.135 --> 01:06:45.275
+uh, sorry, here, A two.
+
+924
+01:06:45.345 --> 01:06:48.635
+What will be the Z three corresponding A three
+
+925
+01:06:48.775 --> 01:06:50.555
+and Z four corresponding a four.
+
+926
+01:06:50.705 --> 01:06:52.275
+Okay? So this is how it is.
+
+927
+01:06:52.615 --> 01:06:53.995
+And finally, what will be the loss?
+
+928
+01:06:54.065 --> 01:06:55.315
+Loss will be the A four
+
+929
+01:06:55.655 --> 01:06:59.395
+and a four value is coming as 0.5709.
+
+930
+01:06:59.395 --> 01:07:02.795
+And that is qui we have to take. So this is the loss.
+
+931
+01:07:03.375 --> 01:07:06.635
+Now, uh, if you see that, uh, if you see that
+
+932
+01:07:06.785 --> 01:07:07.795
+what is happening
+
+933
+01:07:08.095 --> 01:07:10.355
+and why the gradient,
+
+934
+01:07:10.545 --> 01:07:13.395
+when we will start calculating the back propagation,
+
+935
+01:07:13.455 --> 01:07:16.035
+why the vanishing gradient will come, just
+
+936
+01:07:16.055 --> 01:07:19.395
+to give you a little understanding that see at the A one,
+
+937
+01:07:19.835 --> 01:07:22.435
+A one is a sigmoid of Z one, okay?
+
+938
+01:07:22.435 --> 01:07:26.115
+The V, we are applying the sigmoid activation function on
+
+939
+01:07:26.115 --> 01:07:29.275
+the Z one part, and that value at the first layer is coming
+
+940
+01:07:29.335 --> 01:07:30.475
+as 0.6.
+
+941
+01:07:30.495 --> 01:07:32.715
+Now, this value itself is very small, okay?
+
+942
+01:07:33.145 --> 01:07:36.195
+It's, it's a small, but 0.6 is a, uh, value.
+
+943
+01:07:36.195 --> 01:07:39.315
+What we are getting here. Now, if you see in the A two,
+
+944
+01:07:39.945 --> 01:07:42.475
+okay, A two, uh, which is nothing
+
+945
+01:07:42.495 --> 01:07:46.915
+but the sigmoid of Z two, that means here sigmoid of Z two.
+
+946
+01:07:46.915 --> 01:07:49.715
+Once we'll get the weighted sum, we are going to pass it
+
+947
+01:07:49.715 --> 01:07:50.755
+through sigmoid, and that's
+
+948
+01:07:50.755 --> 01:07:52.515
+how we'll we'll end up with a two value.
+
+949
+01:07:52.655 --> 01:07:55.635
+Now, a two value, what we have got is 0.576.
+
+950
+01:07:55.635 --> 01:08:00.075
+So there is a slight change. You will see, okay, 0.6 to 0.5.
+
+951
+01:08:01.095 --> 01:08:04.715
+Now, if you go to the next layer, next layer, like a three,
+
+952
+01:08:04.855 --> 01:08:07.355
+the next neuron here, we have here A three.
+
+953
+01:08:08.225 --> 01:08:12.435
+This change will be almost negligible that 0.57,
+
+954
+01:08:12.505 --> 01:08:14.115
+what we have got as a a two
+
+955
+01:08:14.455 --> 01:08:16.845
+and a three, if you see it is 0.571.
+
+956
+01:08:17.265 --> 01:08:19.205
+Now see that, uh, this,
+
+957
+01:08:19.205 --> 01:08:21.925
+this is almost neg negligible change.
+
+958
+01:08:22.025 --> 01:08:24.765
+So I have written here saturating that my
+
+959
+01:08:25.505 --> 01:08:27.165
+values are not changing.
+
+960
+01:08:27.425 --> 01:08:29.805
+Now you can imagine that part like x value is being
+
+961
+01:08:29.805 --> 01:08:33.605
+increased, so the corresponding Y gets saturated, okay?
+
+962
+01:08:33.645 --> 01:08:35.725
+After that, your Y will not increase
+
+963
+01:08:35.945 --> 01:08:37.045
+and that is what you can see.
+
+964
+01:08:37.075 --> 01:08:38.085
+That is what is happening.
+
+965
+01:08:38.705 --> 01:08:41.365
+And if you go to the next layer, again,
+
+966
+01:08:41.365 --> 01:08:45.285
+you will see there is no change front 0.571 2.571.
+
+967
+01:08:45.505 --> 01:08:46.765
+Now what it'll result
+
+968
+01:08:46.765 --> 01:08:49.565
+because the values are being saturated, why it is happening,
+
+969
+01:08:50.155 --> 01:08:52.805
+because we have already calculated sig ide
+
+970
+01:08:52.805 --> 01:08:53.845
+on this particular value.
+
+971
+01:08:53.845 --> 01:08:56.645
+Further, we are calculating, and then again we are applying.
+
+972
+01:08:56.665 --> 01:08:58.445
+So sig ide in being sig wide,
+
+973
+01:08:58.685 --> 01:09:01.645
+sigmoid functions are in nested form, okay?
+
+974
+01:09:01.665 --> 01:09:05.245
+So that, uh, that is how it results, uh, like
+
+975
+01:09:05.245 --> 01:09:06.325
+that here at least.
+
+976
+01:09:06.435 --> 01:09:08.845
+Okay? So we'll see that in the back.
+
+977
+01:09:09.105 --> 01:09:10.805
+Now we will, when we do the back propagation,
+
+978
+01:09:10.875 --> 01:09:13.685
+this will result, uh, almost like zero slope.
+
+979
+01:09:13.685 --> 01:09:15.085
+This will result in the zero slope.
+
+980
+01:09:15.785 --> 01:09:19.365
+So because observation is values hardly change network,
+
+981
+01:09:20.055 --> 01:09:21.885
+enter sigmoids flat region.
+
+982
+01:09:21.985 --> 01:09:24.485
+So networks is entering net, uh, sig mite flat region.
+
+983
+01:09:24.705 --> 01:09:28.205
+And now how it is going to impact on our gradient, that is
+
+984
+01:09:28.205 --> 01:09:29.525
+what we are going to see next.
+
+985
+01:09:30.665 --> 01:09:34.125
+So now we have done with the forward pass, again,
+
+986
+01:09:34.125 --> 01:09:36.045
+we are going to see the back propagation.
+
+987
+01:09:36.985 --> 01:09:39.595
+Okay? So before we'll start the back propagation, first
+
+988
+01:09:39.595 --> 01:09:42.955
+of all, you should be knowing what is the partial derivative
+
+989
+01:09:43.015 --> 01:09:45.795
+of loss with respect to sig mite, okay?
+
+990
+01:09:45.855 --> 01:09:47.635
+So sig I derivative is like this.
+
+991
+01:09:48.135 --> 01:09:52.075
+So if you take the sigmoid of z, Z is a weight, some value,
+
+992
+01:09:52.375 --> 01:09:55.995
+so sig mite of your value Z, then it'll be that sigmoid
+
+993
+01:09:55.995 --> 01:09:58.075
+of Z into one minus sigmoid of Z.
+
+994
+01:09:58.135 --> 01:10:00.995
+Now, this is what is the value you will get from the sig
+
+995
+01:10:01.075 --> 01:10:02.555
+mite derivative, okay?
+
+996
+01:10:03.175 --> 01:10:06.475
+So one good part is it is just in the form
+
+997
+01:10:06.475 --> 01:10:09.155
+of the sigmoid itself, z value, any way value we are having.
+
+998
+01:10:09.215 --> 01:10:11.715
+So if you can substitute that value, we will get that.
+
+999
+01:10:12.175 --> 01:10:14.835
+But one thing, what you can observe here is that
+
+1000
+01:10:14.835 --> 01:10:17.035
+because multiple times we are going
+
+1001
+01:10:17.035 --> 01:10:19.755
+to calculate the sigmoid, uh, gradient,
+
+1002
+01:10:19.775 --> 01:10:22.155
+and we are going to multiply the sigmoid gradient
+
+1003
+01:10:22.265 --> 01:10:23.555
+with the sigmoid gradient.
+
+1004
+01:10:23.555 --> 01:10:26.275
+What will happen sigmoid will anyway give you the value
+
+1005
+01:10:26.275 --> 01:10:27.315
+between zero and one,
+
+1006
+01:10:27.895 --> 01:10:30.715
+and this, this quantity is going to be very small.
+
+1007
+01:10:31.125 --> 01:10:33.835
+Again, if you put multiply it with another sigmoid,
+
+1008
+01:10:34.415 --> 01:10:36.915
+the value will be even a smaller, even a smaller.
+
+1009
+01:10:36.935 --> 01:10:38.275
+And that is what I'm going to show you next.
+
+1010
+01:10:38.375 --> 01:10:42.835
+Let us see this. So from forward pass, a one, a two,
+
+1011
+01:10:43.235 --> 01:10:46.115
+A three and a four, we have got the, uh, at each,
+
+1012
+01:10:46.145 --> 01:10:47.955
+each neuron, these are the outputs
+
+1013
+01:10:48.335 --> 01:10:52.635
+and sig ide derivatives at, uh, if you will calculate at uh,
+
+1014
+01:10:52.935 --> 01:10:55.715
+uh, what is that, uh, Z one, it'll be 0.2.
+
+1015
+01:10:56.095 --> 01:10:58.115
+So you can easily calculate sig ide derivative
+
+1016
+01:10:58.175 --> 01:11:00.395
+by substituting the Z value in the equation.
+
+1017
+01:11:00.395 --> 01:11:04.155
+And that is how it is coming as 0.2 3 5 0, 0 0.2
+
+1018
+01:11:04.155 --> 01:11:07.675
+4, 4, 2, 2, 4, 4, 8, 2, 4, 5, 0 at each of these layers.
+
+1019
+01:11:08.225 --> 01:11:09.395
+Fine. That is okay.
+
+1020
+01:11:09.855 --> 01:11:11.875
+Now let us start with our back propagation.
+
+1021
+01:11:12.345 --> 01:11:15.245
+Well, well, we know that when we start our back propagation,
+
+1022
+01:11:15.665 --> 01:11:18.125
+we first of all see that
+
+1023
+01:11:18.125 --> 01:11:20.525
+where is the output layers output At the output layer,
+
+1024
+01:11:21.065 --> 01:11:24.885
+we had a neuron called a four A four, and the A four
+
+1025
+01:11:24.885 --> 01:11:26.205
+and y hat both are same.
+
+1026
+01:11:26.205 --> 01:11:29.005
+So what we do, we calculate the partial DER of loss
+
+1027
+01:11:29.275 --> 01:11:31.285
+with respect to this y hat,
+
+1028
+01:11:31.825 --> 01:11:34.325
+or we can say that partial derivative of loss with respect
+
+1029
+01:11:34.325 --> 01:11:38.205
+to this a four because this is the point from where I have,
+
+1030
+01:11:38.425 --> 01:11:40.285
+uh, calculated my loss value.
+
+1031
+01:11:40.345 --> 01:11:43.085
+So loss directly depends on yhat.
+
+1032
+01:11:43.385 --> 01:11:47.765
+So partial derivative of loss function with respect to yhat,
+
+1033
+01:11:47.765 --> 01:11:50.445
+that is what, uh, we are, we are calculating now.
+
+1034
+01:11:50.865 --> 01:11:52.445
+So y hat and a four are both are same.
+
+1035
+01:11:52.445 --> 01:11:54.685
+So what I've done here is y values anyway is zero.
+
+1036
+01:11:55.265 --> 01:11:56.605
+So y hat is a four,
+
+1037
+01:11:56.985 --> 01:11:59.405
+and with respect to a four, this is how it'll come.
+
+1038
+01:11:59.465 --> 01:12:02.925
+So now once you will, uh, take this two, this site two,
+
+1039
+01:12:02.925 --> 01:12:06.885
+two will get canceled, and then you will, uh, get this value
+
+1040
+01:12:06.885 --> 01:12:09.685
+as 0.5 7, 0 9 I guess, okay?
+
+1041
+01:12:10.745 --> 01:12:12.955
+So that is one thing.
+
+1042
+01:12:13.335 --> 01:12:17.355
+Now, um, we have calculated this first, first,
+
+1043
+01:12:17.575 --> 01:12:18.675
+uh, gradient, okay?
+
+1044
+01:12:18.855 --> 01:12:21.235
+Now what we have to do is if you go back into this network
+
+1045
+01:12:22.015 --> 01:12:24.835
+now, partial bit of loss with respect to a four,
+
+1046
+01:12:24.835 --> 01:12:29.275
+we have calculated now a four depends on the sigmoid of
+
+1047
+01:12:30.385 --> 01:12:32.445
+set four, because a four value we have got
+
+1048
+01:12:32.445 --> 01:12:33.845
+from sigmoid, isn't it?
+
+1049
+01:12:34.265 --> 01:12:37.765
+So then what we have to do is we have to calculate parts
+
+1050
+01:12:37.765 --> 01:12:41.045
+because we need to change these parameters, W four, W three,
+
+1051
+01:12:41.205 --> 01:12:42.205
+W2, and W one.
+
+1052
+01:12:42.205 --> 01:12:44.205
+These are the four parameters inside my network.
+
+1053
+01:12:44.545 --> 01:12:45.885
+We have to update that one
+
+1054
+01:12:46.225 --> 01:12:48.245
+before, we'll go for the next forward pass.
+
+1055
+01:12:48.585 --> 01:12:50.805
+All these weights we want to update in order
+
+1056
+01:12:50.825 --> 01:12:52.325
+to reduce my loss, okay?
+
+1057
+01:12:52.705 --> 01:12:56.285
+So that's the intention. But, uh, how do we, uh, how did,
+
+1058
+01:12:56.465 --> 01:12:58.045
+how do we arrive at W four?
+
+1059
+01:12:58.305 --> 01:13:01.645
+We start with a four. Now a four we got from Z four.
+
+1060
+01:13:02.065 --> 01:13:05.605
+And in order to calculate the Z four, we utilize this W
+
+1061
+01:13:06.155 --> 01:13:07.325
+four into a three.
+
+1062
+01:13:07.325 --> 01:13:08.445
+That is how we did, right? So
+
+1063
+01:13:08.445 --> 01:13:10.205
+that's why we are going into the backward
+
+1064
+01:13:10.355 --> 01:13:11.565
+with the help of chain tool.
+
+1065
+01:13:11.745 --> 01:13:13.445
+And if you see that for that one,
+
+1066
+01:13:13.445 --> 01:13:14.605
+the chain tool will be like that.
+
+1067
+01:13:14.865 --> 01:13:16.285
+My loss depends on a four,
+
+1068
+01:13:16.825 --> 01:13:20.325
+and a four is calculated using the sigmoid of Z four.
+
+1069
+01:13:20.325 --> 01:13:22.485
+So here we are calculating the partial derivative
+
+1070
+01:13:22.485 --> 01:13:24.205
+of sigmoid, okay?
+
+1071
+01:13:24.665 --> 01:13:27.365
+And then here we have jet four, then we calculate partial
+
+1072
+01:13:27.945 --> 01:13:30.485
+jet four with respect to A three, okay?
+
+1073
+01:13:30.485 --> 01:13:32.005
+With respect to, so W three
+
+1074
+01:13:32.265 --> 01:13:35.285
+and that results, uh, sorry, that W four
+
+1075
+01:13:35.315 --> 01:13:36.605
+that results in a three.
+
+1076
+01:13:37.305 --> 01:13:38.565
+You get this right here
+
+1077
+01:13:38.675 --> 01:13:43.165
+because a three into W four is equal to Z four,
+
+1078
+01:13:43.725 --> 01:13:46.685
+A three into W four is equal two Z four.
+
+1079
+01:13:46.705 --> 01:13:49.205
+So if you take the partial derivative with respect
+
+1080
+01:13:49.205 --> 01:13:51.005
+to W four, you will end up with a three.
+
+1081
+01:13:51.155 --> 01:13:52.685
+Okay? That is what it is written here.
+
+1082
+01:13:53.075 --> 01:13:54.885
+That is what it's written here. Okay?
+
+1083
+01:13:55.225 --> 01:13:58.165
+Now we have 1, 2, 3 gradients value here.
+
+1084
+01:13:58.625 --> 01:14:01.525
+So we just have to substitute these values, fine.
+
+1085
+01:14:01.545 --> 01:14:03.885
+And if you'll substitute these values, you will end up
+
+1086
+01:14:03.885 --> 01:14:05.605
+with the gradient as C.
+
+1087
+01:14:05.705 --> 01:14:07.445
+All these values are less than one
+
+1088
+01:14:08.105 --> 01:14:09.845
+and they're being multiplied with each other.
+
+1089
+01:14:10.345 --> 01:14:13.805
+So at the output layer, the first, first, uh, uh,
+
+1090
+01:14:14.145 --> 01:14:16.845
+output layer and uh, uh, the head layer, just
+
+1091
+01:14:16.845 --> 01:14:19.805
+before the head layer, the gradient, what we are getting
+
+1092
+01:14:20.425 --> 01:14:23.005
+is 0.0797.
+
+1093
+01:14:23.065 --> 01:14:25.485
+Now, this value itself is very small right now.
+
+1094
+01:14:25.505 --> 01:14:29.765
+So what you will do is with this gradient, you will go
+
+1095
+01:14:29.825 --> 01:14:32.445
+and try change this W four value, which is nothing,
+
+1096
+01:14:32.465 --> 01:14:36.325
+but W four is equal to W four minus parts.
+
+1097
+01:14:36.385 --> 01:14:38.485
+Uh, what is that, uh, learning rate into
+
+1098
+01:14:39.075 --> 01:14:40.165
+this gradient, okay?
+
+1099
+01:14:40.365 --> 01:14:41.565
+Learning rate into this gradient.
+
+1100
+01:14:41.865 --> 01:14:45.165
+So you see that already the W four will change very small.
+
+1101
+01:14:45.265 --> 01:14:47.805
+If it'll change, it'll change with very small quantity.
+
+1102
+01:14:48.705 --> 01:14:52.205
+But this is the situation at the layer four,
+
+1103
+01:14:52.265 --> 01:14:54.005
+the last, last hidden layer.
+
+1104
+01:14:54.465 --> 01:14:56.445
+Now we have to go down in the network up
+
+1105
+01:14:56.445 --> 01:14:57.565
+to the first layer, right?
+
+1106
+01:14:58.105 --> 01:15:00.725
+So now, we'll, what we'll do next effort will be
+
+1107
+01:15:00.725 --> 01:15:02.925
+to update this parameter, W three.
+
+1108
+01:15:03.195 --> 01:15:06.605
+Okay? So in order to update the W three first we have
+
+1109
+01:15:06.605 --> 01:15:08.325
+to calculate partial derivative loss
+
+1110
+01:15:08.325 --> 01:15:09.565
+with respect to W three.
+
+1111
+01:15:09.745 --> 01:15:11.765
+And for that one, the chain rule will be this
+
+1112
+01:15:11.955 --> 01:15:13.205
+partial derivative loss.
+
+1113
+01:15:13.205 --> 01:15:15.005
+With respect to W three will be, first of all,
+
+1114
+01:15:15.005 --> 01:15:16.125
+we'll start with the A four.
+
+1115
+01:15:16.195 --> 01:15:19.685
+This is output layer A four, depends on my Z four.
+
+1116
+01:15:19.705 --> 01:15:22.805
+So sig mite derivative Z four.
+
+1117
+01:15:23.345 --> 01:15:27.565
+And then that depends on the, uh, my
+
+1118
+01:15:28.085 --> 01:15:31.445
+W four weight, because now here we are calculating the
+
+1119
+01:15:31.445 --> 01:15:34.485
+partial derivative of, uh, uh, Z four
+
+1120
+01:15:34.485 --> 01:15:35.765
+with respect to a three.
+
+1121
+01:15:36.665 --> 01:15:39.325
+So if you see here in this particular network, just
+
+1122
+01:15:39.325 --> 01:15:40.765
+to not get, so with respect to a three,
+
+1123
+01:15:40.765 --> 01:15:43.525
+when we'll calculate, we'll end up with W four.
+
+1124
+01:15:43.715 --> 01:15:47.285
+Okay? Because A three becomes, uh, uh, constant.
+
+1125
+01:15:47.285 --> 01:15:51.325
+So W four is the, uh, uh, only quantity, which is left with,
+
+1126
+01:15:51.325 --> 01:15:53.525
+and hence, you are left with the W four.
+
+1127
+01:15:53.525 --> 01:15:54.525
+That's why it is written here.
+
+1128
+01:15:54.685 --> 01:15:58.165
+W four last time we calculated with respect to W four,
+
+1129
+01:15:58.265 --> 01:15:59.885
+and hence we left with a three.
+
+1130
+01:16:00.035 --> 01:16:02.205
+Once you do with respect to a three, you,
+
+1131
+01:16:02.205 --> 01:16:03.365
+you'll left with W four.
+
+1132
+01:16:03.365 --> 01:16:05.245
+And that is what is the trend here, okay?
+
+1133
+01:16:05.865 --> 01:16:09.685
+Now, w uh, our intention is to go up to the W three.
+
+1134
+01:16:10.105 --> 01:16:14.205
+So w once you, you once you are here, once you're here,
+
+1135
+01:16:14.395 --> 01:16:17.085
+then next is the sig wide of W three.
+
+1136
+01:16:17.085 --> 01:16:19.845
+Here again, we have the sig wide value of the W three.
+
+1137
+01:16:20.145 --> 01:16:23.885
+So you have to calculate the partial derivative of sigmoid.
+
+1138
+01:16:23.885 --> 01:16:25.285
+Once again, that is what it is.
+
+1139
+01:16:25.805 --> 01:16:29.365
+Sigmoid dash, which is representing, uh, partial derivative
+
+1140
+01:16:29.365 --> 01:16:32.325
+of sigmoid, having said three inside the function,
+
+1141
+01:16:32.825 --> 01:16:35.165
+and then you can end up with the partial derivative
+
+1142
+01:16:35.265 --> 01:16:36.965
+of W three, which is nothing but eight.
+
+1143
+01:16:37.105 --> 01:16:39.285
+Now, see, these are all the quantity which we have
+
+1144
+01:16:39.285 --> 01:16:42.365
+to multiply, and once you substitute all these value,
+
+1145
+01:16:42.465 --> 01:16:44.565
+you end up with say that 0.03.
+
+1146
+01:16:44.565 --> 01:16:49.045
+So last time it was 0.07. Now it has already reduced to 0.0.
+
+1147
+01:16:49.745 --> 01:16:50.805
+Uh, three,
+
+1148
+01:16:51.405 --> 01:16:53.525
+I don't know whether its values are corrected or not.
+
+1149
+01:16:53.525 --> 01:16:54.885
+Just see that the calculations, uh,
+
+1150
+01:16:54.955 --> 01:16:56.165
+just, just see that one, okay?
+
+1151
+01:16:56.905 --> 01:16:58.845
+But you have to understand that we are,
+
+1152
+01:16:59.025 --> 01:17:03.605
+we are now here multiplying a lot of, uh, uh, uh, gradients.
+
+1153
+01:17:04.105 --> 01:17:06.005
+So obviously the value, what we are going
+
+1154
+01:17:06.005 --> 01:17:07.205
+to get will be very small.
+
+1155
+01:17:07.395 --> 01:17:09.885
+Okay? That is what I want to project here.
+
+1156
+01:17:09.945 --> 01:17:13.605
+The calculations, uh, just, just, uh, see that by yourself.
+
+1157
+01:17:13.605 --> 01:17:16.485
+One second. So then what happens?
+
+1158
+01:17:16.745 --> 01:17:19.965
+Uh, this is about the, about this layer where we were trying
+
+1159
+01:17:20.025 --> 01:17:22.565
+to calculate the gradient with respect to W three.
+
+1160
+01:17:22.565 --> 01:17:25.045
+Now, next, we'll calculate the gradient with respect to W2,
+
+1161
+01:17:25.465 --> 01:17:27.285
+and one more time we have to W one.
+
+1162
+01:17:27.785 --> 01:17:31.045
+So now you see that with respect to W2, when we'll do,
+
+1163
+01:17:31.145 --> 01:17:33.045
+we will have two more gradients here added.
+
+1164
+01:17:33.315 --> 01:17:34.725
+Okay? Two more gradients here added.
+
+1165
+01:17:35.345 --> 01:17:37.645
+So, uh, till, till this, uh,
+
+1166
+01:17:38.685 --> 01:17:40.525
+A two means W three we have already done.
+
+1167
+01:17:40.625 --> 01:17:41.925
+Now these two will be added.
+
+1168
+01:17:42.255 --> 01:17:45.045
+First of all, we'll calculate the sigmoid derivative
+
+1169
+01:17:45.045 --> 01:17:49.165
+with respect to Z two, and then we'll have a one, okay?
+
+1170
+01:17:49.305 --> 01:17:50.925
+And this value will further reduce.
+
+1171
+01:17:50.985 --> 01:17:52.325
+Say that by some quantity.
+
+1172
+01:17:52.465 --> 01:17:53.845
+Now we have 0.01,
+
+1173
+01:17:54.145 --> 01:17:57.285
+and next you have to calculate with respect to W one.
+
+1174
+01:17:57.285 --> 01:18:00.405
+Now see that how many multiplicative factors we have,
+
+1175
+01:18:00.405 --> 01:18:02.205
+how many gradients we are multiplying here,
+
+1176
+01:18:02.225 --> 01:18:07.045
+and we end up with another smaller value with 0.006.
+
+1177
+01:18:07.145 --> 01:18:10.555
+Say that. So if these values are correct,
+
+1178
+01:18:10.955 --> 01:18:13.555
+although you can check by yourself, then if you see that,
+
+1179
+01:18:13.655 --> 01:18:17.075
+if it's when, where we started from the output layer,
+
+1180
+01:18:17.125 --> 01:18:19.035
+which was the fourth hidden layer,
+
+1181
+01:18:19.335 --> 01:18:21.955
+and we have come all the way up to the first hidden layer,
+
+1182
+01:18:22.415 --> 01:18:24.035
+uh, and, uh, in input layer.
+
+1183
+01:18:24.815 --> 01:18:28.875
+So the gradient, which was 0.0797 is reduced
+
+1184
+01:18:28.975 --> 01:18:31.075
+to 0.00645.
+
+1185
+01:18:31.535 --> 01:18:33.555
+And this quantity, if you'll see it,
+
+1186
+01:18:33.555 --> 01:18:35.915
+is almost 30 times smaller than the gradient,
+
+1187
+01:18:35.915 --> 01:18:39.155
+which we have calculated at the output layer, right?
+
+1188
+01:18:39.495 --> 01:18:42.875
+So earlier layers receives almost no gradient means this
+
+1189
+01:18:42.875 --> 01:18:45.635
+value is so small that if you will start
+
+1190
+01:18:46.275 --> 01:18:49.715
+substituting this gradient to four weight update of W one,
+
+1191
+01:18:49.715 --> 01:18:52.715
+there will be hardly any update in the W one.
+
+1192
+01:18:52.905 --> 01:18:56.595
+Okay? So this, this, this, this is shrinking,
+
+1193
+01:18:56.595 --> 01:18:57.915
+this shrinking like anything.
+
+1194
+01:18:58.295 --> 01:19:01.835
+And you can see that at the first layer, the gradient,
+
+1195
+01:19:01.835 --> 01:19:03.395
+what you're receiving is very small.
+
+1196
+01:19:03.655 --> 01:19:05.675
+Now, if it is very small, then what will happen?
+
+1197
+01:19:06.385 --> 01:19:11.235
+This update rule what you have, uh, uh, earlier we had, uh,
+
+1198
+01:19:11.855 --> 01:19:15.915
+uh, already, uh, seen this update rule where each
+
+1199
+01:19:16.575 --> 01:19:20.555
+weight here we are going to update by w equal
+
+1200
+01:19:20.555 --> 01:19:23.035
+to W minus learning rate into that gradient.
+
+1201
+01:19:23.035 --> 01:19:24.315
+So supposedly W one.
+
+1202
+01:19:24.375 --> 01:19:28.635
+Now this quantity is almost like a zero, almost like a zero.
+
+1203
+01:19:29.015 --> 01:19:32.275
+So if this is zero, then this whole term will be zero.
+
+1204
+01:19:33.095 --> 01:19:36.315
+And this WI will not change this. WI will not change.
+
+1205
+01:19:36.325 --> 01:19:38.715
+Maybe for W four, you might see some change.
+
+1206
+01:19:39.315 --> 01:19:40.875
+W three also W2 also.
+
+1207
+01:19:40.975 --> 01:19:43.795
+And I mean, I don't say this is completely zero
+
+1208
+01:19:43.795 --> 01:19:46.235
+because it's still, it is 0.00645,
+
+1209
+01:19:46.735 --> 01:19:48.715
+but you have to understand the logic.
+
+1210
+01:19:48.745 --> 01:19:50.515
+What I'm trying to say that this quantity have
+
+1211
+01:19:50.515 --> 01:19:51.635
+becomes now very small.
+
+1212
+01:19:52.135 --> 01:19:55.835
+And hence it is almost like negligible, almost like zero,
+
+1213
+01:19:55.845 --> 01:19:57.555
+sorry, almost like, uh, zero.
+
+1214
+01:19:58.055 --> 01:19:59.475
+So this whole term becomes zero
+
+1215
+01:19:59.495 --> 01:20:00.835
+and your weight will not update.
+
+1216
+01:20:00.855 --> 01:20:03.675
+Now, suppose your weight doesn't update in the early layers,
+
+1217
+01:20:03.675 --> 01:20:04.875
+your weight doesn't update.
+
+1218
+01:20:04.875 --> 01:20:07.405
+Then what will happen, I'll say that next time you have,
+
+1219
+01:20:07.405 --> 01:20:08.645
+when you feed the same input
+
+1220
+01:20:08.645 --> 01:20:10.005
+or say that different input,
+
+1221
+01:20:10.475 --> 01:20:12.445
+this particular weight is not changing, say
+
+1222
+01:20:12.445 --> 01:20:13.885
+that this particular weight is not changing.
+
+1223
+01:20:14.225 --> 01:20:17.165
+You may see some change here and here, but
+
+1224
+01:20:17.165 --> 01:20:19.405
+because early layer weights are not changing
+
+1225
+01:20:20.065 --> 01:20:22.805
+for the new input or the same input, the kind
+
+1226
+01:20:22.805 --> 01:20:25.165
+of representation which you are doing in the next layer
+
+1227
+01:20:25.165 --> 01:20:27.565
+and next layer, that is not changing, okay?
+
+1228
+01:20:27.945 --> 01:20:30.965
+So till this layer say that there was no change, okay?
+
+1229
+01:20:30.985 --> 01:20:34.805
+So then having some change here will not impact much in
+
+1230
+01:20:34.805 --> 01:20:36.005
+your overall loss.
+
+1231
+01:20:37.035 --> 01:20:39.285
+Okay? So that is, that is the problem
+
+1232
+01:20:39.335 --> 01:20:40.605
+which we will end up with.
+
+1233
+01:20:40.625 --> 01:20:42.645
+So this is called this, this whole process.
+
+1234
+01:20:43.195 --> 01:20:45.725
+With this whole process, what we are trying to project is
+
+1235
+01:20:45.995 --> 01:20:49.325
+because the sigmoid was the activation function in between
+
+1236
+01:20:49.745 --> 01:20:53.685
+and sigmoid has that, uh, uh, uh, any anyway,
+
+1237
+01:20:53.765 --> 01:20:57.605
+sigmoid has the, uh, that, uh, saturation, uh, uh,
+
+1238
+01:20:57.605 --> 01:20:59.005
+for the greater value of effects.
+
+1239
+01:20:59.345 --> 01:21:01.965
+And once you calculate the partial derivative for that one,
+
+1240
+01:21:02.365 --> 01:21:05.125
+multiplying multiple partial derivative for the sigma here,
+
+1241
+01:21:05.535 --> 01:21:09.325
+it'll result in the smaller and, uh, further smaller
+
+1242
+01:21:09.425 --> 01:21:10.445
+and very small values.
+
+1243
+01:21:10.825 --> 01:21:12.845
+And hence, the weights will not update,
+
+1244
+01:21:12.855 --> 01:21:13.965
+waste will not update.
+
+1245
+01:21:14.155 --> 01:21:16.565
+Then what will happen, training will not improve,
+
+1246
+01:21:16.585 --> 01:21:18.885
+and hence your loss will not reduce.
+
+1247
+01:21:18.945 --> 01:21:20.925
+So these are all the consequences
+
+1248
+01:21:21.065 --> 01:21:23.965
+of having the vanishing radiant problem, right?
+
+1249
+01:21:23.985 --> 01:21:27.565
+So gradients are being vanished slowly once you go down in
+
+1250
+01:21:27.565 --> 01:21:30.285
+the network at the time of the back population, right?
+
+1251
+01:21:30.285 --> 01:21:33.685
+This is the point which we were, uh, just trying to project.
+
+1252
+01:21:34.265 --> 01:21:35.685
+So this I have explained,
+
+1253
+01:21:35.685 --> 01:21:38.165
+and similarly, you can see that the update size,
+
+1254
+01:21:38.435 --> 01:21:40.605
+that in the first layer, the fourth layer,
+
+1255
+01:21:40.625 --> 01:21:42.765
+the update might be little bit,
+
+1256
+01:21:43.465 --> 01:21:46.125
+but in the third layer, it is already half second layer,
+
+1257
+01:21:46.195 --> 01:21:47.285
+it's almost half of that.
+
+1258
+01:21:47.285 --> 01:21:50.245
+In the first layer, it is almost negligible as compared
+
+1259
+01:21:50.245 --> 01:21:52.645
+to the update, what it is happening in the fourth layer.
+
+1260
+01:21:52.865 --> 01:21:54.965
+So first layer, second layer rates are changing very
+
+1261
+01:21:55.285 --> 01:21:59.565
+slightly, and hence the, the, that, that, that impact of,
+
+1262
+01:21:59.665 --> 01:22:03.125
+uh, uh, yet, uh, means no learning.
+
+1263
+01:22:03.865 --> 01:22:07.455
+You will be able to see in the network. Okay?
+
+1264
+01:22:07.455 --> 01:22:09.935
+So this was the, this was the, some,
+
+1265
+01:22:09.965 --> 01:22:11.695
+some part which we wanted to explain.
+
+1266
+01:22:11.835 --> 01:22:13.815
+Now we'll switch to the demo part, but
+
+1267
+01:22:13.815 --> 01:22:15.775
+before that, if you have any query, you can ask me so
+
+1268
+01:22:15.775 --> 01:22:18.415
+that then we can switch to the demo part for the same thing.
+
+1269
+01:22:19.355 --> 01:22:21.735
+Uh, Rosa, I have a question, sir.
+
+1270
+01:22:22.315 --> 01:22:24.535
+Sir, uh, since the, uh,
+
+1271
+01:22:24.785 --> 01:22:27.415
+since we have this vanishing gradient mm-hmm.
+
+1272
+01:22:27.555 --> 01:22:32.295
+Why can't we have a one by sigmoid function as some kind
+
+1273
+01:22:32.295 --> 01:22:34.615
+of weight or bias to compensate for this?
+
+1274
+01:22:36.505 --> 01:22:38.285
+Uh, I, I did not get, can you repeat?
+
+1275
+01:22:38.285 --> 01:22:40.485
+Suppose we have a sigmoid function in each layer
+
+1276
+01:22:41.125 --> 01:22:42.405
+'cause of sigmoid function.
+
+1277
+01:22:42.465 --> 01:22:45.365
+We are getting this, uh, vanishing gradient problem, right?
+
+1278
+01:22:45.365 --> 01:22:48.485
+Correct. So to compensate this, can we have one
+
+1279
+01:22:48.505 --> 01:22:50.925
+by sigmoid function as weight or bias?
+
+1280
+01:22:51.865 --> 01:22:54.635
+Okay. Okay. Uh, so you, and,
+
+1281
+01:22:54.635 --> 01:22:57.475
+and bias, bias also, you are saying weight and bias,
+
+1282
+01:22:58.215 --> 01:23:01.555
+Either weight or bias, Either weight or bias.
+
+1283
+01:23:01.695 --> 01:23:03.475
+How will it help? I did not get that.
+
+1284
+01:23:03.975 --> 01:23:08.045
+So here we have the gradients are getting, uh,
+
+1285
+01:23:08.115 --> 01:23:09.365
+reduced rate, correct.
+
+1286
+01:23:09.585 --> 01:23:12.165
+But, uh, when we keep on adding that bias,
+
+1287
+01:23:12.685 --> 01:23:15.165
+whatever is reducing, can be compensated with
+
+1288
+01:23:15.425 --> 01:23:16.485
+Oh, got it, got it, got it.
+
+1289
+01:23:16.485 --> 01:23:19.005
+Okay. So yeah, the, I mean, you can,
+
+1290
+01:23:19.125 --> 01:23:21.445
+I have not shown here the bias value and if you will add,
+
+1291
+01:23:21.545 --> 01:23:24.685
+and, but the point is that bias value also,
+
+1292
+01:23:24.685 --> 01:23:29.325
+see here the network is so small that you can visualize
+
+1293
+01:23:29.325 --> 01:23:31.845
+that, okay, if I would have added some bias value here,
+
+1294
+01:23:32.255 --> 01:23:36.525
+which would've compensated that, what is the, uh, leading
+
+1295
+01:23:36.545 --> 01:23:39.565
+to the smaller value that you can visualize
+
+1296
+01:23:39.565 --> 01:23:40.845
+and you can add also,
+
+1297
+01:23:40.865 --> 01:23:43.845
+but the in reality, suppose you add bias value also,
+
+1298
+01:23:43.845 --> 01:23:45.325
+and the network is so deep.
+
+1299
+01:23:45.925 --> 01:23:49.525
+I mean, uh, putting the exact bias value also,
+
+1300
+01:23:49.625 --> 01:23:50.725
+how will you do manually?
+
+1301
+01:23:50.795 --> 01:23:52.725
+This is not a manual process. Okay?
+
+1302
+01:23:53.105 --> 01:23:56.565
+Now, the, uh, like algorithm itself has to identify
+
+1303
+01:23:56.565 --> 01:23:59.325
+that the bias is also a parameter like weights, okay?
+
+1304
+01:23:59.325 --> 01:24:03.405
+Mm-hmm. So you can't be changing it very significantly.
+
+1305
+01:24:03.665 --> 01:24:06.325
+The bias value, suppose this time it is 0.5,
+
+1306
+01:24:06.355 --> 01:24:07.725
+next time you will make five just
+
+1307
+01:24:07.725 --> 01:24:09.525
+because compensate the other things.
+
+1308
+01:24:09.785 --> 01:24:12.915
+But how will you take that call? So that is the problem.
+
+1309
+01:24:13.495 --> 01:24:17.715
+So bias has also taken, uh, considered as another parameter.
+
+1310
+01:24:17.715 --> 01:24:20.395
+That means that it'll also change in the same way
+
+1311
+01:24:20.815 --> 01:24:22.435
+how the other weights will be changing.
+
+1312
+01:24:23.095 --> 01:24:24.835
+So then in that case, it'll be very difficult
+
+1313
+01:24:24.835 --> 01:24:26.315
+to significantly change the bias
+
+1314
+01:24:26.335 --> 01:24:27.915
+to compensate the other problems,
+
+1315
+01:24:27.925 --> 01:24:29.795
+which is happening from the balancing radio.
+
+1316
+01:24:29.905 --> 01:24:32.115
+That is the issue. Okay? Yeah.
+
+1317
+01:24:32.935 --> 01:24:34.755
+So manually you can say that that is correct,
+
+1318
+01:24:34.935 --> 01:24:37.355
+but for these, uh, once you'll actually implement
+
+1319
+01:24:37.375 --> 01:24:40.515
+for deep network, that is, I mean, uh, that, that's, again,
+
+1320
+01:24:40.515 --> 01:24:41.875
+you end up with this update rule
+
+1321
+01:24:42.135 --> 01:24:43.555
+and update rule doesn't allow you
+
+1322
+01:24:43.555 --> 01:24:45.795
+to change it very significantly for one parameter.
+
+1323
+01:24:45.795 --> 01:24:46.795
+Yeah.
+
+1324
+01:24:47.845 --> 01:24:49.785
+Yes. Okay. Rish? Yes, sir.
+
+1325
+01:24:49.805 --> 01:24:53.825
+Circle, can learning rate help to reduce this problem, sir?
+
+1326
+01:24:53.965 --> 01:24:56.025
+We can take big learning rate and
+
+1327
+01:24:56.335 --> 01:24:57.335
+Correct, correct.
+
+1328
+01:24:57.645 --> 01:24:59.105
+So, uh, actually we have seen
+
+1329
+01:24:59.105 --> 01:25:01.505
+that in the earlier case when I was explaining the back
+
+1330
+01:25:01.505 --> 01:25:04.825
+propagation where the gradients were very high, okay,
+
+1331
+01:25:04.845 --> 01:25:06.625
+now the gradients are coming very slow,
+
+1332
+01:25:07.045 --> 01:25:09.225
+but you remember was first time when we, uh,
+
+1333
+01:25:09.225 --> 01:25:11.185
+learned the back propagation gradients very high,
+
+1334
+01:25:11.645 --> 01:25:14.385
+we purposefully fully chosen learning it very small.
+
+1335
+01:25:14.385 --> 01:25:16.905
+Similarly, in this case, when the is very small,
+
+1336
+01:25:16.905 --> 01:25:19.025
+we could have chosen learning rate very high.
+
+1337
+01:25:19.505 --> 01:25:21.985
+I mean, see that is a hyper parameter.
+
+1338
+01:25:22.445 --> 01:25:26.945
+And definitely once you, uh, see, train the network
+
+1339
+01:25:27.325 --> 01:25:30.705
+and you see that mine, uh, loss has almost, uh,
+
+1340
+01:25:30.705 --> 01:25:32.345
+saturated is not decreasing anymore,
+
+1341
+01:25:32.535 --> 01:25:35.385
+that time you can do some hyper parameter tuning.
+
+1342
+01:25:35.965 --> 01:25:39.145
+But that will, that you will understand once obviously once
+
+1343
+01:25:39.145 --> 01:25:40.945
+you'll see that there is a vanishing gradient problem
+
+1344
+01:25:41.525 --> 01:25:44.345
+and changing the learning rate, taking a little bigger side,
+
+1345
+01:25:44.345 --> 01:25:46.305
+these are all the solutions for the learning rate.
+
+1346
+01:25:46.305 --> 01:25:47.465
+Obviously you can do that,
+
+1347
+01:25:47.805 --> 01:25:49.505
+but for that one at least you have
+
+1348
+01:25:49.505 --> 01:25:51.105
+to do one run, one dry run.
+
+1349
+01:25:51.165 --> 01:25:52.985
+See that, okay, what is the impact with,
+
+1350
+01:25:53.045 --> 01:25:54.905
+is there any managing grad problem or not?
+
+1351
+01:25:55.125 --> 01:25:57.185
+And then only you'll realize that, okay, learning rate,
+
+1352
+01:25:57.245 --> 01:25:58.705
+the next time when I'll start
+
+1353
+01:25:59.665 --> 01:26:01.025
+retraining the network from the scratch,
+
+1354
+01:26:01.025 --> 01:26:02.025
+then I'll increase it.
+
+1355
+01:26:02.805 --> 01:26:04.485
+So yes, you can do that one.
+
+1356
+01:26:04.625 --> 01:26:07.845
+Uh, so with the, with the experience, if you see that okay,
+
+1357
+01:26:08.005 --> 01:26:09.525
+learning rate can be tuned,
+
+1358
+01:26:09.625 --> 01:26:10.765
+you can do that. Yeah, definitely.
+
+1359
+01:26:11.635 --> 01:26:13.645
+Yeah, sure, sir. Thank you. Mm-hmm.
+
+1360
+01:26:14.115 --> 01:26:17.765
+That is, that is true. But again, I'll, I'll, I'll add on
+
+1361
+01:26:17.765 --> 01:26:19.925
+to the same answer, which I have added earlier
+
+1362
+01:26:20.555 --> 01:26:25.485
+with a hundred layers and millions of parameters, right?
+
+1363
+01:26:26.285 --> 01:26:29.805
+I mean, it, it's very diff becomes really difficult
+
+1364
+01:26:29.985 --> 01:26:31.965
+to even even understand that
+
+1365
+01:26:31.965 --> 01:26:34.285
+what should be the learning rate, which I'll add, so
+
+1366
+01:26:34.285 --> 01:26:37.885
+that it'll if improve the, uh, uh, loss
+
+1367
+01:26:37.945 --> 01:26:39.245
+or it, it can, uh,
+
+1368
+01:26:39.375 --> 01:26:42.485
+compensate on this small ingredient part what we are getting.
+
+1369
+01:26:42.945 --> 01:26:44.725
+Yes. It's very difficult in reality.
+
+1370
+01:26:45.075 --> 01:26:46.285
+It's very difficult. Yeah.
+
+1371
+01:26:46.835 --> 01:26:48.205
+Yeah. Yes.
+
+1372
+01:26:48.785 --> 01:26:52.085
+And you are, you then you may have to change learning net
+
+1373
+01:26:52.085 --> 01:26:54.565
+for a hundred times, but then, I mean, if you have to do it
+
+1374
+01:26:54.565 --> 01:26:57.365
+of all, all the things manually like this, you will,
+
+1375
+01:26:57.455 --> 01:27:00.285
+it'll take a lot of time, lot of resources
+
+1376
+01:27:00.305 --> 01:27:01.365
+and all those things, right?
+
+1377
+01:27:01.715 --> 01:27:04.325
+Yeah. Yes. Is all the, the problems, correct?
+
+1378
+01:27:04.875 --> 01:27:06.325
+Yeah. Yes. Thank you.
+
+1379
+01:27:08.535 --> 01:27:10.755
+But, uh, uh, having said that, we'll see
+
+1380
+01:27:10.755 --> 01:27:14.315
+that on the same line, we have some, some solutions
+
+1381
+01:27:14.315 --> 01:27:16.955
+for this Spanish gradient problem, which do,
+
+1382
+01:27:16.955 --> 01:27:19.275
+which does something with the learning rate like that.
+
+1383
+01:27:19.855 --> 01:27:22.795
+Uh, and, but that we don't have to do it manually.
+
+1384
+01:27:22.795 --> 01:27:24.955
+There is an algorithm which takes care of that.
+
+1385
+01:27:25.055 --> 01:27:26.795
+Uh, the optimizers can kind
+
+1386
+01:27:26.795 --> 01:27:28.435
+of software optimizes what we have.
+
+1387
+01:27:28.745 --> 01:27:31.035
+That takes care of the same thing, what you have said. Yeah.
+
+1388
+01:27:31.255 --> 01:27:34.115
+Mm-hmm. Yeah, sure, sir. Thank you. So, yes.
+
+1389
+01:27:36.545 --> 01:27:37.805
+Any other query from anyone,
+
+1390
+01:27:39.365 --> 01:27:40.365
+Sir? Um,
+
+1391
+01:27:40.365 --> 01:27:43.465
+the activation function here, we, uh, we analyzed,
+
+1392
+01:27:44.265 --> 01:27:47.065
+which, uh, has a gradient that is less than,
+
+1393
+01:27:47.805 --> 01:27:49.185
+you know, less than one, right?
+
+1394
+01:27:49.365 --> 01:27:52.705
+So, um, I think your time also has a gradient
+
+1395
+01:27:52.705 --> 01:27:54.785
+that is less than some value survey.
+
+1396
+01:27:55.305 --> 01:27:58.545
+I mean, it Only choice is only choice we have
+
+1397
+01:27:58.605 --> 01:28:00.625
+is we use everywhere.
+
+1398
+01:28:00.975 --> 01:28:03.905
+Yeah. So in, in most of the places, you will see
+
+1399
+01:28:03.905 --> 01:28:06.305
+that in the al layers people use the
+
+1400
+01:28:06.315 --> 01:28:08.105
+activation function, okay?
+
+1401
+01:28:08.615 --> 01:28:11.225
+Okay. So at the output layer, there is a different choice
+
+1402
+01:28:11.365 --> 01:28:14.945
+of activation functions, which you might be seeing, okay?
+
+1403
+01:28:14.945 --> 01:28:17.865
+Because it depends on what kind of output I want to receive.
+
+1404
+01:28:18.565 --> 01:28:23.025
+So, but in the hidden layer, people, uh, mostly prefer
+
+1405
+01:28:23.025 --> 01:28:24.905
+to use the re reactivation function
+
+1406
+01:28:24.905 --> 01:28:27.905
+because of this reason, what we have seen, right?
+
+1407
+01:28:28.405 --> 01:28:30.105
+Uh, so that is, that is one, yeah,
+
+1408
+01:28:30.105 --> 01:28:31.305
+that is one thing, correct.
+
+1409
+01:28:31.365 --> 01:28:33.265
+So in the hidden layer, I mean,
+
+1410
+01:28:33.265 --> 01:28:35.465
+most preferable choice is red.
+
+1411
+01:28:38.035 --> 01:28:39.485
+Okay? Okay. Yeah.
+
+1412
+01:28:41.505 --> 01:28:44.285
+And, um, uh, can you talk about the case
+
+1413
+01:28:44.285 --> 01:28:45.885
+where the gradients explored?
+
+1414
+01:28:46.745 --> 01:28:50.885
+Um, so it is another case gradient explored case I had
+
+1415
+01:28:50.955 --> 01:28:53.645
+explained earlier where, uh,
+
+1416
+01:28:53.905 --> 01:28:56.285
+we had seen this kind of issue.
+
+1417
+01:28:56.905 --> 01:29:00.245
+Uh, if you can recall this slide, you see
+
+1418
+01:29:00.275 --> 01:29:01.365
+what has happened here.
+
+1419
+01:29:02.065 --> 01:29:04.485
+So the first time when we talked about this network,
+
+1420
+01:29:04.845 --> 01:29:08.405
+I was explaining that, uh, calculating gradient
+
+1421
+01:29:08.475 --> 01:29:09.565
+with respect to each of these.
+
+1422
+01:29:09.565 --> 01:29:11.325
+But you see that what are the gradient value,
+
+1423
+01:29:11.325 --> 01:29:15.485
+which we're getting 97.1 5, 2, 26 0.49, six and 14.
+
+1424
+01:29:15.865 --> 01:29:18.165
+And when we have to multiply all these gradients,
+
+1425
+01:29:18.345 --> 01:29:22.885
+all these values are very high, like 10.1, 0.2, one eight.
+
+1426
+01:29:23.145 --> 01:29:25.845
+So corresponding radiant, what we are getting is very high
+
+1427
+01:29:26.385 --> 01:29:29.365
+in the, so you see this, this value is very high,
+
+1428
+01:29:29.745 --> 01:29:33.005
+and 9 42, 94, uh, 11.
+
+1429
+01:29:33.465 --> 01:29:34.645
+And then see all these grades,
+
+1430
+01:29:34.675 --> 01:29:38.405
+this is the grade gradient exploding is, okay.
+
+1431
+01:29:38.545 --> 01:29:42.165
+So what is happening here is that, uh, my, this part,
+
+1432
+01:29:42.355 --> 01:29:45.005
+this gradient part, as we go down in the network,
+
+1433
+01:29:45.305 --> 01:29:48.725
+and if we have taken, uh, if it'll get multiply
+
+1434
+01:29:48.725 --> 01:29:50.565
+with the bigger number again
+
+1435
+01:29:50.565 --> 01:29:52.605
+and again, which is the case you have seen here,
+
+1436
+01:29:52.915 --> 01:29:55.605
+because my inputs were like that or some somewhere.
+
+1437
+01:29:56.185 --> 01:29:59.845
+Uh, so my, my value becomes very high.
+
+1438
+01:30:00.105 --> 01:30:03.525
+No, here I did not, uh, brought that problem
+
+1439
+01:30:03.825 --> 01:30:05.685
+and couldn't, did not introduce you.
+
+1440
+01:30:05.685 --> 01:30:07.925
+Otherwise, it would've been a little complicated.
+
+1441
+01:30:08.665 --> 01:30:10.645
+But this is the gradient exploding problem,
+
+1442
+01:30:10.655 --> 01:30:12.685
+which we have already seen experienced.
+
+1443
+01:30:13.265 --> 01:30:16.725
+And with the learning rate, again, we had controlled it,
+
+1444
+01:30:16.945 --> 01:30:18.965
+but that was a manual effort learning rate.
+
+1445
+01:30:19.005 --> 01:30:22.045
+I have taken 0.0004, uh,
+
+1446
+01:30:22.115 --> 01:30:24.245
+with very small learning rate, right?
+
+1447
+01:30:24.985 --> 01:30:27.125
+And, uh, I could take it
+
+1448
+01:30:27.125 --> 01:30:29.965
+because these values were very, going, very high exploding.
+
+1449
+01:30:29.965 --> 01:30:31.285
+If I would've not controlled it,
+
+1450
+01:30:31.555 --> 01:30:33.885
+then I would've never converged it, uh,
+
+1451
+01:30:34.065 --> 01:30:35.885
+or never, uh, reduced my loss.
+
+1452
+01:30:36.225 --> 01:30:39.325
+But this is the problem of the exploding grad program. Yeah.
+
+1453
+01:30:41.615 --> 01:30:45.195
+So, um, so the, the, I mean,
+
+1454
+01:30:45.495 --> 01:30:48.235
+it all depends on the weight, uh, choice also, right?
+
+1455
+01:30:48.235 --> 01:30:49.555
+Weight initializations, yes,
+
+1456
+01:30:49.775 --> 01:30:51.115
+It depends on multiple factors.
+
+1457
+01:30:51.295 --> 01:30:52.915
+Uh, we'll talk about the solutions,
+
+1458
+01:30:53.615 --> 01:30:56.115
+but first of all, let us appreciate that, okay,
+
+1459
+01:30:56.185 --> 01:30:58.395
+what is this vanishing gradient problem and
+
+1460
+01:30:58.735 --> 01:31:00.035
+or excluding gradient problem?
+
+1461
+01:31:00.895 --> 01:31:03.075
+And suppose it'll come and,
+
+1462
+01:31:03.375 --> 01:31:05.675
+and definitely it'll come for the deeper networks.
+
+1463
+01:31:06.185 --> 01:31:07.755
+Then how to hand, uh, how to handle
+
+1464
+01:31:07.755 --> 01:31:09.075
+that part will see later then
+
+1465
+01:31:09.075 --> 01:31:12.195
+how it'll impact on my learning process of the network.
+
+1466
+01:31:13.055 --> 01:31:16.355
+So if that part is clear, then I'll explain you maybe, uh,
+
+1467
+01:31:16.355 --> 01:31:19.875
+next, uh, after this demo, uh, we'll quickly see, okay,
+
+1468
+01:31:19.875 --> 01:31:21.195
+what are the solutions for that?
+
+1469
+01:31:21.335 --> 01:31:22.635
+So you rightly said that one
+
+1470
+01:31:22.915 --> 01:31:24.075
+solution is weight initialization.
+
+1471
+01:31:24.455 --> 01:31:27.595
+One solution is having this learning rate, how to control,
+
+1472
+01:31:27.755 --> 01:31:31.115
+I mean, how to, when to keep less, when to keep, when
+
+1473
+01:31:31.115 --> 01:31:32.275
+to increase, and so on.
+
+1474
+01:31:32.825 --> 01:31:35.115
+Okay? And there are many other solutions also.
+
+1475
+01:31:35.115 --> 01:31:37.395
+We'll see that one, the solutions of these
+
+1476
+01:31:37.395 --> 01:31:38.395
+Four.
+
+1477
+01:31:38.525 --> 01:31:39.525
+Thank you.
+
+1478
+01:31:40.175 --> 01:31:43.075
+So, um, I have one question, sir. Yes, please.
+
+1479
+01:31:43.295 --> 01:31:47.955
+So regarding this loss, if the loss is a non-zero, uh,
+
+1480
+01:31:48.305 --> 01:31:51.235
+this learning, uh, like why does this, uh, uh,
+
+1481
+01:31:51.435 --> 01:31:53.835
+learning stop in, uh, vanishing gradient?
+
+1482
+01:31:55.435 --> 01:31:57.095
+Uh, loss is non? Yeah.
+
+1483
+01:31:57.395 --> 01:32:01.285
+See, the ultimate idea is that this loss has come
+
+1484
+01:32:01.355 --> 01:32:04.645
+because my weight somewhere was not in sliced properly.
+
+1485
+01:32:05.035 --> 01:32:07.725
+Okay? So that is how we understood the loss,
+
+1486
+01:32:07.865 --> 01:32:08.925
+why the loss is coming.
+
+1487
+01:32:09.925 --> 01:32:12.045
+I have imagined for access equal
+
+1488
+01:32:12.045 --> 01:32:13.245
+to one, Y is equal, equal to zero.
+
+1489
+01:32:13.245 --> 01:32:15.125
+This is my actual input and actual target,
+
+1490
+01:32:15.585 --> 01:32:17.685
+but I'm not getting it for some reason.
+
+1491
+01:32:18.345 --> 01:32:21.565
+And the reason is only between this input and output.
+
+1492
+01:32:21.565 --> 01:32:22.645
+And in between this input
+
+1493
+01:32:22.645 --> 01:32:25.005
+and output, we have the parameters like these weights only.
+
+1494
+01:32:25.835 --> 01:32:29.325
+Okay? So loss will be non, if suppose,
+
+1495
+01:32:29.325 --> 01:32:31.605
+loss is non-zero, who is responsible?
+
+1496
+01:32:32.025 --> 01:32:35.005
+So these parameters are, weights are responsible here.
+
+1497
+01:32:35.625 --> 01:32:37.445
+So we slightly change these weights.
+
+1498
+01:32:37.445 --> 01:32:39.045
+That is what is the next case?
+
+1499
+01:32:39.075 --> 01:32:41.045
+That is the only possibility what we can do.
+
+1500
+01:32:42.265 --> 01:32:45.165
+So if loss is non zero, you said that why,
+
+1501
+01:32:45.165 --> 01:32:46.845
+when saying why we are getting gradient
+
+1502
+01:32:46.845 --> 01:32:48.285
+as it very small, right?
+
+1503
+01:32:48.515 --> 01:32:51.445
+Yeah, but the gradient is not depending.
+
+1504
+01:32:51.785 --> 01:32:53.925
+Uh, a gradient is depending on,
+
+1505
+01:32:53.925 --> 01:32:56.805
+because of this chain rule, uh,
+
+1506
+01:32:57.065 --> 01:33:00.645
+the way we are calculating the gradient for the, uh, uh,
+
+1507
+01:33:00.645 --> 01:33:02.205
+layers by layers, layers by layer.
+
+1508
+01:33:02.235 --> 01:33:04.525
+Because this chain rule is a multiplication,
+
+1509
+01:33:04.825 --> 01:33:07.605
+not multiplication between the gradients itself.
+
+1510
+01:33:08.225 --> 01:33:11.285
+So if the loss is a small, say that this value is, uh,
+
+1511
+01:33:11.755 --> 01:33:14.365
+this gradient is this much, then another, it'll multiply
+
+1512
+01:33:14.365 --> 01:33:15.965
+with one more value, one more value.
+
+1513
+01:33:16.145 --> 01:33:17.285
+So the, uh,
+
+1514
+01:33:17.285 --> 01:33:19.685
+because the smaller value gets multiplied
+
+1515
+01:33:19.685 --> 01:33:21.885
+with another smaller values, we result, we,
+
+1516
+01:33:21.885 --> 01:33:24.405
+it is resulting in another very smaller values.
+
+1517
+01:33:24.625 --> 01:33:28.095
+So that is how, that is how it is coming. Okay?
+
+1518
+01:33:28.235 --> 01:33:30.375
+So this is, uh, this, uh,
+
+1519
+01:33:30.375 --> 01:33:33.175
+because of the chain rule, uh, I think, uh,
+
+1520
+01:33:33.565 --> 01:33:35.135
+that is the thing which you're asking.
+
+1521
+01:33:35.705 --> 01:33:37.575
+Chain rule is the problem actually,
+
+1522
+01:33:37.635 --> 01:33:38.815
+and loss is not the problem.
+
+1523
+01:33:38.885 --> 01:33:39.885
+Yeah. Yeah.
+
+1524
+01:33:40.885 --> 01:33:44.495
+Okay. And in one of, uh, slide you mentioned like, uh,
+
+1525
+01:33:44.495 --> 01:33:48.775
+this, uh, shrink, uh, this, uh, what is that, uh, gradient,
+
+1526
+01:33:48.915 --> 01:33:52.975
+uh, shrink, uh, this gradient shrink, uh, uh,
+
+1527
+01:33:53.925 --> 01:33:57.215
+exponentially and it won't shrink, uh, linearly, right?
+
+1528
+01:33:57.215 --> 01:33:58.535
+Like, what is why this?
+
+1529
+01:33:59.275 --> 01:34:02.175
+Uh, so that's what I was, uh, uh, explaining here.
+
+1530
+01:34:02.325 --> 01:34:04.375
+Yeah, that almost exponential decrease.
+
+1531
+01:34:04.395 --> 01:34:07.975
+You can see in the gradient that it was here, almost,
+
+1532
+01:34:08.115 --> 01:34:09.575
+if you see the 13 times,
+
+1533
+01:34:09.635 --> 01:34:12.735
+it has decreased in just four layers when we go down from
+
+1534
+01:34:12.735 --> 01:34:14.995
+the output to inputs, okay?
+
+1535
+01:34:15.135 --> 01:34:19.155
+So if it, it'll go down, it'll, it'll, uh, if suppose,
+
+1536
+01:34:19.575 --> 01:34:21.675
+see the gradient shrink, will, will,
+
+1537
+01:34:21.745 --> 01:34:22.835
+will definitely be there.
+
+1538
+01:34:22.855 --> 01:34:24.035
+But if it is not exponentially,
+
+1539
+01:34:24.035 --> 01:34:27.235
+then there is no problem support slide gradient decreases
+
+1540
+01:34:27.235 --> 01:34:28.275
+there in the next layer
+
+1541
+01:34:28.375 --> 01:34:30.915
+or next layer, then that is, that's not a problem.
+
+1542
+01:34:31.375 --> 01:34:33.435
+If the, the, the shrink is like
+
+1543
+01:34:33.435 --> 01:34:34.475
+that, then that's the problem.
+
+1544
+01:34:34.585 --> 01:34:35.585
+Yeah.
+
+1545
+01:34:37.345 --> 01:34:38.775
+Thank you. Yes, yes.
+
+1546
+01:34:40.305 --> 01:34:41.895
+Sorry, one question. Yeah.
+
+1547
+01:34:41.995 --> 01:34:46.135
+So now the gradients are reducing, uh, having prop. Mm-hmm.
+
+1548
+01:34:46.835 --> 01:34:51.015
+The layer layer. Can we bypass, uh, of the layers here,
+
+1549
+01:34:52.565 --> 01:34:55.745
+Uh, bypass in the sense, uh, you let me know
+
+1550
+01:34:55.775 --> 01:34:57.885
+what is the suppose gradient is here?
+
+1551
+01:34:57.885 --> 01:34:59.885
+Something this layer decreasing further.
+
+1552
+01:35:00.305 --> 01:35:03.365
+So in the back propagation, you don't want to calculate the,
+
+1553
+01:35:03.545 --> 01:35:05.565
+uh, gradient here in this layer. This layer, yeah.
+
+1554
+01:35:05.915 --> 01:35:08.805
+Yeah. Skip, Uh, that we cannot do. Why?
+
+1555
+01:35:08.915 --> 01:35:11.365
+Because that's why I have explained to you earlier,
+
+1556
+01:35:11.365 --> 01:35:15.325
+if you can remember the first slide on the last class
+
+1557
+01:35:16.075 --> 01:35:18.965
+loss as a function of all trainable parameters.
+
+1558
+01:35:19.745 --> 01:35:24.205
+So y hat is a function of parameter, V one, V two, V three,
+
+1559
+01:35:25.145 --> 01:35:29.725
+and then Y hat, uh, V one, V two, V three depends on ZJ one,
+
+1560
+01:35:30.265 --> 01:35:31.845
+uh, at H one and turns.
+
+1561
+01:35:32.005 --> 01:35:35.005
+Z one, J one depends on W one one, W one, two B.
+
+1562
+01:35:35.145 --> 01:35:36.565
+So if I'll expand this
+
+1563
+01:35:36.805 --> 01:35:37.885
+equation, it looks something like that.
+
+1564
+01:35:39.185 --> 01:35:43.045
+So my, this is the actual equation, these actual equations,
+
+1565
+01:35:43.505 --> 01:35:45.725
+and one by one in the parcel derivative,
+
+1566
+01:35:45.905 --> 01:35:48.405
+we calculate the loss first time, say that with respect
+
+1567
+01:35:48.405 --> 01:35:50.245
+to one parameter, then next time with respect
+
+1568
+01:35:50.245 --> 01:35:51.645
+to another parameter and so on.
+
+1569
+01:35:52.145 --> 01:35:53.485
+So it's a nested function.
+
+1570
+01:35:53.635 --> 01:35:56.325
+It's a nested function where you can't say that this,
+
+1571
+01:35:56.445 --> 01:35:58.045
+I will skip completely.
+
+1572
+01:35:58.465 --> 01:36:00.205
+Uh, I'll, I'll skip completely.
+
+1573
+01:36:00.465 --> 01:36:04.845
+So, uh, I mean, that's not the gradient decent algorithm,
+
+1574
+01:36:05.025 --> 01:36:06.565
+uh, says in the back propagation,
+
+1575
+01:36:07.065 --> 01:36:09.725
+it treats each each parameters equally
+
+1576
+01:36:10.145 --> 01:36:12.645
+and say that, okay, all the parameters are equally
+
+1577
+01:36:12.645 --> 01:36:14.525
+responsible for the loss, what we are getting,
+
+1578
+01:36:14.825 --> 01:36:16.765
+and hence we have to slightly modify
+
+1579
+01:36:16.915 --> 01:36:18.325
+that one for the next titration.
+
+1580
+01:36:19.565 --> 01:36:22.465
+No? Yeah, because I'll, the, uh,
+
+1581
+01:36:23.505 --> 01:36:24.625
+manually I can do that one.
+
+1582
+01:36:24.625 --> 01:36:27.745
+What you are trying to say that, okay, next time, if, uh,
+
+1583
+01:36:28.265 --> 01:36:31.065
+I will set this one zero hard code, it,
+
+1584
+01:36:31.505 --> 01:36:32.585
+although it is coming something,
+
+1585
+01:36:32.585 --> 01:36:34.185
+but I, I can hard code it,
+
+1586
+01:36:34.225 --> 01:36:35.585
+I will not change or whatever it is.
+
+1587
+01:36:36.085 --> 01:36:37.825
+Or I can put a threshold that, okay,
+
+1588
+01:36:38.205 --> 01:36:41.065
+if the gradient is going less than a particular value,
+
+1589
+01:36:41.345 --> 01:36:43.705
+I will not change from the previous way.
+
+1590
+01:36:43.705 --> 01:36:47.185
+All those things we can do. But imagine the bigger networks
+
+1591
+01:36:47.185 --> 01:36:49.225
+where we are millions, trillions of neurons.
+
+1592
+01:36:49.785 --> 01:36:53.185
+I mean, getting that inside of the network for which layer,
+
+1593
+01:36:53.285 --> 01:36:56.345
+for what neurons it, it's almost impossible task.
+
+1594
+01:36:56.645 --> 01:36:59.465
+So we have an algorithm and which works, which works
+
+1595
+01:36:59.525 --> 01:37:01.785
+for equally for all the neurons
+
+1596
+01:37:02.005 --> 01:37:03.945
+and all the weights in the same way.
+
+1597
+01:37:04.015 --> 01:37:06.465
+That is the only possibility of, of,
+
+1598
+01:37:06.485 --> 01:37:07.905
+uh, training such a big network.
+
+1599
+01:37:07.905 --> 01:37:09.625
+Otherwise, it is very manual effort.
+
+1600
+01:37:09.725 --> 01:37:12.065
+And, uh, yeah, those things we have.
+
+1601
+01:37:14.375 --> 01:37:15.995
+Thanks. Yeah, bye.
+
+1602
+01:37:20.005 --> 01:37:22.015
+Okay, so let us quickly see this.
+
+1603
+01:37:22.045 --> 01:37:23.775
+This will not take much time now
+
+1604
+01:37:23.775 --> 01:37:25.975
+because we have understood the
+
+1605
+01:37:26.325 --> 01:37:27.855
+what is vanishing radiant problem.
+
+1606
+01:37:28.335 --> 01:37:29.575
+I mean, it is the same thing.
+
+1607
+01:37:29.835 --> 01:37:33.975
+Uh, what I have just explained with this, uh, help
+
+1608
+01:37:34.075 --> 01:37:36.005
+of the slides.
+
+1609
+01:37:36.265 --> 01:37:37.405
+Now I'm coding it.
+
+1610
+01:37:39.175 --> 01:37:41.795
+So just wanted to explain so that, uh, you will, uh,
+
+1611
+01:37:42.145 --> 01:37:43.995
+once again, you will see all these quote
+
+1612
+01:37:43.995 --> 01:37:47.395
+and you will have some better understanding about these, uh,
+
+1613
+01:37:48.295 --> 01:37:52.035
+uh, all these things, because quickly, now I'll show you.
+
+1614
+01:37:52.215 --> 01:37:53.235
+I'm in the next class.
+
+1615
+01:37:53.535 --> 01:37:58.205
+I'm going to switch, switch from, uh, um,
+
+1616
+01:37:58.205 --> 01:38:00.685
+mean the PyTorch coding, which we are doing
+
+1617
+01:38:00.745 --> 01:38:03.805
+so far from the scratch for most of the things, except
+
+1618
+01:38:03.805 --> 01:38:05.045
+that back application.
+
+1619
+01:38:05.905 --> 01:38:09.085
+Uh, we are going to build everything in the PyTorch modules.
+
+1620
+01:38:09.085 --> 01:38:11.285
+We are going to use au modules, like
+
+1621
+01:38:11.465 --> 01:38:12.565
+to build the neural network.
+
+1622
+01:38:12.615 --> 01:38:16.085
+We'll use the module to do the, uh, gradient, uh,
+
+1623
+01:38:16.145 --> 01:38:17.445
+anyway, we are using backward.
+
+1624
+01:38:17.915 --> 01:38:19.285
+Then for application also,
+
+1625
+01:38:19.285 --> 01:38:21.445
+we'll use the modules like the loss function.
+
+1626
+01:38:21.455 --> 01:38:23.885
+We'll use the, uh, like some PyTorch module.
+
+1627
+01:38:24.985 --> 01:38:27.765
+So then you will not be able to, uh,
+
+1628
+01:38:27.875 --> 01:38:29.165
+view what is going inside.
+
+1629
+01:38:29.265 --> 01:38:33.405
+So these codes will help you to, uh, like, uh, uh,
+
+1630
+01:38:33.975 --> 01:38:36.645
+understand the black box later on.
+
+1631
+01:38:36.755 --> 01:38:40.685
+Once we start using the built-in functions from the PyTorch,
+
+1632
+01:38:41.105 --> 01:38:43.165
+uh, your code would be simplified,
+
+1633
+01:38:43.185 --> 01:38:46.565
+but then you will not see much, much, uh, like, uh,
+
+1634
+01:38:46.715 --> 01:38:47.925
+okay, what is happening inside.
+
+1635
+01:38:47.925 --> 01:38:49.805
+So that clarity should come here itself.
+
+1636
+01:38:49.995 --> 01:38:51.725
+Next level, when you go, you'll be able
+
+1637
+01:38:51.725 --> 01:38:53.005
+to understand it clearly.
+
+1638
+01:38:53.985 --> 01:38:58.485
+So you see this W one, W2, W three, W four are my weight.
+
+1639
+01:38:58.545 --> 01:39:01.045
+So it's at tensors, zero dimension tensor.
+
+1640
+01:39:01.045 --> 01:39:02.325
+That means these are all scaler
+
+1641
+01:39:02.745 --> 01:39:04.725
+and requires grad is equal to true.
+
+1642
+01:39:04.725 --> 01:39:07.565
+That means that I want the gradient with respect to W one,
+
+1643
+01:39:07.565 --> 01:39:09.805
+then W2, W three, and all the parameter.
+
+1644
+01:39:09.805 --> 01:39:11.245
+That is what I'm writing here.
+
+1645
+01:39:12.195 --> 01:39:15.385
+Then I need my input output, which is again,
+
+1646
+01:39:15.465 --> 01:39:16.785
+a scaler in this particular case.
+
+1647
+01:39:17.005 --> 01:39:19.225
+One is the input, and zero is the output.
+
+1648
+01:39:20.085 --> 01:39:23.265
+Now, sigmoid function will be the one which I'll be using it
+
+1649
+01:39:23.405 --> 01:39:27.225
+inside all the neurons, all the hidden, uh, neuron in,
+
+1650
+01:39:27.285 --> 01:39:29.945
+in fact, uh, in the output also, so
+
+1651
+01:39:30.095 --> 01:39:34.305
+that I'm using from neural module, from the torch, okay?
+
+1652
+01:39:34.665 --> 01:39:35.745
+NN module that we say
+
+1653
+01:39:35.745 --> 01:39:38.065
+as NN neural network module in the torch.
+
+1654
+01:39:38.365 --> 01:39:41.145
+Now, I'm not writing sigmoid function by my own.
+
+1655
+01:39:41.145 --> 01:39:42.825
+So far I had written in the previous class
+
+1656
+01:39:42.845 --> 01:39:45.225
+and all, you must have seen those codes,
+
+1657
+01:39:45.605 --> 01:39:47.305
+but now I'm not writing it anymore.
+
+1658
+01:39:47.445 --> 01:39:49.225
+I'm using this NNNN module.
+
+1659
+01:39:49.535 --> 01:39:51.865
+I'll explain about the NN module in the next class
+
+1660
+01:39:51.925 --> 01:39:52.945
+in more detail.
+
+1661
+01:39:54.205 --> 01:39:57.225
+So, but it is just a sigmoid implementation. Nothing else.
+
+1662
+01:39:57.965 --> 01:40:00.425
+Now, these are all the empty list,
+
+1663
+01:40:00.695 --> 01:40:04.425
+because I'm going to use them for plotting and all that.
+
+1664
+01:40:04.445 --> 01:40:06.945
+How my loss is changing across their box,
+
+1665
+01:40:07.285 --> 01:40:08.625
+how my gradient is changing
+
+1666
+01:40:08.685 --> 01:40:11.705
+for W one across their box, right?
+
+1667
+01:40:11.805 --> 01:40:15.105
+Uh, all those things, uh, updated weights are changing
+
+1668
+01:40:15.715 --> 01:40:17.545
+means these, these four are not required
+
+1669
+01:40:17.545 --> 01:40:19.585
+because anyway, we are setting the gradient to zero
+
+1670
+01:40:19.995 --> 01:40:21.065
+after every apoc,
+
+1671
+01:40:21.065 --> 01:40:25.025
+but then you can always store it updated W one, okay?
+
+1672
+01:40:25.025 --> 01:40:26.225
+Yeah, this is very much important
+
+1673
+01:40:26.285 --> 01:40:29.585
+how the weight values are changing in first OC and second OC
+
+1674
+01:40:29.585 --> 01:40:31.505
+and third OC that for that one,
+
+1675
+01:40:31.635 --> 01:40:32.985
+these are all the empty list.
+
+1676
+01:40:33.005 --> 01:40:36.425
+We utilize learning rate value, 0.01, OC
+
+1677
+01:40:37.205 --> 01:40:38.345
+set here, 50.
+
+1678
+01:40:39.165 --> 01:40:42.865
+Now here, uh, it's a forward pass.
+
+1679
+01:40:43.715 --> 01:40:47.685
+Easy to understand. First of all, we do W one, two x, uh,
+
+1680
+01:40:47.715 --> 01:40:49.645
+then pass it through the sigma.
+
+1681
+01:40:49.665 --> 01:40:53.605
+We get get at E one. Now, E one gets multiplied with the W2.
+
+1682
+01:40:54.115 --> 01:40:55.165
+Pass it through sigmoid.
+
+1683
+01:40:55.165 --> 01:40:59.205
+We get a two W three, a two sigmoid, a three,
+
+1684
+01:40:59.345 --> 01:41:01.005
+and finally a three into W four.
+
+1685
+01:41:01.445 --> 01:41:04.805
+Sigmoid. Yha, okay? Same thing. Exactly. Same thing.
+
+1686
+01:41:04.805 --> 01:41:08.485
+What we have done here, I'm now explaining here, okay,
+
+1687
+01:41:08.485 --> 01:41:11.525
+so this is the same forward pass, which we had done here.
+
+1688
+01:41:12.145 --> 01:41:16.445
+So here, okay, so I guess this is clear.
+
+1689
+01:41:16.915 --> 01:41:19.765
+Then once we have this Y hat, we calculate the loss.
+
+1690
+01:41:19.915 --> 01:41:21.765
+Loss is Y hat minus y square,
+
+1691
+01:41:22.185 --> 01:41:24.485
+and one by two, as I explained,
+
+1692
+01:41:24.485 --> 01:41:25.645
+we have taken in the equation.
+
+1693
+01:41:26.305 --> 01:41:29.045
+So loss value we get here, whatever loss value I'm getting,
+
+1694
+01:41:29.675 --> 01:41:30.965
+extract that loss
+
+1695
+01:41:31.465 --> 01:41:35.525
+and upend that loss in the loss history, loss history list,
+
+1696
+01:41:35.615 --> 01:41:36.845
+which was the empty list.
+
+1697
+01:41:36.985 --> 01:41:39.165
+So in every och, we'll get some loss history, right?
+
+1698
+01:41:39.185 --> 01:41:41.645
+And we are going to upend that in the loss history
+
+1699
+01:41:41.645 --> 01:41:44.445
+because later on I'll utilize this one to plot my loss,
+
+1700
+01:41:44.465 --> 01:41:46.405
+how it's changing, not changing, or whatever it is.
+
+1701
+01:41:46.825 --> 01:41:48.485
+So this completes my forward pass.
+
+1702
+01:41:48.555 --> 01:41:50.485
+This whole completes my forward pass.
+
+1703
+01:41:50.865 --> 01:41:51.965
+Now we have a backward pass.
+
+1704
+01:41:52.225 --> 01:41:54.845
+So for backward pass, I'm not writing the gradient
+
+1705
+01:41:54.845 --> 01:41:56.525
+calculation code.
+
+1706
+01:41:57.025 --> 01:42:00.085
+Uh, but we had done it earlier. Just to simplify.
+
+1707
+01:42:00.185 --> 01:42:03.405
+We used backward module from the PyTorch.
+
+1708
+01:42:03.405 --> 01:42:05.645
+Now, this will do gradient calculation with respect
+
+1709
+01:42:05.645 --> 01:42:06.805
+to all the parameters.
+
+1710
+01:42:07.125 --> 01:42:09.325
+Wherever I have put require, grad is equal two, two.
+
+1711
+01:42:09.825 --> 01:42:12.965
+So W one, W2, W three, W four, it'll calculate the gradient.
+
+1712
+01:42:13.525 --> 01:42:14.925
+X, Y it'll not calculate
+
+1713
+01:42:14.925 --> 01:42:18.085
+because it, it doesn't have the required grad is equal two.
+
+1714
+01:42:18.155 --> 01:42:19.705
+True. Okay?
+
+1715
+01:42:20.205 --> 01:42:24.045
+So one second.
+
+1716
+01:42:24.265 --> 01:42:25.565
+See, X looks something like that.
+
+1717
+01:42:25.585 --> 01:42:28.325
+See, but if I print my
+
+1718
+01:42:30.175 --> 01:42:33.015
+W one, it says that this is the value of W one
+
+1719
+01:42:33.035 --> 01:42:34.175
+and it required grad.
+
+1720
+01:42:34.435 --> 01:42:37.215
+So that information, clearly we are saying that the x,
+
+1721
+01:42:37.355 --> 01:42:40.775
+it is not required that grad, but for W one, it's required.
+
+1722
+01:42:40.805 --> 01:42:44.135
+Okay? So that we have made, made sure that now, uh,
+
+1723
+01:42:45.935 --> 01:42:48.305
+okay, a few more things.
+
+1724
+01:42:48.305 --> 01:42:50.145
+What we can do, just to see that,
+
+1725
+01:42:50.885 --> 01:42:52.745
+how it'll do the back propagation,
+
+1726
+01:42:52.805 --> 01:42:56.085
+you can print this A one eight to, uh, okay,
+
+1727
+01:42:56.085 --> 01:42:57.565
+this is not run so far.
+
+1728
+01:42:57.705 --> 01:43:00.845
+Let me run this. Okay, done.
+
+1729
+01:43:00.945 --> 01:43:05.285
+So now, if I print this, now this A one, if you see that,
+
+1730
+01:43:05.285 --> 01:43:08.045
+because it is going to calculate the partial derivative
+
+1731
+01:43:08.105 --> 01:43:10.085
+of loss with respect to a one also,
+
+1732
+01:43:10.085 --> 01:43:11.325
+which is nothing but the sigmoid.
+
+1733
+01:43:11.325 --> 01:43:12.845
+So it'll calculate the partial derivative
+
+1734
+01:43:12.845 --> 01:43:14.245
+of sigmoid here, remember?
+
+1735
+01:43:14.785 --> 01:43:17.645
+So, and that is, uh, that is how the back propagation.
+
+1736
+01:43:17.745 --> 01:43:20.765
+So here, when it'll calculate with respect to a one,
+
+1737
+01:43:21.305 --> 01:43:24.405
+it knows that it has to calculate the partial derivative
+
+1738
+01:43:24.405 --> 01:43:26.605
+of sigmoid because the backward operation,
+
+1739
+01:43:26.775 --> 01:43:29.245
+which was performed on the, uh,
+
+1740
+01:43:29.755 --> 01:43:33.765
+back operation performed on the, uh, performed
+
+1741
+01:43:33.825 --> 01:43:35.205
+to get this A one was sigmoid.
+
+1742
+01:43:35.205 --> 01:43:37.205
+So it'll calculate here the gradient of sig mite.
+
+1743
+01:43:37.435 --> 01:43:40.765
+Similarly, similarly, you can also see that, okay,
+
+1744
+01:43:41.075 --> 01:43:43.605
+what was the, uh, what is this Z one?
+
+1745
+01:43:44.225 --> 01:43:48.205
+Um, uh, all, all those values, uh,
+
+1746
+01:43:48.365 --> 01:43:50.875
+I guess you can easily, okay?
+
+1747
+01:43:51.145 --> 01:43:54.785
+One is not defined here, right? So that one, uh, one second.
+
+1748
+01:43:55.085 --> 01:43:57.145
+So W one oh, Z one is not one.
+
+1749
+01:43:57.145 --> 01:43:59.465
+That one, we have not stored this, this particular.
+
+1750
+01:43:59.465 --> 01:44:01.185
+Otherwise, that one also would've to say
+
+1751
+01:44:01.185 --> 01:44:04.185
+that backward operation is backward operation is this,
+
+1752
+01:44:04.245 --> 01:44:05.825
+uh, uh, multiplication?
+
+1753
+01:44:06.135 --> 01:44:09.865
+Okay? Uh, we could have done this, but we have not done.
+
+1754
+01:44:09.925 --> 01:44:14.005
+Uh, so, uh, if you wanted to see that, also suppose just,
+
+1755
+01:44:14.005 --> 01:44:15.125
+just for, for that one.
+
+1756
+01:44:15.185 --> 01:44:16.325
+So whatever you will do,
+
+1757
+01:44:16.445 --> 01:44:20.105
+I will just simply copy this line here, okay?
+
+1758
+01:44:20.105 --> 01:44:22.385
+This will be same. Now this will my Z one.
+
+1759
+01:44:22.385 --> 01:44:25.145
+This is my Z one where I only calculate the
+
+1760
+01:44:26.535 --> 01:44:31.435
+double one into X, and here I pass my chat one.
+
+1761
+01:44:31.535 --> 01:44:34.785
+That's all. This is what it'll do, okay?
+
+1762
+01:44:35.095 --> 01:44:38.625
+Then if you will see the Z one value, it is weighted value.
+
+1763
+01:44:38.825 --> 01:44:41.105
+W one, two x and then backward operation
+
+1764
+01:44:41.105 --> 01:44:42.305
+is multiplication, isn't it?
+
+1765
+01:44:42.305 --> 01:44:44.905
+You see, this backward operation is W one two x.
+
+1766
+01:44:44.905 --> 01:44:49.345
+So once it'll start doing the partial of Z one with respect
+
+1767
+01:44:49.465 --> 01:44:52.825
+to W one, with respect to W one, also, it'll understand why,
+
+1768
+01:44:52.825 --> 01:44:56.645
+because W one I said that requires to true,
+
+1769
+01:44:56.745 --> 01:44:58.685
+but for XI said that it is false.
+
+1770
+01:44:59.105 --> 01:45:01.005
+So once it'll end up with this equation
+
+1771
+01:45:01.425 --> 01:45:03.885
+and find, okay, partial derivative, it'll calculate
+
+1772
+01:45:03.885 --> 01:45:06.245
+with W one, it'll not calculate with respect to X.
+
+1773
+01:45:06.245 --> 01:45:09.845
+That is how this, this backward operation is working, okay?
+
+1774
+01:45:09.865 --> 01:45:12.165
+It has all the computational graph that
+
+1775
+01:45:12.165 --> 01:45:13.525
+how this value was computed,
+
+1776
+01:45:13.595 --> 01:45:15.005
+what was the previous operation,
+
+1777
+01:45:15.145 --> 01:45:17.045
+but that value it stores, okay?
+
+1778
+01:45:17.045 --> 01:45:18.645
+That is how this backward propagation works.
+
+1779
+01:45:18.945 --> 01:45:21.965
+Now, that is all, once you have this backward, uh, computed,
+
+1780
+01:45:21.965 --> 01:45:25.205
+then then you will update your, uh, uh,
+
+1781
+01:45:25.395 --> 01:45:27.045
+here the weight update will happen.
+
+1782
+01:45:27.045 --> 01:45:29.285
+That W one is equal two W one minus learning
+
+1783
+01:45:29.285 --> 01:45:30.445
+rate into the gradient.
+
+1784
+01:45:30.995 --> 01:45:32.445
+Then W2 and so on.
+
+1785
+01:45:33.025 --> 01:45:36.005
+And then all these values, I'm just storing, uh,
+
+1786
+01:45:36.195 --> 01:45:39.725
+just storing to, uh, to plot that here.
+
+1787
+01:45:39.745 --> 01:45:42.805
+The last one is I'm just detaching my all the W one value
+
+1788
+01:45:42.945 --> 01:45:44.565
+and initializing it with the zero.
+
+1789
+01:45:44.585 --> 01:45:47.525
+So that next epoch, when it'll start that time,
+
+1790
+01:45:47.695 --> 01:45:52.165
+it'll not take the previous, uh, uh, double, uh, uh, what is
+
+1791
+01:45:52.165 --> 01:45:53.605
+that gradient value.
+
+1792
+01:45:54.425 --> 01:45:59.325
+So that's all. So once this is done, then maybe this is,
+
+1793
+01:45:59.635 --> 01:46:02.245
+this is how the gradients are coming across the layer,
+
+1794
+01:46:02.705 --> 01:46:05.405
+and this, this particular cell will show you
+
+1795
+01:46:05.405 --> 01:46:06.525
+some, some plots.
+
+1796
+01:46:06.865 --> 01:46:09.885
+Now, if you see the plots, what will happen? 0.2.
+
+1797
+01:46:09.885 --> 01:46:13.285
+Uh, my loss start with somewhere more than 1, 6 2,
+
+1798
+01:46:13.385 --> 01:46:15.125
+end up at 1 5, 4.
+
+1799
+01:46:16.025 --> 01:46:18.045
+See, the loss is decreasing a slightly
+
+1800
+01:46:18.045 --> 01:46:19.805
+because it's very simplest network.
+
+1801
+01:46:19.825 --> 01:46:21.725
+It was, it was slightly decreasing.
+
+1802
+01:46:21.825 --> 01:46:26.625
+If you see here that, uh, uh, how,
+
+1803
+01:46:26.645 --> 01:46:30.025
+how the way, the way this, uh, what is this EPOCH gradient?
+
+1804
+01:46:30.025 --> 01:46:32.585
+Gradient gradient was also slightly changing
+
+1805
+01:46:33.165 --> 01:46:34.785
+at the, at the fourth layer.
+
+1806
+01:46:34.785 --> 01:46:36.745
+This is the fourth layer gradient, W four. Okay?
+
+1807
+01:46:37.045 --> 01:46:38.585
+Now this is the third layer,
+
+1808
+01:46:39.085 --> 01:46:42.225
+and if you observe the gradient of W2
+
+1809
+01:46:42.225 --> 01:46:44.465
+and W one, this is almost flat.
+
+1810
+01:46:44.685 --> 01:46:47.465
+At least you see some variations in blue and orange,
+
+1811
+01:46:47.605 --> 01:46:50.885
+but there is hardly any variations in this, uh, green
+
+1812
+01:46:51.025 --> 01:46:53.405
+and uh, green and red line, right?
+
+1813
+01:46:53.555 --> 01:46:57.125
+That means that the early layers of gradient with respect
+
+1814
+01:46:57.125 --> 01:47:00.325
+to W one, W2 is almost not changing, okay?
+
+1815
+01:47:00.325 --> 01:47:03.205
+It's almost zero. Similarly, you see that the weight update,
+
+1816
+01:47:03.205 --> 01:47:04.765
+because gradients are not changing here.
+
+1817
+01:47:05.185 --> 01:47:06.325
+Weight update also
+
+1818
+01:47:06.325 --> 01:47:08.445
+for the early layers are almost negligible,
+
+1819
+01:47:08.665 --> 01:47:11.805
+but there is slight weight update in for the, uh,
+
+1820
+01:47:12.565 --> 01:47:13.765
+W four and W three.
+
+1821
+01:47:13.785 --> 01:47:16.525
+Now, this is the chain. So you can do, I mean,
+
+1822
+01:47:16.525 --> 01:47:19.485
+here the network is very simplest, so it wasn't,
+
+1823
+01:47:19.485 --> 01:47:21.445
+it is not showing you very significant thing.
+
+1824
+01:47:21.945 --> 01:47:24.485
+But going further, when we use the bigger network,
+
+1825
+01:47:24.575 --> 01:47:27.525
+which I plan to use it for, which I plan
+
+1826
+01:47:27.525 --> 01:47:30.365
+to show you from next class, you will see the lot of, uh,
+
+1827
+01:47:30.425 --> 01:47:31.725
+uh, large variations.
+
+1828
+01:47:31.775 --> 01:47:33.645
+Large variations in that one, okay?
+
+1829
+01:47:34.585 --> 01:47:36.645
+And, uh, yeah, this is the demonstration
+
+1830
+01:47:36.705 --> 01:47:38.925
+of the exactly same thing, what we have seen you do,
+
+1831
+01:47:38.925 --> 01:47:42.685
+the practice change, some parameters understand internally
+
+1832
+01:47:42.685 --> 01:47:44.605
+what is happening, okay?
+
+1833
+01:47:45.145 --> 01:47:47.525
+And so because these are all the foundations which you
+
+1834
+01:47:47.525 --> 01:47:49.125
+should be having, going further,
+
+1835
+01:47:49.465 --> 01:47:51.165
+you may see most of the things black box.
+
+1836
+01:47:51.635 --> 01:47:53.885
+Okay? So having the good clarity
+
+1837
+01:47:54.025 --> 01:47:55.605
+of all these concepts are very important.
+
+1838
+01:47:55.755 --> 01:47:57.365
+I'll stop here. In the next class,
+
+1839
+01:47:57.375 --> 01:47:59.045
+we'll see all these things, how
+
+1840
+01:47:59.045 --> 01:48:00.565
+to handle the vanishing gradient problem.
+
+1841
+01:48:01.425 --> 01:48:04.285
+Uh, some of you mentioned, I, uh,
+
+1842
+01:48:04.285 --> 01:48:06.445
+that relu I can use instead of sigmoid,
+
+1843
+01:48:06.645 --> 01:48:08.565
+I can use the better weight initialization.
+
+1844
+01:48:08.755 --> 01:48:10.725
+There's something called B normalization,
+
+1845
+01:48:10.875 --> 01:48:12.605
+something called skip connections.
+
+1846
+01:48:13.275 --> 01:48:14.605
+Okay? All these things we'll see.
+
+1847
+01:48:14.745 --> 01:48:19.705
+And uh, we'll see these with the help of the, uh, modules
+
+1848
+01:48:19.805 --> 01:48:22.705
+as well as some data, little bigger data set, so
+
+1849
+01:48:22.705 --> 01:48:25.145
+that you will be seeing, okay, by adding
+
+1850
+01:48:25.405 --> 01:48:28.425
+or deleting these, these, uh, these,
+
+1851
+01:48:28.525 --> 01:48:30.705
+how it'll impact on the grad gradient,
+
+1852
+01:48:30.705 --> 01:48:32.225
+whether the gradient is brandished
+
+1853
+01:48:32.245 --> 01:48:33.305
+or being improved,
+
+1854
+01:48:33.405 --> 01:48:34.865
+all those things we are going to see next.
+
+1855
+01:48:35.095 --> 01:48:38.345
+Okay? So solutions we'll see in the next class, next class,
+
+1856
+01:48:38.345 --> 01:48:39.505
+you'll also write the quiz.
+
+1857
+01:48:39.845 --> 01:48:42.385
+So first you'll write the quiz maybe for 30 minutes,
+
+1858
+01:48:43.445 --> 01:48:47.465
+and, uh, then time, whatever time we left with, we'll try
+
+1859
+01:48:47.465 --> 01:48:48.545
+to cover some of the topics.
+
+1860
+01:48:49.135 --> 01:48:50.785
+Okay? So it'll obviously go
+
+1861
+01:48:50.785 --> 01:48:52.225
+for the next to next class as well.
+
+1862
+01:48:53.005 --> 01:48:54.225
+Now, I'll, I'll stop here. You can
+
+1863
+01:48:54.225 --> 01:48:55.305
+ask me some question before we,
+
+1864
+01:48:57.895 --> 01:49:01.155
+Uh, yes, actually regarding quiz in next class.
+
+1865
+01:49:01.335 --> 01:49:02.595
+Mm-hmm. It has said
+
+1866
+01:49:02.595 --> 01:49:06.195
+that next week we'll be having an offline event in college.
+
+1867
+01:49:06.495 --> 01:49:08.355
+So would there be any classes?
+
+1868
+01:49:08.575 --> 01:49:12.235
+So quiz connected next week, this coming Saturday.
+
+1869
+01:49:14.035 --> 01:49:14.955
+I mean, this is the Saturday.
+
+1870
+01:49:14.985 --> 01:49:16.195
+Next Saturday, you're saying that?
+
+1871
+01:49:16.655 --> 01:49:18.675
+Yes, sir. Yes sir. Oh, so some
+
+1872
+01:49:18.675 --> 01:49:20.595
+of you will be here in the college by then, right?
+
+1873
+01:49:21.135 --> 01:49:24.915
+Yes, sir. Uh, then what we'll do is, uh, we'll,
+
+1874
+01:49:25.125 --> 01:49:28.115
+we'll have the class, let us not, uh, uh,
+
+1875
+01:49:28.455 --> 01:49:29.955
+let us not cancel the class,
+
+1876
+01:49:30.135 --> 01:49:33.035
+but, uh, I will see that if I can do it in the hybrid mode
+
+1877
+01:49:33.035 --> 01:49:36.555
+so that uh, others who are not coming can join online
+
+1878
+01:49:36.655 --> 01:49:39.355
+and who are coming, they can experience the class also.
+
+1879
+01:49:39.635 --> 01:49:41.035
+I mean, that's just an option.
+
+1880
+01:49:41.495 --> 01:49:43.955
+Anyway, you'll be here, we can decide what we can do,
+
+1881
+01:49:44.175 --> 01:49:45.515
+but I believe that would be better
+
+1882
+01:49:45.615 --> 01:49:46.675
+so that we are coming here.
+
+1883
+01:49:46.735 --> 01:49:49.845
+Let us have one class offline. Also, it means hybrid also.
+
+1884
+01:49:51.405 --> 01:49:52.495
+Okay, sir? Yeah.
+
+1885
+01:49:53.355 --> 01:49:56.575
+Or you are, you are coming only for uh, uh, just
+
+1886
+01:49:56.635 --> 01:49:57.855
+to see the in and on.
+
+1887
+01:49:57.855 --> 01:49:58.935
+That is different thing there.
+
+1888
+01:50:00.205 --> 01:50:01.375
+Well, anything is, so we don't know
+
+1889
+01:50:01.395 --> 01:50:02.735
+The, we, we don't have the agenda.
+
+1890
+01:50:02.765 --> 01:50:04.655
+Also, what is the, what is been planned?
+
+1891
+01:50:05.325 --> 01:50:07.015
+Yeah. I'll tell you the main agenda
+
+1892
+01:50:07.115 --> 01:50:09.535
+of these immerson program is that once you come
+
+1893
+01:50:09.535 --> 01:50:13.095
+to the campus, you get to see who is the professors,
+
+1894
+01:50:13.095 --> 01:50:14.975
+which you have been interacting online,
+
+1895
+01:50:15.795 --> 01:50:19.855
+and, uh, get little more discussions on your projects part.
+
+1896
+01:50:20.355 --> 01:50:22.735
+If there is any class, which is, if it is not scheduled,
+
+1897
+01:50:22.755 --> 01:50:24.855
+the class will not have a, because it is scheduled on
+
+1898
+01:50:24.855 --> 01:50:28.895
+that day, let us have one class also, uh, then, so that,
+
+1899
+01:50:29.325 --> 01:50:33.015
+that will help you for your later part of the visualizations
+
+1900
+01:50:33.015 --> 01:50:34.775
+where again, you will not be coming here,
+
+1901
+01:50:34.835 --> 01:50:37.975
+but then you can always imagine this is how it was, right?
+
+1902
+01:50:38.075 --> 01:50:40.055
+So main agenda is to interact
+
+1903
+01:50:40.055 --> 01:50:44.575
+with the professors clarity on the, on the topics projects.
+
+1904
+01:50:44.835 --> 01:50:46.775
+Now, these are the main agenda. Yeah.
+
+1905
+01:50:47.535 --> 01:50:50.155
+Get to know the camp campus, see that what is there,
+
+1906
+01:50:50.155 --> 01:50:51.995
+and all get the feeling. So,
+
+1907
+01:50:52.055 --> 01:50:54.395
+So this is, So it's only on Saturday, Sunday.
+
+1908
+01:50:54.395 --> 01:50:56.755
+There's nothing we can return back on Sunday also. Right? So
+
+1909
+01:50:57.195 --> 01:51:00.075
+I, I, I believe that schedule even, I don't know as
+
+1910
+01:51:00.075 --> 01:51:02.475
+of now, maybe Will will be the right person.
+
+1911
+01:51:02.695 --> 01:51:05.915
+He, he will share, share with you. Okay. Uh, before time.
+
+1912
+01:51:05.975 --> 01:51:08.795
+So even, I don't know the exact, uh, what are the plans?
+
+1913
+01:51:09.515 --> 01:51:10.515
+I don't know about that.
+
+1914
+01:51:11.685 --> 01:51:13.135
+Sure. Thank you. Yeah,
+
+1915
+01:51:13.765 --> 01:51:14.635
+We'll see that. No
+
+1916
+01:51:14.635 --> 01:51:15.635
+Problem. Okay.
+
+1917
+01:51:15.635 --> 01:51:16.345
+
+1918
+01:51:20.405 --> 01:51:23.855
+Alright. So I think we can stop here then we'll
+
+1919
+01:51:23.855 --> 01:51:25.055
+meet on Monday.
+
+1920
+01:51:25.665 --> 01:51:30.095
+Seven, five. Okay? Yeah, sure, sir.
+
+1921
+01:51:30.545 --> 01:51:33.615
+Thank you, sir. Thank you, sir. When is the quiz, sir?
+
+1922
+01:51:33.615 --> 01:51:35.935
+Thank you, sir. Excuse me, sir, when is the quiz?
+
+1923
+01:51:36.085 --> 01:51:37.175
+Next class? Next class,
+
+1924
+01:51:37.825 --> 01:51:38.975
+which is Monday
+
+1925
+01:51:41.505 --> 01:51:44.015
+until now. Uh, whatever
+
+1926
+01:51:44.535 --> 01:51:46.455
+Syllabus will be everything. Whatever we have covered
+
+1927
+01:51:46.745 --> 01:51:47.745
+Today.
+
+1928
+01:51:48.545 --> 01:51:51.575
+Thank you, sir. Yeah, thank you, sir. Thank you, sir.
+
+1929
+01:51:51.665 --> 01:51:53.335
+Thank you, sir. Thank you, sir. Thank you, sir.
