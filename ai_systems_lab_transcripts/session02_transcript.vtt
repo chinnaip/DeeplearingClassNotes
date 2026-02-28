@@ -1,0 +1,4422 @@
+WEBVTT
+NOTE Vimeo URL: https://vimeo.com/1141593591
+
+1
+00:19:30.465 --> 00:19:31.925
+Uh, good morning everyone.
+
+2
+00:19:31.925 --> 00:19:34.645
+Sorry for the delay. I had a technical difficulty with Zoom.
+
+3
+00:19:36.145 --> 00:19:37.355
+Yeah, good morning, sir.
+
+4
+00:19:37.695 --> 00:19:42.635
+Uh, you're doing fine. Yes. Yes, sir.
+
+5
+00:19:42.735 --> 00:19:43.955
+Sir. Yeah. Okay.
+
+6
+00:19:43.975 --> 00:19:45.755
+So, uh, like, uh, today
+
+7
+00:19:46.285 --> 00:19:48.955
+we'll be having a little bit discussion like, uh,
+
+8
+00:19:49.695 --> 00:19:51.625
+that is like how, uh, this chase
+
+9
+00:19:51.645 --> 00:19:54.065
+and everything, we usually play with a two player thing,
+
+10
+00:19:54.245 --> 00:19:56.625
+but when we are playing against some computers,
+
+11
+00:19:56.735 --> 00:19:59.825
+they are like very hard to beat, to play any other game.
+
+12
+00:19:59.825 --> 00:20:02.745
+Those are very easy, but for the chase, uh, this, uh,
+
+13
+00:20:02.765 --> 00:20:03.905
+things actually works.
+
+14
+00:20:04.325 --> 00:20:06.505
+So what is happening, yeah, uh,
+
+15
+00:20:06.695 --> 00:20:08.825
+that multiple techniques are there.
+
+16
+00:20:08.855 --> 00:20:10.705
+That is actually, you know, one
+
+17
+00:20:10.705 --> 00:20:14.145
+of the AI techniques we can say, uh, like, uh,
+
+18
+00:20:14.455 --> 00:20:17.825
+that initiated like how we can make our systems
+
+19
+00:20:18.665 --> 00:20:20.945
+a little bit smarter compared to the normal usage.
+
+20
+00:20:21.605 --> 00:20:26.305
+So in those scenarios, we opt in some algorithms where,
+
+21
+00:20:27.085 --> 00:20:30.305
+uh, they should actually reach to their goal, state goal,
+
+22
+00:20:30.305 --> 00:20:34.595
+state winning equation, whether that's a chess game, whether
+
+23
+00:20:34.595 --> 00:20:36.835
+that's ATO game, whether there's some, uh,
+
+24
+00:20:36.835 --> 00:20:38.075
+puzzle solving problem, whether
+
+25
+00:20:38.075 --> 00:20:40.875
+that's a main solving problem, whether that's, uh, uh,
+
+26
+00:20:40.875 --> 00:20:44.235
+like your, uh, searching some locations from your place
+
+27
+00:20:44.375 --> 00:20:45.915
+to some other city,
+
+28
+00:20:46.215 --> 00:20:49.645
+35 different location in which path you should be taking.
+
+29
+00:20:49.785 --> 00:20:51.805
+That's, that's on an optimal place.
+
+30
+00:20:52.625 --> 00:20:55.725
+Or like, uh, you are doing some kind of searching algorithms
+
+31
+00:20:55.935 --> 00:20:59.245
+where like you are extracting information from huge amount
+
+32
+00:20:59.245 --> 00:21:00.445
+of data sets and servers.
+
+33
+00:21:00.905 --> 00:21:04.245
+So these are all actually done through some kind algorithms
+
+34
+00:21:04.245 --> 00:21:06.645
+where we are making the system a little bit smart
+
+35
+00:21:06.715 --> 00:21:09.565
+with the help of this ai, uh, side of things.
+
+36
+00:21:10.105 --> 00:21:12.765
+So we are going into little bit of, uh,
+
+37
+00:21:12.765 --> 00:21:13.885
+like searching techniques.
+
+38
+00:21:14.735 --> 00:21:16.305
+Okay? I will share the screen
+
+39
+00:21:16.885 --> 00:21:19.265
+and, uh, we'll go through one by one.
+
+40
+00:21:22.025 --> 00:21:25.485
+Okay? So,
+
+41
+00:21:27.955 --> 00:21:29.685
+Okay, let me open Google map.
+
+42
+00:21:29.745 --> 00:21:31.205
+So lemme show you one example,
+
+43
+00:21:42.395 --> 00:21:43.395
+Okay?
+
+44
+00:21:43.915 --> 00:21:48.605
+Here, suppose my place is currently, uh, uh,
+
+45
+00:21:49.945 --> 00:21:52.765
+so here from this place, I want to go to hva.
+
+46
+00:21:55.185 --> 00:21:55.475
+Okay?
+
+47
+00:22:06.005 --> 00:22:07.285
+I click on the direction,
+
+48
+00:22:11.495 --> 00:22:12.475
+choose suppose.
+
+49
+00:22:19.355 --> 00:22:19.645
+Yeah,
+
+50
+00:22:35.505 --> 00:22:35.995
+suppose
+
+51
+00:22:54.525 --> 00:22:58.735
+Okay, Now you are able to see multiple,
+
+52
+00:22:58.795 --> 00:23:00.015
+you know, uh, pathways.
+
+53
+00:23:00.555 --> 00:23:03.415
+So we are having one pathway, second pathway, third pathway,
+
+54
+00:23:03.465 --> 00:23:05.575
+three, uh, you know, directions are there.
+
+55
+00:23:06.475 --> 00:23:10.295
+So AI systems are basically, they're in a state,
+
+56
+00:23:10.465 --> 00:23:12.175
+state was an initial state,
+
+57
+00:23:12.445 --> 00:23:14.575
+some intermediate state, and some goals.
+
+58
+00:23:14.835 --> 00:23:18.255
+So in this case, one example being the initial state,
+
+59
+00:23:18.465 --> 00:23:22.255
+we're having this one, the colony, uh, that we're talking,
+
+60
+00:23:22.795 --> 00:23:26.775
+uh, from this version, we want to go to the hydro city.
+
+61
+00:23:27.595 --> 00:23:29.735
+Now we are having multiple pathways.
+
+62
+00:23:29.915 --> 00:23:33.535
+Now, which part is the best one? How it is determined.
+
+63
+00:23:33.535 --> 00:23:36.295
+And all these are done through some, uh, algorithm
+
+64
+00:23:36.325 --> 00:23:37.735
+that is the searching algorithms.
+
+65
+00:23:38.185 --> 00:23:40.535
+Those were actually belong from the CS background.
+
+66
+00:23:40.535 --> 00:23:41.895
+They might have heard about
+
+67
+00:23:41.895 --> 00:23:44.015
+or go, went through B, F, S and bfs.
+
+68
+00:23:44.015 --> 00:23:47.535
+Uh, have we gone through, through these algorithms B
+
+69
+00:23:47.555 --> 00:23:48.895
+for search and depth for search?
+
+70
+00:23:49.315 --> 00:23:53.015
+Yes, sir. Yes sir. BFSD, Fs. So basically, yes. Yeah.
+
+71
+00:23:53.075 --> 00:23:54.455
+So basically each
+
+72
+00:23:54.455 --> 00:23:56.695
+of the systems are having some kind of position.
+
+73
+00:23:56.995 --> 00:24:00.295
+I'm currently at my location that is the initial state.
+
+74
+00:24:00.715 --> 00:24:04.335
+My goal is state is to reach to the, uh, hydro airport
+
+75
+00:24:04.995 --> 00:24:08.335
+and intermediate, wherever I go from whichever route I take,
+
+76
+00:24:08.335 --> 00:24:10.015
+those will be my intermediate state.
+
+77
+00:24:10.115 --> 00:24:12.415
+And each of the state will be crosscheck, whether
+
+78
+00:24:12.415 --> 00:24:13.655
+that's a bold state or not.
+
+79
+00:24:14.205 --> 00:24:17.415
+Okay? So we can have like hundreds of pathways.
+
+80
+00:24:18.255 --> 00:24:21.515
+We can explore one by one post, uh, like, uh,
+
+81
+00:24:21.575 --> 00:24:23.395
+so particular following pattern.
+
+82
+00:24:24.415 --> 00:24:26.715
+And those will take a huge amount of time.
+
+83
+00:24:26.945 --> 00:24:29.315
+Otherwise, we can have exchange information.
+
+84
+00:24:29.425 --> 00:24:33.155
+Suppose, um, uh, the like, uh, you know, the average speed
+
+85
+00:24:33.155 --> 00:24:34.755
+of the road or like
+
+86
+00:24:34.755 --> 00:24:36.435
+what is the traffic condition in the road?
+
+87
+00:24:36.855 --> 00:24:39.515
+Uh, are there any like portholes or all those things,
+
+88
+00:24:39.975 --> 00:24:42.795
+or whether is there any that's a national, uh, you know,
+
+89
+00:24:42.795 --> 00:24:44.915
+highway or straight highway or normal road,
+
+90
+00:24:45.455 --> 00:24:47.395
+or there's an issue of like a tool.
+
+91
+00:24:47.575 --> 00:24:50.475
+Uh, all these factors we can into one, you know,
+
+92
+00:24:50.835 --> 00:24:53.675
+multiple path and we can cross check what is the most,
+
+93
+00:24:54.695 --> 00:24:59.315
+you know, path to take, whether that's like optimal on the,
+
+94
+00:24:59.975 --> 00:25:02.315
+that's like tool or optimal under the time.
+
+95
+00:25:02.695 --> 00:25:05.195
+And also, uh, avoiding traffic and all.
+
+96
+00:25:05.875 --> 00:25:07.455
+Now we'll go through one by one.
+
+97
+00:25:07.515 --> 00:25:10.415
+So today we are having this discussion orders, uh,
+
+98
+00:25:10.595 --> 00:25:11.895
+you know, searching techniques.
+
+99
+00:25:13.445 --> 00:25:17.295
+It's cool and how this computers actually go through each
+
+100
+00:25:17.295 --> 00:25:20.615
+of the algorithms and like, uh, makes the sense out of it.
+
+101
+00:25:20.665 --> 00:25:21.935
+Let's just understand those.
+
+102
+00:25:23.205 --> 00:25:26.305
+So the such strategies in ai, basically, uh,
+
+103
+00:25:26.305 --> 00:25:28.305
+navigation from one step to the goal state,
+
+104
+00:25:28.335 --> 00:25:30.025
+that might be game, that might be
+
+105
+00:25:30.025 --> 00:25:31.345
+your, you know, navigation.
+
+106
+00:25:31.345 --> 00:25:34.825
+That might be your, uh, uh, some, uh, searching techniques
+
+107
+00:25:34.825 --> 00:25:37.385
+or that might be suppose your, uh,
+
+108
+00:25:37.385 --> 00:25:40.785
+prompting some kind like input and expecting some output
+
+109
+00:25:41.245 --> 00:25:45.265
+and like the satisfactory state where the AI can say,
+
+110
+00:25:45.265 --> 00:25:46.465
+yeah, that is the goal.
+
+111
+00:25:46.465 --> 00:25:48.625
+That user has demanded, I have reached
+
+112
+00:25:48.655 --> 00:25:49.945
+that particular state.
+
+113
+00:25:50.335 --> 00:25:54.325
+Okay? So the basic idea is the
+
+114
+00:25:55.065 --> 00:25:59.075
+agents who are having goal, goal-based, you know, uh,
+
+115
+00:25:59.145 --> 00:26:02.835
+fundamental idea in each of the state, wherever they are,
+
+116
+00:26:02.835 --> 00:26:03.995
+initial state, mid state,
+
+117
+00:26:03.995 --> 00:26:06.475
+they will be continuously checking whether they have reached
+
+118
+00:26:06.475 --> 00:26:08.115
+the goal state or not, okay?
+
+119
+00:26:11.175 --> 00:26:12.625
+They reached the goal state or not.
+
+120
+00:26:12.805 --> 00:26:15.425
+For these things, we are having two searching algorithms.
+
+121
+00:26:15.605 --> 00:26:18.915
+One is uninformed search, okay?
+
+122
+00:26:19.255 --> 00:26:20.955
+And other is informed search.
+
+123
+00:26:21.135 --> 00:26:23.035
+In the uninformed search, okay?
+
+124
+00:26:23.465 --> 00:26:25.635
+Basically, it's a blind searching technique
+
+125
+00:26:25.685 --> 00:26:28.435
+where you have no clue about like in
+
+126
+00:26:28.435 --> 00:26:29.595
+which way you have to go.
+
+127
+00:26:29.595 --> 00:26:33.715
+Suppose, uh, as a human, if I ask you, like you want
+
+128
+00:26:33.715 --> 00:26:37.275
+to see the him, uh, like, uh, you know, mountains
+
+129
+00:26:37.275 --> 00:26:39.075
+and all, so what's the basic ideal?
+
+130
+00:26:39.105 --> 00:26:42.195
+Have I should like, move towards north direction?
+
+131
+00:26:42.495 --> 00:26:44.845
+So I'll be able to reach some kind of Himalayas.
+
+132
+00:26:45.275 --> 00:26:49.845
+Then I'll be able to explore the, you know, uh, mountains.
+
+133
+00:26:49.845 --> 00:26:51.165
+I'll be able to see, reach this.
+
+134
+00:26:51.985 --> 00:26:54.885
+Now the idea is that we are having some kind information
+
+135
+00:26:55.195 --> 00:26:56.885
+that Himalaya is on the northern parts.
+
+136
+00:26:56.905 --> 00:26:59.485
+We are going towards that. But if you're on the blind
+
+137
+00:26:59.975 --> 00:27:01.125
+means the uninformed.
+
+138
+00:27:01.505 --> 00:27:03.205
+So you'll be exploring each
+
+139
+00:27:03.205 --> 00:27:04.925
+of the square kilometer in your region
+
+140
+00:27:05.105 --> 00:27:08.365
+and expanding, you know, in some kind of pattern,
+
+141
+00:27:08.365 --> 00:27:10.005
+maybe circular, maybe GridWise.
+
+142
+00:27:10.475 --> 00:27:13.765
+Then certainly after exploring each of the parts, wherever
+
+143
+00:27:13.765 --> 00:27:15.405
+that is applicable than you, uh,
+
+144
+00:27:15.475 --> 00:27:17.885
+like you'll be finally reaching to your destination.
+
+145
+00:27:17.945 --> 00:27:20.165
+So it is more time consuming in a way.
+
+146
+00:27:20.255 --> 00:27:22.965
+Blind search techniques don't give you any pointers in which
+
+147
+00:27:22.965 --> 00:27:24.445
+direction you should be going for.
+
+148
+00:27:24.715 --> 00:27:27.815
+Okay? Now the example being we are
+
+149
+00:27:27.815 --> 00:27:29.015
+having the breakfast search.
+
+150
+00:27:30.155 --> 00:27:32.525
+Okay? Now, one example being
+
+151
+00:27:33.035 --> 00:27:35.565
+suppose the s is the initial state
+
+152
+00:27:35.565 --> 00:27:36.845
+where you are currently at.
+
+153
+00:27:36.845 --> 00:27:38.125
+So your home location
+
+154
+00:27:38.505 --> 00:27:41.725
+and A, B, C, D, E, if each
+
+155
+00:27:41.725 --> 00:27:45.125
+of the locations are being status, some kind of suppose, uh,
+
+156
+00:27:45.125 --> 00:27:46.565
+state is there, okay?
+
+157
+00:27:46.565 --> 00:27:49.365
+From one, uh, state, suppose you are from, uh,
+
+158
+00:27:50.025 --> 00:27:54.285
+you are moving to uh, uh, mother Mara, you know, uh,
+
+159
+00:27:54.285 --> 00:27:55.845
+other native states and all.
+
+160
+00:27:56.305 --> 00:27:58.445
+And finally, your, uh, goal is to reach
+
+161
+00:27:58.445 --> 00:28:01.685
+to the like high higher points, G suppose G is a state
+
+162
+00:28:01.715 --> 00:28:04.605
+that is that state I want to reach.
+
+163
+00:28:05.185 --> 00:28:08.085
+So one after other state want to explore
+
+164
+00:28:08.345 --> 00:28:10.685
+for the mountains you are having unknown from such,
+
+165
+00:28:10.685 --> 00:28:13.245
+you don't have any clue, any like prior idea
+
+166
+00:28:13.455 --> 00:28:14.965
+where the mountains can be,
+
+167
+00:28:15.065 --> 00:28:17.605
+but just you heard mountains are, there goes a snow cap.
+
+168
+00:28:18.105 --> 00:28:20.485
+So in this, uh, you know, blind search techniques
+
+169
+00:28:20.485 --> 00:28:22.805
+where you have no clue about which state to explore
+
+170
+00:28:22.805 --> 00:28:26.845
+and all basically in the break, first we go layer by layer.
+
+171
+00:28:27.055 --> 00:28:31.525
+Layer by layer means these actually information are, uh,
+
+172
+00:28:31.585 --> 00:28:33.005
+you know, sorted by tree.
+
+173
+00:28:33.715 --> 00:28:36.365
+Tree as in suppose one, the initial state,
+
+174
+00:28:36.515 --> 00:28:39.325
+what are the states I can like, uh, access, suppose
+
+175
+00:28:40.285 --> 00:28:42.165
+neighboring states, I can explore that is a ma
+
+176
+00:28:42.475 --> 00:28:43.605
+that I can explore.
+
+177
+00:28:43.705 --> 00:28:47.685
+Uh, ana, maybe I, I can explode on the south side, uh,
+
+178
+00:28:48.085 --> 00:28:49.525
+Kerala, these are the states I can explore.
+
+179
+00:28:49.525 --> 00:28:54.165
+So s initial state from this state, I can move
+
+180
+00:28:54.185 --> 00:28:55.325
+to three different states.
+
+181
+00:28:55.665 --> 00:28:58.005
+So I will have three child subs, right?
+
+182
+00:28:58.505 --> 00:29:03.005
+So A, B, C, in the case of Mara, uh, you know, Ana
+
+183
+00:29:03.005 --> 00:29:05.285
+and Carella, these kind of states I'll be having
+
+184
+00:29:06.065 --> 00:29:08.555
+from these three states, I'll be able to move
+
+185
+00:29:08.555 --> 00:29:09.875
+to further more states,
+
+186
+00:29:09.875 --> 00:29:11.715
+which are connected native neighboring states.
+
+187
+00:29:12.215 --> 00:29:13.475
+So they'll have more choice.
+
+188
+00:29:14.055 --> 00:29:17.595
+So each of the state is connect to the most, you know, uh,
+
+189
+00:29:17.595 --> 00:29:18.715
+connected states somehow.
+
+190
+00:29:18.855 --> 00:29:20.235
+So these are like one
+
+191
+00:29:20.235 --> 00:29:22.115
+of the states I'm exploring layer value.
+
+192
+00:29:22.655 --> 00:29:24.475
+So what happens in the break for search,
+
+193
+00:29:25.595 --> 00:29:28.655
+you initially search within your own state, okay?
+
+194
+00:29:28.655 --> 00:29:30.615
+Whether that's a satisfactory goal
+
+195
+00:29:30.615 --> 00:29:33.295
+or not, you're not finding the, like any mountain,
+
+196
+00:29:33.315 --> 00:29:36.335
+you're moving toward the no near running state, whatever,
+
+197
+00:29:36.355 --> 00:29:37.495
+the next immediate state.
+
+198
+00:29:37.555 --> 00:29:39.335
+So you explore the level wise.
+
+199
+00:29:39.395 --> 00:29:42.245
+So A and B, if you are satisfied with
+
+200
+00:29:42.245 --> 00:29:43.925
+that, that is gold state.
+
+201
+00:29:43.945 --> 00:29:45.285
+You have reached, you close the program,
+
+202
+00:29:45.705 --> 00:29:48.445
+but if you are not satisfied, whatever the connected states
+
+203
+00:29:48.545 --> 00:29:51.645
+of A and B, then you'll find the d, EF,
+
+204
+00:29:51.645 --> 00:29:53.165
+that those are the connected state
+
+205
+00:29:53.385 --> 00:29:55.885
+and those you'll expect on this layer.
+
+206
+00:29:56.065 --> 00:29:57.805
+If you're finding that one, that is fine.
+
+207
+00:29:57.905 --> 00:29:59.965
+If you're not finding, then you'll go to the next layer.
+
+208
+00:29:59.965 --> 00:30:04.045
+Next, next layer. Finally, until you reach the goal state,
+
+209
+00:30:04.155 --> 00:30:05.645
+that is the with first search.
+
+210
+00:30:06.265 --> 00:30:10.325
+So one thing that is there, it will find you the solution.
+
+211
+00:30:11.025 --> 00:30:14.365
+It might take like ages, you might become old, okay?
+
+212
+00:30:14.505 --> 00:30:17.725
+But eventually reach the goal state and you'll explore.
+
+213
+00:30:17.825 --> 00:30:20.565
+All of the ebook are mostly possible states
+
+214
+00:30:20.565 --> 00:30:21.685
+that you have to go through.
+
+215
+00:30:22.025 --> 00:30:23.245
+So that is one of the algorithm
+
+216
+00:30:23.245 --> 00:30:24.645
+that is the uninformed search
+
+217
+00:30:24.645 --> 00:30:26.845
+where we don't give you any pointers,
+
+218
+00:30:27.395 --> 00:30:29.045
+basically layer by layers.
+
+219
+00:30:29.265 --> 00:30:32.005
+You search everything, whether that's a gold state or not.
+
+220
+00:30:32.965 --> 00:30:36.405
+Likewise, we are having dip for search in this one.
+
+221
+00:30:36.595 --> 00:30:39.365
+Instead of going layer by layer, we directly go
+
+222
+00:30:39.365 --> 00:30:44.005
+to the depth, depth as in from S to a, A to D, D
+
+223
+00:30:44.025 --> 00:30:46.085
+to C, like in depth will move.
+
+224
+00:30:46.755 --> 00:30:50.845
+Okay? Once you explore that is like each of the state A, uh,
+
+225
+00:30:50.875 --> 00:30:53.445
+from A to S to A, is that a goal state?
+
+226
+00:30:53.545 --> 00:30:57.885
+No A to D, whether that's supposed state, no D two C,
+
+227
+00:30:57.885 --> 00:31:00.925
+whether that's supposed no, then it'll traverses back.
+
+228
+00:31:01.185 --> 00:31:04.405
+So it having a thing, uh, like a fundamental idea
+
+229
+00:31:04.405 --> 00:31:05.845
+that is like backtracking.
+
+230
+00:31:06.585 --> 00:31:10.695
+So it can move to one state away from C 2D
+
+231
+00:31:10.695 --> 00:31:12.455
+because C is not having any child notes.
+
+232
+00:31:12.715 --> 00:31:15.135
+So C 2D in this state,
+
+233
+00:31:15.465 --> 00:31:18.215
+it'll say whether any other pathways are there or not.
+
+234
+00:31:18.395 --> 00:31:21.495
+So from D it says that unexplored question is there,
+
+235
+00:31:21.495 --> 00:31:23.535
+that is a e, it'll move towards E.
+
+236
+00:31:24.075 --> 00:31:26.215
+And again, check E is a gold straight, no.
+
+237
+00:31:26.475 --> 00:31:29.215
+So E is any further, you know, child notes, no.
+
+238
+00:31:29.405 --> 00:31:33.215
+Then it'll back to D, then D to any other state
+
+239
+00:31:33.325 --> 00:31:37.855
+that is unexplored, no then moves to a then A to e,
+
+240
+00:31:38.805 --> 00:31:41.645
+E to F like this, it traverses in a way,
+
+241
+00:31:41.665 --> 00:31:42.725
+in a depth first search.
+
+242
+00:31:43.095 --> 00:31:44.405
+First it'll go to the depth
+
+243
+00:31:44.825 --> 00:31:47.885
+and will do the backtrack to explore the unexplored,
+
+244
+00:31:48.185 --> 00:31:49.405
+you know, equations of states.
+
+245
+00:31:50.145 --> 00:31:53.325
+So this is how the depth first search also, uh,
+
+246
+00:31:53.385 --> 00:31:54.565
+you know, use this subject.
+
+247
+00:31:55.025 --> 00:31:58.485
+Now, this BFS and DFS is a, like a very tricky algorithm.
+
+248
+00:31:58.555 --> 00:32:03.005
+Suppose, uh, in various ways the, you know, uh,
+
+249
+00:32:03.925 --> 00:32:06.025
+the gold state may be on the shallow notes.
+
+250
+00:32:06.285 --> 00:32:08.865
+So suppose this is like full layer of, you know,
+
+251
+00:32:09.145 --> 00:32:11.225
+architecture where we are searching.
+
+252
+00:32:11.415 --> 00:32:13.265
+Suppose there are like hundreds of depths.
+
+253
+00:32:13.265 --> 00:32:16.385
+Are there, like hundred of depth is there on the hundred
+
+254
+00:32:16.485 --> 00:32:18.625
+of depth, the sa in the salon nodes.
+
+255
+00:32:18.685 --> 00:32:21.025
+If a gold state is there, then you don't need to go
+
+256
+00:32:21.025 --> 00:32:22.785
+for the depth D Fs.
+
+257
+00:32:23.445 --> 00:32:26.825
+And in case of like a DFS, the
+
+258
+00:32:27.435 --> 00:32:28.905
+depth node is very high.
+
+259
+00:32:29.015 --> 00:32:31.665
+Then like both rates are mostly on the lower side.
+
+260
+00:32:31.815 --> 00:32:32.825
+Then go for the depth.
+
+261
+00:32:33.605 --> 00:32:35.945
+So based on your like personal preference
+
+262
+00:32:35.965 --> 00:32:40.525
+or like personal, you know, problem you define whites,
+
+263
+00:32:40.615 --> 00:32:43.125
+algorithms you can use to mitigate this problem.
+
+264
+00:32:43.145 --> 00:32:46.725
+So DFS and DFS have been like a, uh, a part
+
+265
+00:32:46.725 --> 00:32:49.125
+of the computer science, uh, whole architecture
+
+266
+00:32:49.125 --> 00:32:50.525
+for searching techniques, uh,
+
+267
+00:32:50.545 --> 00:32:51.885
+for the longest period of time.
+
+268
+00:32:52.025 --> 00:32:53.885
+So we have been using this for a long period of time.
+
+269
+00:32:54.745 --> 00:32:58.245
+Now this has been useful, but it has a like massive problem.
+
+270
+00:32:58.515 --> 00:33:01.975
+That is, it takes huge amount of time, okay?
+
+271
+00:33:02.635 --> 00:33:05.295
+Uh, the space complexity is very high.
+
+272
+00:33:05.955 --> 00:33:09.175
+Uh, and another problem, not problem, like, uh,
+
+273
+00:33:09.175 --> 00:33:11.455
+optimization is um, not a thing,
+
+274
+00:33:11.515 --> 00:33:14.695
+but it will find you the solution that is like for you,
+
+275
+00:33:14.695 --> 00:33:16.215
+that's the like best part of it.
+
+276
+00:33:16.795 --> 00:33:19.015
+The BFS and DFS will have a solution.
+
+277
+00:33:20.995 --> 00:33:24.495
+Now, another thing that is the like, uh, came into play,
+
+278
+00:33:24.495 --> 00:33:26.375
+that is the informed search, okay?
+
+279
+00:33:26.755 --> 00:33:29.775
+So informed search is what along with the, each
+
+280
+00:33:29.775 --> 00:33:32.925
+of the state, we provide a secondary data
+
+281
+00:33:33.545 --> 00:33:36.765
+to make the decision better and which way it should move.
+
+282
+00:33:37.595 --> 00:33:40.805
+Suppose in the state, if I provide some kind of elevation,
+
+283
+00:33:42.335 --> 00:33:45.315
+so one of the key area, or suppose that's in north
+
+284
+00:33:45.335 --> 00:33:46.675
+or south, so each
+
+285
+00:33:46.675 --> 00:33:49.115
+of the state I'm providing north side or south side.
+
+286
+00:33:49.975 --> 00:33:53.595
+Now, it'll able to check, okay, A is our southern state,
+
+287
+00:33:53.595 --> 00:33:55.795
+that is Kerala B is our northern state.
+
+288
+00:33:55.795 --> 00:33:59.075
+That is the Mara Mara,
+
+289
+00:33:59.075 --> 00:34:00.795
+I'll be moving towards North Street.
+
+290
+00:34:01.115 --> 00:34:04.795
+Supposed, uh, uh, I'll be having some maybe.
+
+291
+00:34:05.615 --> 00:34:09.995
+So if I having that extra parameter where I'll be able
+
+292
+00:34:09.995 --> 00:34:12.755
+to check in these direction, I should be moving
+
+293
+00:34:13.175 --> 00:34:14.515
+to reach my goal fast.
+
+294
+00:34:15.435 --> 00:34:18.575
+So I, I am moving towards north. So one parameter maybe.
+
+295
+00:34:19.075 --> 00:34:21.215
+So in the informed search, in each of the state,
+
+296
+00:34:21.395 --> 00:34:22.975
+we provide extra parameter
+
+297
+00:34:23.355 --> 00:34:25.615
+and that is known as like heuristic search.
+
+298
+00:34:26.155 --> 00:34:29.015
+And that actually helped us to optimize this algorithm
+
+299
+00:34:29.315 --> 00:34:31.815
+and like a very efficient manner.
+
+300
+00:34:32.055 --> 00:34:35.535
+I just saw you, the map, multiple pathways are there no
+
+301
+00:34:36.295 --> 00:34:38.495
+multiple pathways are there in the BFS
+
+302
+00:34:38.495 --> 00:34:41.135
+and DFS, you can explore the pathways like this
+
+303
+00:34:42.955 --> 00:34:45.535
+or in DFS, the pathways will be like this,
+
+304
+00:34:53.945 --> 00:34:54.235
+okay?
+
+305
+00:34:54.895 --> 00:34:57.515
+But in heuristic, when you added information will be there
+
+306
+00:34:57.515 --> 00:35:00.515
+based on that, it'll reach your goal state faster.
+
+307
+00:35:00.815 --> 00:35:03.355
+So that is much more optimized, okay?
+
+308
+00:35:05.015 --> 00:35:06.315
+Now in this inform search,
+
+309
+00:35:06.405 --> 00:35:08.115
+we're providing the extra information
+
+310
+00:35:08.115 --> 00:35:10.435
+that is the heuristic hm factor
+
+311
+00:35:11.625 --> 00:35:13.885
+and the example being suppose in A GPS.
+
+312
+00:35:13.885 --> 00:35:15.405
+So you are navigating to some place
+
+313
+00:35:15.985 --> 00:35:18.645
+and you're basically seeing state line distances there.
+
+314
+00:35:18.945 --> 00:35:20.005
+That's a heuristic.
+
+315
+00:35:20.005 --> 00:35:22.005
+It tells you to getting closer to the distance
+
+316
+00:35:22.005 --> 00:35:24.445
+and even the road is curved, okay?
+
+317
+00:35:25.025 --> 00:35:27.885
+I'm having like this much like a time, something like that.
+
+318
+00:35:27.995 --> 00:35:32.445
+That is the heuristic guidelines that we are actually, uh,
+
+319
+00:35:32.475 --> 00:35:34.125
+able to provide from the heuristic search.
+
+320
+00:35:34.675 --> 00:35:37.355
+Estimated times and all. Okay?
+
+321
+00:35:38.015 --> 00:35:41.075
+So basic idea, I hope you understand about this uninformed,
+
+322
+00:35:41.075 --> 00:35:43.275
+such an informed search that is, uh, one is
+
+323
+00:35:43.965 --> 00:35:45.305
+we are not providing extra
+
+324
+00:35:45.305 --> 00:35:46.865
+parameters in the uninformed search.
+
+325
+00:35:46.925 --> 00:35:48.865
+We are having, uh, very, you know,
+
+326
+00:35:48.865 --> 00:35:50.025
+this is a good force method.
+
+327
+00:35:50.765 --> 00:35:52.745
+We exclude each state one by one
+
+328
+00:35:52.765 --> 00:35:55.745
+and we find out whether the goal state has been met or not.
+
+329
+00:35:56.005 --> 00:35:57.825
+The AI agent will check, okay,
+
+330
+00:35:57.925 --> 00:35:59.105
+we have reached our goal state,
+
+331
+00:35:59.165 --> 00:36:00.865
+we should stop the algorithm searching
+
+332
+00:36:00.865 --> 00:36:02.025
+and we provide the results.
+
+333
+00:36:02.805 --> 00:36:05.215
+Or maybe in the case of chess,
+
+334
+00:36:05.515 --> 00:36:07.815
+we have reached the goal state, okay?
+
+335
+00:36:07.815 --> 00:36:09.135
+Suppose I am made a move.
+
+336
+00:36:09.645 --> 00:36:12.255
+They have made a move and after move,
+
+337
+00:36:12.255 --> 00:36:15.095
+after move, wherever they have reached like gold state
+
+338
+00:36:15.095 --> 00:36:18.335
+winning straight for them, they'll be stopping the next, uh,
+
+339
+00:36:19.115 --> 00:36:20.735
+no, uh, this whole algorithm.
+
+340
+00:36:20.835 --> 00:36:23.575
+And they say that the final gold state has been breached
+
+341
+00:36:23.675 --> 00:36:25.335
+and in France, us, they'll be actually
+
+342
+00:36:25.905 --> 00:36:28.455
+after your move, they'll be actually observing
+
+343
+00:36:28.455 --> 00:36:29.495
+and showing the patterns.
+
+344
+00:36:29.565 --> 00:36:31.855
+Okay, if I move towards this direction,
+
+345
+00:36:32.085 --> 00:36:33.815
+I'll have a lower chances of winning.
+
+346
+00:36:33.955 --> 00:36:37.175
+So if I move towards this path where this states, okay,
+
+347
+00:36:37.285 --> 00:36:38.815
+I'll be having hard chance of winning.
+
+348
+00:36:38.955 --> 00:36:41.055
+So I'll uh, show you with a puzzle example
+
+349
+00:36:41.155 --> 00:36:42.335
+how these are came into play.
+
+350
+00:36:42.925 --> 00:36:45.535
+Okay? Now the complexity for the time complexity
+
+351
+00:36:45.535 --> 00:36:46.615
+and space complexity,
+
+352
+00:36:47.035 --> 00:36:50.455
+the uninformed search takes huge amount of time in case
+
+353
+00:36:50.455 --> 00:36:53.015
+of an info search, because we are adding extra parameters.
+
+354
+00:36:53.035 --> 00:36:54.615
+So it takes lower amount of time
+
+355
+00:36:54.635 --> 00:36:56.455
+and lower amount of space complexity
+
+356
+00:36:56.555 --> 00:36:58.455
+for your searching algorithms.
+
+357
+00:36:58.875 --> 00:37:01.055
+For example, being, uh, for breakfast search
+
+358
+00:37:01.115 --> 00:37:03.095
+or first search in on form search.
+
+359
+00:37:03.155 --> 00:37:05.215
+In inform search we are having a star algorithm.
+
+360
+00:37:05.235 --> 00:37:09.295
+We are having, we are having, uh, minimax algorithm,
+
+361
+00:37:09.315 --> 00:37:10.695
+we having alpha ping.
+
+362
+00:37:10.695 --> 00:37:12.095
+So multiple algorithms are there.
+
+363
+00:37:12.475 --> 00:37:14.775
+The form search, based on the case, on case basis,
+
+364
+00:37:14.825 --> 00:37:18.125
+which algorithm is, you know, applicable in your case.
+
+365
+00:37:18.665 --> 00:37:21.645
+So based use whenever informed searches involved.
+
+366
+00:37:21.785 --> 00:37:24.365
+If you're having small amount of P data states,
+
+367
+00:37:24.425 --> 00:37:28.565
+you are available, uh, then you are good to go
+
+368
+00:37:28.565 --> 00:37:30.125
+with the DFS and DFS
+
+369
+00:37:30.125 --> 00:37:32.685
+and you are having huge complex problems and all.
+
+370
+00:37:32.685 --> 00:37:35.325
+Suppose in a chase you can have billions of no,
+
+371
+00:37:35.465 --> 00:37:36.885
+no combinations of the, uh,
+
+372
+00:37:36.885 --> 00:37:39.005
+like different pieces in the different position.
+
+373
+00:37:39.625 --> 00:37:42.845
+Uh, and if you want to like, uh, go for the, like a bowl
+
+374
+00:37:43.015 --> 00:37:45.765
+where the winning state is there for the like a computer,
+
+375
+00:37:46.465 --> 00:37:49.765
+uh, that's, uh, that will be like a enormous amount of time.
+
+376
+00:37:49.905 --> 00:37:52.565
+You won't be able to solve this with the onion phone search.
+
+377
+00:37:53.385 --> 00:37:56.005
+So the complexity pathway, these are like all
+
+378
+00:37:56.525 --> 00:37:58.405
+relative factors where you are applying one of
+
+379
+00:37:58.625 --> 00:38:00.805
+or the others, okay?
+
+380
+00:38:00.945 --> 00:38:03.405
+So real world example means one of the algorithms,
+
+381
+00:38:03.405 --> 00:38:07.365
+the A studies and the both are backbone of the Google map.
+
+382
+00:38:07.365 --> 00:38:10.765
+Your regularly day to day, day by day you are using, okay?
+
+383
+00:38:11.505 --> 00:38:14.525
+Uh, theta is also shortest path finding algorithm.
+
+384
+00:38:14.725 --> 00:38:16.005
+A star algorithm is, uh,
+
+385
+00:38:16.005 --> 00:38:18.965
+finding which other path from the shortest path algorithm
+
+386
+00:38:19.145 --> 00:38:20.645
+out like 3, 4, 5.
+
+387
+00:38:20.985 --> 00:38:24.005
+So which one you should take something like that, uh,
+
+388
+00:38:24.035 --> 00:38:25.325
+from the external algorithm.
+
+389
+00:38:25.865 --> 00:38:28.405
+Now in the game, I suppose you're playing, uh, some kind
+
+390
+00:38:28.405 --> 00:38:31.365
+of game where, uh, two players are involved.
+
+391
+00:38:31.535 --> 00:38:35.690
+Chase ludo or tic-tac toe, some, uh, puzzle solving problems
+
+392
+00:38:35.690 --> 00:38:37.045
+and not in those things.
+
+393
+00:38:37.195 --> 00:38:40.165
+Also, this algorithms are very much useful.
+
+394
+00:38:40.225 --> 00:38:42.845
+So we are go mostly going for the Minimax algorithm
+
+395
+00:38:43.305 --> 00:38:45.005
+or alpha beta pruning in the game AI
+
+396
+00:38:45.265 --> 00:38:46.805
+and the robotics as well.
+
+397
+00:38:46.985 --> 00:38:51.525
+We use, uh, like various these uh, this kind algorithms
+
+398
+00:38:51.545 --> 00:38:53.085
+and you might have heard this, uh,
+
+399
+00:38:53.165 --> 00:38:55.045
+like a reinforcement learning algorithm
+
+400
+00:38:55.435 --> 00:38:57.205
+that is also like a derivative form
+
+401
+00:38:57.265 --> 00:38:58.565
+of these algorithms only.
+
+402
+00:39:01.575 --> 00:39:03.235
+So you go into a little bit of
+
+403
+00:39:05.645 --> 00:39:08.455
+this algorithm depth and we'll understand by an example,
+
+404
+00:39:16.745 --> 00:39:17.035
+okay?
+
+405
+00:39:18.095 --> 00:39:20.035
+So each of the, you know, this, uh,
+
+406
+00:39:20.375 --> 00:39:24.025
+AI agents will be having some kind of, uh,
+
+407
+00:39:24.475 --> 00:39:26.185
+parameters associated with them
+
+408
+00:39:26.365 --> 00:39:29.305
+and they'll be continuously checking one thing
+
+409
+00:39:29.305 --> 00:39:32.425
+that will be there, that is a state, state as in whether
+
+410
+00:39:32.425 --> 00:39:35.865
+that's a gold state or that's a non gold state, okay?
+
+411
+00:39:35.865 --> 00:39:38.425
+Intermediate state or in missile state, something like that.
+
+412
+00:39:39.005 --> 00:39:41.585
+So states can be like one variable
+
+413
+00:39:41.585 --> 00:39:45.425
+where you are inciting information, uh, it's initial state
+
+414
+00:39:45.525 --> 00:39:48.505
+or intermediate state or the gold state, fine.
+
+415
+00:39:49.055 --> 00:39:52.105
+Then in each of the state, what are the options
+
+416
+00:39:52.175 --> 00:39:55.425
+that AI agents can take with the two, you know,
+
+417
+00:39:55.515 --> 00:39:58.145
+going downwards, going left, going upwards.
+
+418
+00:39:58.405 --> 00:40:00.105
+So what are the actions they're having from
+
+419
+00:40:00.125 --> 00:40:01.305
+one state to another state?
+
+420
+00:40:01.305 --> 00:40:02.985
+They, if they want to move, like
+
+421
+00:40:03.255 --> 00:40:04.545
+what are the options they are having?
+
+422
+00:40:04.725 --> 00:40:07.025
+So they, those are the actions they're being
+
+423
+00:40:07.265 --> 00:40:10.105
+provided within the state and the target
+
+424
+00:40:10.215 --> 00:40:11.265
+that is the gold state.
+
+425
+00:40:11.365 --> 00:40:13.385
+If the gold state and normal state matches,
+
+426
+00:40:13.535 --> 00:40:16.545
+then their algorithms, uh, like stops there
+
+427
+00:40:16.925 --> 00:40:18.025
+and you know,
+
+428
+00:40:18.375 --> 00:40:21.065
+they're actually all the searching things is over.
+
+429
+00:40:21.525 --> 00:40:24.065
+So just the, like each of the parameters
+
+430
+00:40:24.065 --> 00:40:25.665
+and their working principles.
+
+431
+00:40:26.395 --> 00:40:30.495
+Now, initial state will be having the starting point, okay?
+
+432
+00:40:31.205 --> 00:40:34.655
+Actions set of possible moves from that current state
+
+433
+00:40:34.795 --> 00:40:37.375
+to the like available successful state
+
+434
+00:40:37.795 --> 00:40:39.655
+and from there more successful states
+
+435
+00:40:39.715 --> 00:40:40.895
+and all those would be there.
+
+436
+00:40:41.375 --> 00:40:44.125
+Transition model data is the new state, uh, given
+
+437
+00:40:44.125 --> 00:40:48.115
+that the ace have accent, some kind accent they have checked
+
+438
+00:40:49.045 --> 00:40:51.035
+after moving to the new state, they'll be doing
+
+439
+00:40:51.035 --> 00:40:53.395
+what goal test whether the goal has been reached or not.
+
+440
+00:40:53.815 --> 00:40:57.435
+And another thing they'll be calculating from previous state
+
+441
+00:40:57.435 --> 00:41:00.475
+to the current states they have moved what is the path?
+
+442
+00:41:00.775 --> 00:41:04.835
+So in case of like, uh, an example of being uh, you know,
+
+443
+00:41:04.905 --> 00:41:07.915
+this map and also what is the time they have consumed
+
+444
+00:41:07.935 --> 00:41:10.675
+to reach from one, uh, current portion to another portion
+
+445
+00:41:10.935 --> 00:41:14.475
+to reach two to uh, see an example.
+
+446
+00:41:14.665 --> 00:41:17.955
+Here we are having one, you know, this puzzle.
+
+447
+00:41:19.845 --> 00:41:23.535
+This puzzle is basically, it is a no box
+
+448
+00:41:24.105 --> 00:41:25.855
+where eight digits are there,
+
+449
+00:41:36.785 --> 00:41:38.365
+one to eight portions are there,
+
+450
+00:41:39.065 --> 00:41:42.225
+and your goal is to select, you know,
+
+451
+00:41:42.225 --> 00:41:43.665
+sequentially adding them.
+
+452
+00:41:43.925 --> 00:41:46.385
+And on the last portion, this blank should be there.
+
+453
+00:41:46.845 --> 00:41:49.105
+So you are having the options to move two
+
+454
+00:41:49.125 --> 00:41:50.145
+to this blank portion
+
+455
+00:41:50.165 --> 00:41:54.265
+or eight to slide eight to this portion, uh, middle portion
+
+456
+00:41:54.485 --> 00:41:57.305
+or four to this question or six to this question.
+
+457
+00:41:57.365 --> 00:42:01.735
+So each of the, you know, uh, state will have some kind
+
+458
+00:42:01.735 --> 00:42:05.135
+of options where they can move, um, left, right, or up
+
+459
+00:42:05.135 --> 00:42:06.175
+or down, okay?
+
+460
+00:42:06.235 --> 00:42:08.215
+If the blank spaces adjacent towards,
+
+461
+00:42:08.795 --> 00:42:12.095
+so from this portion we can see four more successive options
+
+462
+00:42:12.405 --> 00:42:14.815
+that we can take to like go, go
+
+463
+00:42:14.815 --> 00:42:17.095
+to the next no successive state.
+
+464
+00:42:17.395 --> 00:42:19.255
+So this is suppose our initial state.
+
+465
+00:42:19.335 --> 00:42:20.735
+I want to solve that puzzle.
+
+466
+00:42:21.435 --> 00:42:25.095
+So the successive state will be in the first, uh, no, this
+
+467
+00:42:25.665 --> 00:42:30.295
+state we have moved this two to the bottom end, this one.
+
+468
+00:42:30.725 --> 00:42:33.375
+Okay? It'll take whether that's a gold state, no.
+
+469
+00:42:34.145 --> 00:42:36.365
+Now secondary state, what can be done from there?
+
+470
+00:42:36.915 --> 00:42:41.715
+Initial question, we can move this four to the left. Okay?
+
+471
+00:42:41.715 --> 00:42:45.545
+There, it'll again check the gold state, no successively.
+
+472
+00:42:45.845 --> 00:42:48.785
+The other option, they will also explore, okay,
+
+473
+00:42:52.015 --> 00:42:53.075
+so moving six
+
+474
+00:42:53.255 --> 00:42:54.635
+and moving as well as eight,
+
+475
+00:42:54.715 --> 00:42:56.155
+whether they're gold state or not.
+
+476
+00:42:56.805 --> 00:42:58.115
+After moving this portion,
+
+477
+00:43:04.245 --> 00:43:06.975
+each of the state, again, they will move the blank portion.
+
+478
+00:43:07.245 --> 00:43:11.035
+Some, some of the stages, it'll have again some kind
+
+479
+00:43:11.035 --> 00:43:13.795
+of options whether states are there some substrate,
+
+480
+00:43:14.045 --> 00:43:15.755
+it'll again check the gold state or not.
+
+481
+00:43:15.975 --> 00:43:18.075
+And subsequently it'll move on
+
+482
+00:43:18.095 --> 00:43:20.795
+and on until they reach to the final state.
+
+483
+00:43:21.335 --> 00:43:23.795
+Now, in these things we can directly go
+
+484
+00:43:24.415 --> 00:43:26.755
+and use A-B-F-S-D-F-S Layer.
+
+485
+00:43:26.765 --> 00:43:29.115
+Layer. They will be actually going each of the state,
+
+486
+00:43:29.295 --> 00:43:32.195
+if I do this combination, combination, whether we're able
+
+487
+00:43:32.195 --> 00:43:33.555
+to reach the final state or not.
+
+488
+00:43:34.175 --> 00:43:38.075
+And finally with the B-F-S-D-S, you'll be able to find that,
+
+489
+00:43:38.175 --> 00:43:39.675
+but with a huge amount of,
+
+490
+00:43:39.675 --> 00:43:41.035
+you know, straight searching techniques.
+
+491
+00:43:41.055 --> 00:43:45.555
+So the combinations being we are having almost like 180 2000
+
+492
+00:43:45.555 --> 00:43:47.035
+possibilities this month.
+
+493
+00:43:47.175 --> 00:43:50.265
+So this combinations a huge amount of number.
+
+494
+00:43:50.765 --> 00:43:53.945
+So in this one, if we actually able to provide some kind,
+
+495
+00:43:54.245 --> 00:43:56.705
+you know, extra information, okay?
+
+496
+00:43:57.205 --> 00:44:00.105
+Uh, if you're at this state that will be better
+
+497
+00:44:00.165 --> 00:44:01.545
+to reach towards goal state.
+
+498
+00:44:01.725 --> 00:44:02.825
+So that is the goal.
+
+499
+00:44:03.455 --> 00:44:07.145
+What we have in our mind, so already understood this one,
+
+500
+00:44:07.295 --> 00:44:09.985
+like how each of the state is representing each
+
+501
+00:44:09.985 --> 00:44:14.345
+of the patients from here, we want to reach to the patients
+
+502
+00:44:14.345 --> 00:44:15.905
+where the goal state has been met.
+
+503
+00:44:15.925 --> 00:44:17.665
+So multiple pathways can be there,
+
+504
+00:44:17.665 --> 00:44:19.665
+which path is better for you?
+
+505
+00:44:19.965 --> 00:44:21.945
+So that is actually minimizing the time
+
+506
+00:44:22.085 --> 00:44:24.705
+for the you searching and getting to the goal state.
+
+507
+00:44:25.355 --> 00:44:28.455
+So the BFS D has already discussed, we'll go with the layer
+
+508
+00:44:28.455 --> 00:44:31.015
+by layer or with depth that is there.
+
+509
+00:44:31.125 --> 00:44:35.475
+There, okay? So there's a simple, you know, code.
+
+510
+00:44:35.615 --> 00:44:38.315
+Uh, each of these are actually al already uploaded
+
+511
+00:44:38.455 --> 00:44:40.275
+and uploaded in your LMS.
+
+512
+00:44:40.275 --> 00:44:43.635
+So you can, uh, go through them and pick them.
+
+513
+00:44:44.815 --> 00:44:48.275
+Now after this D-F-S-D-S, which are basically going layer
+
+514
+00:44:48.275 --> 00:44:51.075
+by layer and checking whether the full state has been met,
+
+515
+00:44:51.735 --> 00:44:53.675
+the inform that is the A start.
+
+516
+00:44:53.885 --> 00:44:56.195
+Let's just go through this thing,
+
+517
+00:45:09.625 --> 00:45:09.915
+okay?
+
+518
+00:45:10.375 --> 00:45:11.875
+In the A start, what is happening?
+
+519
+00:45:12.255 --> 00:45:14.355
+We are providing the extra be of information.
+
+520
+00:45:15.985 --> 00:45:18.845
+Now all move this one. Okay?
+
+521
+00:45:23.705 --> 00:45:28.005
+So suppose these are your states. S is your initial state.
+
+522
+00:45:28.965 --> 00:45:32.045
+F is a state where your goal state is reaching.
+
+523
+00:45:32.605 --> 00:45:33.685
+M is a state where the,
+
+524
+00:45:33.685 --> 00:45:35.885
+your goal state has been, you know, achieved.
+
+525
+00:45:36.345 --> 00:45:39.205
+So multiple pathways can be there from S two, you can move
+
+526
+00:45:39.205 --> 00:45:41.605
+to A, you can move to B, you can move to C.
+
+527
+00:45:41.795 --> 00:45:44.645
+Okay, A can move to D and e.
+
+528
+00:45:44.645 --> 00:45:46.485
+Subsequently, multiple moves are there.
+
+529
+00:45:46.905 --> 00:45:49.645
+Now multiple numbers hasn't been like initiate.
+
+530
+00:45:49.715 --> 00:45:51.165
+What are these numbers? I'll tell you.
+
+531
+00:45:51.985 --> 00:45:54.325
+So each of these
+
+532
+00:45:55.035 --> 00:45:57.045
+from s it is sewing seven.
+
+533
+00:45:57.465 --> 00:46:01.845
+The seven is sewing the number that is there, uh, you know,
+
+534
+00:46:01.945 --> 00:46:05.825
+uh, gn, gn as in estimated value,
+
+535
+00:46:06.425 --> 00:46:10.585
+I should be actually no, uh, uh, the cost
+
+536
+00:46:12.215 --> 00:46:14.545
+from this state to reach to the goal state.
+
+537
+00:46:14.565 --> 00:46:18.505
+So if I spend seven amount of units, okay, from a state,
+
+538
+00:46:18.925 --> 00:46:22.465
+if I spend seven amount of units, then I'll be able
+
+539
+00:46:22.465 --> 00:46:23.745
+to reach to the goal state.
+
+540
+00:46:23.855 --> 00:46:27.105
+That is the heuristic information I'm providing, right?
+
+541
+00:46:27.495 --> 00:46:29.945
+Suppose um, I want to reach to the goal state.
+
+542
+00:46:30.285 --> 00:46:33.185
+So it is saying seven hours of time you need, okay,
+
+543
+00:46:33.485 --> 00:46:34.545
+to reach to the goal state.
+
+544
+00:46:34.565 --> 00:46:36.585
+So one city to another city, suppose I'm traveling.
+
+545
+00:46:36.925 --> 00:46:39.385
+So you have a option to go to A,
+
+546
+00:46:39.975 --> 00:46:42.225
+that suppose is taking five, okay?
+
+547
+00:46:42.885 --> 00:46:45.625
+And uh, five, after reaching five A is saying
+
+548
+00:46:46.185 --> 00:46:47.545
+I have a goal straight of zero.
+
+549
+00:46:48.535 --> 00:46:50.525
+Okay? So,
+
+550
+00:46:50.785 --> 00:46:54.285
+and from S to B you are going like
+
+551
+00:46:55.505 --> 00:46:56.605
+do the calculation.
+
+552
+00:46:56.605 --> 00:46:56.805
+So
+
+553
+00:47:13.485 --> 00:47:16.105
+now for each of the state, they'll be calculating some
+
+554
+00:47:16.765 --> 00:47:18.025
+uh, formulation.
+
+555
+00:47:18.485 --> 00:47:22.565
+The initial state, the only information they're having
+
+556
+00:47:23.805 --> 00:47:25.575
+initial state is okay,
+
+557
+00:47:30.935 --> 00:47:32.225
+cost function is seven.
+
+558
+00:47:33.595 --> 00:47:35.085
+From S what are the states?
+
+559
+00:47:35.085 --> 00:47:38.085
+They can move, they can move to A, they can move to B
+
+560
+00:47:38.305 --> 00:47:39.685
+and they can move to C.
+
+561
+00:47:40.575 --> 00:47:42.905
+Okay? For each of the states, they'll be checking
+
+562
+00:47:42.975 --> 00:47:45.585
+what are the cost function associated with this one
+
+563
+00:47:46.045 --> 00:47:48.825
+for moving to a, they're having cost function,
+
+564
+00:47:48.825 --> 00:47:50.695
+that is the five.
+
+565
+00:47:51.595 --> 00:47:54.015
+And they'll be also adding this parameter.
+
+566
+00:47:54.235 --> 00:47:57.375
+The, the function is given here.
+
+567
+00:47:58.705 --> 00:48:03.505
+So you, Okay,
+
+568
+00:48:03.705 --> 00:48:05.905
+F is to GN plus agent.
+
+569
+00:48:06.285 --> 00:48:08.585
+GN is your cost
+
+570
+00:48:08.645 --> 00:48:12.505
+to like a move from the initial no to the current node.
+
+571
+00:48:12.525 --> 00:48:16.465
+So there's a cumulative value and HS heuristic value.
+
+572
+00:48:16.805 --> 00:48:20.305
+So what is the amount the state will, may take
+
+573
+00:48:20.685 --> 00:48:21.865
+to reach to the gold state?
+
+574
+00:48:21.975 --> 00:48:25.785
+Fine. Again, I'll repeat if is a value which we calculate
+
+575
+00:48:25.845 --> 00:48:27.465
+to find the minimal number
+
+576
+00:48:28.245 --> 00:48:29.865
+and compare which other states
+
+577
+00:48:30.355 --> 00:48:32.505
+where the GN is cumulative value.
+
+578
+00:48:32.855 --> 00:48:36.865
+That is checking whether like how much, you know, uh,
+
+579
+00:48:37.015 --> 00:48:41.185
+cost I have like, uh, given to reach to this state
+
+580
+00:48:41.365 --> 00:48:45.065
+and HN is the, that states, you know, one estimated number
+
+581
+00:48:45.125 --> 00:48:46.185
+to reach to the gold state.
+
+582
+00:48:46.285 --> 00:48:47.425
+Now just calculate this.
+
+583
+00:48:47.585 --> 00:48:51.285
+FNGN and of this one.
+
+584
+00:48:56.115 --> 00:48:57.295
+So F of M.
+
+585
+00:49:13.655 --> 00:49:17.835
+Now this G of M is the cost which actually used.
+
+586
+00:49:18.175 --> 00:49:20.235
+So cost is five cumulative cost.
+
+587
+00:49:20.415 --> 00:49:24.475
+The initial state from the eight reach with the five
+
+588
+00:49:24.975 --> 00:49:26.835
+and A is saying I have zero.
+
+589
+00:49:28.405 --> 00:49:31.585
+So I'll be using zero amount of, you know, cost
+
+590
+00:49:31.645 --> 00:49:32.785
+to reach to the goal stick.
+
+591
+00:49:33.025 --> 00:49:36.095
+I have a final value of five, same, I'll be going
+
+592
+00:49:36.435 --> 00:49:37.655
+for the B as well.
+
+593
+00:49:38.155 --> 00:49:38.575
+So B,
+
+594
+00:49:52.445 --> 00:49:53.865
+the same formula for B,
+
+595
+00:49:59.055 --> 00:49:59.795
+oh, press four.
+
+596
+00:50:00.955 --> 00:50:05.585
+Yeah. So
+
+597
+00:50:05.685 --> 00:50:07.705
+for movings two S two B,
+
+598
+00:50:07.705 --> 00:50:09.185
+we are having cost function of three.
+
+599
+00:50:09.535 --> 00:50:13.665
+That is same and we are having N value S one,
+
+600
+00:50:14.405 --> 00:50:16.465
+we are having total value S four.
+
+601
+00:50:17.105 --> 00:50:18.595
+Similarly, we are having C,
+
+602
+00:50:23.675 --> 00:50:25.765
+the function to
+
+603
+00:50:27.745 --> 00:50:31.635
+and C is also saying,
+
+604
+00:50:31.705 --> 00:50:33.315
+I'll take four amount of data
+
+605
+00:50:34.385 --> 00:50:36.445
+or cost to reach to the goal state.
+
+606
+00:50:36.675 --> 00:50:39.205
+Okay, so value four C is eight.
+
+607
+00:50:39.745 --> 00:50:44.005
+So among them the substrate of SABC will find
+
+608
+00:50:44.075 --> 00:50:45.365
+what is the minimum one.
+
+609
+00:50:46.305 --> 00:50:49.675
+Okay, we'll find the minimum cost B is saying
+
+610
+00:50:49.785 --> 00:50:52.035
+that I'll have GM plus agent.
+
+611
+00:50:52.035 --> 00:50:53.475
+That is the four, that is the minimum.
+
+612
+00:50:54.175 --> 00:50:56.035
+So we'll choose this path, okay?
+
+613
+00:50:56.295 --> 00:50:58.835
+So we'll have this path selected.
+
+614
+00:51:00.045 --> 00:51:03.635
+So S two B initially we'll select, okay,
+
+615
+00:51:03.825 --> 00:51:08.505
+then we'll move towards on Q
+
+616
+00:51:08.845 --> 00:51:13.265
+you can create, so the, to track the box
+
+617
+00:51:14.775 --> 00:51:18.355
+current S two B move.
+
+618
+00:51:19.015 --> 00:51:20.915
+Now B two, what are the states we are having?
+
+619
+00:51:21.015 --> 00:51:24.705
+We are having F, okay. And we are having,
+
+620
+00:51:31.385 --> 00:51:36.265
+we are having H we'll
+
+621
+00:51:36.265 --> 00:51:37.265
+calculate for each of them.
+
+622
+00:51:41.185 --> 00:51:45.295
+Now for uh, you know, if we are having the cost value
+
+623
+00:51:45.395 --> 00:51:48.975
+as eight and previous cost value of B was three,
+
+624
+00:51:49.515 --> 00:51:52.455
+so three plus eight, the cumulative cost towards reach
+
+625
+00:51:52.455 --> 00:51:56.055
+to A from initial position is B, then F
+
+626
+00:51:56.485 --> 00:51:58.255
+that is three plus eight.
+
+627
+00:52:02.055 --> 00:52:06.505
+Okay? And HN is saying that is zero.
+
+628
+00:52:06.575 --> 00:52:08.915
+That means that's a goal state, okay?
+
+629
+00:52:09.015 --> 00:52:13.505
+It is also a goal state. The cost is total 11.
+
+630
+00:52:17.195 --> 00:52:20.775
+Similarly, if we go to the this function,
+
+631
+00:52:22.365 --> 00:52:24.255
+okay, three plus five
+
+632
+00:52:29.615 --> 00:52:33.485
+plus zero eight is saying I'll also take one value.
+
+633
+00:52:35.695 --> 00:52:37.025
+What is the value we are having?
+
+634
+00:52:37.135 --> 00:52:38.865
+Five plus three, eight plus one, nine.
+
+635
+00:52:39.875 --> 00:52:42.375
+Now each of the state will be compared, okay?
+
+636
+00:52:42.375 --> 00:52:45.135
+Whether they have reached the minimum state or not.
+
+637
+00:52:48.505 --> 00:52:52.455
+Okay? Now this D should be also,
+
+638
+00:52:52.555 --> 00:52:53.615
+uh, like gold state.
+
+639
+00:52:53.955 --> 00:52:57.935
+Uh, there's a like error in the mark.
+
+640
+00:52:58.045 --> 00:52:59.615
+This D should be also gold state.
+
+641
+00:53:00.515 --> 00:53:05.015
+Now we have reached equation is path, we have searched s, b,
+
+642
+00:53:05.155 --> 00:53:07.055
+and then we have moved towards F.
+
+643
+00:53:07.475 --> 00:53:09.055
+The total cost is 11.
+
+644
+00:53:10.575 --> 00:53:14.395
+Now if we move towards S, B, and H, total cost is nine.
+
+645
+00:53:14.495 --> 00:53:16.715
+But previously in the stack you can see
+
+646
+00:53:17.205 --> 00:53:18.435
+there are two more parts.
+
+647
+00:53:18.615 --> 00:53:22.875
+If I move towards S to A, that the cost is full initially B
+
+648
+00:53:23.515 --> 00:53:25.445
+promised that it'll take the cost of of four
+
+649
+00:53:25.445 --> 00:53:26.805
+and it'll release to state.
+
+650
+00:53:26.825 --> 00:53:29.605
+But currently it's not fulfilling that one.
+
+651
+00:53:29.985 --> 00:53:32.405
+And C is also saying it'll take eight,
+
+652
+00:53:32.535 --> 00:53:34.645
+which is also less than this nine and 11.
+
+653
+00:53:35.025 --> 00:53:38.645
+So we'll backtrack again and we'll explore the A path.
+
+654
+00:53:39.635 --> 00:53:42.905
+So instead of choosing these three, these things,
+
+655
+00:53:43.715 --> 00:53:47.345
+we'll finally go backtrack and check this A path.
+
+656
+00:53:48.265 --> 00:53:52.515
+Now, S two A will path is
+
+657
+00:53:55.525 --> 00:53:58.725
+S comma A, we're discarding B for now.
+
+658
+00:53:59.095 --> 00:54:01.885
+Again, we'll crosscheck if we're getting some lesser value.
+
+659
+00:54:02.585 --> 00:54:05.735
+So A can move to D, A can move to E,
+
+660
+00:54:08.035 --> 00:54:09.435
+D, and E
+
+661
+00:54:13.265 --> 00:54:15.565
+For D, we are having that value.
+
+662
+00:54:16.275 --> 00:54:17.525
+That is a cumulative value.
+
+663
+00:54:17.555 --> 00:54:20.045
+Five plus two, seven, yeah,
+
+664
+00:54:21.835 --> 00:54:25.425
+zero seven.
+
+665
+00:54:28.915 --> 00:54:31.805
+This one will be five.
+
+666
+00:54:32.505 --> 00:54:35.125
+So we are going from S to A to E.
+
+667
+00:54:35.745 --> 00:54:40.535
+The path S to A to E, that is
+
+668
+00:54:41.795 --> 00:54:43.805
+five plus five, okay?
+
+669
+00:54:47.735 --> 00:54:51.245
+Five plus five
+
+670
+00:54:52.765 --> 00:54:54.215
+plus two.
+
+671
+00:54:54.945 --> 00:54:57.825
+We are having 12, we are having seven.
+
+672
+00:54:58.175 --> 00:54:59.905
+That is the least value we are offered.
+
+673
+00:55:00.895 --> 00:55:02.345
+I'll check from the previous states.
+
+674
+00:55:02.415 --> 00:55:06.145
+What is the minimum one, seven currently minimum, then H,
+
+675
+00:55:06.145 --> 00:55:08.985
+minimum pattern, then F, minimum pattern, C,
+
+676
+00:55:09.335 --> 00:55:11.625
+minimum pattern, then B already explored.
+
+677
+00:55:11.735 --> 00:55:14.745
+That is already checked, become false A
+
+678
+00:55:14.935 --> 00:55:16.265
+that pathway exploring.
+
+679
+00:55:16.645 --> 00:55:20.105
+So we can say if you move the path that is the
+
+680
+00:55:21.995 --> 00:55:25.165
+no, this one, that will be
+
+681
+00:55:25.165 --> 00:55:28.485
+how we being our optimal solution for the no problem.
+
+682
+00:55:28.835 --> 00:55:31.205
+That is the algorithm here using.
+
+683
+00:55:39.155 --> 00:55:40.095
+Now the final path
+
+684
+00:55:44.535 --> 00:55:49.205
+SA comma is the path will be
+
+685
+00:55:50.335 --> 00:55:52.355
+taking to reach to the goal state.
+
+686
+00:55:52.455 --> 00:55:55.955
+So that is the way we do actually extra value volume.
+
+687
+00:55:56.855 --> 00:56:01.445
+Okay, so extra one value is you're
+
+688
+00:56:01.445 --> 00:56:03.925
+providing what is the estimated cost, okay?
+
+689
+00:56:03.925 --> 00:56:06.645
+It should take to reach to the goal state, each
+
+690
+00:56:06.645 --> 00:56:08.325
+of the state will have some kind of value.
+
+691
+00:56:08.865 --> 00:56:12.245
+And again, from the initial state to the like this,
+
+692
+00:56:12.925 --> 00:56:14.485
+whatever the state will be traversing,
+
+693
+00:56:14.795 --> 00:56:16.805
+they'll be finding the cumulative cost
+
+694
+00:56:16.825 --> 00:56:19.685
+and will be comparing with the, you know, previous states
+
+695
+00:56:19.745 --> 00:56:22.645
+and all and continuously check whether you are having some
+
+696
+00:56:22.645 --> 00:56:24.165
+better pathways or not.
+
+697
+00:56:24.655 --> 00:56:28.325
+After finding the, you know, the nearest solution
+
+698
+00:56:28.325 --> 00:56:30.925
+and compared to the history one, there might be some other,
+
+699
+00:56:31.225 --> 00:56:34.685
+you know, um, better, you know, algorithm, uh,
+
+700
+00:56:34.865 --> 00:56:36.165
+better pathways and all.
+
+701
+00:56:36.465 --> 00:56:39.125
+But from the heuristic point of view estimated that is the,
+
+702
+00:56:39.155 --> 00:56:41.205
+that is the better path you are currently having
+
+703
+00:56:41.745 --> 00:56:42.845
+to reach to the goal state.
+
+704
+00:56:43.105 --> 00:56:46.685
+You take this path. So for reaching to gold state, from S
+
+705
+00:56:46.685 --> 00:56:50.165
+to gold state, I'll be moving S to A to D.
+
+706
+00:56:50.305 --> 00:56:53.165
+So that is the path, uh, from the heuristic point
+
+707
+00:56:53.165 --> 00:56:54.165
+of view S algorithm.
+
+708
+00:56:54.305 --> 00:56:57.045
+We actually apply that now
+
+709
+00:56:58.805 --> 00:56:59.805
+S server. One question here.
+
+710
+00:56:59.805 --> 00:57:01.805
+So can we go back to that sheet?
+
+711
+00:57:02.635 --> 00:57:05.655
+Yeah, Uh, yeah, yeah.
+
+712
+00:57:05.835 --> 00:57:10.095
+So, uh, S two A, uh, on the bottom, uh,
+
+713
+00:57:10.485 --> 00:57:13.215
+last which we calculated S two A,
+
+714
+00:57:13.915 --> 00:57:16.135
+so we'll take seven plus five, you know, sir?
+
+715
+00:57:16.315 --> 00:57:20.815
+Uh, five, we are not taking here S two A path S two A,
+
+716
+00:57:21.005 --> 00:57:22.005
+Just a second.
+
+717
+00:57:23.485 --> 00:57:26.025
+Uh, this is the first SE no seven, we're not,
+
+718
+00:57:26.165 --> 00:57:29.305
+you receive value, we only will take during
+
+719
+00:57:29.375 --> 00:57:30.705
+that state calculation.
+
+720
+00:57:30.735 --> 00:57:31.735
+This is the value of,
+
+721
+00:57:33.275 --> 00:57:36.125
+Okay, sir GN is cumulative value of the pathways,
+
+722
+00:57:36.765 --> 00:57:39.605
+whatever the, you knows you are seeing, these are the GN
+
+723
+00:57:40.675 --> 00:57:42.935
+and within the nodes, whatever that is mentioned
+
+724
+00:57:43.005 --> 00:57:44.295
+that are hn.
+
+725
+00:57:45.395 --> 00:57:50.055
+Yes. Got it. So we're having, uh, this five plus two,
+
+726
+00:57:50.475 --> 00:57:52.255
+the age values as a seven.
+
+727
+00:57:52.905 --> 00:57:56.515
+Seven, okay, got it. Got, okay.
+
+728
+00:57:56.775 --> 00:58:00.585
+Any other doubts? Uh, no sir. Thank you sir.
+
+729
+00:58:01.325 --> 00:58:04.705
+Uh, excuse me, sir. I have a doubt, sir. Yeah, sir.
+
+730
+00:58:04.765 --> 00:58:07.705
+Uh, in breath first search, it is pretty much clear that,
+
+731
+00:58:07.725 --> 00:58:09.185
+uh, we, uh,
+
+732
+00:58:09.365 --> 00:58:11.985
+the just a node is actually the neighboring node,
+
+733
+00:58:12.445 --> 00:58:14.545
+but in, uh, uh, depth first search,
+
+734
+00:58:14.545 --> 00:58:16.705
+it is very difficult to understand.
+
+735
+00:58:16.725 --> 00:58:18.385
+Sir, could you please, uh, explain that
+
+736
+00:58:18.745 --> 00:58:19.745
+Ly? Yeah, so bfs,
+
+737
+00:58:19.745 --> 00:58:22.305
+DFS, so let's just explore the same thing
+
+738
+00:58:22.305 --> 00:58:25.825
+with the BFS and DFS for this particular treatment.
+
+739
+00:58:26.245 --> 00:58:28.225
+Yes. So for DFS breakfast search,
+
+740
+00:58:30.705 --> 00:58:34.035
+what we do first we check the no first layer
+
+741
+00:58:34.135 --> 00:58:35.435
+of notes we are having.
+
+742
+00:58:35.495 --> 00:58:39.035
+Yes, we'll check whether that's a gold straight or not.
+
+743
+00:58:39.455 --> 00:58:42.165
+So it is a
+
+744
+00:58:42.325 --> 00:58:44.765
+straight, not a gold straight.
+
+745
+00:58:47.365 --> 00:58:51.065
+If I pop this s what are the, you know, successive, uh,
+
+746
+00:58:51.125 --> 00:58:53.385
+layers we'll have, we'll have A, B,
+
+747
+00:58:53.405 --> 00:58:53.825
+and C
+
+748
+00:58:58.425 --> 00:59:00.075
+will traverse through one by one.
+
+749
+00:59:00.105 --> 00:59:02.315
+That might be, you know, from left to right
+
+750
+00:59:02.315 --> 00:59:03.395
+or like right to left.
+
+751
+00:59:03.915 --> 00:59:05.035
+C, B, C or a bbc.
+
+752
+00:59:05.035 --> 00:59:07.515
+That depends upon your, you know, path
+
+753
+00:59:07.515 --> 00:59:09.275
+of the developing the algorithm.
+
+754
+00:59:09.365 --> 00:59:11.595
+Again, it'll check, uh, none of them.
+
+755
+00:59:12.755 --> 00:59:17.045
+Mm, Yes sir. I'll move towards one of the problem.
+
+756
+00:59:17.785 --> 00:59:21.445
+Okay? Then sustainably you go towards the next layer.
+
+757
+00:59:21.475 --> 00:59:26.375
+That is you are having D, e, f, then we are having,
+
+758
+00:59:26.675 --> 00:59:29.295
+uh, HH, yeah,
+
+759
+00:59:29.775 --> 00:59:30.775
+H and i, sir.
+
+760
+00:59:32.385 --> 00:59:35.715
+Okay, I, so these are the successive notes you are having.
+
+761
+00:59:36.165 --> 00:59:38.915
+Among this, you'll find D is a gold state.
+
+762
+00:59:42.715 --> 00:59:44.085
+Stop the searching here
+
+763
+00:59:44.145 --> 00:59:47.645
+and then provide, this is the answer that BF has got, right?
+
+764
+00:59:49.725 --> 00:59:52.105
+Yes. Now let's move towards layer by layer.
+
+765
+00:59:52.125 --> 00:59:55.905
+We searching first search the layer zero, then layer one,
+
+766
+00:59:56.015 --> 00:59:58.625
+then layer two, wherever we find the, like,
+
+767
+00:59:59.455 --> 01:00:01.265
+like moving from this direction.
+
+768
+01:00:17.195 --> 01:00:20.295
+So from here we'll move towards this portion.
+
+769
+01:00:20.565 --> 01:00:23.895
+Then again, check and again, come back to the D
+
+770
+01:00:24.075 --> 01:00:26.735
+and again, check we are traversing in it this
+
+771
+01:00:26.735 --> 01:00:30.645
+way, okay?
+
+772
+01:00:31.595 --> 01:00:33.225
+We're traversing in it this way.
+
+773
+01:00:36.535 --> 01:00:38.105
+That is the B we're talking,
+
+774
+01:00:39.095 --> 01:00:40.095
+Yes, sir. So, uh,
+
+775
+01:00:40.095 --> 01:00:43.235
+question is you start from, yes, and you go to A,
+
+776
+01:00:43.735 --> 01:00:46.275
+and then from Y we are moving to D, right?
+
+777
+01:00:46.375 --> 01:00:50.315
+So why are we going from A to B? And then B2C,
+
+778
+01:00:50.375 --> 01:00:52.035
+Uh, this is the breath first search.
+
+779
+01:00:52.215 --> 01:00:57.115
+So the algorithm dictates you to go through layer by layer,
+
+780
+01:00:58.515 --> 01:00:59.515
+Okay? Okay.
+
+781
+01:00:59.515 --> 01:01:01.005
+So you don't know,
+
+782
+01:01:01.395 --> 01:01:04.125
+like usually you're actually inspecting, you're able
+
+783
+01:01:04.125 --> 01:01:06.165
+to see these there, the path should be there,
+
+784
+01:01:06.945 --> 01:01:09.365
+but when you are actually searching each of the state,
+
+785
+01:01:09.385 --> 01:01:12.085
+you are not having any information related to the
+
+786
+01:01:12.265 --> 01:01:13.565
+how the state looks like.
+
+787
+01:01:14.145 --> 01:01:16.925
+You cannot really, cannot directly go, uh, like,
+
+788
+01:01:16.925 --> 01:01:18.245
+uh, make the prediction.
+
+789
+01:01:20.165 --> 01:01:24.305
+So the BFS says to go layer by layer and search further.
+
+790
+01:01:24.615 --> 01:01:25.615
+Gold state.
+
+791
+01:01:28.405 --> 01:01:29.945
+Yes, sir. Yes, sir.
+
+792
+01:01:33.525 --> 01:01:36.945
+Now, if we are moving through this one,
+
+793
+01:01:37.015 --> 01:01:38.545
+that is the depth.
+
+794
+01:01:39.855 --> 01:01:43.275
+Yes, sir. Here in the third layer, gold state is D
+
+795
+01:01:44.305 --> 01:01:48.005
+Uh, D is also, Yeah, F and I, right?
+
+796
+01:01:48.065 --> 01:01:50.885
+Sir? F it is, uh, D, f and I,
+
+797
+01:01:50.885 --> 01:01:54.125
+because there is no for this split after this
+
+798
+01:01:55.525 --> 01:01:57.005
+D zero D gold here.
+
+799
+01:01:57.005 --> 01:01:58.005
+Like, uh, I have,
+
+800
+01:01:59.355 --> 01:02:00.845
+Okay, sir, B should be gold.
+
+801
+01:02:01.005 --> 01:02:03.095
+Straight D should be gold
+
+802
+01:02:03.215 --> 01:02:06.865
+straight right.
+
+803
+01:02:07.525 --> 01:02:09.625
+Now, let's just check the DAFs. Fine.
+
+804
+01:02:09.925 --> 01:02:14.425
+So we are having this d, FS, the DFS thing is working.
+
+805
+01:02:15.245 --> 01:02:16.585
+We understood the BFS.
+
+806
+01:02:16.585 --> 01:02:21.525
+Now let's just understood it'll go from
+
+807
+01:02:21.885 --> 01:02:24.445
+S okay, first we have s,
+
+808
+01:02:25.395 --> 01:02:28.515
+s will move towards the successive layer on the left
+
+809
+01:02:28.575 --> 01:02:31.395
+or right, that is like algorithm, whatever you choose.
+
+810
+01:02:31.815 --> 01:02:33.555
+So it'll directly move to a,
+
+811
+01:02:36.825 --> 01:02:39.835
+okay, it'll take, go straight or not.
+
+812
+01:02:40.335 --> 01:02:41.395
+It is not a gold state.
+
+813
+01:02:41.905 --> 01:02:43.795
+Then a to again, left hand side,
+
+814
+01:02:44.115 --> 01:02:45.755
+whatever the successive China notice there
+
+815
+01:02:45.955 --> 01:02:47.515
+d to move towards D.
+
+816
+01:02:49.105 --> 01:02:53.715
+So D is a gold state, so it'll
+
+817
+01:02:54.345 --> 01:02:56.755
+stop it searching and give you the answer.
+
+818
+01:02:57.175 --> 01:02:58.355
+It should take the path.
+
+819
+01:02:58.835 --> 01:03:03.665
+SA, d, okay, fine. So there's the D.
+
+820
+01:03:04.245 --> 01:03:08.235
+Now suppose you'll be having one confusion.
+
+821
+01:03:08.505 --> 01:03:10.315
+What, what if the D is not a gold?
+
+822
+01:03:10.315 --> 01:03:11.755
+Hypothetically, think about this.
+
+823
+01:03:12.195 --> 01:03:15.235
+D is not a gold street right now.
+
+824
+01:03:15.585 --> 01:03:17.675
+What will be happening to the traverses?
+
+825
+01:03:17.815 --> 01:03:19.035
+How this traverses actually happens.
+
+826
+01:03:19.735 --> 01:03:23.795
+So first it'll go to a A
+
+827
+01:03:23.815 --> 01:03:25.705
+to D, okay?
+
+828
+01:03:25.705 --> 01:03:26.905
+This is the path we're taking.
+
+829
+01:03:28.825 --> 01:03:31.995
+Suppose this is not a gold straight suppose let's just thing
+
+830
+01:03:31.995 --> 01:03:36.305
+that F is a gold straight right now it has no child notes.
+
+831
+01:03:36.625 --> 01:03:37.745
+D is having no child notes
+
+832
+01:03:37.745 --> 01:03:40.345
+to it cannot go like further depth.
+
+833
+01:03:41.095 --> 01:03:44.625
+It'll move towards the upper layer.
+
+834
+01:03:47.155 --> 01:03:48.585
+Again, it'll move to a
+
+835
+01:03:49.045 --> 01:03:52.585
+and it'll check whether A is having, uh, other, you know,
+
+836
+01:03:52.585 --> 01:03:54.625
+depth nodes where the depth
+
+837
+01:03:54.685 --> 01:03:56.945
+of search hasn't actually checked.
+
+838
+01:03:57.995 --> 01:04:02.335
+So A, a D, then again, it'll move to A,
+
+839
+01:04:06.465 --> 01:04:08.675
+okay, then it'll move to E.
+
+840
+01:04:16.975 --> 01:04:21.265
+Okay? You'll have E is having two notes, two child notes.
+
+841
+01:04:21.725 --> 01:04:24.665
+So J and K as we are going through,
+
+842
+01:04:24.665 --> 01:04:26.705
+searching from the left side of the node.
+
+843
+01:04:26.705 --> 01:04:30.605
+First from the depth side, so from E to J
+
+844
+01:04:31.415 --> 01:04:36.055
+first, okay, we'll add the J.
+
+845
+01:04:36.885 --> 01:04:39.225
+Now J doesn't have any child node.
+
+846
+01:04:39.275 --> 01:04:43.705
+It'll move towards, again, upper no layer, that is the E,
+
+847
+01:04:44.495 --> 01:04:47.755
+and check whether any child node is there or not.
+
+848
+01:04:48.905 --> 01:04:52.445
+It is having K, again, it'll move to K,
+
+849
+01:04:54.185 --> 01:04:55.785
+K moving upwards.
+
+850
+01:04:57.905 --> 01:05:00.275
+Then it is going downwards to k,
+
+851
+01:05:02.785 --> 01:05:03.785
+K is also explored.
+
+852
+01:05:04.085 --> 01:05:05.425
+So there is no goal state here.
+
+853
+01:05:06.165 --> 01:05:10.305
+Now, once the K is explored, it'll again move to E, okay?
+
+854
+01:05:10.475 --> 01:05:14.575
+Check whether the state is satisfactory is not, no,
+
+855
+01:05:14.915 --> 01:05:16.055
+it is already explored.
+
+856
+01:05:16.105 --> 01:05:18.645
+There is not having any more child
+
+857
+01:05:18.695 --> 01:05:20.085
+which needs to be explored.
+
+858
+01:05:20.385 --> 01:05:24.715
+So E will again go to a, okay,
+
+859
+01:05:26.045 --> 01:05:27.735
+this is one after one other state.
+
+860
+01:05:27.745 --> 01:05:31.415
+We're going S-A-D-A-E, J-E-K-E-A.
+
+861
+01:05:32.365 --> 01:05:33.375
+Then moving traverse.
+
+862
+01:05:33.435 --> 01:05:35.535
+So from there to we move to A,
+
+863
+01:05:38.455 --> 01:05:40.535
+A is having no more chance to explore.
+
+864
+01:05:40.535 --> 01:05:42.975
+Then again, it'll go to S. Okay?
+
+865
+01:05:46.545 --> 01:05:50.485
+Then S two will be going to B then B to F.
+
+866
+01:05:53.795 --> 01:05:55.735
+So this is how depth for search works.
+
+867
+01:05:56.755 --> 01:06:01.455
+Fine will
+
+868
+01:06:01.455 --> 01:06:02.935
+traverse one
+
+869
+01:06:02.935 --> 01:06:07.255
+after another layer in the depth, we are finding the end
+
+870
+01:06:07.255 --> 01:06:10.495
+of the nodes, and if that's not a goal, like a goal state,
+
+871
+01:06:10.495 --> 01:06:13.535
+then we'll, we'll traverse back to the upper node, okay?
+
+872
+01:06:13.535 --> 01:06:16.015
+Then we'll explore other trials in the depth
+
+873
+01:06:16.475 --> 01:06:19.975
+and we'll repeat this procedure till we traverse from all
+
+874
+01:06:19.975 --> 01:06:22.255
+of the nodes until we are finding the goal state.
+
+875
+01:06:22.255 --> 01:06:27.225
+That is the depth P search, yes, no. Yes, sir.
+
+876
+01:06:27.735 --> 01:06:32.565
+Okay. Now you understood this
+
+877
+01:06:32.565 --> 01:06:35.445
+searching algorithm, I guess the A star one right now,
+
+878
+01:06:35.445 --> 01:06:40.285
+this A star and D having like might have heard
+
+879
+01:06:40.285 --> 01:06:41.565
+that is one of the, this one
+
+880
+01:06:41.565 --> 01:06:45.485
+and having like a lot of popul where like
+
+881
+01:06:46.045 --> 01:06:48.565
+multiple parts are there, it is like very
+
+882
+01:06:49.235 --> 01:06:51.605
+effective in finding the shortest part algorithm,
+
+883
+01:06:51.605 --> 01:06:54.285
+like shortest part, whatever multiple parts are there.
+
+884
+01:06:54.585 --> 01:06:56.285
+And among those, what is the shortest?
+
+885
+01:06:56.285 --> 01:06:58.405
+So this algorithm is used in that one
+
+886
+01:06:58.945 --> 01:07:01.845
+atrial algorithm uses the most optimal one.
+
+887
+01:07:01.995 --> 01:07:04.045
+Suppose you are having, like,
+
+888
+01:07:04.225 --> 01:07:06.605
+you want travel from one question to other question.
+
+889
+01:07:07.345 --> 01:07:10.205
+The path might be like totally, you know, bad
+
+890
+01:07:10.385 --> 01:07:11.525
+or traffic is huge.
+
+891
+01:07:11.785 --> 01:07:13.485
+Uh, the digital algorithm won't bother
+
+892
+01:07:13.485 --> 01:07:14.805
+about the other parameters.
+
+893
+01:07:14.805 --> 01:07:17.485
+It'll find you like, this is the sort path you take the path
+
+894
+01:07:18.365 --> 01:07:21.105
+you don't see the other parameters where it is, uh,
+
+895
+01:07:21.105 --> 01:07:23.225
+making the, you know, algorithm much more smarter.
+
+896
+01:07:23.545 --> 01:07:27.545
+A algorithm where you can put more data into it.
+
+897
+01:07:27.545 --> 01:07:31.225
+Suppose the traffic, uh, the road condition, uh, the other,
+
+898
+01:07:31.325 --> 01:07:32.625
+uh, parameters, okay?
+
+899
+01:07:32.765 --> 01:07:35.025
+Uh, then it'll give you the answer.
+
+900
+01:07:35.285 --> 01:07:37.025
+So you should take this path or not.
+
+901
+01:07:37.025 --> 01:07:39.905
+That is the ATA algorithm versus the digital algorithm.
+
+902
+01:07:42.775 --> 01:07:46.435
+Now the pro for Thera algorithm, so it is, uh, like a,
+
+903
+01:07:47.575 --> 01:07:49.335
+a ed to find the best path.
+
+904
+01:07:49.755 --> 01:07:53.165
+So you'll have like, uh, the best, whatever the cost
+
+905
+01:07:53.225 --> 01:07:56.845
+of the path is there, it'll be able to find, okay, uh,
+
+906
+01:07:57.245 --> 01:07:59.445
+guaranteed to find a path if one exists.
+
+907
+01:08:00.315 --> 01:08:03.295
+Uh, speed is there like high, high efficiencies there.
+
+908
+01:08:03.355 --> 01:08:07.095
+If you are having like hundreds of millions of, you know,
+
+909
+01:08:07.185 --> 01:08:09.815
+modes of states are there, that is there.
+
+910
+01:08:09.875 --> 01:08:11.335
+Now the cons is a memory heavy
+
+911
+01:08:11.335 --> 01:08:14.775
+because, uh, it needs to compare with the older states
+
+912
+01:08:14.795 --> 01:08:17.085
+and all with the, like, whatever the, you know,
+
+913
+01:08:17.355 --> 01:08:19.925
+it's driving from one node to another node, another layer,
+
+914
+01:08:20.305 --> 01:08:21.445
+and continuously checking
+
+915
+01:08:21.505 --> 01:08:23.645
+and comparing from the older states whether
+
+916
+01:08:23.715 --> 01:08:25.045
+that is optimal or not.
+
+917
+01:08:25.505 --> 01:08:27.245
+If that older state is optimal,
+
+918
+01:08:27.355 --> 01:08:29.725
+then it skips the current one and goes to optimal
+
+919
+01:08:29.725 --> 01:08:31.205
+and expand that one
+
+920
+01:08:31.425 --> 01:08:33.525
+and checks whether the optimal, uh,
+
+921
+01:08:33.525 --> 01:08:34.845
+you know, path is there or not.
+
+922
+01:08:34.845 --> 01:08:39.075
+So that is the way this thing actually works. Okay?
+
+923
+01:08:39.175 --> 01:08:42.315
+So a study is used mostly in robotics maps, video games
+
+924
+01:08:42.315 --> 01:08:43.835
+that we all discussed.
+
+925
+01:08:43.835 --> 01:08:47.555
+And one thing I'll also tell you is the, a little bit,
+
+926
+01:08:48.405 --> 01:08:50.175
+because we are running out of time
+
+927
+01:08:53.685 --> 01:08:56.535
+Minimax algorithm, uh, supposed to take two,
+
+928
+01:08:56.715 --> 01:08:58.175
+you are very familiar with this game.
+
+929
+01:08:58.315 --> 01:09:02.495
+So we, in a box of nine, we, uh, do the cross
+
+930
+01:09:02.555 --> 01:09:04.775
+and, you know, circles to play a game.
+
+931
+01:09:04.955 --> 01:09:06.775
+If like a diagonally
+
+932
+01:09:06.835 --> 01:09:10.295
+or you know, particular horizontally, successive three, uh,
+
+933
+01:09:10.365 --> 01:09:13.375
+symbols are there, then one particular party means that,
+
+934
+01:09:14.115 --> 01:09:16.655
+so these kind of algorithms are also being solved
+
+935
+01:09:16.685 --> 01:09:19.215
+with the like, uh, one successive, you know,
+
+936
+01:09:19.415 --> 01:09:21.935
+derived algorithm from theta that is the MinMax algorithm,
+
+937
+01:09:22.595 --> 01:09:25.855
+but each of the, like a successive state is having some kind
+
+938
+01:09:25.855 --> 01:09:27.855
+of values associated with them.
+
+939
+01:09:28.315 --> 01:09:33.215
+So the, you know, as a, like a player, a I intend
+
+940
+01:09:33.335 --> 01:09:35.295
+to move or, uh, you know, uh,
+
+941
+01:09:35.345 --> 01:09:39.215
+there should be one initiated value, I'll be increasing
+
+942
+01:09:39.215 --> 01:09:42.655
+that value and the opponent, the computer will be trying
+
+943
+01:09:42.655 --> 01:09:45.455
+to decrease the value that is known as MinMax algorithm.
+
+944
+01:09:45.915 --> 01:09:49.735
+So similarly, it works in a particular like similar state,
+
+945
+01:09:49.925 --> 01:09:53.245
+such algorithms where, uh, the computer tries
+
+946
+01:09:53.465 --> 01:09:55.965
+to minimize the value, okay?
+
+947
+01:09:56.345 --> 01:09:58.445
+Or the heuristic function, whatever you are having,
+
+948
+01:09:58.505 --> 01:09:59.885
+if it is like too clear game
+
+949
+01:10:00.305 --> 01:10:03.845
+and uh, the user tries to always win, increase the value.
+
+950
+01:10:04.025 --> 01:10:07.085
+So it is like one of the thing is also there,
+
+951
+01:10:09.075 --> 01:10:10.655
+uh, I won't be searching
+
+952
+01:10:10.655 --> 01:10:12.495
+because of the time limitation for this one.
+
+953
+01:10:13.285 --> 01:10:14.785
+So there are multiple, you know,
+
+954
+01:10:14.935 --> 01:10:18.025
+this heuristic based algorithms say a start, uh,
+
+955
+01:10:18.025 --> 01:10:19.705
+then we have he climbing algorithm.
+
+956
+01:10:19.805 --> 01:10:21.265
+We are having alpha, beta ping.
+
+957
+01:10:21.265 --> 01:10:25.005
+We are having, uh, this, uh, minimax algorithms,
+
+958
+01:10:25.005 --> 01:10:27.605
+so multiple algorithms related to, you know, this, uh,
+
+959
+01:10:27.635 --> 01:10:30.165
+problem solving where like, uh,
+
+960
+01:10:30.815 --> 01:10:34.285
+we're not going like a basic on a loop, something like
+
+961
+01:10:34.285 --> 01:10:35.885
+that on a particular pattern,
+
+962
+01:10:35.985 --> 01:10:38.005
+but we're actually trying
+
+963
+01:10:38.225 --> 01:10:40.365
+to make the system a little bit smarter
+
+964
+01:10:40.505 --> 01:10:42.045
+so it can give you better answers.
+
+965
+01:10:42.465 --> 01:10:44.405
+So that is the searching techniques for ai.
+
+966
+01:10:45.115 --> 01:10:48.615
+Now, today's task that will be like in the second half,
+
+967
+01:10:48.835 --> 01:10:52.655
+you are actually supposed to do, uh, these all of the,
+
+968
+01:10:52.655 --> 01:10:56.185
+you know, uh, these things are like, uh, this, uh,
+
+969
+01:10:56.695 --> 01:10:57.745
+PPDs are already uploaded.
+
+970
+01:10:57.845 --> 01:11:00.545
+You can go through them, you can go through the codes also,
+
+971
+01:11:00.645 --> 01:11:01.705
+uh, actually there
+
+972
+01:11:02.205 --> 01:11:04.305
+and you are required to actually implement one,
+
+973
+01:11:04.745 --> 01:11:07.825
+a algorithm from Python grid.
+
+974
+01:11:08.085 --> 01:11:10.105
+You need to make for like problem solving
+
+975
+01:11:10.885 --> 01:11:14.125
+and uh, it is already given.
+
+976
+01:11:14.225 --> 01:11:15.485
+So you can tweak a little bit
+
+977
+01:11:15.585 --> 01:11:18.205
+and you can also compare that one with the bs,
+
+978
+01:11:18.205 --> 01:11:21.005
+how this study is actually solving that one.
+
+979
+01:11:21.345 --> 01:11:24.645
+So this is the task. So, uh, again, one week
+
+980
+01:11:24.645 --> 01:11:28.085
+of time you will be having afternoon season, uh, you are
+
+981
+01:11:28.755 --> 01:11:32.045
+requested to join, but it's not a mandatory, you're having,
+
+982
+01:11:32.545 --> 01:11:34.165
+you know, expertise in the Python
+
+983
+01:11:34.225 --> 01:11:36.245
+and all you can directly go and solve these things.
+
+984
+01:11:37.025 --> 01:11:39.645
+And uh, I think that is all, uh, for today's class.
+
+985
+01:11:39.745 --> 01:11:41.805
+So this is also uploaded in the, you know,
+
+986
+01:11:47.165 --> 01:11:47.455
+yeah.
+
+987
+01:11:47.475 --> 01:11:48.475
+Any questions and anything?
+
+988
+01:11:49.515 --> 01:11:51.535
+Yes, sir. One question, sir. Yeah, sir.
+
+989
+01:11:51.565 --> 01:11:54.855
+This, uh, robotics is all about slam, right?
+
+990
+01:11:55.235 --> 01:11:56.935
+So, but how will we,
+
+991
+01:11:56.955 --> 01:11:58.575
+And slam slam is a different thing.
+
+992
+01:11:58.645 --> 01:12:00.095
+Slam is where, uh,
+
+993
+01:12:00.095 --> 01:12:03.135
+you are doing the computer vision algorithm things where uh,
+
+994
+01:12:03.195 --> 01:12:06.135
+it is able to actually create the 3D point cloud,
+
+995
+01:12:06.395 --> 01:12:08.575
+so it is able to judge the distance, depth,
+
+996
+01:12:08.705 --> 01:12:10.935
+these parameters, and based on
+
+997
+01:12:10.935 --> 01:12:12.415
+that you can apply the algorithm
+
+998
+01:12:12.425 --> 01:12:16.615
+where like if the depth is there, like, uh, how the like,
+
+999
+01:12:16.615 --> 01:12:20.335
+uh, you know, robot as an initial state,
+
+1000
+01:12:20.355 --> 01:12:22.415
+you provide a gold state, you do this job.
+
+1001
+01:12:23.115 --> 01:12:25.735
+Now it has to know some of the features
+
+1002
+01:12:25.785 --> 01:12:28.135
+where the surrounding information can be gathered.
+
+1003
+01:12:28.395 --> 01:12:30.215
+So some of the information, if you provide,
+
+1004
+01:12:30.215 --> 01:12:32.255
+then it'll be able to make some judgment.
+
+1005
+01:12:32.305 --> 01:12:33.935
+These are the actions I should be,
+
+1006
+01:12:33.955 --> 01:12:36.335
+or I'll be able to take, suppose it needs to go
+
+1007
+01:12:36.335 --> 01:12:40.585
+to the downstairs and take a like a for me.
+
+1008
+01:12:41.155 --> 01:12:44.055
+So first it needs to like go straight, go to the door,
+
+1009
+01:12:44.205 --> 01:12:47.415
+like take a, like a stairs and all.
+
+1010
+01:12:48.125 --> 01:12:52.385
+So how it'll know like in which way the like, uh, it needs
+
+1011
+01:12:52.445 --> 01:12:55.585
+to move or STA stairs is there, so depth is there.
+
+1012
+01:12:55.685 --> 01:12:58.585
+So these are actually done through the slam algorithm along
+
+1013
+01:12:58.585 --> 01:13:02.965
+with Slam, we are having, uh, a multi-use stereo algorithm.
+
+1014
+01:13:03.065 --> 01:13:07.585
+We are having, uh, separate other algorithms as well.
+
+1015
+01:13:07.725 --> 01:13:10.025
+I'm not able to report. So that, that is like one
+
+1016
+01:13:10.025 --> 01:13:11.865
+of the thing where it is able to
+
+1017
+01:13:12.535 --> 01:13:15.145
+observe the surroundings, not take the,
+
+1018
+01:13:16.855 --> 01:13:19.465
+Okay, so it is only for, uh, perception part
+
+1019
+01:13:20.255 --> 01:13:21.255
+Percept. Yeah, yeah, yeah,
+
+1020
+01:13:21.255 --> 01:13:23.105
+exactly is the, okay.
+
+1021
+01:13:23.845 --> 01:13:24.825
+But thanks.
+
+1022
+01:13:28.825 --> 01:13:31.195
+Yeah. Uh, if no one is having any questions,
+
+1023
+01:13:31.195 --> 01:13:32.715
+so I'll be actually closing this season
+
+1024
+01:13:32.775 --> 01:13:36.555
+and we'll be meeting, we're not actually required
+
+1025
+01:13:36.555 --> 01:13:40.675
+to actually sit in the, you know, season if you're actually,
+
+1026
+01:13:40.895 --> 01:13:42.595
+uh, having the expertise and everything
+
+1027
+01:13:43.255 --> 01:13:45.675
+and uh, again, seven days will uh, be the time
+
+1028
+01:13:46.255 --> 01:13:48.755
+you are required to complete this as an assignment
+
+1029
+01:13:48.855 --> 01:13:50.395
+and needs to submit it. Yes.
+
+1030
+01:13:50.755 --> 01:13:51.755
+I have one more request, sir.
+
+1031
+01:13:51.905 --> 01:13:54.835
+Yeah, so Actually while I, uh, while I was listening
+
+1032
+01:13:54.835 --> 01:13:56.475
+to the class, there was a certain power cut
+
+1033
+01:13:56.695 --> 01:13:57.875
+and again, I rejoined
+
+1034
+01:13:57.875 --> 01:14:01.235
+after 10 minutes, something, 15 minutes that was there.
+
+1035
+01:14:01.995 --> 01:14:03.155
+I thought better to inform you.
+
+1036
+01:14:03.665 --> 01:14:06.035
+Yeah, fine. That's fine. Sorry, one more thing.
+
+1037
+01:14:06.225 --> 01:14:10.275
+Once you log in, the at will be, that's not an issue.
+
+1038
+01:14:10.705 --> 01:14:14.765
+Okay, sir? Yeah, everything is already uploaded in the uh,
+
+1039
+01:14:17.205 --> 01:14:18.205
+Processor.
+
+1040
+01:14:18.995 --> 01:14:22.175
+You can also find the lecture as well. Yes, sir.
+
+1041
+01:14:22.675 --> 01:14:23.935
+Sir, by Lab
+
+1042
+01:14:24.245 --> 01:14:26.215
+Says, uh, we have to take uh,
+
+1043
+01:14:26.215 --> 01:14:27.815
+first two points, right, sir?
+
+1044
+01:14:28.825 --> 01:14:31.255
+First, First two bullet points
+
+1045
+01:14:31.255 --> 01:14:32.295
+we have to execute, right?
+
+1046
+01:14:32.725 --> 01:14:36.675
+Yeah, yeah, yeah. So by when we are
+
+1047
+01:14:36.675 --> 01:14:38.235
+to submit this assignment, sir,
+
+1048
+01:14:38.855 --> 01:14:40.805
+By next week, Okay,
+
+1049
+01:14:42.715 --> 01:14:43.895
+On a weekly, we try
+
+1050
+01:14:43.895 --> 01:14:45.775
+to actually complete these things and submit it.
+
+1051
+01:14:46.475 --> 01:14:47.525
+Yeah, sure sir.
+
+1052
+01:14:47.815 --> 01:14:50.565
+After like, uh, next lab we'll be having on grade lab
+
+1053
+01:14:50.835 --> 01:14:52.885
+combining all of the labs, previous labs.
+
+1054
+01:14:53.705 --> 01:14:55.205
+So that will be there.
+
+1055
+01:14:55.705 --> 01:14:57.765
+And for the grade lab also, we'll be having this, uh,
+
+1056
+01:14:57.785 --> 01:14:58.845
+you know, seven days of time.
+
+1057
+01:15:01.505 --> 01:15:03.215
+Thank you sir. So, um,
+
+1058
+01:15:04.075 --> 01:15:06.415
+so last time actually requested on the grade lab,
+
+1059
+01:15:06.415 --> 01:15:07.575
+what are the dates will be there.
+
+1060
+01:15:07.575 --> 01:15:11.935
+If you can show up those calendar, that will be helpful.
+
+1061
+01:15:12.955 --> 01:15:17.255
+Uh, uh, like, uh, the thing is that currently, uh, the,
+
+1062
+01:15:17.795 --> 01:15:18.975
+uh, semester just ended.
+
+1063
+01:15:19.235 --> 01:15:20.575
+I'm occupied a lot of work
+
+1064
+01:15:20.575 --> 01:15:22.295
+because we need to publish the results
+
+1065
+01:15:22.315 --> 01:15:24.095
+and all not having time,
+
+1066
+01:15:24.275 --> 01:15:27.895
+but it is in my mind, so as soon as like, uh, that is why,
+
+1067
+01:15:28.075 --> 01:15:31.255
+uh, we are also saying that on the grade lab, you don't need
+
+1068
+01:15:31.255 --> 01:15:32.535
+to actually sitting in the lab
+
+1069
+01:15:32.595 --> 01:15:35.425
+and like, like doing all the experiment and everything.
+
+1070
+01:15:36.215 --> 01:15:39.765
+We'll be giving the time of like seven days until then, uh,
+
+1071
+01:15:39.765 --> 01:15:41.725
+till that time we'll be having the problem.
+
+1072
+01:15:41.815 --> 01:15:43.365
+We'll be executing, it'll be submitted.
+
+1073
+01:15:43.685 --> 01:15:46.125
+I don't think like, you know, dates will be an issue
+
+1074
+01:15:46.265 --> 01:15:47.325
+for you and ah, okay.
+
+1075
+01:15:47.325 --> 01:15:49.925
+Okay, understood. Okay, because earlier it was mentioned
+
+1076
+01:15:49.925 --> 01:15:51.965
+that it'll be on the same day. That is the reason
+
+1077
+01:15:52.045 --> 01:15:53.045
+I asked. Take
+
+1078
+01:15:53.045 --> 01:15:54.365
+the grade level on the same day
+
+1079
+01:15:54.365 --> 01:15:56.205
+and it on the same day, but there Correct.
+
+1080
+01:15:57.105 --> 01:15:58.525
+Lot of the students, a lot of
+
+1081
+01:15:58.525 --> 01:15:59.525
+The Right, right. Many people
+
+1082
+01:15:59.525 --> 01:16:00.845
+might be
+
+1083
+01:16:02.105 --> 01:16:03.105
+So that that's a problem.
+
+1084
+01:16:03.745 --> 01:16:05.165
+All those things there, that is the reason
+
+1085
+01:16:06.495 --> 01:16:07.965
+Seven time will be there.
+
+1086
+01:16:07.985 --> 01:16:10.685
+So I don't think, uh, there should be any more problem
+
+1087
+01:16:10.825 --> 01:16:12.565
+for the grade lab, like attending the
+
+1088
+01:16:12.565 --> 01:16:13.605
+grade lab, solving the grade lab.
+
+1089
+01:16:13.635 --> 01:16:16.445
+Yeah. Right, right. Many people are, um, like here,
+
+1090
+01:16:16.765 --> 01:16:19.165
+everyone is, uh, yeah, the working profession.
+
+1091
+01:16:19.185 --> 01:16:21.445
+And so some of them have offices on the Saturday
+
+1092
+01:16:21.555 --> 01:16:22.645
+also. That is, yeah.
+
+1093
+01:16:22.645 --> 01:16:26.445
+Yeah. That, that is what, And um, the last, uh,
+
+1094
+01:16:26.445 --> 01:16:29.925
+assignment, I think the date, due date is on the third
+
+1095
+01:16:29.945 --> 01:16:31.445
+or fifth, something they have given.
+
+1096
+01:16:31.685 --> 01:16:34.085
+I think fifth. They have extended to fifth.
+
+1097
+01:16:34.195 --> 01:16:35.565
+Okay. Okay. You can take the date
+
+1098
+01:16:36.465 --> 01:16:40.315
+And for this assignment it'll be next, next Saturday.
+
+1099
+01:16:41.145 --> 01:16:42.145
+That Is on sixth.
+
+1100
+01:16:42.325 --> 01:16:45.315
+Sixth, Sixth, okay. Understood.
+
+1101
+01:16:47.035 --> 01:16:48.685
+Okay. That, that is helpful.
+
+1102
+01:16:49.195 --> 01:16:53.525
+Okay. Thank, thank sir Very much.
+
+1103
+01:16:55.145 --> 01:16:57.405
+Do we submit Sir? Sir? Thank you sir.
+
+1104
+01:16:59.355 --> 01:17:04.025
+It's ans there's a link to submit.
+
+1105
+01:17:05.485 --> 01:17:09.135
+Okay. Thank you sir.
