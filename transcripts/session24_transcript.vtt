@@ -1,0 +1,8701 @@
+WEBVTT
+
+1
+00:15:25.010 --> 00:15:25.500
+Good morning.
+
+2
+00:15:25.765 --> 00:15:30.745
+Good morning to Good morning, sir. Morning. Morning, sir.
+
+3
+00:15:30.745 --> 00:15:33.625
+Good morning, sir. Good morning.
+
+4
+00:15:37.365 --> 00:15:38.945
+We start in another one
+
+5
+00:15:38.945 --> 00:15:42.425
+or two minutes, just set up the thing.
+
+6
+00:16:01.435 --> 00:16:04.285
+Good morning, sir. Good morning. Good morning.
+
+7
+00:16:31.255 --> 00:16:35.165
+Okay, now let me share my screen.
+
+8
+00:17:49.365 --> 00:17:52.325
+Okay, so last class
+
+9
+00:17:52.545 --> 00:17:54.565
+and last to last classes, we,
+
+10
+00:17:54.825 --> 00:17:57.245
+we were talking about the sequence to sequence modeling.
+
+11
+00:17:57.485 --> 00:17:59.405
+I started with the sequence to sequence modeling,
+
+12
+00:18:00.505 --> 00:18:03.605
+and in the last class, we had also seen some demo of
+
+13
+00:18:03.605 --> 00:18:04.805
+that sequence to sequence modeling.
+
+14
+00:18:08.875 --> 00:18:11.245
+Okay, so now we are moving ahead
+
+15
+00:18:11.595 --> 00:18:13.045
+with the attention mechanism.
+
+16
+00:18:14.185 --> 00:18:17.215
+So, okay, let's start with this.
+
+17
+00:18:19.875 --> 00:18:24.405
+So, uh, we understood, right, the, the, the
+
+18
+00:18:25.915 --> 00:18:27.995
+sequence to sequence modeling why it is required
+
+19
+00:18:28.135 --> 00:18:31.235
+and why the, the kind
+
+20
+00:18:31.335 --> 00:18:35.635
+of problem which was, uh, solved by the sequence
+
+21
+00:18:35.635 --> 00:18:38.195
+to sequence modeling was not able to solve by any other,
+
+22
+00:18:38.565 --> 00:18:42.555
+other architectures like RN and L-S-T-M-G-R-U alone.
+
+23
+00:18:43.265 --> 00:18:46.715
+Okay? So, because now we have the two different sequences
+
+24
+00:18:46.855 --> 00:18:48.395
+and input also, we have sequence
+
+25
+00:18:48.455 --> 00:18:49.835
+or put also we have sequence.
+
+26
+00:18:49.915 --> 00:18:52.675
+And those two sequence length is not same.
+
+27
+00:18:52.775 --> 00:18:55.275
+If their length are same, then we,
+
+28
+00:18:55.335 --> 00:18:57.755
+we may not require sequence to sequence architecture.
+
+29
+00:18:58.215 --> 00:19:01.795
+We may do only with one of the LST architecture.
+
+30
+00:19:02.535 --> 00:19:03.795
+Uh, and, and we can do that
+
+31
+00:19:03.795 --> 00:19:06.875
+because for every time a stem, if it is fixed
+
+32
+00:19:07.465 --> 00:19:09.035
+that we are having only one
+
+33
+00:19:09.055 --> 00:19:10.515
+output, then there is no problem.
+
+34
+00:19:10.865 --> 00:19:13.555
+Okay? But the problem here is
+
+35
+00:19:13.555 --> 00:19:16.075
+that input sequence length would be different.
+
+36
+00:19:16.215 --> 00:19:17.995
+Output sequence length would be different.
+
+37
+00:19:18.005 --> 00:19:20.955
+Hence, for every LSTM, I can't have a single output.
+
+38
+00:19:21.735 --> 00:19:24.915
+And that's why we need a separate architecture encoder,
+
+39
+00:19:24.915 --> 00:19:26.835
+which will encode the input,
+
+40
+00:19:26.855 --> 00:19:29.995
+and then we can do the decode, which can then generate
+
+41
+00:19:30.255 --> 00:19:34.755
+as many outputs as you want in the, in the
+
+42
+00:19:35.785 --> 00:19:37.275
+timestamp manner, right?
+
+43
+00:19:37.295 --> 00:19:38.435
+So this was the main idea of
+
+44
+00:19:38.435 --> 00:19:39.595
+the sequence to sequence modeling.
+
+45
+00:19:40.815 --> 00:19:42.195
+And, uh, the limitation
+
+46
+00:19:42.455 --> 00:19:44.915
+of this particular approach was again, the,
+
+47
+00:19:45.415 --> 00:19:48.315
+we talked about this, uh, scenario
+
+48
+00:19:48.685 --> 00:19:52.195
+where suppose we have our context is very long, okay?
+
+49
+00:19:52.855 --> 00:19:54.995
+And the scenario is that you have
+
+50
+00:19:54.995 --> 00:19:56.915
+to do the machine translation case.
+
+51
+00:19:57.625 --> 00:20:01.355
+Then what this, uh, encoder was trying to do
+
+52
+00:20:01.355 --> 00:20:06.275
+that it was reading the entire paragraph at once, trying to
+
+53
+00:20:07.265 --> 00:20:09.395
+give, give, give one context vector,
+
+54
+00:20:09.795 --> 00:20:14.155
+a fixed length context vector, say 2 56 dimension,
+
+55
+00:20:14.155 --> 00:20:15.595
+five 12 dimension vector.
+
+56
+00:20:16.375 --> 00:20:18.195
+And that vector was responsible
+
+57
+00:20:18.215 --> 00:20:19.795
+for remembering everything here.
+
+58
+00:20:20.225 --> 00:20:23.915
+Okay? That was the, that was the responsibility
+
+59
+00:20:23.975 --> 00:20:25.435
+of this context vector.
+
+60
+00:20:26.905 --> 00:20:30.715
+Then, uh, uh, what was happening at the decoder side,
+
+61
+00:20:30.715 --> 00:20:33.395
+that the decoded side, we were taking this context vector,
+
+62
+00:20:33.855 --> 00:20:37.075
+and then at timestamped manner, we were trying to
+
+63
+00:20:37.755 --> 00:20:39.875
+generate the, uh, word in the,
+
+64
+00:20:39.875 --> 00:20:40.915
+in the corresponding language,
+
+65
+00:20:41.195 --> 00:20:42.755
+whatever language here, it was Hindi.
+
+66
+00:20:43.375 --> 00:20:44.875
+So the problem, you can see, right?
+
+67
+00:20:45.175 --> 00:20:48.525
+The problem is we are giving a huge responsibility to this,
+
+68
+00:20:48.545 --> 00:20:49.565
+to this context vector.
+
+69
+00:20:49.565 --> 00:20:51.405
+That is one thing From the encoded side,
+
+70
+00:20:51.995 --> 00:20:54.005
+there's a huge responsibility which is given
+
+71
+00:20:54.005 --> 00:20:56.325
+to the context vector, right?
+
+72
+00:20:56.425 --> 00:20:59.485
+And, uh, which is, which is, uh, which is fine,
+
+73
+00:20:59.545 --> 00:21:01.405
+but then it, there, there is a high chance
+
+74
+00:21:01.405 --> 00:21:03.325
+that it'll not do that.
+
+75
+00:21:03.495 --> 00:21:05.125
+It'll not remember a hundred percent
+
+76
+00:21:05.125 --> 00:21:07.205
+because LSTM have a architecture
+
+77
+00:21:07.205 --> 00:21:08.565
+that it has to forget something.
+
+78
+00:21:08.585 --> 00:21:10.925
+It have, it will add something, all those things, right?
+
+79
+00:21:11.465 --> 00:21:13.605
+So it might, might miss some of the details.
+
+80
+00:21:13.605 --> 00:21:15.045
+There is just chances of that.
+
+81
+00:21:15.985 --> 00:21:20.125
+Now, uh, suppose the context vector doesn't lose anything
+
+82
+00:21:20.545 --> 00:21:22.885
+and keep all the information of the encoder.
+
+83
+00:21:22.885 --> 00:21:25.805
+That is, that is also the one of the cases you can expect.
+
+84
+00:21:26.065 --> 00:21:28.285
+But the problem with the decoder side is
+
+85
+00:21:28.635 --> 00:21:33.125
+that the same context vector was we were feeding to each
+
+86
+00:21:33.125 --> 00:21:37.125
+of the, this the LSTM network, LSTM cells at the,
+
+87
+00:21:37.125 --> 00:21:38.565
+in the decoder timestamps, right?
+
+88
+00:21:38.865 --> 00:21:42.045
+So context vector, which was there at the zero timestamp,
+
+89
+00:21:43.245 --> 00:21:45.545
+and, uh, the same context factor, obviously
+
+90
+00:21:45.545 --> 00:21:49.465
+with some modification going to the, uh, first time stem,
+
+91
+00:21:49.465 --> 00:21:51.665
+second time stem, third and fourth and so on.
+
+92
+00:21:52.525 --> 00:21:53.665
+So, what was happening is
+
+93
+00:21:53.695 --> 00:21:56.855
+because for every time stem, we had
+
+94
+00:21:56.855 --> 00:21:58.655
+to predict the different word, right?
+
+95
+00:21:59.475 --> 00:22:02.255
+And obviously we were feeding the current input,
+
+96
+00:22:02.395 --> 00:22:06.095
+but then the previous timestamp, whatever output was coming,
+
+97
+00:22:06.355 --> 00:22:09.255
+the context vector that was not changing much, okay?
+
+98
+00:22:09.305 --> 00:22:10.495
+There was a slight change,
+
+99
+00:22:10.515 --> 00:22:13.135
+but this context vector was almost same.
+
+100
+00:22:13.155 --> 00:22:16.375
+The same context factor is used at every decoding step
+
+101
+00:22:16.725 --> 00:22:18.335
+with some modification, obviously,
+
+102
+00:22:18.335 --> 00:22:20.495
+because you, at every LM cell,
+
+103
+00:22:20.495 --> 00:22:22.015
+you add something and you delete something.
+
+104
+00:22:22.795 --> 00:22:25.815
+So decoder cannot focus on the relevant source words.
+
+105
+00:22:25.965 --> 00:22:27.015
+That was the main problem.
+
+106
+00:22:27.085 --> 00:22:31.295
+That for, for the word meh, the encoder I is important,
+
+107
+00:22:31.395 --> 00:22:32.975
+and m and going is not important.
+
+108
+00:22:33.035 --> 00:22:34.895
+But that was not told by the context vector.
+
+109
+00:22:34.895 --> 00:22:38.415
+That is the problem. If the context vector along
+
+110
+00:22:38.575 --> 00:22:40.975
+with this context factor, we also have some,
+
+111
+00:22:41.165 --> 00:22:42.415
+another context factor,
+
+112
+00:22:42.515 --> 00:22:45.695
+or you can say that some other attention, which can say
+
+113
+00:22:45.695 --> 00:22:48.815
+that I is important m and going is not important.
+
+114
+00:22:49.485 --> 00:22:53.215
+Then it had, it would've been easy for these LS tian cells
+
+115
+00:22:53.395 --> 00:22:55.935
+to predict the next word in the corresponding language.
+
+116
+00:22:55.935 --> 00:22:57.135
+But that was not happening.
+
+117
+00:22:57.445 --> 00:22:58.735
+That is not happening in the case
+
+118
+00:22:58.735 --> 00:23:00.055
+of sequence to sequence modeling.
+
+119
+00:23:00.155 --> 00:23:01.575
+And it'll, it'll lead
+
+120
+00:23:01.595 --> 00:23:04.415
+to the in character generic translation.
+
+121
+00:23:04.595 --> 00:23:05.615
+But that was the main problem.
+
+122
+00:23:05.715 --> 00:23:09.095
+We talked about it, and hence we arrived at the solution
+
+123
+00:23:09.195 --> 00:23:10.855
+of this particular problem as attention.
+
+124
+00:23:11.475 --> 00:23:13.935
+We say that once we have, say
+
+125
+00:23:13.935 --> 00:23:15.655
+that this is the whole document, right?
+
+126
+00:23:16.315 --> 00:23:20.015
+And before, uh, giving this document to the decoder,
+
+127
+00:23:20.015 --> 00:23:21.735
+the encoder has to encode everything.
+
+128
+00:23:22.435 --> 00:23:24.295
+So encoder will encode everything.
+
+129
+00:23:24.395 --> 00:23:28.415
+But at the decoder, every time, aamp, somehow we need
+
+130
+00:23:28.415 --> 00:23:31.935
+to find span of words or word, word
+
+131
+00:23:31.935 --> 00:23:35.895
+or a span of word, a single word, or together multiple words
+
+132
+00:23:36.275 --> 00:23:39.855
+or at different places, also some words.
+
+133
+00:23:39.995 --> 00:23:43.255
+So yeah, what we are trying to do here is we are trying
+
+134
+00:23:43.255 --> 00:23:47.685
+to find that, okay, in the whole, whole paragraph
+
+135
+00:23:47.785 --> 00:23:50.805
+or whole document, what are the words which are important
+
+136
+00:23:51.385 --> 00:23:53.245
+at a particular timestamp of the Dakota?
+
+137
+00:23:53.705 --> 00:23:56.885
+And hence, give more weight to those words only, okay?
+
+138
+00:23:57.265 --> 00:24:01.045
+And let us not give equal weight to the entire document.
+
+139
+00:24:01.265 --> 00:24:03.085
+So not all inputs are equally important.
+
+140
+00:24:03.085 --> 00:24:05.765
+That is what is the most important thing,
+
+141
+00:24:05.765 --> 00:24:09.445
+what attention said, maybe only at every time stamp
+
+142
+00:24:09.445 --> 00:24:11.445
+of the decoder, because decoder will work at a
+
+143
+00:24:11.445 --> 00:24:12.485
+timestamp manner, right?
+
+144
+00:24:12.785 --> 00:24:13.885
+So at every time,
+
+145
+00:24:13.895 --> 00:24:16.645
+stamp only few words are important in the encoder,
+
+146
+00:24:16.705 --> 00:24:18.845
+let us find that few words, which are important
+
+147
+00:24:19.545 --> 00:24:21.725
+and will give that to the decoder so
+
+148
+00:24:21.845 --> 00:24:25.245
+that decoder can then generate the next word accordingly.
+
+149
+00:24:25.395 --> 00:24:26.685
+Okay? That will be more helpful,
+
+150
+00:24:26.685 --> 00:24:30.005
+rather than giving every time the entire document.
+
+151
+00:24:30.555 --> 00:24:33.645
+Okay? So this is, this was the main idea of the attention.
+
+152
+00:24:35.305 --> 00:24:38.005
+So now I'll, I'll just walk you through the attention
+
+153
+00:24:38.505 --> 00:24:42.985
+and I will just explain you today, uh, the mayor today, uh,
+
+154
+00:24:42.985 --> 00:24:45.905
+that, uh, what is the, uh, how,
+
+155
+00:24:45.925 --> 00:24:48.025
+how exactly the attention is being calculated.
+
+156
+00:24:48.275 --> 00:24:49.505
+First, I'll talk in general,
+
+157
+00:24:49.645 --> 00:24:52.025
+but then I will also talk about one
+
+158
+00:24:52.025 --> 00:24:55.025
+or two famous type of attention mechanism, like, uh,
+
+159
+00:24:55.025 --> 00:24:57.345
+we'll talk about the au attention as well
+
+160
+00:24:57.345 --> 00:24:58.425
+as the long attention.
+
+161
+00:24:58.425 --> 00:25:01.625
+There are many other attention mechanism also, which has,
+
+162
+00:25:01.625 --> 00:25:03.665
+which was proposed in the same duration,
+
+163
+00:25:04.405 --> 00:25:07.345
+but then this attention was the first one who attempted it.
+
+164
+00:25:07.925 --> 00:25:11.025
+And long attention is another way of doing the attention.
+
+165
+00:25:11.125 --> 00:25:13.505
+So we'll talk about these two, right, in this,
+
+166
+00:25:13.505 --> 00:25:14.585
+this particular class today.
+
+167
+00:25:14.925 --> 00:25:17.345
+So before I'll proceed if you have any query.
+
+168
+00:25:17.805 --> 00:25:20.305
+So let me know, then I'll just start
+
+169
+00:25:29.975 --> 00:25:30.975
+No queries, sir.
+
+170
+00:25:31.305 --> 00:25:33.755
+Okay, fine. Thank you. Alright.
+
+171
+00:25:33.775 --> 00:25:35.875
+So let us then walk through the attention that
+
+172
+00:25:35.935 --> 00:25:37.595
+how exactly it is calculated,
+
+173
+00:25:37.595 --> 00:25:38.995
+because one thing we have understood
+
+174
+00:25:38.995 --> 00:25:43.315
+that ev every time a stamp of the decode, we want to tell
+
+175
+00:25:43.575 --> 00:25:47.435
+to these LSTM cells somehow that, okay, I is important,
+
+176
+00:25:47.895 --> 00:25:51.435
+say 80%, um, or I is important.
+
+177
+00:25:51.795 --> 00:25:54.555
+M and going is not that much important. Okay?
+
+178
+00:25:54.985 --> 00:25:56.635
+Similarly, at the second time stamp,
+
+179
+00:25:56.875 --> 00:25:58.915
+I might be interested in saying, going is important
+
+180
+00:25:58.915 --> 00:26:02.635
+because ja raha both are coming from the word going right?
+
+181
+00:26:02.635 --> 00:26:06.115
+Almost. So going is important, but I
+
+182
+00:26:06.135 --> 00:26:07.795
+and m is not that much important.
+
+183
+00:26:07.935 --> 00:26:09.635
+So similarly, at the third time stamp,
+
+184
+00:26:09.735 --> 00:26:11.475
+I'm saying going is important, I
+
+185
+00:26:11.475 --> 00:26:13.555
+and m is not that much important maybe,
+
+186
+00:26:14.575 --> 00:26:17.235
+or, uh, similarly, in the third time, fourth time stamp,
+
+187
+00:26:17.775 --> 00:26:20.195
+I'm saying that, okay, this m is important.
+
+188
+00:26:20.955 --> 00:26:22.955
+I, and going is not important that much.
+
+189
+00:26:23.175 --> 00:26:25.075
+And finally, we are closing it.
+
+190
+00:26:25.295 --> 00:26:27.315
+So this is how somehow we have to tell
+
+191
+00:26:27.315 --> 00:26:30.595
+to the decoder at every time, stamp that, okay,
+
+192
+00:26:30.625 --> 00:26:32.915
+this word in the encoder is important
+
+193
+00:26:33.335 --> 00:26:35.635
+for doing the translation at this particular
+
+194
+00:26:35.635 --> 00:26:36.795
+time stamp of the decode.
+
+195
+00:26:36.945 --> 00:26:39.195
+Okay? Once we give that information,
+
+196
+00:26:39.905 --> 00:26:41.715
+then there is no problem for the Dakota.
+
+197
+00:26:41.975 --> 00:26:46.805
+It can easily compute, uh, again, with the help of the LSTs
+
+198
+00:26:46.905 --> 00:26:49.445
+or some feedforward neural network, something it'll do,
+
+199
+00:26:49.745 --> 00:26:52.525
+but somehow it'll compute that, okay, what is the next
+
+200
+00:26:53.175 --> 00:26:54.285
+Hindi word, which I have
+
+201
+00:26:54.285 --> 00:26:56.165
+to give at this particular time of step?
+
+202
+00:26:56.835 --> 00:26:59.205
+Okay, so now let us see that, how to do that.
+
+203
+00:26:59.785 --> 00:27:03.525
+So before that, let us understand that at every, uh,
+
+204
+00:27:03.865 --> 00:27:06.445
+at every timestamp of the decoder, okay?
+
+205
+00:27:06.445 --> 00:27:07.645
+Decoder every timestamp,
+
+206
+00:27:08.005 --> 00:27:09.685
+although I'm showing you everything together,
+
+207
+00:27:09.785 --> 00:27:12.125
+but actually this is the first time it'll come.
+
+208
+00:27:12.125 --> 00:27:14.165
+Then second, then third, then fourth, then fifth,
+
+209
+00:27:14.165 --> 00:27:15.325
+we have talked about it, right?
+
+210
+00:27:15.845 --> 00:27:18.525
+Sequence to sequence modeling the, uh, training time
+
+211
+00:27:18.665 --> 00:27:19.765
+and the inference time.
+
+212
+00:27:19.765 --> 00:27:22.645
+In the training time, uh, or the inference time.
+
+213
+00:27:22.715 --> 00:27:23.725
+What happens basically
+
+214
+00:27:24.195 --> 00:27:28.165
+that the decoder decoder always works, uh, uh,
+
+215
+00:27:28.785 --> 00:27:30.605
+as a auto aggressive manner, okay?
+
+216
+00:27:30.605 --> 00:27:33.445
+Auto aggressive manner in the sense it takes the input
+
+217
+00:27:33.945 --> 00:27:36.725
+so far, whatever it has, uh, it has,
+
+218
+00:27:36.825 --> 00:27:38.405
+and then predict the next word.
+
+219
+00:27:39.145 --> 00:27:41.965
+And then it takes the, for example, when you start
+
+220
+00:27:41.965 --> 00:27:45.045
+with the start, then it gives the map the next time a start
+
+221
+00:27:45.105 --> 00:27:48.525
+and map together gives ja then a start, maja gives raha.
+
+222
+00:27:48.525 --> 00:27:52.405
+And so on the auto design, that is how the sequence
+
+223
+00:27:52.405 --> 00:27:55.285
+to sequence model works at the, uh, inference time.
+
+224
+00:27:55.745 --> 00:27:57.205
+So we have already talked about that.
+
+225
+00:27:57.305 --> 00:28:00.525
+So now let us see that at every time stamp of the decoder,
+
+226
+00:28:00.545 --> 00:28:04.245
+we should focus on only a few relevant words in theod,
+
+227
+00:28:04.385 --> 00:28:07.885
+for example, in the timestamp one, okay?
+
+228
+00:28:08.025 --> 00:28:10.005
+Or I should have told it is zero
+
+229
+00:28:10.005 --> 00:28:12.205
+because whatever, why I am saying zero,
+
+230
+00:28:12.205 --> 00:28:15.645
+because at this particular timestamp, the input,
+
+231
+00:28:15.685 --> 00:28:18.085
+what I'm giving it is not generated input, right?
+
+232
+00:28:18.255 --> 00:28:23.005
+Start. Okay? The start is something which we simply, uh,
+
+233
+00:28:23.295 --> 00:28:25.485
+start with at the zero timestamp.
+
+234
+00:28:26.185 --> 00:28:30.805
+So, uh, uh, suppose it's a timestamp zero,
+
+235
+00:28:30.855 --> 00:28:33.925
+which I'll create from next time, but that here it is, uh,
+
+236
+00:28:34.225 --> 00:28:36.965
+or it is timestamp one, just imagine that, just a,
+
+237
+00:28:37.405 --> 00:28:38.445
+a matter of notation.
+
+238
+00:28:38.705 --> 00:28:41.125
+So suppose is timestamp, step one,
+
+239
+00:28:41.175 --> 00:28:42.965
+where the start is an input.
+
+240
+00:28:44.225 --> 00:28:47.205
+So this LSTM, it takes the context vector,
+
+241
+00:28:47.745 --> 00:28:51.005
+and it also takes the say that embedding of this start
+
+242
+00:28:51.105 --> 00:28:53.405
+or one hot vector of the start here, correct?
+
+243
+00:28:54.385 --> 00:28:57.525
+Now, based on these two, these two things, it has to tell,
+
+244
+00:28:57.945 --> 00:29:00.805
+it has to tell that this word, which it has to get
+
+245
+00:29:00.945 --> 00:29:02.685
+as an output is man,
+
+246
+00:29:03.465 --> 00:29:06.085
+but it would've been better than that.
+
+247
+00:29:06.345 --> 00:29:10.085
+We would've said that along with these two, uh, we,
+
+248
+00:29:10.145 --> 00:29:12.325
+we would've also said that focus on I.
+
+249
+00:29:12.905 --> 00:29:14.845
+Now, this is what we have to model, okay?
+
+250
+00:29:14.845 --> 00:29:17.445
+This is what we have to model. Now, how do we model that?
+
+251
+00:29:17.445 --> 00:29:20.405
+I'll explain you later, but this is what I'm trying to do.
+
+252
+00:29:21.115 --> 00:29:24.045
+I'll, I will not change in this architecture or anything.
+
+253
+00:29:24.235 --> 00:29:26.245
+I'll still give context factor as an input
+
+254
+00:29:26.245 --> 00:29:28.285
+because it has the overall context of this.
+
+255
+00:29:28.445 --> 00:29:29.525
+I am going, right?
+
+256
+00:29:30.025 --> 00:29:32.765
+So context vector will go as it is, as an input
+
+257
+00:29:32.765 --> 00:29:36.085
+to the TM in the Dakota, every time a stamp,
+
+258
+00:29:36.085 --> 00:29:37.725
+it will also have its own input.
+
+259
+00:29:37.725 --> 00:29:40.845
+Like a start is an input here, along with these two,
+
+260
+00:29:41.075 --> 00:29:44.965
+I'll say focus on I, okay,
+
+261
+00:29:45.305 --> 00:29:46.525
+now, this is what I have to model.
+
+262
+00:29:46.675 --> 00:29:48.965
+I'll tell you how now that
+
+263
+00:29:48.965 --> 00:29:51.685
+that will happen at the time stamp number one, similarly,
+
+264
+00:29:51.705 --> 00:29:53.365
+at the time, stamp number two.
+
+265
+00:29:54.265 --> 00:29:58.205
+Now what? I'll say that, okay, focus on going,
+
+266
+00:29:58.205 --> 00:30:01.805
+because now I have to give Ja, so I have to say,
+
+267
+00:30:01.805 --> 00:30:04.645
+somehow I have to model it somehow that,
+
+268
+00:30:04.785 --> 00:30:07.045
+now I'll tell this lst m that you have
+
+269
+00:30:07.045 --> 00:30:09.405
+to focus on the word going similarly,
+
+270
+00:30:09.405 --> 00:30:11.645
+at the third timestamp, I'll say, okay,
+
+271
+00:30:11.645 --> 00:30:13.245
+focus on going still.
+
+272
+00:30:13.375 --> 00:30:16.205
+Maybe at the fourth timestamp, I'll say focus on m
+
+273
+00:30:16.785 --> 00:30:19.565
+and then at the fifth timestamp, it will end.
+
+274
+00:30:19.565 --> 00:30:21.725
+So no strong focus on any new word.
+
+275
+00:30:22.345 --> 00:30:25.405
+Now see this focus on, I focus on going, this is
+
+276
+00:30:25.405 --> 00:30:27.405
+what I'm going to model, model.
+
+277
+00:30:27.435 --> 00:30:30.405
+When I say I'm going to do some mathematical, uh,
+
+278
+00:30:30.475 --> 00:30:32.485
+calculation in order to get that focus.
+
+279
+00:30:33.105 --> 00:30:34.805
+And that itself is known as attention.
+
+280
+00:30:34.985 --> 00:30:39.765
+So attention, we are going to calculate at every time stamp
+
+281
+00:30:39.765 --> 00:30:41.325
+of the decoder, okay?
+
+282
+00:30:41.325 --> 00:30:44.165
+It's not a single attention, which will, which will work
+
+283
+00:30:44.165 --> 00:30:45.325
+for the entire decoder.
+
+284
+00:30:45.825 --> 00:30:48.405
+So at every time stamp of the decoder, we'll have one,
+
+285
+00:30:48.505 --> 00:30:50.415
+one attention, okay?
+
+286
+00:30:50.415 --> 00:30:53.135
+And that is how we'll have one extra edge,
+
+287
+00:30:53.595 --> 00:30:56.055
+and hence the same architecture.
+
+288
+00:30:56.275 --> 00:30:59.455
+Having that attention in consideration will definitely
+
+289
+00:30:59.965 --> 00:31:02.695
+improve because the, the logic looks correct.
+
+290
+00:31:03.035 --> 00:31:05.855
+Now, how do we implement the logic? Let us see that.
+
+291
+00:31:06.755 --> 00:31:08.855
+So instead of one fixed context vector,
+
+292
+00:31:09.035 --> 00:31:12.375
+we dynamically compute context at every time stamp.
+
+293
+00:31:12.595 --> 00:31:17.095
+So this common context vector, we also dynamically compute
+
+294
+00:31:17.755 --> 00:31:20.215
+the context vector at every timestamp, which will say,
+
+295
+00:31:20.215 --> 00:31:21.295
+okay, focus on this word.
+
+296
+00:31:21.295 --> 00:31:24.015
+Focus on this word right now.
+
+297
+00:31:24.355 --> 00:31:27.885
+So how do we model it? It's all about that, okay?
+
+298
+00:31:27.905 --> 00:31:31.725
+How do we come up with some mechanisms so that I can, uh,
+
+299
+00:31:31.725 --> 00:31:33.765
+tell the focus on this particular word?
+
+300
+00:31:33.955 --> 00:31:36.005
+Okay? That is what we have to understand now.
+
+301
+00:31:37.065 --> 00:31:41.445
+So let us understand that what changes with attention, okay?
+
+302
+00:31:41.445 --> 00:31:45.165
+Because we have seen that in the case of, uh, uh,
+
+303
+00:31:45.645 --> 00:31:46.845
+standard encoder decoder,
+
+304
+00:31:47.385 --> 00:31:50.885
+and I'm only talking about now decoder encoder.
+
+305
+00:31:50.885 --> 00:31:53.885
+We know how does it work? There is no change in the encoder.
+
+306
+00:31:54.705 --> 00:31:57.925
+So our focus is on decoder that how does it work?
+
+307
+00:31:58.025 --> 00:32:00.725
+So in the standard encoder decoder is sequence
+
+308
+00:32:00.725 --> 00:32:03.565
+to sequence model what happened at the decoder.
+
+309
+00:32:03.785 --> 00:32:07.885
+If you see what happened, step number one, step number one,
+
+310
+00:32:09.545 --> 00:32:13.285
+you feed Y node and you feed S minus one.
+
+311
+00:32:14.035 --> 00:32:18.685
+Okay? So this should have been the S minus one.
+
+312
+00:32:19.835 --> 00:32:21.015
+Uh, one second.
+
+313
+00:32:24.725 --> 00:32:26.265
+Uh, this should have been the S
+
+314
+00:32:27.365 --> 00:32:31.485
+minus one, okay?
+
+315
+00:32:31.605 --> 00:32:32.885
+I, I'll change it anyway,
+
+316
+00:32:32.945 --> 00:32:37.625
+but I thought that the, these,
+
+317
+00:32:37.625 --> 00:32:42.355
+these three things and minus
+
+318
+00:32:42.535 --> 00:32:46.635
+one, it should be because I, I starting with, um,
+
+319
+00:32:46.755 --> 00:32:48.075
+I have not yet started anything.
+
+320
+00:32:48.075 --> 00:32:49.475
+The minus one. Why I am saying that
+
+321
+00:32:49.475 --> 00:32:53.515
+because, uh, nothing is coming from the second,
+
+322
+00:32:55.325 --> 00:32:56.835
+sorry, this should be zero,
+
+323
+00:32:56.935 --> 00:32:58.395
+and this should be one,
+
+324
+00:33:01.465 --> 00:33:06.215
+minus one, then zero, then one, and then so on, right?
+
+325
+00:33:07.845 --> 00:33:11.575
+Okay, so little run. So what happens?
+
+326
+00:33:11.715 --> 00:33:15.655
+So at the first time, stamp of the, uh, decoder you feed,
+
+327
+00:33:15.715 --> 00:33:17.175
+why not, which is the current input.
+
+328
+00:33:17.175 --> 00:33:18.655
+That is called start, start.
+
+329
+00:33:18.875 --> 00:33:21.615
+Uh, one hot vector is shown here as Y not,
+
+330
+00:33:22.235 --> 00:33:23.775
+and S minus one is nothing
+
+331
+00:33:23.795 --> 00:33:24.895
+but this context vector,
+
+332
+00:33:24.895 --> 00:33:27.295
+which is coming from the encoder site.
+
+333
+00:33:28.085 --> 00:33:31.415
+Okay? So, so that is at the first time stamp.
+
+334
+00:33:31.555 --> 00:33:33.775
+Now, now at the second time stamp, what happened?
+
+335
+00:33:33.955 --> 00:33:36.815
+It is Y one, S one, Y one,
+
+336
+00:33:37.315 --> 00:33:38.695
+and uh,
+
+337
+00:33:42.265 --> 00:33:43.765
+yeah, thank you.
+
+338
+00:33:45.525 --> 00:33:48.995
+Okay, so S minus one.
+
+339
+00:33:49.335 --> 00:33:50.875
+And then at the first trimester,
+
+340
+00:33:50.875 --> 00:33:52.715
+what happened is Y one s not,
+
+341
+00:33:53.375 --> 00:33:56.435
+and at second trimester, what happened is Y two S one,
+
+342
+00:33:56.615 --> 00:33:59.115
+and we know that what happened inside this lium, right?
+
+343
+00:33:59.115 --> 00:34:01.435
+That, that, that idea we already have,
+
+344
+00:34:01.735 --> 00:34:02.955
+we get the two inputs,
+
+345
+00:34:03.335 --> 00:34:06.195
+and then we do all those gates calculations, right?
+
+346
+00:34:06.455 --> 00:34:08.435
+We calculate the fargate gate,
+
+347
+00:34:08.525 --> 00:34:10.635
+input gate output gate, all those things we do.
+
+348
+00:34:10.655 --> 00:34:13.675
+Now that, that already, we know that we are not going, going
+
+349
+00:34:13.695 --> 00:34:18.035
+inside, but this is a usual multiplication or mathematical,
+
+350
+00:34:18.655 --> 00:34:21.835
+or you can say that the input which we give at every time,
+
+351
+00:34:21.915 --> 00:34:24.435
+a stamp of the decoder, the current input
+
+352
+00:34:25.255 --> 00:34:27.075
+and the last hidden output,
+
+353
+00:34:27.085 --> 00:34:29.715
+these are the two inputs right now.
+
+354
+00:34:29.715 --> 00:34:33.075
+What changes With the attention? With the attention.
+
+355
+00:34:33.535 --> 00:34:36.955
+Now, what happened along with this? Why not?
+
+356
+00:34:37.975 --> 00:34:42.685
+And S minus one, we are also going to give something
+
+357
+00:34:42.705 --> 00:34:44.685
+as an attention that is gonna say C note.
+
+358
+00:34:45.275 --> 00:34:46.605
+Okay? Now, this is a change.
+
+359
+00:34:47.305 --> 00:34:49.165
+How do we calculate the C note that we are going
+
+360
+00:34:49.165 --> 00:34:50.885
+to see in the entire, uh, lecture
+
+361
+00:34:51.185 --> 00:34:53.765
+or entire class Today, we are going to talk more,
+
+362
+00:34:53.835 --> 00:34:56.405
+more on the c, no, C one and C two itself,
+
+363
+00:34:56.665 --> 00:34:58.085
+but that is what we talked, right?
+
+364
+00:34:58.235 --> 00:35:01.645
+Somehow the C no should say at the first time, a stem
+
+365
+00:35:01.645 --> 00:35:05.765
+that focus on I or you give more waiters to this word I.
+
+366
+00:35:05.765 --> 00:35:08.485
+That is what this C no has to say, okay?
+
+367
+00:35:08.755 --> 00:35:11.525
+Similarly, at the second time, stem along with this Y one,
+
+368
+00:35:11.525 --> 00:35:14.725
+and as as note, which is coming from last head state,
+
+369
+00:35:14.825 --> 00:35:18.365
+as well as the current input, I have to say C one.
+
+370
+00:35:18.565 --> 00:35:20.285
+C one is a attention score.
+
+371
+00:35:20.515 --> 00:35:22.565
+Attention score, which will say that, okay,
+
+372
+00:35:22.565 --> 00:35:26.605
+focus on the word going similarly at the third timestamp.
+
+373
+00:35:26.765 --> 00:35:30.165
+C two will say, focus on the word going. Okay?
+
+374
+00:35:30.305 --> 00:35:32.765
+Now this is what is the change which we are trying to bring,
+
+375
+00:35:32.855 --> 00:35:35.755
+bring with the attention, okay?
+
+376
+00:35:35.935 --> 00:35:38.085
+In the same setup. In the same setup,
+
+377
+00:35:38.275 --> 00:35:39.445
+this will be the change.
+
+378
+00:35:39.655 --> 00:35:41.845
+Right? Now, let us see how to do that change.
+
+379
+00:35:42.425 --> 00:35:47.125
+So context vector ct, which represent here, C, no, C one ct,
+
+380
+00:35:47.225 --> 00:35:48.485
+change it at every time.
+
+381
+00:35:48.685 --> 00:35:50.045
+Tamp here, that is also very important.
+
+382
+00:35:50.665 --> 00:35:52.885
+The C node, what you get at the first time, tamp
+
+383
+00:35:54.265 --> 00:35:56.365
+and C one, what you get a second timestamp.
+
+384
+00:35:56.365 --> 00:35:58.045
+Both are different. They're not same.
+
+385
+00:35:58.425 --> 00:36:00.845
+And that's, so if they're same, then there is no,
+
+386
+00:36:00.975 --> 00:36:02.245
+there is no benefit, right?
+
+387
+00:36:02.715 --> 00:36:05.805
+They should dynamically change with the timestamp,
+
+388
+00:36:05.865 --> 00:36:09.245
+how it is growing, and at every time stem it say that,
+
+389
+00:36:09.245 --> 00:36:10.805
+which word to focus in the encoder.
+
+390
+00:36:11.155 --> 00:36:13.925
+That is the main logic of that attention. Okay?
+
+391
+00:36:13.985 --> 00:36:18.195
+Now, let us see that. So first of all, uh,
+
+392
+00:36:18.375 --> 00:36:21.875
+before going to see that, okay, what is the C node, C one
+
+393
+00:36:21.875 --> 00:36:23.915
+and C two, and how do we calculate that?
+
+394
+00:36:24.015 --> 00:36:27.995
+Let us understand that, that this c no, C one, C two,
+
+395
+00:36:27.995 --> 00:36:29.915
+which is represented here by ct,
+
+396
+00:36:30.585 --> 00:36:34.955
+whether it should be a vector, it should be a scaler,
+
+397
+00:36:35.575 --> 00:36:36.795
+or it should be a metrics,
+
+398
+00:36:36.795 --> 00:36:39.395
+because this is how you represent your input always, right?
+
+399
+00:36:39.545 --> 00:36:42.115
+Sometimes you represent the input as a scaler.
+
+400
+00:36:42.815 --> 00:36:45.075
+Uh, some, uh, like weights are a scaler.
+
+401
+00:36:45.495 --> 00:36:49.635
+Uh, biases are a scalers bias values a scaler, okay?
+
+402
+00:36:49.945 --> 00:36:53.235
+Sometimes you represent, uh, the, the features also
+
+403
+00:36:53.235 --> 00:36:54.835
+as a scaler, uh, entity, right?
+
+404
+00:36:54.855 --> 00:36:58.715
+But sometimes, uh, the, the input can be vectors also.
+
+405
+00:36:58.715 --> 00:37:02.435
+Like this start is a vector. Ma is a vector. Ja is a vector.
+
+406
+00:37:02.435 --> 00:37:04.275
+Likewise, right? So
+
+407
+00:37:04.395 --> 00:37:05.955
+likewise, you, uh, all
+
+408
+00:37:05.955 --> 00:37:08.675
+of you think can tell me whether this COC one, C two, it has
+
+409
+00:37:08.675 --> 00:37:12.355
+to be scaler or vector, or it has to be metrics.
+
+410
+00:37:12.865 --> 00:37:13.865
+What it has to be,
+
+411
+00:37:15.975 --> 00:37:18.875
+It should be, It should be vector.
+
+412
+00:37:19.935 --> 00:37:23.685
+Vector, right? Yeah. So it should be vector, right?
+
+413
+00:37:23.685 --> 00:37:27.125
+Vector, yes, vector. Correct. Why?
+
+414
+00:37:27.125 --> 00:37:30.845
+Because, uh, why, why vector? The point is why vector?
+
+415
+00:37:31.075 --> 00:37:35.605
+Because see it, I don't want here to give one, one value,
+
+416
+00:37:35.825 --> 00:37:37.965
+and that value scaler means what?
+
+417
+00:37:38.085 --> 00:37:39.965
+A single value, a single value means what?
+
+418
+00:37:40.015 --> 00:37:42.885
+It'll say that, okay, the word I is important, maybe that,
+
+419
+00:37:42.885 --> 00:37:44.685
+that, that is the chances right here.
+
+420
+00:37:44.685 --> 00:37:46.565
+It may say that going is important here.
+
+421
+00:37:46.565 --> 00:37:48.325
+It can say the going is important, that
+
+422
+00:37:48.395 --> 00:37:50.365
+that scale at which I will feed.
+
+423
+00:37:51.025 --> 00:37:54.405
+But you know, sometimes it may happen that, uh,
+
+424
+00:37:54.665 --> 00:37:59.365
+for a particular word, translation, it is possible that
+
+425
+00:37:59.545 --> 00:38:01.325
+for that particular word, translation,
+
+426
+00:38:01.535 --> 00:38:05.845
+there are two words in the encoder are, are playing, uh,
+
+427
+00:38:05.845 --> 00:38:07.645
+playing a role, okay?
+
+428
+00:38:07.645 --> 00:38:11.045
+For example, see the same word going, okay,
+
+429
+00:38:11.215 --> 00:38:14.805
+going is important maybe for this, this second timestamp,
+
+430
+00:38:15.345 --> 00:38:17.405
+but maybe m going
+
+431
+00:38:18.105 --> 00:38:21.805
+or uh, m going maybe important for the word.
+
+432
+00:38:22.065 --> 00:38:24.205
+Uh, third, second, uh, third time stamp,
+
+433
+00:38:24.305 --> 00:38:26.645
+or 1, 2, 3, third time step.
+
+434
+00:38:27.185 --> 00:38:28.565
+So what I'm trying to say is
+
+435
+00:38:29.335 --> 00:38:33.365
+every time the translation is not word to word, okay?
+
+436
+00:38:33.665 --> 00:38:36.245
+It is possible that two words together is making a
+
+437
+00:38:36.245 --> 00:38:38.805
+translation into the different language, okay?
+
+438
+00:38:38.825 --> 00:38:42.925
+So I can't be only concentrating on the word I
+
+439
+00:38:43.665 --> 00:38:45.965
+or only concentrating on the word m
+
+440
+00:38:46.105 --> 00:38:48.205
+and only concentrating on the word going.
+
+441
+00:38:48.865 --> 00:38:50.205
+So what I'm trying to say is
+
+442
+00:38:50.915 --> 00:38:53.525
+obviously I'll have more focus on I
+
+443
+00:38:54.475 --> 00:38:56.015
+as compared to mgo.
+
+444
+00:38:56.205 --> 00:39:00.795
+Similarly, I'll have more focus on going maybe as compared
+
+445
+00:39:00.795 --> 00:39:02.795
+to I and m likewise,
+
+446
+00:39:03.055 --> 00:39:06.115
+but that focus should be given to all means,
+
+447
+00:39:06.175 --> 00:39:10.795
+unless I don't compute the attention with each of these,
+
+448
+00:39:11.535 --> 00:39:12.875
+how to know that, okay,
+
+449
+00:39:12.875 --> 00:39:14.755
+how much focus I have to give to each of them.
+
+450
+00:39:15.215 --> 00:39:17.195
+So what I'm trying to say is here, once again,
+
+451
+00:39:17.255 --> 00:39:20.435
+to make it more clear, for every time stamp of the decoder,
+
+452
+00:39:20.545 --> 00:39:23.275
+I'll compute the attention, I'll compute the attention
+
+453
+00:39:23.665 --> 00:39:27.075
+with every timestamp of the encoder.
+
+454
+00:39:27.585 --> 00:39:30.355
+Like for this timestamp as not is an output, right?
+
+455
+00:39:30.815 --> 00:39:34.865
+So here, suppose I have, uh, sno,
+
+456
+00:39:35.205 --> 00:39:38.495
+so sno and snot
+
+457
+00:39:39.755 --> 00:39:41.825
+these two attention I'll calculate, okay,
+
+458
+00:39:41.825 --> 00:39:44.105
+these two attention I'll calculate similarly,
+
+459
+00:39:44.445 --> 00:39:45.465
+SNO H one attention,
+
+460
+00:39:45.535 --> 00:39:48.465
+I'll calculate Sno h two attention I'll calculate,
+
+461
+00:39:48.965 --> 00:39:52.145
+and then I'll get to know that, okay, how much it is to give
+
+462
+00:39:52.145 --> 00:39:54.345
+to this, how much it is to give this and how much,
+
+463
+00:39:54.345 --> 00:39:57.105
+and I can easily keep the soft max to come up
+
+464
+00:39:57.105 --> 00:39:59.065
+with a probability distribution.
+
+465
+00:39:59.065 --> 00:40:02.865
+So that we'll have, if we sum up all the three, I'll get one
+
+466
+00:40:03.725 --> 00:40:05.185
+in that way, I'm going to work, right?
+
+467
+00:40:05.405 --> 00:40:08.385
+So I, so this, first of all, let us understand the ct,
+
+468
+00:40:08.515 --> 00:40:10.145
+which I'm showing that, okay,
+
+469
+00:40:10.145 --> 00:40:12.025
+I'll give another input at each time.
+
+470
+00:40:12.025 --> 00:40:13.105
+Stamp of the decoder.
+
+471
+00:40:13.285 --> 00:40:15.225
+It is not going to be the scaler,
+
+472
+00:40:15.285 --> 00:40:16.385
+it is going to be the vector.
+
+473
+00:40:16.845 --> 00:40:18.705
+And what will be the dimension of the vector.
+
+474
+00:40:18.975 --> 00:40:21.265
+Dimension of the vector C, no, C one,
+
+475
+00:40:21.345 --> 00:40:22.825
+C two will be equivalent to
+
+476
+00:40:22.825 --> 00:40:24.905
+how many times stamp you have in the encoder.
+
+477
+00:40:25.805 --> 00:40:29.385
+If there are three, like SOS one, s two, the C,
+
+478
+00:40:29.385 --> 00:40:30.585
+no dimension will be three
+
+479
+00:40:30.585 --> 00:40:32.265
+because C no will have three value.
+
+480
+00:40:32.605 --> 00:40:35.465
+One value, which will say the weight is of high.
+
+481
+00:40:35.765 --> 00:40:37.865
+Second value will give the weightage of m
+
+482
+00:40:37.925 --> 00:40:40.905
+and third value will give the weight is of, uh,
+
+483
+00:40:40.915 --> 00:40:43.345
+going similarly, C one will also have three value.
+
+484
+00:40:44.045 --> 00:40:46.665
+Weight is of i, weight is of m, weight is of going.
+
+485
+00:40:46.825 --> 00:40:48.065
+C two will also have three values.
+
+486
+00:40:48.165 --> 00:40:52.545
+So C nine, C one, C two is a vector, it's not a scaler,
+
+487
+00:40:52.565 --> 00:40:54.385
+and it is not also the metrics, okay?
+
+488
+00:40:54.385 --> 00:40:56.465
+It's a vector which will have the weight
+
+489
+00:40:56.605 --> 00:40:58.825
+of every word in the encoder.
+
+490
+00:40:59.525 --> 00:41:01.185
+And obviously some weight will be higher,
+
+491
+00:41:01.695 --> 00:41:02.945
+some other weight will be lower.
+
+492
+00:41:03.165 --> 00:41:07.345
+And it's possible that for going, I have, uh, 60%
+
+493
+00:41:07.805 --> 00:41:11.185
+for MI have 30%, and for I have 10% together.
+
+494
+00:41:11.285 --> 00:41:14.825
+It is one ative distribution. All those things are possible.
+
+495
+00:41:14.845 --> 00:41:17.585
+So I'm not only concentrating on a single word,
+
+496
+00:41:18.245 --> 00:41:19.945
+but I'm giving the weight is to each
+
+497
+00:41:19.945 --> 00:41:21.185
+of the word in the encoder.
+
+498
+00:41:21.845 --> 00:41:24.745
+In that way, I'm also giving some weight to m
+
+499
+00:41:25.125 --> 00:41:26.905
+and giving very less weight to y.
+
+500
+00:41:27.375 --> 00:41:30.105
+When I'm doing the translation at the, the say
+
+501
+00:41:30.105 --> 00:41:32.145
+that the second time stamp and third time stamp,
+
+502
+00:41:32.705 --> 00:41:34.085
+likewise, it is going to work.
+
+503
+00:41:34.105 --> 00:41:36.685
+So yeah. So first of all, CT is a vector
+
+504
+00:41:37.345 --> 00:41:40.485
+and represents the way it is of every encoder timestamp.
+
+505
+00:41:40.755 --> 00:41:42.045
+Okay? Let us be very clear
+
+506
+00:41:42.045 --> 00:41:43.685
+with this particular statement now.
+
+507
+00:41:45.685 --> 00:41:50.085
+So yeah, this, I've already told.
+
+508
+00:41:51.075 --> 00:41:53.765
+Encoder has hidden states h not H one,
+
+509
+00:41:53.965 --> 00:41:55.245
+S two at every time stem.
+
+510
+00:41:55.245 --> 00:42:00.125
+These were the, uh, you can say that the output,
+
+511
+00:42:00.905 --> 00:42:02.685
+in fact, this should have been H one, right?
+
+512
+00:42:02.835 --> 00:42:04.645
+Because the output, what going here,
+
+513
+00:42:05.035 --> 00:42:06.645
+same output is going here also.
+
+514
+00:42:07.145 --> 00:42:08.045
+So there is some, some
+
+515
+00:42:08.045 --> 00:42:09.325
+mismatch, but you can understand, right?
+
+516
+00:42:09.355 --> 00:42:11.845
+Each, in each decoder step computes a different
+
+517
+00:42:11.845 --> 00:42:13.165
+weight distribution.
+
+518
+00:42:13.395 --> 00:42:16.245
+Therefore, CT must, depends on all encoded state
+
+519
+00:42:16.245 --> 00:42:18.045
+that I have already told, not let us see that.
+
+520
+00:42:18.745 --> 00:42:20.645
+Now it's, it's like, okay, how
+
+521
+00:42:20.645 --> 00:42:23.285
+to compute the ct CT we have understood, right?
+
+522
+00:42:23.345 --> 00:42:25.845
+So ultimately what we are going to do is we are going
+
+523
+00:42:25.845 --> 00:42:29.125
+to calculate the CT like C one, C two, C3,
+
+524
+00:42:29.445 --> 00:42:32.285
+likewise at every time a stamp of the decode,
+
+525
+00:42:32.465 --> 00:42:33.845
+and we are going to feed it
+
+526
+00:42:33.865 --> 00:42:35.925
+as an input tool each time stamp.
+
+527
+00:42:36.265 --> 00:42:38.885
+So C one, C two, C3, these are, they are all the vector.
+
+528
+00:42:38.995 --> 00:42:40.245
+That is what we have to understand.
+
+529
+00:42:40.345 --> 00:42:43.245
+Now, how do we calculate the city now? Uh, right?
+
+530
+00:42:43.545 --> 00:42:45.605
+So now we are going to see how do we calculate it.
+
+531
+00:42:47.145 --> 00:42:52.125
+So what we are going, uh, what exactly we want is we have
+
+532
+00:42:52.125 --> 00:42:56.285
+to give the waiters to this H one, S two, and S3.
+
+533
+00:42:56.285 --> 00:42:58.965
+Here it is corrected. You can see that H one is output
+
+534
+00:42:59.505 --> 00:43:01.085
+and H one is output.
+
+535
+00:43:01.085 --> 00:43:03.485
+Going to the next LSTM also S two is an output,
+
+536
+00:43:03.705 --> 00:43:06.605
+and S two is going the output to the next LSTM state also.
+
+537
+00:43:06.785 --> 00:43:10.365
+So likewise, so now we have to give some is to H one,
+
+538
+00:43:10.515 --> 00:43:12.245
+some weight to H two, some weight
+
+539
+00:43:12.345 --> 00:43:15.445
+to H three at E each time a stamp of the decode.
+
+540
+00:43:15.705 --> 00:43:17.445
+And that's how we'll calculate the C one.
+
+541
+00:43:17.445 --> 00:43:18.885
+That's how we'll calculate the C one.
+
+542
+00:43:19.345 --> 00:43:21.285
+So now you can see here, so, so
+
+543
+00:43:21.285 --> 00:43:23.845
+that weight is weight is how much I have to give.
+
+544
+00:43:23.845 --> 00:43:26.005
+That itself is your attention, okay?
+
+545
+00:43:26.005 --> 00:43:27.285
+That itself is attention.
+
+546
+00:43:27.785 --> 00:43:29.925
+So how much attention to give to the H one,
+
+547
+00:43:30.025 --> 00:43:32.365
+how much attention to give to the H two and S3,
+
+548
+00:43:32.785 --> 00:43:35.485
+and that is being represented here by alpha one, one,
+
+549
+00:43:35.855 --> 00:43:37.685
+alpha one, two, and alpha one three.
+
+550
+00:43:37.905 --> 00:43:40.405
+So what I'm doing is I'm just doing the weighted
+
+551
+00:43:40.405 --> 00:43:43.005
+calculation, weighted sum that, okay?
+
+552
+00:43:43.295 --> 00:43:44.965
+Alpha one, one into H one.
+
+553
+00:43:45.105 --> 00:43:46.925
+Now this is the weightage for the H one,
+
+554
+00:43:47.185 --> 00:43:50.205
+but remember H one is H one is
+
+555
+00:43:50.945 --> 00:43:53.055
+not a scaler.
+
+556
+00:43:53.215 --> 00:43:55.215
+H one is a vector. Remember,
+
+557
+00:43:55.215 --> 00:43:57.375
+because inside the elastic you have the neural
+
+558
+00:43:57.375 --> 00:43:58.775
+network, right?
+
+559
+00:43:58.995 --> 00:44:00.735
+And inside the neural network, the number
+
+560
+00:44:00.735 --> 00:44:03.255
+of neurons you have, that will, that will be the dimension
+
+561
+00:44:03.275 --> 00:44:06.455
+of this H one and this H one, okay?
+
+562
+00:44:06.715 --> 00:44:08.935
+So H one, what, when I say it is not a
+
+563
+00:44:08.935 --> 00:44:10.055
+scaler, this is also a vector.
+
+564
+00:44:10.475 --> 00:44:13.375
+And this alpha one, one alpha, one, two, alpha one, three,
+
+565
+00:44:13.805 --> 00:44:18.015
+this is, this is your, you can say that the scaler value,
+
+566
+00:44:18.165 --> 00:44:20.455
+this alpha one, one alpha one, two, alpha,
+
+567
+00:44:20.455 --> 00:44:21.495
+one, three, just scaler value.
+
+568
+00:44:22.245 --> 00:44:24.135
+Okay? So, but we need, so
+
+569
+00:44:24.135 --> 00:44:26.655
+because it is a weight, it is a weight.
+
+570
+00:44:27.035 --> 00:44:30.775
+So this weight is for H one, this weightage is for H two,
+
+571
+00:44:30.775 --> 00:44:32.365
+and this weightage is for H three.
+
+572
+00:44:33.025 --> 00:44:34.845
+And then what we are going to do is we are going
+
+573
+00:44:34.845 --> 00:44:36.845
+to concatenate all of them.
+
+574
+00:44:36.945 --> 00:44:38.885
+So plus you can see plus, plus plus.
+
+575
+00:44:39.185 --> 00:44:42.925
+So this, uh, scaler gets multiplied with a vector H one
+
+576
+00:44:42.925 --> 00:44:44.725
+and you, it gives you a vector itself.
+
+577
+00:44:45.065 --> 00:44:48.245
+And then here also alpha one, two is a, uh, scaler.
+
+578
+00:44:48.725 --> 00:44:52.245
+S two is a vector. You get a vector alpha one three scaler,
+
+579
+00:44:52.605 --> 00:44:53.845
+S 3G vector, you get a vector.
+
+580
+00:44:53.905 --> 00:44:57.125
+So vector plus vector plus vector, you get another vector.
+
+581
+00:44:57.225 --> 00:45:00.885
+And that itself will be the C one, which will go as an input
+
+582
+00:45:00.885 --> 00:45:02.565
+to this particular time stamp of the,
+
+583
+00:45:05.695 --> 00:45:08.865
+alright, so this is how we, we calculate it.
+
+584
+00:45:09.005 --> 00:45:12.745
+Now the bigger question is how does this alpha one,
+
+585
+00:45:12.745 --> 00:45:14.625
+one alpha one, two alpha one three is being
+
+586
+00:45:14.625 --> 00:45:15.705
+calculated, right?
+
+587
+00:45:16.285 --> 00:45:18.345
+But I guess you have understood this one, right?
+
+588
+00:45:18.405 --> 00:45:21.065
+So suppose we calculate this alpha one one,
+
+589
+00:45:21.065 --> 00:45:23.625
+which is a attention, which is attention score.
+
+590
+00:45:23.625 --> 00:45:26.425
+Then we can easily give, just multiply that
+
+591
+00:45:26.425 --> 00:45:27.945
+with the H one S two S3
+
+592
+00:45:28.095 --> 00:45:30.665
+accordingly with alpha 1, 1, 1, 2, 1 3.
+
+593
+00:45:31.285 --> 00:45:32.985
+And then we can add them together
+
+594
+00:45:33.405 --> 00:45:35.825
+and get the C one, which I'll feed it here.
+
+595
+00:45:35.895 --> 00:45:39.505
+Then I will have three inputs to this LSTM Y one as not.
+
+596
+00:45:39.565 --> 00:45:42.505
+Anyway, it was coming. C one will also be as an input,
+
+597
+00:45:42.715 --> 00:45:44.145
+third input to this lstm.
+
+598
+00:45:44.145 --> 00:45:45.905
+And we do the calculation
+
+599
+00:45:46.925 --> 00:45:48.905
+as we were doing earlier with the LST.
+
+600
+00:45:49.035 --> 00:45:50.265
+There is no change in that.
+
+601
+00:45:50.295 --> 00:45:52.345
+Only thing is now we have three inputs.
+
+602
+00:45:53.085 --> 00:45:55.305
+So we'll have three weights, three set of weights,
+
+603
+00:45:55.305 --> 00:45:56.665
+one set of weights for S node.
+
+604
+00:45:56.925 --> 00:45:59.505
+One is per Y 1, 1 1 will be per C one.
+
+605
+00:46:01.705 --> 00:46:04.355
+Okay? We'll talk about how to calculate the alpha one,
+
+606
+00:46:04.355 --> 00:46:05.835
+one alpha one, two, and alpha one three
+
+607
+00:46:07.105 --> 00:46:08.535
+right now, let us see.
+
+608
+00:46:08.535 --> 00:46:10.855
+Similarly, we are going to do it for C two also.
+
+609
+00:46:10.855 --> 00:46:14.055
+So now in the case of C two, now what will happen, this, uh,
+
+610
+00:46:14.205 --> 00:46:17.695
+will calculate alpha two one, alpha two, two, alpha two,
+
+611
+00:46:17.695 --> 00:46:20.895
+three, uh, because it's a different attention score, right?
+
+612
+00:46:20.895 --> 00:46:22.415
+So I'm just representing it by two one
+
+613
+00:46:22.415 --> 00:46:24.255
+because the second time stamp in the Dakota.
+
+614
+00:46:24.255 --> 00:46:26.695
+So C two would be calculated here, not here.
+
+615
+00:46:27.375 --> 00:46:28.535
+C two would be calculated here,
+
+616
+00:46:28.695 --> 00:46:30.095
+C one I have shown with this diagram.
+
+617
+00:46:30.515 --> 00:46:31.615
+But you can imagine, right?
+
+618
+00:46:31.965 --> 00:46:34.575
+Same thing will happen for C two also, C two would be,
+
+619
+00:46:35.115 --> 00:46:37.815
+so you will have three attention score, alpha two,
+
+620
+00:46:37.815 --> 00:46:39.095
+one alpha two, two alpha, two three,
+
+621
+00:46:39.095 --> 00:46:41.455
+and that you'll multiply with same H one s two S3
+
+622
+00:46:41.715 --> 00:46:44.335
+of the encoder, and you'll get C two and C two.
+
+623
+00:46:44.335 --> 00:46:49.305
+You'll feed here similarly, C3, similarly C four,
+
+624
+00:46:49.565 --> 00:46:50.905
+and as many Cs you have.
+
+625
+00:46:50.905 --> 00:46:54.545
+It depends on how many timestamp you have in the Dakota.
+
+626
+00:46:55.885 --> 00:46:59.785
+So ct, um, ct, uh, this is, this is
+
+627
+00:46:59.785 --> 00:47:01.225
+how you're going to calculate the ct.
+
+628
+00:47:01.445 --> 00:47:04.105
+So CT in general is represented like that. Okay?
+
+629
+00:47:04.365 --> 00:47:07.345
+So CT in general will be, I value is going from one
+
+630
+00:47:07.345 --> 00:47:10.145
+to three, say from the third time stamp, okay?
+
+631
+00:47:10.245 --> 00:47:14.065
+Or for, right? So I value is one timestamp.
+
+632
+00:47:14.065 --> 00:47:15.425
+You have to see what is the time stamp.
+
+633
+00:47:15.445 --> 00:47:17.265
+So suppose you are at one, okay?
+
+634
+00:47:17.415 --> 00:47:21.145
+Suppose you are at one, so it'll be 1, 1, 1, 2, 1 3.
+
+635
+00:47:21.645 --> 00:47:24.505
+Why this three? Uh, why it ivy is going from one
+
+636
+00:47:24.505 --> 00:47:25.545
+to three because, huh?
+
+637
+00:47:25.685 --> 00:47:27.025
+One more thing to just clarify.
+
+638
+00:47:27.645 --> 00:47:29.965
+The, I represent the encoder timestamp.
+
+639
+00:47:30.365 --> 00:47:31.965
+I represent the encoder timestamp,
+
+640
+00:47:31.985 --> 00:47:35.755
+and t represents the decoder timestamp, okay?
+
+641
+00:47:35.995 --> 00:47:37.715
+I represent the encoder timestamp.
+
+642
+00:47:38.155 --> 00:47:39.715
+T represents the decoder timestamp.
+
+643
+00:47:40.095 --> 00:47:41.955
+So in the encoder, I have three timestamp.
+
+644
+00:47:41.975 --> 00:47:43.355
+So I is going from one to three
+
+645
+00:47:43.815 --> 00:47:46.515
+and T depends on which, uh,
+
+646
+00:47:46.515 --> 00:47:47.755
+timestamp you are in the decoder.
+
+647
+00:47:47.915 --> 00:47:50.995
+Suppose you're at one, it'll be 1, 1, 1, 2, 1 3,
+
+648
+00:47:51.105 --> 00:47:55.825
+like it is shown here if you're at two, okay?
+
+649
+00:47:55.975 --> 00:47:57.825
+Then it'll be 2, 1, 2, 2, 2, 3.
+
+650
+00:47:58.085 --> 00:48:00.305
+So you'll get alpha two, one, alpha two, two alpha, two,
+
+651
+00:48:00.305 --> 00:48:03.785
+three, and that you're going to multiply with the each
+
+652
+00:48:03.805 --> 00:48:06.265
+of the H one, S two and S3.
+
+653
+00:48:06.265 --> 00:48:11.245
+That's why HI is being multiplied with alpha TI. Okay?
+
+654
+00:48:11.245 --> 00:48:14.485
+So, so this is a general representation of any, uh,
+
+655
+00:48:14.515 --> 00:48:17.125
+attention, uh, uh, calculation, right?
+
+656
+00:48:17.825 --> 00:48:19.965
+So dimension, as I have already told,
+
+657
+00:48:20.135 --> 00:48:23.245
+alpha ti this alpha one, one alpha, one, two, alpha one,
+
+658
+00:48:23.245 --> 00:48:24.805
+three is, it is going to be the scale.
+
+659
+00:48:25.515 --> 00:48:28.445
+This h, H one, S two, H three in general.
+
+660
+00:48:28.745 --> 00:48:30.245
+Hi, it is a vector.
+
+661
+00:48:30.905 --> 00:48:32.685
+And what will be the dimension of this H one,
+
+662
+00:48:32.725 --> 00:48:35.605
+H two depends on what, what is the dimension you have chosen
+
+663
+00:48:35.785 --> 00:48:39.525
+for this L sst m uh, inside we have multiple gates, right?
+
+664
+00:48:39.525 --> 00:48:42.405
+Neural networks. So whatever is this hidden size dimension,
+
+665
+00:48:42.405 --> 00:48:44.645
+that will be the dimension of this H one, H two S3.
+
+666
+00:48:44.685 --> 00:48:46.845
+So it's the vector. It's a vector.
+
+667
+00:48:47.625 --> 00:48:49.285
+So ultimately what you,
+
+668
+00:48:49.385 --> 00:48:51.965
+you are doing is you're multiplying a vector with a scaler.
+
+669
+00:48:51.965 --> 00:48:55.605
+So what ct, C one, C two, C3, whatever you will get, all
+
+670
+00:48:55.605 --> 00:48:57.885
+of them will be a vector, okay?
+
+671
+00:48:57.905 --> 00:48:59.885
+So, uh, this, this clarity should be there,
+
+672
+00:49:00.515 --> 00:49:03.725
+otherwise you will not get the okay how it is doing.
+
+673
+00:49:03.945 --> 00:49:06.725
+So, C one has to be a vector. There is no other way.
+
+674
+00:49:07.425 --> 00:49:10.045
+And how we are getting a vector, H one, S two,
+
+675
+00:49:10.165 --> 00:49:13.045
+S3 gene vector, you get the tension, multiply it with
+
+676
+00:49:13.045 --> 00:49:16.285
+that vector, add all of them, get the ct, that's all.
+
+677
+00:49:21.145 --> 00:49:23.875
+Okay? So CT is a weighted combination
+
+678
+00:49:23.895 --> 00:49:25.235
+of encoded hidden state.
+
+679
+00:49:25.815 --> 00:49:28.915
+Now the main question, which is still remaining, is how
+
+680
+00:49:28.915 --> 00:49:30.635
+to calculate this alpha T comma.
+
+681
+00:49:30.715 --> 00:49:33.355
+I like alpha one, one alpha one, two, alpha one three
+
+682
+00:49:33.535 --> 00:49:35.275
+or alpha 2, 1, 2, 2, 2, 3.
+
+683
+00:49:35.275 --> 00:49:36.955
+How to calculate these attentions
+
+684
+00:49:36.955 --> 00:49:38.475
+because these are the actual attention
+
+685
+00:49:38.815 --> 00:49:41.475
+and then we do some other, uh, multiplication
+
+686
+00:49:41.475 --> 00:49:43.915
+and addition to get the C one, C two, right?
+
+687
+00:49:44.335 --> 00:49:47.475
+Uh, so, but this, this, this is the, um,
+
+688
+00:49:48.105 --> 00:49:49.435
+attention what we have.
+
+689
+00:49:49.455 --> 00:49:52.595
+So let us now focus on alpha tcom.
+
+690
+00:49:53.295 --> 00:49:54.675
+Sir, one question. Sorry sir.
+
+691
+00:49:55.055 --> 00:49:56.605
+Yes, please, please. Yeah,
+
+692
+00:49:57.065 --> 00:49:59.485
+Sir, this, um, when we say, uh,
+
+693
+00:49:59.485 --> 00:50:03.405
+suppose we are calculating C one at the encoder, then at
+
+694
+00:50:03.405 --> 00:50:06.685
+that time, all the three at that end quarter timestamp,
+
+695
+00:50:06.865 --> 00:50:08.965
+all the three I am going,
+
+696
+00:50:09.025 --> 00:50:11.285
+all the three are inputs are given, or
+
+697
+00:50:11.285 --> 00:50:14.605
+because we are at C one, then only I is given
+
+698
+00:50:15.305 --> 00:50:16.305
+All the three. That's what it
+
+699
+00:50:16.305 --> 00:50:18.445
+is saying. Okay? All the three is given.
+
+700
+00:50:18.545 --> 00:50:20.925
+That's why H one S two, S3 is here.
+
+701
+00:50:21.165 --> 00:50:25.365
+H one, S two, S3 H one represents for IS two is an output
+
+702
+00:50:25.365 --> 00:50:27.285
+for m and S3 is an output for coin.
+
+703
+00:50:28.535 --> 00:50:29.785
+Okay? So these inputs
+
+704
+00:50:29.785 --> 00:50:31.345
+that the encoder are given at the same time,
+
+705
+00:50:32.445 --> 00:50:33.785
+Uh, yes, at the same time.
+
+706
+00:50:33.925 --> 00:50:36.145
+At the same time, yeah, you have to give, you have
+
+707
+00:50:36.145 --> 00:50:38.065
+to get all the three, uh, of these
+
+708
+00:50:38.065 --> 00:50:39.225
+and then you have to add them.
+
+709
+00:50:39.325 --> 00:50:40.905
+So you must have all these, yeah.
+
+710
+00:50:42.165 --> 00:50:43.825
+So sir, there will be comp,
+
+711
+00:50:43.895 --> 00:50:46.065
+like we are only showing C one in this diagram.
+
+712
+00:50:46.445 --> 00:50:50.505
+Mm-hmm. But, uh, C one will be calculated, say at timestamp,
+
+713
+00:50:50.705 --> 00:50:53.265
+T one or whatever, one timestamp, correct?
+
+714
+00:50:53.335 --> 00:50:56.545
+Then C two will be time calculated at the next timestamp
+
+715
+00:50:56.545 --> 00:50:57.905
+because these alphas will change,
+
+716
+00:50:58.015 --> 00:50:59.065
+Correct? Correct,
+
+717
+00:50:59.135 --> 00:51:00.135
+Correct. Okay.
+
+718
+00:51:00.135 --> 00:51:01.745
+Okay, sir. Yeah.
+
+719
+00:51:02.725 --> 00:51:03.635
+Thank you. Thank you.
+
+720
+00:51:07.735 --> 00:51:12.265
+Alright, sir. Yeah, please, please.
+
+721
+00:51:12.405 --> 00:51:14.905
+Uh, sir, actually I just wanna further add on to
+
+722
+00:51:14.905 --> 00:51:17.625
+what ma told, uh, sir, we, you all the input,
+
+723
+00:51:17.625 --> 00:51:19.145
+because we want to know the context
+
+724
+00:51:19.365 --> 00:51:22.625
+of all the inputs at the timestamp, like how relevant it is.
+
+725
+00:51:23.925 --> 00:51:26.145
+See context, we anyway have,
+
+726
+00:51:26.275 --> 00:51:28.345
+which is coming from this context vector.
+
+727
+00:51:29.165 --> 00:51:30.665
+Yes, sir. Okay,
+
+728
+00:51:30.665 --> 00:51:32.625
+this context vector has the oral context.
+
+729
+00:51:33.405 --> 00:51:35.105
+Yes, sir. So based on that,
+
+730
+00:51:35.245 --> 00:51:37.905
+we are getting some probability kind of thing that Richard,
+
+731
+00:51:37.905 --> 00:51:39.545
+you told LA last time.
+
+732
+00:51:39.725 --> 00:51:42.665
+So the same thing, it'll be given to each and every input.
+
+733
+00:51:42.885 --> 00:51:44.825
+So that's why each and every input will have some
+
+734
+00:51:44.825 --> 00:51:47.465
+probability factor, like in this time step,
+
+735
+00:51:47.535 --> 00:51:49.825
+what should be the highest probability, right, sir?
+
+736
+00:51:49.885 --> 00:51:52.065
+So accordingly, we're giving all this inputs at that
+
+737
+00:51:52.615 --> 00:51:53.615
+Time. Yes, yes, yes,
+
+738
+00:51:53.615 --> 00:51:57.755
+yes, yes. Okay.
+
+739
+00:52:01.425 --> 00:52:04.355
+Alright. So now let us focus on this alpha one,
+
+740
+00:52:04.355 --> 00:52:05.715
+one alpha one, two, alpha one, three,
+
+741
+00:52:05.715 --> 00:52:07.955
+how it is calculated, okay?
+
+742
+00:52:08.575 --> 00:52:13.025
+Now, uh, to, to understand how it is calculated,
+
+743
+00:52:13.535 --> 00:52:15.425
+okay, the alpha one, one, let, we have
+
+744
+00:52:15.425 --> 00:52:16.825
+to understand what is this number?
+
+745
+00:52:17.445 --> 00:52:20.425
+So this number we have understood as attention, attention,
+
+746
+00:52:21.365 --> 00:52:23.185
+uh, attention means what?
+
+747
+00:52:23.885 --> 00:52:28.145
+See if we will, uh, decode this word attention.
+
+748
+00:52:28.295 --> 00:52:32.545
+What we are trying to say is that when we have already,
+
+749
+00:52:32.645 --> 00:52:35.065
+so at the decoder timestamp, you have to see first of all,
+
+750
+00:52:35.245 --> 00:52:37.865
+and you have to see that what you have already generated.
+
+751
+00:52:38.565 --> 00:52:41.025
+So, so far you have already generated a man.
+
+752
+00:52:41.605 --> 00:52:45.945
+And this sno what you're seeing here, this Sno knows
+
+753
+00:52:45.945 --> 00:52:49.005
+that you have already generated me, okay?
+
+754
+00:52:49.745 --> 00:52:53.845
+So, so this attention, what I'm calculated here, C one,
+
+755
+00:52:54.545 --> 00:52:57.685
+it is somehow telling that, that I know
+
+756
+00:52:57.685 --> 00:52:59.525
+that I have already generated me
+
+757
+00:53:00.715 --> 00:53:03.255
+and now I want to generate the next word.
+
+758
+00:53:04.475 --> 00:53:08.095
+So whatever I have done so far, that is there in Sno,
+
+759
+00:53:09.125 --> 00:53:10.535
+that is there in the snot
+
+760
+00:53:11.555 --> 00:53:15.215
+and which word I have to generate next that I want
+
+761
+00:53:15.215 --> 00:53:19.075
+to know based on the current input map, okay?
+
+762
+00:53:19.095 --> 00:53:21.955
+Try to understand this one. So whatever I have already
+
+763
+00:53:22.105 --> 00:53:24.555
+generated, I know that is called Sno.
+
+764
+00:53:25.225 --> 00:53:28.605
+And now for, for the current input, may I want
+
+765
+00:53:28.605 --> 00:53:31.725
+to generate the next word that is J in this particular case.
+
+766
+00:53:32.345 --> 00:53:36.205
+So I want to have some alignment, assign some attention
+
+767
+00:53:36.955 --> 00:53:38.365
+between this s no,
+
+768
+00:53:38.365 --> 00:53:41.005
+because this is, this is very important, SNO,
+
+769
+00:53:41.005 --> 00:53:45.445
+because Sno knows that the word man is already generated.
+
+770
+00:53:45.625 --> 00:53:49.445
+So I don't have to again, stress on the word man. Okay?
+
+771
+00:53:50.485 --> 00:53:52.365
+S minus one doesn't know that, okay?
+
+772
+00:53:52.525 --> 00:53:54.645
+S minus one doesn't know, but s not knows that
+
+773
+00:53:55.035 --> 00:53:56.965
+because this is the updated vector now.
+
+774
+00:53:57.565 --> 00:54:00.585
+So this s not, so what we are trying to do is we are trying
+
+775
+00:54:00.585 --> 00:54:04.945
+to have some kind of alignment, alignment between the sno
+
+776
+00:54:06.075 --> 00:54:09.885
+alignment between the sno and the and and the H one.
+
+777
+00:54:10.385 --> 00:54:12.845
+You can say that, and that gives me alpha one, one
+
+778
+00:54:12.845 --> 00:54:14.805
+that gives me alpha one, one, okay,
+
+779
+00:54:14.825 --> 00:54:15.965
+I'm repeating once again.
+
+780
+00:54:16.505 --> 00:54:19.285
+So what we have to know is at each time a stamp
+
+781
+00:54:19.285 --> 00:54:22.925
+of the decode, which word in the encoder is important
+
+782
+00:54:23.505 --> 00:54:25.365
+or which set of words are important
+
+783
+00:54:25.665 --> 00:54:27.645
+or how much weight is important,
+
+784
+00:54:27.645 --> 00:54:29.365
+rather than saying important.
+
+785
+00:54:29.745 --> 00:54:32.765
+Now let us uh, uh, go with the word wait is
+
+786
+00:54:32.875 --> 00:54:34.845
+because anyway, every word is important,
+
+787
+00:54:34.905 --> 00:54:37.805
+but how much weight is we are giving to each of these word.
+
+788
+00:54:38.305 --> 00:54:40.725
+So at every time stamp of the decoder
+
+789
+00:54:40.745 --> 00:54:43.525
+how much weightage we are giving to the encoder words.
+
+790
+00:54:44.945 --> 00:54:48.325
+So, so far we have done with the SO,
+
+791
+00:54:48.325 --> 00:54:50.765
+which is coming from the last hidden timestamp here.
+
+792
+00:54:51.225 --> 00:54:53.165
+So we take up, we take the SO here
+
+793
+00:54:53.825 --> 00:54:58.525
+and we do the uh, uh, we do some calculation between s sno
+
+794
+00:54:58.525 --> 00:55:00.685
+and H one to get this alpha one one.
+
+795
+00:55:01.625 --> 00:55:05.335
+Similarly, we do the, we take Sno
+
+796
+00:55:05.475 --> 00:55:06.695
+and H two
+
+797
+00:55:07.585 --> 00:55:11.845
+and out of these we get alpha one, two, similarly Sno
+
+798
+00:55:11.845 --> 00:55:14.525
+and S3 together, give me the alpha one, three.
+
+799
+00:55:14.545 --> 00:55:16.605
+Now this is the first thing what we have to understand
+
+800
+00:55:16.605 --> 00:55:18.045
+and why, why,
+
+801
+00:55:18.045 --> 00:55:20.645
+because so far Esno knows that that
+
+802
+00:55:20.675 --> 00:55:22.405
+what word we have already generated.
+
+803
+00:55:22.465 --> 00:55:25.205
+And let us not focus because, uh, un
+
+804
+00:55:25.205 --> 00:55:27.645
+unless we don't have that understanding that
+
+805
+00:55:27.915 --> 00:55:31.205
+what is already generated, we can't give the focus,
+
+806
+00:55:31.625 --> 00:55:35.805
+we can't give the focus on a word more in the encoder
+
+807
+00:55:35.905 --> 00:55:38.445
+or less in the other words, in the encoder, right?
+
+808
+00:55:38.825 --> 00:55:42.605
+So that notion, we should have an S node or S minus one
+
+809
+00:55:42.705 --> 00:55:45.765
+or S one or S two, these context vector,
+
+810
+00:55:45.765 --> 00:55:48.845
+which is coming from the last hidden timestamp, they have
+
+811
+00:55:48.845 --> 00:55:50.085
+that understanding that, okay,
+
+812
+00:55:50.085 --> 00:55:52.845
+which word we have already generated, let us not, uh,
+
+813
+00:55:52.845 --> 00:55:55.085
+bother about that and focus on the next word.
+
+814
+00:55:56.125 --> 00:55:59.215
+Okay? Uh, so that is, that is the main important thing.
+
+815
+00:55:59.215 --> 00:56:00.535
+So now you can understand, right?
+
+816
+00:56:00.675 --> 00:56:03.455
+If we have to calculate this alpha one, one alpha one, two,
+
+817
+00:56:03.455 --> 00:56:06.415
+alpha one, three, we need some kind of alignment,
+
+818
+00:56:06.915 --> 00:56:10.455
+we need some kind of alignment between this sno here,
+
+819
+00:56:10.565 --> 00:56:13.575
+foresee when I'm talking Sno and H one
+
+820
+00:56:14.765 --> 00:56:17.985
+and similarly Sno and H two and Sno and H three.
+
+821
+00:56:18.085 --> 00:56:20.745
+And that will result in alpha one, one, alpha one, two,
+
+822
+00:56:20.795 --> 00:56:24.005
+alpha one, three, how to do that alignment that we'll see.
+
+823
+00:56:24.345 --> 00:56:26.845
+But this you have to understand, right?
+
+824
+00:56:27.075 --> 00:56:29.325
+Similarly at the next time stem, when we'll have
+
+825
+00:56:29.325 --> 00:56:32.325
+to calculate C two, this will move right, right toward here.
+
+826
+00:56:32.645 --> 00:56:35.765
+C two will come here, we'll have the alignment between
+
+827
+00:56:36.605 --> 00:56:37.605
+S one, okay?
+
+828
+00:56:37.905 --> 00:56:40.245
+Uh, because now we have this S one, S one
+
+829
+00:56:40.245 --> 00:56:43.645
+and H one, which will gimme alpha two, one, S one
+
+830
+00:56:43.645 --> 00:56:46.645
+and S two, which will gimme alpha two, two and S one
+
+831
+00:56:46.645 --> 00:56:48.645
+and S3 will gimme alpha two three,
+
+832
+00:56:49.065 --> 00:56:50.525
+and then I'll move this tight.
+
+833
+00:56:50.675 --> 00:56:53.005
+Then I'll calculate the alignment between S two
+
+834
+00:56:53.005 --> 00:56:55.845
+and H one, S two and S two and S two and S3.
+
+835
+00:56:56.025 --> 00:56:59.285
+And that is why the C one, C two C3, it changing every time
+
+836
+00:56:59.285 --> 00:57:03.205
+because my s no S one and S two is changing at upper
+
+837
+00:57:03.255 --> 00:57:05.325
+after every LSTM cells.
+
+838
+00:57:05.955 --> 00:57:10.085
+Okay? So this is what I have told here that alpha one, one,
+
+839
+00:57:10.085 --> 00:57:12.005
+alpha one, two alpha one three here
+
+840
+00:57:12.265 --> 00:57:14.125
+or here will be 2 1, 2, 2, 2, 3.
+
+841
+00:57:14.345 --> 00:57:17.485
+At third time time it'll be 3 1, 3, 2, 3, 3 at four time.
+
+842
+00:57:17.485 --> 00:57:20.845
+Seven be 4, 1, 4, 2, 4, 3, okay, likewise.
+
+843
+00:57:21.265 --> 00:57:24.485
+So it depends on, uh, which timestamp you are in.
+
+844
+00:57:24.485 --> 00:57:27.365
+The decoder, the first number representing that,
+
+845
+00:57:27.625 --> 00:57:30.085
+the second number is representing the timestamp in
+
+846
+00:57:30.175 --> 00:57:31.845
+theod timestamp.
+
+847
+00:57:31.845 --> 00:57:33.325
+So T represents the first number.
+
+848
+00:57:33.725 --> 00:57:34.925
+I represent the second number.
+
+849
+00:57:35.185 --> 00:57:37.365
+So T refers the decode timestamp,
+
+850
+00:57:37.765 --> 00:57:39.965
+I represent the encoded timestamp.
+
+851
+00:57:39.965 --> 00:57:42.245
+That's all here. It is written also.
+
+852
+00:57:42.785 --> 00:57:46.365
+So it is the alpha ti ITI you can understand.
+
+853
+00:57:46.465 --> 00:57:49.245
+Now it is an alignment, alignment with similarity,
+
+854
+00:57:49.245 --> 00:57:50.485
+kind of similarity score.
+
+855
+00:57:50.485 --> 00:57:52.245
+Similarity weight is, you can see that
+
+856
+00:57:52.675 --> 00:57:54.245
+between the decoded timestamp
+
+857
+00:57:54.905 --> 00:57:57.985
+and the encoder timestamp timestamps,
+
+858
+00:57:58.015 --> 00:58:00.425
+because in the encoder we have multiple timestamps,
+
+859
+00:58:00.425 --> 00:58:01.505
+then we have to consider all
+
+860
+00:58:01.505 --> 00:58:03.985
+of them decoder timestamp will remain same for
+
+861
+00:58:03.985 --> 00:58:05.025
+that particular timestamp.
+
+862
+00:58:06.035 --> 00:58:09.325
+Okay? So for example, alpha one comma one
+
+863
+00:58:09.345 --> 00:58:10.645
+or this one alpha one one,
+
+864
+00:58:11.265 --> 00:58:14.205
+we are generating the second word in the decoder,
+
+865
+00:58:14.385 --> 00:58:16.285
+we are generating the second word in theod.
+
+866
+00:58:16.905 --> 00:58:18.525
+That's what the statistical two one
+
+867
+00:58:18.545 --> 00:58:19.845
+and I is two one,
+
+868
+00:58:19.845 --> 00:58:21.765
+we're looking at the first word in the encoder.
+
+869
+00:58:21.885 --> 00:58:23.805
+I have told already. This alpha one one tells
+
+870
+00:58:24.225 --> 00:58:25.685
+how much importance should be given
+
+871
+00:58:25.705 --> 00:58:27.005
+to the encoder timestamp.
+
+872
+00:58:27.185 --> 00:58:30.605
+One, how much importance should be given to the encoder?
+
+873
+00:58:30.875 --> 00:58:32.925
+This is the encoder timestamp one, which is I,
+
+874
+00:58:33.735 --> 00:58:36.565
+while generating the decoder word at timestamp two.
+
+875
+00:58:36.945 --> 00:58:39.565
+So now I have to generate the decoder timestamp word,
+
+876
+00:58:39.565 --> 00:58:41.325
+which is J at the timestamp two.
+
+877
+00:58:41.665 --> 00:58:43.925
+But how much importance for that I should give
+
+878
+00:58:43.925 --> 00:58:47.085
+for the encoder timestamp one that is called alpha one one.
+
+879
+00:58:47.505 --> 00:58:50.005
+And similarly, you can imagine, right alpha one, two,
+
+880
+00:58:50.255 --> 00:58:52.525
+it'll say how much importance should be given
+
+881
+00:58:52.585 --> 00:58:55.125
+for the encoder timestamp two, which is the word M,
+
+882
+00:58:55.415 --> 00:58:58.485
+while generating the decoder at the second timestamp.
+
+883
+00:58:59.495 --> 00:59:00.825
+Okay? And one three will say,
+
+884
+00:59:01.085 --> 00:59:02.345
+how much importance should be given
+
+885
+00:59:02.365 --> 00:59:03.905
+for the encoder timestamp three,
+
+886
+00:59:03.905 --> 00:59:06.345
+which is going while generating the decoder
+
+887
+00:59:06.855 --> 00:59:08.305
+word at timestamp number.
+
+888
+00:59:09.535 --> 00:59:12.195
+So this is what, uh, uh,
+
+889
+00:59:14.835 --> 00:59:19.385
+uh, this is what, what it means.
+
+890
+00:59:19.385 --> 00:59:21.765
+This is what it means when we calculate alpha one,
+
+891
+00:59:21.765 --> 00:59:23.325
+one alpha one, two, and alpha one three.
+
+892
+00:59:25.605 --> 00:59:28.855
+Okay? Now, uh, still have not answered that question.
+
+893
+00:59:28.955 --> 00:59:30.895
+How do we calculate this alpha one,
+
+894
+00:59:30.895 --> 00:59:32.375
+one alpha one, two, alpha one, three.
+
+895
+00:59:32.835 --> 00:59:35.855
+But at least we are going slowly, we are going slowly in
+
+896
+00:59:35.855 --> 00:59:37.935
+that direction to understand that, okay, first of all,
+
+897
+00:59:37.935 --> 00:59:40.935
+we understood, okay, we need one, one vector here,
+
+898
+00:59:40.935 --> 00:59:42.735
+which will say, okay, which word is important?
+
+899
+00:59:42.925 --> 00:59:46.055
+That is C one is a vector. Now how to calculate the C one.
+
+900
+00:59:46.135 --> 00:59:48.095
+C one will be the alpha one, one
+
+901
+00:59:48.095 --> 00:59:49.495
+and two H one plus alpha one, two
+
+902
+00:59:49.495 --> 00:59:51.215
+and two H two alpha one, three and two H three.
+
+903
+00:59:51.365 --> 00:59:53.695
+Okay? Now the question is, what is the S alpha one,
+
+904
+00:59:53.695 --> 00:59:55.135
+one alpha one, two and alpha one, three.
+
+905
+00:59:55.135 --> 00:59:56.935
+And that is what we have understood now, okay,
+
+906
+00:59:57.595 --> 00:59:59.975
+so now the point is how to calculate this.
+
+907
+01:00:00.075 --> 01:00:03.735
+Now we'll see that one. How to calculate the sulfa tma.
+
+908
+01:00:04.095 --> 01:00:07.895
+I, so first of all, now we have understood
+
+909
+01:00:08.755 --> 01:00:11.615
+one thing that if we have to calculate the sulfa one,
+
+910
+01:00:11.615 --> 01:00:14.975
+one alpha, one, two, alpha one, three, we need a function,
+
+911
+01:00:15.335 --> 01:00:16.535
+mathematical function.
+
+912
+01:00:17.425 --> 01:00:22.355
+And that metric function will take two inputs for alpha one,
+
+913
+01:00:22.355 --> 01:00:23.395
+one, it'll take H one
+
+914
+01:00:23.395 --> 01:00:27.245
+and Sno for alpha one, two, it'll take S two and Sno.
+
+915
+01:00:27.785 --> 01:00:31.165
+And for alpha one three, it'll take S3 and Sno, right?
+
+916
+01:00:31.665 --> 01:00:35.565
+So in general, if you see the function for alpha, any DI,
+
+917
+01:00:35.565 --> 01:00:38.965
+it'll be function of i I represent the time
+
+918
+01:00:39.015 --> 01:00:40.205
+stamp of the encoder.
+
+919
+01:00:40.805 --> 01:00:42.685
+I represent the timestamp of the encoder,
+
+920
+01:00:43.425 --> 01:00:45.685
+and t represent the time stamp of the decoder.
+
+921
+01:00:46.545 --> 01:00:49.325
+So what it say, I need a function of hi,
+
+922
+01:00:50.575 --> 01:00:51.815
+I will be H 1, 2, 3
+
+923
+01:00:52.035 --> 01:00:55.615
+and s st minus one, St minus one s, st minus one
+
+924
+01:00:55.635 --> 01:00:57.175
+for the, so that its zero.
+
+925
+01:00:57.275 --> 01:01:00.695
+It is one that for the first time stamp, it'll be snot
+
+926
+01:01:01.275 --> 01:01:02.335
+for the second time stamp.
+
+927
+01:01:02.575 --> 01:01:04.815
+S one, third time stamp, S two fourth timestamp.
+
+928
+01:01:04.815 --> 01:01:07.215
+So one minus, because the snot S one,
+
+929
+01:01:07.335 --> 01:01:08.975
+S two is coming from the previous timestamp.
+
+930
+01:01:09.295 --> 01:01:12.015
+T this is the output of the previous lstm.
+
+931
+01:01:12.015 --> 01:01:15.895
+That's why T minus one. So I need these two inputs.
+
+932
+01:01:16.055 --> 01:01:17.975
+I will pass it through a particular function function.
+
+933
+01:01:17.975 --> 01:01:19.575
+We have to find what is that function.
+
+934
+01:01:19.995 --> 01:01:22.135
+And that function should give me this particular
+
+935
+01:01:22.435 --> 01:01:23.535
+scaler as an output.
+
+936
+01:01:24.015 --> 01:01:25.935
+I just need one scaler value, that's all.
+
+937
+01:01:26.395 --> 01:01:29.135
+But to get that scaler, I need these two inputs to pass,
+
+938
+01:01:29.275 --> 01:01:31.815
+and I have to find some alignment score between these two.
+
+939
+01:01:33.805 --> 01:01:35.535
+Correct? I guess this is fine.
+
+940
+01:01:35.955 --> 01:01:40.905
+So now this is how it'll look like at decoder timestamp one.
+
+941
+01:01:40.905 --> 01:01:44.345
+So this is decoder timestamp one, I guess here also,
+
+942
+01:01:44.345 --> 01:01:48.995
+there was some miss thing.
+
+943
+01:01:49.195 --> 01:01:51.835
+I I, when I run, it'll come correctly, don't worry.
+
+944
+01:01:53.015 --> 01:01:57.425
+So, uh, here, so this is a,
+
+945
+01:01:57.465 --> 01:01:58.985
+I I'm starting with the timestamp zero.
+
+946
+01:01:59.005 --> 01:02:00.945
+So I'm saying it's a timestamp one, okay?
+
+947
+01:02:01.365 --> 01:02:05.825
+So at timestamp one for alpha one, one, I need a function
+
+948
+01:02:05.825 --> 01:02:08.665
+of H one snot S two s, not H alpha one, two.
+
+949
+01:02:08.805 --> 01:02:10.825
+And for alpha one three, I need S3 snot.
+
+950
+01:02:10.825 --> 01:02:12.465
+These, these, these are the inputs.
+
+951
+01:02:12.595 --> 01:02:15.785
+These are the inputs for these function, okay?
+
+952
+01:02:15.885 --> 01:02:17.985
+Now, what is that function itself
+
+953
+01:02:18.055 --> 01:02:19.145
+that we have to understand?
+
+954
+01:02:19.785 --> 01:02:22.845
+So given the previous decoded estate, St minus one,
+
+955
+01:02:23.385 --> 01:02:25.125
+how important is encoded estate?
+
+956
+01:02:25.425 --> 01:02:28.085
+Hi for the predict for, for predicting the next quote
+
+957
+01:02:28.085 --> 01:02:29.325
+that we have already understood, right?
+
+958
+01:02:29.325 --> 01:02:32.085
+This is what is the meaning of this particular functions.
+
+959
+01:02:32.385 --> 01:02:35.045
+And this function will, whatever value it'll give in terms
+
+960
+01:02:35.045 --> 01:02:36.605
+of alpha power 1, 1, 1, 2, 1 3,
+
+961
+01:02:37.035 --> 01:02:39.325
+that value will represent exactly the same thing.
+
+962
+01:02:39.325 --> 01:02:40.525
+And that is what we want also.
+
+963
+01:02:40.525 --> 01:02:42.925
+And then we'll add all of them together by multiplying
+
+964
+01:02:42.995 --> 01:02:45.645
+with H one S two S3, once again, right?
+
+965
+01:02:45.785 --> 01:02:47.325
+So that is the final job,
+
+966
+01:02:47.385 --> 01:02:49.365
+but then we need this alignment score,
+
+967
+01:02:49.365 --> 01:02:51.565
+which measures the relevance between the encoder
+
+968
+01:02:51.565 --> 01:02:53.325
+and decoder estate, right?
+
+969
+01:02:56.185 --> 01:02:59.595
+Okay. Now here it is the actual calculation,
+
+970
+01:02:59.595 --> 01:03:01.115
+which is being done.
+
+971
+01:03:01.895 --> 01:03:06.315
+So I have to ti I have to somehow calculate the alpha one,
+
+972
+01:03:06.315 --> 01:03:07.595
+one, alpha one, two, alpha one, three,
+
+973
+01:03:07.595 --> 01:03:10.875
+and then I'll add all of them together, uh, with this H one,
+
+974
+01:03:10.915 --> 01:03:13.115
+H two S3 multiplication,
+
+975
+01:03:13.215 --> 01:03:15.315
+and then that's how we'll get the C one.
+
+976
+01:03:15.975 --> 01:03:19.075
+So the one way, there are multiple ways of doing that, one,
+
+977
+01:03:19.395 --> 01:03:20.515
+multiple ways of doing this one.
+
+978
+01:03:20.695 --> 01:03:24.015
+But what I am going to, uh,
+
+979
+01:03:25.565 --> 01:03:27.455
+show you is, um,
+
+980
+01:03:29.045 --> 01:03:30.685
+a neural network way of doing this one.
+
+981
+01:03:30.685 --> 01:03:35.315
+Because anyway, we have to calculate one, uh, uh,
+
+982
+01:03:35.575 --> 01:03:37.915
+one, uh, alignment.
+
+983
+01:03:38.275 --> 01:03:41.195
+C alpha two, one, or say alpha one, one alpha one, two,
+
+984
+01:03:41.195 --> 01:03:43.715
+alpha, one, three at this particular time stamp,
+
+985
+01:03:43.715 --> 01:03:44.955
+we need C one as an output.
+
+986
+01:03:44.955 --> 01:03:46.915
+So long, let us see this one. It's focus on this.
+
+987
+01:03:47.025 --> 01:03:49.115
+It's the same thing, what I have told you so far, so
+
+988
+01:03:49.115 --> 01:03:50.555
+that it'll not look complicated.
+
+989
+01:03:51.535 --> 01:03:54.395
+So I'm talking about the input at timestamp one,
+
+990
+01:03:54.455 --> 01:03:55.995
+the second word in the Dakota,
+
+991
+01:03:56.005 --> 01:03:57.355
+which I have to generate, okay?
+
+992
+01:03:57.735 --> 01:04:00.995
+Now, at this time, stamp, we have three inputs to be given.
+
+993
+01:04:01.315 --> 01:04:05.395
+Y one, Y one which is math, snot, which is coming from here,
+
+994
+01:04:05.615 --> 01:04:07.235
+and C one, which we have to calculate,
+
+995
+01:04:07.245 --> 01:04:08.355
+which we have to calculate.
+
+996
+01:04:08.735 --> 01:04:13.075
+Now, in order to calculate the C one, I need the alignment,
+
+997
+01:04:13.185 --> 01:04:16.835
+alignment between the sno, what I have already done so far,
+
+998
+01:04:17.615 --> 01:04:20.915
+and with Sno, with H one and S two and S3.
+
+999
+01:04:21.415 --> 01:04:24.115
+So there are three set of inputs, as I have shown you here
+
+1000
+01:04:24.215 --> 01:04:27.755
+for alpha one, one, that will be H one Sno for alpha one,
+
+1001
+01:04:27.755 --> 01:04:30.995
+two S, two Sno, alpha one, three S, three S one.
+
+1002
+01:04:30.995 --> 01:04:32.115
+These three will be done, but
+
+1003
+01:04:32.115 --> 01:04:33.235
+that is what I have written here.
+
+1004
+01:04:33.305 --> 01:04:35.995
+Also. H one is not S two is not,
+
+1005
+01:04:36.315 --> 01:04:38.075
+S3 is not these three set of inputs.
+
+1006
+01:04:38.275 --> 01:04:40.275
+I need to calculate the alignment between them.
+
+1007
+01:04:40.295 --> 01:04:43.035
+So what I am, uh, the way I'm doing here is
+
+1008
+01:04:43.595 --> 01:04:46.315
+I am putting here one neural network, same neural network.
+
+1009
+01:04:46.315 --> 01:04:47.915
+What is here is here also here also.
+
+1010
+01:04:48.255 --> 01:04:50.435
+So way it starts shared between all of them,
+
+1011
+01:04:50.875 --> 01:04:52.715
+although have shown three different thing,
+
+1012
+01:04:52.735 --> 01:04:54.315
+but actually they're the same neural network
+
+1013
+01:04:54.785 --> 01:04:56.035
+with the same set of weights.
+
+1014
+01:04:56.255 --> 01:04:58.995
+So what happened first time, my input, H one
+
+1015
+01:04:58.995 --> 01:05:00.515
+and S node, H one is also a vector.
+
+1016
+01:05:01.235 --> 01:05:02.835
+Sno is also a vector, right?
+
+1017
+01:05:03.055 --> 01:05:05.435
+So what I want is I want to feed this vector
+
+1018
+01:05:05.895 --> 01:05:07.115
+to this particular neural network.
+
+1019
+01:05:07.165 --> 01:05:09.235
+There are some neurons here showing here three,
+
+1020
+01:05:09.235 --> 01:05:10.915
+but there can be many more also.
+
+1021
+01:05:11.775 --> 01:05:15.515
+So there are three neurons, um, means some neurons here.
+
+1022
+01:05:15.775 --> 01:05:18.645
+So somehow what I want is by feeding this H one
+
+1023
+01:05:18.645 --> 01:05:22.885
+and as not to the neuron neurons, I want one score
+
+1024
+01:05:23.025 --> 01:05:27.815
+as alpha one, one, how it'll come, how it'll come.
+
+1025
+01:05:27.815 --> 01:05:29.375
+That, that, that again, I,
+
+1026
+01:05:29.375 --> 01:05:30.415
+I'll tell you one more
+
+1027
+01:05:30.415 --> 01:05:31.815
+architecture, then it'll be more clear.
+
+1028
+01:05:31.815 --> 01:05:33.975
+But at the first level, let, let us understand.
+
+1029
+01:05:34.075 --> 01:05:35.975
+I'm using here neural network, simple
+
+1030
+01:05:36.675 --> 01:05:38.815
+and neural network is giving me one output.
+
+1031
+01:05:38.835 --> 01:05:40.695
+Simple, okay?
+
+1032
+01:05:40.885 --> 01:05:43.255
+This H one s not, this is not the actual representation
+
+1033
+01:05:43.315 --> 01:05:44.975
+of neural network, which I'll show you later,
+
+1034
+01:05:45.515 --> 01:05:48.815
+but just imagine that I have a neural network in between,
+
+1035
+01:05:48.955 --> 01:05:50.975
+it takes two inputs, H one and Snu.
+
+1036
+01:05:50.975 --> 01:05:52.735
+Both are, both are vectors.
+
+1037
+01:05:53.075 --> 01:05:54.895
+So a vector here, vector here,
+
+1038
+01:05:54.895 --> 01:05:56.495
+concatenating together, right?
+
+1039
+01:05:56.825 --> 01:05:59.575
+Going as an input to this particular neural network
+
+1040
+01:05:59.675 --> 01:06:01.415
+and gives me one output at alpha.
+
+1041
+01:06:01.415 --> 01:06:04.775
+One, one. Similarly, S two snot goes to the neural network.
+
+1042
+01:06:04.845 --> 01:06:06.855
+Give me one output at alpha, alpha one, two,
+
+1043
+01:06:06.855 --> 01:06:08.415
+and here it is, alpha one three.
+
+1044
+01:06:09.695 --> 01:06:12.705
+Okay? And then what we do, this alpha one, one alpha one,
+
+1045
+01:06:12.705 --> 01:06:15.065
+two, alpha one three is further being multiplied
+
+1046
+01:06:15.065 --> 01:06:16.385
+with H one, S two and S3.
+
+1047
+01:06:16.385 --> 01:06:17.665
+You can see the alpha one one.
+
+1048
+01:06:17.665 --> 01:06:22.025
+Once I get here, it gets again multiplied with H one, H one.
+
+1049
+01:06:22.025 --> 01:06:24.865
+Anyway, we have from the encoder timestamps, right?
+
+1050
+01:06:25.025 --> 01:06:27.225
+H one, S two, S3, so we can multiply them.
+
+1051
+01:06:27.225 --> 01:06:30.225
+So it'll give me weighted weighted value of these H one,
+
+1052
+01:06:30.425 --> 01:06:33.735
+S two and S3, because H one S two S3 is a vector.
+
+1053
+01:06:33.905 --> 01:06:36.615
+Alpha one, one alpha, one, two, alpha one three is a scaler.
+
+1054
+01:06:36.795 --> 01:06:39.895
+So when you multiply them, you get the weighted value
+
+1055
+01:06:39.915 --> 01:06:42.535
+of this H one vector, H two vector, and H three vector.
+
+1056
+01:06:42.535 --> 01:06:43.775
+Then you will add them, all of them.
+
+1057
+01:06:43.835 --> 01:06:45.495
+So you here you can see that, right?
+
+1058
+01:06:45.875 --> 01:06:48.215
+The add them, and then you get the output.
+
+1059
+01:06:49.035 --> 01:06:52.765
+You get the output. Why I'm showing here three dimension,
+
+1060
+01:06:52.765 --> 01:06:55.005
+because I have three, three, uh, uh,
+
+1061
+01:06:57.585 --> 01:06:58.685
+um, means, uh,
+
+1062
+01:07:01.095 --> 01:07:02.505
+because I'm giving the attention
+
+1063
+01:07:02.565 --> 01:07:04.425
+to this H one, S two and S3.
+
+1064
+01:07:04.565 --> 01:07:06.945
+So one value will be referring, uh,
+
+1065
+01:07:07.245 --> 01:07:08.345
+uh, because it is a vector.
+
+1066
+01:07:08.945 --> 01:07:10.625
+C one is a vector, right? Whatever you will get.
+
+1067
+01:07:11.045 --> 01:07:13.705
+So the first value will refer the attention
+
+1068
+01:07:13.885 --> 01:07:15.425
+for the first word in the encoder.
+
+1069
+01:07:15.425 --> 01:07:16.625
+Second value will refer.
+
+1070
+01:07:16.765 --> 01:07:20.305
+The second, uh, value will refer the attention
+
+1071
+01:07:20.365 --> 01:07:21.865
+to the second word in the encoder.
+
+1072
+01:07:21.865 --> 01:07:24.145
+And third value will refer the attention of the third value.
+
+1073
+01:07:24.405 --> 01:07:28.145
+Simple. And that itself, now, you can see that this line,
+
+1074
+01:07:28.505 --> 01:07:30.425
+C one, C one, all the way it travels here
+
+1075
+01:07:30.425 --> 01:07:31.985
+and goes input to the here.
+
+1076
+01:07:32.685 --> 01:07:35.655
+So unless we don't calculate the C one here,
+
+1077
+01:07:36.375 --> 01:07:38.465
+this LSTM decoded, this particular time
+
+1078
+01:07:38.465 --> 01:07:40.475
+of stem will wait, okay?
+
+1079
+01:07:40.475 --> 01:07:41.755
+It has to, it has to wait,
+
+1080
+01:07:42.415 --> 01:07:44.235
+and it has to do all these calculations.
+
+1081
+01:07:44.235 --> 01:07:45.555
+What you're seeing in the website,
+
+1082
+01:07:46.605 --> 01:07:47.745
+all these things will be done.
+
+1083
+01:07:48.045 --> 01:07:52.145
+Get the C one and then feed it here to now get the S one
+
+1084
+01:07:52.565 --> 01:07:55.985
+or generate the word J and give the, uh, output S one.
+
+1085
+01:07:56.945 --> 01:07:59.755
+Okay? Now, this is what happened. Now, next time is time.
+
+1086
+01:07:59.855 --> 01:08:02.475
+Now we have to calculate C two. Now you can see C two.
+
+1087
+01:08:02.735 --> 01:08:04.235
+Now again, we have, it has to wait.
+
+1088
+01:08:04.455 --> 01:08:06.635
+And this time you have to calculate the alignment
+
+1089
+01:08:06.665 --> 01:08:09.955
+between S one, S two, S one and S one, S two, and SS one,
+
+1090
+01:08:09.955 --> 01:08:11.035
+and S3 and S one,
+
+1091
+01:08:11.105 --> 01:08:13.555
+because the context factor has changed here.
+
+1092
+01:08:13.915 --> 01:08:16.565
+S one. So now you have to help with at, uh, alignment
+
+1093
+01:08:16.565 --> 01:08:20.985
+between S one from for all here in the state of the encoder.
+
+1094
+01:08:21.205 --> 01:08:22.665
+You'll pass it to the neural network.
+
+1095
+01:08:22.665 --> 01:08:24.865
+You'll get alpha two one, alpha two, two alpha, two three,
+
+1096
+01:08:25.145 --> 01:08:28.185
+multiplied with S one, S two, S3, add all of them together,
+
+1097
+01:08:28.645 --> 01:08:30.385
+get C two, get C two,
+
+1098
+01:08:30.385 --> 01:08:35.225
+and then feed it as in input to the, um, you can say that,
+
+1099
+01:08:35.245 --> 01:08:38.185
+uh, 0 1 2, second time stamp of the Dakota.
+
+1100
+01:08:39.805 --> 01:08:42.345
+And this process goes on. This process goes on.
+
+1101
+01:08:44.085 --> 01:08:45.905
+Sir, one quick question. Yeah, please.
+
+1102
+01:08:46.005 --> 01:08:50.145
+Uh, firstly, the dimension of, uh, H one
+
+1103
+01:08:50.145 --> 01:08:52.265
+and S one as a vector has to be the same.
+
+1104
+01:08:52.325 --> 01:08:53.325
+Is it?
+
+1105
+01:08:54.825 --> 01:08:58.605
+Uh, uh, see, yes, it is same.
+
+1106
+01:08:58.785 --> 01:09:00.005
+Yes, it is same in this, uh,
+
+1107
+01:09:00.025 --> 01:09:02.045
+at least in this particular case, it is same.
+
+1108
+01:09:02.105 --> 01:09:05.365
+And actually it is same only, right? Why? Why?
+
+1109
+01:09:05.365 --> 01:09:08.805
+Because I will tell you, uh, remember from the L sst m,
+
+1110
+01:09:08.985 --> 01:09:11.165
+we said that all the vectors, whatever we have,
+
+1111
+01:09:11.295 --> 01:09:12.325
+their dimension has
+
+1112
+01:09:12.325 --> 01:09:15.005
+to be same other than input other than, yes.
+
+1113
+01:09:15.825 --> 01:09:19.405
+So th this, as you can understand, whatever context vector,
+
+1114
+01:09:19.405 --> 01:09:21.965
+which is coming out of that, that itself is S one, S two,
+
+1115
+01:09:22.125 --> 01:09:23.325
+S3 becoming S one.
+
+1116
+01:09:23.385 --> 01:09:26.405
+So this vector context, vector dimension is same
+
+1117
+01:09:26.405 --> 01:09:28.165
+as this H one, original S two.
+
+1118
+01:09:28.165 --> 01:09:29.285
+So actually they're same, yes.
+
+1119
+01:09:30.305 --> 01:09:31.445
+Answer. Second thing is
+
+1120
+01:09:31.445 --> 01:09:33.965
+because now alpha is a scaler, which is an output
+
+1121
+01:09:33.965 --> 01:09:36.565
+of a neural network, some activation function,
+
+1122
+01:09:36.565 --> 01:09:38.965
+which gives the output as a scaler we'll have to use.
+
+1123
+01:09:39.425 --> 01:09:41.365
+Uh, no, there, there is a little mystery.
+
+1124
+01:09:41.475 --> 01:09:43.405
+I'll just show you the next slide, okay, sir?
+
+1125
+01:09:43.675 --> 01:09:45.245
+Yeah, thank you. Yeah.
+
+1126
+01:09:45.585 --> 01:09:47.245
+But we do use the activation function,
+
+1127
+01:09:47.245 --> 01:09:49.205
+but the, uh, I'll show you the actual architecture.
+
+1128
+01:09:49.205 --> 01:09:49.365
+Yeah.
+
+1129
+01:09:54.195 --> 01:09:56.445
+Okay. So now, uh,
+
+1130
+01:09:56.445 --> 01:09:59.325
+before I'll show you those, uh, the actual things, uh,
+
+1131
+01:09:59.425 --> 01:10:01.485
+let us see if we do this one.
+
+1132
+01:10:01.485 --> 01:10:02.925
+That what change has happened.
+
+1133
+01:10:02.945 --> 01:10:05.885
+So this is the change which is given in the one
+
+1134
+01:10:05.885 --> 01:10:08.245
+of the paper, uh, called, uh,
+
+1135
+01:10:08.965 --> 01:10:13.775
+I will just write attention.
+
+1136
+01:10:14.675 --> 01:10:17.415
+So this is the, in the 2014 itself,
+
+1137
+01:10:17.415 --> 01:10:19.895
+this paper has also come, okay?
+
+1138
+01:10:20.155 --> 01:10:21.495
+And they have used the sequence
+
+1139
+01:10:21.495 --> 01:10:23.655
+to sequence architecture on top of that,
+
+1140
+01:10:23.655 --> 01:10:25.015
+they have applied their attention,
+
+1141
+01:10:25.435 --> 01:10:26.695
+and this is what they have.
+
+1142
+01:10:26.875 --> 01:10:31.615
+Uh, uh, in fact, they have, uh, they have used the,
+
+1143
+01:10:31.845 --> 01:10:36.135
+this kind of architecture, the, uh, LSTM
+
+1144
+01:10:36.135 --> 01:10:37.215
+or RN architecture.
+
+1145
+01:10:37.215 --> 01:10:38.935
+You can buy an architecture.
+
+1146
+01:10:39.475 --> 01:10:40.735
+And on top, top, top of that,
+
+1147
+01:10:40.735 --> 01:10:42.695
+they have applied the attention, not on the sequence
+
+1148
+01:10:42.695 --> 01:10:44.935
+to sequence, but this is what they said, okay?
+
+1149
+01:10:44.935 --> 01:10:47.255
+This is what they have said that,
+
+1150
+01:10:47.315 --> 01:10:48.895
+uh, you can see that, right?
+
+1151
+01:10:49.195 --> 01:10:51.975
+So if, if earlier what was happening just
+
+1152
+01:10:51.975 --> 01:10:56.615
+because, uh, there was no attention, uh, then
+
+1153
+01:10:57.535 --> 01:11:01.685
+after 20 words, the, this was the, this was the trend.
+
+1154
+01:11:01.715 --> 01:11:03.365
+That model performance was dropping,
+
+1155
+01:11:03.415 --> 01:11:05.165
+model performance was dropping, right?
+
+1156
+01:11:05.745 --> 01:11:08.245
+But if you introduce the sequence to sequence, uh,
+
+1157
+01:11:08.385 --> 01:11:10.165
+I'm sorry, attention on this, uh,
+
+1158
+01:11:10.365 --> 01:11:12.285
+RNN architecture, then what will happen?
+
+1159
+01:11:12.435 --> 01:11:14.805
+This line, what this curve, what you're seeing on the top,
+
+1160
+01:11:15.475 --> 01:11:17.605
+that what will happen, it'll still, it'll,
+
+1161
+01:11:17.735 --> 01:11:18.965
+it'll at least not drop.
+
+1162
+01:11:19.055 --> 01:11:22.445
+It'll be even increasing or at the same stage at least.
+
+1163
+01:11:22.665 --> 01:11:24.045
+So that is what was shown even
+
+1164
+01:11:24.045 --> 01:11:26.765
+after the, uh, sentence length is 20.
+
+1165
+01:11:27.075 --> 01:11:31.365
+Okay? If it is 30, 40, 50, 60, the curve is not dropping.
+
+1166
+01:11:31.465 --> 01:11:33.205
+But the other curves, which was dropping
+
+1167
+01:11:33.825 --> 01:11:35.925
+and where the attention was not used,
+
+1168
+01:11:36.785 --> 01:11:40.445
+so this was one breakthrough paper, which came at that time.
+
+1169
+01:11:43.725 --> 01:11:47.045
+And, uh, yeah, this is the same thing.
+
+1170
+01:11:47.465 --> 01:11:49.805
+So you can see that the blue score, uh, which,
+
+1171
+01:11:49.805 --> 01:11:53.125
+which we usually, we calculate in the case of, uh,
+
+1172
+01:11:53.125 --> 01:11:54.525
+machine translations as well.
+
+1173
+01:11:54.915 --> 01:11:56.285
+This is one of the accuracy measure.
+
+1174
+01:11:56.385 --> 01:11:58.365
+You can see that per, uh, metric.
+
+1175
+01:11:59.065 --> 01:12:01.725
+And, uh, it is not dropping. This score is not dropping.
+
+1176
+01:12:02.225 --> 01:12:05.405
+And if you see the attention, the way it was calculated,
+
+1177
+01:12:05.465 --> 01:12:09.205
+so they have done mainly for English to French, okay?
+
+1178
+01:12:09.225 --> 01:12:11.925
+And, uh, you can see, right?
+
+1179
+01:12:12.025 --> 01:12:13.965
+So for a particular word in English,
+
+1180
+01:12:14.135 --> 01:12:16.565
+which word in the French is important,
+
+1181
+01:12:16.635 --> 01:12:18.285
+that attention is being captured.
+
+1182
+01:12:18.425 --> 01:12:21.045
+So black means zero means no attention,
+
+1183
+01:12:21.825 --> 01:12:25.685
+and one white, white means one means the full attention.
+
+1184
+01:12:26.425 --> 01:12:28.285
+And anything in between will have the,
+
+1185
+01:12:28.315 --> 01:12:30.405
+that much weightage of the tension, okay?
+
+1186
+01:12:30.405 --> 01:12:34.325
+That is what it is. So you can see that for the word, uh,
+
+1187
+01:12:34.715 --> 01:12:36.965
+this maybe, uh, this,
+
+1188
+01:12:36.965 --> 01:12:38.725
+this particular word French is important.
+
+1189
+01:12:39.265 --> 01:12:41.605
+Uh, but I want you to concentrate here somewhere
+
+1190
+01:12:41.605 --> 01:12:42.765
+where you can see that, right?
+
+1191
+01:12:42.865 --> 01:12:44.525
+For the word, ma'am, maybe
+
+1192
+01:12:45.295 --> 01:12:47.645
+there are multiple words which are important in
+
+1193
+01:12:47.805 --> 01:12:49.005
+the, uh, encoder.
+
+1194
+01:12:49.425 --> 01:12:51.365
+In the encoder, right?
+
+1195
+01:12:52.225 --> 01:12:54.885
+So obviously all of all of them are not
+
+1196
+01:12:54.915 --> 01:12:55.965
+with the same weight is,
+
+1197
+01:12:56.225 --> 01:12:59.645
+but it doesn't, it, it is never intended
+
+1198
+01:12:59.865 --> 01:13:01.365
+to focus only on one word.
+
+1199
+01:13:01.625 --> 01:13:02.805
+It is always intended
+
+1200
+01:13:02.905 --> 01:13:06.165
+to focus on the entire words in the encoder.
+
+1201
+01:13:06.185 --> 01:13:08.485
+So if support these many words we have in the encoder,
+
+1202
+01:13:08.485 --> 01:13:11.685
+everything we have to focus, but waiters will be different.
+
+1203
+01:13:11.685 --> 01:13:13.245
+Some words will have more say.
+
+1204
+01:13:13.675 --> 01:13:15.365
+Some words will have very little say.
+
+1205
+01:13:15.365 --> 01:13:18.565
+Some, some words will have no say at all in, in order
+
+1206
+01:13:18.565 --> 01:13:20.405
+to do the conversion or translation.
+
+1207
+01:13:20.825 --> 01:13:24.245
+But let us have, calculate the tension with the entire,
+
+1208
+01:13:24.985 --> 01:13:26.285
+and that is what it's shown here.
+
+1209
+01:13:26.285 --> 01:13:28.165
+That's why you can see that some variation,
+
+1210
+01:13:28.165 --> 01:13:30.685
+obviously this part and this part is almost not here.
+
+1211
+01:13:30.705 --> 01:13:33.405
+You can see some shades of, uh, black, right?
+
+1212
+01:13:33.435 --> 01:13:36.685
+Mean that is not exactly zero, maybe 0.0002
+
+1213
+01:13:36.705 --> 01:13:37.765
+or something, right?
+
+1214
+01:13:37.985 --> 01:13:40.085
+Or something, something like it is captured.
+
+1215
+01:13:40.865 --> 01:13:43.365
+So this is what has happened in the part, no attention.
+
+1216
+01:13:43.505 --> 01:13:46.925
+And now I'm showing you the actual, uh, paper, uh, so far,
+
+1217
+01:13:47.165 --> 01:13:48.765
+whatever I've shown you, it is like, just
+
+1218
+01:13:49.025 --> 01:13:52.475
+to build up the idea that in order to get that attention
+
+1219
+01:13:52.615 --> 01:13:55.355
+or getting that C one C two attention vector,
+
+1220
+01:13:55.795 --> 01:13:58.435
+I am using the, uh, what is that neural network.
+
+1221
+01:13:58.535 --> 01:14:00.315
+But then how does neural network look like?
+
+1222
+01:14:00.315 --> 01:14:03.465
+That is what is shown here now in this particular figure.
+
+1223
+01:14:03.925 --> 01:14:06.265
+So this figure, now, we are going to see how
+
+1224
+01:14:06.265 --> 01:14:07.465
+that neural networks looks like,
+
+1225
+01:14:07.485 --> 01:14:09.865
+and then how this whole architecture works.
+
+1226
+01:14:10.865 --> 01:14:14.925
+So basically, now you can see that I have the same encoder
+
+1227
+01:14:14.925 --> 01:14:16.085
+where I'm feeding the word.
+
+1228
+01:14:16.285 --> 01:14:18.725
+I am going, I got the context vector.
+
+1229
+01:14:18.825 --> 01:14:20.685
+Now, I'm not showing you only the context vector.
+
+1230
+01:14:20.795 --> 01:14:23.365
+This H three, which is coming from here,
+
+1231
+01:14:23.365 --> 01:14:25.925
+giving me the context vector of the entire encoder.
+
+1232
+01:14:26.545 --> 01:14:30.085
+Of the entire encoder. And that goes here. This, this blue.
+
+1233
+01:14:30.235 --> 01:14:34.205
+Okay? So the same context vector goes here as an input,
+
+1234
+01:14:34.385 --> 01:14:36.245
+as S minus one, same thing.
+
+1235
+01:14:36.245 --> 01:14:37.485
+It is, okay?
+
+1236
+01:14:37.665 --> 01:14:41.325
+So S3 here and S minus one here, both are the same thing.
+
+1237
+01:14:41.325 --> 01:14:43.325
+First of all, let us understand that. Okay?
+
+1238
+01:14:43.465 --> 01:14:45.405
+But I have broken that to represent you. Okay?
+
+1239
+01:14:45.425 --> 01:14:48.525
+How does this, uh, attention calculation happen?
+
+1240
+01:14:49.185 --> 01:14:51.965
+So these are the three step process in order
+
+1241
+01:14:52.025 --> 01:14:53.485
+to calculate the ct.
+
+1242
+01:14:53.665 --> 01:14:57.645
+CT can be, uh, starting with CO, then C one, then C two, C3,
+
+1243
+01:14:57.645 --> 01:15:00.885
+and C four, four times it'll be calculated, uh,
+
+1244
+01:15:01.035 --> 01:15:04.245
+0, 1, 2, 3, and four.
+
+1245
+01:15:05.355 --> 01:15:07.015
+So five times it'll be calculated, starting
+
+1246
+01:15:07.135 --> 01:15:08.415
+with zero up going up to four.
+
+1247
+01:15:09.035 --> 01:15:11.975
+Now, how does it, how do we calculate, first of all,
+
+1248
+01:15:11.975 --> 01:15:14.495
+we require this E one one, E one, two, E one, three.
+
+1249
+01:15:14.885 --> 01:15:17.935
+Okay, so what is this? E one one, E one two, E one, three.
+
+1250
+01:15:18.395 --> 01:15:21.535
+It is the score scaler value to the scaler value,
+
+1251
+01:15:21.635 --> 01:15:25.215
+or it is the actual alignment value, which say, okay,
+
+1252
+01:15:25.645 --> 01:15:27.815
+when I have to calculate the C one, I need
+
+1253
+01:15:27.815 --> 01:15:29.975
+to calculate the alignment between the SNO
+
+1254
+01:15:29.995 --> 01:15:33.535
+and H one, then Sno and H two, and then Sno
+
+1255
+01:15:33.555 --> 01:15:35.335
+and H three that we have already seen, right?
+
+1256
+01:15:35.515 --> 01:15:39.175
+So alignment between SNO and H one will be E one one Sno,
+
+1257
+01:15:39.175 --> 01:15:43.295
+and S two will be E one two Sno, and S3 will be E one three.
+
+1258
+01:15:43.715 --> 01:15:47.175
+Now we have these as scaler alignment,
+
+1259
+01:15:47.315 --> 01:15:49.575
+and together we will, it'll become the vector.
+
+1260
+01:15:50.945 --> 01:15:53.565
+So what is happening basically, is that E one one?
+
+1261
+01:15:53.585 --> 01:15:55.765
+How do we calculate that? What the question earlier also.
+
+1262
+01:15:55.785 --> 01:15:57.885
+So we use one neural network in between,
+
+1263
+01:15:58.025 --> 01:15:59.845
+and this neural network takes two inputs.
+
+1264
+01:16:00.055 --> 01:16:03.565
+First, first input is the edge, edge, uh,
+
+1265
+01:16:03.705 --> 01:16:05.205
+uh, hj.
+
+1266
+01:16:05.385 --> 01:16:06.405
+So J is nothing,
+
+1267
+01:16:06.585 --> 01:16:10.165
+but, uh, here it is like H one,
+
+1268
+01:16:10.405 --> 01:16:11.605
+S two, S3, okay?
+
+1269
+01:16:11.765 --> 01:16:15.315
+H one, H two, H three. Okay?
+
+1270
+01:16:15.655 --> 01:16:18.795
+So, uh, it'll be like, uh, first time it'll be H one,
+
+1271
+01:16:18.795 --> 01:16:19.955
+then S two and S3.
+
+1272
+01:16:20.495 --> 01:16:24.955
+And now you can see here, s uh, it, it, uh, it is,
+
+1273
+01:16:25.015 --> 01:16:26.795
+uh, SI minus one.
+
+1274
+01:16:26.795 --> 01:16:27.955
+It should have been T minus one.
+
+1275
+01:16:27.955 --> 01:16:29.355
+Here it is written T minus one,
+
+1276
+01:16:29.375 --> 01:16:31.195
+but, uh, here it is, I minus, that's the,
+
+1277
+01:16:31.195 --> 01:16:33.915
+there is some notational change, which I have missed.
+
+1278
+01:16:34.025 --> 01:16:37.315
+Some typo error. So here it is like st minus one
+
+1279
+01:16:38.035 --> 01:16:39.715
+ST minus one will be snot in this case.
+
+1280
+01:16:39.975 --> 01:16:43.495
+So one S node, next time it'll be S two s.
+
+1281
+01:16:43.495 --> 01:16:45.095
+No, next time it'll be S3 S node.
+
+1282
+01:16:45.095 --> 01:16:47.855
+And now you see that there is a neural network in between.
+
+1283
+01:16:48.155 --> 01:16:49.775
+And there is this neural network
+
+1284
+01:16:50.395 --> 01:16:53.375
+is a two layered neural network, two layered neural network.
+
+1285
+01:16:53.555 --> 01:16:56.655
+We have one hidden layer here and one output layer here.
+
+1286
+01:16:56.965 --> 01:16:58.855
+Okay? Two layer. Two layer, it is,
+
+1287
+01:16:59.275 --> 01:17:01.135
+so there is one hidden layer, one output layer,
+
+1288
+01:17:01.635 --> 01:17:03.935
+and whatever is the dimension of hj
+
+1289
+01:17:04.155 --> 01:17:07.295
+and SI minus one, we have concatenated them together,
+
+1290
+01:17:07.325 --> 01:17:08.855
+they will go as an input together
+
+1291
+01:17:08.875 --> 01:17:10.165
+to this particular neural network.
+
+1292
+01:17:11.105 --> 01:17:14.485
+And whatever is the neural network output here will go
+
+1293
+01:17:14.505 --> 01:17:16.365
+and connect it with one neuron here.
+
+1294
+01:17:16.865 --> 01:17:20.845
+So what will happen for each h, uh, uh, edge
+
+1295
+01:17:20.945 --> 01:17:22.285
+and SP, okay?
+
+1296
+01:17:22.305 --> 01:17:25.325
+Of input, you will get one alignment score, E one one.
+
+1297
+01:17:25.825 --> 01:17:29.885
+So as node as no will give you E one, one HNO
+
+1298
+01:17:30.445 --> 01:17:31.685
+S one will give you E one two,
+
+1299
+01:17:31.685 --> 01:17:34.605
+and HNO s uh, uh, sorry, H uh,
+
+1300
+01:17:34.845 --> 01:17:37.765
+HH two Sno will give you E one, two and H three.
+
+1301
+01:17:38.325 --> 01:17:40.125
+Sno will give you E one three. Okay?
+
+1302
+01:17:40.865 --> 01:17:43.005
+Now, how it is done, that is what is written here.
+
+1303
+01:17:43.465 --> 01:17:44.685
+So you see that, as I said,
+
+1304
+01:17:44.685 --> 01:17:46.325
+it is a two layered neural network.
+
+1305
+01:17:46.705 --> 01:17:47.845
+In the first layer, what happens?
+
+1306
+01:17:47.865 --> 01:17:50.485
+So obviously we have some weights in between, which will be,
+
+1307
+01:17:50.575 --> 01:17:52.045
+which we, we have to train.
+
+1308
+01:17:52.665 --> 01:17:55.445
+So, uh, at this particular layer, what happened,
+
+1309
+01:17:55.445 --> 01:17:58.405
+we do the weighted PL bias, followed by activation function,
+
+1310
+01:17:58.905 --> 01:18:00.845
+and the activation function, which they use.
+
+1311
+01:18:00.845 --> 01:18:02.365
+Then the tension,
+
+1312
+01:18:02.905 --> 01:18:07.045
+and they use the okay that use the 10 10 H
+
+1313
+01:18:07.775 --> 01:18:08.845
+activation function.
+
+1314
+01:18:09.185 --> 01:18:11.605
+So 10 H is an activation function, as you can see
+
+1315
+01:18:11.605 --> 01:18:15.565
+that there is a weight ws, which is connected
+
+1316
+01:18:15.565 --> 01:18:16.725
+with ST minus one.
+
+1317
+01:18:16.725 --> 01:18:19.165
+This is T, right? So ST minus one,
+
+1318
+01:18:19.585 --> 01:18:22.245
+and there is a weight which is connected with hj,
+
+1319
+01:18:22.585 --> 01:18:24.005
+so WH into hj.
+
+1320
+01:18:24.005 --> 01:18:25.565
+And we have a bias also, which is coming
+
+1321
+01:18:25.565 --> 01:18:27.005
+with all these neurons here.
+
+1322
+01:18:27.585 --> 01:18:29.925
+Simple. This is this, we do for any neural network,
+
+1323
+01:18:29.995 --> 01:18:31.485
+it's a fully connected network, right?
+
+1324
+01:18:31.985 --> 01:18:34.525
+And then whatever output we get, okay,
+
+1325
+01:18:34.525 --> 01:18:38.965
+that whatever output we get, uh, that, uh,
+
+1326
+01:18:39.315 --> 01:18:42.405
+okay, that whatever, whatever output we are getting, that,
+
+1327
+01:18:42.405 --> 01:18:46.845
+that we are, uh, uh, uh, some, somehow we have to
+
+1328
+01:18:47.645 --> 01:18:51.745
+multiply it because it is a, um, um, uh,
+
+1329
+01:18:51.745 --> 01:18:55.465
+because this, this et comma J et comma j, what
+
+1330
+01:18:55.495 --> 01:18:58.825
+what you are going to get is, is a, uh,
+
+1331
+01:19:00.955 --> 01:19:03.445
+this EEE one, one, E one two, E one, three.
+
+1332
+01:19:03.465 --> 01:19:04.965
+It is, it is a scaler value.
+
+1333
+01:19:05.105 --> 01:19:06.125
+How it'll be a scaler
+
+1334
+01:19:06.125 --> 01:19:07.685
+because you're using a single neuron
+
+1335
+01:19:07.685 --> 01:19:08.885
+here, single neuron here.
+
+1336
+01:19:09.065 --> 01:19:11.605
+So here you're using the 10 x activation function here.
+
+1337
+01:19:11.605 --> 01:19:13.805
+You'll not use any activation function.
+
+1338
+01:19:13.805 --> 01:19:15.325
+It is a linear activation function.
+
+1339
+01:19:16.005 --> 01:19:18.245
+Whatever it'll calculate, it'll give you the E one one,
+
+1340
+01:19:18.325 --> 01:19:19.325
+E one, two, E one, three.
+
+1341
+01:19:19.625 --> 01:19:21.845
+So resultant of this particular part,
+
+1342
+01:19:22.465 --> 01:19:25.805
+and followed by this multiplied by this V, okay?
+
+1343
+01:19:25.885 --> 01:19:28.245
+V is a vector here, V, which is, which is weight.
+
+1344
+01:19:28.245 --> 01:19:30.565
+Which is weight. So V you will multiply,
+
+1345
+01:19:30.635 --> 01:19:32.685
+what you will get will be one scaler.
+
+1346
+01:19:32.685 --> 01:19:35.005
+What you will get as VE one, one E one, two, E one,
+
+1347
+01:19:35.005 --> 01:19:36.115
+three, okay?
+
+1348
+01:19:36.295 --> 01:19:38.555
+So two set of weights are being used that you have
+
+1349
+01:19:38.555 --> 01:19:40.035
+to remember W and V.
+
+1350
+01:19:40.135 --> 01:19:42.595
+And that is what is shown here also. Okay?
+
+1351
+01:19:42.655 --> 01:19:45.115
+So once we get the E one one, E one, two, E one, three,
+
+1352
+01:19:45.115 --> 01:19:46.235
+because we have
+
+1353
+01:19:46.235 --> 01:19:48.195
+to normalize them in the range of zero to one.
+
+1354
+01:19:48.295 --> 01:19:49.715
+Softex is the good activation.
+
+1355
+01:19:49.935 --> 01:19:53.075
+Softex is a good normalization function. Here, it's okay.
+
+1356
+01:19:53.075 --> 01:19:55.675
+So now it'll take all these three value using this
+
+1357
+01:19:55.675 --> 01:19:58.075
+particular formula, it'll normalize.
+
+1358
+01:19:58.335 --> 01:20:00.475
+Now you have the priority distribution in terms
+
+1359
+01:20:00.475 --> 01:20:01.915
+of alpha one, one, alpha one, two,
+
+1360
+01:20:01.915 --> 01:20:03.155
+and alpha one, three, okay?
+
+1361
+01:20:03.535 --> 01:20:06.235
+And then what you will do, you will simply, um,
+
+1362
+01:20:06.235 --> 01:20:08.655
+calculate the ci, how will you calculate the CI
+
+1363
+01:20:09.195 --> 01:20:11.375
+or ct ct You will calculate by,
+
+1364
+01:20:11.435 --> 01:20:12.935
+you will multiply this alpha one,
+
+1365
+01:20:12.935 --> 01:20:16.215
+one alpha one 12 alpha one three, along with the hj.
+
+1366
+01:20:16.215 --> 01:20:18.535
+That is H one, S two, S3, okay?
+
+1367
+01:20:18.535 --> 01:20:20.015
+And then you add all of them together.
+
+1368
+01:20:20.155 --> 01:20:21.295
+That's why there is just submission.
+
+1369
+01:20:21.295 --> 01:20:22.495
+That's why there is just submission, right?
+
+1370
+01:20:22.715 --> 01:20:25.135
+And that's how you get a vector here, which you are going
+
+1371
+01:20:25.215 --> 01:20:26.335
+to feed to this l sst.
+
+1372
+01:20:27.545 --> 01:20:30.525
+So sir, here will be three neuro network
+
+1373
+01:20:30.745 --> 01:20:33.045
+for each E one one, E one 12,
+
+1374
+01:20:34.265 --> 01:20:35.765
+No, let see, neural network is same.
+
+1375
+01:20:35.875 --> 01:20:37.525
+Only thing is three inputs.
+
+1376
+01:20:38.355 --> 01:20:39.405
+Okay, sir? Yeah.
+
+1377
+01:20:39.415 --> 01:20:43.045
+First time HNO and, uh, sorry, huh? HH one and snot.
+
+1378
+01:20:44.555 --> 01:20:46.565
+It's like RO wise input, you're feeding.
+
+1379
+01:20:46.565 --> 01:20:48.285
+There are three inputs in your data set.
+
+1380
+01:20:48.745 --> 01:20:50.005
+Yes, there is lot.
+
+1381
+01:20:50.515 --> 01:20:53.765
+Okay, so one more question I was trying to ask earlier,
+
+1382
+01:20:54.035 --> 01:20:56.725
+also, how it'll maintain the sequence.
+
+1383
+01:20:56.785 --> 01:20:58.925
+For example, I'm taking your, I am going,
+
+1384
+01:20:59.505 --> 01:21:02.005
+but in Hindi translation going is coming
+
+1385
+01:21:02.265 --> 01:21:05.805
+and going, is coming earlier, actually, jar.
+
+1386
+01:21:06.465 --> 01:21:09.045
+Mm-hmm. So that thing, how it is maintaining,
+
+1387
+01:21:09.345 --> 01:21:11.525
+That's why we are finding the alignment.
+
+1388
+01:21:11.675 --> 01:21:14.165
+This E one one, E one two, E one three, along
+
+1389
+01:21:14.165 --> 01:21:16.605
+with these wave in between is trying to learn the,
+
+1390
+01:21:16.605 --> 01:21:18.765
+see anyway, we are doing the supervised learning
+
+1391
+01:21:19.415 --> 01:21:23.605
+where we have the labels there in our data set.
+
+1392
+01:21:24.385 --> 01:21:26.565
+So somehow with these waves, we are trying
+
+1393
+01:21:26.565 --> 01:21:28.005
+to learn the same thing that, okay,
+
+1394
+01:21:28.065 --> 01:21:31.005
+now this word should be J although it is coming later or
+
+1395
+01:21:31.005 --> 01:21:33.485
+before in the encoder here, it has to come as J.
+
+1396
+01:21:34.265 --> 01:21:36.965
+So that is what, and suppose it does the mistakes,
+
+1397
+01:21:36.965 --> 01:21:39.605
+obviously at the training time, it'll do the mistake, okay?
+
+1398
+01:21:39.605 --> 01:21:40.725
+Which is not shown here.
+
+1399
+01:21:41.305 --> 01:21:44.125
+But then that is what the, uh, model will understand, okay?
+
+1400
+01:21:44.125 --> 01:21:47.525
+What is the laws and update those, uh, all those parameters,
+
+1401
+01:21:47.525 --> 01:21:50.525
+and again, feed this, uh, next, next, uh, input.
+
+1402
+01:21:50.825 --> 01:21:53.925
+And by doing it multiple times, it'll learn that. Yeah.
+
+1403
+01:21:54.845 --> 01:21:57.845
+Yes, thank you. Okay,
+
+1404
+01:22:00.535 --> 01:22:01.535
+Sir? Uh,
+
+1405
+01:22:01.535 --> 01:22:04.795
+I have some trouble understanding this, uh, VT
+
+1406
+01:22:05.455 --> 01:22:07.195
+in the first step, VT multiplied
+
+1407
+01:22:07.195 --> 01:22:08.795
+by the activation function. It,
+
+1408
+01:22:08.795 --> 01:22:09.795
+It just to transpose.
+
+1409
+01:22:09.855 --> 01:22:12.635
+So what is happening is, uh, this is a vector.
+
+1410
+01:22:12.895 --> 01:22:15.355
+So this is a neural network hidden layer,
+
+1411
+01:22:16.175 --> 01:22:19.355
+and I am treating the output of this hidden layer,
+
+1412
+01:22:19.695 --> 01:22:20.715
+neural hidden layer.
+
+1413
+01:22:20.715 --> 01:22:24.475
+Output is a vector. Now, this vector has to be multiplied
+
+1414
+01:22:24.745 --> 01:22:28.035
+with the vector here, which is a v, V is a vector, right?
+
+1415
+01:22:28.095 --> 01:22:31.545
+We are set of weights between this layer and this layer.
+
+1416
+01:22:31.885 --> 01:22:34.425
+So one of them has to transpose. That's why we transpose.
+
+1417
+01:22:35.605 --> 01:22:36.895
+Okay? Okay, got it.
+
+1418
+01:22:37.405 --> 01:22:40.495
+Okay. That's all. Nothing else. So vector and vector.
+
+1419
+01:22:40.995 --> 01:22:43.735
+So vector and vector is being, uh, multiplied, that's all.
+
+1420
+01:22:43.735 --> 01:22:46.655
+So we get, what we get here is in, uh, scaler.
+
+1421
+01:22:48.285 --> 01:22:51.195
+Understood, sir? Yeah. Okay. Okay.
+
+1422
+01:22:53.045 --> 01:22:56.185
+So, uh, yes, that's all. This is, what is the word?
+
+1423
+01:22:56.185 --> 01:22:57.785
+Not attention. The first kind
+
+1424
+01:22:57.785 --> 01:23:01.185
+of attention which was proposed first of its kind, then
+
+1425
+01:23:01.355 --> 01:23:02.785
+after this, multiple types
+
+1426
+01:23:02.785 --> 01:23:04.625
+of attention mechanism, which was proposed.
+
+1427
+01:23:04.685 --> 01:23:06.725
+And one of the version, uh, you will see,
+
+1428
+01:23:06.785 --> 01:23:09.085
+and very famous, is self attention in the transformer
+
+1429
+01:23:09.085 --> 01:23:11.405
+architecture, which we'll talk in the next course.
+
+1430
+01:23:11.945 --> 01:23:14.565
+But you see from where this attention has emerged
+
+1431
+01:23:14.565 --> 01:23:15.845
+and why it has emerged,
+
+1432
+01:23:15.955 --> 01:23:18.365
+what was the purpose initially, right?
+
+1433
+01:23:18.865 --> 01:23:20.925
+And, uh, what, what exactly.
+
+1434
+01:23:20.945 --> 01:23:24.645
+So if you see here, uh, what, what there are,
+
+1435
+01:23:24.915 --> 01:23:26.085
+what we are doing, first of all,
+
+1436
+01:23:26.105 --> 01:23:29.165
+we are calculating the alignment between the sequence,
+
+1437
+01:23:29.195 --> 01:23:31.125
+what we have here in the decoder,
+
+1438
+01:23:31.425 --> 01:23:35.165
+and each word in the encoder, get that attention.
+
+1439
+01:23:35.315 --> 01:23:36.885
+That is E one one or alpha one,
+
+1440
+01:23:36.885 --> 01:23:38.165
+one alpha one, two, alpha one, three.
+
+1441
+01:23:38.425 --> 01:23:42.325
+And then again, multiply it with the H one, S two,
+
+1442
+01:23:42.485 --> 01:23:44.805
+S two in order to give them the weighted, in order
+
+1443
+01:23:44.805 --> 01:23:45.805
+to give them the weighted
+
+1444
+01:23:45.805 --> 01:23:48.205
+and then add them together to get, get the seat.
+
+1445
+01:23:48.235 --> 01:23:50.925
+This is what we do in the case of pardon, no attention.
+
+1446
+01:23:51.835 --> 01:23:55.125
+Okay? Now, uh, I'll explain you one more kind of attention,
+
+1447
+01:23:55.665 --> 01:23:57.685
+one more kind of attention, which was proposed later.
+
+1448
+01:23:57.875 --> 01:24:02.605
+That is called luon attention, L-U-O-N-G. Okay?
+
+1449
+01:24:02.855 --> 01:24:06.515
+Luong attention paper. I mean, lu, why?
+
+1450
+01:24:06.515 --> 01:24:08.275
+We, because the author name is Luon. Okay?
+
+1451
+01:24:08.655 --> 01:24:11.715
+So effective approach to attention based neural, uh,
+
+1452
+01:24:11.715 --> 01:24:12.835
+machine translation.
+
+1453
+01:24:13.415 --> 01:24:18.275
+So what they said that so far, uh, what this,
+
+1454
+01:24:18.455 --> 01:24:21.955
+uh, this, this is doing is,
+
+1455
+01:24:23.135 --> 01:24:24.315
+um, tension.
+
+1456
+01:24:24.495 --> 01:24:26.475
+Uh, Barna is a, the author name.
+
+1457
+01:24:27.055 --> 01:24:29.155
+So bar tension is doing is in order
+
+1458
+01:24:29.175 --> 01:24:32.155
+to give this alignment score, E one one, E one two, E one,
+
+1459
+01:24:32.155 --> 01:24:35.235
+three, it is using the neural network in between anyway,
+
+1460
+01:24:35.235 --> 01:24:37.875
+this LSTM has the neural network in encoder
+
+1461
+01:24:37.935 --> 01:24:39.275
+as well as in the decoder.
+
+1462
+01:24:39.535 --> 01:24:42.435
+And then in order to calculate the attention score, also,
+
+1463
+01:24:42.575 --> 01:24:43.715
+we are calculating the,
+
+1464
+01:24:43.895 --> 01:24:46.795
+we are having the neural network again, there also,
+
+1465
+01:24:46.795 --> 01:24:49.635
+we have the set, uh, some weights in the form of W
+
+1466
+01:24:49.735 --> 01:24:51.115
+and some weight in the form of V.
+
+1467
+01:24:51.455 --> 01:24:54.395
+So it is becoming so complex, it is becoming so complex.
+
+1468
+01:24:55.095 --> 01:24:57.995
+And, but the ultimate idea is only to calculate the,
+
+1469
+01:24:58.575 --> 01:24:59.675
+uh, what is that alignment?
+
+1470
+01:24:59.845 --> 01:25:02.315
+Similarity between this vector, SNO here
+
+1471
+01:25:02.695 --> 01:25:06.875
+and the vector, which H one Sno here and S two Sno and S3.
+
+1472
+01:25:07.185 --> 01:25:09.035
+Then why to have this neural network.
+
+1473
+01:25:09.815 --> 01:25:12.355
+So he said that, can't we make it little, uh, simpler?
+
+1474
+01:25:13.215 --> 01:25:16.275
+So instead of keeping the neural network in between,
+
+1475
+01:25:16.555 --> 01:25:17.875
+I will just do the dot product
+
+1476
+01:25:18.945 --> 01:25:20.245
+dot product of the two vector.
+
+1477
+01:25:20.335 --> 01:25:21.765
+Again, it'll gimme the same thing.
+
+1478
+01:25:21.895 --> 01:25:24.205
+It'll gimme the scaler, right?
+
+1479
+01:25:24.465 --> 01:25:28.485
+So HJ means H one, S two, or S3,
+
+1480
+01:25:29.145 --> 01:25:30.725
+or here I'm saying si.
+
+1481
+01:25:30.725 --> 01:25:34.525
+It should have been st. Sorry, it should have been st. Okay?
+
+1482
+01:25:34.945 --> 01:25:38.725
+So, um, uh, so here, so
+
+1483
+01:25:38.835 --> 01:25:40.285
+what I'm doing is this is also a vector.
+
+1484
+01:25:40.285 --> 01:25:42.565
+This is also a vector, and we have already talked about they
+
+1485
+01:25:42.565 --> 01:25:43.565
+are of the same dimension.
+
+1486
+01:25:43.825 --> 01:25:45.445
+So if they're of the same dimension,
+
+1487
+01:25:45.445 --> 01:25:47.165
+and we have to calculate the alignment
+
+1488
+01:25:47.385 --> 01:25:48.805
+or similarity between these two
+
+1489
+01:25:49.585 --> 01:25:51.365
+dot product is the best way, okay?
+
+1490
+01:25:51.705 --> 01:25:54.525
+And we don't don't have to train any of these weights.
+
+1491
+01:25:54.685 --> 01:25:56.125
+W and V, W
+
+1492
+01:25:56.225 --> 01:25:59.325
+and V, we don't have to train any of these, right?
+
+1493
+01:25:59.385 --> 01:26:02.245
+So it'll make the overall process a little bit simpler.
+
+1494
+01:26:02.355 --> 01:26:03.610
+Rest, everything is same.
+
+1495
+01:26:04.195 --> 01:26:06.405
+Once we have this E one, one, E one, two, E one,
+
+1496
+01:26:06.405 --> 01:26:09.285
+three in place, then we can calculate alpha one, one,
+
+1497
+01:26:09.285 --> 01:26:10.605
+alpha one, 12 alpha one, three,
+
+1498
+01:26:11.065 --> 01:26:12.605
+and then we can just, uh,
+
+1499
+01:26:12.925 --> 01:26:16.325
+multiply these individual weightage with the H one S two S3,
+
+1500
+01:26:16.325 --> 01:26:19.165
+and add them together to get this C one.
+
+1501
+01:26:19.745 --> 01:26:22.005
+The, the attention. Okay? The attention.
+
+1502
+01:26:22.225 --> 01:26:26.125
+So getting the attention value, um, how you are getting
+
+1503
+01:26:26.125 --> 01:26:27.205
+that attention vector.
+
+1504
+01:26:27.235 --> 01:26:29.285
+That is what is different in luang attention.
+
+1505
+01:26:29.625 --> 01:26:30.725
+And the au attention,
+
+1506
+01:26:30.785 --> 01:26:33.365
+the au attention use the neural network in between
+
+1507
+01:26:34.105 --> 01:26:35.605
+to get the C one, right?
+
+1508
+01:26:35.825 --> 01:26:38.605
+But the luang attention, they say that, okay,
+
+1509
+01:26:38.605 --> 01:26:39.605
+I'll use the dot product.
+
+1510
+01:26:40.145 --> 01:26:43.245
+The dot product is a multiplication, uh, operation.
+
+1511
+01:26:43.265 --> 01:26:45.365
+So Luang is multiplicative attention.
+
+1512
+01:26:46.065 --> 01:26:50.565
+And, uh, uh, here a bar.
+
+1513
+01:26:50.625 --> 01:26:53.525
+No, it isn't, uh, EA additive attention there.
+
+1514
+01:26:53.585 --> 01:26:55.125
+We, we say it is a additive attention
+
+1515
+01:26:55.125 --> 01:26:58.045
+because, uh, anyway, neural network,
+
+1516
+01:26:58.145 --> 01:27:01.885
+we are calculating here, we are only doing the addition
+
+1517
+01:27:01.885 --> 01:27:03.405
+of all of them, which we do here also.
+
+1518
+01:27:03.445 --> 01:27:04.765
+I don't know why it just check that,
+
+1519
+01:27:05.065 --> 01:27:06.565
+why it is called a multiplication
+
+1520
+01:27:06.585 --> 01:27:08.565
+and, uh, multiplicative and additive.
+
+1521
+01:27:08.705 --> 01:27:10.285
+But you understand the process, right?
+
+1522
+01:27:11.005 --> 01:27:12.845
+I am focusing more on this.
+
+1523
+01:27:12.865 --> 01:27:16.035
+How do we calculate this alignment score.
+
+1524
+01:27:16.035 --> 01:27:18.555
+Alignment score is just a number, scaler number,
+
+1525
+01:27:18.555 --> 01:27:20.395
+which gives the alignment between the two vector.
+
+1526
+01:27:20.975 --> 01:27:23.435
+So bar now, do, does, is using the neural network
+
+1527
+01:27:24.095 --> 01:27:25.995
+and Luang does it using the top product.
+
+1528
+01:27:26.015 --> 01:27:28.155
+That's all. Now, there is one more difference,
+
+1529
+01:27:28.155 --> 01:27:31.835
+and now you must have observed by it, uh, by, by now that,
+
+1530
+01:27:32.065 --> 01:27:36.155
+okay, once you get this attention, the way it is being fed
+
+1531
+01:27:36.215 --> 01:27:39.195
+to the burden or attention is it is acting like another
+
+1532
+01:27:39.405 --> 01:27:40.635
+input to this lstm.
+
+1533
+01:27:40.775 --> 01:27:43.835
+So this LSTM has anyway, input Y one and A snot.
+
+1534
+01:27:44.095 --> 01:27:46.715
+Now also, it'll have one more input C one, okay?
+
+1535
+01:27:46.715 --> 01:27:49.555
+This is how this attention vector goes, as an input
+
+1536
+01:27:49.555 --> 01:27:53.075
+to the LS tm, but the way, uh,
+
+1537
+01:27:53.665 --> 01:27:55.835
+long did it was a little different.
+
+1538
+01:27:56.425 --> 01:28:00.915
+What he did, uh, once it get the C one,
+
+1539
+01:28:01.335 --> 01:28:04.115
+it did not give the input to this lstm.
+
+1540
+01:28:04.135 --> 01:28:08.195
+It did not give the input to this lium what it said. Okay?
+
+1541
+01:28:08.575 --> 01:28:11.795
+Let the, uh, LSTM generate whatever it has
+
+1542
+01:28:11.795 --> 01:28:14.855
+to generate S one, okay?
+
+1543
+01:28:15.215 --> 01:28:18.455
+S one here based on the current word, ma,
+
+1544
+01:28:18.515 --> 01:28:20.335
+and last vector snot.
+
+1545
+01:28:21.155 --> 01:28:25.815
+But once it'll give the SSS one as an output, okay?
+
+1546
+01:28:25.815 --> 01:28:27.135
+Which is vector. S one is vector.
+
+1547
+01:28:27.355 --> 01:28:29.175
+All these are vectors, right? S one.
+
+1548
+01:28:29.365 --> 01:28:30.935
+Then I'll take this S one,
+
+1549
+01:28:31.795 --> 01:28:34.575
+and out of this S one, out of this S one,
+
+1550
+01:28:34.965 --> 01:28:36.775
+this is attention vector C one.
+
+1551
+01:28:37.415 --> 01:28:38.655
+I will concatenate them
+
+1552
+01:28:39.115 --> 01:28:42.775
+and I'll pass them to the neural network here, okay?
+
+1553
+01:28:43.455 --> 01:28:45.055
+I will pass them to the neural network here.
+
+1554
+01:28:45.155 --> 01:28:48.535
+So, uh, it is, it is little bit different the way this
+
+1555
+01:28:49.005 --> 01:28:50.975
+attention vector is fed.
+
+1556
+01:28:51.725 --> 01:28:54.735
+Okay? So attention vector in the burden,
+
+1557
+01:28:54.735 --> 01:28:57.255
+attention is straightforward as an input
+
+1558
+01:28:58.155 --> 01:28:59.295
+in the long attention.
+
+1559
+01:28:59.395 --> 01:29:00.615
+It is little complicated.
+
+1560
+01:29:01.265 --> 01:29:04.405
+Now, the C one is going as an input S one
+
+1561
+01:29:04.405 --> 01:29:05.925
+and C one gets concatenated.
+
+1562
+01:29:06.075 --> 01:29:10.115
+Like here, like here, sorry, like here, h, h
+
+1563
+01:29:10.135 --> 01:29:11.995
+and S is being concatenated, going
+
+1564
+01:29:11.995 --> 01:29:13.435
+to the neural network right here.
+
+1565
+01:29:13.785 --> 01:29:15.515
+Similarly. Now you can imagine S one
+
+1566
+01:29:15.515 --> 01:29:17.395
+and C one is being concatenated going
+
+1567
+01:29:17.395 --> 01:29:18.955
+to the needle network, okay?
+
+1568
+01:29:19.245 --> 01:29:20.715
+Again, uh,
+
+1569
+01:29:21.455 --> 01:29:23.275
+Is that concatenation or addition?
+
+1570
+01:29:23.375 --> 01:29:25.075
+Uh, I think you said added two, right?
+
+1571
+01:29:25.185 --> 01:29:28.635
+It's like H shown and S one are added. Mm, concatenated
+
+1572
+01:29:29.135 --> 01:29:30.835
+No, but it is concatenated actually.
+
+1573
+01:29:31.095 --> 01:29:33.315
+So that's why I, I show here.
+
+1574
+01:29:34.345 --> 01:29:37.965
+You, you see this, the last, uh, uh, step number four,
+
+1575
+01:29:38.075 --> 01:29:41.245
+once we get the ct, like, like C one, C two, C3,
+
+1576
+01:29:41.485 --> 01:29:42.565
+whatever you have to get No,
+
+1577
+01:29:42.565 --> 01:29:44.365
+No, no, I'm saying the previous case, right?
+
+1578
+01:29:44.415 --> 01:29:47.005
+Other one, yeah. Here it's concatenation addition
+
+1579
+01:29:47.075 --> 01:29:48.245
+here, this one
+
+1580
+01:29:48.565 --> 01:29:50.445
+I just J and C one. Yeah.
+
+1581
+01:29:50.545 --> 01:29:52.125
+Uh, so basically what happened,
+
+1582
+01:29:52.185 --> 01:29:53.685
+I'm just paying the additive
+
+1583
+01:29:53.785 --> 01:29:56.325
+or multiplicative based on the last
+
+1584
+01:29:56.445 --> 01:29:57.885
+operation, what I'm performing.
+
+1585
+01:29:58.305 --> 01:29:59.365
+So last operation, I,
+
+1586
+01:29:59.365 --> 01:30:01.765
+what I performed is an additive operation here, right?
+
+1587
+01:30:01.785 --> 01:30:03.605
+And that itself gave me the C one
+
+1588
+01:30:04.025 --> 01:30:07.045
+and C one we fed as an input to this recorder.
+
+1589
+01:30:07.345 --> 01:30:10.685
+So based on that, I said additive, but last operation
+
+1590
+01:30:10.695 --> 01:30:15.205
+after the C one is not as it is here, we do some
+
+1591
+01:30:15.725 --> 01:30:17.405
+multiplication in the form of neural network.
+
+1592
+01:30:17.755 --> 01:30:18.965
+Okay? Okay. So we see it
+
+1593
+01:30:18.965 --> 01:30:20.685
+as a multiplicative attention, that's all.
+
+1594
+01:30:21.535 --> 01:30:24.105
+Okay? So, uh, you see this,
+
+1595
+01:30:24.105 --> 01:30:26.585
+what we are doing is this S one and C one.
+
+1596
+01:30:26.885 --> 01:30:31.065
+So CT and sst, both, they are being concatenated, multiplied
+
+1597
+01:30:31.065 --> 01:30:33.625
+with the weight, pass it through the activation function,
+
+1598
+01:30:33.625 --> 01:30:35.905
+10 edge and get, give this st.
+
+1599
+01:30:36.245 --> 01:30:40.105
+So S one is not the output, final output here from S one,
+
+1600
+01:30:40.105 --> 01:30:42.025
+you'll get one more vector as an output.
+
+1601
+01:30:42.025 --> 01:30:46.105
+That is called S one dash or, uh, uh, uh, til, okay?
+
+1602
+01:30:46.105 --> 01:30:50.145
+And that will be the final output, which, which will say
+
+1603
+01:30:50.145 --> 01:30:51.505
+that, what is the next word, which is going
+
+1604
+01:30:51.505 --> 01:30:53.665
+to be predicted at this particular time of step.
+
+1605
+01:30:55.185 --> 01:30:57.925
+So now this is the, this is the little change
+
+1606
+01:30:58.505 --> 01:31:01.085
+in the longer attention and the burden or attention.
+
+1607
+01:31:02.035 --> 01:31:04.925
+Okay? So, uh, yeah, only two, two places.
+
+1608
+01:31:05.185 --> 01:31:08.285
+You have to ob ob observe the change the way the attention
+
+1609
+01:31:08.305 --> 01:31:10.045
+itself is being calculated here,
+
+1610
+01:31:10.045 --> 01:31:12.645
+it is calculated using the neural network.
+
+1611
+01:31:12.715 --> 01:31:16.085
+Here it is calculated using the DO product, the main,
+
+1612
+01:31:16.155 --> 01:31:18.565
+main difference in calculating the attention.
+
+1613
+01:31:19.065 --> 01:31:21.845
+Now, how that attention is fed to the decoder.
+
+1614
+01:31:22.225 --> 01:31:25.085
+So in the case of attention, it is fed to the decoder
+
+1615
+01:31:25.425 --> 01:31:27.045
+as an input to the LT,
+
+1616
+01:31:27.385 --> 01:31:29.605
+but in the de in the long attention,
+
+1617
+01:31:29.745 --> 01:31:31.405
+it is not fed to the L SST M.
+
+1618
+01:31:31.475 --> 01:31:33.845
+Okay? Whatever L SST M output we are getting,
+
+1619
+01:31:34.665 --> 01:31:38.445
+and whatever is the attention, they are again, concatenated.
+
+1620
+01:31:38.595 --> 01:31:41.245
+Pass it to one more head layer.
+
+1621
+01:31:41.345 --> 01:31:43.285
+One more you can say that the fully corrected layer
+
+1622
+01:31:43.575 --> 01:31:45.445
+where the 10 H is an activation function
+
+1623
+01:31:46.025 --> 01:31:50.565
+and get the output, that final output will decide
+
+1624
+01:31:50.595 --> 01:31:53.165
+what is the, what is the next word,
+
+1625
+01:31:53.165 --> 01:31:54.605
+which we are going to put it here.
+
+1626
+01:31:55.225 --> 01:31:57.565
+So in that way, it is slightly different from the,
+
+1627
+01:32:00.145 --> 01:32:02.635
+okay, so yeah, let, let me,
+
+1628
+01:32:02.695 --> 01:32:04.115
+let me know if you have any query here.
+
+1629
+01:32:04.115 --> 01:32:05.755
+First of all, sir, when
+
+1630
+01:32:05.755 --> 01:32:07.795
+We say concatenation, what does it mean?
+
+1631
+01:32:08.535 --> 01:32:12.875
+Uh, concatenation, uh, simply mean that suppose CT
+
+1632
+01:32:13.655 --> 01:32:15.515
+has, has four value vector, right?
+
+1633
+01:32:16.095 --> 01:32:19.155
+And ST is for, uh, for value.
+
+1634
+01:32:19.775 --> 01:32:22.115
+Now, together there will be
+
+1635
+01:32:22.765 --> 01:32:25.075
+eight dimensional vector together.
+
+1636
+01:32:25.075 --> 01:32:27.275
+There'll be, so just, I have just concatenated them.
+
+1637
+01:32:27.275 --> 01:32:30.035
+There, there is no addition, just concatenated them.
+
+1638
+01:32:30.495 --> 01:32:32.475
+So now the vector, what I, I will have
+
+1639
+01:32:32.475 --> 01:32:34.675
+after the conation will be of eight dimension.
+
+1640
+01:32:35.585 --> 01:32:38.515
+That is the meaning of it. Okay, sir? Yeah,
+
+1641
+01:32:39.695 --> 01:32:41.435
+Sir, which one performs the best?
+
+1642
+01:32:42.715 --> 01:32:46.495
+Uh, which one perform best? I don't know.
+
+1643
+01:32:47.015 --> 01:32:50.295
+I, I have not done the, actually they have,
+
+1644
+01:32:50.455 --> 01:32:52.135
+I don't know whether they have compared it or not.
+
+1645
+01:32:52.535 --> 01:32:55.335
+I just see the paper, uh,
+
+1646
+01:32:55.715 --> 01:32:59.815
+but I believe neural network is in the long,
+
+1647
+01:32:59.835 --> 01:33:01.135
+we have neural network here,
+
+1648
+01:33:01.635 --> 01:33:04.215
+and in the, we have neural network here,
+
+1649
+01:33:04.755 --> 01:33:06.655
+but in both the cases, we have the neural network.
+
+1650
+01:33:07.315 --> 01:33:09.695
+So I don't see any much, any, any,
+
+1651
+01:33:09.715 --> 01:33:13.055
+any problem would be there in, in getting the output, uh,
+
+1652
+01:33:13.055 --> 01:33:16.455
+because anyway, it's, everything is being weighed.
+
+1653
+01:33:16.475 --> 01:33:20.255
+So we are loss calculation back propagation is happening.
+
+1654
+01:33:21.155 --> 01:33:23.375
+So I, I don't have answer as of now.
+
+1655
+01:33:23.375 --> 01:33:25.495
+We have to check, we have to experiment and check. Yeah,
+
+1656
+01:33:27.205 --> 01:33:28.205
+Understood.
+
+1657
+01:33:29.315 --> 01:33:30.555
+Experimented, yeah.
+
+1658
+01:33:30.775 --> 01:33:34.315
+Uh, In this, uh, no attention and long attention, sir.
+
+1659
+01:33:34.375 --> 01:33:36.275
+Mm-hmm. So, you know, the difference is
+
+1660
+01:33:36.275 --> 01:33:38.515
+that when we calculate this alignment score,
+
+1661
+01:33:38.895 --> 01:33:41.435
+so there we use this, uh, tan function,
+
+1662
+01:33:41.435 --> 01:33:43.955
+and then we use the weights, whereas in the luang,
+
+1663
+01:33:43.955 --> 01:33:45.515
+we don't directly do a DOT product.
+
+1664
+01:33:45.655 --> 01:33:48.515
+Mm-hmm. So, but we use any activation function
+
+1665
+01:33:48.575 --> 01:33:50.635
+to learn the non-line the data.
+
+1666
+01:33:51.255 --> 01:33:54.115
+And if you see the entire attention, what I inferred is
+
+1667
+01:33:54.115 --> 01:33:56.795
+that this alignment score is a very critical parameter,
+
+1668
+01:33:56.795 --> 01:34:00.195
+which keeps changing the values of alpha when thereafter
+
+1669
+01:34:00.195 --> 01:34:01.955
+accordingly, the context structure also
+
+1670
+01:34:01.955 --> 01:34:02.995
+changes every time step.
+
+1671
+01:34:03.575 --> 01:34:05.995
+So if we remove this, uh, activation function
+
+1672
+01:34:05.995 --> 01:34:09.075
+and then directly go for a DOT product, so are we not, uh,
+
+1673
+01:34:09.395 --> 01:34:11.315
+limiting ourselves to learn the complexity
+
+1674
+01:34:11.455 --> 01:34:12.595
+or the complex patterns?
+
+1675
+01:34:12.625 --> 01:34:15.395
+Because, uh, in that, uh, long, uh, the,
+
+1676
+01:34:15.395 --> 01:34:17.675
+the same activation function, we just do a dot product.
+
+1677
+01:34:18.135 --> 01:34:20.995
+And again, he does the same thing afterwards going, uh,
+
+1678
+01:34:21.295 --> 01:34:22.555
+the output of the lium.
+
+1679
+01:34:22.935 --> 01:34:24.755
+So if you see that weight parameters low,
+
+1680
+01:34:24.755 --> 01:34:27.555
+only one weight getting, uh, limited, that is s uh,
+
+1681
+01:34:27.655 --> 01:34:29.795
+and the w only that thing getting normed off,
+
+1682
+01:34:30.185 --> 01:34:32.875
+even the parameter basic, you see that, uh, even, uh,
+
+1683
+01:34:32.985 --> 01:34:34.835
+this ang and the banu,
+
+1684
+01:34:35.005 --> 01:34:37.275
+there is slight radiation in the trainable parameters.
+
+1685
+01:34:37.735 --> 01:34:40.755
+But when, what I understand now, what I infer is
+
+1686
+01:34:40.755 --> 01:34:43.395
+that when we come to the performance processor, I feel
+
+1687
+01:34:43.395 --> 01:34:45.715
+that since the tanish function introduced in the alignment
+
+1688
+01:34:45.765 --> 01:34:48.635
+score stage itself, which plays a critical role in further
+
+1689
+01:34:48.635 --> 01:34:49.755
+calculation of the alpha,
+
+1690
+01:34:49.755 --> 01:34:53.355
+and then thereafter the context factor, so that, uh,
+
+1691
+01:34:53.355 --> 01:34:56.075
+should be the more, uh, uh, uh, valid, uh,
+
+1692
+01:34:56.095 --> 01:34:57.205
+way of getting an attention.
+
+1693
+01:34:57.205 --> 01:34:59.245
+They're going for a long attention kind of thing.
+
+1694
+01:35:00.335 --> 01:35:01.925
+Maybe, I mean, uh, your,
+
+1695
+01:35:02.035 --> 01:35:04.325
+your argument may might be correct, but, uh,
+
+1696
+01:35:04.325 --> 01:35:07.045
+unless we don't do the experiment, may not be have,
+
+1697
+01:35:07.305 --> 01:35:10.325
+but maybe your argument seems to be correct here that okay,
+
+1698
+01:35:10.325 --> 01:35:13.285
+you're trying to capture the non-line non-linearity while
+
+1699
+01:35:13.285 --> 01:35:14.965
+calculating the attention itself.
+
+1700
+01:35:15.425 --> 01:35:17.765
+Yes, sir. Which the low attention doesn't do,
+
+1701
+01:35:17.785 --> 01:35:19.845
+and it does it later part of the time later
+
+1702
+01:35:19.935 --> 01:35:23.485
+after calculating the, so, but here it is doing something,
+
+1703
+01:35:23.545 --> 01:35:24.925
+but let us see that.
+
+1704
+01:35:25.065 --> 01:35:27.125
+Let us, but you have understood the fact, right?
+
+1705
+01:35:27.185 --> 01:35:28.885
+And now, yes, sir, this experiment,
+
+1706
+01:35:28.885 --> 01:35:29.925
+maybe it'll be more clear.
+
+1707
+01:35:29.925 --> 01:35:31.165
+That is why. Yes, sir. Yeah.
+
+1708
+01:35:31.165 --> 01:35:32.205
+So even here, also,
+
+1709
+01:35:32.205 --> 01:35:34.885
+if you use this activation function also since Tanach,
+
+1710
+01:35:34.905 --> 01:35:36.605
+we have the values, we are limiting from
+
+1711
+01:35:36.605 --> 01:35:37.845
+minus one to plus one, sir.
+
+1712
+01:35:37.845 --> 01:35:40.405
+Mm-hmm. So accordingly, we can able to even avoid
+
+1713
+01:35:40.405 --> 01:35:42.365
+that vanishing gradient problem so
+
+1714
+01:35:42.365 --> 01:35:44.445
+that the values cannot further go.
+
+1715
+01:35:44.705 --> 01:35:46.645
+Mm-hmm. So that kind of, uh,
+
+1716
+01:35:46.645 --> 01:35:49.205
+problem can be addressed if you use this tanach at the
+
+1717
+01:35:49.205 --> 01:35:50.605
+calculation of alignment score.
+
+1718
+01:35:51.065 --> 01:35:52.325
+So rather than leaving it open
+
+1719
+01:35:52.425 --> 01:35:54.525
+and just giving a doubt product kind of thing,
+
+1720
+01:35:55.815 --> 01:35:58.725
+Maybe, but as I said, I have not done the experiment.
+
+1721
+01:35:58.885 --> 01:36:00.685
+I don't have much, but argument wise,
+
+1722
+01:36:00.755 --> 01:36:02.605
+it's looking fair to me as of now.
+
+1723
+01:36:02.635 --> 01:36:06.875
+Yeah. Yeah. Good.
+
+1724
+01:36:08.435 --> 01:36:10.895
+But the good thing is understanding the attention
+
+1725
+01:36:10.925 --> 01:36:12.855
+with the sequence to sequence modeling is,
+
+1726
+01:36:13.275 --> 01:36:15.615
+is a tricky little bit complicated,
+
+1727
+01:36:16.475 --> 01:36:19.175
+but I believe you people are able to understand that that is
+
+1728
+01:36:19.175 --> 01:36:20.575
+what is more important here.
+
+1729
+01:36:20.795 --> 01:36:23.775
+Now, we'll see that in the next class sequence
+
+1730
+01:36:23.775 --> 01:36:25.655
+to sequence hands on whatever I have shared
+
+1731
+01:36:26.165 --> 01:36:27.215
+with the same code.
+
+1732
+01:36:28.045 --> 01:36:32.135
+Next time, I'll try to add some of these attention layer in
+
+1733
+01:36:32.135 --> 01:36:33.775
+between, and if I'll, I'll see
+
+1734
+01:36:33.775 --> 01:36:36.495
+that in the pipes if I have this long attention
+
+1735
+01:36:36.755 --> 01:36:38.935
+and barau tension separately,
+
+1736
+01:36:39.125 --> 01:36:43.995
+More, Uh, anything.
+
+1737
+01:36:44.495 --> 01:36:46.075
+Uh, no, sir. Sorry, sir.
+
+1738
+01:36:46.665 --> 01:36:49.475
+Okay. Okay. No problem. So we'll see that one.
+
+1739
+01:36:49.535 --> 01:36:52.475
+We will try to do those experimental. We'll see that. Yeah.
+
+1740
+01:36:53.625 --> 01:36:56.635
+Okay. So finally, uh, this is the final slide
+
+1741
+01:36:56.655 --> 01:37:00.115
+for today maybe where, uh, uh, again,
+
+1742
+01:37:00.365 --> 01:37:03.515
+every approach which is given has some limitation, right?
+
+1743
+01:37:04.015 --> 01:37:06.235
+So obviously these attention approach was given.
+
+1744
+01:37:06.415 --> 01:37:10.915
+But one thing, what you can understand with this whole, uh,
+
+1745
+01:37:11.225 --> 01:37:14.675
+processes, the, the way we are making it complicated,
+
+1746
+01:37:14.895 --> 01:37:15.915
+the way we are mocking,
+
+1747
+01:37:15.915 --> 01:37:18.515
+making the entire network complicated in the sense
+
+1748
+01:37:19.105 --> 01:37:20.675
+that first of all, encoder has
+
+1749
+01:37:20.675 --> 01:37:21.955
+to go times stamp wise manner.
+
+1750
+01:37:21.955 --> 01:37:23.595
+Suppose there are thousand times stamp,
+
+1751
+01:37:23.955 --> 01:37:26.235
+thousand timestamp has to be performed at the encoder
+
+1752
+01:37:27.055 --> 01:37:29.235
+itself, then it'll go to the recorder.
+
+1753
+01:37:29.735 --> 01:37:30.795
+And here also support.
+
+1754
+01:37:30.795 --> 01:37:33.155
+There are thousand timestamp, thousand timestamp has
+
+1755
+01:37:33.155 --> 01:37:34.515
+to be calculated one by one.
+
+1756
+01:37:34.825 --> 01:37:39.515
+That itself is very, very, very, uh, uh, slow process on top
+
+1757
+01:37:39.515 --> 01:37:42.115
+of that for every, uh, timestamp.
+
+1758
+01:37:42.175 --> 01:37:45.035
+Now, we started calculating the attention, right?
+
+1759
+01:37:45.055 --> 01:37:47.355
+And the attention calculation itself is very,
+
+1760
+01:37:47.465 --> 01:37:48.555
+very complicated job
+
+1761
+01:37:48.555 --> 01:37:50.395
+because you have to calculate either dot product,
+
+1762
+01:37:50.665 --> 01:37:53.515
+then pass it to the, uh, neural network,
+
+1763
+01:37:53.615 --> 01:37:55.805
+or first you have to pass it to the noodle network
+
+1764
+01:37:55.945 --> 01:37:57.165
+and calculate the dot product
+
+1765
+01:37:57.225 --> 01:37:59.525
+and feed it as an input to the LS tm.
+
+1766
+01:37:59.985 --> 01:38:02.485
+So the whole process has become so complex.
+
+1767
+01:38:02.895 --> 01:38:04.525
+Whole process has become so complex.
+
+1768
+01:38:04.625 --> 01:38:06.405
+It might be working, but it is very slow.
+
+1769
+01:38:06.405 --> 01:38:08.525
+That is first thing. So com computational
+
+1770
+01:38:08.525 --> 01:38:10.045
+complexity is very high.
+
+1771
+01:38:10.785 --> 01:38:14.045
+And if you know, most, uh, some of you have, uh,
+
+1772
+01:38:14.385 --> 01:38:16.485
+are from computer science in background,
+
+1773
+01:38:16.985 --> 01:38:18.885
+you must have learned about this complexity,
+
+1774
+01:38:18.995 --> 01:38:20.365
+time complexity and all.
+
+1775
+01:38:20.825 --> 01:38:23.605
+So clearly, it is showing that if encoder length is
+
+1776
+01:38:23.605 --> 01:38:26.085
+and decoder length is, um, and suppose,
+
+1777
+01:38:26.085 --> 01:38:27.925
+and as you call to m right?
+
+1778
+01:38:27.995 --> 01:38:29.805
+Then the complexity will be order
+
+1779
+01:38:29.825 --> 01:38:32.005
+of n squared minimum, okay?
+
+1780
+01:38:32.005 --> 01:38:33.685
+Minimum in order to come.
+
+1781
+01:38:33.685 --> 01:38:37.125
+Because for every deco, uh, decoder you are going
+
+1782
+01:38:37.125 --> 01:38:38.805
+through every encoder time stamp.
+
+1783
+01:38:38.865 --> 01:38:41.925
+So, and in two n this is N square, okay?
+
+1784
+01:38:41.925 --> 01:38:44.485
+It can be more than that also. It can be more than that.
+
+1785
+01:38:44.595 --> 01:38:47.725
+Also, uh, if you don't do the padding and all
+
+1786
+01:38:47.905 --> 01:38:49.605
+but order of n squared,
+
+1787
+01:38:49.605 --> 01:38:52.085
+you can just understand which is too high.
+
+1788
+01:38:52.225 --> 01:38:53.565
+So training time is too high.
+
+1789
+01:38:53.635 --> 01:38:56.005
+Each decor step waits for the previous step.
+
+1790
+01:38:56.205 --> 01:38:58.365
+LSTM is inherently sequential,
+
+1791
+01:38:58.985 --> 01:39:01.005
+no parallelization across timestamps.
+
+1792
+01:39:01.345 --> 01:39:02.885
+So between 2015
+
+1793
+01:39:02.885 --> 01:39:05.805
+and 17, I think 2015, this strong attention has given.
+
+1794
+01:39:06.345 --> 01:39:09.885
+So there are different kind of attention mechanism was given
+
+1795
+01:39:10.145 --> 01:39:11.565
+to simplify this process.
+
+1796
+01:39:12.315 --> 01:39:15.525
+Various optimized attention mechanism, process, for example,
+
+1797
+01:39:15.525 --> 01:39:18.325
+something called as local attention, hierarchical attention,
+
+1798
+01:39:19.145 --> 01:39:21.285
+and many other kind of attention, right?
+
+1799
+01:39:21.545 --> 01:39:24.205
+Uh, so, but then, uh, people try
+
+1800
+01:39:24.205 --> 01:39:26.645
+to simplify this part, okay?
+
+1801
+01:39:26.745 --> 01:39:29.925
+How to calculate the attention, okay?
+
+1802
+01:39:30.185 --> 01:39:33.485
+How to sim, uh, simplify the calculation of this attention.
+
+1803
+01:39:34.265 --> 01:39:37.205
+But they, the, the bottleneck, bottleneck was
+
+1804
+01:39:37.205 --> 01:39:38.645
+that every time stamp
+
+1805
+01:39:38.645 --> 01:39:40.165
+of the recorder required the attention.
+
+1806
+01:39:40.945 --> 01:39:44.285
+And to calculate that we have to do whatever way we,
+
+1807
+01:39:44.945 --> 01:39:48.685
+it may be little complicated or little bit simple,
+
+1808
+01:39:48.905 --> 01:39:50.605
+but this process has
+
+1809
+01:39:50.605 --> 01:39:53.085
+to be calculated at each time a stamp of the Dakota.
+
+1810
+01:39:53.985 --> 01:39:55.525
+So this was the bottleneck.
+
+1811
+01:39:55.535 --> 01:39:57.165
+Later people realized that,
+
+1812
+01:39:57.165 --> 01:39:59.965
+but the real issue was not the attention and
+
+1813
+01:39:59.965 --> 01:40:02.325
+however you are calculating the attention or simplifying
+
+1814
+01:40:02.325 --> 01:40:05.565
+or complexing it, but the core bottleneck was the
+
+1815
+01:40:05.565 --> 01:40:06.845
+LS TM itself, okay?
+
+1816
+01:40:06.845 --> 01:40:10.085
+Because that has to happen for every time stamp manner.
+
+1817
+01:40:10.795 --> 01:40:14.015
+And that's why in 2017 when the transformer architecture
+
+1818
+01:40:14.015 --> 01:40:16.015
+came, they removed the LSTM itself
+
+1819
+01:40:16.015 --> 01:40:20.095
+because the bottleneck was, uh, LSTM, not the attention.
+
+1820
+01:40:20.595 --> 01:40:24.815
+So they retained the attention concept in the architecture,
+
+1821
+01:40:24.955 --> 01:40:27.695
+remove the L lstm, they said that L LSTM is the bottleneck,
+
+1822
+01:40:28.105 --> 01:40:31.455
+let's process everything in parallel, and it became so fast.
+
+1823
+01:40:31.835 --> 01:40:36.055
+So that's why, uh, the, the self attention, uh, uh, was
+
+1824
+01:40:36.115 --> 01:40:39.255
+so popular, which we'll see in the next course in detail.
+
+1825
+01:40:39.805 --> 01:40:41.775
+Okay? So I'll stop here today.
+
+1826
+01:40:41.775 --> 01:40:43.215
+If you have any other queries,
+
+1827
+01:40:43.215 --> 01:40:44.415
+you can ask me the next class.
+
+1828
+01:40:44.595 --> 01:40:46.095
+We are now left with two classes.
+
+1829
+01:40:46.915 --> 01:40:48.215
+See, Monday, I'll be traveling.
+
+1830
+01:40:48.415 --> 01:40:50.015
+I will, I will also try to connect.
+
+1831
+01:40:50.155 --> 01:40:53.015
+Uh, I, I hope that, uh,
+
+1832
+01:40:54.205 --> 01:40:56.765
+wherever I'll be the internet connection, I'll get to.
+
+1833
+01:40:56.765 --> 01:40:58.725
+Good. So Monday, what I'm planning is
+
+1834
+01:40:58.725 --> 01:41:01.965
+that I'll show you the demo for this one, the attention,
+
+1835
+01:41:02.465 --> 01:41:06.045
+we will repeat everything, same machine translation,
+
+1836
+01:41:06.515 --> 01:41:08.085
+what we did in the previous class,
+
+1837
+01:41:08.265 --> 01:41:10.365
+but on top of that, we'll add that attention.
+
+1838
+01:41:10.665 --> 01:41:12.965
+So we'll have quick revision of that code, first of all,
+
+1839
+01:41:13.305 --> 01:41:15.245
+and we'll also see the attention integration.
+
+1840
+01:41:15.985 --> 01:41:19.525
+Uh, suppose there will be some problem then I, uh,
+
+1841
+01:41:19.575 --> 01:41:22.405
+we'll directly meet on Saturday or Sunday.
+
+1842
+01:41:22.795 --> 01:41:27.245
+Okay? Uh, we don't have to cover any new topic topic-wise.
+
+1843
+01:41:27.245 --> 01:41:30.365
+We have completed everything. We have two classes left.
+
+1844
+01:41:30.705 --> 01:41:33.365
+If I get one class, also, I will show you the demo.
+
+1845
+01:41:33.505 --> 01:41:36.285
+And I guess that is all for this particular course.
+
+1846
+01:41:37.225 --> 01:41:40.525
+If I will have the two classes that is, that is, uh,
+
+1847
+01:41:40.555 --> 01:41:41.565
+more than sufficient,
+
+1848
+01:41:41.765 --> 01:41:43.885
+I guess the second class when we'll have on the Saturday
+
+1849
+01:41:44.185 --> 01:41:48.765
+or maybe Sunday, I'll inform you that, uh, uh, uh,
+
+1850
+01:41:49.735 --> 01:41:52.605
+we'll have the maybe some question related query,
+
+1851
+01:41:52.615 --> 01:41:55.365
+query related, so we can do that course.
+
+1852
+01:41:55.915 --> 01:41:56.915
+Yeah.
+
+1853
+01:41:57.655 --> 01:42:00.195
+One question, sir, please. Excuse me, sir.
+
+1854
+01:42:00.215 --> 01:42:04.155
+Sir, this, uh, head start is that product, why can't we go
+
+1855
+01:42:04.155 --> 01:42:05.555
+for a cross product, sir?
+
+1856
+01:42:05.775 --> 01:42:08.155
+Why is it that we need to go for, because
+
+1857
+01:42:08.855 --> 01:42:10.875
+Dot product, dot product give you a
+
+1858
+01:42:10.875 --> 01:42:12.195
+scaler as an output, right?
+
+1859
+01:42:13.295 --> 01:42:16.195
+So yes, sir. The scaler value, the,
+
+1860
+01:42:16.195 --> 01:42:18.955
+because we have to give the weightage weightage for each
+
+1861
+01:42:18.975 --> 01:42:20.075
+of these vectors.
+
+1862
+01:42:20.275 --> 01:42:22.315
+H one, H two, and S3. Hmm.
+
+1863
+01:42:22.615 --> 01:42:25.875
+Now, if we give vector, multiply with the vector,
+
+1864
+01:42:26.295 --> 01:42:28.315
+so you can go with the cross product also,
+
+1865
+01:42:28.315 --> 01:42:30.635
+but then that will not serve my purpose.
+
+1866
+01:42:31.025 --> 01:42:32.835
+Attention is like alignment
+
+1867
+01:42:33.025 --> 01:42:36.115
+between the two sequence, two sequence alignment.
+
+1868
+01:42:36.345 --> 01:42:39.835
+When it comes as a scaler, then it'll make some sense,
+
+1869
+01:42:40.345 --> 01:42:42.035
+because anyway, we have the soft max.
+
+1870
+01:42:42.175 --> 01:42:44.995
+We are getting the, that two sequence,
+
+1871
+01:42:45.415 --> 01:42:49.795
+and I say, okay, these two are similar by 50% or 80%.
+
+1872
+01:42:49.895 --> 01:42:53.115
+It makes sense, right? Instead of say 50%, 80%,
+
+1873
+01:42:53.115 --> 01:42:55.475
+I'll say 0.5, 0.8, 0.9, what?
+
+1874
+01:42:55.475 --> 01:42:56.715
+You'll understand what is alignment
+
+1875
+01:42:56.935 --> 01:42:57.955
+you'll not understand. No, sir.
+
+1876
+01:42:58.735 --> 01:43:01.115
+Yes, sir. But my question is, with vector,
+
+1877
+01:43:01.975 --> 01:43:05.635
+we can feed in more information rather than scaler.
+
+1878
+01:43:05.825 --> 01:43:07.715
+That is my, uh,
+
+1879
+01:43:08.475 --> 01:43:10.795
+I understand your point, what you said, you understand,
+
+1880
+01:43:10.895 --> 01:43:13.675
+but then I have to give the waites to each of these vector.
+
+1881
+01:43:14.345 --> 01:43:17.235
+With the vector, uh, uh, uh, with the scaler,
+
+1882
+01:43:17.275 --> 01:43:21.015
+I can give the, because scaler acts like a weight, okay?
+
+1883
+01:43:21.015 --> 01:43:23.375
+Which I have to give E one one, E one, two, E one, three,
+
+1884
+01:43:23.435 --> 01:43:24.495
+it acts like a weight.
+
+1885
+01:43:25.115 --> 01:43:27.895
+So then I can multiply it with the H one, S two, S3,
+
+1886
+01:43:28.065 --> 01:43:30.295
+which will act like how much weight is I'm giving
+
+1887
+01:43:30.395 --> 01:43:31.935
+to this H one, S two, and S3.
+
+1888
+01:43:32.635 --> 01:43:34.975
+So that's why I'm using this one, right?
+
+1889
+01:43:35.115 --> 01:43:38.055
+As a, uh, uh, as a, as a dot product, uh, dot product.
+
+1890
+01:43:38.055 --> 01:43:41.055
+Because I think you, if you know, the dot product,
+
+1891
+01:43:41.195 --> 01:43:43.735
+dot product is meant for giving you the similarity
+
+1892
+01:43:43.735 --> 01:43:47.535
+between the two vectors, cross product is not meant
+
+1893
+01:43:47.535 --> 01:43:48.615
+for giving the similarity.
+
+1894
+01:43:49.995 --> 01:43:51.565
+Yes. Okay? Yeah,
+
+1895
+01:43:53.825 --> 01:43:54.825
+Sir. Okay,
+
+1896
+01:43:54.825 --> 01:43:56.295
+sir, I already consent.
+
+1897
+01:43:56.515 --> 01:43:57.535
+Yes, Sir?
+
+1898
+01:43:57.595 --> 01:44:00.295
+Uh, I have a very quick request, uh, to make, sir.
+
+1899
+01:44:00.755 --> 01:44:04.175
+So, uh, currently I have come to Delhi on an official duty,
+
+1900
+01:44:04.475 --> 01:44:06.855
+so I may not be able to attend, uh,
+
+1901
+01:44:07.035 --> 01:44:08.255
+my classes for the next week.
+
+1902
+01:44:08.875 --> 01:44:13.095
+So I need, I request some relaxation with, uh, the summary,
+
+1903
+01:44:13.095 --> 01:44:14.415
+submission on other things.
+
+1904
+01:44:16.125 --> 01:44:17.815
+Okay? We'll see that. Yeah.
+
+1905
+01:44:17.815 --> 01:44:21.815
+Uh, uh, I need to, uh, have, uh,
+
+1906
+01:44:22.055 --> 01:44:24.135
+a quick five minute presentation with everyone is
+
+1907
+01:44:26.365 --> 01:44:27.365
+I will see that No problem.
+
+1908
+01:44:27.745 --> 01:44:28.965
+No, uh, no. In this class.
+
+1909
+01:44:29.075 --> 01:44:30.845
+I'll, I'll just, uh, present my screen
+
+1910
+01:44:30.865 --> 01:44:33.605
+for a few minutes now, two or three minutes. Yes.
+
+1911
+01:44:34.145 --> 01:44:36.925
+Do you have any doubt? Uh, not, not exactly doubt,
+
+1912
+01:44:37.025 --> 01:44:39.445
+but uh, I have something to share with all of you.
+
+1913
+01:44:40.305 --> 01:44:41.325
+No. What is, what is that?
+
+1914
+01:44:41.635 --> 01:44:45.005
+Yeah. Uh, uh, I think everyone would've known of this, uh,
+
+1915
+01:44:45.125 --> 01:44:47.445
+a expo thing that is happening in Delhi.
+
+1916
+01:44:49.265 --> 01:44:51.085
+Oh, you can do that later. Maybe.
+
+1917
+01:44:51.305 --> 01:44:53.845
+Let us, uh, let me, uh, stop.
+
+1918
+01:44:53.985 --> 01:44:56.445
+Uh, anyway, I have stopped now. Any, anyone else? Okay.
+
+1919
+01:44:57.045 --> 01:44:58.045
+You have any query?
+
+1920
+01:45:01.605 --> 01:45:03.625
+Uh, just like, uh, last time, uh, uh,
+
+1921
+01:45:03.625 --> 01:45:05.545
+you gave a sample question paper, right, sir?
+
+1922
+01:45:05.655 --> 01:45:08.905
+Similarly, can, can you give for this also?
+
+1923
+01:45:09.405 --> 01:45:13.225
+Oh, I, uh, okay. Sam, you
+
+1924
+01:45:13.295 --> 01:45:16.145
+Gave one, uh, for our, uh, previous, uh, just one,
+
+1925
+01:45:16.145 --> 01:45:18.945
+you gave a set of 20 questions you had given
+
+1926
+01:45:19.285 --> 01:45:20.285
+Mm-hmm.
+
+1927
+01:45:20.315 --> 01:45:22.385
+Which was quite useful to understand how the,
+
+1928
+01:45:23.295 --> 01:45:24.295
+Okay. Uh, maybe,
+
+1929
+01:45:24.295 --> 01:45:26.065
+uh, Vimal, can we do
+
+1930
+01:45:26.065 --> 01:45:29.265
+that vimal added?
+
+1931
+01:45:29.265 --> 01:45:29.665
+Are you there
+
+1932
+01:45:32.435 --> 01:45:37.165
+any I'll just check.
+
+1933
+01:45:37.435 --> 01:45:38.725
+I'll just check with them. Sure, sir.
+
+1934
+01:45:39.195 --> 01:45:44.115
+Yeah, sir, in the same style as you are planning, uh,
+
+1935
+01:45:44.225 --> 01:45:45.595
+miss the question paper you're asking.
+
+1936
+01:45:45.895 --> 01:45:47.955
+Yes, sir. Yeah, so I mean,
+
+1937
+01:45:48.115 --> 01:45:50.035
+I think we have given the format already.
+
+1938
+01:45:50.195 --> 01:45:51.795
+I think you already have that right?
+
+1939
+01:45:51.815 --> 01:45:53.355
+For the sample question.
+
+1940
+01:45:53.355 --> 01:45:55.755
+Paper will try to give no problem, which is the form.
+
+1941
+01:45:55.955 --> 01:45:57.315
+I don't know. I'll ask my classmates.
+
+1942
+01:45:57.475 --> 01:45:59.475
+I don't know the format. Yeah, it is there.
+
+1943
+01:45:59.635 --> 01:46:02.155
+I guess we have already shared what will be the format Okay.
+
+1944
+01:46:02.435 --> 01:46:04.795
+Question marks and all, so that we have already shared.
+
+1945
+01:46:05.345 --> 01:46:06.875
+Okay, sir. I think for all courses,
+
+1946
+01:46:06.945 --> 01:46:10.195
+that format is available somewhere, I guess in the Yes, sir.
+
+1947
+01:46:10.195 --> 01:46:12.475
+Yes. Yeah, it's a
+
+1948
+01:46:13.695 --> 01:46:14.695
+Sir. Yeah. Yeah.
+
+1949
+01:46:14.695 --> 01:46:16.155
+Also, Also given
+
+1950
+01:46:16.155 --> 01:46:18.395
+In the group also, I have shared that in the group.
+
+1951
+01:46:20.145 --> 01:46:21.475
+Okay. Okay. Take,
+
+1952
+01:46:23.125 --> 01:46:24.125
+Thank you, sir.
+
+1953
+01:46:24.265 --> 01:46:27.755
+Yeah, good, sir. Thank you.
+
+1954
+01:46:28.535 --> 01:46:30.955
+Now, thank you, sir. Who was present.
+
+1955
+01:46:30.975 --> 01:46:34.075
+Now others can be those who want stay, you can stay.
+
+1956
+01:46:34.585 --> 01:46:38.155
+Yeah. So wanted to share something actually.
+
+1957
+01:46:38.155 --> 01:46:41.115
+Yeah, A AI conference is happening there in Delhi,
+
+1958
+01:46:41.175 --> 01:46:43.195
+and it's a big one, so maybe some updates.
+
+1959
+01:46:43.285 --> 01:46:46.315
+It'll be good. The maybe if you are available at this. Yeah,
+
+1960
+01:46:46.385 --> 01:46:47.385
+Yeah, yeah.
+
+1961
+01:46:49.445 --> 01:46:53.725
+I just order to, uh, actually what I'm going,
+
+1962
+01:46:55.025 --> 01:46:57.125
+so I'll just share, I'm just sharing my screen,
+
+1963
+01:47:00.735 --> 01:47:01.915
+so I think my screen is visible.
+
+1964
+01:47:02.795 --> 01:47:06.725
+Yeah, Yeah. So I, uh, I'm sorry to
+
+1965
+01:47:07.415 --> 01:47:10.405
+share this particular invitation, this layer,
+
+1966
+01:47:10.825 --> 01:47:14.285
+but, uh, this is our particular stall, which we are, uh,
+
+1967
+01:47:14.665 --> 01:47:19.005
+but actually exhibiting our projects in the apo.
+
+1968
+01:47:19.465 --> 01:47:20.465
+Oh. So,
+
+1969
+01:47:22.945 --> 01:47:24.125
+And what is the date?
+
+1970
+01:47:24.125 --> 01:47:26.005
+16 to 20 all the day. You would be
+
+1971
+01:47:26.005 --> 01:47:27.165
+There from 16 to 20.
+
+1972
+01:47:27.365 --> 01:47:30.365
+I, uh, I'll be there for all the five days, along
+
+1973
+01:47:30.365 --> 01:47:31.405
+with a few offices.
+
+1974
+01:47:31.745 --> 01:47:33.365
+Who, who will be in the rotation shift
+
+1975
+01:47:33.875 --> 01:47:34.875
+Then? I'll meet you.
+
+1976
+01:47:34.875 --> 01:47:36.685
+19 and 20. I'm coming.
+
+1977
+01:47:37.115 --> 01:47:38.925
+Yeah, definitely. So definitely. Sure.
+
+1978
+01:47:39.365 --> 01:47:41.525
+I, myself and directors are both, are coming. We'll, yeah,
+
+1979
+01:47:42.465 --> 01:47:44.725
+It would be an honor to meet you at the time.
+
+1980
+01:47:45.015 --> 01:47:46.085
+Definitely. Sure.
+
+1981
+01:47:46.545 --> 01:47:50.325
+So, uh, this is a quick, uh, preface of the project that we,
+
+1982
+01:47:50.395 --> 01:47:52.405
+that we'll be presenting at the expo.
+
+1983
+01:47:52.585 --> 01:47:53.585
+Mm-hmm.
+
+1984
+01:47:54.815 --> 01:47:57.945
+Okay, good, good, good. Then. Anyway, we will meet others.
+
+1985
+01:47:58.135 --> 01:48:00.745
+Also, if you can make it, I, uh, all of you must be knowing
+
+1986
+01:48:00.745 --> 01:48:03.145
+that India is making, uh,
+
+1987
+01:48:04.065 --> 01:48:05.745
+a very biggest step in this AI
+
+1988
+01:48:06.335 --> 01:48:08.345
+with this summit. Okay, let us see.
+
+1989
+01:48:08.765 --> 01:48:11.225
+So this is, this is the current, uh, portfolio,
+
+1990
+01:48:11.725 --> 01:48:12.785
+uh, from our unit.
+
+1991
+01:48:13.365 --> 01:48:17.105
+So out of which, uh, from computer vision, uh, SmartShip,
+
+1992
+01:48:17.105 --> 01:48:19.705
+operations, worship funder, this gang management system.
+
+1993
+01:48:21.145 --> 01:48:24.225
+And these are the projects that we currently have in the,
+
+1994
+01:48:24.805 --> 01:48:27.865
+out of which we'll be presenting, uh, the third day.
+
+1995
+01:48:28.405 --> 01:48:31.505
+And, uh, worship finder, worship finder, it just, uh,
+
+1996
+01:48:31.505 --> 01:48:33.745
+it just developed, uh, with, uh, collaboration
+
+1997
+01:48:33.745 --> 01:48:35.025
+with, uh, b bang.
+
+1998
+01:48:35.885 --> 01:48:38.265
+And, uh, this third day is my project,
+
+1999
+01:48:38.265 --> 01:48:39.505
+which I have worked on,
+
+2000
+01:48:39.505 --> 01:48:42.425
+and I have developed, it'll be going into date next,
+
+2001
+01:48:42.445 --> 01:48:43.905
+go from, uh, next week.
+
+2002
+01:48:45.045 --> 01:48:48.305
+So other than that, uh, in the general portfolio, we have,
+
+2003
+01:48:49.565 --> 01:48:52.705
+uh, qb MS, uh, content generator and other tools.
+
+2004
+01:48:52.805 --> 01:48:56.705
+Uh, and this is exclusively for all the na, uh,
+
+2005
+01:48:56.705 --> 01:48:57.825
+Navy enable requirements.
+
+2006
+01:48:58.045 --> 01:49:01.585
+Mm-hmm. So this particular tool, which is, which is, uh, uh,
+
+2007
+01:49:01.635 --> 01:49:04.545
+pretrained, uh, I mean, uh, it is
+
+2008
+01:49:04.805 --> 01:49:06.985
+as a particular generative issue,
+
+2009
+01:49:07.315 --> 01:49:10.985
+which is trained upon 50,000 NA documents, rules
+
+2010
+01:49:11.005 --> 01:49:12.425
+and regulations and other laws.
+
+2011
+01:49:13.245 --> 01:49:15.975
+Okay? So other than that, uh, this, uh,
+
+2012
+01:49:15.995 --> 01:49:19.935
+the language translation projects, which we have are six
+
+2013
+01:49:20.915 --> 01:49:22.215
+out of these projects.
+
+2014
+01:49:22.555 --> 01:49:26.495
+So ION is our known, uh, in-house developed project.
+
+2015
+01:49:26.925 --> 01:49:28.655
+Sand was a in-house develop project,
+
+2016
+01:49:29.365 --> 01:49:31.055
+inhouse develop project NIP
+
+2017
+01:49:31.115 --> 01:49:32.215
+is the inhouse developed project.
+
+2018
+01:49:32.635 --> 01:49:34.615
+And, uh, third is the in-house developed project.
+
+2019
+01:49:34.995 --> 01:49:38.375
+So, and other, other than this, uh, the,
+
+2020
+01:49:38.375 --> 01:49:40.255
+these other projects were outsourced to
+
+2021
+01:49:40.925 --> 01:49:42.295
+them, contractual partners.
+
+2022
+01:49:42.665 --> 01:49:45.045
+Mm-hmm. So, uh, these are the quick,
+
+2023
+01:49:45.225 --> 01:49:46.725
+uh, overview of the projects.
+
+2024
+01:49:47.565 --> 01:49:50.505
+So this SmartShip operations are dedicated for, uh,
+
+2025
+01:49:50.935 --> 01:49:53.985
+dedicated, uh, application for, uh, ships, the,
+
+2026
+01:49:53.995 --> 01:49:55.985
+which are sailing in the Indian water.
+
+2027
+01:49:56.725 --> 01:49:58.105
+So this can easily track
+
+2028
+01:49:58.285 --> 01:50:02.115
+and identify the distant ships, which are, uh,
+
+2029
+01:50:02.115 --> 01:50:04.475
+present in the, which are sail in the same water.
+
+2030
+01:50:05.615 --> 01:50:08.235
+So, uh, next is the worship finder.
+
+2031
+01:50:08.335 --> 01:50:12.315
+So this is dedicated to find out, uh, uh, which are,
+
+2032
+01:50:12.315 --> 01:50:15.195
+which are the class of worship that is being in the field
+
+2033
+01:50:15.215 --> 01:50:17.155
+of, of the cameras, of our, uh,
+
+2034
+01:50:17.155 --> 01:50:18.355
+particular Indian naval ships.
+
+2035
+01:50:19.955 --> 01:50:21.975
+So, uh, this is a gang management system.
+
+2036
+01:50:22.075 --> 01:50:24.855
+It is from a system which is going to be installed
+
+2037
+01:50:24.855 --> 01:50:27.175
+with the chips to identify personnels, uh,
+
+2038
+01:50:27.175 --> 01:50:31.095
+authorized personnels who are, uh, into, uh, who are, uh,
+
+2039
+01:50:32.155 --> 01:50:34.815
+who used to like, who are on the dock,
+
+2040
+01:50:34.955 --> 01:50:38.535
+and, uh, who often, uh, more here and there.
+
+2041
+01:50:39.845 --> 01:50:42.585
+And, uh, third, this is the third I, which is my project,
+
+2042
+01:50:42.765 --> 01:50:46.025
+and it is, uh, specifically A-C-C-T-V surveillance project.
+
+2043
+01:50:46.485 --> 01:50:50.705
+So, uh, it's a built on live rt, SP camera schemes.
+
+2044
+01:50:50.845 --> 01:50:52.705
+So the processing will be done for
+
+2045
+01:50:53.805 --> 01:50:57.185
+and, uh, person detection, uh, person recognition
+
+2046
+01:50:57.205 --> 01:51:00.545
+and homo graphic, uh, facial recognition, facial mapping.
+
+2047
+01:51:00.845 --> 01:51:02.925
+And, uh, each
+
+2048
+01:51:02.925 --> 01:51:05.525
+and every data is shared, uh, saved in the database
+
+2049
+01:51:05.585 --> 01:51:07.205
+for the post processing, uh, things.
+
+2050
+01:51:07.665 --> 01:51:10.525
+So in the post processing, we have also added, uh, chat bot
+
+2051
+01:51:10.525 --> 01:51:14.205
+and another, uh, uh, generative tools so that, uh,
+
+2052
+01:51:15.245 --> 01:51:17.885
+whatever data is, uh, getting, uh, detect, uh,
+
+2053
+01:51:18.285 --> 01:51:20.325
+whatever the detections and recognitions are getting stored,
+
+2054
+01:51:20.545 --> 01:51:23.965
+uh, the user can later have a proper, uh, report
+
+2055
+01:51:24.065 --> 01:51:26.085
+and a graphical kind of, uh, interface
+
+2056
+01:51:26.185 --> 01:51:28.325
+or graphical kind of realization report.
+
+2057
+01:51:28.985 --> 01:51:30.005
+So this is my project.
+
+2058
+01:51:30.825 --> 01:51:34.765
+So, uh, the next, this is, uh, an outsourced project.
+
+2059
+01:51:35.405 --> 01:51:37.645
+It is, uh, zone based, uh, person tracking.
+
+2060
+01:51:38.225 --> 01:51:40.445
+So, uh, this is, uh,
+
+2061
+01:51:40.685 --> 01:51:43.165
+advanced face recognition app application, which is only
+
+2062
+01:51:43.185 --> 01:51:46.785
+for the tablets, which is, uh, limited for tablets.
+
+2063
+01:51:47.085 --> 01:51:49.105
+So, uh, usually the soldiers,
+
+2064
+01:51:49.685 --> 01:51:52.585
+so the level offices carry tablets with themselves.
+
+2065
+01:51:53.005 --> 01:51:55.625
+So it is, uh, uh, in installed with them.
+
+2066
+01:51:55.805 --> 01:51:59.785
+And, uh, it, uh, it is used to recognize, uh, personals.
+
+2067
+01:52:00.365 --> 01:52:02.945
+So this particular project Sander,
+
+2068
+01:52:03.085 --> 01:52:05.665
+it is the biggest project which we have in the unit.
+
+2069
+01:52:06.005 --> 01:52:10.505
+And, uh, it comprises of entire intelligence suite, uh,
+
+2070
+01:52:10.505 --> 01:52:14.145
+which we call, uh, it comprises of all the gpt.
+
+2071
+01:52:14.245 --> 01:52:17.865
+And each and every GPT is particularly for a single, uh,
+
+2072
+01:52:17.965 --> 01:52:20.505
+you, uh, particular, particular for single purpose.
+
+2073
+01:52:20.725 --> 01:52:22.345
+So, uh, for the rules
+
+2074
+01:52:22.345 --> 01:52:25.505
+and regulations, we have a separate GPT for fast generation,
+
+2075
+01:52:25.505 --> 01:52:26.745
+we have spread GPT,
+
+2076
+01:52:27.125 --> 01:52:31.185
+and all these are, uh, pretrained on, uh, naval documents,
+
+2077
+01:52:31.185 --> 01:52:32.385
+which is confidential.
+
+2078
+01:52:33.765 --> 01:52:38.105
+So, uh, there are particular, uh, format in, uh,
+
+2079
+01:52:38.125 --> 01:52:41.505
+in the na in the Navy to send the fax and other documents.
+
+2080
+01:52:41.605 --> 01:52:45.805
+So these, uh, these formats are preferred as to the model.
+
+2081
+01:52:46.065 --> 01:52:48.765
+And, uh, the user is required only to give the context
+
+2082
+01:52:48.945 --> 01:52:50.845
+and, uh, generate the facts and everything.
+
+2083
+01:52:51.345 --> 01:52:55.165
+So it reduces the manual, uh, manual drafting time.
+
+2084
+01:52:58.355 --> 01:53:01.815
+So, uhnot, uh, this is a meeting management system, which,
+
+2085
+01:53:01.915 --> 01:53:04.455
+uh, effectively, uh, uh,
+
+2086
+01:53:04.775 --> 01:53:06.735
+whenever we are uploading an audio of,
+
+2087
+01:53:06.915 --> 01:53:08.335
+uh, an entire meeting.
+
+2088
+01:53:08.915 --> 01:53:13.895
+So, uh, this, this particular, uh, software does is that it,
+
+2089
+01:53:13.915 --> 01:53:17.095
+uh, provides a per ization per percent
+
+2090
+01:53:17.095 --> 01:53:18.095
+to percent transcription.
+
+2091
+01:53:18.675 --> 01:53:20.975
+So it also provides translation summary
+
+2092
+01:53:21.035 --> 01:53:23.375
+of the entire meeting and minutes of, uh, meeting.
+
+2093
+01:53:23.955 --> 01:53:26.535
+So minutes of meeting compress action points
+
+2094
+01:53:26.565 --> 01:53:27.815
+done by each and every speaker.
+
+2095
+01:53:28.555 --> 01:53:32.335
+So, uh, it, it is a meeting revolutionary application.
+
+2096
+01:53:33.195 --> 01:53:37.575
+Uh, next comes, uh, uh, the QBMS.
+
+2097
+01:53:37.595 --> 01:53:41.015
+It is, uh, based for, uh, smart examinations, uh,
+
+2098
+01:53:41.195 --> 01:53:43.455
+for the people in the academies.
+
+2099
+01:53:44.535 --> 01:53:46.835
+So other than that, this ca driven gen, uh,
+
+2100
+01:53:46.835 --> 01:53:49.835
+content generator, it is an online application where, uh,
+
+2101
+01:53:49.855 --> 01:53:53.475
+we wrapping goes on every day to fix the latest news
+
+2102
+01:53:53.895 --> 01:53:57.155
+and other latest updates that is going on in the world,
+
+2103
+01:53:57.295 --> 01:53:59.235
+and it just, uh, throws up in the,
+
+2104
+01:53:59.935 --> 01:54:01.275
+uh, in the display screen.
+
+2105
+01:54:01.325 --> 01:54:03.155
+Other than that, we can also have,
+
+2106
+01:54:03.295 --> 01:54:04.955
+we also have a chat bot within this,
+
+2107
+01:54:05.015 --> 01:54:07.875
+so user can ask particular question about, uh,
+
+2108
+01:54:07.935 --> 01:54:09.355
+any update that we have got.
+
+2109
+01:54:09.775 --> 01:54:12.395
+And, uh, there will be a detailed explanation of
+
+2110
+01:54:13.355 --> 01:54:15.715
+detailed expression related to, to that particular update.
+
+2111
+01:54:17.325 --> 01:54:19.225
+So, uh, these are,
+
+2112
+01:54:19.635 --> 01:54:22.465
+these are few other projects which we have outsourced.
+
+2113
+01:54:22.525 --> 01:54:24.065
+And, uh, so,
+
+2114
+01:54:24.245 --> 01:54:27.185
+and this one projection is the in-house development project.
+
+2115
+01:54:27.445 --> 01:54:30.385
+So this is basically an instructor student
+
+2116
+01:54:31.275 --> 01:54:35.425
+where we have, uh, students, international students, uh,
+
+2117
+01:54:35.895 --> 01:54:37.465
+with various linguistic backgrounds
+
+2118
+01:54:37.465 --> 01:54:38.625
+in the Naval Training Academy.
+
+2119
+01:54:38.925 --> 01:54:42.465
+So in this, all this application does will work, uh,
+
+2120
+01:54:42.515 --> 01:54:45.745
+instructor will be teaching, uh, in the English language,
+
+2121
+01:54:45.885 --> 01:54:49.105
+and the students can, uh, have their, uh,
+
+2122
+01:54:49.345 --> 01:54:52.105
+learnings in their, uh, own native language.
+
+2123
+01:54:52.205 --> 01:54:54.465
+It, it does live transcription translation
+
+2124
+01:54:54.765 --> 01:54:58.385
+and, uh, text speech conversion to their own language.
+
+2125
+01:54:58.805 --> 01:55:01.745
+So it also has a feature of audio books
+
+2126
+01:55:01.745 --> 01:55:04.585
+where the instructor uploads, uh, textbook notes
+
+2127
+01:55:04.585 --> 01:55:05.665
+and other pdf f things,
+
+2128
+01:55:05.885 --> 01:55:09.905
+and the entire document will be converted into an audio of,
+
+2129
+01:55:10.325 --> 01:55:11.665
+uh, the choice of the student.
+
+2130
+01:55:12.045 --> 01:55:13.545
+And the student can hear the audio,
+
+2131
+01:55:13.645 --> 01:55:16.265
+and, uh, it makes it easy for him to look.
+
+2132
+01:55:18.365 --> 01:55:21.745
+So this was a quick audio of the pro projects
+
+2133
+01:55:21.745 --> 01:55:23.825
+that we have been doing for Indian Union.
+
+2134
+01:55:24.565 --> 01:55:26.625
+So, uh, that's all.
+
+2135
+01:55:26.745 --> 01:55:28.585
+I just wanted to give an audio about
+
+2136
+01:55:28.585 --> 01:55:29.785
+the project that we have done.
+
+2137
+01:55:30.245 --> 01:55:33.105
+So, uh, this is a formal invitation for people
+
+2138
+01:55:33.205 --> 01:55:34.465
+who are, are available.
+
+2139
+01:55:34.885 --> 01:55:38.465
+Please visit us and, uh, please have an interaction
+
+2140
+01:55:38.465 --> 01:55:42.775
+with this so that we can, is
+
+2141
+01:55:42.775 --> 01:55:45.995
+One thing, uh, if, if possible, can, I mean, eh,
+
+2142
+01:55:46.695 --> 01:55:49.155
+the presentation you have shared is in public domain.
+
+2143
+01:55:49.235 --> 01:55:51.475
+I mean, if it is possible, can you share with us the link?
+
+2144
+01:55:51.505 --> 01:55:53.195
+Yeah, yeah. The browser is public.
+
+2145
+01:55:53.535 --> 01:55:56.915
+Uh, like we have, uh, been printing the browsers, uh,
+
+2146
+01:55:56.915 --> 01:55:58.635
+nearly a thousand credit browsers.
+
+2147
+01:55:58.635 --> 01:56:01.995
+We have been prepared so that we, we weekly sharing, uh,
+
+2148
+01:56:01.995 --> 01:56:04.515
+to every delegate who is visiting us hundred
+
+2149
+01:56:04.735 --> 01:56:05.835
+for eight per day.
+
+2150
+01:56:05.955 --> 01:56:07.235
+I, I'm saying for us, for us,
+
+2151
+01:56:07.865 --> 01:56:08.865
+Yeah. But no issues. I,
+
+2152
+01:56:08.865 --> 01:56:10.435
+I have the permission to share it
+
+2153
+01:56:10.435 --> 01:56:12.955
+with my college group, so I'll be sharing it in the group.
+
+2154
+01:56:13.345 --> 01:56:14.675
+Yeah, sure, Sure. Thank you. So, I,
+
+2155
+01:56:14.675 --> 01:56:17.275
+I'll also be sharing this invitation in the group so that,
+
+2156
+01:56:17.535 --> 01:56:21.075
+uh, people who are nearby daily, please make your time.
+
+2157
+01:56:21.235 --> 01:56:23.435
+I, I'm requesting you all, I,
+
+2158
+01:56:23.575 --> 01:56:24.955
+I'm requesting you all too late,
+
+2159
+01:56:25.055 --> 01:56:27.195
+but please make your time and come and visit us.
+
+2160
+01:56:28.005 --> 01:56:30.385
+It would be great having you all people in our stall.
+
+2161
+01:56:32.115 --> 01:56:34.815
+Thank you. However, Sunil is coming
+
+2162
+01:56:34.835 --> 01:56:37.495
+and persona is coming, so I would be happy
+
+2163
+01:56:37.495 --> 01:56:39.975
+to have them on the 19th and Teenth.
+
+2164
+01:56:40.045 --> 01:56:42.935
+Yeah. Yeah, sure. We'll be there. Thank you. Thank you.
+
+2165
+01:56:42.935 --> 01:56:45.055
+Yeah. Okay.
+
+2166
+01:56:45.075 --> 01:56:49.065
+So, uh, anybody else want to share something
+
+2167
+01:56:50.485 --> 01:56:51.785
+or, uh, any questions?
+
+2168
+01:56:54.475 --> 01:56:57.895
+All the best? Uh, yeah. Thank you sir. Thank you.
+
+2169
+01:56:58.565 --> 01:57:00.135
+Yeah, all the best.
+
+2170
+01:57:00.995 --> 01:57:05.395
+All the best, best. Yeah. Thank you.
+
+2171
+01:57:06.265 --> 01:57:09.375
+Good luck. So, uh,
+
+2172
+01:57:10.315 --> 01:57:11.415
+sir, uh, that's all, sir.
+
+2173
+01:57:11.515 --> 01:57:15.375
+Uh, I have my screen, so thank you for the time, sir.
+
+2174
+01:57:15.585 --> 01:57:18.055
+Thank you. Thank you, sir. Thank you all guys. Thank you.
+
+2175
+01:57:18.055 --> 01:57:22.655
+Bye-bye. Yeah, thank you. Thank you.
