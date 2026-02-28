@@ -1,0 +1,7889 @@
+WEBVTT
+
+1
+00:12:45.280 --> 00:12:45.770
+Good morning.
+
+2
+00:12:45.915 --> 00:12:50.505
+Morning to morning, sir. Good morning, sir.
+
+3
+00:12:51.055 --> 00:12:53.105
+Good morning, sir. Good morning.
+
+4
+00:13:10.865 --> 00:13:13.785
+Good morning, sir. Good morning.
+
+5
+00:13:35.845 --> 00:13:38.215
+Okay, we'll start in a few minutes. I,
+
+6
+00:15:11.935 --> 00:15:13.825
+Okay, let's just start now.
+
+7
+00:15:13.935 --> 00:15:15.025
+I'll share my screen.
+
+8
+00:16:15.475 --> 00:16:17.325
+Okay, so let just start.
+
+9
+00:16:17.465 --> 00:16:22.215
+So, okay, let me just,
+
+10
+00:16:22.355 --> 00:16:26.545
+uh, quickly summarize that what we did in the last class.
+
+11
+00:16:27.365 --> 00:16:32.085
+We were talking about this, uh, GRU gated,
+
+12
+00:16:32.325 --> 00:16:33.525
+recurrent, uh, unit,
+
+13
+00:16:34.825 --> 00:16:39.725
+and, uh, we understood the GRU as just an
+
+14
+00:16:40.735 --> 00:16:43.925
+other, other, you can say the variance of this.
+
+15
+00:16:44.085 --> 00:16:46.405
+RNN, like LSTM.
+
+16
+00:16:46.595 --> 00:16:50.965
+Okay, so R-N-N-L-S-T-M-G-R-U, these are
+
+17
+00:16:51.785 --> 00:16:53.125
+of the same type of network
+
+18
+00:16:53.695 --> 00:16:57.205
+where we process the input in a timestamp wise manner.
+
+19
+00:16:57.865 --> 00:17:01.805
+So it is especially, uh, you can say a good
+
+20
+00:17:01.985 --> 00:17:05.045
+for the sequential data, whatever sequential data you have,
+
+21
+00:17:05.165 --> 00:17:09.245
+where you see that the timestamp matters, okay?
+
+22
+00:17:09.435 --> 00:17:12.445
+That you, if you process the data with, with respect
+
+23
+00:17:12.445 --> 00:17:15.165
+to the time or as a time stamped manner,
+
+24
+00:17:15.165 --> 00:17:17.205
+then it'll have better meaning,
+
+25
+00:17:17.255 --> 00:17:18.605
+which is coming out of the data.
+
+26
+00:17:18.755 --> 00:17:21.485
+Then you can always utilize this, uh,
+
+27
+00:17:22.565 --> 00:17:24.445
+R-N-N-L-S-T-M or GRD.
+
+28
+00:17:25.625 --> 00:17:29.565
+So major differences, what we have seen in the RN,
+
+29
+00:17:29.565 --> 00:17:34.085
+we did not have any mechanism to store the long-term memory.
+
+30
+00:17:34.345 --> 00:17:36.365
+So memory concept was missing,
+
+31
+00:17:37.325 --> 00:17:40.495
+although we were processing the context, the context
+
+32
+00:17:41.355 --> 00:17:42.895
+at the current timestamp,
+
+33
+00:17:44.035 --> 00:17:48.575
+and then we were doing some, some, uh, linear
+
+34
+00:17:50.045 --> 00:17:52.885
+functionality, right, uh, uh, linear operation in order
+
+35
+00:17:52.985 --> 00:17:54.085
+to maintain that context.
+
+36
+00:17:55.025 --> 00:17:57.645
+But, but if the context is very long,
+
+37
+00:17:57.645 --> 00:18:01.885
+then it is very difficult for a single cell to remember
+
+38
+00:18:01.885 --> 00:18:04.965
+that context for long, long context.
+
+39
+00:18:05.425 --> 00:18:08.245
+Now that that was the problem which we solved using first
+
+40
+00:18:08.555 --> 00:18:11.685
+lstm, where we had the number of gates, the four gate,
+
+41
+00:18:11.685 --> 00:18:15.605
+gate input gate, it helped, uh, it helped to
+
+42
+00:18:16.245 --> 00:18:18.565
+maintain those short, short-term context as well
+
+43
+00:18:18.565 --> 00:18:20.245
+as the long-term context.
+
+44
+00:18:20.345 --> 00:18:25.045
+So in the LS tm, we were having two separate memory,
+
+45
+00:18:25.185 --> 00:18:27.845
+you can say that one, the long-term memory ct,
+
+46
+00:18:27.845 --> 00:18:30.125
+and another one is the short-term memory ht.
+
+47
+00:18:31.345 --> 00:18:33.805
+But in the GRU on the other hand, we said
+
+48
+00:18:33.805 --> 00:18:36.045
+that let us not have two different memory.
+
+49
+00:18:36.045 --> 00:18:40.105
+Because if you take the human as in human memory
+
+50
+00:18:40.125 --> 00:18:43.025
+as an intuition, that in the human memory,
+
+51
+00:18:43.085 --> 00:18:46.105
+we don't have two separate memory, right?
+
+52
+00:18:46.365 --> 00:18:49.865
+We have a single memory, obviously we do some addition.
+
+53
+00:18:50.245 --> 00:18:52.265
+Uh, whenever we get a new information
+
+54
+00:18:52.635 --> 00:18:56.265
+after a certain time, we forget some of the event,
+
+55
+00:18:56.415 --> 00:18:59.465
+what we have, uh, what we have per, uh,
+
+56
+00:18:59.465 --> 00:19:00.585
+what we have done our lives.
+
+57
+00:19:00.645 --> 00:19:02.865
+So those addition means forgetting
+
+58
+00:19:03.245 --> 00:19:07.435
+and addition that that is happening all the time in,
+
+59
+00:19:07.435 --> 00:19:08.555
+in our human brain,
+
+60
+00:19:09.255 --> 00:19:10.875
+but we do not have two separate memory
+
+61
+00:19:10.975 --> 00:19:12.755
+for the longer context or short context.
+
+62
+00:19:14.175 --> 00:19:17.715
+Uh, the same idea, same idea. The GRU uh, has proposed.
+
+63
+00:19:17.715 --> 00:19:20.875
+They said that, okay, separate memory cell is not required
+
+64
+00:19:20.895 --> 00:19:21.915
+for long-term context.
+
+65
+00:19:23.195 --> 00:19:24.875
+T itself can maintain both the things,
+
+66
+00:19:24.935 --> 00:19:27.675
+and hence we had this reset gait and update gate.
+
+67
+00:19:28.575 --> 00:19:31.315
+So reset gate was deciding, okay, how much
+
+68
+00:19:31.415 --> 00:19:34.915
+to forget from the memory, whatever state
+
+69
+00:19:34.915 --> 00:19:36.115
+of memory we have right now.
+
+70
+00:19:36.535 --> 00:19:41.115
+And update GATE was helping to make a balance between the
+
+71
+00:19:41.975 --> 00:19:43.675
+old memory, what we have as of now,
+
+72
+00:19:44.215 --> 00:19:46.075
+and the new memory, what we are getting now.
+
+73
+00:19:46.305 --> 00:19:48.835
+Okay. So between tho these two, how to make a balance
+
+74
+00:19:48.935 --> 00:19:53.595
+and create a altogether new memory state about the GRU.
+
+75
+00:19:53.595 --> 00:19:56.555
+So this is what we have done so far. Okay.
+
+76
+00:19:56.615 --> 00:19:59.595
+So if you have any quick questions, if you, uh,
+
+77
+00:19:59.655 --> 00:20:03.035
+you can ask me, then we will move on to the next topic.
+
+78
+00:20:07.645 --> 00:20:09.625
+Yes, sir. Hi, good morning, sir.
+
+79
+00:20:10.205 --> 00:20:14.825
+So for GRU, we need, uh, little less, uh, length
+
+80
+00:20:14.845 --> 00:20:17.625
+of contest when compared to LSD.
+
+81
+00:20:17.785 --> 00:20:19.865
+I was thinking about the use case.
+
+82
+00:20:20.615 --> 00:20:23.065
+When we have longer, uh, context length,
+
+83
+00:20:23.535 --> 00:20:25.665
+then we will use L SST M,
+
+84
+00:20:26.285 --> 00:20:30.265
+but the context length is small than we can use GRU instead
+
+85
+00:20:30.265 --> 00:20:34.305
+of uh, uh, no, uh, GRU instead of LSTM.
+
+86
+00:20:34.445 --> 00:20:36.905
+Am I right, sir? My understanding is correct.
+
+87
+00:20:37.845 --> 00:20:40.825
+See, I would say based on the sequence length,
+
+88
+00:20:41.805 --> 00:20:44.665
+let us not compare these two now,
+
+89
+00:20:44.665 --> 00:20:48.765
+because the, the idea is the RU
+
+90
+00:20:48.765 --> 00:20:52.365
+and LSTM both can handle the longer context.
+
+91
+00:20:53.745 --> 00:20:56.165
+Yes, sir. Yes. So sequence wise,
+
+92
+00:20:56.345 --> 00:20:58.405
+let us not differentiate these two
+
+93
+00:20:58.425 --> 00:21:01.045
+and, uh, you, you can try any of these network
+
+94
+00:21:01.185 --> 00:21:02.245
+and in fact, both of them
+
+95
+00:21:02.305 --> 00:21:04.325
+and then see that which one is performing good.
+
+96
+00:21:05.195 --> 00:21:08.605
+Okay? Only thing is that if you, if you want
+
+97
+00:21:08.625 --> 00:21:10.645
+to compare them, you can compare in terms
+
+98
+00:21:10.645 --> 00:21:12.005
+of the complexity, okay?
+
+99
+00:21:12.005 --> 00:21:14.965
+How many parameters we have in LSTM or GRU
+
+100
+00:21:14.965 --> 00:21:18.165
+and which one is lighter as compared to other.
+
+101
+00:21:18.425 --> 00:21:19.485
+So GRU is lighter
+
+102
+00:21:19.485 --> 00:21:21.605
+because number of less number of parameter.
+
+103
+00:21:22.545 --> 00:21:24.165
+Yes, sir. But sequence lengthwise,
+
+104
+00:21:24.315 --> 00:21:25.965
+that is the capability of the network.
+
+105
+00:21:26.105 --> 00:21:28.765
+Or you can say the power, the power of GRU
+
+106
+00:21:28.765 --> 00:21:31.365
+or TM is both, both are same.
+
+107
+00:21:31.445 --> 00:21:34.925
+I mean, I would not say one is, uh, more than other. Yeah.
+
+108
+00:21:35.675 --> 00:21:38.925
+Yeah. The way is that we need to compare the mattresses
+
+109
+00:21:38.925 --> 00:21:41.885
+of both output is both our accuracy.
+
+110
+00:21:42.025 --> 00:21:44.445
+Yes. Then you can always, um, take a call that, yeah,
+
+111
+00:21:44.565 --> 00:21:47.805
+GRU is performing here, good, or LSTM is not, or
+
+112
+00:21:48.265 --> 00:21:50.525
+unless you don't do the experiment, it's very difficult
+
+113
+00:21:50.585 --> 00:21:51.605
+to answer that.
+
+114
+00:21:51.705 --> 00:21:52.845
+You should start with both
+
+115
+00:21:53.225 --> 00:21:55.125
+experimentation and then take a call.
+
+116
+00:21:55.715 --> 00:21:57.205
+Yeah, sure, sir. Thank you.
+
+117
+00:21:59.775 --> 00:22:02.475
+In, in terms of accuracy, is there any difference,
+
+118
+00:22:02.535 --> 00:22:04.395
+uh, LSTM and GRE
+
+119
+00:22:06.025 --> 00:22:07.125
+In terms of accuracy?
+
+120
+00:22:08.145 --> 00:22:11.205
+So is there any difference between LSTM and G?
+
+121
+00:22:11.705 --> 00:22:12.845
+It is, it is. Uh,
+
+122
+00:22:13.035 --> 00:22:15.325
+obviously there might be slight difference.
+
+123
+00:22:15.445 --> 00:22:17.285
+I mean exactly. They may not give you, okay,
+
+124
+00:22:17.285 --> 00:22:20.765
+90 percentage Ls, LSTM is giving you 90% GRU.
+
+125
+00:22:20.955 --> 00:22:22.885
+Exactly. It'll never be, you know, that they,
+
+126
+00:22:22.955 --> 00:22:25.285
+they're doing some internal calculations and so on.
+
+127
+00:22:25.625 --> 00:22:27.445
+Mm-hmm. There might be slight difference,
+
+128
+00:22:27.465 --> 00:22:30.205
+but you won't see the much difference in the sense one is
+
+129
+00:22:30.205 --> 00:22:33.165
+90, another one is 80 for the same number of hydration,
+
+130
+00:22:33.185 --> 00:22:34.325
+for the same data size.
+
+131
+00:22:34.555 --> 00:22:37.005
+This one's difference, you may not see. Okay.
+
+132
+00:22:37.945 --> 00:22:41.405
+So they will be almost at the same level. Yeah.
+
+133
+00:22:42.945 --> 00:22:46.205
+Okay. Yeah. So only the complexity based on
+
+134
+00:22:46.205 --> 00:22:47.245
+the complexity data sector.
+
+135
+00:22:47.625 --> 00:22:50.445
+Yes, yes. That is the only, that is the only thing, yeah.
+
+136
+00:22:56.585 --> 00:22:58.525
+Okay. Alright.
+
+137
+00:22:58.785 --> 00:23:01.885
+So, uh, let us move on to the next topic.
+
+138
+00:23:02.465 --> 00:23:06.545
+The next topic is the sequence to sequence model. Okay?
+
+139
+00:23:06.645 --> 00:23:09.585
+And, uh, I'll start with some motivation
+
+140
+00:23:09.585 --> 00:23:11.745
+that why this model was required at all.
+
+141
+00:23:12.205 --> 00:23:14.305
+We had already seen three different types
+
+142
+00:23:14.325 --> 00:23:15.985
+of network neural network.
+
+143
+00:23:16.165 --> 00:23:19.185
+I'm talking about that a NN, the fully connected network,
+
+144
+00:23:19.325 --> 00:23:21.585
+the CNN, where we had the convolution
+
+145
+00:23:21.725 --> 00:23:23.305
+and the pooling layers,
+
+146
+00:23:24.125 --> 00:23:25.185
+and then the RNN
+
+147
+00:23:25.185 --> 00:23:27.065
+where we had processed the input in
+
+148
+00:23:27.065 --> 00:23:28.145
+a time stamp wise manner.
+
+149
+00:23:28.965 --> 00:23:31.985
+So in the first case where we had used this, uh,
+
+150
+00:23:33.785 --> 00:23:34.005
+Uh,
+
+151
+00:23:39.405 --> 00:23:39.695
+okay,
+
+152
+00:23:40.235 --> 00:23:43.535
+In the first case where we had used the a NN as a network,
+
+153
+00:23:44.475 --> 00:23:47.205
+so it was more suitable for the TABLER data,
+
+154
+00:23:47.545 --> 00:23:48.645
+we talked about it, right?
+
+155
+00:23:49.385 --> 00:23:52.765
+So if your data has the fixed length input, for example,
+
+156
+00:23:52.865 --> 00:23:53.965
+you have only two features,
+
+157
+00:23:53.965 --> 00:23:56.085
+and this features number of features is not going
+
+158
+00:23:56.085 --> 00:23:57.205
+to change whatever.
+
+159
+00:23:58.025 --> 00:24:00.965
+Uh, however, I means whatever will be the size of the data
+
+160
+00:24:01.735 --> 00:24:03.325
+means here I have three rows.
+
+161
+00:24:03.875 --> 00:24:06.365
+Next ca I can have a hundred rows, doesn't matter.
+
+162
+00:24:06.425 --> 00:24:08.565
+But every time I will have only two columns.
+
+163
+00:24:08.825 --> 00:24:11.965
+IQ and C, GP as an input means my feature is not changing.
+
+164
+00:24:12.545 --> 00:24:16.965
+In such cases in an, uh, in n is, uh,
+
+165
+00:24:17.035 --> 00:24:18.085
+good to start, right?
+
+166
+00:24:18.475 --> 00:24:22.725
+Another, uh, characteristics of the, uh, ENNS, no,
+
+167
+00:24:22.725 --> 00:24:25.605
+no ordering or temporal dependency in the sense in your data
+
+168
+00:24:25.705 --> 00:24:27.565
+set, suppose you do not have any ordering
+
+169
+00:24:27.565 --> 00:24:29.445
+or temporal de dependency, okay?
+
+170
+00:24:29.515 --> 00:24:32.605
+That first, unless I do not process the first row,
+
+171
+00:24:32.845 --> 00:24:34.485
+I cannot process the second row.
+
+172
+00:24:34.865 --> 00:24:36.485
+So this kind of dependency is not there.
+
+173
+00:24:36.485 --> 00:24:39.405
+Temporal dependency as well as column wise.
+
+174
+00:24:39.405 --> 00:24:42.565
+Also, there is no ordering whether I, uh,
+
+175
+00:24:42.565 --> 00:24:46.505
+process CGPA here IQ here, or vice versa.
+
+176
+00:24:46.865 --> 00:24:49.385
+I mean, doesn't matter. I'm going to get the same output.
+
+177
+00:24:49.775 --> 00:24:53.745
+Okay? So if the ordering is not important,
+
+178
+00:24:54.005 --> 00:24:57.905
+if the dependency is not there, then again, even it's good
+
+179
+00:24:57.905 --> 00:24:58.905
+to start with.
+
+180
+00:24:59.565 --> 00:25:02.905
+And obviously in that case, your inputs are, I mean,
+
+181
+00:25:02.925 --> 00:25:04.345
+the features are independent.
+
+182
+00:25:05.205 --> 00:25:08.385
+So this is the case of a NN, this is the case of a NN
+
+183
+00:25:08.385 --> 00:25:11.145
+where you have the tablet data, no temporal dependency,
+
+184
+00:25:11.365 --> 00:25:13.905
+no ordering, okay, you can go ahead with the a NN
+
+185
+00:25:13.905 --> 00:25:16.345
+and that is what we did initially when we started the scores
+
+186
+00:25:17.125 --> 00:25:18.505
+in the initial sessions.
+
+187
+00:25:18.725 --> 00:25:22.945
+My, my examples, the dataset was something like this, okay?
+
+188
+00:25:23.125 --> 00:25:26.145
+And then the network was also a NN.
+
+189
+00:25:26.145 --> 00:25:27.265
+This is a fully connected network
+
+190
+00:25:27.405 --> 00:25:28.745
+and we know that, how does it work?
+
+191
+00:25:29.325 --> 00:25:30.865
+But slowly, when we moved on
+
+192
+00:25:31.085 --> 00:25:33.745
+and we started using this image dataset, we found
+
+193
+00:25:33.745 --> 00:25:36.145
+that a NN may not be a good fit for that.
+
+194
+00:25:36.285 --> 00:25:39.665
+Why? Because image is always in the two DMI type two
+
+195
+00:25:39.665 --> 00:25:40.745
+dimensional, okay?
+
+196
+00:25:40.805 --> 00:25:44.985
+2D, but this a NN always accept 1D data.
+
+197
+00:25:45.485 --> 00:25:49.665
+So if at all, I will have to process the image with the
+
+198
+00:25:50.505 --> 00:25:53.505
+a NN, first of all, I need to convert this 2D into 1D.
+
+199
+00:25:53.965 --> 00:25:55.345
+As soon you will do that one,
+
+200
+00:25:55.405 --> 00:25:58.785
+you will lose the special locality information.
+
+201
+00:25:58.845 --> 00:26:01.265
+The neighborhood pixels are very important in the case
+
+202
+00:26:01.265 --> 00:26:03.665
+of image and the pitch features,
+
+203
+00:26:03.665 --> 00:26:07.105
+which you're extracting from those nab neighboring pixels.
+
+204
+00:26:07.375 --> 00:26:12.265
+That makes the image, uh, identity identifiable
+
+205
+00:26:12.885 --> 00:26:15.305
+at a as as a particular object, right?
+
+206
+00:26:16.005 --> 00:26:19.225
+But as soon you convert this 2D as 1D, you will lose
+
+207
+00:26:19.225 --> 00:26:22.185
+that information and hence it'll, uh, it'll,
+
+208
+00:26:22.195 --> 00:26:24.985
+it'll be very difficult for the a NN to identify,
+
+209
+00:26:25.135 --> 00:26:26.345
+okay, what is that object?
+
+210
+00:26:26.535 --> 00:26:29.185
+That was the main problem. And hence we, uh,
+
+211
+00:26:29.205 --> 00:26:30.385
+and another problem was
+
+212
+00:26:30.385 --> 00:26:33.945
+because you will convert this 2D into 1D,
+
+213
+00:26:34.975 --> 00:26:37.465
+then you will have those many number of parameters.
+
+214
+00:26:37.485 --> 00:26:41.105
+So suppose it is say that, uh, image is, uh,
+
+215
+00:26:41.105 --> 00:26:46.085
+five across five, so 25 into whatever, uh, say that, uh,
+
+216
+00:26:46.355 --> 00:26:49.165
+neurons you will use those many parameters it'll use, right?
+
+217
+00:26:49.745 --> 00:26:52.325
+But in the case of CNN doesn't happen,
+
+218
+00:26:52.505 --> 00:26:55.525
+you decide a filter filter size is usually very small,
+
+219
+00:26:55.525 --> 00:26:56.925
+three cross three, four, cross four,
+
+220
+00:26:56.925 --> 00:26:59.725
+and that is the weight in the CNN, right?
+
+221
+00:27:00.145 --> 00:27:01.765
+And then that weight is common
+
+222
+00:27:01.825 --> 00:27:03.965
+for the entire convolution operation.
+
+223
+00:27:04.305 --> 00:27:06.245
+Now, you may have some more filters also,
+
+224
+00:27:06.625 --> 00:27:09.885
+but for a particular filter, the weight is common for,
+
+225
+00:27:09.905 --> 00:27:10.965
+for the entire image,
+
+226
+00:27:10.965 --> 00:27:13.765
+and hence, it is able to understand the neighboring pixels
+
+227
+00:27:14.435 --> 00:27:16.485
+well, okay, so that was the benefit
+
+228
+00:27:16.505 --> 00:27:19.045
+of using the CNN over a NN with the,
+
+229
+00:27:19.515 --> 00:27:21.885
+when we were using this image data.
+
+230
+00:27:21.885 --> 00:27:26.165
+And finally we were talking about this RN and LSTM and GRU,
+
+231
+00:27:26.165 --> 00:27:29.525
+and we said that if your data is sequential, like X one,
+
+232
+00:27:29.625 --> 00:27:33.555
+the next two, the next three, like, uh, the case of, uh,
+
+233
+00:27:33.555 --> 00:27:36.955
+the case of text where deep, then learning then models.
+
+234
+00:27:37.295 --> 00:27:40.555
+So these words are coming one after other,
+
+235
+00:27:40.655 --> 00:27:42.075
+and hence they're making some sense.
+
+236
+00:27:42.095 --> 00:27:44.715
+And that same order we want to maintain at the time
+
+237
+00:27:44.715 --> 00:27:46.435
+of processing this particular sentence.
+
+238
+00:27:46.935 --> 00:27:48.795
+In such cases, the RN
+
+239
+00:27:48.795 --> 00:27:51.115
+and L-S-T-M-G-R-U are the one which,
+
+240
+00:27:51.165 --> 00:27:52.315
+which should be your choice.
+
+241
+00:27:53.095 --> 00:27:55.435
+Now, these three cases we have understood,
+
+242
+00:27:55.555 --> 00:27:58.675
+I guess quite well, that now there won't be any confusion
+
+243
+00:27:58.675 --> 00:28:00.715
+that, okay, this is the data what to use, right?
+
+244
+00:28:00.715 --> 00:28:01.875
+You can always make a call
+
+245
+00:28:02.695 --> 00:28:04.715
+and internal architecture, everything, you know.
+
+246
+00:28:04.815 --> 00:28:07.075
+Now in, in, in detail back propagation.
+
+247
+00:28:07.075 --> 00:28:09.795
+Also we have seen in detail for all the network.
+
+248
+00:28:11.015 --> 00:28:15.475
+Now, the point is now there is a new case, new cases
+
+249
+00:28:16.105 --> 00:28:19.435
+that so far, uh, this case is extension
+
+250
+00:28:19.435 --> 00:28:22.995
+of the RN lium only the, the case of sequential data,
+
+251
+00:28:23.185 --> 00:28:26.875
+obviously, but now the complexity is a little higher.
+
+252
+00:28:27.095 --> 00:28:31.595
+The complexity is that my input is a sequence, say
+
+253
+00:28:31.595 --> 00:28:34.235
+that I love machine learning, okay?
+
+254
+00:28:34.775 --> 00:28:38.635
+Say that I love machine or I love machine learning. Okay?
+
+255
+00:28:38.635 --> 00:28:41.875
+There is one word missing here. There is one, okay?
+
+256
+00:28:43.835 --> 00:28:46.125
+Okay, some word missing here, but you can understand, right?
+
+257
+00:28:46.425 --> 00:28:49.805
+So what is happening is that, uh, it is a case
+
+258
+00:28:49.865 --> 00:28:51.605
+of sequence sequential data.
+
+259
+00:28:51.745 --> 00:28:53.485
+So hence you can take a call that, okay,
+
+260
+00:28:53.525 --> 00:28:57.965
+R-N-R-N-N can be a good, good, uh, uh, you can say network
+
+261
+00:28:58.545 --> 00:29:00.485
+to build for this kind of data.
+
+262
+00:29:01.305 --> 00:29:02.805
+But soon you will realize
+
+263
+00:29:02.835 --> 00:29:05.365
+that here it is not just one sequence.
+
+264
+00:29:05.365 --> 00:29:06.405
+There are two sequences.
+
+265
+00:29:06.545 --> 00:29:09.645
+So I am going to feed one sequence to the RN model,
+
+266
+00:29:10.145 --> 00:29:13.205
+and I am going to get a sequence from the RN model.
+
+267
+00:29:13.225 --> 00:29:15.285
+So it is a case of many to many.
+
+268
+00:29:15.765 --> 00:29:17.565
+I talked about the RNN types, right?
+
+269
+00:29:18.145 --> 00:29:19.685
+So it is a case of many to many.
+
+270
+00:29:19.685 --> 00:29:22.965
+You're feeding many inputs in a time stamp wise manner,
+
+271
+00:29:23.225 --> 00:29:26.445
+and you're getting many outputs in a timestamp wise manner.
+
+272
+00:29:26.905 --> 00:29:30.325
+So this is the case. Now, this case we have not yet handled
+
+273
+00:29:31.105 --> 00:29:34.845
+in, in, in any of the networks, what we have seen so far,
+
+274
+00:29:34.875 --> 00:29:37.805
+this particular case, we have not yet handled, okay?
+
+275
+00:29:37.805 --> 00:29:39.565
+And this case is special, and this case is
+
+276
+00:29:39.565 --> 00:29:40.645
+a little complex as well.
+
+277
+00:29:41.345 --> 00:29:42.925
+Why? Because, uh,
+
+278
+00:29:43.305 --> 00:29:45.245
+unless you, first of all, you need
+
+279
+00:29:45.245 --> 00:29:47.845
+to have some structure in which you first process
+
+280
+00:29:48.665 --> 00:29:51.685
+the input sequence, which is, I love, say machine learning.
+
+281
+00:29:51.995 --> 00:29:53.005
+Then first you will process.
+
+282
+00:29:53.365 --> 00:29:55.965
+I then love the machine learning, which we know RNN, rest,
+
+283
+00:29:56.125 --> 00:29:57.285
+TMG, you can do that one.
+
+284
+00:29:57.985 --> 00:29:59.565
+Now, so far, what we were doing
+
+285
+00:29:59.655 --> 00:30:02.845
+after processing this, uh, all the three inputs,
+
+286
+00:30:02.875 --> 00:30:05.485
+then whatever or output you are getting at the final
+
+287
+00:30:05.595 --> 00:30:09.925
+timestamp, that final timestamp output, you are, uh,
+
+288
+00:30:09.925 --> 00:30:12.605
+then comparing with the ground growth
+
+289
+00:30:12.605 --> 00:30:15.325
+and calculating the loss, and then optimizing your network.
+
+290
+00:30:15.995 --> 00:30:19.725
+Okay? But now that is not the case in the final timestamp.
+
+291
+00:30:20.175 --> 00:30:22.805
+Final timestamp, you don't have to give the output.
+
+292
+00:30:22.825 --> 00:30:25.965
+The H one is the first timer stamp as two second time stamp
+
+293
+00:30:26.065 --> 00:30:27.325
+as three third timer stamp.
+
+294
+00:30:27.825 --> 00:30:29.845
+Now, S3, I don't have to give the output.
+
+295
+00:30:30.505 --> 00:30:33.285
+It means I have to start the output at S3,
+
+296
+00:30:33.785 --> 00:30:35.925
+but the output is also a sequence.
+
+297
+00:30:36.225 --> 00:30:39.905
+And hence, while giving the output, also I have to go
+
+298
+00:30:40.245 --> 00:30:41.785
+as a time stamp wise manner.
+
+299
+00:30:41.965 --> 00:30:44.425
+So first time I'll give, say that the word.
+
+300
+00:30:45.175 --> 00:30:47.425
+Then next time I'll give the word as person,
+
+301
+00:30:47.565 --> 00:30:50.025
+and then next time I'll give the word as he.
+
+302
+00:30:50.565 --> 00:30:53.785
+Now, this is the, a little, little complex.
+
+303
+00:30:54.245 --> 00:30:56.705
+You can say that the case of this RNN, okay?
+
+304
+00:30:56.725 --> 00:30:58.745
+Or handling this sequential data.
+
+305
+00:30:59.645 --> 00:31:04.065
+So, uh, uh, if you see it, it is looking very simple that,
+
+306
+00:31:04.065 --> 00:31:07.185
+okay, I'll have a sequence which I can process the way I
+
+307
+00:31:07.185 --> 00:31:08.665
+have processed it in RNN,
+
+308
+00:31:08.665 --> 00:31:12.225
+and then I will have another sequence at the output also,
+
+309
+00:31:12.225 --> 00:31:14.785
+which I can process in the same way time
+
+310
+00:31:14.785 --> 00:31:15.905
+stamp wise, minor, right?
+
+311
+00:31:16.925 --> 00:31:20.105
+So typically, uh, I mean, uh, it, it looks simple,
+
+312
+00:31:20.205 --> 00:31:23.105
+but then there are certain problems in this, and we'll talk.
+
+313
+00:31:23.125 --> 00:31:25.865
+Now in this particular class, I'll go into the detail
+
+314
+00:31:25.865 --> 00:31:27.945
+of this particular architecture, right?
+
+315
+00:31:28.005 --> 00:31:30.585
+And then we'll talk about first of all,
+
+316
+00:31:30.685 --> 00:31:33.145
+how this architecture works end-to-end,
+
+317
+00:31:33.405 --> 00:31:35.465
+and then what is the advantages?
+
+318
+00:31:35.735 --> 00:31:37.225
+What is the disadvantages?
+
+319
+00:31:37.565 --> 00:31:40.825
+And then finally, we are going to see the demo also
+
+320
+00:31:40.825 --> 00:31:42.825
+for this machine translation case today.
+
+321
+00:31:43.375 --> 00:31:47.495
+Okay? So that's the plan I had. Okay, so let us start.
+
+322
+00:31:47.795 --> 00:31:51.775
+So in 2014, this architecture was given sequence
+
+323
+00:31:51.775 --> 00:31:54.335
+to sequence modeling just for your, uh,
+
+324
+00:31:55.815 --> 00:31:58.905
+uh, knowledge.
+
+325
+00:31:59.045 --> 00:32:00.745
+And let me just open that paper.
+
+326
+00:32:00.885 --> 00:32:03.935
+You can always go through it. Okay?
+
+327
+00:32:03.935 --> 00:32:08.895
+So this was the time 2014, again, when,
+
+328
+00:32:08.895 --> 00:32:10.655
+when this network was proposed sequence
+
+329
+00:32:10.655 --> 00:32:12.455
+to sequence learning with neural network.
+
+330
+00:32:12.995 --> 00:32:15.375
+Now, before this time, we did not have the sequence
+
+331
+00:32:15.375 --> 00:32:16.535
+to sequence kind of network.
+
+332
+00:32:17.045 --> 00:32:21.735
+Obviously, this network has used the RNN as a base
+
+333
+00:32:21.955 --> 00:32:23.335
+to build this architecture,
+
+334
+00:32:23.335 --> 00:32:26.375
+but this was, this idea itself was very new, that
+
+335
+00:32:27.375 --> 00:32:31.495
+representing the sequence to sequence model as a encoder
+
+336
+00:32:31.495 --> 00:32:32.855
+and decoder architecture.
+
+337
+00:32:33.235 --> 00:32:35.935
+So this, this idea was very noble, okay?
+
+338
+00:32:35.935 --> 00:32:38.335
+So you just have one encoder which will works
+
+339
+00:32:38.435 --> 00:32:39.565
+for the input sequence.
+
+340
+00:32:39.665 --> 00:32:42.605
+You have a Dakota, which will then decode the input
+
+341
+00:32:42.885 --> 00:32:44.285
+sequence, which you have got as a vector.
+
+342
+00:32:44.995 --> 00:32:46.605
+Okay? I'll talk about that.
+
+343
+00:32:47.065 --> 00:32:51.445
+Now, why this, why this requirement had come at all, okay?
+
+344
+00:32:51.445 --> 00:32:53.365
+You may think that, okay, why people think like that?
+
+345
+00:32:53.365 --> 00:32:55.965
+What was the requirement? So one requirement you can clearly
+
+346
+00:32:56.065 --> 00:33:00.405
+see on the screen machine translation is one of the, one
+
+347
+00:33:00.405 --> 00:33:02.925
+of the use case for which this kind
+
+348
+00:33:02.925 --> 00:33:04.445
+of architecture is very much required.
+
+349
+00:33:04.445 --> 00:33:07.965
+Otherwise, it is very difficult to do the translation. Okay?
+
+350
+00:33:08.185 --> 00:33:09.645
+You can say that why it is required.
+
+351
+00:33:09.725 --> 00:33:11.885
+I could have done it using only the encoder
+
+352
+00:33:11.985 --> 00:33:14.645
+or whatever LS TM network we have learned so far.
+
+353
+00:33:14.865 --> 00:33:16.765
+So every time when I'm feeding, I,
+
+354
+00:33:17.085 --> 00:33:20.285
+I should have got its corresponding output.
+
+355
+00:33:20.285 --> 00:33:21.845
+Same man. Okay?
+
+356
+00:33:22.555 --> 00:33:25.085
+Then when I'm feeding m then I should have got it
+
+357
+00:33:25.085 --> 00:33:28.045
+corresponding output, whatever it is, right?
+
+358
+00:33:28.065 --> 00:33:30.325
+And then foregoing whatever is the corresponding output.
+
+359
+00:33:30.385 --> 00:33:33.725
+Now, see, you saw the, you, you can argue that one,
+
+360
+00:33:33.745 --> 00:33:37.005
+but quickly you will realize that this is not the right way.
+
+361
+00:33:37.305 --> 00:33:38.645
+Why this is not right way,
+
+362
+00:33:38.875 --> 00:33:41.245
+because now you are not doing the
+
+363
+00:33:41.245 --> 00:33:42.605
+translation of whole sentence.
+
+364
+00:33:42.905 --> 00:33:46.405
+If you do like this. Time is stamp wise manner, you want
+
+365
+00:33:46.405 --> 00:33:48.645
+to do the translation, which you can do no problem.
+
+366
+00:33:49.625 --> 00:33:52.525
+But then that translation will not be correct. Why?
+
+367
+00:33:52.985 --> 00:33:55.645
+For I, it may give you the correct output, ma,
+
+368
+00:33:55.985 --> 00:34:00.405
+but for m suppose the output is who suppose, okay,
+
+369
+00:34:00.555 --> 00:34:01.845
+then ma, who,
+
+370
+00:34:02.265 --> 00:34:05.965
+and going, now you understand that, right?
+
+371
+00:34:06.175 --> 00:34:07.645
+First of all, for every input,
+
+372
+00:34:07.645 --> 00:34:10.525
+there won't be a single input, single output, right?
+
+373
+00:34:10.865 --> 00:34:12.045
+And secondly,
+
+374
+00:34:12.045 --> 00:34:15.085
+because you have not yet processed the entire sentence,
+
+375
+00:34:15.905 --> 00:34:19.765
+it is very difficult to give the word by word output
+
+376
+00:34:19.765 --> 00:34:21.165
+because you can't.
+
+377
+00:34:21.625 --> 00:34:25.125
+You see that, right? I am going in English in Hindi,
+
+378
+00:34:26.435 --> 00:34:28.805
+Maha, first of all, going, has come in between
+
+379
+00:34:29.425 --> 00:34:33.005
+and going is now represented by two different words, Ja
+
+380
+00:34:33.065 --> 00:34:35.845
+and raha and m has come at the last.
+
+381
+00:34:36.345 --> 00:34:38.045
+So it is not the case, like m
+
+382
+00:34:38.105 --> 00:34:41.205
+or m translation is at the, this time stamp itself,
+
+383
+00:34:41.285 --> 00:34:44.205
+I can give it is this is not the case, okay?
+
+384
+00:34:44.385 --> 00:34:48.205
+So the ordering in which you are giving the translation
+
+385
+00:34:49.145 --> 00:34:51.805
+for the target language can be completely different,
+
+386
+00:34:51.805 --> 00:34:53.325
+which in this particular case, you can see
+
+387
+00:34:53.325 --> 00:34:55.405
+that it's not like word to word translation.
+
+388
+00:34:55.505 --> 00:34:57.365
+I'm doing, I'm doing the translation
+
+389
+00:34:57.385 --> 00:34:58.725
+for the entire sequence.
+
+390
+00:34:59.505 --> 00:35:03.085
+It is only possible once you process the entire sequence,
+
+391
+00:35:03.515 --> 00:35:05.445
+have the knowledge, okay, what is the sentence?
+
+392
+00:35:05.935 --> 00:35:07.885
+Start translating it one by one.
+
+393
+00:35:09.445 --> 00:35:11.515
+Hence this encoder decoder architecture
+
+394
+00:35:11.515 --> 00:35:13.715
+or sequence to sequence architecture is required.
+
+395
+00:35:14.025 --> 00:35:16.675
+Okay? Now talk about the summarization, the other case,
+
+396
+00:35:16.785 --> 00:35:18.875
+okay, you have a very big paragraph
+
+397
+00:35:18.895 --> 00:35:20.835
+and you are, you want to summarize it in say,
+
+398
+00:35:20.965 --> 00:35:23.915
+three sentences we do with the charge GP nowadays, right?
+
+399
+00:35:24.485 --> 00:35:28.945
+Again, once you have to summarize it, how you can summarize,
+
+400
+00:35:29.085 --> 00:35:31.465
+you can't summarize like, okay,
+
+401
+00:35:31.525 --> 00:35:33.185
+I'm processing the processing.
+
+402
+00:35:33.365 --> 00:35:35.065
+Uh, because it, it is possible
+
+403
+00:35:35.065 --> 00:35:36.865
+that your paragraph has 50 words
+
+404
+00:35:37.705 --> 00:35:39.925
+and your summarization will have only 10 words.
+
+405
+00:35:40.465 --> 00:35:42.525
+So if suppose paragraph has 50 words,
+
+406
+00:35:42.525 --> 00:35:43.845
+you will have 50 timestamp,
+
+407
+00:35:43.845 --> 00:35:48.685
+because this timestamp goes by the length of your input.
+
+408
+00:35:48.825 --> 00:35:51.005
+So if your input paragraph has 50 word,
+
+409
+00:35:51.185 --> 00:35:52.485
+how many times stamp, you'll have 50,
+
+410
+00:35:53.345 --> 00:35:54.805
+but output how many you want.
+
+411
+00:35:55.065 --> 00:35:57.885
+You don't want 50 output here, you just want 10 outputs.
+
+412
+00:35:58.085 --> 00:36:01.285
+A summarized version of 50 words, there is 10 words.
+
+413
+00:36:01.865 --> 00:36:04.525
+So for 50 words, you just want 10 words as an output.
+
+414
+00:36:04.525 --> 00:36:06.845
+Then which timestamp you will consider
+
+415
+00:36:06.905 --> 00:36:10.045
+as an output which timestamp you want to skip in
+
+416
+00:36:10.045 --> 00:36:11.205
+between, okay?
+
+417
+00:36:11.205 --> 00:36:12.805
+You don't have any answer for all these things.
+
+418
+00:36:12.825 --> 00:36:15.085
+And hang, hence again, the right ways.
+
+419
+00:36:15.465 --> 00:36:18.125
+You first learn the entire paragraph once,
+
+420
+00:36:18.895 --> 00:36:20.085
+store it in some vector,
+
+421
+00:36:20.825 --> 00:36:25.485
+and then start unrolling that vector one by one.
+
+422
+00:36:25.945 --> 00:36:28.525
+And then here you go only for 10 times time.
+
+423
+00:36:28.525 --> 00:36:32.805
+Hence, you will summarize this whole context into 10 words.
+
+424
+00:36:33.715 --> 00:36:35.205
+Same thing for question answering.
+
+425
+00:36:35.825 --> 00:36:37.485
+You have to process the question first,
+
+426
+00:36:37.745 --> 00:36:39.045
+and then you can give the answer.
+
+427
+00:36:39.145 --> 00:36:42.125
+Now, see that there are lot of such cases, lot of such cases
+
+428
+00:36:42.615 --> 00:36:46.765
+where you have this many to many kind, many to many, uh,
+
+429
+00:36:46.955 --> 00:36:49.325
+case, uh, kind of scenario, right?
+
+430
+00:36:49.825 --> 00:36:53.285
+And the why, the sequence to sequence
+
+431
+00:36:53.285 --> 00:36:55.245
+or encoder decoder architecture is required
+
+432
+00:36:55.245 --> 00:36:57.885
+because these sequences length are not safe.
+
+433
+00:36:58.315 --> 00:36:59.765
+It's about their length are same,
+
+434
+00:36:59.765 --> 00:37:01.125
+then it would have been very easy.
+
+435
+00:37:01.515 --> 00:37:03.005
+Decoder is not required at all.
+
+436
+00:37:03.065 --> 00:37:05.485
+You can simply process encoder
+
+437
+00:37:05.485 --> 00:37:07.485
+and can get one output for that.
+
+438
+00:37:08.035 --> 00:37:12.365
+Because the main problem is if my encoders
+
+439
+00:37:12.585 --> 00:37:14.685
+or input sequence length is three,
+
+440
+00:37:15.345 --> 00:37:17.245
+my output sequence length can be four.
+
+441
+00:37:18.025 --> 00:37:19.805
+If it is 10, it can be three.
+
+442
+00:37:20.045 --> 00:37:21.605
+I mean, there is no dependency
+
+443
+00:37:21.635 --> 00:37:23.805
+between the input sequence and output sequence.
+
+444
+00:37:23.805 --> 00:37:25.885
+It can be anything. And hence, this one
+
+445
+00:37:25.885 --> 00:37:30.125
+to one architecture will not support that scenarios.
+
+446
+00:37:30.145 --> 00:37:32.165
+And hence you should have the encoder decoders
+
+447
+00:37:32.165 --> 00:37:33.165
+or of architectures.
+
+448
+00:37:33.635 --> 00:37:36.845
+This is the main reason, right? So, and how does it work?
+
+449
+00:37:37.105 --> 00:37:39.285
+Now, by this time, you must have understood,
+
+450
+00:37:39.355 --> 00:37:43.445
+because now we have to do, uh, we have to take one sequence
+
+451
+00:37:43.445 --> 00:37:45.805
+as an input and then give another sequence as an output.
+
+452
+00:37:45.865 --> 00:37:49.045
+You first have to process the input sequence completely in a
+
+453
+00:37:49.045 --> 00:37:52.285
+time stamp wise manner using L-S-T-M-G-R-U-R-N, whatever,
+
+454
+00:37:52.285 --> 00:37:53.685
+it's, and then you have
+
+455
+00:37:53.685 --> 00:37:55.765
+to store whatever the output you're
+
+456
+00:37:55.765 --> 00:37:56.885
+getting at the final time.
+
+457
+00:37:56.935 --> 00:37:59.525
+Stamp that. We say it as a context vector.
+
+458
+00:37:59.665 --> 00:38:02.525
+Why context vector? Because I am going is a context
+
+459
+00:38:03.845 --> 00:38:05.505
+and representing them as a vector.
+
+460
+00:38:06.045 --> 00:38:08.585
+So this one I'm saying as a context vector, right?
+
+461
+00:38:08.925 --> 00:38:11.265
+And now this context vector will be the input
+
+462
+00:38:11.285 --> 00:38:16.025
+for this LSTM along with the start token.
+
+463
+00:38:16.085 --> 00:38:17.145
+For the first time stamp
+
+464
+00:38:17.165 --> 00:38:19.545
+or zero time stamp, you can say that, okay?
+
+465
+00:38:19.725 --> 00:38:21.385
+And it'll produce the first word.
+
+466
+00:38:22.095 --> 00:38:23.945
+Then once it is producing the first word,
+
+467
+00:38:24.025 --> 00:38:26.465
+then it can produce the second word based on the first word.
+
+468
+00:38:26.925 --> 00:38:29.965
+And then based on the first two, two words,
+
+469
+00:38:29.965 --> 00:38:31.605
+what it has produced, now, it,
+
+470
+00:38:31.825 --> 00:38:34.085
+it can produce the third word and so on.
+
+471
+00:38:34.585 --> 00:38:36.805
+Now, you can, can see that this is how the, uh,
+
+472
+00:38:37.305 --> 00:38:38.845
+entire decoder part works.
+
+473
+00:38:38.845 --> 00:38:43.365
+So decoder usually works as a auto regressive fashion, okay?
+
+474
+00:38:43.505 --> 00:38:45.205
+You can recall, right? Auto regression,
+
+475
+00:38:45.425 --> 00:38:47.405
+we talked in the case of language modeling.
+
+476
+00:38:47.625 --> 00:38:49.005
+So language modeling, how does it work?
+
+477
+00:38:49.305 --> 00:38:51.205
+So you feed one input, you get the output.
+
+478
+00:38:51.305 --> 00:38:55.005
+So one by one, then you get this output itself here,
+
+479
+00:38:55.145 --> 00:38:58.365
+me here, and then me is giving you the output as j.
+
+480
+00:38:58.785 --> 00:39:01.765
+So then me and J you will feel as an input.
+
+481
+00:39:01.915 --> 00:39:03.525
+Then raha and raha.
+
+482
+00:39:03.585 --> 00:39:06.245
+Who, who, and that is how it is going to be.
+
+483
+00:39:06.705 --> 00:39:11.625
+And this is how the sequence to sequence model works. Okay?
+
+484
+00:39:11.965 --> 00:39:16.465
+Now see architecture wise, uh, in the sense that what is
+
+485
+00:39:16.465 --> 00:39:19.025
+inside the LSTM that you know already, right?
+
+486
+00:39:19.135 --> 00:39:22.425
+That what is happening in each time. Stamp input gate four.
+
+487
+00:39:22.425 --> 00:39:24.945
+Gate gate or put gate that we are going, not going to again,
+
+488
+00:39:25.285 --> 00:39:26.385
+uh, uh, discuss that
+
+489
+00:39:26.385 --> 00:39:29.585
+because that, you know, the only thing is they have used the
+
+490
+00:39:29.585 --> 00:39:32.585
+same LS TM or C-M-J-R-U, same RNN.
+
+491
+00:39:32.765 --> 00:39:35.185
+And they have, they have created this encoder sort
+
+492
+00:39:35.185 --> 00:39:37.145
+of encoder decoder sort of architecture,
+
+493
+00:39:37.435 --> 00:39:40.305
+which has made it possible for, for, uh,
+
+494
+00:39:40.315 --> 00:39:44.225
+converting one sequence into another sequence as a case
+
+495
+00:39:44.225 --> 00:39:46.785
+of machine translation or summarization, question answering
+
+496
+00:39:46.785 --> 00:39:47.865
+or anything else as well.
+
+497
+00:39:49.135 --> 00:39:50.785
+Okay? So this is the main idea
+
+498
+00:39:50.785 --> 00:39:52.985
+of the encoder decoder architecture.
+
+499
+00:39:54.685 --> 00:39:57.225
+So what I, yeah, sorry to interrupt, sir.
+
+500
+00:39:57.605 --> 00:40:00.465
+Uh, sir, can we go to the previous Yes.
+
+501
+00:40:00.465 --> 00:40:03.465
+This one, sorry, in the decoder part, uh, uh,
+
+502
+00:40:03.835 --> 00:40:05.705
+input should be I am.
+
+503
+00:40:06.055 --> 00:40:08.505
+Then it'll give the major around the,
+
+504
+00:40:09.565 --> 00:40:11.665
+Uh, so that, that's what we don't have, right?
+
+505
+00:40:11.665 --> 00:40:14.465
+Because, uh, that that is not the way we do
+
+506
+00:40:14.535 --> 00:40:16.105
+because I am going,
+
+507
+00:40:16.135 --> 00:40:18.705
+that is already encoded here in the context vector.
+
+508
+00:40:18.705 --> 00:40:20.825
+Yeah. So this context vector has that knowledge
+
+509
+00:40:20.825 --> 00:40:21.865
+that I have processed.
+
+510
+00:40:22.065 --> 00:40:23.625
+I, I have processed m and going,
+
+511
+00:40:24.665 --> 00:40:26.925
+It should be sir, uh, embedding no
+
+512
+00:40:27.885 --> 00:40:29.885
+iCal value embedding converted to,
+
+513
+00:40:30.035 --> 00:40:33.325
+Yeah, this is a con converted, uh, this context factor is,
+
+514
+00:40:33.325 --> 00:40:34.685
+uh, embedding or you can say
+
+515
+00:40:34.685 --> 00:40:36.405
+that the numerical value. Yeah.
+
+516
+00:40:36.745 --> 00:40:40.205
+Yes, sir. So that also I'm giving as an input,
+
+517
+00:40:40.665 --> 00:40:43.565
+and this is start from where I'm starting the decoded.
+
+518
+00:40:43.565 --> 00:40:46.225
+That is also one of the token. Yes.
+
+519
+00:40:46.585 --> 00:40:48.025
+'cause you know that L-S-T-M-R
+
+520
+00:40:48.025 --> 00:40:50.545
+and GRU always takes two inputs.
+
+521
+00:40:50.565 --> 00:40:54.025
+The current estate input and last hidden estate output. Yes.
+
+522
+00:40:54.045 --> 00:40:56.065
+The last hidden estate is acting like here.
+
+523
+00:40:56.065 --> 00:40:59.905
+Context vector and current estate input is the start here.
+
+524
+00:41:00.535 --> 00:41:02.185
+Yeah. Okay. Sweet. Okay.
+
+525
+00:41:02.725 --> 00:41:04.665
+Yes. And then what, and then what happened?
+
+526
+00:41:04.695 --> 00:41:06.665
+This, this same context vector, you see
+
+527
+00:41:06.665 --> 00:41:08.545
+that it travels at a second time, aamp.
+
+528
+00:41:08.685 --> 00:41:12.185
+So obviously there are certain changes you,
+
+529
+00:41:12.285 --> 00:41:13.425
+you can now remember, right?
+
+530
+00:41:13.425 --> 00:41:15.025
+The CT in the L sst M
+
+531
+00:41:15.445 --> 00:41:18.225
+Yes Is one of the context vector
+
+532
+00:41:18.245 --> 00:41:19.865
+and CT is traveling all the time.
+
+533
+00:41:19.865 --> 00:41:21.265
+Stamp all the way up to the last.
+
+534
+00:41:21.655 --> 00:41:24.185
+Obviously there will be some changes in the ct.
+
+535
+00:41:24.285 --> 00:41:26.465
+You will add something, you'll delete something in the
+
+536
+00:41:26.465 --> 00:41:29.345
+forget input kit, but then CT is still traveling like this.
+
+537
+00:41:29.815 --> 00:41:31.655
+Yeah. Okay.
+
+538
+00:41:31.875 --> 00:41:34.805
+And one more thing just for the clarity, you know
+
+539
+00:41:34.805 --> 00:41:38.925
+that L sst m always give two outputs, one as ct,
+
+540
+00:41:39.065 --> 00:41:40.165
+one as a ST?
+
+541
+00:41:40.545 --> 00:41:41.685
+Yes. There are two outputs.
+
+542
+00:41:41.685 --> 00:41:44.125
+So the both the context vector it is there.
+
+543
+00:41:44.145 --> 00:41:46.765
+So when I say context vector, it is not a single vector.
+
+544
+00:41:47.145 --> 00:41:49.005
+It is actually the two tensors you are getting.
+
+545
+00:41:49.115 --> 00:41:50.885
+I'll show you when I'll code and the time.
+
+546
+00:41:50.885 --> 00:41:52.405
+I'll show you that it is coming like that.
+
+547
+00:41:52.635 --> 00:41:54.805
+Yeah, sure. Yeah. Thank you. Yeah.
+
+548
+00:41:57.375 --> 00:41:59.435
+Others? Do you have any query? Yeah.
+
+549
+00:42:04.815 --> 00:42:08.955
+Okay. So now we'll,
+
+550
+00:42:08.955 --> 00:42:12.755
+we'll go into little detail that, uh, we'll take the case
+
+551
+00:42:12.815 --> 00:42:14.075
+of machine translation.
+
+552
+00:42:14.815 --> 00:42:19.435
+Um, so for that one here, I have taken two different, uh,
+
+553
+00:42:20.765 --> 00:42:23.705
+in my corpus, I have only two, two data points.
+
+554
+00:42:24.525 --> 00:42:27.585
+Now, when it is a machine translation, you should have the,
+
+555
+00:42:28.445 --> 00:42:32.425
+uh, source, uh, sentence and the target sentence, right?
+
+556
+00:42:32.425 --> 00:42:33.465
+Source and target. Why,
+
+557
+00:42:33.465 --> 00:42:35.745
+why I say the source language support is English.
+
+558
+00:42:36.165 --> 00:42:38.025
+So your sentence is say, I am going
+
+559
+00:42:38.085 --> 00:42:41.265
+and corresponding Hindi sentence should also be there in
+
+560
+00:42:41.265 --> 00:42:43.225
+your, in your corpus, okay?
+
+561
+00:42:43.225 --> 00:42:47.505
+Because then only you are going to do the loss calculation
+
+562
+00:42:47.605 --> 00:42:49.985
+and then going to optimize all those weights and all.
+
+563
+00:42:49.985 --> 00:42:52.025
+So it is going to be supervised
+
+564
+00:42:52.025 --> 00:42:53.545
+because your labels are available here.
+
+565
+00:42:53.545 --> 00:42:55.785
+So Hindi sentence is acting as a label,
+
+566
+00:42:56.325 --> 00:42:58.905
+but rather than just having one value in, in case
+
+567
+00:42:58.905 --> 00:43:00.385
+of classification or regulation,
+
+568
+00:43:00.385 --> 00:43:03.105
+we have seen right here we have a sequence as a label.
+
+569
+00:43:03.855 --> 00:43:05.905
+Similarly, suppose there is second sentence,
+
+570
+00:43:06.415 --> 00:43:07.545
+just one word think.
+
+571
+00:43:07.935 --> 00:43:10.705
+Then it's, it's, uh, Hindi sentences is such.
+
+572
+00:43:10.725 --> 00:43:13.465
+Now that's all. So say that I have these two
+
+573
+00:43:14.665 --> 00:43:16.785
+sentences in my entire corpus right now, just
+
+574
+00:43:16.805 --> 00:43:18.145
+for the example.
+
+575
+00:43:18.645 --> 00:43:21.545
+So input and output are both sequences.
+
+576
+00:43:21.805 --> 00:43:25.105
+Length may vary, may be different as we can see here.
+
+577
+00:43:25.105 --> 00:43:26.785
+Three input length
+
+578
+00:43:26.785 --> 00:43:28.705
+and four output length for the first data.
+
+579
+00:43:29.215 --> 00:43:31.145
+Then one input length, one output.
+
+580
+00:43:31.145 --> 00:43:33.105
+And that is also possible that length can be same
+
+581
+00:43:33.265 --> 00:43:35.665
+or can be different, but you don't know what it'll be.
+
+582
+00:43:35.725 --> 00:43:39.665
+So you have to process it in, uh, in such a way
+
+583
+00:43:39.665 --> 00:43:41.065
+that it should support both the cases.
+
+584
+00:43:42.735 --> 00:43:46.345
+Okay? Now, languages will, I'll show you that, uh,
+
+585
+00:43:46.715 --> 00:43:49.545
+these languages, English will have its own vocabulary,
+
+586
+00:43:49.545 --> 00:43:51.785
+and Hindi here will have its own vocabulary.
+
+587
+00:43:52.085 --> 00:43:53.865
+Let us see that one. So first of all,
+
+588
+00:43:53.865 --> 00:43:56.145
+what we do at the step number one, as we do always,
+
+589
+00:43:56.455 --> 00:43:57.785
+because it is a text data,
+
+590
+00:43:57.925 --> 00:43:59.585
+you can't feed to the model as it is.
+
+591
+00:43:59.605 --> 00:44:01.545
+So hence you have to do the tokenization.
+
+592
+00:44:02.325 --> 00:44:04.765
+Tokenization, you know very well. What is the meaning of it?
+
+593
+00:44:04.875 --> 00:44:06.485
+Suppose that is a sentence I'm going,
+
+594
+00:44:06.675 --> 00:44:07.805
+then you will separate i,
+
+595
+00:44:07.825 --> 00:44:09.845
+you will separate m you will separate going,
+
+596
+00:44:10.105 --> 00:44:12.725
+and hence you'll have three tokens coming out of it.
+
+597
+00:44:13.505 --> 00:44:15.085
+And there is one more sentence here.
+
+598
+00:44:15.085 --> 00:44:18.085
+Think so from think you will get one more token think.
+
+599
+00:44:18.585 --> 00:44:20.685
+Now, because here the corpus is very small,
+
+600
+00:44:20.825 --> 00:44:22.205
+all the four words are unique,
+
+601
+00:44:22.665 --> 00:44:25.565
+and the four words together is making your vocabulary.
+
+602
+00:44:25.565 --> 00:44:28.325
+So your vocabulary, you have only four words here, okay?
+
+603
+00:44:28.785 --> 00:44:31.925
+Now this is the vocabulary for the English corpus
+
+604
+00:44:32.145 --> 00:44:33.205
+or source language.
+
+605
+00:44:34.305 --> 00:44:36.685
+Now, you also have to do the similar job
+
+606
+00:44:36.705 --> 00:44:39.125
+for Hindi tokenization, okay?
+
+607
+00:44:39.705 --> 00:44:43.205
+Now, Hindi tokenization here I have five words
+
+608
+00:44:43.235 --> 00:44:44.645
+like maja, raha.
+
+609
+00:44:45.665 --> 00:44:49.045
+So these all will come as a tokens in Hindi,
+
+610
+00:44:49.505 --> 00:44:50.965
+and then you are going to create a
+
+611
+00:44:50.965 --> 00:44:52.205
+vocabulary out of that one.
+
+612
+00:44:52.345 --> 00:44:55.165
+So now you have created one vocabulary for English
+
+613
+00:44:55.345 --> 00:44:56.885
+and one vocabulary for hin.
+
+614
+00:44:57.155 --> 00:44:59.205
+Okay? This is very easy. We have been doing this one
+
+615
+00:44:59.205 --> 00:45:00.285
+from long time.
+
+616
+00:45:00.285 --> 00:45:02.405
+So you see that while creating the vocabulary,
+
+617
+00:45:02.425 --> 00:45:03.725
+we also do the indexing.
+
+618
+00:45:04.225 --> 00:45:06.845
+So in the English vocabulary, I have only four words.
+
+619
+00:45:07.045 --> 00:45:09.445
+I have given one, one index number to each of them.
+
+620
+00:45:10.145 --> 00:45:14.005
+In the Hindi vocabulary, I had five words, five tokens,
+
+621
+00:45:14.345 --> 00:45:16.005
+but I have added two more tokens.
+
+622
+00:45:16.025 --> 00:45:17.725
+The start token and the stop token.
+
+623
+00:45:17.745 --> 00:45:19.325
+As you can see in this particular network,
+
+624
+00:45:20.225 --> 00:45:23.685
+the decoder always start with the special token start
+
+625
+00:45:23.745 --> 00:45:27.445
+of the sentence, and it always end with the special token.
+
+626
+00:45:27.755 --> 00:45:29.285
+That is called end of the sentence.
+
+627
+00:45:29.355 --> 00:45:32.335
+I'll show you that in the demo as well.
+
+628
+00:45:32.645 --> 00:45:35.935
+That you need two extra special tokens for the decoder.
+
+629
+00:45:36.365 --> 00:45:38.255
+That is not required for the encoder
+
+630
+00:45:38.525 --> 00:45:41.855
+because encoder, you know that what is the, uh, length
+
+631
+00:45:42.395 --> 00:45:45.615
+or, uh, what is the total length of the sequence.
+
+632
+00:45:45.635 --> 00:45:48.695
+And those many times you'll process decoder.
+
+633
+00:45:49.315 --> 00:45:52.135
+You don't know at the time of the inference, you don't know
+
+634
+00:45:52.135 --> 00:45:55.735
+that because how many words it'll work.
+
+635
+00:45:55.835 --> 00:45:58.175
+The decoder always works at auto regression
+
+636
+00:45:58.205 --> 00:46:00.735
+that it takes the previous input gives you the next output.
+
+637
+00:46:00.735 --> 00:46:04.295
+Next word, prediction task. How many words has to predict?
+
+638
+00:46:04.515 --> 00:46:05.535
+It has to take a call.
+
+639
+00:46:05.535 --> 00:46:09.815
+That will, it'll learn anyway, but then when it, uh, then
+
+640
+00:46:10.135 --> 00:46:13.015
+whenever it has to stop, it'll stop with some token, right?
+
+641
+00:46:13.015 --> 00:46:17.255
+Otherwise, if it is giving any token as, as a, you can say
+
+642
+00:46:17.255 --> 00:46:20.255
+that the output that can go next time a stamp as an input,
+
+643
+00:46:20.395 --> 00:46:22.895
+and it'll try to give you the next token as an output.
+
+644
+00:46:23.155 --> 00:46:24.975
+But whenever end token will come,
+
+645
+00:46:26.085 --> 00:46:28.305
+the decoder will understand that this is where I have
+
+646
+00:46:28.305 --> 00:46:31.105
+to end generating the next word and it'll stop here.
+
+647
+00:46:31.535 --> 00:46:33.945
+Similarly, why a start token is required
+
+648
+00:46:33.945 --> 00:46:37.235
+because you have to start with something decoder.
+
+649
+00:46:37.235 --> 00:46:38.715
+You know that, how does the decoder work
+
+650
+00:46:38.715 --> 00:46:39.755
+or auto regression works?
+
+651
+00:46:39.895 --> 00:46:41.475
+It takes the first input
+
+652
+00:46:41.615 --> 00:46:44.195
+and then it gives you the next word as an output.
+
+653
+00:46:44.455 --> 00:46:46.035
+But when you're starting the decoder,
+
+654
+00:46:46.035 --> 00:46:47.075
+there is no first word,
+
+655
+00:46:47.365 --> 00:46:49.475
+there is nothing you have right now in your hand.
+
+656
+00:46:50.015 --> 00:46:53.435
+You have the context vector, which is coming from the as a,
+
+657
+00:46:53.435 --> 00:46:55.235
+as a last hidden state output.
+
+658
+00:46:55.335 --> 00:46:57.475
+But current input you don't have anywhere.
+
+659
+00:46:57.475 --> 00:46:59.075
+You have not yet generated anything.
+
+660
+00:46:59.455 --> 00:47:02.395
+You have not yet generated anything. He the start token.
+
+661
+00:47:02.655 --> 00:47:07.475
+So these two special tokens are required to initiate theod
+
+662
+00:47:07.895 --> 00:47:11.675
+and two, uh, stop the Dakota, okay?
+
+663
+00:47:11.675 --> 00:47:13.835
+And that's why I have added in my vocabulary.
+
+664
+00:47:13.835 --> 00:47:17.075
+These two tokens are also start is, uh, here it is shown
+
+665
+00:47:17.135 --> 00:47:18.515
+as the zero index
+
+666
+00:47:18.695 --> 00:47:22.395
+and a stop is shown, uh, given as six index.
+
+667
+00:47:23.305 --> 00:47:27.235
+Okay? That's all. So indexes are language specific.
+
+668
+00:47:27.235 --> 00:47:28.795
+You have to remember, you may say that, sir,
+
+669
+00:47:28.995 --> 00:47:32.125
+here the indexes are, um, not unique.
+
+670
+00:47:32.185 --> 00:47:34.485
+For I also you are giving one for mail also,
+
+671
+00:47:34.485 --> 00:47:36.205
+you're giving one, you're correct,
+
+672
+00:47:36.585 --> 00:47:39.365
+but then it is a language specific vocabulary.
+
+673
+00:47:39.645 --> 00:47:41.085
+Whenever I have to process in quarter,
+
+674
+00:47:41.525 --> 00:47:43.005
+I will give the vocabulary of English.
+
+675
+00:47:43.285 --> 00:47:44.725
+Whenever I have to process the decoder,
+
+676
+00:47:45.005 --> 00:47:47.845
+I will give the vocabulary off Hindi.
+
+677
+00:47:48.185 --> 00:47:51.085
+So that's how these two will be completely separated,
+
+678
+00:47:51.105 --> 00:47:53.285
+and they don't have to, they will not interact
+
+679
+00:47:53.285 --> 00:47:56.165
+with each other anytime, so that they have to, uh,
+
+680
+00:47:56.165 --> 00:47:58.005
+they will, there will be any kind of confusion.
+
+681
+00:47:58.715 --> 00:48:00.685
+Okay? So it's a language specific.
+
+682
+00:48:00.685 --> 00:48:02.365
+So now you know that what is the next step?
+
+683
+00:48:02.425 --> 00:48:05.525
+One hot ENC coding. So first of all, whatever
+
+684
+00:48:06.085 --> 00:48:08.925
+sequence you have, you will create the sequence of indices.
+
+685
+00:48:08.955 --> 00:48:12.045
+Like I am going, is now represented as 1, 2, 3.
+
+686
+00:48:12.825 --> 00:48:15.005
+And then while feeding it as an input
+
+687
+00:48:15.005 --> 00:48:18.485
+to the LSTM in the encoder, I will be feed fed
+
+688
+00:48:18.505 --> 00:48:23.335
+as one hot vector, 1 0 0 0 y 0 0 0 4 dimension.
+
+689
+00:48:23.335 --> 00:48:24.815
+Because vocabulary size is four.
+
+690
+00:48:25.515 --> 00:48:27.015
+So per vocabulary size is 10,000.
+
+691
+00:48:27.085 --> 00:48:29.055
+This one half factor will be 10,000.
+
+692
+00:48:29.085 --> 00:48:33.185
+Similarly, M four dimension going four
+
+693
+00:48:33.185 --> 00:48:34.265
+dimension, likewise.
+
+694
+00:48:34.375 --> 00:48:36.775
+Okay? Now there will be,
+
+695
+00:48:36.845 --> 00:48:38.575
+this is the first sentence I am going.
+
+696
+00:48:38.575 --> 00:48:41.135
+Next sentence will be think for that.
+
+697
+00:48:41.165 --> 00:48:44.055
+Also, you can represent as four dimension, okay?
+
+698
+00:48:44.135 --> 00:48:46.175
+Which is not shown here, but you can understand it, right?
+
+699
+00:48:46.405 --> 00:48:49.255
+Similarly, the corresponding target language in the,
+
+700
+00:48:49.275 --> 00:48:53.255
+the sentence is then the first index is given.
+
+701
+00:48:53.275 --> 00:48:56.495
+For a start you can see one hot vector means zero index,
+
+702
+00:48:56.955 --> 00:49:01.455
+and then one is given for man j raha stop.
+
+703
+00:49:01.455 --> 00:49:05.015
+So now this is a seven dimensional 3, 3, 6, 1 7,
+
+704
+00:49:05.015 --> 00:49:06.375
+because seven two are there.
+
+705
+00:49:08.375 --> 00:49:11.225
+Okay? So this is how you have to start with.
+
+706
+00:49:11.225 --> 00:49:13.065
+This is how we will start. This one hot vector
+
+707
+00:49:13.135 --> 00:49:14.425
+will feed to the network.
+
+708
+00:49:15.125 --> 00:49:17.985
+Oh, sorry. Now you see that. How does it work?
+
+709
+00:49:18.045 --> 00:49:21.025
+So now what I will do is I will start training
+
+710
+00:49:21.025 --> 00:49:22.305
+because my input is ready.
+
+711
+00:49:22.425 --> 00:49:23.585
+I have done the pre-processing
+
+712
+00:49:23.805 --> 00:49:26.025
+and now I have to start first with the encoder.
+
+713
+00:49:26.025 --> 00:49:27.145
+I'll get the context vector
+
+714
+00:49:27.245 --> 00:49:28.905
+and then I'll do the decoder part.
+
+715
+00:49:29.055 --> 00:49:31.625
+Okay? So in the encoder, you know that, how does it work?
+
+716
+00:49:31.645 --> 00:49:32.825
+It just the LSTM network.
+
+717
+00:49:32.925 --> 00:49:34.785
+So you have to process the entire
+
+718
+00:49:35.585 --> 00:49:37.025
+sequence in a time stamp page.
+
+719
+00:49:37.165 --> 00:49:39.345
+Now here I have only three times stamp, I am going,
+
+720
+00:49:39.405 --> 00:49:43.625
+so X one will be IX two will be M and x three will be,
+
+721
+00:49:43.625 --> 00:49:45.225
+or XT will be going, that's all.
+
+722
+00:49:45.525 --> 00:49:49.955
+So here you can see that at the down that, uh, um,
+
+723
+00:49:51.695 --> 00:49:52.745
+here you can see that, right?
+
+724
+00:49:53.005 --> 00:49:57.095
+So I is fed as a one hot vector point
+
+725
+00:49:57.235 --> 00:49:58.895
+and just a second.
+
+726
+00:50:01.205 --> 00:50:02.205
+So,
+
+727
+00:50:05.995 --> 00:50:06.995
+Okay, Here,
+
+728
+00:50:07.625 --> 00:50:08.625
+Uh, why?
+
+729
+00:50:11.085 --> 00:50:15.305
+Anyway, so I, I fit J one hot vector, then m then going,
+
+730
+00:50:15.415 --> 00:50:16.705
+okay, it's very simple to understand.
+
+731
+00:50:16.705 --> 00:50:21.025
+We have been seeing it, uh, uh, since the RRNA network.
+
+732
+00:50:21.125 --> 00:50:23.745
+So now what will happen at the end of the encoder,
+
+733
+00:50:23.745 --> 00:50:24.905
+you will get a context vector.
+
+734
+00:50:25.125 --> 00:50:28.405
+As I said, LSTM always give you two output.
+
+735
+00:50:29.145 --> 00:50:31.445
+One is ct, another one is st.
+
+736
+00:50:32.125 --> 00:50:33.765
+Remember the LS TM cell architecture, right?
+
+737
+00:50:33.825 --> 00:50:37.045
+One is the upper line and one is the lower line. Okay?
+
+738
+00:50:37.705 --> 00:50:40.845
+So this context vector will have two different vectors.
+
+739
+00:50:40.845 --> 00:50:41.925
+So two different sensors.
+
+740
+00:50:42.225 --> 00:50:44.285
+One will represent the CT memory cell.
+
+741
+00:50:44.285 --> 00:50:48.205
+Another will represent the ht, okay, the output
+
+742
+00:50:48.205 --> 00:50:49.325
+of the previous timestamp.
+
+743
+00:50:50.065 --> 00:50:54.615
+Now, these two vectors will go as an input to the L SST M
+
+744
+00:50:54.615 --> 00:50:56.215
+because if it gives the two output,
+
+745
+00:50:56.295 --> 00:50:58.775
+LSTM also accept the two output from the backend
+
+746
+00:50:58.795 --> 00:51:00.455
+or from the previous timestamp, right?
+
+747
+00:51:00.755 --> 00:51:03.295
+So that's where that, that is what it'll come from here.
+
+748
+00:51:03.915 --> 00:51:05.895
+Now at the decoder time stamp, what will happen,
+
+749
+00:51:06.195 --> 00:51:08.095
+you'll start with the start token always.
+
+750
+00:51:08.595 --> 00:51:11.735
+So one hot vector for the start goes to the LSTM.
+
+751
+00:51:12.275 --> 00:51:16.255
+Now at the decoder time stamp, for every time stamp
+
+752
+00:51:16.545 --> 00:51:18.255
+after the L SST m, you'll put one,
+
+753
+00:51:18.255 --> 00:51:20.095
+you will put one fully connected network.
+
+754
+00:51:20.195 --> 00:51:22.335
+You can see that fully connected network,
+
+755
+00:51:23.645 --> 00:51:25.665
+how many neurons you will keep here.
+
+756
+00:51:25.875 --> 00:51:27.985
+It'll be equivalent to your vocabulary size
+
+757
+00:51:27.985 --> 00:51:31.705
+of Hindi corpus Hindi, because now your work is,
+
+758
+00:51:31.705 --> 00:51:35.765
+or decoders work is to produce the Hindi word, okay?
+
+759
+00:51:35.945 --> 00:51:39.365
+And the Hindi translation. So how many neurons here?
+
+760
+00:51:39.525 --> 00:51:42.365
+I had a seven because you can see vocabulary IG
+
+761
+00:51:42.365 --> 00:51:44.485
+7, 1, 2, 3, 4, 5, 6, 7,
+
+762
+00:51:44.895 --> 00:51:48.925
+hence 1, 2, 3, 4, 5, 6, 7, 7 neurons.
+
+763
+00:51:48.965 --> 00:51:51.965
+I will keep seven neurons I'll keep, okay?
+
+764
+00:51:52.425 --> 00:51:54.925
+And then you will obviously put the soft max
+
+765
+00:51:54.945 --> 00:51:56.565
+to get the probability distribution here.
+
+766
+00:51:56.985 --> 00:52:00.045
+And then whichever priorities higher, you will map it
+
+767
+00:52:00.555 --> 00:52:02.205
+with the corresponding index number.
+
+768
+00:52:02.505 --> 00:52:04.325
+And then you can say that, okay, for a start,
+
+769
+00:52:04.705 --> 00:52:08.005
+the first word, what is giving, uh, as an input is,
+
+770
+00:52:08.265 --> 00:52:09.675
+man, okay?
+
+771
+00:52:10.095 --> 00:52:13.115
+Now, now then you will move to the second time stamp.
+
+772
+00:52:13.115 --> 00:52:14.395
+You remember that these are all,
+
+773
+00:52:14.395 --> 00:52:16.315
+what you're seeing on the screen is happening at a time
+
+774
+00:52:16.365 --> 00:52:18.035
+stamp as wise manner.
+
+775
+00:52:18.295 --> 00:52:19.675
+All of these are not available
+
+776
+00:52:20.175 --> 00:52:21.995
+for you when you're processing a start.
+
+777
+00:52:22.465 --> 00:52:24.435
+This timestamp, these are nothing is available.
+
+778
+00:52:24.945 --> 00:52:27.195
+Once you got this output as a first timet stem,
+
+779
+00:52:27.225 --> 00:52:29.115
+then you will go for the second timestamp.
+
+780
+00:52:29.655 --> 00:52:30.835
+Now, here is a trick.
+
+781
+00:52:30.905 --> 00:52:32.275
+Here is a trick in the sequence
+
+782
+00:52:32.275 --> 00:52:34.235
+to sequence modeling training.
+
+783
+00:52:34.935 --> 00:52:36.835
+And this trick at the training is known
+
+784
+00:52:36.955 --> 00:52:39.195
+as teacher forcing, teacher forcing.
+
+785
+00:52:39.905 --> 00:52:42.075
+What is the trick? Trick is
+
+786
+00:52:42.105 --> 00:52:44.475
+that when you are doing the training of the sequence
+
+787
+00:52:44.475 --> 00:52:47.165
+to sequence modeling, there is a chance
+
+788
+00:52:47.705 --> 00:52:49.325
+and there will be a high chance.
+
+789
+00:52:49.605 --> 00:52:52.245
+I will show you that there will be very high chance
+
+790
+00:52:53.035 --> 00:52:56.765
+that whatever the, the, the model is generating
+
+791
+00:52:57.035 --> 00:52:59.485
+that is wrong, that is wrong.
+
+792
+00:52:59.785 --> 00:53:02.525
+For example, here for the start, it has generated me,
+
+793
+00:53:02.525 --> 00:53:03.525
+which looks correct here
+
+794
+00:53:03.525 --> 00:53:05.605
+because for i, it should have been me.
+
+795
+00:53:05.985 --> 00:53:07.485
+So which looks correct translation.
+
+796
+00:53:07.825 --> 00:53:10.245
+But look at here for me, what is, what it is generating?
+
+797
+00:53:10.505 --> 00:53:14.165
+It is saying that who, which is wrong, which is a wrong,
+
+798
+00:53:14.625 --> 00:53:15.765
+uh, translation.
+
+799
+00:53:16.545 --> 00:53:17.885
+So it should have been man,
+
+800
+00:53:18.625 --> 00:53:22.485
+but it is giving man rah, which is a wrong translation.
+
+801
+00:53:23.145 --> 00:53:26.245
+So what we do at the training time, we know that
+
+802
+00:53:26.475 --> 00:53:27.805
+that network is learning.
+
+803
+00:53:28.065 --> 00:53:30.685
+So it, it is very high, uh, chance
+
+804
+00:53:30.685 --> 00:53:34.525
+that it'll do initially many wrong predictions that
+
+805
+00:53:34.525 --> 00:53:37.765
+what is going to be the next token in the translation,
+
+806
+00:53:37.815 --> 00:53:39.005
+it'll do the wrong prediction.
+
+807
+00:53:39.005 --> 00:53:41.085
+It is very obvious, right? Because it is learning that.
+
+808
+00:53:41.585 --> 00:53:44.605
+So what we do, we,
+
+809
+00:53:45.725 --> 00:53:48.185
+we do the teacher forcing, teacher forcing say that
+
+810
+00:53:48.795 --> 00:53:50.785
+it'll still be the auto aggressive.
+
+811
+00:53:51.505 --> 00:53:53.015
+It'll still be the auto aggressive.
+
+812
+00:53:53.015 --> 00:53:56.695
+But my input for these decode you can see each time stem
+
+813
+00:53:57.485 --> 00:54:00.055
+will not depend on what output I'm getting
+
+814
+00:54:00.075 --> 00:54:01.375
+for each time stem, for example.
+
+815
+00:54:03.065 --> 00:54:05.845
+See here, luckily I'm getting ma as an output,
+
+816
+00:54:07.715 --> 00:54:08.735
+but here this ma,
+
+817
+00:54:08.735 --> 00:54:12.335
+when I'm feeding this ma is not depending on whatever it is
+
+818
+00:54:12.335 --> 00:54:14.605
+coming here, okay?
+
+819
+00:54:14.605 --> 00:54:17.085
+Just listen this particular point very carefully in the auto
+
+820
+00:54:17.085 --> 00:54:18.405
+regression, what happened in the
+
+821
+00:54:18.405 --> 00:54:19.565
+auto regression, what happened?
+
+822
+00:54:19.985 --> 00:54:22.245
+You process, first word, you get the output.
+
+823
+00:54:23.005 --> 00:54:24.925
+Whatever output you get here, you feed it
+
+824
+00:54:24.925 --> 00:54:27.435
+as an input, right?
+
+825
+00:54:27.695 --> 00:54:29.995
+And then whatever output you're getting at the second time,
+
+826
+00:54:30.025 --> 00:54:32.475
+stem will go as an input to the third time stem
+
+827
+00:54:33.015 --> 00:54:35.995
+and whatever output you get at the third time, stem will go
+
+828
+00:54:35.995 --> 00:54:37.395
+as an output for the fourth time stem.
+
+829
+00:54:37.395 --> 00:54:39.155
+This is called auto regression, okay?
+
+830
+00:54:39.155 --> 00:54:40.875
+And this is how all the LLM works.
+
+831
+00:54:41.255 --> 00:54:42.635
+All the language model works, right?
+
+832
+00:54:43.335 --> 00:54:45.675
+But then here it is slightly diff uh,
+
+833
+00:54:45.835 --> 00:54:47.075
+a slightly different idea
+
+834
+00:54:47.385 --> 00:54:50.635
+because this is, this is very much possible that okay,
+
+835
+00:54:50.635 --> 00:54:53.275
+your output may go wrong, okay?
+
+836
+00:54:53.275 --> 00:54:54.635
+Because you're training your network, right?
+
+837
+00:54:54.965 --> 00:54:58.715
+Hence what you will do is you will not feed the input
+
+838
+00:54:58.775 --> 00:55:01.235
+of these timestamp in the decoder
+
+839
+00:55:02.145 --> 00:55:03.205
+as you're getting the output,
+
+840
+00:55:03.225 --> 00:55:04.405
+you may get the output correct,
+
+841
+00:55:04.465 --> 00:55:06.365
+you may get the output wrong, but
+
+842
+00:55:06.365 --> 00:55:10.805
+because your label is available, see the label label
+
+843
+00:55:10.905 --> 00:55:14.365
+for I am going is it is available in my corpus,
+
+844
+00:55:14.985 --> 00:55:16.485
+it is available in my corus, right?
+
+845
+00:55:16.865 --> 00:55:17.965
+The ground truth is available.
+
+846
+00:55:18.745 --> 00:55:22.245
+So my input for the decoder will be as per the ground,
+
+847
+00:55:22.855 --> 00:55:25.485
+it'll not be as per the output which I'm getting here.
+
+848
+00:55:25.985 --> 00:55:27.965
+And we are forcing this one to happen.
+
+849
+00:55:28.105 --> 00:55:31.005
+And hence this is called as teacher forcing method.
+
+850
+00:55:31.355 --> 00:55:33.525
+This is called teacher forcing method. Okay?
+
+851
+00:55:33.665 --> 00:55:38.325
+Now this all this is only true at the training time, okay?
+
+852
+00:55:38.475 --> 00:55:40.245
+Because quickly you can say that those are,
+
+853
+00:55:40.265 --> 00:55:42.045
+if you will always feed the correct input,
+
+854
+00:55:42.045 --> 00:55:43.685
+then there is a high chance,
+
+855
+00:55:43.685 --> 00:55:45.765
+but model is not giving you the correct output
+
+856
+00:55:46.135 --> 00:55:47.205
+input you're feeding correct.
+
+857
+00:55:47.665 --> 00:55:50.245
+But at the test time, you will not have this ground truth.
+
+858
+00:55:50.925 --> 00:55:53.095
+Obviously test time, you don't have test time.
+
+859
+00:55:53.095 --> 00:55:55.575
+The model has learned and it is doing the
+
+860
+00:55:55.575 --> 00:55:56.935
+prediction on its own.
+
+861
+00:55:57.395 --> 00:55:58.615
+So I don't have the ground truth,
+
+862
+00:55:58.615 --> 00:56:00.015
+hence it has to depend always.
+
+863
+00:56:00.115 --> 00:56:02.175
+The last time aamp put only test time,
+
+864
+00:56:02.555 --> 00:56:06.575
+the teacher forcing is true only for the training time,
+
+865
+00:56:07.315 --> 00:56:08.455
+not for the testing time.
+
+866
+00:56:09.395 --> 00:56:10.645
+Okay? So this is what happens.
+
+867
+00:56:10.745 --> 00:56:14.525
+So at the training time, first we feed the start,
+
+868
+00:56:14.905 --> 00:56:17.725
+get the output, irrespective of what I'm getting here,
+
+869
+00:56:17.725 --> 00:56:20.405
+maybe correct may not be correct, I'll feed man,
+
+870
+00:56:21.035 --> 00:56:22.725
+then I get some output irrespective
+
+871
+00:56:22.745 --> 00:56:23.845
+of what I'm getting here.
+
+872
+00:56:24.155 --> 00:56:26.525
+I'll feed j then I'll feed raha
+
+873
+00:56:26.525 --> 00:56:28.725
+and why I'm feeding in this particular sequence,
+
+874
+00:56:28.725 --> 00:56:30.925
+because that is my ground truth, it is given in the data.
+
+875
+00:56:31.385 --> 00:56:34.845
+So Maha, who that I'll feed at one
+
+876
+00:56:34.845 --> 00:56:37.565
+by one time stamp wise manner, irrespective
+
+877
+00:56:37.565 --> 00:56:38.605
+of what I'm getting here.
+
+878
+00:56:38.785 --> 00:56:41.645
+But obviously once I process the entire sequence,
+
+879
+00:56:42.075 --> 00:56:44.685
+what I will do, I will calculate the loss,
+
+880
+00:56:44.995 --> 00:56:46.685
+I'll calculate the loss that, okay,
+
+881
+00:56:47.485 --> 00:56:49.685
+whatever I'm getting here as a probative distribution
+
+882
+00:56:49.705 --> 00:56:52.645
+and whatever was the correct output.
+
+883
+00:56:52.675 --> 00:56:56.245
+Like for example, let us see here, here it is, correct math,
+
+884
+00:56:56.545 --> 00:56:58.165
+it should a correct, correct output.
+
+885
+00:56:58.545 --> 00:57:00.325
+So loss should be less for this one.
+
+886
+00:57:00.745 --> 00:57:03.925
+But it is a wrong output. It is correct, it is wrong.
+
+887
+00:57:04.005 --> 00:57:07.605
+Likewise, for every output you will calculate this
+
+888
+00:57:08.035 --> 00:57:09.445
+categorical cross entropy.
+
+889
+00:57:09.465 --> 00:57:10.925
+You can, uh, remember, right?
+
+890
+00:57:11.395 --> 00:57:14.525
+Each value here in one hot vector will get multiplied
+
+891
+00:57:14.525 --> 00:57:17.005
+with the probability what we are getting from Softmax.
+
+892
+00:57:17.835 --> 00:57:19.565
+Okay? And that will add here,
+
+893
+00:57:19.565 --> 00:57:21.045
+that we'll add here, that we'll add here.
+
+894
+00:57:21.045 --> 00:57:22.805
+That will finally, you are getting the submission,
+
+895
+00:57:23.025 --> 00:57:24.365
+the collective loss,
+
+896
+00:57:24.375 --> 00:57:27.245
+which is coming from the whole sequence in the decoder.
+
+897
+00:57:27.985 --> 00:57:30.365
+And based on the loss, you start the back propagation.
+
+898
+00:57:30.385 --> 00:57:32.325
+You first do the back propagation in the decoder,
+
+899
+00:57:32.555 --> 00:57:34.445
+that will again go back in the encoder.
+
+900
+00:57:34.445 --> 00:57:35.965
+So you see that very complexity, right?
+
+901
+00:57:36.545 --> 00:57:39.565
+So first of all, the process itself is very, uh, the
+
+902
+00:57:39.665 --> 00:57:44.165
+for forward propagation itself is very, very, uh, slow.
+
+903
+00:57:44.195 --> 00:57:46.485
+That time stamp wise manner, you have
+
+904
+00:57:46.485 --> 00:57:48.245
+to first process encoder and then decode,
+
+905
+00:57:48.785 --> 00:57:50.605
+and then it comes the decoder, uh, sorry,
+
+906
+00:57:50.625 --> 00:57:52.325
+the back propagation part again, you have
+
+907
+00:57:52.325 --> 00:57:54.765
+to do all the back propagation through, uh,
+
+908
+00:57:54.765 --> 00:57:57.725
+back propagation in the case of, uh, decoder
+
+909
+00:57:57.905 --> 00:58:00.325
+and back propagation through time in the encoder.
+
+910
+00:58:00.945 --> 00:58:03.565
+So this is how the training completes.
+
+911
+00:58:03.705 --> 00:58:06.605
+And in the training time, as I said at the output,
+
+912
+00:58:06.625 --> 00:58:08.325
+you will apply the soft max here
+
+913
+00:58:09.225 --> 00:58:10.245
+at the fully connected layer,
+
+914
+00:58:10.305 --> 00:58:11.885
+the output you will apply the soft max
+
+915
+00:58:13.055 --> 00:58:15.075
+and uh, you have the ground truth.
+
+916
+00:58:15.095 --> 00:58:17.115
+So you have yt cap yt
+
+917
+00:58:17.455 --> 00:58:19.075
+and you calculate the loss between them.
+
+918
+00:58:19.145 --> 00:58:21.155
+This you have done many times early also.
+
+919
+00:58:21.175 --> 00:58:23.755
+So hopefully you will. Uh, so here also you have a vector
+
+920
+00:58:24.295 --> 00:58:27.275
+of seven values here also you have vector of seven values,
+
+921
+00:58:27.945 --> 00:58:30.075
+element wise, multiplication and addition.
+
+922
+00:58:30.075 --> 00:58:32.795
+You do, and that is how you get the loss, loss
+
+923
+00:58:32.815 --> 00:58:34.115
+for a particular timestamp.
+
+924
+00:58:34.295 --> 00:58:36.915
+And then you do for second, you store it, do
+
+925
+00:58:36.915 --> 00:58:39.755
+for the second time stem, also store it third time stem
+
+926
+00:58:40.005 --> 00:58:43.435
+store it, fourth, fifth, add all of them, okay?
+
+927
+00:58:43.435 --> 00:58:47.085
+And that is how you get the total loss, right?
+
+928
+00:58:47.585 --> 00:58:50.805
+So this is, this is how the training of the, uh, encoder,
+
+929
+00:58:50.805 --> 00:58:53.445
+decoder, uh, network happens.
+
+930
+00:58:54.395 --> 00:58:56.725
+Okay? Now, uh, let me know,
+
+931
+00:58:56.745 --> 00:58:59.045
+let me know if you have any query in this one first, that
+
+932
+00:58:59.065 --> 00:59:01.245
+how does it work at the, in quarter time,
+
+933
+00:59:04.205 --> 00:59:05.505
+I'm sorry, training time.
+
+934
+00:59:10.735 --> 00:59:14.355
+So, uh, this home, which is, uh, not correct,
+
+935
+00:59:15.175 --> 00:59:17.115
+how it is rectified going for this.
+
+936
+00:59:17.775 --> 00:59:20.915
+So multiple duration it takes and maximum probability
+
+937
+00:59:21.090 --> 00:59:22.325
+Takes in, correct?
+
+938
+00:59:22.325 --> 00:59:25.085
+Correct. See, the idea is same idea is not being changed.
+
+939
+00:59:25.085 --> 00:59:27.965
+That once I'm putting the fully connected network here,
+
+940
+00:59:27.965 --> 00:59:31.205
+putting the soft max giving me the probability, yes, sir,
+
+941
+00:59:31.205 --> 00:59:35.445
+whichever priority is highest, I'm just matching, uh, the,
+
+942
+00:59:35.445 --> 00:59:36.885
+converting them as one hot vector
+
+943
+00:59:36.985 --> 00:59:40.285
+and that is my next word or being predicted.
+
+944
+00:59:40.285 --> 00:59:41.365
+Here it is,
+
+945
+00:59:41.545 --> 00:59:43.685
+it may be a correct word prediction, it may not be.
+
+946
+00:59:43.805 --> 00:59:46.405
+I mean, but the idea itself, I'm not changing it is true.
+
+947
+00:59:47.105 --> 00:59:49.485
+But what happened once you do it for a hundred
+
+948
+00:59:50.125 --> 00:59:53.405
+thousand times training slowly, it start adapting slowly
+
+949
+00:59:53.985 --> 00:59:57.445
+and has started giving you the correct, yeah, yeah, sure.
+
+950
+00:59:57.735 --> 00:59:59.005
+Thank you. Yes.
+
+951
+01:00:03.455 --> 01:00:06.265
+Okay. So we understood right that
+
+952
+01:00:06.285 --> 01:00:08.105
+how the teacher forcing is working that
+
+953
+01:00:08.125 --> 01:00:10.745
+and the, at the time of decoder, the inputs
+
+954
+01:00:10.745 --> 01:00:13.745
+of the decoder is independent of the output of
+
+955
+01:00:13.745 --> 01:00:16.795
+what they're getting at each time stamp, okay?
+
+956
+01:00:17.175 --> 01:00:21.085
+So you are forcing the input to be correct.
+
+957
+01:00:21.465 --> 01:00:23.045
+Now, see, this is not compulsory.
+
+958
+01:00:23.265 --> 01:00:25.285
+You can make it independent also,
+
+959
+01:00:25.745 --> 01:00:28.365
+and you can argue that sir, anyway, you are training
+
+960
+01:00:28.365 --> 01:00:29.565
+that one anyway.
+
+961
+01:00:29.565 --> 01:00:31.365
+You are training this network. So hence maybe
+
+962
+01:00:32.495 --> 01:00:34.675
+you're doing sub iterations.
+
+963
+01:00:34.925 --> 01:00:36.235
+It'll adapt that also.
+
+964
+01:00:37.255 --> 01:00:39.835
+And you are correct if suppose you're thinking in that way.
+
+965
+01:00:39.895 --> 01:00:41.035
+You are absolutely correct.
+
+966
+01:00:41.375 --> 01:00:43.635
+So teacher forcing ensures that
+
+967
+01:00:44.185 --> 01:00:45.955
+your convergence should happen fast.
+
+968
+01:00:46.135 --> 01:00:48.835
+Why? Because suppose you're feeding the correct input.
+
+969
+01:00:48.835 --> 01:00:50.995
+See, you don't have any control on the output
+
+970
+01:00:50.995 --> 01:00:52.475
+unless you have not trained the network.
+
+971
+01:00:53.285 --> 01:00:57.795
+It'll go wrong and it'll go very, uh, uh, go wrong in every
+
+972
+01:00:58.505 --> 01:01:00.995
+time stamp also in the initial iterations.
+
+973
+01:01:01.895 --> 01:01:05.115
+But because you know the ground rules, you don't want
+
+974
+01:01:05.115 --> 01:01:06.595
+to feed the wrong input.
+
+975
+01:01:07.695 --> 01:01:11.075
+So how will it help? It'll help to converge you faster.
+
+976
+01:01:12.145 --> 01:01:14.515
+What will happen if you not do this one in this way
+
+977
+01:01:14.515 --> 01:01:17.755
+and you depend on the last hidden state output,
+
+978
+01:01:18.485 --> 01:01:19.755
+it'll still converse.
+
+979
+01:01:20.535 --> 01:01:22.835
+But suppose here it is taking thousand titration,
+
+980
+01:01:22.895 --> 01:01:25.995
+it may take 2000 titration, okay?
+
+981
+01:01:26.095 --> 01:01:28.355
+I'm just, uh, just, just a number of which I have thrown,
+
+982
+01:01:28.855 --> 01:01:30.515
+but it'll take more time.
+
+983
+01:01:31.385 --> 01:01:35.555
+Teacher forcing is the way of, of, uh,
+
+984
+01:01:35.695 --> 01:01:37.435
+at least feeding the correct input.
+
+985
+01:01:37.535 --> 01:01:40.915
+So let us not feed the wrong input, okay?
+
+986
+01:01:40.935 --> 01:01:43.795
+And then network will put the effort
+
+987
+01:01:43.815 --> 01:01:46.515
+to learning the weights here to get the correct output
+
+988
+01:01:46.515 --> 01:01:48.715
+because input is being fed every time correctly.
+
+989
+01:01:49.215 --> 01:01:51.795
+Now, suppose input is also wrong, then it may have
+
+990
+01:01:51.815 --> 01:01:56.275
+to learn it even, uh, even more number of hydrations
+
+991
+01:01:56.375 --> 01:01:57.595
+and maybe there is a chance
+
+992
+01:01:57.595 --> 01:01:59.115
+that it'll converge and it'll converge.
+
+993
+01:01:59.735 --> 01:02:02.075
+But yeah, that is what is the reason why we do this
+
+994
+01:02:02.075 --> 01:02:03.475
+forcing, okay?
+
+995
+01:02:03.695 --> 01:02:06.395
+But that we don't do at the, at the inference time
+
+996
+01:02:06.905 --> 01:02:09.155
+that we don't do at the inference time or the test time,
+
+997
+01:02:09.155 --> 01:02:11.515
+because test time, the target is not available.
+
+998
+01:02:11.575 --> 01:02:14.275
+Say that I am going and I don't have this corresponding
+
+999
+01:02:14.275 --> 01:02:18.635
+measure, or it can be like, uh, anything else.
+
+1000
+01:02:18.775 --> 01:02:21.885
+So what I'm saying is if some, some other sentence
+
+1001
+01:02:22.425 --> 01:02:26.325
+you are going then okay, re that is not available
+
+1002
+01:02:26.355 --> 01:02:27.365
+with me, right?
+
+1003
+01:02:27.505 --> 01:02:31.245
+So I can't feed anything, means I can't force
+
+1004
+01:02:31.425 --> 01:02:32.965
+to feed the input.
+
+1005
+01:02:33.685 --> 01:02:35.485
+I have to rely on what I'm getting the output,
+
+1006
+01:02:35.485 --> 01:02:37.285
+for example, at the test time.
+
+1007
+01:02:37.425 --> 01:02:40.205
+Now I'm showing you, if the start is giving you map,
+
+1008
+01:02:40.235 --> 01:02:41.925
+then mat itself will go here.
+
+1009
+01:02:42.435 --> 01:02:47.045
+Okay? So in the, in the test time, uh, it,
+
+1010
+01:02:47.105 --> 01:02:49.285
+it looks something like that.
+
+1011
+01:02:49.505 --> 01:02:51.245
+It looks something like that though output,
+
+1012
+01:02:51.245 --> 01:02:53.885
+what you're getting here, uh, at the, uh,
+
+1013
+01:02:54.075 --> 01:02:56.925
+each time stamp will go as an input to the next time stamp.
+
+1014
+01:02:57.225 --> 01:02:59.165
+So your network structure is like this,
+
+1015
+01:03:00.495 --> 01:03:02.575
+although it is not shown the last time.
+
+1016
+01:03:02.755 --> 01:03:04.215
+Uh, last state in state, uh,
+
+1017
+01:03:04.445 --> 01:03:06.975
+last time stamp output is being the input
+
+1018
+01:03:06.975 --> 01:03:08.015
+for the next timet time.
+
+1019
+01:03:08.015 --> 01:03:12.475
+This is the structure of your network at the test time,
+
+1020
+01:03:12.485 --> 01:03:14.555
+which is not there at the train time
+
+1021
+01:03:14.555 --> 01:03:17.635
+because we are forcing the input to be my ground truth.
+
+1022
+01:03:18.055 --> 01:03:20.155
+And this is the only change, okay?
+
+1023
+01:03:20.495 --> 01:03:21.675
+Uh, because at the test time,
+
+1024
+01:03:21.905 --> 01:03:23.755
+your ground truth are not available.
+
+1025
+01:03:24.215 --> 01:03:27.155
+So we have to depend on what word I have generated so far,
+
+1026
+01:03:27.375 --> 01:03:31.765
+and accordingly I have to generate the next word, okay?
+
+1027
+01:03:33.845 --> 01:03:35.615
+Okay. This we have seen earlier also,
+
+1028
+01:03:35.635 --> 01:03:38.375
+but in the case of other, other context,
+
+1029
+01:03:38.595 --> 01:03:40.695
+but here we are seeing encoded decoded context.
+
+1030
+01:03:40.715 --> 01:03:43.305
+That's all. Okay?
+
+1031
+01:03:43.405 --> 01:03:46.505
+So now, uh, with this, uh, we have understood that
+
+1032
+01:03:46.505 --> 01:03:49.705
+how the training and testing happens for in,
+
+1033
+01:03:49.845 --> 01:03:51.465
+for the sequence to sequence model.
+
+1034
+01:03:51.965 --> 01:03:54.265
+And we have taken the case of machine translation.
+
+1035
+01:03:54.285 --> 01:03:56.065
+It can be some other case also like
+
+1036
+01:03:56.465 --> 01:03:58.065
+summarization, question answering and so on.
+
+1037
+01:03:58.065 --> 01:03:59.585
+But it is a machine translation case.
+
+1038
+01:04:00.405 --> 01:04:03.225
+Now, uh, the next two slide I'm showing you, uh, two,
+
+1039
+01:04:03.925 --> 01:04:06.465
+you can say that the improvements which is possible
+
+1040
+01:04:06.975 --> 01:04:09.025
+with the sequence to sequence model the version,
+
+1041
+01:04:09.025 --> 01:04:10.065
+what we have seen so far.
+
+1042
+01:04:10.125 --> 01:04:13.385
+So here I was feeding the input as one hot vector,
+
+1043
+01:04:13.485 --> 01:04:16.305
+and you know that one hot vector has its own problem, right?
+
+1044
+01:04:16.765 --> 01:04:19.185
+The vector itself is very high dimensional
+
+1045
+01:04:19.205 --> 01:04:20.425
+and it says sparse vector.
+
+1046
+01:04:20.495 --> 01:04:23.265
+That many value will be zero, only one value will be one.
+
+1047
+01:04:23.615 --> 01:04:26.865
+Okay? Possible that this vector size is 1000
+
+1048
+01:04:26.965 --> 01:04:28.425
+or 10,000 or one lag.
+
+1049
+01:04:28.605 --> 01:04:30.065
+All those things are possible. I'll show you.
+
+1050
+01:04:30.645 --> 01:04:32.505
+If the vocabulary size is very high,
+
+1051
+01:04:32.815 --> 01:04:35.545
+then this whole vector is zeros, vector
+
+1052
+01:04:35.605 --> 01:04:37.505
+of zeros except one value somewhere.
+
+1053
+01:04:37.505 --> 01:04:40.205
+It'll be one which is not good for the network.
+
+1054
+01:04:40.345 --> 01:04:41.965
+We have talked about it. And then we
+
+1055
+01:04:41.985 --> 01:04:43.005
+use the embedding layer.
+
+1056
+01:04:43.545 --> 01:04:47.605
+So the quick, uh, the quick, uh, improvement, what we can do
+
+1057
+01:04:47.795 --> 01:04:50.085
+with the same, uh, sequence
+
+1058
+01:04:50.085 --> 01:04:52.445
+to sequence model is we can add the embedding layer,
+
+1059
+01:04:52.675 --> 01:04:54.325
+embedding layer at the encoder side,
+
+1060
+01:04:54.325 --> 01:04:56.405
+also embedding layer at the decoded side also.
+
+1061
+01:04:56.675 --> 01:05:01.045
+Okay? And this, this helps us to first convert my,
+
+1062
+01:05:01.465 --> 01:05:04.325
+uh, input, which is a high dimensional spars vector into the
+
+1063
+01:05:04.325 --> 01:05:05.445
+low dimensional dense vector,
+
+1064
+01:05:06.265 --> 01:05:09.165
+and then do the same thing what we were doing in the encoder
+
+1065
+01:05:09.185 --> 01:05:11.125
+as well as same thing as well in the decode.
+
+1066
+01:05:11.195 --> 01:05:13.645
+Nothing changes only the encoder layer.
+
+1067
+01:05:13.905 --> 01:05:16.765
+It helps us to represent my input in a better way.
+
+1068
+01:05:16.825 --> 01:05:20.765
+And hence the learning will happen faster, okay?
+
+1069
+01:05:20.965 --> 01:05:23.205
+Learning will happen faster, network will converge faster.
+
+1070
+01:05:23.585 --> 01:05:27.245
+You may require less number of iterations to converge. Okay?
+
+1071
+01:05:27.245 --> 01:05:30.125
+So this is, this is one of the quick, uh, improvement.
+
+1072
+01:05:30.125 --> 01:05:31.845
+What we can do in the sequence to sequence model.
+
+1073
+01:05:32.585 --> 01:05:37.485
+The other other, uh, uh, possibility of the improvement is,
+
+1074
+01:05:37.785 --> 01:05:42.525
+is you can use the stacked layer of the, uh, encoder
+
+1075
+01:05:42.525 --> 01:05:44.885
+and decoder, encoder and decoder.
+
+1076
+01:05:45.025 --> 01:05:46.165
+Now see the stack layer.
+
+1077
+01:05:46.225 --> 01:05:49.645
+You remember in the case of uh, um, uh,
+
+1078
+01:05:49.645 --> 01:05:52.445
+what we are doing at the a NN, what we are doing.
+
+1079
+01:05:52.445 --> 01:05:53.565
+Suppose we have an input.
+
+1080
+01:05:53.945 --> 01:05:56.885
+So two inputs, then we were putting the say,
+
+1081
+01:05:57.105 --> 01:05:59.935
+uh, just a second.
+
+1082
+01:06:02.475 --> 01:06:02.695
+So
+
+1083
+01:06:07.565 --> 01:06:09.065
+Now let me see something else.
+
+1084
+01:06:09.065 --> 01:06:11.105
+Yeah. So, uh, I have first hidden layer
+
+1085
+01:06:11.105 --> 01:06:13.225
+where I have a neuron, say 1, 2, 3.
+
+1086
+01:06:13.935 --> 01:06:15.785
+Okay? I can have the second layer,
+
+1087
+01:06:16.065 --> 01:06:19.545
+I can have here 1, 2, 3, and four neuron.
+
+1088
+01:06:19.975 --> 01:06:22.145
+Then I can have the final hit layer, something like that.
+
+1089
+01:06:22.565 --> 01:06:24.745
+And then you know that how they're connected, right?
+
+1090
+01:06:25.325 --> 01:06:26.785
+So fully connected network,
+
+1091
+01:06:28.255 --> 01:06:30.415
+fine and so on.
+
+1092
+01:06:30.515 --> 01:06:32.095
+So sorry for the bad drawing,
+
+1093
+01:06:32.095 --> 01:06:33.375
+but then this is a fully connected network.
+
+1094
+01:06:34.635 --> 01:06:37.255
+So what I'm trying to say, this is the first hidden layer.
+
+1095
+01:06:37.845 --> 01:06:38.895
+This is the first hidden layer.
+
+1096
+01:06:38.895 --> 01:06:41.175
+This is the second head layer, okay?
+
+1097
+01:06:41.355 --> 01:06:44.095
+But then so far what we have been seeing in the LSTM,
+
+1098
+01:06:44.225 --> 01:06:48.055
+we've always had only one head layer
+
+1099
+01:06:48.815 --> 01:06:49.715
+if you can, uh,
+
+1100
+01:06:54.165 --> 01:06:57.635
+sorry, yeah, you can see that LSTM only one LSTM layer.
+
+1101
+01:06:58.715 --> 01:07:00.975
+But possible that, like we do in the case
+
+1102
+01:07:00.975 --> 01:07:03.055
+of fully corrected network here also we do
+
+1103
+01:07:03.405 --> 01:07:06.775
+that we can add three LSTM layers on top of each other.
+
+1104
+01:07:06.835 --> 01:07:08.815
+One after the, like we were doing in the case of A
+
+1105
+01:07:08.815 --> 01:07:11.205
+and n, it's a similar setting, okay?
+
+1106
+01:07:11.705 --> 01:07:15.805
+But the only difference is now it has to be, it, it, it,
+
+1107
+01:07:15.935 --> 01:07:18.765
+it'll internally, it'll look like this.
+
+1108
+01:07:18.825 --> 01:07:20.005
+If you see the architecture,
+
+1109
+01:07:20.065 --> 01:07:23.085
+now I have three L SST M layer stacked on top of each other.
+
+1110
+01:07:23.475 --> 01:07:25.805
+Okay? First hidden layer, second hidden layer,
+
+1111
+01:07:25.975 --> 01:07:28.165
+third hidden layer like we were doing in the case
+
+1112
+01:07:28.165 --> 01:07:29.485
+of a n we have here also,
+
+1113
+01:07:29.485 --> 01:07:32.045
+but now LSTM has special architecture.
+
+1114
+01:07:32.045 --> 01:07:34.325
+It'll process time stamp one by one,
+
+1115
+01:07:34.465 --> 01:07:36.565
+and each LS TM will give you the context vector.
+
+1116
+01:07:36.705 --> 01:07:40.925
+Two vectors, one ct, another st that has to come from here.
+
+1117
+01:07:40.955 --> 01:07:42.285
+Also here also here also.
+
+1118
+01:07:42.505 --> 01:07:44.165
+So what happened in the case of decoder?
+
+1119
+01:07:44.865 --> 01:07:46.885
+In the case of decoder, when you are you,
+
+1120
+01:07:47.185 --> 01:07:49.365
+if you suppose you're keeping three stacked hidden layer
+
+1121
+01:07:49.365 --> 01:07:50.765
+here, you also have
+
+1122
+01:07:50.765 --> 01:07:53.725
+to have the three stacked LSTM layer in the decoder also
+
+1123
+01:07:53.725 --> 01:07:57.045
+because each context vector will go as an input for
+
+1124
+01:07:57.045 --> 01:07:58.245
+that particular layer.
+
+1125
+01:07:59.025 --> 01:08:00.925
+You can say why all these things are required,
+
+1126
+01:08:00.945 --> 01:08:02.845
+why only three, why can't, why have 10?
+
+1127
+01:08:02.845 --> 01:08:03.845
+Everything is possible.
+
+1128
+01:08:03.865 --> 01:08:06.805
+You can keep 10, you can keep five, you can keep one also.
+
+1129
+01:08:07.585 --> 01:08:08.805
+And why? The answer
+
+1130
+01:08:08.905 --> 01:08:12.045
+of why is it'll understand the context better, okay?
+
+1131
+01:08:12.345 --> 01:08:16.565
+Uh, because the context vector, what is coming here, uh, uh,
+
+1132
+01:08:16.745 --> 01:08:18.705
+uh, uh, uh,
+
+1133
+01:08:18.705 --> 01:08:20.985
+coming here will be slightly different from here.
+
+1134
+01:08:21.225 --> 01:08:23.465
+Slightly different from here. In that in a, in a way,
+
+1135
+01:08:23.465 --> 01:08:24.945
+what we are trying to do is we are trying
+
+1136
+01:08:24.965 --> 01:08:28.105
+to capture the different information from my input
+
+1137
+01:08:28.525 --> 01:08:31.825
+and then trying to feed it to the decode.
+
+1138
+01:08:32.325 --> 01:08:34.105
+And it may help. It may help.
+
+1139
+01:08:34.105 --> 01:08:35.945
+And there is no guarantee that three will work
+
+1140
+01:08:35.965 --> 01:08:37.385
+or only one is sufficient.
+
+1141
+01:08:37.385 --> 01:08:40.185
+That is all experimental that you have to hit
+
+1142
+01:08:40.185 --> 01:08:43.065
+and try, uh, do the, uh, experimentation
+
+1143
+01:08:43.065 --> 01:08:46.105
+and get to know that that one layer is sufficient,
+
+1144
+01:08:46.125 --> 01:08:50.475
+or two layer or three year can also work well, okay?
+
+1145
+01:08:50.535 --> 01:08:53.195
+But these are the another kind of possibility
+
+1146
+01:08:53.345 --> 01:08:54.355
+that you can improve.
+
+1147
+01:08:54.355 --> 01:08:57.195
+Suppose your model is not working well for some reason
+
+1148
+01:08:57.195 --> 01:08:59.675
+because of the data is so complex, very long, okay?
+
+1149
+01:08:59.675 --> 01:09:03.275
+And so on. So maybe the two layers of the LSTM three layers.
+
+1150
+01:09:03.275 --> 01:09:04.715
+So you, but usually what I've seen
+
+1151
+01:09:04.715 --> 01:09:06.915
+that if you will increase more than four layers
+
+1152
+01:09:06.935 --> 01:09:10.315
+or five layers of LSTM that it work will become so complex,
+
+1153
+01:09:11.015 --> 01:09:13.755
+so complex and it'll be too slow, okay?
+
+1154
+01:09:14.095 --> 01:09:17.595
+It very difficult to train scale this kind of network
+
+1155
+01:09:17.775 --> 01:09:21.585
+for very huge dataset, okay?
+
+1156
+01:09:22.255 --> 01:09:23.265
+Because you have
+
+1157
+01:09:23.265 --> 01:09:25.705
+to process everything in a timestamp wise manner.
+
+1158
+01:09:25.925 --> 01:09:28.065
+And then you have three layers here also here also,
+
+1159
+01:09:28.065 --> 01:09:30.305
+it'll take some time here also here also, once it is done,
+
+1160
+01:09:30.305 --> 01:09:32.665
+then it'll go here, then it'll go here
+
+1161
+01:09:32.685 --> 01:09:34.945
+and it takes a lot of time, three times extra.
+
+1162
+01:09:35.325 --> 01:09:37.105
+It is taking here for encoder.
+
+1163
+01:09:37.105 --> 01:09:39.265
+And similarly for decoded, we got three stack layers.
+
+1164
+01:09:40.325 --> 01:09:42.745
+So yeah, but this is one of the, you can say
+
+1165
+01:09:42.745 --> 01:09:43.865
+that the architectural way,
+
+1166
+01:09:43.865 --> 01:09:45.105
+you can put some more hidden layer
+
+1167
+01:09:45.105 --> 01:09:46.465
+and maybe it'll be able
+
+1168
+01:09:46.465 --> 01:09:48.945
+to understand the input in a better rest.
+
+1169
+01:09:48.945 --> 01:09:51.805
+Everything is same rest, everything is same.
+
+1170
+01:09:54.455 --> 01:09:58.065
+Okay? So now, uh, we are moving towards the
+
+1171
+01:09:59.145 --> 01:10:01.915
+limitations that what happens when,
+
+1172
+01:10:02.125 --> 01:10:04.715
+where exactly these sequential sequence
+
+1173
+01:10:04.715 --> 01:10:06.395
+to sequence model may fail.
+
+1174
+01:10:06.995 --> 01:10:10.635
+I mean, sequence to sequence model was, was very successful,
+
+1175
+01:10:10.825 --> 01:10:13.155
+very much successful for the machine translation
+
+1176
+01:10:13.655 --> 01:10:16.795
+or summarization sort of tasks, which we were not able
+
+1177
+01:10:16.795 --> 01:10:19.475
+to do in a good way before this.
+
+1178
+01:10:19.535 --> 01:10:22.435
+Uh, 2014, this network was proposed.
+
+1179
+01:10:22.935 --> 01:10:24.715
+But again, uh, you know
+
+1180
+01:10:24.715 --> 01:10:28.235
+that there are always certain limitations, okay?
+
+1181
+01:10:28.235 --> 01:10:29.995
+There is some advantage, which we have seen
+
+1182
+01:10:29.995 --> 01:10:32.315
+that now we are able to process the variable length
+
+1183
+01:10:32.595 --> 01:10:35.075
+sequences and input also output also many to many.
+
+1184
+01:10:35.535 --> 01:10:39.275
+But the problem is again, the long range dependencies,
+
+1185
+01:10:39.765 --> 01:10:42.795
+again the same problem, but in the different context,
+
+1186
+01:10:43.455 --> 01:10:46.435
+the long range dependencies problem we have seen
+
+1187
+01:10:47.185 --> 01:10:49.955
+with respect to, uh, say that, okay,
+
+1188
+01:10:50.535 --> 01:10:52.915
+my LSTM is forgetting.
+
+1189
+01:10:53.195 --> 01:10:54.995
+RNN is forgetting something like that.
+
+1190
+01:10:55.425 --> 01:10:58.435
+Here it is slightly different context in the context
+
+1191
+01:10:58.655 --> 01:11:00.435
+of the target sequence.
+
+1192
+01:11:00.665 --> 01:11:03.395
+This long range dependencies problem, uh,
+
+1193
+01:11:03.395 --> 01:11:04.755
+we are going to discuss.
+
+1194
+01:11:04.815 --> 01:11:07.195
+So now to dis before I will go
+
+1195
+01:11:07.255 --> 01:11:09.755
+and explain with the architecture,
+
+1196
+01:11:10.585 --> 01:11:12.995
+just let me read this paragraph for you
+
+1197
+01:11:13.045 --> 01:11:16.925
+and let us, uh, see that what is the problem in this, uh,
+
+1198
+01:11:17.265 --> 01:11:18.405
+if I process this one.
+
+1199
+01:11:18.465 --> 01:11:20.085
+So here the paragraph says that
+
+1200
+01:11:20.705 --> 01:11:22.685
+it is about the faculty development programs.
+
+1201
+01:11:23.225 --> 01:11:27.165
+So faculty development programs offer a double-edged sword.
+
+1202
+01:11:27.745 --> 01:11:32.165
+On the one hand, they can hone teaching skills, foster
+
+1203
+01:11:32.685 --> 01:11:35.765
+research, and a spark innovation leading
+
+1204
+01:11:35.825 --> 01:11:38.205
+to higher student engagement and success.
+
+1205
+01:11:38.935 --> 01:11:42.945
+However, poorly designed programs can be costly,
+
+1206
+01:11:43.335 --> 01:11:46.505
+time consuming and disruptive, potentially
+
+1207
+01:11:47.065 --> 01:11:49.105
+demotivating participants.
+
+1208
+01:11:49.615 --> 01:11:52.465
+Finding the right balance between effective training
+
+1209
+01:11:53.125 --> 01:11:57.425
+and respective educators autonomy is crucial
+
+1210
+01:11:57.685 --> 01:12:00.065
+for ripping the benefits
+
+1211
+01:12:00.065 --> 01:12:02.625
+of faculty development while minimizing drawbacks.
+
+1212
+01:12:03.925 --> 01:12:07.975
+Okay? Alright, so now what is the goal paragraph?
+
+1213
+01:12:07.975 --> 01:12:09.695
+All of you have read, I have read it for you.
+
+1214
+01:12:10.325 --> 01:12:14.015
+Goal is convert this entire paragraph into Hindi
+
+1215
+01:12:14.655 --> 01:12:16.955
+and say that I have, I have given you this paragraph,
+
+1216
+01:12:17.335 --> 01:12:20.395
+you have read the complete paragraph and now it's gone.
+
+1217
+01:12:21.945 --> 01:12:24.805
+Now I'll ask you, okay, write everything in the Hindi
+
+1218
+01:12:25.225 --> 01:12:28.285
+or any language, whatever, you know, okay.
+
+1219
+01:12:30.335 --> 01:12:33.075
+Now the real problem, real problem.
+
+1220
+01:12:33.175 --> 01:12:36.155
+You must have now felt it right? I can do it.
+
+1221
+01:12:36.185 --> 01:12:39.195
+It's not like I can't, uh, or you can't, uh, convert that
+
+1222
+01:12:39.255 --> 01:12:40.795
+and convert them into the Hindi
+
+1223
+01:12:40.975 --> 01:12:42.835
+or some other language, what you know.
+
+1224
+01:12:42.865 --> 01:12:46.795
+Well, problem is the context for so long.
+
+1225
+01:12:47.715 --> 01:12:50.115
+I can remember Faculty development program.
+
+1226
+01:12:51.255 --> 01:12:54.435
+Uh, uh, it has two types of side,
+
+1227
+01:12:54.535 --> 01:12:57.195
+the benefit also disadvantage also we talked about.
+
+1228
+01:12:58.015 --> 01:13:00.595
+And at the last it was talking about it should have a right
+
+1229
+01:13:00.595 --> 01:13:02.835
+balance between the faculty autonomy,
+
+1230
+01:13:02.835 --> 01:13:04.035
+something it was talking about.
+
+1231
+01:13:04.715 --> 01:13:06.195
+I don't remember the exact word.
+
+1232
+01:13:06.195 --> 01:13:08.555
+First of all, very difficult for anyone, right?
+
+1233
+01:13:09.575 --> 01:13:13.715
+Second thing that, uh, second thing, uh, uh,
+
+1234
+01:13:14.175 --> 01:13:16.595
+if I don't remember the exact word also, that is fine,
+
+1235
+01:13:16.655 --> 01:13:18.395
+but many things, many context.
+
+1236
+01:13:18.665 --> 01:13:20.715
+Also overall context, I can still remember,
+
+1237
+01:13:21.215 --> 01:13:25.635
+but many context I in between, I might have forgotten.
+
+1238
+01:13:25.795 --> 01:13:28.435
+I mean, I can't recall because I have just read it for once.
+
+1239
+01:13:28.915 --> 01:13:29.995
+I just read it for once
+
+1240
+01:13:30.175 --> 01:13:32.435
+and then I, I am, I'm being asked
+
+1241
+01:13:32.435 --> 01:13:34.715
+to write everything in the other language.
+
+1242
+01:13:35.625 --> 01:13:37.395
+This is the real problem for the human.
+
+1243
+01:13:37.505 --> 01:13:39.595
+This is the real problem for the human right.
+
+1244
+01:13:40.935 --> 01:13:43.275
+Now, the same problem applies on this,
+
+1245
+01:13:43.415 --> 01:13:45.595
+uh, sequence to sequence model.
+
+1246
+01:13:45.705 --> 01:13:48.965
+Also, same problem applies. What is the problem?
+
+1247
+01:13:49.225 --> 01:13:51.805
+Let us see once again. So what is happening?
+
+1248
+01:13:51.805 --> 01:13:56.365
+What the problem is that I am feeding this entire
+
+1249
+01:13:56.885 --> 01:14:01.165
+corpus or entire paragraph in my encoder entire paragraph
+
+1250
+01:14:01.165 --> 01:14:02.285
+in my enc encoder.
+
+1251
+01:14:02.945 --> 01:14:04.845
+So first time faculty will be the input.
+
+1252
+01:14:05.225 --> 01:14:07.285
+Second time development will be the input.
+
+1253
+01:14:07.285 --> 01:14:09.445
+Third time program, fourth time offer.
+
+1254
+01:14:09.515 --> 01:14:14.045
+Then, uh, then double, then s then sword, then on, so on,
+
+1255
+01:14:14.045 --> 01:14:17.215
+say that 50 words I have here, 50 times temp.
+
+1256
+01:14:17.215 --> 01:14:19.565
+It will go, which is fine, no problem.
+
+1257
+01:14:19.985 --> 01:14:23.165
+And then finally it'll gimme the context vector. Okay?
+
+1258
+01:14:23.165 --> 01:14:24.685
+Finally, it'll gimme the context vector.
+
+1259
+01:14:25.065 --> 01:14:26.285
+The context vector is same,
+
+1260
+01:14:26.815 --> 01:14:28.485
+which I have shown you the paragraph
+
+1261
+01:14:28.825 --> 01:14:30.245
+and I have asked you, okay,
+
+1262
+01:14:30.265 --> 01:14:32.405
+now you recall from the context factor
+
+1263
+01:14:32.505 --> 01:14:35.525
+and convert the entire paragraph into Hindi.
+
+1264
+01:14:36.305 --> 01:14:37.635
+That is the context factor.
+
+1265
+01:14:38.255 --> 01:14:40.675
+So context factor is the context, what you have just read,
+
+1266
+01:14:40.675 --> 01:14:42.875
+which is true, but then you know,
+
+1267
+01:14:43.095 --> 01:14:45.075
+now you must have started understanding
+
+1268
+01:14:45.075 --> 01:14:46.595
+what is the problem in the context vector.
+
+1269
+01:14:46.895 --> 01:14:48.595
+The problem in the context factor is
+
+1270
+01:14:49.415 --> 01:14:51.035
+it can remember the overall context.
+
+1271
+01:14:51.615 --> 01:14:54.195
+It might forget the minute details, which is required,
+
+1272
+01:14:54.195 --> 01:14:56.195
+but for the translation, you need everything
+
+1273
+01:14:56.215 --> 01:14:58.035
+to have in front of you.
+
+1274
+01:14:58.775 --> 01:15:03.355
+The point is encoder reach the entire paragraph word by word
+
+1275
+01:15:04.085 --> 01:15:08.175
+information is compressed in one small context vector.
+
+1276
+01:15:08.285 --> 01:15:09.975
+What will be the dimension of context vector?
+
+1277
+01:15:10.075 --> 01:15:14.455
+Say 1 28, say 2 56, say five 12, say 1 0 2 4.
+
+1278
+01:15:14.455 --> 01:15:16.935
+Likewise, there will be a vector here. Okay?
+
+1279
+01:15:17.955 --> 01:15:20.775
+Now, this entire decode, it has
+
+1280
+01:15:20.775 --> 01:15:22.335
+to rely on this context vector.
+
+1281
+01:15:23.075 --> 01:15:25.135
+It has to rely on this context vector.
+
+1282
+01:15:26.675 --> 01:15:28.855
+You see that the problem right now,
+
+1283
+01:15:29.615 --> 01:15:31.775
+I don't have the paragraph itself available
+
+1284
+01:15:31.845 --> 01:15:34.175
+with me at the time of translation.
+
+1285
+01:15:34.855 --> 01:15:36.815
+I don't have that. What I have,
+
+1286
+01:15:36.885 --> 01:15:38.535
+what I have is the context factor.
+
+1287
+01:15:40.155 --> 01:15:42.015
+And this context factor has its own problem.
+
+1288
+01:15:42.235 --> 01:15:44.335
+The problem is it might have remembered something,
+
+1289
+01:15:44.955 --> 01:15:46.535
+it might have forgotten something
+
+1290
+01:15:46.535 --> 01:15:48.255
+because it has to represent everything
+
+1291
+01:15:48.255 --> 01:15:49.695
+as a five 12 dimensional vector.
+
+1292
+01:15:49.845 --> 01:15:51.735
+Five 12 values. That's all.
+
+1293
+01:15:52.315 --> 01:15:54.095
+So how much it has captured this one?
+
+1294
+01:15:54.155 --> 01:15:57.255
+How much it has not captured? We don't know. Okay?
+
+1295
+01:15:57.555 --> 01:15:58.575
+We don't know first of all.
+
+1296
+01:15:58.575 --> 01:16:01.295
+So there are two problem in quarter side problem.
+
+1297
+01:16:01.315 --> 01:16:04.415
+You think about long input sentences,
+
+1298
+01:16:04.855 --> 01:16:07.095
+sentence must be summarized into one vector.
+
+1299
+01:16:07.235 --> 01:16:11.015
+So we are giving a huge responsibility,
+
+1300
+01:16:11.525 --> 01:16:13.655
+huge responsibility to this context vector
+
+1301
+01:16:13.755 --> 01:16:14.975
+to remember everything,
+
+1302
+01:16:14.975 --> 01:16:17.815
+what you have processed in the encoder, which is very,
+
+1303
+01:16:18.285 --> 01:16:20.455
+very high ask, okay?
+
+1304
+01:16:20.455 --> 01:16:23.095
+It's a very high ask. Means, uh, it, the,
+
+1305
+01:16:23.565 --> 01:16:24.895
+it's very high expectation.
+
+1306
+01:16:24.895 --> 01:16:27.775
+You can say that it is very difficult even for the human
+
+1307
+01:16:27.795 --> 01:16:31.385
+to remember everything just by seeing one paragraph, okay?
+
+1308
+01:16:31.385 --> 01:16:33.505
+And just add, once I have seen, I have to remember it.
+
+1309
+01:16:33.535 --> 01:16:34.785
+Very difficult for anyone.
+
+1310
+01:16:35.015 --> 01:16:38.145
+Similarly for the lstm or sequence to sequence model.
+
+1311
+01:16:38.175 --> 01:16:41.745
+Also giving that much, uh, responsibility
+
+1312
+01:16:41.745 --> 01:16:43.265
+to this context vector that you have
+
+1313
+01:16:43.265 --> 01:16:45.065
+to remember every detail of the encoder,
+
+1314
+01:16:45.065 --> 01:16:47.945
+what you have processed, highly difficult for the longer
+
+1315
+01:16:48.495 --> 01:16:51.265
+long range, uh, uh, paragraphs
+
+1316
+01:16:51.485 --> 01:16:52.985
+for a smaller case like I'm going,
+
+1317
+01:16:53.005 --> 01:16:54.185
+it can remember no problem
+
+1318
+01:16:54.845 --> 01:16:56.705
+for longer paragraph, very difficult.
+
+1319
+01:16:57.065 --> 01:16:58.865
+Secondly, early words
+
+1320
+01:16:59.125 --> 01:17:01.145
+and late words compete for representation.
+
+1321
+01:17:01.175 --> 01:17:02.785
+Yeah. That is what is happen inside.
+
+1322
+01:17:02.785 --> 01:17:03.825
+That's why it is difficult
+
+1323
+01:17:03.825 --> 01:17:05.585
+because you have only five 12 numbers
+
+1324
+01:17:06.135 --> 01:17:08.025
+with those five 12 numbers itself, you have
+
+1325
+01:17:08.025 --> 01:17:10.525
+to represent first word also second word, also third word.
+
+1326
+01:17:10.595 --> 01:17:12.765
+Also, somehow you have to represent them, right?
+
+1327
+01:17:13.105 --> 01:17:15.445
+So the early word, which came at the first time, stem,
+
+1328
+01:17:15.555 --> 01:17:17.525
+last word, which is coming at the 50th times,
+
+1329
+01:17:17.635 --> 01:17:20.125
+they will compete with each other for the representation
+
+1330
+01:17:20.665 --> 01:17:22.525
+in this small context vector.
+
+1331
+01:17:23.475 --> 01:17:25.685
+Okay? Import details may be forgotten.
+
+1332
+01:17:25.945 --> 01:17:28.725
+So in short, too much responsibility on a single context
+
+1333
+01:17:28.725 --> 01:17:30.125
+factor, it is not fair.
+
+1334
+01:17:30.185 --> 01:17:31.525
+But this is what we are doing in
+
+1335
+01:17:31.525 --> 01:17:32.765
+the sequence to sequence model.
+
+1336
+01:17:33.705 --> 01:17:37.155
+Okay? Now, decoder, what we are doing now, there is a,
+
+1337
+01:17:37.255 --> 01:17:39.835
+not only the problem for the encoder decoder,
+
+1338
+01:17:39.835 --> 01:17:41.755
+there is a bigger problem for the decoder.
+
+1339
+01:17:41.755 --> 01:17:43.235
+There is a bigger problem. What is the problem?
+
+1340
+01:17:43.245 --> 01:17:46.715
+First of all, at the time of training, uh, anyway,
+
+1341
+01:17:46.755 --> 01:17:47.755
+you're doing the teacher forcing.
+
+1342
+01:17:47.785 --> 01:17:49.555
+That is one good part what you're doing.
+
+1343
+01:17:49.895 --> 01:17:52.195
+I'm not relying on the last state and state output.
+
+1344
+01:17:52.195 --> 01:17:54.235
+Otherwise it would've been very difficult
+
+1345
+01:17:54.235 --> 01:17:58.075
+because context factor is, anyway, it is very difficult for,
+
+1346
+01:17:58.375 --> 01:18:00.235
+for the context factor to remember everything.
+
+1347
+01:18:00.475 --> 01:18:02.355
+Secondly, my output is wrong,
+
+1348
+01:18:02.775 --> 01:18:05.155
+and whole decoder will struggle that, okay?
+
+1349
+01:18:05.255 --> 01:18:07.675
+How to give me how to give the correct output.
+
+1350
+01:18:07.845 --> 01:18:09.035
+It'll struggle like anything.
+
+1351
+01:18:10.215 --> 01:18:12.195
+So the problem with the decode is
+
+1352
+01:18:13.275 --> 01:18:17.335
+although it gets the context vector as as a context, that
+
+1353
+01:18:17.715 --> 01:18:20.775
+how I will give the translation, but,
+
+1354
+01:18:21.915 --> 01:18:25.695
+but the problem is that when I'm doing the first time stem,
+
+1355
+01:18:25.885 --> 01:18:27.455
+when I'm processing the first time stem,
+
+1356
+01:18:27.605 --> 01:18:30.575
+same context vector is coming from the backside
+
+1357
+01:18:30.795 --> 01:18:32.785
+as an input, okay?
+
+1358
+01:18:32.955 --> 01:18:35.465
+Which is fine. Problem comes
+
+1359
+01:18:35.465 --> 01:18:37.585
+with when I've processed the second timet stem,
+
+1360
+01:18:37.695 --> 01:18:39.025
+same context factor is given
+
+1361
+01:18:39.245 --> 01:18:41.425
+or the entire context factor is given.
+
+1362
+01:18:43.275 --> 01:18:45.805
+When I'm processing the third time stamp here in the
+
+1363
+01:18:45.805 --> 01:18:47.925
+decoder, same entire context factor is given.
+
+1364
+01:18:49.065 --> 01:18:51.405
+Fourth, also, fifth, also, you know,
+
+1365
+01:18:51.595 --> 01:18:53.085
+what is the problem for the decoder?
+
+1366
+01:18:53.085 --> 01:18:55.125
+The problem is you are giving me the whole
+
+1367
+01:18:55.125 --> 01:18:57.205
+vector before this point.
+
+1368
+01:18:57.345 --> 01:18:59.685
+Decode has no understanding about the context factor.
+
+1369
+01:19:00.025 --> 01:19:02.485
+Now at each time stamp, I'm saying that, okay,
+
+1370
+01:19:02.485 --> 01:19:04.565
+take this context vector, okay?
+
+1371
+01:19:04.565 --> 01:19:05.725
+And this is your current input,
+
+1372
+01:19:05.725 --> 01:19:06.885
+gimme, what is the next word?
+
+1373
+01:19:07.545 --> 01:19:11.005
+Now, LSTM will confuse what it'll confuse in the,
+
+1374
+01:19:11.005 --> 01:19:14.045
+in the entire context vector, how to know
+
+1375
+01:19:14.395 --> 01:19:15.605
+that, what is the next word?
+
+1376
+01:19:15.605 --> 01:19:18.365
+Where I have to give? There is no focus. There is no focus.
+
+1377
+01:19:19.035 --> 01:19:22.685
+Decoder cannot focus on the relevant source word
+
+1378
+01:19:23.075 --> 01:19:24.885
+because source word is not given.
+
+1379
+01:19:25.025 --> 01:19:28.005
+At each time a temp whole context is given.
+
+1380
+01:19:29.335 --> 01:19:32.475
+For example, suppose when I'm doing the translation for I,
+
+1381
+01:19:33.855 --> 01:19:35.715
+I'm giving the context vector for I am going,
+
+1382
+01:19:36.715 --> 01:19:38.805
+when I'm doing the translation for m
+
+1383
+01:19:40.295 --> 01:19:42.315
+I'm giving the context factor of I'm going.
+
+1384
+01:19:42.935 --> 01:19:46.315
+And when I'm processing the processing the word going,
+
+1385
+01:19:47.175 --> 01:19:50.055
+I'm giving the context factor here where I'm going.
+
+1386
+01:19:50.115 --> 01:19:51.255
+So see that what is the problem?
+
+1387
+01:19:52.315 --> 01:19:56.555
+The, it would've been better when I'm processing, uh, the,
+
+1388
+01:19:56.775 --> 01:20:00.355
+the first time stem, I would have the focus on I,
+
+1389
+01:20:02.195 --> 01:20:05.055
+if I'm processing the second time stem, third time stem,
+
+1390
+01:20:05.295 --> 01:20:06.935
+I would've given some focus on going.
+
+1391
+01:20:08.535 --> 01:20:10.555
+And when I'm doing the last fourth timestamp,
+
+1392
+01:20:10.715 --> 01:20:11.875
+I would have given the focus
+
+1393
+01:20:11.975 --> 01:20:16.715
+for m then getting the corresponding language word
+
+1394
+01:20:16.715 --> 01:20:17.755
+would have been easier.
+
+1395
+01:20:18.535 --> 01:20:21.555
+But the problem is I'm not giving any focus
+
+1396
+01:20:21.615 --> 01:20:23.075
+to any word in the encoder.
+
+1397
+01:20:23.175 --> 01:20:24.675
+I'm giving whole context factor
+
+1398
+01:20:24.735 --> 01:20:26.635
+to each time stamp in the decoder.
+
+1399
+01:20:26.895 --> 01:20:29.835
+Now, decoder will have the problem in understanding, okay,
+
+1400
+01:20:29.835 --> 01:20:32.235
+which source word is important in the first time stamp,
+
+1401
+01:20:32.485 --> 01:20:34.395
+which source word is important in the second
+
+1402
+01:20:34.425 --> 01:20:35.915
+timestamp and so on.
+
+1403
+01:20:36.455 --> 01:20:38.315
+And this is the problem of the decoder.
+
+1404
+01:20:38.455 --> 01:20:41.115
+The same context factor is used at every decoding step.
+
+1405
+01:20:41.905 --> 01:20:45.075
+Decoder cannot focus on the relevant source word.
+
+1406
+01:20:45.175 --> 01:20:47.075
+So source is encoded, okay?
+
+1407
+01:20:47.175 --> 01:20:49.275
+So it cannot focus on a particular
+
+1408
+01:20:49.275 --> 01:20:50.595
+source word in the encoder.
+
+1409
+01:20:51.295 --> 01:20:53.395
+It leads to in character generic translation.
+
+1410
+01:20:53.415 --> 01:20:55.035
+So don't, no dynamic focusing
+
+1411
+01:20:55.035 --> 01:20:57.195
+during word generation when I'm doing the next word,
+
+1412
+01:20:57.195 --> 01:20:58.475
+generation first time stem second.
+
+1413
+01:20:58.655 --> 01:21:00.955
+So there is no dynamic focusing of the source
+
+1414
+01:21:02.615 --> 01:21:05.075
+or the encoder, and hence this is the problem
+
+1415
+01:21:05.175 --> 01:21:06.275
+for the decoder set.
+
+1416
+01:21:08.375 --> 01:21:10.145
+Okay? You see that? What is the problem?
+
+1417
+01:21:10.325 --> 01:21:12.905
+So sequence to sequence model is doing good.
+
+1418
+01:21:13.205 --> 01:21:16.395
+If, if the first of all, the,
+
+1419
+01:21:16.575 --> 01:21:18.715
+if your sentences are very small, like I'm going,
+
+1420
+01:21:18.775 --> 01:21:20.795
+it would not get into these problems.
+
+1421
+01:21:20.795 --> 01:21:24.515
+What I have talked about. If the is like this paragraph
+
+1422
+01:21:24.535 --> 01:21:26.915
+or even bigger, then there will be a problems like
+
+1423
+01:21:26.915 --> 01:21:29.595
+what I have talked about, and it'll be a very,
+
+1424
+01:21:30.415 --> 01:21:31.835
+and apart from all these things,
+
+1425
+01:21:31.835 --> 01:21:33.955
+the complexity is a separate problem that you have
+
+1426
+01:21:33.955 --> 01:21:35.955
+to process everything in a timestamp five manner.
+
+1427
+01:21:35.985 --> 01:21:36.995
+Here you have 50 word.
+
+1428
+01:21:36.995 --> 01:21:39.155
+Here, you have 50 word, you have to wait.
+
+1429
+01:21:39.425 --> 01:21:40.595
+That must time, you can't,
+
+1430
+01:21:40.595 --> 01:21:41.995
+you can't process them in parallel.
+
+1431
+01:21:42.095 --> 01:21:45.595
+All those problems are there with this kind of network.
+
+1432
+01:21:48.115 --> 01:21:50.365
+Okay, so let me, let me just stop here for a while
+
+1433
+01:21:50.625 --> 01:21:53.085
+to understand whether you have understood
+
+1434
+01:21:53.145 --> 01:21:54.605
+the sequence to sequence model.
+
+1435
+01:21:54.665 --> 01:21:55.925
+How does it work? What is the advantage
+
+1436
+01:21:56.025 --> 01:21:57.485
+and where the problem lies?
+
+1437
+01:21:58.265 --> 01:21:59.565
+If you have any question on that.
+
+1438
+01:22:01.935 --> 01:22:04.715
+So that is why then it paved the way for attention.
+
+1439
+01:22:05.425 --> 01:22:07.435
+Exactly, exactly. Yes,
+
+1440
+01:22:08.535 --> 01:22:09.535
+Sir. Is this
+
+1441
+01:22:09.535 --> 01:22:12.475
+a model in these format in that 2014
+
+1442
+01:22:13.135 --> 01:22:15.235
+was actually used or that was the state?
+
+1443
+01:22:17.245 --> 01:22:19.225
+Uh, I did not get last. There was some, no,
+
+1444
+01:22:19.225 --> 01:22:22.345
+When this paper was published at that time, uh, between
+
+1445
+01:22:22.345 --> 01:22:23.625
+that paper and attention,
+
+1446
+01:22:23.625 --> 01:22:24.825
+there were like three years, right?
+
+1447
+01:22:24.825 --> 01:22:27.145
+2014 to 2017. Oh,
+
+1448
+01:22:27.145 --> 01:22:28.145
+No, no, no, no. There was
+
+1449
+01:22:28.145 --> 01:22:29.745
+multiple phase in between also.
+
+1450
+01:22:29.745 --> 01:22:31.985
+Oh, I'll take you through. Okay. Attention.
+
+1451
+01:22:32.045 --> 01:22:34.105
+Uh, in the transformer architecture,
+
+1452
+01:22:34.255 --> 01:22:35.585
+they proposed self attention.
+
+1453
+01:22:35.725 --> 01:22:37.265
+But before that also, the story
+
+1454
+01:22:37.265 --> 01:22:40.305
+of attention already started in 2015, I guess.
+
+1455
+01:22:40.305 --> 01:22:43.745
+Yeah. So I'll, I'll tell you in between there was two years
+
+1456
+01:22:43.805 --> 01:22:44.665
+and there are a lot of things
+
+1457
+01:22:44.665 --> 01:22:46.105
+which happened in between them. Yeah.
+
+1458
+01:22:46.415 --> 01:22:47.665
+Okay, okay. Yes.
+
+1459
+01:22:55.005 --> 01:22:58.375
+Okay. So, uh, that's why you understood the problem
+
+1460
+01:22:58.515 --> 01:22:59.815
+and people realized it
+
+1461
+01:22:59.815 --> 01:23:01.655
+after this network has proposed,
+
+1462
+01:23:01.685 --> 01:23:04.935
+when they process the longer content, realize this, okay,
+
+1463
+01:23:04.935 --> 01:23:06.765
+it is not working well, but the problem is not
+
+1464
+01:23:06.765 --> 01:23:09.885
+with the architecture problem is with these assumptions
+
+1465
+01:23:09.885 --> 01:23:11.725
+that context tructure will take care of everything,
+
+1466
+01:23:12.045 --> 01:23:13.405
+whatever is the length of my input.
+
+1467
+01:23:13.785 --> 01:23:15.365
+That's the wrong assumption, okay?
+
+1468
+01:23:15.365 --> 01:23:17.525
+That's the wrong assumption, right?
+
+1469
+01:23:17.585 --> 01:23:21.605
+And that's why they, they, they, uh, they, the next paper,
+
+1470
+01:23:22.175 --> 01:23:25.885
+first of all, uh, it was, it was proved that,
+
+1471
+01:23:26.745 --> 01:23:28.645
+and with this, this, uh, figure, you can see
+
+1472
+01:23:28.645 --> 01:23:31.765
+that the sentence length, if it is between zero to 20,
+
+1473
+01:23:31.985 --> 01:23:36.165
+you see the x axis, which is a sentence length y axis,
+
+1474
+01:23:36.165 --> 01:23:37.325
+which is a blue score, which is one
+
+1475
+01:23:37.325 --> 01:23:39.965
+of the performance metrics for this machine translation
+
+1476
+01:23:39.965 --> 01:23:41.005
+cases, okay?
+
+1477
+01:23:41.705 --> 01:23:43.205
+Uh, machine translation cases.
+
+1478
+01:23:43.665 --> 01:23:46.085
+So they say that the translation is good.
+
+1479
+01:23:46.225 --> 01:23:48.685
+If your sequence length is up to 20, you can see
+
+1480
+01:23:48.685 --> 01:23:50.845
+that this curve is growing, growing, growing.
+
+1481
+01:23:51.455 --> 01:23:53.525
+Score is growing, growing. So blue score is good.
+
+1482
+01:23:53.905 --> 01:23:55.525
+It, it varies between zero and one.
+
+1483
+01:23:55.525 --> 01:23:58.405
+First of all, say that and zero and sorry, zero
+
+1484
+01:23:58.405 --> 01:24:01.445
+and a hundred, if it is, you are taking in percentage,
+
+1485
+01:24:02.065 --> 01:24:03.485
+and, uh, it is good.
+
+1486
+01:24:03.785 --> 01:24:04.965
+If it is, it is higher.
+
+1487
+01:24:05.225 --> 01:24:08.165
+So you can see that the blues score, which which is growing
+
+1488
+01:24:08.345 --> 01:24:11.045
+as the sequence length grow blues, grows grow,
+
+1489
+01:24:11.185 --> 01:24:14.165
+and up to 20 length of sequence
+
+1490
+01:24:14.185 --> 01:24:15.525
+for which you have to do the translation.
+
+1491
+01:24:15.905 --> 01:24:18.685
+It is going, going grow, going well.
+
+1492
+01:24:19.425 --> 01:24:22.125
+But after that, there is huge drop.
+
+1493
+01:24:22.345 --> 01:24:26.165
+You see that after almost 20, 22 words, 20
+
+1494
+01:24:26.345 --> 01:24:28.485
+or 20 18, 19, 20 words,
+
+1495
+01:24:29.265 --> 01:24:31.485
+if you see sentence length will still grow,
+
+1496
+01:24:31.485 --> 01:24:32.845
+and you want to do the translation of
+
+1497
+01:24:32.845 --> 01:24:35.485
+that in the corresponding language performance
+
+1498
+01:24:35.705 --> 01:24:37.565
+of the model was sequence to sequence,
+
+1499
+01:24:37.725 --> 01:24:39.485
+model performance was dropping.
+
+1500
+01:24:39.485 --> 01:24:41.645
+Like anything, you can see that, okay,
+
+1501
+01:24:41.645 --> 01:24:45.085
+it was coming less than zero or zero or like that.
+
+1502
+01:24:45.915 --> 01:24:47.175
+In less than zero it'll not go,
+
+1503
+01:24:47.355 --> 01:24:48.975
+but it'll go very close to the zero
+
+1504
+01:24:48.995 --> 01:24:50.575
+and means very poor performance.
+
+1505
+01:24:51.005 --> 01:24:55.015
+This is the problem. And then, uh, then
+
+1506
+01:24:56.285 --> 01:24:58.985
+you know that the next story is attention.
+
+1507
+01:24:59.695 --> 01:25:03.545
+They say that very simple. Uh, I'll just give you the idea.
+
+1508
+01:25:03.545 --> 01:25:05.785
+Maybe next, next class, we'll start with this one.
+
+1509
+01:25:06.215 --> 01:25:09.945
+That they say that, okay, when you have the core
+
+1510
+01:25:10.125 --> 01:25:14.805
+or the, the input, uh, input, uh, length, very high,
+
+1511
+01:25:15.505 --> 01:25:19.055
+say that this is my input, the whole paragraph, okay?
+
+1512
+01:25:19.055 --> 01:25:21.735
+It is encoded with A, B, C, D has desk, this,
+
+1513
+01:25:21.735 --> 01:25:22.815
+that, and all say that.
+
+1514
+01:25:23.245 --> 01:25:27.095
+Okay? So maybe somewhere, password is somewhere in between.
+
+1515
+01:25:27.725 --> 01:25:31.615
+Okay? So you have to focus on that part. Focus on that part.
+
+1516
+01:25:31.955 --> 01:25:34.535
+For the other example could be, uh,
+
+1517
+01:25:34.535 --> 01:25:36.695
+other example could be I will take you
+
+1518
+01:25:36.695 --> 01:25:37.815
+through the same paragraph.
+
+1519
+01:25:38.355 --> 01:25:40.935
+So just, just see this paragraph, all of you,
+
+1520
+01:25:41.435 --> 01:25:44.455
+and now you'll realize what is the meaning of attention.
+
+1521
+01:25:44.805 --> 01:25:46.255
+Okay? Whatever I'm going to explain,
+
+1522
+01:25:46.255 --> 01:25:47.615
+you will understand what is the meaning of attention.
+
+1523
+01:25:47.615 --> 01:25:50.935
+Attention is, see, the entire paragraph is in front of you
+
+1524
+01:25:52.205 --> 01:25:54.385
+as when, as a human being, we process,
+
+1525
+01:25:54.775 --> 01:25:57.065
+suppose you will be asked to convert
+
+1526
+01:25:57.065 --> 01:25:58.905
+that into the corresponding language.
+
+1527
+01:25:59.245 --> 01:26:01.665
+Say, Hindi, how will you convert it?
+
+1528
+01:26:01.725 --> 01:26:03.885
+You may read it once, that is fine.
+
+1529
+01:26:04.505 --> 01:26:09.025
+But then you may start decoding it word
+
+1530
+01:26:09.085 --> 01:26:11.265
+by word or window by window.
+
+1531
+01:26:11.405 --> 01:26:13.425
+Window by window, rather than word by word.
+
+1532
+01:26:13.455 --> 01:26:15.065
+I'll say, I'll say window by window.
+
+1533
+01:26:15.445 --> 01:26:18.585
+You may convert first faculty development program into it's
+
+1534
+01:26:18.585 --> 01:26:20.585
+corresponding target language.
+
+1535
+01:26:20.775 --> 01:26:23.945
+Then you may convert for offer then for, uh, then
+
+1536
+01:26:23.945 --> 01:26:25.385
+for double age and so on.
+
+1537
+01:26:25.695 --> 01:26:27.625
+Okay? You will have your own way to figure it out.
+
+1538
+01:26:27.645 --> 01:26:29.505
+But one thing, what is important is
+
+1539
+01:26:30.335 --> 01:26:33.105
+when you are seeing this entire screen
+
+1540
+01:26:33.925 --> 01:26:36.945
+and when you are reading this particular sentence,
+
+1541
+01:26:36.945 --> 01:26:41.445
+faculty development program, your eyes, your concentration
+
+1542
+01:26:41.465 --> 01:26:45.165
+or your attention is only in this particular window.
+
+1543
+01:26:45.775 --> 01:26:49.525
+There is a window. And you just see that when you are here,
+
+1544
+01:26:49.585 --> 01:26:52.165
+you're able to see, you say two to three words maximum.
+
+1545
+01:26:53.165 --> 01:26:54.965
+Although every word is in front of you, you're not able
+
+1546
+01:26:54.965 --> 01:26:57.045
+to see the words word.
+
+1547
+01:26:57.115 --> 01:26:59.965
+When you are seeing word, you are not able to see the hone.
+
+1548
+01:26:59.965 --> 01:27:01.565
+When you are seeing hone, you're not able
+
+1549
+01:27:01.565 --> 01:27:02.685
+to see the word autonomy
+
+1550
+01:27:03.455 --> 01:27:05.505
+because your focus is not
+
+1551
+01:27:06.325 --> 01:27:08.705
+on the complete window, right?
+
+1552
+01:27:08.805 --> 01:27:11.265
+It is at, uh, in the complete, uh, screen.
+
+1553
+01:27:11.645 --> 01:27:14.825
+You can only focus up to a particular word,
+
+1554
+01:27:15.045 --> 01:27:16.465
+say two word, three word forward.
+
+1555
+01:27:16.485 --> 01:27:18.945
+That's all right? And that is what it helps.
+
+1556
+01:27:19.295 --> 01:27:21.945
+That is what it helps. So we always see a window
+
+1557
+01:27:22.645 --> 01:27:25.105
+and we convert them into the corresponding target,
+
+1558
+01:27:25.765 --> 01:27:28.065
+and then, uh, uh,
+
+1559
+01:27:28.085 --> 01:27:31.425
+and then go to the next, uh, I say that phrase, convert
+
+1560
+01:27:31.425 --> 01:27:33.265
+that next phrase, convert that, and so on.
+
+1561
+01:27:33.265 --> 01:27:35.345
+This is how we as a human works,
+
+1562
+01:27:35.735 --> 01:27:38.705
+obviously you can read this multiple times
+
+1563
+01:27:39.165 --> 01:27:40.985
+to have the holistic understanding
+
+1564
+01:27:41.445 --> 01:27:43.385
+or the overall contextual understanding,
+
+1565
+01:27:43.605 --> 01:27:46.025
+the entire paragraph, then see window by window
+
+1566
+01:27:46.765 --> 01:27:50.075
+and convert into the particular target language.
+
+1567
+01:27:50.295 --> 01:27:52.315
+And this is what attention does, okay?
+
+1568
+01:27:52.505 --> 01:27:55.315
+This is what the attention, attention on top
+
+1569
+01:27:55.315 --> 01:27:56.435
+of the sequence to sequence.
+
+1570
+01:27:56.435 --> 01:27:58.315
+Did they say that? Okay? Context factor is important
+
+1571
+01:27:58.315 --> 01:28:01.075
+because you need to have the overall understanding
+
+1572
+01:28:01.095 --> 01:28:02.755
+of the context, okay?
+
+1573
+01:28:02.755 --> 01:28:05.715
+First of all, but along with that, somehow I need
+
+1574
+01:28:05.715 --> 01:28:08.875
+to capture the attention or capture that, okay?
+
+1575
+01:28:09.615 --> 01:28:11.515
+The first time stem I is important.
+
+1576
+01:28:12.175 --> 01:28:14.235
+The focus should be on I rather than m
+
+1577
+01:28:14.235 --> 01:28:17.315
+and going, when I'm doing the second time, stem,
+
+1578
+01:28:17.525 --> 01:28:20.275
+going word is important rather than I.
+
+1579
+01:28:20.275 --> 01:28:22.955
+And m, third word going is important again.
+
+1580
+01:28:23.785 --> 01:28:26.205
+So somehow we need to model this mathematically,
+
+1581
+01:28:26.205 --> 01:28:27.685
+and that is what we'll see in the next class.
+
+1582
+01:28:28.345 --> 01:28:32.205
+Uh, but then this is what the attention did, okay?
+
+1583
+01:28:32.275 --> 01:28:35.965
+They said that for every time stamp in the decoder,
+
+1584
+01:28:36.735 --> 01:28:37.765
+which word
+
+1585
+01:28:38.305 --> 01:28:42.245
+or words in the encoder are important, let us find that one.
+
+1586
+01:28:42.245 --> 01:28:44.405
+And that is called as the attention, okay?
+
+1587
+01:28:44.715 --> 01:28:46.805
+This is not the self attention, this is the initial version
+
+1588
+01:28:46.805 --> 01:28:50.005
+of the attention, uh, uh, which we'll see in the next class.
+
+1589
+01:28:50.625 --> 01:28:55.325
+So, uh, here in the entire, uh, you can say paragraph,
+
+1590
+01:28:55.325 --> 01:28:58.565
+maybe a particular window is important for you for
+
+1591
+01:28:58.595 --> 01:29:01.405
+that particular time stamp of the decoder.
+
+1592
+01:29:01.905 --> 01:29:04.845
+And, uh, then next time, timestamp of the decoder,
+
+1593
+01:29:04.845 --> 01:29:07.725
+maybe your window, which your window will shift.
+
+1594
+01:29:07.815 --> 01:29:09.925
+It'll go some, somewhere else in the,
+
+1595
+01:29:09.925 --> 01:29:11.285
+in the, in the entire context.
+
+1596
+01:29:11.385 --> 01:29:14.485
+And that is what somehow we need to identify mathematically.
+
+1597
+01:29:15.015 --> 01:29:17.165
+We'll see that mathematically also, that
+
+1598
+01:29:17.265 --> 01:29:19.045
+how do we compute that attention?
+
+1599
+01:29:19.315 --> 01:29:20.765
+Okay? How do we compute that tension?
+
+1600
+01:29:21.425 --> 01:29:24.085
+And, uh, we'll, we'll extend this one in the next class.
+
+1601
+01:29:25.165 --> 01:29:28.335
+Fine. So, uh, you can ask me questions now,
+
+1602
+01:29:28.835 --> 01:29:33.495
+and I also had the, uh, what day, where is that?
+
+1603
+01:29:34.195 --> 01:29:38.615
+Oh, I, I, I'll do one thing I could not explain today,
+
+1604
+01:29:38.855 --> 01:29:42.855
+although, but then I had this, uh, demo, this demo.
+
+1605
+01:29:43.195 --> 01:29:44.975
+You practice it. Maybe next class.
+
+1606
+01:29:45.125 --> 01:29:46.415
+I'll start with first demo,
+
+1607
+01:29:46.515 --> 01:29:47.775
+and then I will go to the
+
+1608
+01:29:48.555 --> 01:29:51.705
+um, Here.
+
+1609
+01:29:56.865 --> 01:29:59.835
+Okay? Now this one, I'll, uh, share the slide
+
+1610
+01:29:59.855 --> 01:30:02.315
+and give you the link of this as well as dataset.
+
+1611
+01:30:02.315 --> 01:30:05.915
+Link. This dataset again, I have got from the Kaggle,
+
+1612
+01:30:05.915 --> 01:30:07.635
+this is Hindi to English dataset.
+
+1613
+01:30:08.265 --> 01:30:12.715
+Okay? As you can see on the screen, uh, the, first of all,
+
+1614
+01:30:12.755 --> 01:30:14.675
+I have read the data, I have downloaded the data from the
+
+1615
+01:30:14.675 --> 01:30:17.955
+Kaggle, and then read here in this data, you see that home.
+
+1616
+01:30:17.955 --> 01:30:22.555
+What is the shape of the data? One lag, 77,606.
+
+1617
+01:30:22.555 --> 01:30:25.795
+Data samples are there. Okay? There are three columns.
+
+1618
+01:30:25.795 --> 01:30:26.955
+That is what it is showing
+
+1619
+01:30:26.955 --> 01:30:28.475
+because first column is index,
+
+1620
+01:30:28.475 --> 01:30:30.995
+second column is English sentence, third column is Hindi.
+
+1621
+01:30:30.995 --> 01:30:32.115
+And so it's the parallel corpus
+
+1622
+01:30:32.115 --> 01:30:33.475
+for every English sentence you have in
+
+1623
+01:30:33.485 --> 01:30:34.995
+Hindi corpus available.
+
+1624
+01:30:36.035 --> 01:30:39.755
+I did some pre-processing, uh, I'll explain everything here.
+
+1625
+01:30:39.755 --> 01:30:43.115
+Tokenization, vocabulary, building encoder,
+
+1626
+01:30:43.715 --> 01:30:46.035
+encoding sentence into the index sequence,
+
+1627
+01:30:46.145 --> 01:30:47.715
+then doing some padding, right?
+
+1628
+01:30:48.055 --> 01:30:50.755
+All these things are required. Once we did all these
+
+1629
+01:30:50.755 --> 01:30:54.315
+pre-processing things, then we created our custom dataset
+
+1630
+01:30:54.315 --> 01:30:55.955
+class as usual.
+
+1631
+01:30:56.065 --> 01:30:58.595
+Then data loader class for creating the batches.
+
+1632
+01:30:59.225 --> 01:31:01.555
+Then you have to create the encoder block,
+
+1633
+01:31:01.555 --> 01:31:03.315
+because in the sequence to sequence model,
+
+1634
+01:31:03.375 --> 01:31:05.795
+you have the encoder block, then you have the decoder block,
+
+1635
+01:31:05.855 --> 01:31:07.715
+and then you have to combine both of them so
+
+1636
+01:31:07.715 --> 01:31:09.235
+that it'll work in sync.
+
+1637
+01:31:09.775 --> 01:31:11.835
+So encoder block, ENC code is written,
+
+1638
+01:31:12.415 --> 01:31:16.825
+and then in the encoder block output is always, uh,
+
+1639
+01:31:16.855 --> 01:31:19.705
+like I was showing you right here, uh, sorry, here,
+
+1640
+01:31:20.095 --> 01:31:21.585
+here in the context vector, when,
+
+1641
+01:31:21.585 --> 01:31:24.385
+when I'm talking about the context vector, it is LSTM.
+
+1642
+01:31:24.645 --> 01:31:27.705
+And in the LSTM, the way it works is it gives you CT
+
+1643
+01:31:27.705 --> 01:31:29.025
+and ST two different tens.
+
+1644
+01:31:29.325 --> 01:31:32.265
+And that this context vector is a two tensors
+
+1645
+01:31:32.535 --> 01:31:33.945
+combination of two tens.
+
+1646
+01:31:34.015 --> 01:31:35.105
+Same thing. You can see here.
+
+1647
+01:31:35.655 --> 01:31:37.905
+Once we'll do the encoder, we'll have two tensors.
+
+1648
+01:31:37.905 --> 01:31:40.305
+First one is the uh, h,
+
+1649
+01:31:40.455 --> 01:31:43.785
+this ht other one is the sate context vector ct.
+
+1650
+01:31:43.895 --> 01:31:46.945
+Okay? Then we'll go to the decoder part.
+
+1651
+01:31:47.055 --> 01:31:49.225
+Decoder word works in the auto aggressive fashion.
+
+1652
+01:31:49.565 --> 01:31:51.905
+So you need to add the start token.
+
+1653
+01:31:52.085 --> 01:31:53.745
+You need to start the stop token,
+
+1654
+01:31:54.285 --> 01:31:57.345
+and you have to write the auto regression code
+
+1655
+01:31:57.345 --> 01:32:00.005
+of the decoder that it'll take only one word at a time,
+
+1656
+01:32:00.005 --> 01:32:02.605
+gives you the next word and so on.
+
+1657
+01:32:02.675 --> 01:32:04.565
+Then sequence to sequence, wrapper model,
+
+1658
+01:32:04.575 --> 01:32:05.805
+which takes the encoder.
+
+1659
+01:32:05.805 --> 01:32:08.605
+Also decoder. Also combine them together, okay?
+
+1660
+01:32:08.605 --> 01:32:11.045
+Build the model on top of that, okay?
+
+1661
+01:32:11.185 --> 01:32:14.085
+And then rest of the things, you create the training loop
+
+1662
+01:32:14.085 --> 01:32:15.085
+and start training.
+
+1663
+01:32:15.145 --> 01:32:18.405
+So I was just trying yesterday the night, uh,
+
+1664
+01:32:18.535 --> 01:32:19.645
+while building this one.
+
+1665
+01:32:20.185 --> 01:32:23.805
+Uh, so, uh, I initially tried to process the entire data
+
+1666
+01:32:24.265 --> 01:32:25.805
+and then it, I could not do it.
+
+1667
+01:32:26.105 --> 01:32:28.605
+It means it came simply gave me the error auto
+
+1668
+01:32:28.605 --> 01:32:29.725
+of memory, okay?
+
+1669
+01:32:30.035 --> 01:32:32.085
+Auto of memory error, because I was, uh,
+
+1670
+01:32:32.115 --> 01:32:33.245
+dataset is too huge.
+
+1671
+01:32:33.245 --> 01:32:37.165
+Earlier I was using the batch side 32 and batch size 32.
+
+1672
+01:32:37.185 --> 01:32:39.645
+In the sense what happens, you know, that, uh,
+
+1673
+01:32:39.905 --> 01:32:42.765
+at the decoder timestamp, I'm in coder,
+
+1674
+01:32:42.765 --> 01:32:44.285
+there is no problem actually, but
+
+1675
+01:32:44.285 --> 01:32:46.685
+because I'm not storing any output,
+
+1676
+01:32:46.995 --> 01:32:48.365
+decoder timestamp, what happened?
+
+1677
+01:32:48.365 --> 01:32:50.845
+32 input. I am processing as a batch.
+
+1678
+01:32:51.505 --> 01:32:56.085
+So what happen every time, stamp 32 sentence,
+
+1679
+01:32:56.335 --> 01:33:00.685
+first word is being fed, every word will give the output,
+
+1680
+01:33:01.825 --> 01:33:05.285
+and those all outputs has to be stored, okay?
+
+1681
+01:33:05.705 --> 01:33:07.205
+All output has to be stored.
+
+1682
+01:33:07.205 --> 01:33:10.085
+So here, also 32 word output has to be stored here.
+
+1683
+01:33:10.155 --> 01:33:11.565
+Also here, also here,
+
+1684
+01:33:11.565 --> 01:33:14.605
+also here also is a huge memory you require for that.
+
+1685
+01:33:15.025 --> 01:33:17.485
+If the BA size is 32, if it is even higher,
+
+1686
+01:33:17.515 --> 01:33:20.285
+even more memory you require because you have to store it.
+
+1687
+01:33:20.505 --> 01:33:22.605
+Why? You have to store it unless you don't to store.
+
+1688
+01:33:22.705 --> 01:33:24.285
+How can you do the loss calculation?
+
+1689
+01:33:24.285 --> 01:33:25.525
+You have to do the loss calculation
+
+1690
+01:33:25.635 --> 01:33:27.085
+because you're doing the training.
+
+1691
+01:33:28.025 --> 01:33:29.445
+So the collab doesn't support.
+
+1692
+01:33:29.765 --> 01:33:31.925
+I tried actually yesterday, but it was not supporting.
+
+1693
+01:33:31.925 --> 01:33:34.765
+So what I did, if you see now my code here, first of all,
+
+1694
+01:33:34.845 --> 01:33:36.725
+I did the sample, okay?
+
+1695
+01:33:36.725 --> 01:33:38.285
+If you have huge memory, okay?
+
+1696
+01:33:38.305 --> 01:33:41.125
+If you are uh, do not have any problem with the RAM size,
+
+1697
+01:33:41.155 --> 01:33:43.765
+good, good ram, memory size, then you can process it.
+
+1698
+01:33:43.765 --> 01:33:47.525
+Otherwise, I did only sample of data out of one lag, seven,
+
+1699
+01:33:47.525 --> 01:33:50.525
+7,000 at then process with the 10,000 data and it worked.
+
+1700
+01:33:50.865 --> 01:33:53.605
+But I did few more changes from 32 batch size.
+
+1701
+01:33:53.765 --> 01:33:55.805
+I reduced it to the eight, eight batch size.
+
+1702
+01:33:56.195 --> 01:33:57.765
+Maximum length is also matters.
+
+1703
+01:33:58.205 --> 01:34:00.885
+I padded every length to be maximum 20.
+
+1704
+01:34:00.905 --> 01:34:05.365
+It was some sentences was although 1 71 2 2 18 for English
+
+1705
+01:34:05.365 --> 01:34:07.325
+and in the, I patted everything to 20.
+
+1706
+01:34:08.895 --> 01:34:11.515
+And then after that I could able to process it with,
+
+1707
+01:34:11.515 --> 01:34:14.115
+with the bad size of eight, best size of eight,
+
+1708
+01:34:14.115 --> 01:34:15.155
+as you can see here, eight.
+
+1709
+01:34:15.935 --> 01:34:18.195
+Now this is the result of that bad size.
+
+1710
+01:34:18.495 --> 01:34:20.235
+And uh, I trained it for 50.
+
+1711
+01:34:20.555 --> 01:34:22.915
+Oc, when I trained, started training,
+
+1712
+01:34:23.015 --> 01:34:24.315
+the loss was coming in thousand.
+
+1713
+01:34:25.015 --> 01:34:28.595
+See this 6,295 loss should be near to zero.
+
+1714
+01:34:28.655 --> 01:34:30.475
+It is coming in 6,000, but
+
+1715
+01:34:30.475 --> 01:34:34.235
+after doing 50 oc, which took me around half an hour, okay,
+
+1716
+01:34:34.255 --> 01:34:38.115
+on this uh, collab, my GPUT four, GPU, what I used
+
+1717
+01:34:38.785 --> 01:34:39.835
+half an hour it took,
+
+1718
+01:34:39.855 --> 01:34:42.755
+and finally I end up with the seven 14 loss.
+
+1719
+01:34:43.105 --> 01:34:44.115
+Okay? So this is not good.
+
+1720
+01:34:44.175 --> 01:34:47.635
+My model is not yet trained clearly very high loss.
+
+1721
+01:34:47.855 --> 01:34:51.355
+And then I, when I start doing the translation, uh, uh,
+
+1722
+01:34:51.385 --> 01:34:54.435
+inferencing the testing, this is what I end up with.
+
+1723
+01:34:54.555 --> 01:34:55.595
+I ask, how are you?
+
+1724
+01:34:55.735 --> 01:35:00.645
+It is saying that b, I would like to tell you, uh, about,
+
+1725
+01:35:00.865 --> 01:35:01.925
+uh, once a child.
+
+1726
+01:35:04.025 --> 01:35:06.125
+So you see that random words, it is showing.
+
+1727
+01:35:06.385 --> 01:35:07.725
+So translation is not good.
+
+1728
+01:35:08.145 --> 01:35:09.405
+Uh, and blue score,
+
+1729
+01:35:09.535 --> 01:35:13.245
+which I have shown you in the slide also, uh, which is good,
+
+1730
+01:35:13.735 --> 01:35:14.765
+which is reasonable.
+
+1731
+01:35:14.825 --> 01:35:19.045
+We say between 0.12, 0.2, uh, 0.2, two,
+
+1732
+01:35:19.045 --> 01:35:21.965
+0.3 is good and greater than 0.3, it is very strong,
+
+1733
+01:35:21.965 --> 01:35:24.125
+which is very difficult to achieve without attention.
+
+1734
+01:35:24.275 --> 01:35:25.525
+That is what is written here
+
+1735
+01:35:26.025 --> 01:35:27.565
+and that is what I also observed.
+
+1736
+01:35:27.685 --> 01:35:29.285
+I was getting just 0.5.
+
+1737
+01:35:29.985 --> 01:35:34.925
+Uh, so 0.5 is not this 0.5, actually it is giving, uh,
+
+1738
+01:35:35.225 --> 01:35:36.685
+uh, 0.5.
+
+1739
+01:35:37.965 --> 01:35:39.005
+Actually it should have been between
+
+1740
+01:35:39.005 --> 01:35:40.085
+zero to a hundred range.
+
+1741
+01:35:40.395 --> 01:35:44.365
+Okay? So zero to 10, very weak, 10 to 20,
+
+1742
+01:35:44.415 --> 01:35:46.445
+reasonable 20 to 30, good,
+
+1743
+01:35:46.545 --> 01:35:48.725
+and more than 30 below score means strong.
+
+1744
+01:35:49.115 --> 01:35:51.805
+This 0.5 is in the scale of zero to a hundred.
+
+1745
+01:35:52.465 --> 01:35:55.805
+It is not in the scale of zero to one. Okay?
+
+1746
+01:35:55.805 --> 01:35:58.285
+That is what you have to understand. So it was very poor.
+
+1747
+01:35:58.355 --> 01:36:00.605
+That is what my first experience is.
+
+1748
+01:36:01.245 --> 01:36:05.125
+I will make this, uh, uh, model, uh, this, this code as well
+
+1749
+01:36:05.125 --> 01:36:06.205
+as this data available
+
+1750
+01:36:06.235 --> 01:36:08.245
+with you integrating in the same slide.
+
+1751
+01:36:08.745 --> 01:36:10.805
+You do the practice next class.
+
+1752
+01:36:10.875 --> 01:36:13.845
+I'll start with this, this, uh, notebook itself.
+
+1753
+01:36:13.915 --> 01:36:16.085
+I'll explain you in detail, okay?
+
+1754
+01:36:16.745 --> 01:36:19.845
+Uh, accuracy you will definitely get, if you have a good,
+
+1755
+01:36:19.995 --> 01:36:22.885
+good, uh, uh, machines, right?
+
+1756
+01:36:23.025 --> 01:36:25.805
+And can train it to the full extent, say that instead
+
+1757
+01:36:25.805 --> 01:36:30.685
+of 50 apac, like I can see that it is going from 6,000
+
+1758
+01:36:30.705 --> 01:36:31.885
+to 714.
+
+1759
+01:36:32.025 --> 01:36:36.005
+You train it for 100 aoc, 200, 500 aoc, right?
+
+1760
+01:36:36.585 --> 01:36:38.645
+And differently, then you will see that there is a wonder
+
+1761
+01:36:38.745 --> 01:36:40.045
+and you will be able to see
+
+1762
+01:36:40.045 --> 01:36:41.845
+that the translations are coming correctly.
+
+1763
+01:36:41.845 --> 01:36:43.805
+This is what the Google translator does
+
+1764
+01:36:44.065 --> 01:36:45.605
+or any other translator.
+
+1765
+01:36:45.605 --> 01:36:48.205
+What you're using is to in the backend, okay?
+
+1766
+01:36:48.265 --> 01:36:50.925
+So code is ready, it is running, pipeline is working,
+
+1767
+01:36:51.145 --> 01:36:53.045
+but training that is where it is lagging.
+
+1768
+01:36:53.305 --> 01:36:56.325
+You do the practice. If you have a good, good, uh, uh,
+
+1769
+01:36:56.445 --> 01:36:58.245
+machines, you try it by yourself.
+
+1770
+01:36:58.755 --> 01:37:01.485
+I'll show you the internal details, uh, how this,
+
+1771
+01:37:01.485 --> 01:37:04.865
+this whole, the whole code is uh, I have built,
+
+1772
+01:37:05.685 --> 01:37:07.345
+uh, we'll discuss that.
+
+1773
+01:37:07.345 --> 01:37:11.025
+If you have any query, that one fine. So let me stop here.
+
+1774
+01:37:12.185 --> 01:37:13.515
+I'll share all these things today.
+
+1775
+01:37:14.055 --> 01:37:15.235
+You can ask me some questions.
+
+1776
+01:37:16.535 --> 01:37:18.595
+So what is blue score, sir?
+
+1777
+01:37:19.615 --> 01:37:20.675
+Oh, blue score.
+
+1778
+01:37:21.495 --> 01:37:24.475
+You see that, uh, I mean I have not explained today, right?
+
+1779
+01:37:24.475 --> 01:37:29.385
+Correct. But it is a say that uh, the,
+
+1780
+01:37:29.925 --> 01:37:34.785
+it is, it is like for the uh, classification for regression,
+
+1781
+01:37:34.925 --> 01:37:36.145
+we use this MSC, right?
+
+1782
+01:37:36.145 --> 01:37:38.305
+Minus square, okay?
+
+1783
+01:37:38.365 --> 01:37:41.185
+For classification, we use this precision recall F score.
+
+1784
+01:37:41.695 --> 01:37:44.465
+Similarly, for the machine translation, the tric,
+
+1785
+01:37:44.755 --> 01:37:47.265
+which we say a blue score, okay?
+
+1786
+01:37:47.685 --> 01:37:52.585
+So, uh, just just uh, just uh, go and check on the internet.
+
+1787
+01:37:52.585 --> 01:37:54.705
+What is the blue score formula? You'll get to know that.
+
+1788
+01:37:54.765 --> 01:37:58.205
+So, uh, what it does basically that, uh,
+
+1789
+01:37:59.595 --> 01:38:03.535
+you uh, suppose I'm going ma who is a
+
+1790
+01:38:04.125 --> 01:38:07.415
+correct sequence in the Hindi, but then it is possible
+
+1791
+01:38:07.415 --> 01:38:10.535
+because my translation translator is not trained well,
+
+1792
+01:38:10.865 --> 01:38:12.295
+it'll give some other sequence.
+
+1793
+01:38:12.915 --> 01:38:16.695
+So PLU score somehow, uh, it matches that
+
+1794
+01:38:16.715 --> 01:38:18.735
+for ma it is giving me or not.
+
+1795
+01:38:19.835 --> 01:38:21.655
+For Ja, it is giving jaha ja,
+
+1796
+01:38:21.795 --> 01:38:24.015
+not rah means each sequence word.
+
+1797
+01:38:24.035 --> 01:38:25.335
+It is giving in the same sequence
+
+1798
+01:38:25.335 --> 01:38:26.895
+what is there in my corpus or not.
+
+1799
+01:38:27.565 --> 01:38:30.465
+Yes. Okay. So that is how it is matching
+
+1800
+01:38:30.465 --> 01:38:32.905
+and giving you one score that if suppose measure
+
+1801
+01:38:32.905 --> 01:38:35.185
+around your translator is also measure
+
+1802
+01:38:35.185 --> 01:38:37.145
+around it is one blue score is one
+
+1803
+01:38:37.145 --> 01:38:38.505
+because exactly it is matching.
+
+1804
+01:38:39.055 --> 01:38:41.585
+Okay? Yeah. Similar of recall, I think so,
+
+1805
+01:38:41.815 --> 01:38:42.815
+Yeah. So,
+
+1806
+01:38:42.815 --> 01:38:45.265
+but actually the blue score is not a good measure.
+
+1807
+01:38:45.485 --> 01:38:46.945
+You see that, I'll give you an example.
+
+1808
+01:38:47.005 --> 01:38:51.385
+For example, if I say, are you going so Hindi
+
+1809
+01:38:52.165 --> 01:38:54.145
+re, which is correct blue score.
+
+1810
+01:38:54.525 --> 01:38:57.825
+If my translator is saying, are you re references?
+
+1811
+01:38:58.005 --> 01:39:02.225
+Are you re which will give one,
+
+1812
+01:39:02.285 --> 01:39:07.145
+but suppose instead of that, if I say re,
+
+1813
+01:39:07.145 --> 01:39:09.065
+which is also, are you going now in
+
+1814
+01:39:09.065 --> 01:39:11.345
+that case blue will fail, it'll say no, no, no, it is wrong.
+
+1815
+01:39:11.445 --> 01:39:14.385
+It should have been Kia is a correct sequence,
+
+1816
+01:39:14.385 --> 01:39:16.025
+which is there in my ground truth.
+
+1817
+01:39:16.205 --> 01:39:19.785
+But you're saying that Kia, so multiple words are changing,
+
+1818
+01:39:20.675 --> 01:39:22.065
+hence blue will go down.
+
+1819
+01:39:22.165 --> 01:39:24.545
+That's why I showing I shown you blue.
+
+1820
+01:39:24.645 --> 01:39:27.305
+If it is more than 30%, more than 30,
+
+1821
+01:39:27.605 --> 01:39:28.945
+it is treated to be good.
+
+1822
+01:39:29.495 --> 01:39:30.665
+Okay? Treated to be good
+
+1823
+01:39:30.665 --> 01:39:33.745
+because you can, you don't have the exact,
+
+1824
+01:39:33.745 --> 01:39:37.185
+because for same English sentence can have multiple
+
+1825
+01:39:37.995 --> 01:39:40.185
+Hindi sentence as an output and all are correct
+
+1826
+01:39:41.045 --> 01:39:43.025
+and all are correct because it say it says language, right?
+
+1827
+01:39:43.585 --> 01:39:45.545
+Multiple ways we can say the same sentence
+
+1828
+01:39:46.045 --> 01:39:48.145
+and that's where the blue is not a good measure,
+
+1829
+01:39:48.205 --> 01:39:49.385
+but yeah, it is one
+
+1830
+01:39:49.385 --> 01:39:52.145
+of the measure which we highly use. Yeah.
+
+1831
+01:39:52.765 --> 01:39:53.745
+Yes, thank you.
+
+1832
+01:39:56.195 --> 01:39:59.025
+Okay. Alright. Others?
+
+1833
+01:39:59.385 --> 01:40:00.625
+I have one question. I,
+
+1834
+01:40:01.445 --> 01:40:04.585
+so does this teacher forcing cause any issues like
+
+1835
+01:40:04.585 --> 01:40:08.625
+because we are ex exposing so much of information to it,
+
+1836
+01:40:08.695 --> 01:40:09.825
+correct information?
+
+1837
+01:40:10.125 --> 01:40:12.345
+Mm-hmm. So will it lead to any issue, sir?
+
+1838
+01:40:14.175 --> 01:40:16.555
+Uh, I don't think so. Okay.
+
+1839
+01:40:17.655 --> 01:40:21.075
+Uh, I don't think that there will be any issue for that one.
+
+1840
+01:40:21.255 --> 01:40:22.515
+Uh, but you can see that, uh,
+
+1841
+01:40:23.435 --> 01:40:25.435
+I don't have the correct answer.
+
+1842
+01:40:25.615 --> 01:40:27.435
+Mm-hmm. People, they,
+
+1843
+01:40:27.545 --> 01:40:29.955
+they use this teacher forcing in three,
+
+1844
+01:40:29.955 --> 01:40:31.115
+three different variants.
+
+1845
+01:40:31.115 --> 01:40:33.675
+Either you can use it or not use it.
+
+1846
+01:40:33.675 --> 01:40:35.155
+These two are the variant, it's up to you.
+
+1847
+01:40:35.645 --> 01:40:38.275
+Third one is I will show you in my code.
+
+1848
+01:40:38.575 --> 01:40:42.715
+You can also use it based on some probability. Okay?
+
+1849
+01:40:43.615 --> 01:40:47.075
+You, uh, I actually, I have used it like that.
+
+1850
+01:40:47.215 --> 01:40:51.675
+So basically when I was doing this inferencing, I
+
+1851
+01:40:52.335 --> 01:40:54.005
+did the same thing, uh,
+
+1852
+01:40:54.055 --> 01:40:57.725
+where it was 10 or it's not here.
+
+1853
+01:40:58.435 --> 01:41:02.795
+Inference teacher forcing
+
+1854
+01:41:03.185 --> 01:41:04.395
+somewhere it was
+
+1855
+01:41:05.485 --> 01:41:08.495
+parameter left.
+
+1856
+01:41:10.625 --> 01:41:12.035
+Okay, takes a Hindi token
+
+1857
+01:41:15.215 --> 01:41:18.695
+anywhere else, uh, I don't see, uh, here.
+
+1858
+01:41:19.075 --> 01:41:22.975
+So clip, uh, no, not clip. Clip is for something else.
+
+1859
+01:41:22.975 --> 01:41:25.815
+Somewhere I've used it. I am not able, I'm not able to find.
+
+1860
+01:41:25.875 --> 01:41:28.055
+So what you can do is you can put a
+
+1861
+01:41:28.255 --> 01:41:29.735
+threshold that is also possible.
+
+1862
+01:41:29.755 --> 01:41:34.575
+All these things are possible that if my, uh, output is,
+
+1863
+01:41:34.755 --> 01:41:37.095
+uh, suppose it'll give the probability.
+
+1864
+01:41:37.235 --> 01:41:41.185
+If the probability is going in in a particular range,
+
+1865
+01:41:41.185 --> 01:41:42.745
+then only I'll use teacher posing,
+
+1866
+01:41:42.745 --> 01:41:44.505
+otherwise I'll not use teacher posing.
+
+1867
+01:41:44.645 --> 01:41:46.945
+So you can be a little bit flexible also in that
+
+1868
+01:41:47.285 --> 01:41:48.585
+and all things are different.
+
+1869
+01:41:48.845 --> 01:41:51.425
+Why, uh, all things are depend how your
+
+1870
+01:41:52.265 --> 01:41:55.665
+training is being performed, whether are you, uh, being able
+
+1871
+01:41:55.665 --> 01:41:58.665
+to converge or not, whether the back propagation is,
+
+1872
+01:41:58.665 --> 01:41:59.825
+uh, stable or not.
+
+1873
+01:42:00.165 --> 01:42:01.785
+It all depends on those factors.
+
+1874
+01:42:01.965 --> 01:42:05.545
+So you have to do the experiment and try and take a call.
+
+1875
+01:42:05.545 --> 01:42:07.345
+Whether you want to use it is not compulsory,
+
+1876
+01:42:07.345 --> 01:42:09.345
+it is an optional instead, but it says that it,
+
+1877
+01:42:09.345 --> 01:42:11.825
+you have the correct input which you feed initially.
+
+1878
+01:42:12.485 --> 01:42:15.545
+It, the model will adapt it faster as compared
+
+1879
+01:42:15.545 --> 01:42:17.545
+to the wrong input is being fed wrong,
+
+1880
+01:42:17.545 --> 01:42:19.905
+protection is being done and then being update
+
+1881
+01:42:19.905 --> 01:42:21.585
+of all those parameters. Yeah,
+
+1882
+01:42:22.195 --> 01:42:23.195
+Understood sir. And
+
+1883
+01:42:23.195 --> 01:42:26.705
+also for back propagation, we use BPTT here also, right?
+
+1884
+01:42:27.325 --> 01:42:28.465
+Uh, similar to RNN?
+
+1885
+01:42:28.925 --> 01:42:32.225
+Yes, yes, yes. Okay, sir. Got it. Thank you. Yeah.
+
+1886
+01:42:34.665 --> 01:42:36.325
+So, uh, I have one question.
+
+1887
+01:42:37.225 --> 01:42:40.245
+So, uh, like lium, uh,
+
+1888
+01:42:40.245 --> 01:42:42.845
+generally it helps in remember things uh,
+
+1889
+01:42:42.865 --> 01:42:44.045
+for a longer time, right?
+
+1890
+01:42:44.705 --> 01:42:47.805
+But uh, still the decoded gets one, only one summary.
+
+1891
+01:42:47.985 --> 01:42:50.765
+Is that the reason why attention is needed? Yeah.
+
+1892
+01:42:50.765 --> 01:42:52.285
+Even after using less team.
+
+1893
+01:42:52.665 --> 01:42:54.405
+That's what, that's what, yes, yes,
+
+1894
+01:42:56.215 --> 01:42:57.215
+That is. And even,
+
+1895
+01:42:57.215 --> 01:43:00.465
+uh, for this, uh, teacher train is that, uh,
+
+1896
+01:43:00.465 --> 01:43:05.185
+teacher, uh, forcing, so during training we'll give uh,
+
+1897
+01:43:05.485 --> 01:43:06.825
+uh, correct previous words
+
+1898
+01:43:07.485 --> 01:43:09.025
+and, uh, during testing, we'll,
+
+1899
+01:43:09.395 --> 01:43:11.065
+it'll use its own output, right?
+
+1900
+01:43:11.095 --> 01:43:14.375
+Like, uh, that difference Cause any problem later
+
+1901
+01:43:14.475 --> 01:43:15.695
+sir? Like, uh, no,
+
+1902
+01:43:15.695 --> 01:43:17.215
+No, I, I don't think, but
+
+1903
+01:43:17.215 --> 01:43:19.415
+because at the training time you have the target,
+
+1904
+01:43:19.555 --> 01:43:22.335
+so you feed testing time anyway, you don't have that
+
+1905
+01:43:22.335 --> 01:43:25.215
+because you are now translating in new sentence altogether.
+
+1906
+01:43:25.215 --> 01:43:27.215
+You don't have the correct sequence already,
+
+1907
+01:43:27.275 --> 01:43:29.735
+you can't feed it, right?
+
+1908
+01:43:30.075 --> 01:43:31.375
+So that's the first of all,
+
+1909
+01:43:31.715 --> 01:43:33.335
+but it doesn't create any problem.
+
+1910
+01:43:33.595 --> 01:43:36.215
+In fact, it may help you to get, uh,
+
+1911
+01:43:36.215 --> 01:43:37.375
+the training a little faster.
+
+1912
+01:43:37.445 --> 01:43:39.335
+That is my, what my understanding is.
+
+1913
+01:43:39.995 --> 01:43:41.255
+But you can always experiment
+
+1914
+01:43:41.255 --> 01:43:44.655
+and check whether it is going towards any unstable training,
+
+1915
+01:43:44.875 --> 01:43:46.015
+not converging at all,
+
+1916
+01:43:46.155 --> 01:43:47.895
+and then take a call to not using a teacher
+
+1917
+01:43:47.895 --> 01:43:49.095
+forcing that is also possible.
+
+1918
+01:43:49.485 --> 01:43:50.485
+Yeah.
+
+1919
+01:43:51.345 --> 01:43:52.355
+Okay. Okay.
+
+1920
+01:43:54.135 --> 01:43:57.355
+So bidirectional, sorry,
+
+1921
+01:43:57.825 --> 01:44:01.155
+bidirectional team mentioned last class, so
+
+1922
+01:44:02.015 --> 01:44:04.515
+No, I did not, I don't know like, uh, it's little
+
+1923
+01:44:05.215 --> 01:44:06.715
+you can you try again
+
+1924
+01:44:06.715 --> 01:44:09.555
+because your mic, I guess it is not giving
+
+1925
+01:44:10.255 --> 01:44:13.075
+The last class you mentioned, uh, bidirectional LS tm.
+
+1926
+01:44:13.175 --> 01:44:14.175
+Ah,
+
+1927
+01:44:14.815 --> 01:44:15.955
+Oh bi-directional lstm.
+
+1928
+01:44:16.115 --> 01:44:17.555
+Although I mentioned I have not yet covered,
+
+1929
+01:44:18.295 --> 01:44:21.155
+but you can uh, imagine
+
+1930
+01:44:21.505 --> 01:44:24.915
+that LSTM the way I have stacked now there is a possibility
+
+1931
+01:44:24.945 --> 01:44:28.275
+that bidirectional lstm also I can use, I have not shown you
+
+1932
+01:44:28.555 --> 01:44:30.675
+although, but it is there in the slide.
+
+1933
+01:44:30.735 --> 01:44:33.715
+Uh, maybe next class we, we'll try to explain
+
+1934
+01:44:33.715 --> 01:44:35.635
+that part that how does it work? Yeah,
+
+1935
+01:44:36.305 --> 01:44:37.305
+Sure.
+
+1936
+01:44:37.625 --> 01:44:38.625
+Yeah.
+
+1937
+01:44:42.555 --> 01:44:45.775
+Others Is it fine? Any, any other query? Um,
+
+1938
+01:44:46.805 --> 01:44:47.805
+Encoder part sir? Like,
+
+1939
+01:44:47.805 --> 01:44:50.295
+um, uh, when the encoder, uh,
+
+1940
+01:44:50.895 --> 01:44:52.375
+finishes reading a long sentence,
+
+1941
+01:44:52.395 --> 01:44:54.215
+if we have long sentences mm-hmm.
+
+1942
+01:44:54.315 --> 01:44:56.855
+It gives one hot vector, like one vector to the,
+
+1943
+01:44:57.035 --> 01:44:58.055
+the decode, right?
+
+1944
+01:44:58.595 --> 01:45:01.495
+So if in case, uh, the sentences not very long, is
+
+1945
+01:45:01.495 --> 01:45:04.535
+that a vector kind of, uh, overloaded? Like uh,
+
+1946
+01:45:04.715 --> 01:45:06.655
+No, it's not one hot vector context vector
+
+1947
+01:45:06.655 --> 01:45:07.895
+is noted. One hot vector,
+
+1948
+01:45:08.685 --> 01:45:09.685
+Okay. Context
+
+1949
+01:45:09.685 --> 01:45:12.175
+vector is always what you're getting from CT
+
+1950
+01:45:12.235 --> 01:45:13.655
+and ST in the LSTM,
+
+1951
+01:45:14.475 --> 01:45:16.215
+Oh, And that is some dense vector.
+
+1952
+01:45:16.285 --> 01:45:17.935
+Some values will always be there.
+
+1953
+01:45:19.515 --> 01:45:21.255
+One hot vector you feed at an input
+
+1954
+01:45:21.475 --> 01:45:22.895
+and one hot vector is available
+
+1955
+01:45:23.285 --> 01:45:25.855
+with you at the output when you do the comparison
+
+1956
+01:45:25.885 --> 01:45:28.775
+between the prediction and the actual output.
+
+1957
+01:45:28.835 --> 01:45:30.815
+But in between whatever vectors you get,
+
+1958
+01:45:31.545 --> 01:45:32.685
+it is never one hot vector.
+
+1959
+01:45:32.705 --> 01:45:35.005
+It is always a dense vector with some values, negative,
+
+1960
+01:45:35.205 --> 01:45:36.965
+positive, whatever it is, but not one hot.
+
+1961
+01:45:37.315 --> 01:45:40.035
+Yeah. Okay.
+
+1962
+01:45:45.955 --> 01:45:46.965
+Okay then. Alright,
+
+1963
+01:45:47.015 --> 01:45:49.045
+we'll meet on Monday and we'll continue.
+
+1964
+01:45:49.045 --> 01:45:51.885
+First we'll see the demo for this machine translation case
+
+1965
+01:45:52.025 --> 01:45:54.565
+and then we'll quickly now attention
+
+1966
+01:45:54.695 --> 01:45:56.205
+motivation you have already got.
+
+1967
+01:45:56.215 --> 01:45:58.845
+We'll only see now next how to do, how
+
+1968
+01:45:58.845 --> 01:46:00.165
+to calculate those attentions.
+
+1969
+01:46:00.225 --> 01:46:01.845
+And there are certain methods for that.
+
+1970
+01:46:02.415 --> 01:46:06.325
+We'll, we'll, we'll go towards it. Okay? Alright. Thank you.
+
+1971
+01:46:07.255 --> 01:46:10.245
+Thank you sir. Thank you sir. Thank you sir.
+
+1972
+01:46:10.695 --> 01:46:13.715
+Thank you sir. Thank you sir.
