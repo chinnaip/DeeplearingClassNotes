@@ -1,0 +1,7016 @@
+WEBVTT
+
+1
+00:07:27.985 --> 00:07:28.345
+Good evening.
+
+2
+00:07:28.575 --> 00:07:32.535
+Good evening to Good evening. Good evening, sir.
+
+3
+00:07:34.435 --> 00:07:36.825
+Good evening, sir. Good evening.
+
+4
+00:07:37.135 --> 00:07:38.385
+Good evening, sir. Good
+
+5
+00:07:38.895 --> 00:07:39.895
+Evening, sir.
+
+6
+00:07:42.205 --> 00:07:44.385
+All of you are back on your place,
+
+7
+00:07:44.385 --> 00:07:46.625
+whoever had visited Triple 80 harbor?
+
+8
+00:07:47.125 --> 00:07:49.705
+Not yet, sir. I'm on my vacation with my kids. Oh yeah.
+
+9
+00:07:52.575 --> 00:07:56.245
+Okay. Okay. So you should talk with others.
+
+10
+00:07:56.385 --> 00:07:58.205
+How has your experience not in this class?
+
+11
+00:07:58.215 --> 00:08:01.065
+Maybe sometimes later. Okay. Yeah.
+
+12
+00:08:03.255 --> 00:08:08.025
+Okay. Okay. We'll wait for, uh, Taha. I joined.
+
+13
+00:08:08.025 --> 00:08:09.025
+Good evening, sir.
+
+14
+00:08:15.285 --> 00:08:16.375
+Good evening, Al. Good evening.
+
+15
+00:08:17.275 --> 00:08:17.495
+Yes.
+
+16
+00:08:30.555 --> 00:08:34.455
+So, um, Dr. Sunil, how do we proceed?
+
+17
+00:08:34.615 --> 00:08:36.495
+I will start with CNN today or,
+
+18
+00:08:37.355 --> 00:08:38.355
+Uh, yes, sir. We can start
+
+19
+00:08:38.355 --> 00:08:39.815
+with the CNN first staff.
+
+20
+00:08:40.205 --> 00:08:42.455
+Then when I'll take over, I will just take them
+
+21
+00:08:42.455 --> 00:08:44.775
+through the, some programming.
+
+22
+00:08:45.485 --> 00:08:47.295
+Okay. Yes, sir. That is what I have
+
+23
+00:09:10.115 --> 00:09:11.485
+Hope, uh, screen is visible.
+
+24
+00:09:12.385 --> 00:09:12.805
+Yes, sir.
+
+25
+00:09:19.345 --> 00:09:23.725
+Let me also, let me know when should I start under,
+
+26
+00:09:31.345 --> 00:09:33.725
+We can start, sir, around 40 people up there.
+
+27
+00:09:35.115 --> 00:09:36.205
+Okay. Yes sir.
+
+28
+00:10:21.915 --> 00:10:22.725
+Recording. And,
+
+29
+00:10:45.765 --> 00:10:46.765
+Okay. So,
+
+30
+00:10:46.765 --> 00:10:51.015
+um, good evening all, uh, um,
+
+31
+00:10:53.315 --> 00:10:56.695
+See after, uh, know, we,
+
+32
+00:10:58.115 --> 00:11:00.775
+uh, transitioned from
+
+33
+00:11:01.885 --> 00:11:06.775
+multi-layer perceptron to, uh,
+
+34
+00:11:07.575 --> 00:11:10.255
+training the deep feed forward neural network.
+
+35
+00:11:11.995 --> 00:11:16.695
+Uh, the next important, uh, breakthrough that came in
+
+36
+00:11:17.445 --> 00:11:20.375
+deep learning was, um,
+
+37
+00:11:21.715 --> 00:11:25.015
+the conation, the use of con networks,
+
+38
+00:11:26.225 --> 00:11:29.295
+especially in, um, image processing
+
+39
+00:11:29.295 --> 00:11:30.735
+and computer vision task.
+
+40
+00:11:31.875 --> 00:11:36.775
+Uh, they, they were hosting, uh, uh, no
+
+41
+00:11:37.325 --> 00:11:41.055
+international challenges across the globe
+
+42
+00:11:42.995 --> 00:11:47.455
+for object detection from the images, uh, no, uh,
+
+43
+00:11:47.455 --> 00:11:48.535
+images primarily.
+
+44
+00:11:49.515 --> 00:11:51.895
+Um, this is there as an interest challenge.
+
+45
+00:11:51.915 --> 00:11:54.525
+Before this even d learning came in, came into picture.
+
+46
+00:11:54.525 --> 00:11:57.165
+People were trying classical machine learning approaches.
+
+47
+00:11:59.225 --> 00:12:03.005
+But, uh, especially you may be knowing, you know,
+
+48
+00:12:03.175 --> 00:12:08.125
+there is a, a public repository of ImageNet, a large number
+
+49
+00:12:08.145 --> 00:12:12.725
+of images, public collected images are crowdsource there
+
+50
+00:12:12.725 --> 00:12:15.445
+and put it there for advancing the research
+
+51
+00:12:15.445 --> 00:12:17.485
+and image processing, especially
+
+52
+00:12:17.505 --> 00:12:19.085
+for our object detection task.
+
+53
+00:12:20.335 --> 00:12:24.705
+There, I think, um,
+
+54
+00:12:25.445 --> 00:12:30.385
+Hinton group itself, um, uh, they,
+
+55
+00:12:31.365 --> 00:12:34.025
+uh, explored the usefulness
+
+56
+00:12:34.205 --> 00:12:37.465
+of conversion neur networks in the object detection task.
+
+57
+00:12:39.115 --> 00:12:43.135
+And again, no, they demonstrated a very significant increase
+
+58
+00:12:43.135 --> 00:12:44.175
+in the performance.
+
+59
+00:12:44.925 --> 00:12:47.975
+Okay. So as a result of that, that, again,
+
+60
+00:12:47.975 --> 00:12:51.055
+that is another breakthrough, which gave a push
+
+61
+00:12:51.155 --> 00:12:54.815
+and impetus to, uh, take this attention
+
+62
+00:12:54.875 --> 00:12:56.775
+of the deep learning model means, uh,
+
+63
+00:12:56.975 --> 00:12:58.815
+interest in the deep learning model to the next level.
+
+64
+00:12:59.285 --> 00:13:03.855
+Okay. Um, so that, that, that is where one
+
+65
+00:13:03.855 --> 00:13:08.215
+of the most versatile deep learning models are conversion
+
+66
+00:13:08.215 --> 00:13:12.095
+neural networks, and, uh, all
+
+67
+00:13:12.095 --> 00:13:15.655
+of you should invest the time in mastering
+
+68
+00:13:16.715 --> 00:13:19.095
+the usefulness of conversion neural networks.
+
+69
+00:13:19.885 --> 00:13:21.975
+That is what we are going to discuss in this body,
+
+70
+00:13:22.725 --> 00:13:25.935
+that deep feed for network, which we studied so far, just
+
+71
+00:13:26.095 --> 00:13:27.415
+to get a feel for
+
+72
+00:13:27.435 --> 00:13:30.215
+how the transition happened from multilayer perceptron
+
+73
+00:13:30.285 --> 00:13:32.415
+shallow network to the deep network
+
+74
+00:13:32.915 --> 00:13:37.495
+and show some improved performance and the acoustic model.
+
+75
+00:13:37.595 --> 00:13:39.975
+All those things I showed, uh, dril earlier
+
+76
+00:13:40.965 --> 00:13:43.095
+that improvement in the performance. Uh,
+
+77
+00:13:43.095 --> 00:13:47.495
+Sir, last time you discussed a little, uh,
+
+78
+00:13:48.525 --> 00:13:53.335
+that, uh, deep learning, uh, how this a NN uh,
+
+79
+00:13:53.515 --> 00:13:56.135
+and deep learning, we transitioned why we transitioned
+
+80
+00:13:56.195 --> 00:13:58.815
+and all, ah, that a caustic model,
+
+81
+00:13:59.175 --> 00:14:00.415
+I think you have not explained here.
+
+82
+00:14:00.445 --> 00:14:01.615
+Yeah. That part is
+
+83
+00:14:02.275 --> 00:14:05.095
+No, let, let me then show that so
+
+84
+00:14:05.095 --> 00:14:06.335
+that it makes a transition.
+
+85
+00:14:06.555 --> 00:14:08.055
+Yes. Maybe others can comment
+
+86
+00:14:08.055 --> 00:14:10.335
+because it's difficult for me to keep track.
+
+87
+00:14:10.885 --> 00:14:13.255
+Yeah. Yes. Let me see whether
+
+88
+00:14:15.215 --> 00:14:16.855
+Advanced concept, this one, yeah,
+
+89
+00:14:17.475 --> 00:14:19.015
+I'm just opening that and, uh,
+
+90
+00:14:52.105 --> 00:14:53.405
+Did they explain about this?
+
+91
+00:14:53.425 --> 00:14:56.885
+Any of you can comment please about breakthrough
+
+92
+00:14:56.885 --> 00:14:59.485
+and replanning then Grady layer explaining.
+
+93
+00:14:59.485 --> 00:15:03.205
+Did they explain? No, sir. No, sir. No, no, sir. No sir.
+
+94
+00:15:03.355 --> 00:15:05.285
+It's not explained. Okay.
+
+95
+00:15:05.785 --> 00:15:09.965
+So let me, um, so c we explained about, uh,
+
+96
+00:15:10.275 --> 00:15:12.805
+vanishing radiant problem, exporting radiant problem.
+
+97
+00:15:12.825 --> 00:15:14.565
+That's what Sarah explained in detail.
+
+98
+00:15:15.625 --> 00:15:19.685
+Now, will I will, uh, just this continuity, I will give,
+
+99
+00:15:20.745 --> 00:15:25.125
+um, uh, the,
+
+100
+00:15:25.125 --> 00:15:29.565
+because even though it is a history now in the sense, um,
+
+101
+00:15:30.385 --> 00:15:34.365
+um, uh, this model itself, uh,
+
+102
+00:15:34.785 --> 00:15:37.005
+is not very great now
+
+103
+00:15:37.115 --> 00:15:39.885
+because we are seeing that after 20 years.
+
+104
+00:15:40.505 --> 00:15:41.725
+But this is the result
+
+105
+00:15:41.755 --> 00:15:44.805
+that gave breakthrough in the deep learning,
+
+106
+00:15:45.545 --> 00:15:49.805
+and this is published in as a paper in 2006 by Hinton
+
+107
+00:15:49.865 --> 00:15:51.885
+and the group, a fast learning algorithm
+
+108
+00:15:52.065 --> 00:15:54.205
+for deep belief network neural competition.
+
+109
+00:15:54.665 --> 00:15:57.965
+So that is the, uh, first, uh, breakthrough paper,
+
+110
+00:15:58.015 --> 00:15:59.325
+which was, which came.
+
+111
+00:16:00.385 --> 00:16:04.885
+So essentially, uh, how that breakthrough was, I will, I,
+
+112
+00:16:04.885 --> 00:16:09.605
+I'll try to explain this deep neural network,
+
+113
+00:16:09.605 --> 00:16:12.445
+because of the large number of layers,
+
+114
+00:16:13.705 --> 00:16:16.445
+and in each layer we have large number of neurons.
+
+115
+00:16:17.105 --> 00:16:19.805
+So accordingly, we can treat this as having a many levels
+
+116
+00:16:19.825 --> 00:16:21.005
+of nonlinearities.
+
+117
+00:16:22.505 --> 00:16:25.325
+So accordingly, they can potentially represent highly
+
+118
+00:16:25.515 --> 00:16:27.565
+nonlinear, highly varying functions.
+
+119
+00:16:27.565 --> 00:16:30.765
+They can complex machine learning functions, they can model
+
+120
+00:16:30.865 --> 00:16:33.245
+or complex pattern recognition problems they can model.
+
+121
+00:16:34.585 --> 00:16:36.085
+Uh, but
+
+122
+00:16:36.085 --> 00:16:39.365
+however, till 2006, uh,
+
+123
+00:16:39.365 --> 00:16:42.045
+even though conceptually when the proposal that is
+
+124
+00:16:42.245 --> 00:16:44.285
+what they were hypothesizing,
+
+125
+00:16:45.655 --> 00:16:48.005
+their performance was not found to be better,
+
+126
+00:16:48.755 --> 00:16:52.245
+even in some cases, it is worse than, uh,
+
+127
+00:16:52.785 --> 00:16:54.165
+the shalon neural networks.
+
+128
+00:16:54.795 --> 00:16:56.845
+Okay? With one or two done layers.
+
+129
+00:16:58.085 --> 00:17:00.525
+Actually, in case of speech recognition, we have a
+
+130
+00:17:01.145 --> 00:17:02.645
+one publisher result.
+
+131
+00:17:03.555 --> 00:17:07.565
+They have showed, um, that, um,
+
+132
+00:17:09.155 --> 00:17:11.805
+instead of having your three layers, hidden layers
+
+133
+00:17:11.865 --> 00:17:16.045
+of multi-layer perceptron, I can have one hidden layer
+
+134
+00:17:16.045 --> 00:17:17.925
+with large number of neurons.
+
+135
+00:17:18.835 --> 00:17:23.045
+That itself is sufficient to handle any non-linear tasks.
+
+136
+00:17:23.635 --> 00:17:25.885
+That is what they proposed, okay?
+
+137
+00:17:26.255 --> 00:17:28.485
+Which is almost like a support vector,
+
+138
+00:17:28.485 --> 00:17:32.085
+mission working principle that whatever we are telling,
+
+139
+00:17:32.225 --> 00:17:33.925
+no linearly supportable.
+
+140
+00:17:34.665 --> 00:17:36.845
+And, uh, the other one is which are not
+
+141
+00:17:36.925 --> 00:17:37.965
+linearly supportable.
+
+142
+00:17:38.815 --> 00:17:42.285
+Again, there are two subcategories, convex and non convex.
+
+143
+00:17:43.265 --> 00:17:47.925
+Uh, so the, the hypothesis by them was, uh,
+
+144
+00:17:47.925 --> 00:17:51.485
+that is where no to deal with, uh, non,
+
+145
+00:17:52.255 --> 00:17:54.925
+which are not linearly separable, but convex nature.
+
+146
+00:17:55.145 --> 00:17:57.845
+You add one more hidden layer, again,
+
+147
+00:17:57.845 --> 00:17:59.445
+which are not non convex.
+
+148
+00:18:00.355 --> 00:18:02.445
+Then again, add one more hidden layer like that.
+
+149
+00:18:02.445 --> 00:18:03.605
+We did multi layer receptor.
+
+150
+00:18:04.235 --> 00:18:07.405
+That connection is the approach for speech recognition,
+
+151
+00:18:07.745 --> 00:18:09.725
+her bollard and, um, uh,
+
+152
+00:18:10.395 --> 00:18:13.245
+another person have written the monograph is
+
+153
+00:18:13.245 --> 00:18:14.365
+available public domain.
+
+154
+00:18:15.955 --> 00:18:18.845
+This demonstrated that instead of this three layer,
+
+155
+00:18:18.925 --> 00:18:20.205
+I will have a single layer
+
+156
+00:18:20.205 --> 00:18:22.285
+with very large number of neurons.
+
+157
+00:18:23.075 --> 00:18:26.405
+Then you are mapping the data from lower dimension
+
+158
+00:18:26.405 --> 00:18:27.645
+to very high dimension.
+
+159
+00:18:28.225 --> 00:18:29.245
+In high dimension,
+
+160
+00:18:29.305 --> 00:18:32.285
+any nonlinear problem in the lower dimension gets converted
+
+161
+00:18:32.285 --> 00:18:33.845
+into a linear classification.
+
+162
+00:18:34.535 --> 00:18:38.885
+There, you can, uh, you can do, do the classification
+
+163
+00:18:38.905 --> 00:18:41.165
+and bring back the classification results.
+
+164
+00:18:41.165 --> 00:18:43.925
+That is a way later supporter vector machines
+
+165
+00:18:43.945 --> 00:18:46.405
+for essentially working principle was that.
+
+166
+00:18:47.145 --> 00:18:49.445
+So people concluded like that you don't have
+
+167
+00:18:49.445 --> 00:18:50.885
+to include more number of layers
+
+168
+00:18:50.885 --> 00:18:53.525
+because it doesn't give any inform in the performance.
+
+169
+00:18:54.065 --> 00:18:57.765
+So only one layer is sufficient like that people are argued.
+
+170
+00:18:58.185 --> 00:19:01.085
+So in that way, even though this theory was there,
+
+171
+00:19:01.405 --> 00:19:04.045
+multiple done layers, all those things, uh,
+
+172
+00:19:04.195 --> 00:19:05.765
+they were not found to be better
+
+173
+00:19:05.905 --> 00:19:08.565
+and even often worse than shallow neural networks.
+
+174
+00:19:10.705 --> 00:19:15.525
+Um, then maybe as we explained earlier,
+
+175
+00:19:15.665 --> 00:19:17.485
+now the gradient based optimization,
+
+176
+00:19:18.085 --> 00:19:21.205
+starting from random mineralization will get stuck in poor
+
+177
+00:19:21.605 --> 00:19:23.405
+solution for such deep networks.
+
+178
+00:19:24.025 --> 00:19:27.805
+But what, uh, always know, I told this
+
+179
+00:19:28.425 --> 00:19:32.685
+Hinton group, EOS group, one more person, either Lannan
+
+180
+00:19:32.745 --> 00:19:35.285
+or something, their group will continue
+
+181
+00:19:35.285 --> 00:19:36.805
+to work along these lines.
+
+182
+00:19:37.435 --> 00:19:41.085
+They were of the h are a hypothesis that no,
+
+183
+00:19:41.085 --> 00:19:42.325
+there should be some way
+
+184
+00:19:42.325 --> 00:19:43.965
+of training these deep learning models.
+
+185
+00:19:45.225 --> 00:19:49.645
+And Professor Hinton group, uh, know, came up
+
+186
+00:19:49.645 --> 00:19:50.725
+with a method for training.
+
+187
+00:19:52.085 --> 00:19:56.025
+Um, it is, see, it is not, uh, that they call it
+
+188
+00:19:56.025 --> 00:19:59.745
+as a greedy layer wise, unsupervised learning algorithm
+
+189
+00:20:00.565 --> 00:20:02.265
+as a principle to solve the problem
+
+190
+00:20:02.365 --> 00:20:03.905
+of training deep networks
+
+191
+00:20:04.655 --> 00:20:06.825
+that gave a much needed breakthrough.
+
+192
+00:20:08.635 --> 00:20:12.615
+But what I wanted to hypothesize is it is not
+
+193
+00:20:12.615 --> 00:20:16.415
+that greedy layer wise training algorithm was not there in
+
+194
+00:20:16.415 --> 00:20:18.375
+the literature at that point of time.
+
+195
+00:20:19.475 --> 00:20:21.495
+It was there, but it was,
+
+196
+00:20:21.595 --> 00:20:23.695
+it is being used for some other purpose.
+
+197
+00:20:24.355 --> 00:20:26.535
+If you take this deep belief networks,
+
+198
+00:20:27.025 --> 00:20:30.895
+there are feedback neural networks to train that feedback.
+
+199
+00:20:30.895 --> 00:20:32.855
+Neural networks, feedback neural networks.
+
+200
+00:20:32.855 --> 00:20:37.495
+They use this greedy, uh, layer wise unsupervised, uh, uh,
+
+201
+00:20:37.895 --> 00:20:41.935
+learning algorithm, but then never visualize
+
+202
+00:20:42.045 --> 00:20:43.615
+that algorithm can be used
+
+203
+00:20:43.675 --> 00:20:45.415
+for a deep feed forward neural network
+
+204
+00:20:45.415 --> 00:20:46.855
+because it's meant for feedback.
+
+205
+00:20:47.785 --> 00:20:52.605
+But these people felt, oh, can I, instead of,
+
+206
+00:20:52.605 --> 00:20:54.485
+since I'm not able to train this deeper network,
+
+207
+00:20:54.725 --> 00:20:58.285
+I will take layer wise, when I take layer wise training,
+
+208
+00:20:58.565 --> 00:21:02.565
+I treat this as a, a two layer feedback neural network
+
+209
+00:21:03.225 --> 00:21:05.925
+and apply that greedy layer wise unsupervised
+
+210
+00:21:06.125 --> 00:21:07.725
+learning for training the network.
+
+211
+00:21:08.265 --> 00:21:10.485
+That's all the idea and it worked.
+
+212
+00:21:11.185 --> 00:21:15.725
+And that is that, uh, created, uh,
+
+213
+00:21:16.185 --> 00:21:20.085
+you know, a required breakthrough in the, um,
+
+214
+00:21:21.265 --> 00:21:22.725
+in the deep learning literature.
+
+215
+00:21:23.955 --> 00:21:25.525
+What I wanted to say is no.
+
+216
+00:21:25.785 --> 00:21:28.085
+For example, I, while, um,
+
+217
+00:21:30.615 --> 00:21:32.715
+Before, um, explaining, uh,
+
+218
+00:21:32.935 --> 00:21:35.715
+the propagation learning algorithm as a motivation,
+
+219
+00:21:35.935 --> 00:21:39.035
+we mentioned that nearly for a decade
+
+220
+00:21:39.215 --> 00:21:42.955
+or so, the whole neural networks field was halted
+
+221
+00:21:43.385 --> 00:21:45.115
+because we were not knowing how
+
+222
+00:21:45.115 --> 00:21:46.595
+to train a feed forward network.
+
+223
+00:21:46.705 --> 00:21:49.715
+That multi-layer perception problem was there.
+
+224
+00:21:50.225 --> 00:21:52.595
+Then the much needed breakthrough came in the form
+
+225
+00:21:52.595 --> 00:21:54.355
+of a BAP provocation learning algorithm.
+
+226
+00:21:55.815 --> 00:21:57.955
+But this is not, like not, no, they came up
+
+227
+00:21:57.955 --> 00:21:59.235
+with a breaking algorithm
+
+228
+00:21:59.455 --> 00:22:01.515
+for training the deep feed for networks.
+
+229
+00:22:01.825 --> 00:22:03.475
+This algorithm was already there,
+
+230
+00:22:03.585 --> 00:22:05.635
+used in the feedback neur network context
+
+231
+00:22:06.585 --> 00:22:10.515
+that they brought it and, uh, showed, uh, uh, that no,
+
+232
+00:22:10.655 --> 00:22:11.675
+you can try
+
+233
+00:22:11.675 --> 00:22:15.155
+and, uh, a deep feed for network using that principle.
+
+234
+00:22:15.255 --> 00:22:18.555
+So that is why I am trying
+
+235
+00:22:18.655 --> 00:22:22.855
+to emphasize too much here is, uh,
+
+236
+00:22:23.235 --> 00:22:27.655
+no timing is important in, in early turn of the century,
+
+237
+00:22:28.875 --> 00:22:33.655
+people who are having the ability to collect large amount
+
+238
+00:22:33.655 --> 00:22:36.895
+of data in any machine learning task easily
+
+239
+00:22:37.525 --> 00:22:38.695
+without much effort,
+
+240
+00:22:39.435 --> 00:22:42.255
+and there are computing powers like GPU came,
+
+241
+00:22:43.005 --> 00:22:44.535
+that is another coordination.
+
+242
+00:22:44.995 --> 00:22:46.695
+The third one is the third came
+
+243
+00:22:46.745 --> 00:22:49.255
+where I can use greedy layer wise spine.
+
+244
+00:22:49.915 --> 00:22:51.375
+All these came in handy
+
+245
+00:22:51.915 --> 00:22:54.095
+to demonstrate this 2006 breakthrough.
+
+246
+00:22:56.235 --> 00:22:59.455
+So the principal was
+
+247
+00:23:00.555 --> 00:23:03.535
+in the unsupervised greedy layer was training the principal
+
+248
+00:23:03.635 --> 00:23:05.535
+was, um,
+
+249
+00:23:08.065 --> 00:23:10.135
+since I'm not able to try
+
+250
+00:23:10.135 --> 00:23:14.855
+and suppose, let us consider a case of, um, say,
+
+251
+00:23:16.035 --> 00:23:19.975
+um, a seven layer
+
+252
+00:23:21.365 --> 00:23:22.775
+deep feed forward neural network
+
+253
+00:23:24.755 --> 00:23:26.735
+In a seven layer deep feed forward network.
+
+254
+00:23:28.155 --> 00:23:29.575
+Uh, I have input layer
+
+255
+00:23:29.575 --> 00:23:33.815
+and an output layer leaving that five layers are there.
+
+256
+00:23:35.125 --> 00:23:36.175
+When I take this fight
+
+257
+00:23:36.175 --> 00:23:38.375
+and layer, I will call from the input side
+
+258
+00:23:38.475 --> 00:23:41.575
+as the first done layer from the input side as H one
+
+259
+00:23:42.335 --> 00:23:43.575
+followed group that has H two
+
+260
+00:23:43.575 --> 00:23:47.085
+and so on the H five is the done layer
+
+261
+00:23:47.085 --> 00:23:50.085
+before the output layer, H one to H five one there.
+
+262
+00:23:50.595 --> 00:23:54.205
+Okay. Now, uh,
+
+263
+00:23:55.555 --> 00:23:58.495
+this, um, um,
+
+264
+00:24:00.305 --> 00:24:02.495
+since if I stack all of them together
+
+265
+00:24:02.595 --> 00:24:05.055
+and simply trying the propagation algorithm,
+
+266
+00:24:05.565 --> 00:24:07.015
+that vanishing gradient problem
+
+267
+00:24:07.115 --> 00:24:08.975
+or exploding gradient problem, we told.
+
+268
+00:24:10.155 --> 00:24:12.695
+Now what they did was in the greedy layer by training.
+
+269
+00:24:14.315 --> 00:24:15.815
+Now I'll take the input layer
+
+270
+00:24:16.195 --> 00:24:19.855
+and the first layer, H one, I will pull that out out
+
+271
+00:24:19.855 --> 00:24:21.375
+of the field for network one.
+
+272
+00:24:21.765 --> 00:24:25.575
+Okay, I will only take that one pair of layers.
+
+273
+00:24:25.875 --> 00:24:30.655
+One is the input and the H one, take them separately
+
+274
+00:24:31.555 --> 00:24:33.415
+and treat that as a feedback,
+
+275
+00:24:33.415 --> 00:24:35.135
+neural network feedback neural network.
+
+276
+00:24:35.135 --> 00:24:37.855
+There's no output from the H one layer.
+
+277
+00:24:38.875 --> 00:24:43.015
+Uh, for the training purpose, I apply the input
+
+278
+00:24:43.675 --> 00:24:44.695
+to the input layer,
+
+279
+00:24:46.115 --> 00:24:50.255
+and it goes into the, uh, the
+
+280
+00:24:51.635 --> 00:24:55.455
+hidden layer neuron output and the lead neuro.
+
+281
+00:24:55.825 --> 00:24:58.895
+Since I cannot tap the output of the hidden layer one,
+
+282
+00:25:00.055 --> 00:25:03.215
+I will fed feed back that, uh, uh,
+
+283
+00:25:04.115 --> 00:25:06.375
+output back into the input layer.
+
+284
+00:25:07.355 --> 00:25:11.615
+So naturally, say I'm applying some input, and
+
+285
+00:25:11.615 --> 00:25:13.775
+after going to the a DH layer one
+
+286
+00:25:13.795 --> 00:25:16.815
+and coming back, there is a reconstructed
+
+287
+00:25:16.815 --> 00:25:17.975
+value for that input.
+
+288
+00:25:18.675 --> 00:25:21.015
+So there is a actual input I've applied
+
+289
+00:25:21.395 --> 00:25:23.815
+and there is a reconstructed input that is coming
+
+290
+00:25:25.075 --> 00:25:26.655
+and find the error between them
+
+291
+00:25:27.595 --> 00:25:30.495
+and use that error for adjusting the weights in
+
+292
+00:25:30.495 --> 00:25:34.695
+that pay network until you reach a point where,
+
+293
+00:25:36.215 --> 00:25:38.475
+uh, the error becomes minimum.
+
+294
+00:25:40.215 --> 00:25:44.235
+So the name greedy came into picture,
+
+295
+00:25:44.505 --> 00:25:48.475
+because when I'm training a given hidden layer,
+
+296
+00:25:48.875 --> 00:25:50.755
+I don't have the target output.
+
+297
+00:25:51.855 --> 00:25:54.315
+So if I don't have the target output,
+
+298
+00:25:56.135 --> 00:25:59.595
+the approach I take for learning the weights information is
+
+299
+00:26:00.515 --> 00:26:04.395
+I only know the input, how best I can
+
+300
+00:26:04.955 --> 00:26:08.475
+reproduce the input, how best I can reproduce the input.
+
+301
+00:26:09.495 --> 00:26:11.635
+So that is what is called greedy.
+
+302
+00:26:12.355 --> 00:26:16.835
+I, I am greedy towards reconstructing the input
+
+303
+00:26:17.055 --> 00:26:19.595
+as much as possible because I only know the input.
+
+304
+00:26:20.145 --> 00:26:25.075
+Okay? Um, each layer is pre trying to model its input,
+
+305
+00:26:25.955 --> 00:26:27.715
+ignoring the effect of higher layers.
+
+306
+00:26:27.865 --> 00:26:29.355
+This is this part, you don't have to worry
+
+307
+00:26:29.355 --> 00:26:33.475
+because see, always there is a doubt looming in our mind
+
+308
+00:26:34.505 --> 00:26:36.555
+that, oh,
+
+309
+00:26:36.555 --> 00:26:39.195
+this hidden layer H one is not an independent layer.
+
+310
+00:26:40.005 --> 00:26:43.605
+It'll be forming a part of a feed forward network
+
+311
+00:26:43.755 --> 00:26:45.245
+with the H one to H five.
+
+312
+00:26:45.795 --> 00:26:49.205
+What will be the effect of those layers that we don't bother
+
+313
+00:26:49.745 --> 00:26:51.525
+at this point of time while training?
+
+314
+00:26:52.645 --> 00:26:55.885
+I only know the input for this layer, this pair of layer,
+
+315
+00:26:56.745 --> 00:27:00.525
+and my goal is the learning greedy layer wise learning is
+
+316
+00:27:01.865 --> 00:27:05.965
+my, uh, learned to wait information should be such
+
+317
+00:27:05.965 --> 00:27:07.325
+that I should be exactly,
+
+318
+00:27:08.425 --> 00:27:12.005
+or if not exactly closely reconstruct the input
+
+319
+00:27:12.675 --> 00:27:15.245
+that is applied to the input layer of that done layer.
+
+320
+00:27:15.465 --> 00:27:19.965
+That's what each layer is pre-train to model.
+
+321
+00:27:20.265 --> 00:27:23.045
+Its input ignoring the effect of ILAs.
+
+322
+00:27:24.025 --> 00:27:26.885
+If you, how does the effect of the ILAs is taken?
+
+323
+00:27:27.395 --> 00:27:30.165
+Once we train each individual, H one, H two, H three,
+
+324
+00:27:30.245 --> 00:27:33.885
+H four, H five separately, I stack all of them together
+
+325
+00:27:34.025 --> 00:27:35.765
+to form a seven layer network.
+
+326
+00:27:38.215 --> 00:27:39.565
+After that, I apply
+
+327
+00:27:39.785 --> 00:27:41.645
+for fine tuning web propagation learning
+
+328
+00:27:41.645 --> 00:27:42.965
+algorithm once or twice.
+
+329
+00:27:45.555 --> 00:27:47.525
+Then that effect of higher layers,
+
+330
+00:27:47.625 --> 00:27:50.845
+to some extent will capture that is the way people are now.
+
+331
+00:27:51.825 --> 00:27:56.685
+So, um, now, um, when
+
+332
+00:27:57.945 --> 00:27:59.365
+in an unsupervised way,
+
+333
+00:27:59.365 --> 00:28:01.805
+because I don't have the target, uh, output,
+
+334
+00:28:01.805 --> 00:28:03.765
+that's why I call it as an unsupervised way
+
+335
+00:28:04.865 --> 00:28:06.885
+and using learning at each layer in order
+
+336
+00:28:06.905 --> 00:28:08.805
+to preserve information from the input.
+
+337
+00:28:09.385 --> 00:28:13.605
+So what is done is maybe I will, I look at, uh,
+
+338
+00:28:14.355 --> 00:28:18.245
+yeah, I, let me show you this, this figure may help you.
+
+339
+00:28:19.095 --> 00:28:21.285
+Don't worry about the nomenclature given here.
+
+340
+00:28:22.025 --> 00:28:23.485
+So this is the input vector.
+
+341
+00:28:24.945 --> 00:28:28.005
+So I applied through the input layer,
+
+342
+00:28:28.985 --> 00:28:31.245
+and this is the first layer, okay?
+
+343
+00:28:32.225 --> 00:28:34.605
+And there is a weight metrics W one,
+
+344
+00:28:35.655 --> 00:28:38.085
+which is the weight metrics between the input layer
+
+345
+00:28:38.105 --> 00:28:39.285
+and the layer.
+
+346
+00:28:40.985 --> 00:28:43.645
+Um, so while training this,
+
+347
+00:28:43.965 --> 00:28:45.645
+I use a greedy layer wise training.
+
+348
+00:28:46.075 --> 00:28:48.165
+This feedback, I treat this as a,
+
+349
+00:28:48.165 --> 00:28:49.485
+this page as a feedback network.
+
+350
+00:28:49.485 --> 00:28:51.845
+That's where arrows are shown on either side.
+
+351
+00:28:52.625 --> 00:28:56.685
+Signal flows to here and comes back. When it comes back.
+
+352
+00:28:57.185 --> 00:29:00.805
+So for example, I take the first input, it is connected
+
+353
+00:29:00.805 --> 00:29:02.765
+to all the neurons in this layer.
+
+354
+00:29:03.435 --> 00:29:05.405
+Then accordingly, no, the,
+
+355
+00:29:05.835 --> 00:29:08.525
+this input is also represented weighted combination
+
+356
+00:29:08.525 --> 00:29:11.005
+of all these nodes present in the hidden layer.
+
+357
+00:29:11.425 --> 00:29:14.245
+So then I get the reconstructed input, you know,
+
+358
+00:29:14.245 --> 00:29:16.805
+the actual input and take the error between them,
+
+359
+00:29:16.945 --> 00:29:19.565
+and that error is usually for adjusting these weights.
+
+360
+00:29:20.555 --> 00:29:22.925
+Okay? Now,
+
+361
+00:29:24.305 --> 00:29:25.725
+and this process continues
+
+362
+00:29:26.575 --> 00:29:31.505
+until the reconstructed input vector, uh, the error
+
+363
+00:29:31.505 --> 00:29:33.265
+between the reconstructed input vector
+
+364
+00:29:33.485 --> 00:29:36.145
+and the actual input vector is minimal.
+
+365
+00:29:37.055 --> 00:29:40.425
+Then I'll stop and say this, W one
+
+366
+00:29:42.975 --> 00:29:47.795
+has learned actual distribution of
+
+367
+00:29:48.775 --> 00:29:49.955
+the input data points
+
+368
+00:29:49.955 --> 00:29:51.755
+because it is the best representation
+
+369
+00:29:51.895 --> 00:29:53.075
+for the input data points.
+
+370
+00:29:53.505 --> 00:29:55.955
+That is what this See now, when you are training,
+
+371
+00:29:56.825 --> 00:30:00.675
+this is not part of the, the final network.
+
+372
+00:30:01.535 --> 00:30:04.515
+For example, if I take no, finally, when I, when I say this,
+
+373
+00:30:04.995 --> 00:30:08.595
+whatever this layer, GRBM is there in a deep belief network,
+
+374
+00:30:08.935 --> 00:30:10.195
+it forms like this or
+
+375
+00:30:10.195 --> 00:30:13.275
+otherwise, if I take it a feed for network,
+
+376
+00:30:13.985 --> 00:30:15.795
+this layer GR BM layer comes
+
+377
+00:30:15.855 --> 00:30:19.995
+and sits one layer one, then this RBM comes as done.
+
+378
+00:30:19.995 --> 00:30:21.915
+Layer two, this RBM comes as done.
+
+379
+00:30:21.915 --> 00:30:25.155
+Layer three like that, this, they'll, they will sit
+
+380
+00:30:25.175 --> 00:30:26.955
+as done layers, okay?
+
+381
+00:30:27.335 --> 00:30:29.835
+But while training here, greedy layer wise,
+
+382
+00:30:30.515 --> 00:30:32.835
+I don't care about this higher layers I pulled out
+
+383
+00:30:32.835 --> 00:30:35.555
+and trying separate that is greedy layer
+
+384
+00:30:35.695 --> 00:30:37.475
+and unsupervised greedy layer.
+
+385
+00:30:42.035 --> 00:30:44.725
+Once I trained this for the best of the abilities,
+
+386
+00:30:46.825 --> 00:30:49.525
+and these were used as the initial weights
+
+387
+00:30:49.585 --> 00:30:52.885
+for while training the BAP propagation algorithm.
+
+388
+00:30:52.885 --> 00:30:55.605
+Finally, you can see this W one transposer user.
+
+389
+00:30:55.935 --> 00:30:57.285
+These are the weights learned
+
+390
+00:30:57.285 --> 00:30:58.725
+through the grid layer wise training.
+
+391
+00:30:59.835 --> 00:31:03.365
+Okay? Then how do I train the second layer?
+
+392
+00:31:03.505 --> 00:31:05.965
+How do I train this second layer to get W2?
+
+393
+00:31:06.475 --> 00:31:10.005
+What I do is I apply the input to this,
+
+394
+00:31:10.875 --> 00:31:12.445
+this fa and layer,
+
+395
+00:31:13.825 --> 00:31:16.845
+and I generate the output from that firsted done layer.
+
+396
+00:31:17.005 --> 00:31:18.685
+I don't know what is the target output,
+
+397
+00:31:18.705 --> 00:31:20.805
+but the, the best representation is there.
+
+398
+00:31:20.885 --> 00:31:24.245
+I get the output, and those are used as input
+
+399
+00:31:24.305 --> 00:31:25.925
+for training the seconded done layer.
+
+400
+00:31:26.425 --> 00:31:30.045
+Now this, the firsted trained firsted done layer access,
+
+401
+00:31:30.045 --> 00:31:34.725
+the input layer, and the inputs for that is the input pass
+
+402
+00:31:34.725 --> 00:31:36.245
+through its hidden layer access.
+
+403
+00:31:36.245 --> 00:31:39.525
+The input for this, uh, uh, hidden layer one
+
+404
+00:31:40.065 --> 00:31:41.165
+and hidden layer two.
+
+405
+00:31:41.165 --> 00:31:42.165
+This pay is taken.
+
+406
+00:31:43.045 --> 00:31:46.525
+I try and really layer wise, this process is continued.
+
+407
+00:31:46.875 --> 00:31:49.165
+Then pass this output through this,
+
+408
+00:31:49.625 --> 00:31:52.405
+and that is taken as input trying this W three,
+
+409
+00:31:52.795 --> 00:31:54.445
+then stack all of them together
+
+410
+00:31:55.145 --> 00:31:56.925
+to form a deep neural network
+
+411
+00:31:57.825 --> 00:32:00.325
+and then use the bap propagation algorithm to try,
+
+412
+00:32:00.785 --> 00:32:04.325
+and this is what the date, greedy layer wise training.
+
+413
+00:32:04.805 --> 00:32:08.885
+Unsupervised trial. So any, any doubt here to any of you?
+
+414
+00:32:11.005 --> 00:32:14.665
+Uh, sorry, sir. I have a, a small doubt. Yeah, please.
+
+415
+00:32:15.465 --> 00:32:17.785
+Normally, uh, Sarah model is trained to give,
+
+416
+00:32:17.925 --> 00:32:18.985
+uh, some output.
+
+417
+00:32:19.645 --> 00:32:23.385
+Mm mm Uh, so if only input is restructured, uh,
+
+418
+00:32:23.845 --> 00:32:25.145
+is it the output we can call?
+
+419
+00:32:26.165 --> 00:32:28.785
+No, that is not the, uh, no output means.
+
+420
+00:32:29.445 --> 00:32:34.385
+See, one way is suppose if I take a a,
+
+421
+00:32:35.185 --> 00:32:36.385
+actually the neurons are there,
+
+422
+00:32:36.385 --> 00:32:37.865
+they will also give output here,
+
+423
+00:32:38.405 --> 00:32:42.085
+but the thing is, okay, for training, I do not know
+
+424
+00:32:42.115 --> 00:32:44.645
+what is the target output I should get here.
+
+425
+00:32:45.065 --> 00:32:48.205
+If I have the target output, I can take the output
+
+426
+00:32:48.305 --> 00:32:50.285
+and find the error and use it for adjustment.
+
+427
+00:32:50.305 --> 00:32:54.205
+But in this case, exactly, I don't have the target output.
+
+428
+00:32:54.205 --> 00:32:58.365
+That's why what I do is I go by an indirect way. Okay?
+
+429
+00:32:58.385 --> 00:33:01.445
+So I push the balls this side
+
+430
+00:33:01.705 --> 00:33:03.565
+and reflects back like that.
+
+431
+00:33:03.565 --> 00:33:06.765
+Now, I've passed the signal through the weighted values,
+
+432
+00:33:06.905 --> 00:33:09.165
+it gets distributed to the neurons in this layer,
+
+433
+00:33:09.705 --> 00:33:10.845
+and again, comes back.
+
+434
+00:33:11.755 --> 00:33:14.365
+When it comes back, I collect all the inputs
+
+435
+00:33:14.425 --> 00:33:17.445
+and represent how much of this
+
+436
+00:33:18.055 --> 00:33:19.485
+particular dimension is
+
+437
+00:33:20.045 --> 00:33:21.965
+reconstructible from the weight metrics.
+
+438
+00:33:22.675 --> 00:33:25.085
+Okay? Okay. That is how it is done.
+
+439
+00:33:25.745 --> 00:33:29.445
+So, so then this, this restructured input, uh,
+
+440
+00:33:29.615 --> 00:33:32.365
+which is coming out of, uh, out from the first layer,
+
+441
+00:33:32.435 --> 00:33:34.205
+will act as input to the next layer.
+
+442
+00:33:34.905 --> 00:33:36.205
+Uh, uh, no, no.
+
+443
+00:33:36.465 --> 00:33:40.285
+See, while training, this gets optimized in such a way that
+
+444
+00:33:40.875 --> 00:33:44.605
+okay, this W one will become an optimal state, okay?
+
+445
+00:33:44.995 --> 00:33:47.925
+When the restructured input, the error
+
+446
+00:33:47.925 --> 00:33:49.165
+between the restructured input
+
+447
+00:33:49.165 --> 00:33:50.565
+and the actual input is minimal,
+
+448
+00:33:51.235 --> 00:33:52.605
+Okay? Okay. Okay.
+
+449
+00:33:52.875 --> 00:33:54.085
+Then what we say,
+
+450
+00:33:54.085 --> 00:33:56.845
+this W one has essentially captured the inherent
+
+451
+00:33:56.845 --> 00:34:00.125
+characteristics of the input data points, okay?
+
+452
+00:34:00.195 --> 00:34:01.845
+Okay. It's a faithful representation
+
+453
+00:34:02.025 --> 00:34:03.525
+for the input data points. Input
+
+454
+00:34:03.525 --> 00:34:04.645
+Data, okay? Okay.
+
+455
+00:34:04.795 --> 00:34:07.485
+Then I pause all this input through this.
+
+456
+00:34:08.625 --> 00:34:09.765
+For every input vector,
+
+457
+00:34:09.765 --> 00:34:11.805
+there is an output coming from the hidden layer
+
+458
+00:34:12.055 --> 00:34:13.005
+Layer, okay? Okay.
+
+459
+00:34:13.305 --> 00:34:15.685
+And those are the corresponding map input
+
+460
+00:34:15.685 --> 00:34:17.005
+vectors for the next H one
+
+461
+00:34:17.075 --> 00:34:19.005
+Next layer, next H one. Okay? Okay,
+
+462
+00:34:19.005 --> 00:34:21.225
+Sir, this is what we, Okay, sir.
+
+463
+00:34:21.225 --> 00:34:22.225
+Thank you, sir. Thank you,
+
+464
+00:34:23.325 --> 00:34:25.585
+Uh, sir, compared with the deep neural network,
+
+465
+00:34:25.695 --> 00:34:30.545
+because here, uh, it is separate like, uh, uh, the output
+
+466
+00:34:30.545 --> 00:34:34.025
+of first GRBM is taken as input separately for then
+
+467
+00:34:34.025 --> 00:34:36.865
+where W2 is applied while applying back propagation.
+
+468
+00:34:37.445 --> 00:34:40.945
+Uh, can we use the chain rule in similar way like we were
+
+469
+00:34:40.945 --> 00:34:42.825
+using in, uh, deep neural network,
+
+470
+00:34:43.005 --> 00:34:44.345
+or we can't use like that?
+
+471
+00:34:45.005 --> 00:34:46.665
+Oh, this is a wonderful question C.
+
+472
+00:34:47.375 --> 00:34:52.185
+Once all this, see earlier in a conventional deep feed
+
+473
+00:34:52.205 --> 00:34:56.465
+for network, this W one, W2, W three, W four,
+
+474
+00:34:56.465 --> 00:35:00.785
+they're all trained, uh, by random mineralization,
+
+475
+00:35:01.095 --> 00:35:02.145
+some random initialization.
+
+476
+00:35:02.145 --> 00:35:04.425
+You put it and, uh, go and train. Right?
+
+477
+00:35:04.525 --> 00:35:06.585
+Now, what happens at that point?
+
+478
+00:35:06.865 --> 00:35:08.385
+I have the target output here,
+
+479
+00:35:08.405 --> 00:35:11.265
+and I, I also know the input vector when you train.
+
+480
+00:35:11.575 --> 00:35:13.785
+This W four gets suggested properly
+
+481
+00:35:13.785 --> 00:35:15.905
+because I have a good access to the gradient
+
+482
+00:35:16.675 --> 00:35:18.665
+where the gradient value decrease the ca
+
+483
+00:35:19.225 --> 00:35:20.985
+decrease the ca further decrease the ca.
+
+484
+00:35:21.455 --> 00:35:25.545
+That is where W one is least affected,
+
+485
+00:35:26.325 --> 00:35:29.225
+at least adjusted because the gradient has
+
+486
+00:35:29.225 --> 00:35:30.505
+vanished by this time.
+
+487
+00:35:31.015 --> 00:35:32.665
+Okay? So now
+
+488
+00:35:33.455 --> 00:35:37.885
+this BAP propagation algorithm remains unchangeable, uh,
+
+489
+00:35:38.345 --> 00:35:40.845
+um, compared to what we were studying earlier.
+
+490
+00:35:40.905 --> 00:35:45.005
+The BA preparation remains same only as it earlier, okay?
+
+491
+00:35:45.625 --> 00:35:47.245
+And accordingly, the vanishing gradient
+
+492
+00:35:47.245 --> 00:35:48.285
+problem is also there.
+
+493
+00:35:48.795 --> 00:35:52.125
+Only thing is, even though this W one is relatively less
+
+494
+00:35:52.445 --> 00:35:56.045
+adjusted, since it is already captured the input data
+
+495
+00:35:56.075 --> 00:35:58.245
+information, it is able
+
+496
+00:35:58.265 --> 00:36:00.925
+to pass the signal flow from input to the output.
+
+497
+00:36:03.805 --> 00:36:04.945
+Did I answer the question?
+
+498
+00:36:07.825 --> 00:36:09.765
+So, uh, still we need the,
+
+499
+00:36:10.185 --> 00:36:12.645
+the change rule will be applied while calculating the
+
+500
+00:36:13.025 --> 00:36:14.025
+Yes, yes. Okay. The
+
+501
+00:36:14.025 --> 00:36:14.765
+change tool
+
+502
+00:36:15.025 --> 00:36:18.205
+as followed in the B application in the final, this,
+
+503
+00:36:18.205 --> 00:36:19.325
+this is fine tuning.
+
+504
+00:36:19.355 --> 00:36:21.925
+When we do, we don't do that exhaustive training,
+
+505
+00:36:21.955 --> 00:36:24.485
+like suppose earlier from the scratch, if you're training,
+
+506
+00:36:24.505 --> 00:36:26.805
+if it in 30 posts now it may be four
+
+507
+00:36:26.805 --> 00:36:28.245
+or five pokes, I fine tune it.
+
+508
+00:36:28.635 --> 00:36:30.285
+Okay? Okay. Not, yeah.
+
+509
+00:36:31.395 --> 00:36:32.845
+Okay, sir. Clear. Thank you. Okay,
+
+510
+00:36:35.185 --> 00:36:37.685
+So in the previous question, I think by chain rule,
+
+511
+00:36:37.785 --> 00:36:39.325
+you meant gradient descent
+
+512
+00:36:40.115 --> 00:36:42.805
+because chain rule is a calculus, uh, fundamental,
+
+513
+00:36:43.545 --> 00:36:44.545
+No, no.
+
+514
+00:36:44.805 --> 00:36:46.765
+Whatever gradient descent algorithm we were using,
+
+515
+00:36:46.985 --> 00:36:49.365
+say algorithm, we use it here also Uhhuh,
+
+516
+00:36:49.925 --> 00:36:52.925
+I see While doing the, the algorithm remains same.
+
+517
+00:36:53.465 --> 00:36:56.405
+See, once I fine tune, I copy this weights
+
+518
+00:36:56.405 --> 00:36:58.645
+as the initial weights for the feed for our network
+
+519
+00:36:59.265 --> 00:37:01.005
+and just trying as a deep feed
+
+520
+00:37:01.005 --> 00:37:02.965
+for our network using web application learning,
+
+521
+00:37:05.135 --> 00:37:06.135
+Right, sir? Got
+
+522
+00:37:06.135 --> 00:37:07.125
+it, sir? Yeah.
+
+523
+00:37:09.185 --> 00:37:13.805
+So it trains faster without those problems.
+
+524
+00:37:14.745 --> 00:37:18.245
+No, trains faster means, see, earlier there was a
+
+525
+00:37:19.425 --> 00:37:20.605
+big block hole here.
+
+526
+00:37:21.035 --> 00:37:25.925
+Yeah. Now I have already intelligently, uh, trained
+
+527
+00:37:27.325 --> 00:37:28.325
+represent the data.
+
+528
+00:37:29.835 --> 00:37:31.365
+Yeah, sir. That is how it helps,
+
+529
+00:37:32.745 --> 00:37:33.745
+Sir. And this, uh,
+
+530
+00:37:33.745 --> 00:37:36.845
+W2 is also trained when we are training
+
+531
+00:37:37.165 --> 00:37:38.245
+W2 with the direct.
+
+532
+00:37:38.385 --> 00:37:41.525
+So do we have this inputs directly connected
+
+533
+00:37:41.525 --> 00:37:42.845
+to W2 and then train it?
+
+534
+00:37:43.425 --> 00:37:44.605
+Oh, this is a wonderful point.
+
+535
+00:37:44.905 --> 00:37:49.565
+So what we do, ruby, this, once I try this W one,
+
+536
+00:37:50.165 --> 00:37:53.205
+I pause all this input data through W one
+
+537
+00:37:53.265 --> 00:37:55.845
+and collect the output at the output of GRBM.
+
+538
+00:37:56.265 --> 00:37:59.325
+Ah, And those are used as input to this.
+
+539
+00:37:59.385 --> 00:38:03.565
+Uh, see, this GRBM is nothing but this, this layer. Okay?
+
+540
+00:38:03.625 --> 00:38:04.805
+Oh, in the copy.
+
+541
+00:38:05.425 --> 00:38:08.445
+Now this input applied here is the output
+
+542
+00:38:08.445 --> 00:38:10.165
+of JRBM that is applied here.
+
+543
+00:38:11.645 --> 00:38:13.815
+Otherwise, there is no deploy difference
+
+544
+00:38:13.815 --> 00:38:15.135
+between W2 and W one.
+
+545
+00:38:15.245 --> 00:38:16.575
+Exactly. Yes,
+
+546
+00:38:17.165 --> 00:38:18.165
+Correct. No,
+
+547
+00:38:18.165 --> 00:38:20.935
+mm-hmm. So what we do is once we train,
+
+548
+00:38:20.995 --> 00:38:23.655
+we pause all this data through this W one
+
+549
+00:38:23.655 --> 00:38:27.815
+and collect the modified out outputs from the CH one.
+
+550
+00:38:28.725 --> 00:38:32.295
+They act as input to this pair of H one, H two,
+
+551
+00:38:34.495 --> 00:38:35.495
+Right, sir? So, sorry,
+
+552
+00:38:35.495 --> 00:38:36.965
+sir. So, um,
+
+553
+00:38:37.465 --> 00:38:40.605
+and when we say this GRBM is finally trained,
+
+554
+00:38:40.635 --> 00:38:43.765
+then we have done already, uh, the training
+
+555
+00:38:43.915 --> 00:38:45.085
+with one layer. Ah,
+
+556
+00:38:45.385 --> 00:38:50.045
+So while train, while training this GRBM, ah, I only,
+
+557
+00:38:50.125 --> 00:38:53.525
+I take this pair of layer, this green is an input layer, uh,
+
+558
+00:38:53.785 --> 00:38:55.245
+and GRBM is the hidden layer.
+
+559
+00:38:55.485 --> 00:38:59.165
+H one uhhuh. I am training independently greedy layer
+
+560
+00:38:59.235 --> 00:39:00.325
+wise, right?
+
+561
+00:39:00.825 --> 00:39:03.765
+Greedy means I don't know the output,
+
+562
+00:39:04.465 --> 00:39:06.525
+but I know only input, uh,
+
+563
+00:39:06.905 --> 00:39:11.325
+my weight adjustment objective function is such that when I
+
+564
+00:39:11.885 --> 00:39:14.325
+reconstruct the input using this W one metrics,
+
+565
+00:39:15.355 --> 00:39:18.965
+that reconstructed input should be ideally equal
+
+566
+00:39:18.965 --> 00:39:21.165
+to the input or with least error,
+
+567
+00:39:21.895 --> 00:39:22.895
+Right?
+
+568
+00:39:23.345 --> 00:39:26.315
+Then I say this, W one best represents the
+
+569
+00:39:26.315 --> 00:39:27.435
+input data input.
+
+570
+00:39:27.535 --> 00:39:28.755
+Yes, sir. Got it.
+
+571
+00:39:28.815 --> 00:39:31.635
+And that is the approach taken for training greedy layer,
+
+572
+00:39:32.405 --> 00:39:33.405
+Right, sir? So
+
+573
+00:39:33.405 --> 00:39:36.515
+these things have a meaning. These G-R-B-M-R-B-M,
+
+574
+00:39:37.055 --> 00:39:39.715
+Ah, see, uh, they call
+
+575
+00:39:40.555 --> 00:39:42.555
+restricted boardman machine, okay?
+
+576
+00:39:42.605 --> 00:39:44.595
+Uhhuh restricted boardman machine.
+
+577
+00:39:44.665 --> 00:39:48.075
+This g if I'm not run, I don't know, some gian
+
+578
+00:39:48.075 --> 00:39:50.955
+or something they call, but the seated boardman machine is
+
+579
+00:39:51.635 --> 00:39:54.275
+a, it is a, a feedback neural network.
+
+580
+00:39:54.695 --> 00:39:56.035
+Ah-huh. It's a feedback network,
+
+581
+00:39:56.655 --> 00:39:58.755
+but we don't have to go to that level.
+
+582
+00:39:58.895 --> 00:40:00.875
+Now, that's where I did not expand that.
+
+583
+00:40:01.825 --> 00:40:03.675
+Okay, sir. Thank you, sir. Yeah,
+
+584
+00:40:04.875 --> 00:40:05.875
+Okay.
+
+585
+00:40:06.825 --> 00:40:10.165
+The, the, the W four equal to zero there means, ah,
+
+586
+00:40:10.425 --> 00:40:12.365
+that's the actual discrimination you're trying to
+
+587
+00:40:12.365 --> 00:40:13.365
+Do there. Ah,
+
+588
+00:40:13.365 --> 00:40:14.525
+wonderful, wonderful.
+
+589
+00:40:14.865 --> 00:40:17.245
+See for this W four,
+
+590
+00:40:17.325 --> 00:40:19.245
+I don't require Grady representation here,
+
+591
+00:40:19.245 --> 00:40:22.045
+because gradients are so high in the output layer.
+
+592
+00:40:22.145 --> 00:40:26.085
+No, it can easily learn that independently
+
+593
+00:40:26.085 --> 00:40:27.965
+by the B propagation learning algorithm,
+
+594
+00:40:28.665 --> 00:40:30.245
+and it provides that discrimination
+
+595
+00:40:30.245 --> 00:40:31.485
+because I need that
+
+596
+00:40:31.505 --> 00:40:33.245
+for a discrimination classification purpose.
+
+597
+00:40:34.795 --> 00:40:38.605
+Okay? See these W one, W2, W three R
+
+598
+00:40:39.595 --> 00:40:43.485
+essentially to capture the dis distribution of the input,
+
+599
+00:40:43.875 --> 00:40:48.005
+what is presented to that layer, whereas this W four is
+
+600
+00:40:48.005 --> 00:40:49.085
+for classification purpose
+
+601
+00:40:50.385 --> 00:40:51.385
+Makes sense.
+
+602
+00:40:53.245 --> 00:40:56.335
+This W four is not meant for capturing the distribution
+
+603
+00:40:56.335 --> 00:40:58.215
+of this output rather than it is meant
+
+604
+00:40:58.275 --> 00:41:01.295
+for capturing the discrimination among the different class
+
+605
+00:41:03.635 --> 00:41:05.575
+In What about bio storms, sir?
+
+606
+00:41:06.475 --> 00:41:08.135
+Bio storms are all part of that.
+
+607
+00:41:08.435 --> 00:41:11.015
+See, they're, they're there as a part of that.
+
+608
+00:41:11.395 --> 00:41:13.095
+See that I'm not taking out,
+
+609
+00:41:13.365 --> 00:41:15.215
+they're all inherently when I'm trying,
+
+610
+00:41:15.215 --> 00:41:17.135
+the weight factor means that biotherm w
+
+611
+00:41:17.235 --> 00:41:18.455
+not is also trying together.
+
+612
+00:41:19.155 --> 00:41:23.175
+Yes. Got, Okay.
+
+613
+00:41:25.595 --> 00:41:29.975
+So, um, see, what they did was no,
+
+614
+00:41:29.975 --> 00:41:31.255
+they demonstrated, there's an
+
+615
+00:41:31.815 --> 00:41:34.765
+handwritten digital recognition task, uh,
+
+616
+00:41:34.985 --> 00:41:37.005
+is a well-known data set.
+
+617
+00:41:37.005 --> 00:41:41.285
+People collected, uh, uh, if I'm not wrong,
+
+618
+00:41:41.455 --> 00:41:43.645
+about 10,000, uh, images
+
+619
+00:41:44.465 --> 00:41:48.365
+for each digit handwritten digit images.
+
+620
+00:41:48.435 --> 00:41:52.205
+They collected zero to nine maybe thousand for each case.
+
+621
+00:41:52.745 --> 00:41:55.565
+10,000 images were there by NIST organization.
+
+622
+00:41:55.565 --> 00:41:58.205
+They call it the standard written digital condition task.
+
+623
+00:41:58.625 --> 00:42:01.045
+And this, uh, essentially
+
+624
+00:42:02.225 --> 00:42:05.245
+how when an handwritten digit image is there,
+
+625
+00:42:05.425 --> 00:42:09.005
+how well you can, uh, classify
+
+626
+00:42:09.005 --> 00:42:10.845
+that into those 10 digits.
+
+627
+00:42:11.465 --> 00:42:14.085
+That's what is handwritten digit recognition task.
+
+628
+00:42:14.705 --> 00:42:18.925
+And this was a well known, uh, uh, till today, people use it
+
+629
+00:42:18.925 --> 00:42:21.445
+as a good data set collected by, uh,
+
+630
+00:42:22.125 --> 00:42:23.885
+available, publicly available.
+
+631
+00:42:25.195 --> 00:42:28.485
+They even with the, uh,
+
+632
+00:42:28.915 --> 00:42:31.245
+classical machine learning method, for example,
+
+633
+00:42:31.285 --> 00:42:32.645
+I take support vector machine.
+
+634
+00:42:33.305 --> 00:42:35.205
+If I take support vector machine is a
+
+635
+00:42:35.205 --> 00:42:36.725
+classical machine learning.
+
+636
+00:42:36.825 --> 00:42:38.165
+It is not a deep learning model
+
+637
+00:42:39.355 --> 00:42:42.525
+that gives 1.4% as the error.
+
+638
+00:42:43.545 --> 00:42:47.605
+If I, uh, use the, they have a standard classification of,
+
+639
+00:42:47.665 --> 00:42:50.205
+uh, train validation and test dataset.
+
+640
+00:42:50.515 --> 00:42:54.765
+That standard test dataset, if I apply it gives me an error
+
+641
+00:42:54.785 --> 00:42:56.365
+of 1.4%.
+
+642
+00:42:56.755 --> 00:43:01.685
+That means to say 98.6% is the
+
+643
+00:43:02.005 --> 00:43:03.725
+accuracy of detection
+
+644
+00:43:03.725 --> 00:43:06.365
+of this handwritten digital recognition di digital
+
+645
+00:43:06.365 --> 00:43:08.365
+recognition images, okay?
+
+646
+00:43:09.785 --> 00:43:11.165
+The performance is so high.
+
+647
+00:43:11.985 --> 00:43:14.645
+So when, when you, when your classification performance is
+
+648
+00:43:14.645 --> 00:43:17.765
+98, 99 like that, uh,
+
+649
+00:43:17.905 --> 00:43:22.085
+you can't achieve know 0.5% improvement in a next classify
+
+650
+00:43:23.005 --> 00:43:27.405
+anything, any 0.1% change in the performance is treated
+
+651
+00:43:27.505 --> 00:43:28.885
+as statistically significant
+
+652
+00:43:29.115 --> 00:43:31.525
+because it's, the performance is so high already.
+
+653
+00:43:32.145 --> 00:43:34.965
+If it is 50%, okay, you get 5% improvement,
+
+654
+00:43:34.965 --> 00:43:36.485
+that can be a statistically significant,
+
+655
+00:43:36.545 --> 00:43:39.205
+but here at 98.5%
+
+656
+00:43:40.315 --> 00:43:43.165
+even 0.1% change in the performance is
+
+657
+00:43:43.165 --> 00:43:44.325
+statistically significant.
+
+658
+00:43:44.835 --> 00:43:47.485
+Okay? So, uh, so
+
+659
+00:43:47.555 --> 00:43:52.365
+accordingly, what they did know, they proposed a,
+
+660
+00:43:53.045 --> 00:43:57.605
+a generative model, uh, of, uh, uh,
+
+661
+00:43:58.235 --> 00:44:02.885
+deep feed for network input E 7 84, um,
+
+662
+00:44:04.345 --> 00:44:06.365
+it is 28 plus 28.
+
+663
+00:44:06.505 --> 00:44:09.165
+Uh, how much is that? Uh, 7 84.
+
+664
+00:44:10.485 --> 00:44:14.785
+Can somebody tell me 32, 32 or 28? Yes sir. 28.
+
+665
+00:44:14.785 --> 00:44:18.665
+28, ah, 28 plus 28 images for there,
+
+666
+00:44:19.725 --> 00:44:21.585
+and that I make it as one dimension.
+
+667
+00:44:21.585 --> 00:44:25.945
+It becomes 7 84 that all the images are 28 plus 28 images
+
+668
+00:44:26.975 --> 00:44:30.225
+converted into 28 plus 28, and converted into one dimension.
+
+669
+00:44:30.225 --> 00:44:31.565
+That becomes 7 84.
+
+670
+00:44:32.505 --> 00:44:35.045
+And the classification is a 10 class classification.
+
+671
+00:44:35.045 --> 00:44:37.445
+That is, the output layer is 10 dimensions,
+
+672
+00:44:38.675 --> 00:44:42.085
+then hidden layer one that had 500 neurons,
+
+673
+00:44:42.315 --> 00:44:44.655
+neurons hidden.
+
+674
+00:44:44.665 --> 00:44:47.215
+Layer two has 500 neurons
+
+675
+00:44:48.355 --> 00:44:53.215
+and hidden layer three as, um, 2000 neurons.
+
+676
+00:44:54.295 --> 00:44:57.875
+Now let us call between seven eighty four and 500.
+
+677
+00:44:58.275 --> 00:45:02.795
+I have W 1 500, 500, I have W2,
+
+678
+00:45:03.545 --> 00:45:04.915
+502,000.
+
+679
+00:45:04.995 --> 00:45:08.955
+I have W three and 2010, I have W four.
+
+680
+00:45:10.105 --> 00:45:12.675
+This using 7 84
+
+681
+00:45:12.675 --> 00:45:16.235
+and 500 I greedy layer was training to get W one,
+
+682
+00:45:16.905 --> 00:45:18.195
+500 and 500.
+
+683
+00:45:18.435 --> 00:45:22.075
+I get W2 502,000. I get W three.
+
+684
+00:45:22.305 --> 00:45:23.835
+This W four I don't learn.
+
+685
+00:45:24.235 --> 00:45:27.275
+I put it in the deep neural network configuration,
+
+686
+00:45:28.025 --> 00:45:30.195
+initially randomly initialize it.
+
+687
+00:45:30.195 --> 00:45:32.595
+Then I learned through the B propagation learning algorithm
+
+688
+00:45:32.705 --> 00:45:37.475
+only with that, they showed 1.25% error
+
+689
+00:45:37.985 --> 00:45:42.635
+from 1.4 to 1.2 5.15% decrease in error.
+
+690
+00:45:43.055 --> 00:45:44.595
+Of course, you may say no, what is the big deal?
+
+691
+00:45:44.595 --> 00:45:48.155
+As I told 0.1%, it is more than 0.1%.
+
+692
+00:45:49.095 --> 00:45:53.715
+And that is how they were able to show to the world that
+
+693
+00:45:54.305 --> 00:45:58.795
+when I do this greedy layer wise training, I'm indeed able
+
+694
+00:45:58.795 --> 00:46:01.955
+to show a significantly improved performance.
+
+695
+00:46:02.345 --> 00:46:07.235
+Okay? And as a comparison,
+
+696
+00:46:08.305 --> 00:46:12.395
+they did a bab BAP propagation algorithm,
+
+697
+00:46:12.815 --> 00:46:15.795
+simple B propagation algorithm, 7 84, import 10
+
+698
+00:46:15.795 --> 00:46:18.435
+as the output and two done layers, 400, 300 like
+
+699
+00:46:18.435 --> 00:46:21.515
+that they did, and some cross andro y dk,
+
+700
+00:46:21.665 --> 00:46:26.195
+they got 1.51 as there are even inferior.
+
+701
+00:46:26.665 --> 00:46:29.595
+This is even inferior compared
+
+702
+00:46:29.595 --> 00:46:32.035
+to support vector machine 1.5%.
+
+703
+00:46:33.045 --> 00:46:37.955
+Again, they did only single it layer. They got 1.53, okay?
+
+704
+00:46:38.335 --> 00:46:42.795
+And they reduced, uh, no, uh, they put secondary layer,
+
+705
+00:46:42.855 --> 00:46:46.035
+but you know, about 15 or something, uh, squared
+
+706
+00:46:46.175 --> 00:46:48.035
+and online updates 2.9.
+
+707
+00:46:48.775 --> 00:46:53.355
+So this is the journey people were struggling from 1990s.
+
+708
+00:46:54.025 --> 00:46:56.315
+Okay? You can see now the Shalon neural network
+
+709
+00:46:56.575 --> 00:46:59.595
+and, uh, this one, they're inferior compared
+
+710
+00:46:59.595 --> 00:47:00.635
+to support vector mission.
+
+711
+00:47:01.305 --> 00:47:05.995
+Okay? So as a result of that, uh, people had left the
+
+712
+00:47:06.795 --> 00:47:10.555
+interest on the, uh, neural networks,
+
+713
+00:47:10.895 --> 00:47:14.995
+but this is the result which now created the interest
+
+714
+00:47:15.135 --> 00:47:19.755
+for the community that we can indeed, uh,
+
+715
+00:47:20.015 --> 00:47:23.955
+trying, um, the, uh,
+
+716
+00:47:24.575 --> 00:47:26.075
+by greedy layer wise concept.
+
+717
+00:47:26.435 --> 00:47:28.395
+I can try the deep learning ones,
+
+718
+00:47:29.425 --> 00:47:33.285
+but one, one point I want to say is, um,
+
+719
+00:47:34.385 --> 00:47:35.565
+it is not that.
+
+720
+00:47:36.425 --> 00:47:36.645
+Um,
+
+721
+00:47:41.485 --> 00:47:46.425
+So it is not that, uh, this data is very big here.
+
+722
+00:47:46.805 --> 00:47:48.625
+If you see adminis data set,
+
+723
+00:47:49.205 --> 00:47:51.145
+the data set size is very small.
+
+724
+00:47:52.485 --> 00:47:55.825
+Um, but still they're able
+
+725
+00:47:55.825 --> 00:47:58.465
+to demonstrate greedy layer wise training effectiveness.
+
+726
+00:47:58.655 --> 00:48:01.385
+That is what is the importance of this, okay?
+
+727
+00:48:02.445 --> 00:48:04.585
+Um, once they did it
+
+728
+00:48:04.605 --> 00:48:08.105
+and publish it in this paper in 2006, this neuro
+
+729
+00:48:08.845 --> 00:48:11.725
+neural computation paper, this
+
+730
+00:48:14.815 --> 00:48:17.645
+group, they, they,
+
+731
+00:48:18.435 --> 00:48:22.645
+they did an independent work and they published this paper.
+
+732
+00:48:22.825 --> 00:48:26.125
+Greedy layer was training of deep network proceedings in,
+
+733
+00:48:26.705 --> 00:48:28.365
+uh, NIPS 2006.
+
+734
+00:48:28.625 --> 00:48:29.805
+You people should download
+
+735
+00:48:29.805 --> 00:48:32.365
+and read that paper, see just for the beauty
+
+736
+00:48:32.385 --> 00:48:33.565
+of the work they have done.
+
+737
+00:48:33.585 --> 00:48:36.365
+Now, see, these are the two, uh,
+
+738
+00:48:36.675 --> 00:48:39.205
+cornerstone papers on which this deep learning field,
+
+739
+00:48:40.575 --> 00:48:43.845
+hello, please mute.
+
+740
+00:48:46.105 --> 00:48:50.045
+Uh, so this greedy layer, they, apart from
+
+741
+00:48:50.825 --> 00:48:54.965
+greedy layer wise unsupervised training, what, uh,
+
+742
+00:48:56.505 --> 00:49:01.245
+uh, intern group demonstrated they independently implemented
+
+743
+00:49:01.525 --> 00:49:05.325
+that and showed that yes, it works.
+
+744
+00:49:06.425 --> 00:49:09.925
+Second thing they did, they did with a supervisor training,
+
+745
+00:49:09.925 --> 00:49:11.925
+really layer was supervisor training.
+
+746
+00:49:12.715 --> 00:49:16.285
+Okay? Uh, we'll see how they do that supervisor training,
+
+747
+00:49:16.285 --> 00:49:18.765
+because I was telling no, there is no output available
+
+748
+00:49:18.785 --> 00:49:20.965
+for it, and layer how they have done, we will see.
+
+749
+00:49:21.635 --> 00:49:26.045
+Okay? Um, so what they did was,
+
+750
+00:49:27.145 --> 00:49:31.605
+uh, their contribution is reinforcing
+
+751
+00:49:31.605 --> 00:49:33.965
+that greedy unsupervised learning works.
+
+752
+00:49:35.665 --> 00:49:39.245
+And, uh, second thing is they also came up
+
+753
+00:49:39.245 --> 00:49:42.605
+with supervisor versions of greedy layer wise training.
+
+754
+00:49:43.275 --> 00:49:45.285
+Both they demonstrated, okay?
+
+755
+00:49:45.585 --> 00:49:49.565
+And also they showed the effectiveness of, uh,
+
+756
+00:49:50.345 --> 00:49:51.605
+greedy layer wise training.
+
+757
+00:49:51.995 --> 00:49:53.165
+Okay? That is what they did.
+
+758
+00:49:53.945 --> 00:49:57.325
+So how did they demonstrate the supervisor version
+
+759
+00:49:59.585 --> 00:50:03.415
+train each new hidden layer as the hidden layer of
+
+760
+00:50:04.235 --> 00:50:06.415
+one hidden layer supervisor network?
+
+761
+00:50:07.125 --> 00:50:08.615
+Okay? Um,
+
+762
+00:50:08.875 --> 00:50:12.135
+but of course, now the question comes to your mind
+
+763
+00:50:12.725 --> 00:50:17.495
+that now you, you are telling that, uh,
+
+764
+00:50:17.545 --> 00:50:21.215
+there is no output for the target output for the down layer.
+
+765
+00:50:21.315 --> 00:50:22.135
+How do they try?
+
+766
+00:50:26.365 --> 00:50:30.645
+There is one neural feedforward neural architecture
+
+767
+00:50:31.665 --> 00:50:33.325
+called auto encoder.
+
+768
+00:50:34.825 --> 00:50:39.645
+In the auto encoder, uh, input is applied to the,
+
+769
+00:50:40.305 --> 00:50:43.845
+uh, input layer, and the same input is applied
+
+770
+00:50:43.845 --> 00:50:44.845
+to the output layer.
+
+771
+00:50:46.115 --> 00:50:49.725
+Okay? Let me say that target output is same as input.
+
+772
+00:50:49.795 --> 00:50:53.085
+That means to say, I'm trying to compare the given
+
+773
+00:50:53.665 --> 00:50:55.165
+vector with itself.
+
+774
+00:50:56.915 --> 00:51:00.485
+Like, no, I'm looking at the mirror to look at myself. Okay?
+
+775
+00:51:01.605 --> 00:51:05.605
+I do that, and as a result of that, I try to learn the,
+
+776
+00:51:06.265 --> 00:51:08.365
+the generative process involved in
+
+777
+00:51:08.915 --> 00:51:11.365
+producing those feature vector, okay?
+
+778
+00:51:11.905 --> 00:51:13.765
+And that is what is called auto encode.
+
+779
+00:51:14.585 --> 00:51:18.005
+And now for supervisor training, what that it is,
+
+780
+00:51:18.395 --> 00:51:22.805
+suppose I take that input layer H one, okay?
+
+781
+00:51:23.185 --> 00:51:25.925
+So let me go to this here, input layer,
+
+782
+00:51:26.025 --> 00:51:27.645
+the GBMH one is there.
+
+783
+00:51:28.435 --> 00:51:32.965
+Then what I do is I put an output layer, which is same
+
+784
+00:51:32.965 --> 00:51:34.885
+as the input layer, okay?
+
+785
+00:51:35.225 --> 00:51:37.765
+Now what I do is I apply the input.
+
+786
+00:51:37.825 --> 00:51:40.085
+The target output is also same as the input.
+
+787
+00:51:41.105 --> 00:51:44.445
+Let me say I'm quoing the input director with itself.
+
+788
+00:51:44.445 --> 00:51:47.405
+That's why it's called auto encoder, a network
+
+789
+00:51:47.515 --> 00:51:49.285
+with auto encoder configuration.
+
+790
+00:51:49.945 --> 00:51:52.485
+Now, what will happen is here,
+
+791
+00:51:53.025 --> 00:51:55.205
+the hidden layer will act as an encoder.
+
+792
+00:51:55.785 --> 00:51:58.645
+Either it can be a layer dimension or a bigger dimension.
+
+793
+00:51:59.145 --> 00:52:00.885
+It encodes the input
+
+794
+00:52:01.385 --> 00:52:04.605
+to some dimension vector in the hidden layer output,
+
+795
+00:52:04.845 --> 00:52:07.565
+whatever the number of neurons are there, and
+
+796
+00:52:08.035 --> 00:52:10.645
+accordingly, it is captured in W one,
+
+797
+00:52:11.905 --> 00:52:15.285
+and I have an output layer here put,
+
+798
+00:52:16.365 --> 00:52:18.635
+which is same as the input layer.
+
+799
+00:52:19.385 --> 00:52:21.475
+Then the goal here is
+
+800
+00:52:22.575 --> 00:52:25.275
+in the forward part from input to written layer,
+
+801
+00:52:25.335 --> 00:52:29.195
+the W one should capture the actual distribution
+
+802
+00:52:29.195 --> 00:52:30.395
+of the input data points.
+
+803
+00:52:31.385 --> 00:52:35.355
+Once it captures then from the output,
+
+804
+00:52:35.635 --> 00:52:39.545
+whatever it is generated encoded output, I should be able
+
+805
+00:52:39.545 --> 00:52:41.145
+to reconstruct back the input.
+
+806
+00:52:42.145 --> 00:52:44.995
+Essentially, the weight here should be w
+
+807
+00:52:45.145 --> 00:52:46.315
+inverse of this weight.
+
+808
+00:52:46.855 --> 00:52:48.715
+So that, no, there is a transformation happening.
+
+809
+00:52:48.875 --> 00:52:50.755
+W one into W one inverse
+
+810
+00:52:51.425 --> 00:52:53.075
+will give you back the same input data.
+
+811
+00:52:54.065 --> 00:52:56.965
+So that is the working principle of an auto end code.
+
+812
+00:52:57.425 --> 00:53:00.845
+Now, I have only one layer chosen to be trained.
+
+813
+00:53:01.915 --> 00:53:04.605
+Then I put it in the auto end quarter configuration,
+
+814
+00:53:05.825 --> 00:53:10.005
+and W one encodes the input to this hidden layer
+
+815
+00:53:10.785 --> 00:53:13.285
+and the W one transpose
+
+816
+00:53:13.425 --> 00:53:15.845
+or W one inverse, whatever you want to call,
+
+817
+00:53:16.895 --> 00:53:19.205
+we'll reconstruct from the encoded input
+
+818
+00:53:19.425 --> 00:53:21.005
+to the actual input again.
+
+819
+00:53:21.705 --> 00:53:24.925
+And if I'm successful in doing that, then
+
+820
+00:53:25.685 --> 00:53:27.085
+I throw away the output layer,
+
+821
+00:53:27.175 --> 00:53:29.805
+throw away the W one inverse output only.
+
+822
+00:53:29.885 --> 00:53:33.165
+I will take W one, and that will be the pre-trained,
+
+823
+00:53:33.185 --> 00:53:34.725
+uh, value.
+
+824
+00:53:35.315 --> 00:53:38.725
+Okay? Uh, see, one way is
+
+825
+00:53:41.445 --> 00:53:45.285
+I don't need to go through that, uh,
+
+826
+00:53:46.125 --> 00:53:48.365
+restricted boardman machine approach for training,
+
+827
+00:53:48.455 --> 00:53:52.565
+which we are doing in the unsupervised training here.
+
+828
+00:53:52.725 --> 00:53:57.605
+I can try using, uh, um, Uh,
+
+829
+00:53:58.675 --> 00:54:01.325
+even if I, you know, uh, I try using
+
+830
+00:54:02.045 --> 00:54:03.605
+a simple feedforward neural network,
+
+831
+00:54:03.785 --> 00:54:06.005
+but the only thing is that output function,
+
+832
+00:54:06.345 --> 00:54:07.925
+the cost function will be different.
+
+833
+00:54:08.425 --> 00:54:11.845
+The cost function is for a simple means squared error.
+
+834
+00:54:12.005 --> 00:54:14.005
+I can use it as a cost function and train it,
+
+835
+00:54:14.345 --> 00:54:18.845
+and that is how I train the, um, try, uh,
+
+836
+00:54:18.935 --> 00:54:21.245
+train each hidden layer as the hidden layer
+
+837
+00:54:21.245 --> 00:54:23.285
+of a one hidden layer supervisor network.
+
+838
+00:54:24.665 --> 00:54:27.525
+One co one way of doing is auto encoder. Okay?
+
+839
+00:54:27.525 --> 00:54:29.925
+There may be other ways of doing that also, we can,
+
+840
+00:54:30.545 --> 00:54:33.525
+but one best example is, uh, using auto encoder.
+
+841
+00:54:34.745 --> 00:54:36.725
+So then throw away the output layer
+
+842
+00:54:36.785 --> 00:54:38.805
+and use the trained hidden layer
+
+843
+00:54:38.985 --> 00:54:42.805
+as a pre-training initialization of the next, okay,
+
+844
+00:54:44.505 --> 00:54:49.245
+and repeat this process taking as input the output
+
+845
+00:54:49.245 --> 00:54:50.965
+of the previously trained layer,
+
+846
+00:54:51.305 --> 00:54:54.605
+and the, I pass the input through the hidden layer output,
+
+847
+00:54:54.665 --> 00:54:57.045
+and those are connect, the used as the input
+
+848
+00:54:57.195 --> 00:55:00.205
+that process remains, uh, same as unsupervised layer.
+
+849
+00:55:00.555 --> 00:55:02.285
+Finally, fine tuning
+
+850
+00:55:02.345 --> 00:55:04.965
+by adding a logic regression layer on top of the network
+
+851
+00:55:05.145 --> 00:55:07.645
+and training the whole network by stochastic gradient,
+
+852
+00:55:08.425 --> 00:55:10.485
+centra entropy with target class,
+
+853
+00:55:10.635 --> 00:55:11.725
+some approach they have done.
+
+854
+00:55:12.385 --> 00:55:16.205
+So now, uh, uh, just to,
+
+855
+00:55:16.955 --> 00:55:18.525
+what is the significance of this?
+
+856
+00:55:18.545 --> 00:55:22.485
+Is this paper what they have shown, the HO profile,
+
+857
+00:55:26.595 --> 00:55:31.495
+The experiment two, uh, e no, they,
+
+858
+00:55:31.525 --> 00:55:36.375
+they conducted two experiments, experiment tools was
+
+859
+00:55:37.855 --> 00:55:42.095
+proposed done by whatever they have done in interns paper,
+
+860
+00:55:42.205 --> 00:55:45.575
+published it earlier, the experiment three,
+
+861
+00:55:45.925 --> 00:55:46.935
+they designed it.
+
+862
+00:55:47.445 --> 00:55:49.335
+They, they did a new experiment.
+
+863
+00:55:50.205 --> 00:55:54.015
+They wanted to demonstrate that if I reduce the number
+
+864
+00:55:54.035 --> 00:55:57.855
+of neurons in a run layer towards the output layer,
+
+865
+00:55:58.085 --> 00:56:02.055
+towards the output layer, uh, how the perform
+
+866
+00:56:02.685 --> 00:56:06.135
+performance, it affects the performance, um,
+
+867
+00:56:07.635 --> 00:56:12.135
+uh, for shallow or without pre-training deep cases.
+
+868
+00:56:12.325 --> 00:56:14.175
+That is the additional experiment they have done.
+
+869
+00:56:14.175 --> 00:56:16.415
+Anyway, let me, uh, show this,
+
+870
+00:56:17.845 --> 00:56:21.415
+this deep belief network unsupervised pre-training.
+
+871
+00:56:21.965 --> 00:56:24.765
+This is what Hinton's group demonstrated.
+
+872
+00:56:25.655 --> 00:56:28.845
+Experiment two was same as Hinton's group experiment.
+
+873
+00:56:29.555 --> 00:56:32.725
+They independently demonstrated that for the trained data,
+
+874
+00:56:32.805 --> 00:56:36.165
+a hundred percent correct validation data, 1.2% error
+
+875
+00:56:36.665 --> 00:56:38.325
+and tested also 1.4,
+
+876
+00:56:39.435 --> 00:56:43.965
+they showed a 0.5% further reduction, and there are 1.25.
+
+877
+00:56:43.965 --> 00:56:45.485
+They brought it down to 1.2.
+
+878
+00:56:46.105 --> 00:56:50.645
+And this first row up to this point was
+
+879
+00:56:51.665 --> 00:56:55.885
+the, um, the, uh, repeating the experiment of
+
+880
+00:56:56.885 --> 00:57:01.205
+group and reassuring to the community that yes,
+
+881
+00:57:02.025 --> 00:57:05.725
+if I do greedy, unsupervised pre-training of the network,
+
+882
+00:57:07.635 --> 00:57:10.925
+then it is indeed possible to train a deep neural network.
+
+883
+00:57:11.715 --> 00:57:16.245
+Okay? And the experiment threes, they try
+
+884
+00:57:16.245 --> 00:57:19.565
+to play with the neurons, number of neurons
+
+885
+00:57:20.345 --> 00:57:22.325
+in the hidden layers towards the output layer.
+
+886
+00:57:22.905 --> 00:57:26.365
+For example, uh, this 2000 is there,
+
+887
+00:57:26.475 --> 00:57:28.605
+this is the hidden layer towards the output layer.
+
+888
+00:57:29.065 --> 00:57:32.405
+If I start playing with this 2000, instead of 2000,
+
+889
+00:57:32.405 --> 00:57:34.445
+I make 200 or 100 or what?
+
+890
+00:57:34.795 --> 00:57:38.005
+That is what they did, they try to vary the number
+
+891
+00:57:38.005 --> 00:57:39.205
+of neurons from 2000.
+
+892
+00:57:39.205 --> 00:57:43.005
+They decreased the number of neurons, then the,
+
+893
+00:57:43.145 --> 00:57:44.525
+the errors started increasing.
+
+894
+00:57:44.995 --> 00:57:47.645
+That means to say that large dimension is required
+
+895
+00:57:47.645 --> 00:57:49.045
+as something they wanted to show.
+
+896
+00:57:49.905 --> 00:57:52.325
+Of course, the, the purpose is, so now
+
+897
+00:57:53.945 --> 00:57:58.285
+the auto associated pre-training deep network auto
+
+898
+00:57:58.285 --> 00:58:00.645
+associate, this is supervisor training, okay?
+
+899
+00:58:00.975 --> 00:58:02.965
+These two are supervisor pre-training.
+
+900
+00:58:02.995 --> 00:58:05.125
+They have done auto associator pre-training.
+
+901
+00:58:06.155 --> 00:58:09.605
+They got this 1.4%, 1.4%,
+
+902
+00:58:10.655 --> 00:58:13.045
+which is, uh, no,
+
+903
+00:58:14.225 --> 00:58:16.005
+uh, poorer.
+
+904
+00:58:16.025 --> 00:58:18.405
+It is equal into the toughest support vector machine.
+
+905
+00:58:19.925 --> 00:58:22.225
+Uh, it is not, uh, um,
+
+906
+00:58:23.495 --> 00:58:26.265
+good like unsupervised training at that point of time,
+
+907
+00:58:26.845 --> 00:58:30.985
+but, uh, they showed that no, it, it, it is not in inferior,
+
+908
+00:58:31.095 --> 00:58:33.785
+like, uh, uh, a deep network
+
+909
+00:58:34.895 --> 00:58:39.065
+without pre-training a shalon network without pre-training.
+
+910
+00:58:39.495 --> 00:58:42.545
+This is the performance. 2.1%, 2.4%.
+
+911
+00:58:43.005 --> 00:58:44.465
+Let us consider only test column.
+
+912
+00:58:45.045 --> 00:58:48.785
+See, without deep network, without pre-training, 2.4%
+
+913
+00:58:49.565 --> 00:58:51.185
+shalon network, no pre-training.
+
+914
+00:58:51.285 --> 00:58:53.705
+1.9% compared to
+
+915
+00:58:53.705 --> 00:58:57.265
+that is associate performances 1.4% that Mr.
+
+916
+00:58:57.445 --> 00:59:01.785
+Say ability to show the, uh,
+
+917
+00:59:02.805 --> 00:59:06.305
+uh, trying the network in a supervised manner,
+
+918
+00:59:06.575 --> 00:59:08.905
+also possible, but their performance is not
+
+919
+00:59:09.215 --> 00:59:10.705
+like unsupervised.
+
+920
+00:59:10.705 --> 00:59:12.985
+Sorry. Okay. Even the other methods
+
+921
+00:59:13.085 --> 00:59:16.065
+of supervisor pre-training also, they, uh, showed,
+
+922
+00:59:16.125 --> 00:59:20.625
+and there's 2.5, 2.2%, which is, uh, equivalent.
+
+923
+00:59:20.625 --> 00:59:24.285
+That shallow neural network only this auto pre-training came
+
+924
+00:59:24.595 --> 00:59:26.925
+like a support vector mission, okay?
+
+925
+00:59:27.705 --> 00:59:30.805
+So, um, what they wanted
+
+926
+00:59:30.825 --> 00:59:33.925
+to show in this is these are not very statistically
+
+927
+00:59:33.925 --> 00:59:37.645
+significant results, like unsupervised that we say,
+
+928
+00:59:38.045 --> 00:59:42.045
+reinforcing that UN supervisor pre-training is still a much
+
+929
+00:59:42.045 --> 00:59:45.525
+preferred method, but it is also possible to train
+
+930
+00:59:45.525 --> 00:59:47.445
+by auto associate pre-training network.
+
+931
+00:59:50.935 --> 00:59:54.955
+The other part they, they showed was of course,
+
+932
+00:59:55.045 --> 00:59:57.915
+0.1% is statistically significant in this case.
+
+933
+00:59:58.775 --> 01:00:02.315
+Um, what they wanted to show is this experiment too.
+
+934
+01:00:02.315 --> 01:00:07.035
+If you consider even training, uh, even Shalon net network
+
+935
+01:00:07.615 --> 01:00:09.675
+use good performance on training data.
+
+936
+01:00:09.775 --> 01:00:12.995
+If you see the training data now 0.0%,
+
+937
+01:00:12.995 --> 01:00:14.995
+zero zero 4%, okay?
+
+938
+01:00:15.565 --> 01:00:19.595
+Which is we get a, uh, feeling
+
+939
+01:00:19.705 --> 01:00:21.315
+that, oh, it's good.
+
+940
+01:00:21.315 --> 01:00:24.955
+Channel network is also, uh, doing a good job.
+
+941
+01:00:25.465 --> 01:00:29.515
+That means to say this good performance is attributed
+
+942
+01:00:29.615 --> 01:00:33.685
+to over fitting for the actual data training data.
+
+943
+01:00:35.115 --> 01:00:39.765
+Then if I go for experiment three, if you reduce the number
+
+944
+01:00:39.765 --> 01:00:43.085
+of nodes in the done layers towards the output layer, okay?
+
+945
+01:00:43.585 --> 01:00:46.725
+Uh, instead of the 2000, I make it less numbers.
+
+946
+01:00:47.745 --> 01:00:49.045
+You know, you, you can start,
+
+947
+01:00:49.135 --> 01:00:51.125
+start seeing the deterioration in the
+
+948
+01:00:51.125 --> 01:00:52.285
+performance SHA network.
+
+949
+01:00:52.735 --> 01:00:56.245
+There are, which deep networks are zero, zero,
+
+950
+01:00:56.635 --> 01:00:58.525
+this becomes 3.6%.
+
+951
+01:00:59.235 --> 01:01:02.485
+Okay? That means to say, uh, this,
+
+952
+01:01:02.655 --> 01:01:06.765
+these 4.1%, 5% indicates that, uh,
+
+953
+01:01:07.065 --> 01:01:10.005
+in this earlier case, which was almost showing equal,
+
+954
+01:01:10.005 --> 01:01:14.365
+and to some of the deep configuration doesn't mean anything
+
+955
+01:01:14.365 --> 01:01:17.365
+because it was just memorizing or fitting.
+
+956
+01:01:17.795 --> 01:01:20.765
+Whereas if I try to play with those
+
+957
+01:01:21.395 --> 01:01:23.765
+neurons in the hidden layer just previous
+
+958
+01:01:23.765 --> 01:01:26.285
+to the output layer, the brittleness
+
+959
+01:01:26.285 --> 01:01:28.125
+of the shallow neur network comes into picture.
+
+960
+01:01:28.305 --> 01:01:30.325
+So this is what they wanted to show.
+
+961
+01:01:30.325 --> 01:01:33.525
+That is another novelty they have showed as a part
+
+962
+01:01:33.525 --> 01:01:38.205
+of this network, these two works know, uh, really
+
+963
+01:01:41.385 --> 01:01:44.125
+caught the attention of the community that, oh,
+
+964
+01:01:44.195 --> 01:01:45.725
+this intern group
+
+965
+01:01:45.785 --> 01:01:50.685
+and group, uh, should recently showed that it is possible
+
+966
+01:01:50.685 --> 01:01:51.885
+to train deep net.
+
+967
+01:01:51.955 --> 01:01:53.045
+It's big network.
+
+968
+01:01:54.825 --> 01:01:56.885
+So any, any questions up to this point,
+
+969
+01:01:59.865 --> 01:02:03.125
+the supervisor training results are not that attractive,
+
+970
+01:02:03.315 --> 01:02:05.605
+like whatever you are getting unsupervised,
+
+971
+01:02:05.625 --> 01:02:09.325
+but they showed a direction that by supervisor way also,
+
+972
+01:02:09.325 --> 01:02:13.565
+we can try the, Any, any questions
+
+973
+01:02:13.665 --> 01:02:15.165
+or clarifications here.
+
+974
+01:02:21.025 --> 01:02:22.645
+So, so can you go back, uh,
+
+975
+01:02:23.085 --> 01:02:25.165
+I think it was discussed sometime back,
+
+976
+01:02:25.165 --> 01:02:27.925
+but I just wanted to confirm that, um, that image, right,
+
+977
+01:02:28.125 --> 01:02:30.725
+GRBM, uh, so if you, if you have input,
+
+978
+01:02:30.805 --> 01:02:31.805
+I, I just,
+
+979
+01:02:34.145 --> 01:02:36.885
+So we give input and then there's a W one
+
+980
+01:02:36.885 --> 01:02:38.005
+and GB BM is there,
+
+981
+01:02:38.005 --> 01:02:40.805
+and uh, we have some output form coming, right?
+
+982
+01:02:40.825 --> 01:02:44.125
+And then, uh, in the next citation, we have to really, uh,
+
+983
+01:02:44.125 --> 01:02:45.725
+change the weight based on the difference
+
+984
+01:02:45.725 --> 01:02:46.965
+between input and output, right?
+
+985
+01:02:47.465 --> 01:02:50.325
+But again, the input and output are in different formats.
+
+986
+01:02:50.635 --> 01:02:51.845
+There's no output here,
+
+987
+01:02:53.775 --> 01:02:54.965
+There is some form it.
+
+988
+01:02:55.225 --> 01:02:57.525
+How do you really change the input of how?
+
+989
+01:02:58.025 --> 01:03:00.325
+See, um, for example,
+
+990
+01:03:01.565 --> 01:03:05.525
+I take a one dimension, suppose assume that there are 10
+
+991
+01:03:06.115 --> 01:03:08.645
+neurons in this JRBM, right?
+
+992
+01:03:08.705 --> 01:03:13.525
+The first dimension is divided into this 10 neurons input.
+
+993
+01:03:13.865 --> 01:03:17.165
+It is a fully connected network, okay? Yeah.
+
+994
+01:03:17.305 --> 01:03:21.805
+So let us call W one one, W one 12, W one, three, et cetera,
+
+995
+01:03:21.925 --> 01:03:25.845
+W one 10 and the weighted combination of that,
+
+996
+01:03:25.845 --> 01:03:28.765
+what I applied to this 10 neurons mm-hmm.
+
+997
+01:03:28.995 --> 01:03:31.925
+Will be the fraction in which this input dimension I'm
+
+998
+01:03:31.925 --> 01:03:34.125
+dividing ID okay?
+
+999
+01:03:34.195 --> 01:03:37.765
+Okay. Yeah. And while, while coming in the opposite way,
+
+1000
+01:03:38.205 --> 01:03:39.965
+I take the same thing and represent them.
+
+1001
+01:03:42.595 --> 01:03:45.095
+So, so that, that, that is, uh,
+
+1002
+01:03:45.095 --> 01:03:47.375
+some latent space representation, right, sir?
+
+1003
+01:03:47.435 --> 01:03:51.815
+Ah, that later, ah, that this, for example, whatever the
+
+1004
+01:03:52.525 --> 01:03:54.935
+outputs that, what is this output coming
+
+1005
+01:03:54.995 --> 01:03:56.055
+out of these neurons?
+
+1006
+01:03:56.255 --> 01:03:59.015
+I call it as some latent space representation,
+
+1007
+01:03:59.895 --> 01:04:01.975
+reducer dimension representation of the input
+
+1008
+01:04:01.975 --> 01:04:03.055
+or something we can say.
+
+1009
+01:04:03.315 --> 01:04:07.255
+So, so whatever the, each neuron output I get say, uh,
+
+1010
+01:04:07.255 --> 01:04:10.375
+let me call this as H one one, H one two,
+
+1011
+01:04:11.615 --> 01:04:14.175
+H one 10, the output of the 10 neurons.
+
+1012
+01:04:14.605 --> 01:04:18.055
+Then this input dimension, since it has contributed
+
+1013
+01:04:18.075 --> 01:04:21.255
+to H one one to H one 10, yeah, I,
+
+1014
+01:04:21.355 --> 01:04:24.815
+the reconstructed input is a weighted combination
+
+1015
+01:04:24.815 --> 01:04:29.575
+of this H 1 1 2 H one 10. Okay? And
+
+1016
+01:04:29.955 --> 01:04:32.615
+So in the next citation of the training, uh,
+
+1017
+01:04:32.745 --> 01:04:34.415
+let's say input is some handwritten
+
+1018
+01:04:34.555 --> 01:04:35.695
+digits, uh, number, right?
+
+1019
+01:04:35.795 --> 01:04:38.215
+And then the output is some latent space representation.
+
+1020
+01:04:39.315 --> 01:04:40.535
+How, how do we compare
+
+1021
+01:04:40.555 --> 01:04:41.855
+to change the way it's right in
+
+1022
+01:04:41.855 --> 01:04:42.935
+the next citation of the training?
+
+1023
+01:04:42.965 --> 01:04:45.455
+Like we keep moving on citations
+
+1024
+01:04:45.475 --> 01:04:46.855
+to change the way it's right. So,
+
+1025
+01:04:47.815 --> 01:04:48.815
+Hmm.
+
+1026
+01:04:50.955 --> 01:04:52.335
+Uh, can you, can you please repeat?
+
+1027
+01:04:53.875 --> 01:04:56.335
+So if, if I have, uh, the input is some, uh,
+
+1028
+01:04:56.335 --> 01:04:58.295
+handwritten digit nine, for example,
+
+1029
+01:04:58.475 --> 01:05:01.175
+and then the output is a latent space representation of
+
+1030
+01:05:01.515 --> 01:05:02.535
+of H 10.
+
+1031
+01:05:03.255 --> 01:05:06.775
+Hmm. Um, so I need to change the weight again.
+
+1032
+01:05:06.915 --> 01:05:10.295
+Uh, again, rates are, uh, just for every input we have
+
+1033
+01:05:10.295 --> 01:05:11.295
+to do, and then we need
+
+1034
+01:05:11.295 --> 01:05:13.415
+to really compare the output to the input every time.
+
+1035
+01:05:13.435 --> 01:05:15.615
+Is it not the case, the latent space
+
+1036
+01:05:15.615 --> 01:05:16.775
+to the input should be compared,
+
+1037
+01:05:16.775 --> 01:05:18.085
+or we shouldn't do that at all?
+
+1038
+01:05:18.705 --> 01:05:20.685
+No, the latent space compared
+
+1039
+01:05:20.685 --> 01:05:23.285
+to the input means the latent space value
+
+1040
+01:05:23.345 --> 01:05:26.445
+as a weighted combination will reconstruct this particular
+
+1041
+01:05:26.475 --> 01:05:28.365
+dimension, okay?
+
+1042
+01:05:28.505 --> 01:05:32.245
+For this faster dimension from the input is represented
+
+1043
+01:05:32.245 --> 01:05:34.805
+as a weighted combination of this latent space.
+
+1044
+01:05:35.005 --> 01:05:38.685
+H 1 1 2, H one 10, right? Contemplate with the same weights,
+
+1045
+01:05:39.275 --> 01:05:40.275
+Okay? And that
+
+1046
+01:05:40.275 --> 01:05:41.765
+reconstructed, let me call it
+
+1047
+01:05:41.765 --> 01:05:45.765
+as this is first dimension is X one, I get X one dash,
+
+1048
+01:05:46.955 --> 01:05:49.485
+Okay, X one dash is compared
+
+1049
+01:05:49.485 --> 01:05:51.045
+with X one in terms of means squared error.
+
+1050
+01:05:51.555 --> 01:05:53.805
+Okay? Okay. That is what I do
+
+1051
+01:05:56.055 --> 01:05:57.285
+Means quite Okay, sir.
+
+1052
+01:05:57.285 --> 01:05:58.285
+Thanks.
+
+1053
+01:05:58.735 --> 01:06:00.445
+Exact reconstruction I'm looking into.
+
+1054
+01:06:02.715 --> 01:06:04.645
+Okay, sir, thanks. Yeah, yeah.
+
+1055
+01:06:08.035 --> 01:06:11.325
+Okay. So, uh, so just to summarize,
+
+1056
+01:06:12.505 --> 01:06:15.485
+the first breakthrough came by unsupervised Grady,
+
+1057
+01:06:15.485 --> 01:06:17.765
+layer wise training, second breakthrough.
+
+1058
+01:06:18.195 --> 01:06:21.365
+They reinforced that Grady layer wise training works.
+
+1059
+01:06:22.235 --> 01:06:25.165
+That is for the handwritten dig, dig recognition task.
+
+1060
+01:06:26.105 --> 01:06:29.925
+Now, the people from speech recognition community,
+
+1061
+01:06:30.675 --> 01:06:32.325
+they took notice of this
+
+1062
+01:06:33.645 --> 01:06:36.305
+and they felt, can we
+
+1063
+01:06:37.045 --> 01:06:39.385
+see whether it works in the speech recognition?
+
+1064
+01:06:40.825 --> 01:06:45.205
+And here there are four different groups across big players,
+
+1065
+01:06:45.385 --> 01:06:48.965
+if I'm not wrong, Microsoft, Google, I, BM,
+
+1066
+01:06:49.105 --> 01:06:50.245
+and Hinton group.
+
+1067
+01:06:51.355 --> 01:06:54.805
+They independently worked on the speech recognition task
+
+1068
+01:06:55.545 --> 01:06:57.685
+and they documented this in deep neur network
+
+1069
+01:06:57.785 --> 01:06:59.445
+for acoustic modeling speech recognition,
+
+1070
+01:06:59.565 --> 01:07:01.965
+I triple E signal process magazine number 22.
+
+1071
+01:07:02.065 --> 01:07:06.405
+It comes there, you can read it is an independent, that is
+
+1072
+01:07:06.405 --> 01:07:09.485
+for handwritten dig recognition task image processing task.
+
+1073
+01:07:09.555 --> 01:07:11.205
+This is for speech recognition task.
+
+1074
+01:07:12.905 --> 01:07:16.365
+In the speech recognition, one of the basic, uh,
+
+1075
+01:07:17.355 --> 01:07:20.205
+task we do is what is called pH recognition task.
+
+1076
+01:07:21.305 --> 01:07:26.045
+Uh, no, and the classical method
+
+1077
+01:07:26.045 --> 01:07:30.325
+that was there till that point was what we call it
+
+1078
+01:07:30.325 --> 01:07:33.005
+as continuous density hidden Marco model
+
+1079
+01:07:33.215 --> 01:07:34.485
+stochastic model approach.
+
+1080
+01:07:34.515 --> 01:07:37.565
+It's a non neural network model, machine learning,
+
+1081
+01:07:37.795 --> 01:07:39.365
+classical machine learning model.
+
+1082
+01:07:40.835 --> 01:07:43.855
+It is giving an error rate of 27.3.
+
+1083
+01:07:45.355 --> 01:07:48.215
+In 27.3, you can see.
+
+1084
+01:07:48.215 --> 01:07:51.015
+Now there the error was 1.2,
+
+1085
+01:07:51.555 --> 01:07:53.455
+1.4% like that.
+
+1086
+01:07:53.875 --> 01:07:56.295
+But here in case of speech,
+
+1087
+01:07:56.295 --> 01:07:58.895
+because of the large variability available,
+
+1088
+01:07:59.595 --> 01:08:02.335
+the prevailing error rate was 27.3.
+
+1089
+01:08:03.355 --> 01:08:07.405
+Ideally it should be as low as possible, okay?
+
+1090
+01:08:08.145 --> 01:08:10.445
+The prevailing was 27.3.
+
+1091
+01:08:11.515 --> 01:08:14.925
+Then when they used this, um,
+
+1092
+01:08:16.675 --> 01:08:20.725
+monophone deep belief network, deep neur network,
+
+1093
+01:08:21.025 --> 01:08:22.845
+six layers, okay?
+
+1094
+01:08:24.105 --> 01:08:28.125
+Um, one is randomly initialized, deep neur networks.
+
+1095
+01:08:28.515 --> 01:08:32.245
+Then deep belief networks, uh, DN Ns,
+
+1096
+01:08:32.635 --> 01:08:36.485
+they got 22.4% from 27.3,
+
+1097
+01:08:36.865 --> 01:08:40.685
+22 point maybe, I'm just guessing no, maybe 1%,
+
+1098
+01:08:40.685 --> 01:08:44.325
+maybe a statistically significant from 27.3.
+
+1099
+01:08:44.355 --> 01:08:46.725
+They showed it 22.4%
+
+1100
+01:08:47.665 --> 01:08:49.965
+and that was a big breakthrough in the result.
+
+1101
+01:08:50.635 --> 01:08:52.485
+Okay? Big breakthrough in the result.
+
+1102
+01:08:53.505 --> 01:08:56.725
+And uh, then now it became, you know,
+
+1103
+01:08:57.045 --> 01:08:59.125
+suddenly caught the attention of the community
+
+1104
+01:09:00.865 --> 01:09:04.685
+and they further see while doing 22.4%,
+
+1105
+01:09:05.115 --> 01:09:07.645
+they were using handcrafted features in case
+
+1106
+01:09:07.645 --> 01:09:10.165
+of speech we call male frequency cap coercions.
+
+1107
+01:09:11.115 --> 01:09:13.165
+They told, they also played with that.
+
+1108
+01:09:13.165 --> 01:09:15.685
+You don't need to do that type of sophistication,
+
+1109
+01:09:15.685 --> 01:09:17.365
+feature extract, handcrafting,
+
+1110
+01:09:17.785 --> 01:09:20.205
+you can even get the rudimentary features.
+
+1111
+01:09:20.585 --> 01:09:21.685
+That's what they did.
+
+1112
+01:09:22.075 --> 01:09:26.645
+What do we call filter bank energies that got 20.7%.
+
+1113
+01:09:27.265 --> 01:09:29.965
+You can see now, initially people got the shock
+
+1114
+01:09:29.965 --> 01:09:32.445
+of their life because, you know, for 30,
+
+1115
+01:09:32.705 --> 01:09:37.405
+nearly 30 years people are struggling around 27.3 to 26, uh,
+
+1116
+01:09:37.405 --> 01:09:39.725
+like that, suddenly they got this
+
+1117
+01:09:40.625 --> 01:09:44.005
+nearly 7% improvement in the performance, mainly
+
+1118
+01:09:44.005 --> 01:09:45.965
+because of this greedy layer wise training
+
+1119
+01:09:45.965 --> 01:09:47.045
+that they demonstrate.
+
+1120
+01:09:48.035 --> 01:09:52.605
+Okay? And then how does, uh, again, they demonstrated
+
+1121
+01:09:52.705 --> 01:09:55.965
+for speech recognition also word that is phony error rate.
+
+1122
+01:09:56.115 --> 01:09:57.525
+Next one is the word error rate
+
+1123
+01:09:57.905 --> 01:10:00.925
+and some different para, different dataset hubs data,
+
+1124
+01:10:00.925 --> 01:10:03.285
+switchboard data set is there rich transcription data.
+
+1125
+01:10:04.035 --> 01:10:07.685
+Then for example, word error rate was 27.4.
+
+1126
+01:10:08.265 --> 01:10:11.445
+For this one, they brought in some 19%,
+
+1127
+01:10:11.845 --> 01:10:14.245
+19.7 0.1, which is again,
+
+1128
+01:10:14.285 --> 01:10:16.045
+a significant improvement in the performance.
+
+1129
+01:10:16.435 --> 01:10:19.805
+Same thing they demonstrated with the 27.4,
+
+1130
+01:10:20.005 --> 01:10:21.445
+18.5 that came.
+
+1131
+01:10:22.825 --> 01:10:27.765
+So what it ultimately with these studies, speech recognition
+
+1132
+01:10:27.765 --> 01:10:31.685
+and handwritten studies, it was demonstrated beyond doubt
+
+1133
+01:10:32.155 --> 01:10:34.885
+that it is indeed possible to try
+
+1134
+01:10:35.675 --> 01:10:38.605
+deep feed forward neural networks by using
+
+1135
+01:10:39.265 --> 01:10:42.445
+greedy layer wise try greedy layer wise strike.
+
+1136
+01:10:43.635 --> 01:10:46.405
+Okay? Um, of course later now
+
+1137
+01:10:46.405 --> 01:10:49.045
+after 10, if you see know, um,
+
+1138
+01:10:49.705 --> 01:10:52.085
+either you take the AMNE data set
+
+1139
+01:10:52.085 --> 01:10:56.325
+or this timid data set that we were using speech recognition
+
+1140
+01:10:56.385 --> 01:10:58.925
+or this hub bridge transcription data set, all those things,
+
+1141
+01:10:59.425 --> 01:11:02.165
+the data size was not that great compared to
+
+1142
+01:11:02.165 --> 01:11:03.285
+what we are using now.
+
+1143
+01:11:04.195 --> 01:11:08.925
+Okay? Uh, uh, see now we are talking about 1 million hour
+
+1144
+01:11:08.985 --> 01:11:10.925
+of speech data for training this large
+
+1145
+01:11:10.925 --> 01:11:12.365
+speech, large language models.
+
+1146
+01:11:12.465 --> 01:11:16.085
+At that time, they used 3, 309 hours of speech data.
+
+1147
+01:11:16.545 --> 01:11:17.925
+At that point, it was big,
+
+1148
+01:11:18.545 --> 01:11:22.085
+but, uh, what is most important was
+
+1149
+01:11:22.825 --> 01:11:24.445
+it is indeed possible to try
+
+1150
+01:11:24.445 --> 01:11:29.105
+and deep network using, um, Pretty layer which time.
+
+1151
+01:11:29.725 --> 01:11:34.705
+And that was the, you know, breakthrough, uh, in the, uh,
+
+1152
+01:11:35.595 --> 01:11:38.265
+transition from it cemented the transition
+
+1153
+01:11:38.895 --> 01:11:41.665
+from Shalon Deep network.
+
+1154
+01:11:42.215 --> 01:11:45.985
+Okay. Um, any doubts here,
+
+1155
+01:11:52.245 --> 01:11:54.355
+maybe, uh, Sunni, I will stop here.
+
+1156
+01:11:54.735 --> 01:11:58.595
+Let us do the CNN next class. Okay,
+
+1157
+01:11:58.655 --> 01:11:59.655
+Sir, that is Fine.
+
+1158
+01:12:02.175 --> 01:12:03.515
+Can you hear me? Yes.
+
+1159
+01:12:03.545 --> 01:12:04.915
+Yeah, yeah, very clear, very clear.
+
+1160
+01:12:06.735 --> 01:12:07.755
+Is, is this, uh,
+
+1161
+01:12:07.855 --> 01:12:10.075
+taking still approach still relevant today
+
+1162
+01:12:10.075 --> 01:12:11.115
+in given modern techniques?
+
+1163
+01:12:11.215 --> 01:12:12.915
+So like batch analysis?
+
+1164
+01:12:13.935 --> 01:12:15.235
+Uh, can you repeat?
+
+1165
+01:12:16.125 --> 01:12:19.155
+Sorry, repeat?
+
+1166
+01:12:19.335 --> 01:12:21.355
+No, what I'm asking is, uh, we have lot
+
+1167
+01:12:21.355 --> 01:12:23.635
+of modern techniques, uh, like relu
+
+1168
+01:12:23.635 --> 01:12:25.835
+and, uh, batch processing or the batch normalization
+
+1169
+01:12:25.835 --> 01:12:28.275
+and all this is approach still relevant today, sir?
+
+1170
+01:12:28.615 --> 01:12:32.435
+No, it is not relevant now. It is not relevant now. Okay.
+
+1171
+01:12:32.455 --> 01:12:34.555
+Uh, I, I did not comment that.
+
+1172
+01:12:34.695 --> 01:12:37.995
+We will see when we go there, we'll talk, uh,
+
+1173
+01:12:38.265 --> 01:12:41.475
+with the good optimizers available now, okay,
+
+1174
+01:12:41.775 --> 01:12:43.555
+you don't require really layer wise training,
+
+1175
+01:12:43.775 --> 01:12:48.555
+but if you have less amount of data, for example,
+
+1176
+01:12:48.575 --> 01:12:50.675
+no, you have a few hours of data
+
+1177
+01:12:50.735 --> 01:12:53.595
+and you want to train the deep learning model to be
+
+1178
+01:12:53.595 --> 01:12:56.475
+of useful on an A wise or something there.
+
+1179
+01:12:56.475 --> 01:12:58.875
+This really layer wise training is still useful,
+
+1180
+01:12:59.885 --> 01:13:00.885
+Right? But you
+
+1181
+01:13:00.885 --> 01:13:01.755
+have 1 million hours
+
+1182
+01:13:01.775 --> 01:13:05.155
+of data then you don't require, you can directly try.
+
+1183
+01:13:06.695 --> 01:13:08.315
+Got it. Got it.
+
+1184
+01:13:14.215 --> 01:13:16.105
+Okay. Thank you. Uh, yes, sir.
+
+1185
+01:13:16.105 --> 01:13:18.505
+So my request is no, whether you understand
+
+1186
+01:13:18.505 --> 01:13:23.185
+or not, my humble request to all of you is at least, uh,
+
+1187
+01:13:23.975 --> 01:13:27.745
+read this, uh, download those papers, 2006, uh, ance paper
+
+1188
+01:13:27.925 --> 01:13:31.665
+and, uh, uh, NIPS 2006 paper
+
+1189
+01:13:31.685 --> 01:13:35.225
+and just read it just for the, the purpose
+
+1190
+01:13:35.325 --> 01:13:36.705
+of appreciating their effort.
+
+1191
+01:13:36.765 --> 01:13:39.665
+If they would not have done, uh, what the
+
+1192
+01:13:40.235 --> 01:13:41.665
+claim we are doing on the whole
+
+1193
+01:13:41.665 --> 01:13:42.865
+world would not have been there.
+
+1194
+01:13:43.325 --> 01:13:45.585
+That's why they got that noble award.
+
+1195
+01:13:47.145 --> 01:13:48.605
+If you see that paper, it's not,
+
+1196
+01:13:48.605 --> 01:13:50.285
+there is no mathematical equation there.
+
+1197
+01:13:51.835 --> 01:13:52.835
+Okay?
+
+1198
+01:13:53.465 --> 01:13:54.965
+Uh, yes sir. I actually, so
+
+1199
+01:13:54.965 --> 01:13:56.965
+what you brought out about this both unsupervised
+
+1200
+01:13:56.965 --> 01:13:58.165
+and supervised greedy algorithms,
+
+1201
+01:13:58.165 --> 01:13:59.325
+and I can slightly correlate
+
+1202
+01:13:59.325 --> 01:14:02.325
+as we thought the CNN in the initial first semester,
+
+1203
+01:14:03.025 --> 01:14:06.125
+how this weights are carrying power later on,
+
+1204
+01:14:06.265 --> 01:14:09.565
+and how we are able to go for a specific task, like you say,
+
+1205
+01:14:09.625 --> 01:14:12.565
+the supervised, uh, learning where we take each
+
+1206
+01:14:12.565 --> 01:14:14.045
+and every layer and then we train it,
+
+1207
+01:14:14.045 --> 01:14:16.565
+and for the specific task, we tune those weights.
+
+1208
+01:14:17.185 --> 01:14:20.245
+So accordingly we can slightly correlate how it is evolved.
+
+1209
+01:14:20.265 --> 01:14:22.445
+So in that way, I think these two algorithms are, uh,
+
+1210
+01:14:23.075 --> 01:14:26.445
+just really eye opener kind of things on this kind of, yeah.
+
+1211
+01:14:28.355 --> 01:14:30.005
+Yeah. Okay. Thank you.
+
+1212
+01:14:32.285 --> 01:14:33.745
+Thanks. Thank you, sir.
+
+1213
+01:14:43.615 --> 01:14:46.225
+Okay. Uh,
+
+1214
+01:14:48.365 --> 01:14:50.255
+someone was telling anything or what?
+
+1215
+01:14:51.275 --> 01:14:54.815
+We still have time, so we will, so you,
+
+1216
+01:14:55.395 --> 01:14:56.615
+uh, don't leave the meeting.
+
+1217
+01:14:57.145 --> 01:14:59.535
+We're continuing. Maybe I'll just take over
+
+1218
+01:14:59.715 --> 01:15:04.585
+for next 10 minutes, 10 to 15 minutes, okay.
+
+1219
+01:15:05.135 --> 01:15:09.185
+Okay. So, uh, just to, uh, summarize, uh,
+
+1220
+01:15:09.455 --> 01:15:14.165
+what we were trying to, uh, presented
+
+1221
+01:15:14.165 --> 01:15:18.245
+to you that this, this neural network deep learning, I mean,
+
+1222
+01:15:18.245 --> 01:15:22.685
+there was a certain periods in which certain, uh, uh,
+
+1223
+01:15:23.125 --> 01:15:24.405
+breakthrough was given.
+
+1224
+01:15:25.265 --> 01:15:29.125
+See the initial that there was initial time when we started
+
+1225
+01:15:29.315 --> 01:15:31.045
+with the single neuron, we said it
+
+1226
+01:15:31.085 --> 01:15:32.605
+as a perceptron network, right?
+
+1227
+01:15:33.385 --> 01:15:36.205
+And then we extended it to the multilayer perceptron network
+
+1228
+01:15:36.465 --> 01:15:37.725
+and we learned how
+
+1229
+01:15:37.725 --> 01:15:40.125
+to train those multilayer perceptron network
+
+1230
+01:15:40.275 --> 01:15:42.565
+with the back propagation algorithm.
+
+1231
+01:15:42.915 --> 01:15:45.805
+That much, I guess all of you are clear, but
+
+1232
+01:15:45.805 --> 01:15:47.445
+after that, the problem which
+
+1233
+01:15:48.525 --> 01:15:51.365
+occurred was the vanishing gradient problem, okay?
+
+1234
+01:15:51.635 --> 01:15:54.245
+That, okay, we have the multi-layer perception network,
+
+1235
+01:15:55.145 --> 01:15:57.165
+but when we start training, there is a problem
+
+1236
+01:15:57.185 --> 01:15:58.525
+of vanishing gradient problem.
+
+1237
+01:15:58.665 --> 01:16:01.365
+And that is happening because we have number
+
+1238
+01:16:01.365 --> 01:16:02.765
+of hidden layers in between
+
+1239
+01:16:03.425 --> 01:16:07.805
+and the weights, which I'm trying to back propagate, okay?
+
+1240
+01:16:07.805 --> 01:16:11.525
+It is not able to update the weights in the initial layer
+
+1241
+01:16:11.525 --> 01:16:12.965
+due to the vanishing gradient problem.
+
+1242
+01:16:13.555 --> 01:16:15.645
+Fine. So that was the problem where we stuck,
+
+1243
+01:16:17.185 --> 01:16:19.765
+and this, these two, uh, papers,
+
+1244
+01:16:19.815 --> 01:16:23.485
+which I had just explained this was you can say that one
+
+1245
+01:16:23.485 --> 01:16:26.565
+of the solution to that particular problem that, okay,
+
+1246
+01:16:26.905 --> 01:16:29.045
+we cannot train very deep network due
+
+1247
+01:16:29.045 --> 01:16:31.805
+to the vanishing gradient problem, then what is the way out?
+
+1248
+01:16:32.635 --> 01:16:34.645
+Okay? And we struggled a lot, okay?
+
+1249
+01:16:34.705 --> 01:16:38.365
+The, the whole communi community has struggled a lot,
+
+1250
+01:16:38.505 --> 01:16:41.205
+and that's how this novelty in terms
+
+1251
+01:16:41.205 --> 01:16:43.925
+of the layer wise training, they said that, okay,
+
+1252
+01:16:43.945 --> 01:16:46.165
+do not train this deep network altogether
+
+1253
+01:16:46.195 --> 01:16:48.845
+because that's where there is a problem, okay?
+
+1254
+01:16:48.845 --> 01:16:51.005
+Because your gradients are being vanished,
+
+1255
+01:16:51.005 --> 01:16:52.365
+weights are not being updated,
+
+1256
+01:16:52.735 --> 01:16:54.645
+hence the laws are not being decreased.
+
+1257
+01:16:56.105 --> 01:16:59.715
+What you can do is you pull adjacent layer train that,
+
+1258
+01:17:00.355 --> 01:17:02.925
+then pull next adjacent layer, train that,
+
+1259
+01:17:03.315 --> 01:17:06.245
+then pull next layer, train that, okay?
+
+1260
+01:17:06.265 --> 01:17:09.805
+So in that way, what will happen, that weight, uh,
+
+1261
+01:17:09.945 --> 01:17:13.805
+weight will be well, uh, initialized between the two layer,
+
+1262
+01:17:13.805 --> 01:17:16.885
+because now it, it knows that how it, how it was trained
+
+1263
+01:17:17.825 --> 01:17:20.405
+and, uh, what will happen, the vanishing gradient problem,
+
+1264
+01:17:20.455 --> 01:17:23.085
+which was the, uh, problem that we can address.
+
+1265
+01:17:23.085 --> 01:17:24.605
+And that is what we did. That is what we did
+
+1266
+01:17:24.605 --> 01:17:25.845
+with this unsupervised
+
+1267
+01:17:25.845 --> 01:17:28.245
+and supervised greedy layer wise training.
+
+1268
+01:17:29.465 --> 01:17:32.685
+And this was carried on till 2012. Okay?
+
+1269
+01:17:32.685 --> 01:17:35.365
+Till 2012, almost you can say that. Fine.
+
+1270
+01:17:36.075 --> 01:17:37.405
+Then when
+
+1271
+01:17:37.455 --> 01:17:41.925
+after this 2010, 2012, uh, uh, when
+
+1272
+01:17:42.785 --> 01:17:46.565
+we, again, we shifted again, we shifted to our initial mode
+
+1273
+01:17:46.575 --> 01:17:48.485
+where we were doing the back propagation.
+
+1274
+01:17:48.545 --> 01:17:51.045
+We are training the whole network at once means we are
+
+1275
+01:17:51.045 --> 01:17:53.125
+feeding the data, whatever number
+
+1276
+01:17:53.125 --> 01:17:55.965
+of hidden layers are there, we calculate the final output,
+
+1277
+01:17:56.305 --> 01:17:58.805
+we calculate the loss, and we do the back propagation.
+
+1278
+01:17:58.805 --> 01:18:02.845
+This was the initial, uh, initial, uh, like you can say
+
+1279
+01:18:02.845 --> 01:18:05.445
+that the method which we we're following,
+
+1280
+01:18:05.445 --> 01:18:08.765
+and in between this greedy layer wise training was the
+
+1281
+01:18:09.285 --> 01:18:12.205
+solution for the, you can say that this Spanish gradient.
+
+1282
+01:18:12.705 --> 01:18:16.285
+But around this 2012, again, we shifted back again,
+
+1283
+01:18:16.285 --> 01:18:17.925
+we shifted back to our initial mode,
+
+1284
+01:18:18.505 --> 01:18:20.925
+and we started training the whole network again.
+
+1285
+01:18:21.395 --> 01:18:24.885
+Okay? So what, why, why we did, why, why, why we were able
+
+1286
+01:18:24.885 --> 01:18:28.205
+to do that one because of multiple regions that one
+
+1287
+01:18:28.205 --> 01:18:32.285
+of the regions was like activation function that relu,
+
+1288
+01:18:32.305 --> 01:18:35.245
+the relu is activation function, which was able
+
+1289
+01:18:35.265 --> 01:18:37.165
+to mitigate the vanishing gradient problem
+
+1290
+01:18:37.265 --> 01:18:38.285
+up to a certain extent.
+
+1291
+01:18:38.825 --> 01:18:41.685
+So we started using the relu activation function in the
+
+1292
+01:18:41.685 --> 01:18:44.925
+hidden layer, because if it is a sigmoid, then
+
+1293
+01:18:44.995 --> 01:18:47.125
+what it will do, it'll always compress the value
+
+1294
+01:18:47.125 --> 01:18:48.325
+between zero and one,
+
+1295
+01:18:48.865 --> 01:18:52.405
+and it's a very relatively smaller number, gets multiplied
+
+1296
+01:18:52.405 --> 01:18:54.365
+with another gradient, another smaller number,
+
+1297
+01:18:54.385 --> 01:18:56.045
+and it'll give further a smaller value.
+
+1298
+01:18:56.045 --> 01:18:59.525
+That was the main problem, really doesn't do that one fine,
+
+1299
+01:19:00.185 --> 01:19:01.365
+but that was one sol.
+
+1300
+01:19:01.365 --> 01:19:05.525
+Uh, so, uh, uh, Relu was one solution, other solution,
+
+1301
+01:19:05.525 --> 01:19:07.445
+which there was, uh, talking about better
+
+1302
+01:19:07.465 --> 01:19:09.405
+initialization of those weights.
+
+1303
+01:19:10.185 --> 01:19:11.885
+So how do we initialize the weight?
+
+1304
+01:19:11.885 --> 01:19:14.285
+That is what it matters many times, right?
+
+1305
+01:19:14.305 --> 01:19:16.885
+So better initialization weights came into the picture.
+
+1306
+01:19:17.985 --> 01:19:22.445
+And another, another, uh, reason what a tool that we now,
+
+1307
+01:19:22.445 --> 01:19:23.645
+when we are in 2012
+
+1308
+01:19:23.785 --> 01:19:26.525
+and onwards, we are having huge amount of data.
+
+1309
+01:19:26.795 --> 01:19:28.045
+Huge. So
+
+1310
+01:19:28.265 --> 01:19:30.045
+before that, suppose 2006,
+
+1311
+01:19:30.385 --> 01:19:33.365
+all these experiments were approved around 10,000 data, 20,
+
+1312
+01:19:33.385 --> 01:19:34.605
+20,000 data.
+
+1313
+01:19:35.385 --> 01:19:37.725
+Now going for forward in 2012
+
+1314
+01:19:37.985 --> 01:19:41.405
+or so, we are having lax millions of data.
+
+1315
+01:19:41.905 --> 01:19:44.765
+So that was another problem that, okay, uh, this, this, uh,
+
+1316
+01:19:44.825 --> 01:19:47.525
+for larger data set, okay,
+
+1317
+01:19:47.525 --> 01:19:49.445
+how do we train this layer wise, layer wise?
+
+1318
+01:19:50.075 --> 01:19:54.845
+Then the, another, another, uh, uh, point of shifting back
+
+1319
+01:19:55.745 --> 01:19:58.125
+was the G-P-U-G-P-U came into the picture,
+
+1320
+01:19:58.175 --> 01:20:01.565
+which was not earlier there in 2006, okay?
+
+1321
+01:20:01.785 --> 01:20:05.085
+So people, not people were not utilizing the GPU power.
+
+1322
+01:20:05.625 --> 01:20:07.285
+So that was also in place.
+
+1323
+01:20:07.545 --> 01:20:10.285
+So we started exploring that part, then drop out
+
+1324
+01:20:10.745 --> 01:20:13.445
+to address this over fitting problem, batch normalization,
+
+1325
+01:20:13.945 --> 01:20:17.965
+you know, all these, uh, all these, uh, uh, you can say
+
+1326
+01:20:17.965 --> 01:20:22.855
+that, uh, uh, things together led us to again,
+
+1327
+01:20:22.855 --> 01:20:24.735
+switch back to our initial mode
+
+1328
+01:20:24.745 --> 01:20:27.135
+where we were training the deep neural network
+
+1329
+01:20:27.705 --> 01:20:29.175
+end-to-end, end-to-end.
+
+1330
+01:20:29.205 --> 01:20:32.575
+Instead of training layer wise, we started training again,
+
+1331
+01:20:32.575 --> 01:20:33.615
+it from end-to-end.
+
+1332
+01:20:34.085 --> 01:20:37.255
+Okay? So in between there was a six to seven years time
+
+1333
+01:20:37.465 --> 01:20:41.855
+where this greedy layer wise, you can say that, uh, uh,
+
+1334
+01:20:42.255 --> 01:20:44.375
+training was proposed and it was a game changer,
+
+1335
+01:20:44.665 --> 01:20:47.975
+which has given all to together different perspective that
+
+1336
+01:20:47.995 --> 01:20:50.655
+how to come up, come out of this ING rating problem.
+
+1337
+01:20:51.315 --> 01:20:55.815
+But later on today, we are not, uh, like, um, u utilizing
+
+1338
+01:20:55.815 --> 01:20:58.135
+that greed wise, uh, uh, layer wise training.
+
+1339
+01:20:58.675 --> 01:21:02.655
+But, but, uh, as I said, if you have a small amount
+
+1340
+01:21:02.895 --> 01:21:04.255
+of data, you can still use it.
+
+1341
+01:21:05.035 --> 01:21:07.495
+Not valid, because of the reasons, which I have told you,
+
+1342
+01:21:07.595 --> 01:21:09.735
+we are now, when we are in 2025,
+
+1343
+01:21:09.875 --> 01:21:12.135
+we are still doing the end-to-end training
+
+1344
+01:21:12.135 --> 01:21:14.455
+with the back propagation, what we have learned so far.
+
+1345
+01:21:14.915 --> 01:21:16.335
+But this was the phase,
+
+1346
+01:21:16.675 --> 01:21:18.375
+and you must be knowing that, okay,
+
+1347
+01:21:18.445 --> 01:21:20.575
+what are the different phase we have gone through
+
+1348
+01:21:21.075 --> 01:21:23.895
+and we have reached to this 2025, and what is the status?
+
+1349
+01:21:25.285 --> 01:21:28.385
+So this whole journey we were presenting to you. Okay.
+
+1350
+01:21:28.385 --> 01:21:30.145
+And these two were the breakthrough in between,
+
+1351
+01:21:30.205 --> 01:21:32.785
+and you must be knowing it at least.
+
+1352
+01:21:32.885 --> 01:21:35.465
+And, uh, uh, maybe, uh, the, uh, uh,
+
+1353
+01:21:35.465 --> 01:21:38.625
+like conceptual wide little bit exploring the paper will
+
+1354
+01:21:38.645 --> 01:21:41.465
+really help you to, uh, bridge that.
+
+1355
+01:21:41.465 --> 01:21:43.785
+Otherwise, you may be missing this link.
+
+1356
+01:21:43.845 --> 01:21:46.785
+You may never know that. Okay. Why it is required. Okay.
+
+1357
+01:21:46.805 --> 01:21:49.345
+Why, why it came into the picture at all. Okay.
+
+1358
+01:21:49.565 --> 01:21:53.225
+So that was the whole purpose that, uh, why, why we have,
+
+1359
+01:21:53.285 --> 01:21:57.465
+uh, uh, spend some more time to explain you
+
+1360
+01:21:57.465 --> 01:21:58.465
+that particular part.
+
+1361
+01:22:00.355 --> 01:22:03.765
+Alright? So, okay.
+
+1362
+01:22:03.865 --> 01:22:08.005
+So, uh, what I'll do now is that, uh, I will
+
+1363
+01:22:08.635 --> 01:22:11.255
+present my screen, uh,
+
+1364
+01:22:14.325 --> 01:22:15.465
+uh, one second.
+
+1365
+01:22:18.805 --> 01:22:22.985
+So I'll just present my screen.
+
+1366
+01:22:27.675 --> 01:22:31.215
+Uh, what we can just, okay.
+
+1367
+01:22:31.555 --> 01:22:35.815
+So next, from the what I thought that I will, uh, start
+
+1368
+01:22:35.885 --> 01:22:39.735
+that I will give you a little introduction on the PYS neural
+
+1369
+01:22:39.735 --> 01:22:41.775
+network module, which we have not started
+
+1370
+01:22:42.375 --> 01:22:44.815
+PyTorch in general, we have seen
+
+1371
+01:22:44.955 --> 01:22:47.695
+and we have already implemented our neural networks with
+
+1372
+01:22:47.695 --> 01:22:50.535
+that also implemented the back propagation and all,
+
+1373
+01:22:51.115 --> 01:22:53.735
+but neural network module, we have not yet, uh,
+
+1374
+01:22:54.205 --> 01:22:55.375
+started in detail.
+
+1375
+01:22:55.515 --> 01:22:59.215
+So I will see that in next 10 minutes how much I can do.
+
+1376
+01:22:59.275 --> 01:23:01.655
+So I able to start with this today
+
+1377
+01:23:01.915 --> 01:23:04.575
+and then we'll continue in the next class. Yeah. Before,
+
+1378
+01:23:04.595 --> 01:23:06.165
+Before we start, I have a quick question.
+
+1379
+01:23:06.315 --> 01:23:11.185
+Yeah. Um, so we, we started with this, uh,
+
+1380
+01:23:11.505 --> 01:23:13.065
+singular multi-layer perceptron
+
+1381
+01:23:13.455 --> 01:23:15.305
+with the mostly labeled data.
+
+1382
+01:23:15.765 --> 01:23:17.025
+Mm-hmm. Uh,
+
+1383
+01:23:17.285 --> 01:23:20.865
+but now we have, uh, this, uh, exploding amount of data,
+
+1384
+01:23:21.515 --> 01:23:24.105
+which mostly we will not be able to label them.
+
+1385
+01:23:24.295 --> 01:23:28.625
+Correct? Right. So, uh, why that, uh, particular,
+
+1386
+01:23:29.285 --> 01:23:32.425
+you know, greedy, why greedy layer wise training, which help
+
+1387
+01:23:32.455 --> 01:23:36.785
+with the unsupervised, uh, unsupervised training,
+
+1388
+01:23:37.445 --> 01:23:40.985
+uh, supervised training, which depended on these, uh, um,
+
+1389
+01:23:41.295 --> 01:23:42.865
+what we call those, um,
+
+1390
+01:23:43.865 --> 01:23:45.305
+distribution data distributions rather
+
+1391
+01:23:45.305 --> 01:23:46.625
+than labeling of data.
+
+1392
+01:23:47.125 --> 01:23:49.145
+Why those strategies are discarded?
+
+1393
+01:23:49.145 --> 01:23:51.105
+Because I, I feel they're more relevant.
+
+1394
+01:23:51.525 --> 01:23:53.465
+We are doing statistical based, uh,
+
+1395
+01:23:53.815 --> 01:23:57.615
+loss functions rather than, um, label wise loss.
+
+1396
+01:23:58.715 --> 01:24:00.175
+So it is not discarded,
+
+1397
+01:24:00.435 --> 01:24:02.415
+the concept itself is not discussed.
+
+1398
+01:24:02.415 --> 01:24:03.815
+If you see these, all these
+
+1399
+01:24:04.665 --> 01:24:07.095
+large language models which are utilizing
+
+1400
+01:24:07.835 --> 01:24:09.055
+the whole internet data,
+
+1401
+01:24:09.285 --> 01:24:12.295
+they are still not relying on the labels.
+
+1402
+01:24:12.905 --> 01:24:15.495
+Right. Okay. So that, that's what,
+
+1403
+01:24:15.495 --> 01:24:18.615
+that's why I told you the concept, which was given then
+
+1404
+01:24:19.195 --> 01:24:21.735
+was now being used in the different, different forms.
+
+1405
+01:24:22.595 --> 01:24:25.575
+So we are now not depending on the labels itself,
+
+1406
+01:24:25.575 --> 01:24:28.095
+because we can't have, we can't have the labels
+
+1407
+01:24:28.095 --> 01:24:30.095
+for all those millions trillions of the data.
+
+1408
+01:24:30.145 --> 01:24:32.095
+Right? But at the same time,
+
+1409
+01:24:32.095 --> 01:24:33.975
+what has happened is going into complete,
+
+1410
+01:24:34.015 --> 01:24:35.855
+unsupervised way, what they have proposed.
+
+1411
+01:24:36.155 --> 01:24:38.455
+Now, we have some other kind of paradigms also,
+
+1412
+01:24:38.455 --> 01:24:40.695
+which is in place like self supervised,
+
+1413
+01:24:40.695 --> 01:24:41.935
+like semi-supervised.
+
+1414
+01:24:42.595 --> 01:24:46.015
+So I mean, you can still go with unsupervised, greedy,
+
+1415
+01:24:46.015 --> 01:24:47.135
+layer wise training and all.
+
+1416
+01:24:47.335 --> 01:24:49.175
+I mean, they, they're still valid in the sense,
+
+1417
+01:24:49.595 --> 01:24:52.935
+but then, uh, with this huge amount of data, if you go
+
+1418
+01:24:52.935 --> 01:24:56.895
+with a self supervised for lms, that will be, you can say
+
+1419
+01:24:56.895 --> 01:24:58.415
+that more, be better
+
+1420
+01:24:58.955 --> 01:25:01.895
+and, uh, you can end to end, you can represent, uh, the,
+
+1421
+01:25:01.915 --> 01:25:04.015
+the distribution in a better way.
+
+1422
+01:25:04.075 --> 01:25:06.615
+You can train it, you can converge a little faster way
+
+1423
+01:25:06.645 --> 01:25:09.935
+because you have hundreds of such layers with this, say
+
+1424
+01:25:09.935 --> 01:25:14.655
+that 700 billion parameters, uh, with these huge networks
+
+1425
+01:25:14.715 --> 01:25:18.175
+and all having some self supervised setting is working
+
+1426
+01:25:18.175 --> 01:25:20.455
+better than the unsupervised.
+
+1427
+01:25:20.995 --> 01:25:24.055
+But having said that, unsupervised is still being used in
+
+1428
+01:25:24.055 --> 01:25:26.855
+certain cases, maybe in the large language model it's not
+
+1429
+01:25:26.855 --> 01:25:29.735
+being used, but in some other cases it is still valid
+
+1430
+01:25:29.735 --> 01:25:31.175
+and people are using the auto
+
+1431
+01:25:31.175 --> 01:25:32.575
+incurred concepts and all. Yeah,
+
+1432
+01:25:33.445 --> 01:25:34.445
+Okay. Okay.
+
+1433
+01:25:34.445 --> 01:25:34.885
+
+1434
+01:25:35.755 --> 01:25:40.535
+Yes Sir. Excuse me, sir. I have a doubt, sir.
+
+1435
+01:25:40.735 --> 01:25:44.935
+I mean, here, uh, what do we do with the biases, sir?
+
+1436
+01:25:45.235 --> 01:25:48.495
+The biases, I could not see that in the neur and work
+
+1437
+01:25:49.395 --> 01:25:50.975
+Biases you could not see,
+
+1438
+01:25:51.035 --> 01:25:55.055
+but you have to feel the biases as you're breathing.
+
+1439
+01:25:55.795 --> 01:25:58.575
+So breathing, you can't, uh, always think
+
+1440
+01:25:58.575 --> 01:25:59.735
+that I'm breathing, but you,
+
+1441
+01:25:59.795 --> 01:26:01.015
+you are always breathing, right?
+
+1442
+01:26:01.565 --> 01:26:02.855
+Yeah. So without breathing,
+
+1443
+01:26:02.875 --> 01:26:05.405
+you can't sustain it is biases or something like that.
+
+1444
+01:26:06.005 --> 01:26:08.165
+Although it, we are not showing explicitly
+
+1445
+01:26:08.165 --> 01:26:10.125
+with the neuron biases are there or not.
+
+1446
+01:26:10.945 --> 01:26:13.885
+But by default, biases are the part of the neuron,
+
+1447
+01:26:13.885 --> 01:26:14.925
+which is there everywhere.
+
+1448
+01:26:15.945 --> 01:26:17.075
+Okay. Okay. Yeah.
+
+1449
+01:26:17.215 --> 01:26:20.555
+So whenever we do this weight sum, we also add the bias.
+
+1450
+01:26:21.335 --> 01:26:23.875
+So only thing what we have done is we have considered
+
+1451
+01:26:23.985 --> 01:26:25.355
+bias as another input.
+
+1452
+01:26:25.775 --> 01:26:28.635
+So we are not explicitly mentioning, uh, it,
+
+1453
+01:26:28.695 --> 01:26:31.475
+but then bias, uh, the way we have learned
+
+1454
+01:26:31.785 --> 01:26:34.195
+with the single perception, it, it,
+
+1455
+01:26:34.195 --> 01:26:35.755
+it is the same way it is being carried
+
+1456
+01:26:35.775 --> 01:26:36.995
+for any kind of neur network.
+
+1457
+01:26:37.065 --> 01:26:38.065
+Yeah.
+
+1458
+01:26:39.275 --> 01:26:40.935
+Got it. Thanks. Yeah.
+
+1459
+01:26:44.345 --> 01:26:47.735
+Okay. Alright.
+
+1460
+01:26:51.425 --> 01:26:54.475
+Alright. So I was just, uh, showing this particular slide.
+
+1461
+01:26:54.655 --> 01:26:58.475
+So, uh, what we are going to do from the perspective,
+
+1462
+01:26:58.475 --> 01:27:01.115
+because ly we have to implement everything,
+
+1463
+01:27:01.115 --> 01:27:03.875
+what we are going to learn in this particular course.
+
+1464
+01:27:04.705 --> 01:27:08.955
+Okay? So next is the CNN, what we are going to start with.
+
+1465
+01:27:09.815 --> 01:27:11.835
+And before starting the CN, uh,
+
+1466
+01:27:11.835 --> 01:27:14.475
+because things are going to be a little complicated
+
+1467
+01:27:14.615 --> 01:27:17.475
+and we will not write everything from the scratch,
+
+1468
+01:27:17.505 --> 01:27:20.675
+each equations and all, hence we'll utilize this source
+
+1469
+01:27:21.275 --> 01:27:23.475
+NN module from the PIs
+
+1470
+01:27:24.255 --> 01:27:28.435
+and how, how it'll help us, that it'll help us to first
+
+1471
+01:27:29.055 --> 01:27:32.915
+create the, you can say the blueprint of the model,
+
+1472
+01:27:32.985 --> 01:27:34.075
+what we want to create,
+
+1473
+01:27:34.975 --> 01:27:38.155
+and then how to create the forward propagation, how
+
+1474
+01:27:38.155 --> 01:27:40.395
+to calculate the loss, okay?
+
+1475
+01:27:40.495 --> 01:27:43.795
+How to, uh, do the back pro, back preparation, how
+
+1476
+01:27:43.795 --> 01:27:47.035
+to update the weight and all these things.
+
+1477
+01:27:47.355 --> 01:27:50.195
+Whatever is required for any neural network, for training,
+
+1478
+01:27:50.935 --> 01:27:54.315
+for ev almost every module, uh, you have the storage
+
+1479
+01:27:54.835 --> 01:27:56.275
+n support, you have torch.
+
+1480
+01:27:56.695 --> 01:27:59.115
+So I'll show you that one slowly, maybe today it,
+
+1481
+01:27:59.755 --> 01:28:00.915
+I will not be able to show,
+
+1482
+01:28:01.295 --> 01:28:03.115
+but all these things it is able to handle,
+
+1483
+01:28:03.495 --> 01:28:06.715
+it can update the weight, it can add activation function.
+
+1484
+01:28:06.715 --> 01:28:08.955
+So it has support from all kind of activation function.
+
+1485
+01:28:09.135 --> 01:28:13.115
+And you did not write the, uh, encode from the scratch
+
+1486
+01:28:13.415 --> 01:28:15.515
+for the relu separate function for say
+
+1487
+01:28:15.515 --> 01:28:17.275
+that 10 edge separate function.
+
+1488
+01:28:17.495 --> 01:28:20.675
+You can simply call that function from the storage module.
+
+1489
+01:28:21.265 --> 01:28:24.275
+Similarly, the loss function, uh, there are a lot
+
+1490
+01:28:24.275 --> 01:28:25.515
+of support from the loss of,
+
+1491
+01:28:25.535 --> 01:28:28.755
+for the loss function in the PyTorch, like, uh,
+
+1492
+01:28:29.035 --> 01:28:33.155
+binary cross entro laws like, uh, squier loss, similarly,
+
+1493
+01:28:33.585 --> 01:28:36.755
+automatic gradient competition we have, right?
+
+1494
+01:28:36.975 --> 01:28:39.235
+Or different kind of optimizers we have,
+
+1495
+01:28:39.855 --> 01:28:42.955
+and we have something called as containers like, uh,
+
+1496
+01:28:43.125 --> 01:28:44.315
+sequential container.
+
+1497
+01:28:44.375 --> 01:28:45.875
+So I'll show you that in the next class.
+
+1498
+01:28:45.905 --> 01:28:47.355
+What is the sequential container
+
+1499
+01:28:47.355 --> 01:28:49.675
+and how does it help us to, uh,
+
+1500
+01:28:49.825 --> 01:28:52.395
+like attach the different layers in the neural network,
+
+1501
+01:28:52.395 --> 01:28:55.155
+like input layer, haal layer, next digital layer,
+
+1502
+01:28:55.495 --> 01:28:57.875
+and we have whatever concept we have learned that okay,
+
+1503
+01:28:58.055 --> 01:29:00.515
+output of one hidden layer will act as an output
+
+1504
+01:29:00.515 --> 01:29:02.525
+for the input for the next general layer.
+
+1505
+01:29:02.745 --> 01:29:06.285
+So the sequential container are able to do that.
+
+1506
+01:29:06.315 --> 01:29:08.605
+Otherwise, we have to, uh, uh, uh, uh,
+
+1507
+01:29:08.985 --> 01:29:12.245
+define individually each layers in the code,
+
+1508
+01:29:12.265 --> 01:29:13.525
+but that we don't do usually
+
+1509
+01:29:13.715 --> 01:29:15.325
+otherwise our code would be too long
+
+1510
+01:29:15.465 --> 01:29:18.365
+and it, it, there is a chance of doing the mistakes as well.
+
+1511
+01:29:18.545 --> 01:29:22.685
+So once we define our blueprint with the sequential, uh,
+
+1512
+01:29:22.685 --> 01:29:25.285
+container, we can, in one line you will see
+
+1513
+01:29:25.285 --> 01:29:26.725
+that you are doing the whole forward
+
+1514
+01:29:26.725 --> 01:29:28.525
+propagation just in one line.
+
+1515
+01:29:28.945 --> 01:29:30.885
+So that is what I'm going to show next,
+
+1516
+01:29:30.895 --> 01:29:33.485
+maybe in the next class and going forward,
+
+1517
+01:29:33.785 --> 01:29:36.525
+all these concept will use for all the, uh,
+
+1518
+01:29:36.525 --> 01:29:39.005
+like complicated network like convolutional neural network
+
+1519
+01:29:39.145 --> 01:29:41.405
+or recurrent neural network or transformers.
+
+1520
+01:29:41.745 --> 01:29:43.805
+We are going to utilize this neural network module.
+
+1521
+01:29:44.385 --> 01:29:47.685
+So what I have planned is that I will, uh,
+
+1522
+01:29:48.315 --> 01:29:51.525
+I'll share anyway, this slide with you, uh, like,
+
+1523
+01:29:51.725 --> 01:29:53.165
+although I've not explained where
+
+1524
+01:29:53.165 --> 01:29:57.045
+what I have done is I have taken a simple network, okay?
+
+1525
+01:29:57.065 --> 01:29:59.525
+For example, there is a single neuron where five,
+
+1526
+01:29:59.755 --> 01:30:01.565
+five inputs are connected, one bias,
+
+1527
+01:30:01.585 --> 01:30:03.365
+and then it is given the output by hat.
+
+1528
+01:30:03.825 --> 01:30:08.805
+And there is a, uh, there is a, uh, you can see this, uh,
+
+1529
+01:30:08.805 --> 01:30:10.565
+there is a, a whole notebook,
+
+1530
+01:30:10.565 --> 01:30:12.685
+which I have prepared just for your understanding.
+
+1531
+01:30:13.905 --> 01:30:17.325
+And with this notebook, what I'm trying to do is I'm trying
+
+1532
+01:30:17.345 --> 01:30:20.485
+to, uh, introduce this neural network module.
+
+1533
+01:30:20.825 --> 01:30:24.285
+So here, what you will see, uh,
+
+1534
+01:30:24.315 --> 01:30:26.885
+that there are certain object oriented
+
+1535
+01:30:26.885 --> 01:30:28.405
+concepts are coming into the picture.
+
+1536
+01:30:28.405 --> 01:30:31.445
+That's why in the last class I have, uh, explained
+
+1537
+01:30:31.675 --> 01:30:35.565
+that you must be knowing some object oriented concepts in
+
+1538
+01:30:35.565 --> 01:30:37.805
+Python, which is quite easy, not very difficult.
+
+1539
+01:30:37.955 --> 01:30:41.085
+Also, you may have to read it, uh, for once
+
+1540
+01:30:41.085 --> 01:30:42.605
+or twice, do a little bit of practice.
+
+1541
+01:30:42.605 --> 01:30:46.375
+You'll understand that. So here what I'm doing is
+
+1542
+01:30:46.585 --> 01:30:47.855
+after importing the torch,
+
+1543
+01:30:47.995 --> 01:30:51.855
+I'm also importing thoughts dot NN neural network as an n.
+
+1544
+01:30:51.855 --> 01:30:54.735
+There's just a, uh, you can say the variable
+
+1545
+01:30:54.765 --> 01:30:57.175
+with which I'm going to use the storage n module
+
+1546
+01:30:58.685 --> 01:31:02.135
+here in this particular code, what is happening is I'm dev,
+
+1547
+01:31:02.555 --> 01:31:03.655
+I'm creating my class
+
+1548
+01:31:03.685 --> 01:31:07.735
+because I have to create one model which model, this model
+
+1549
+01:31:07.905 --> 01:31:09.575
+where I have a single neuron
+
+1550
+01:31:09.635 --> 01:31:12.175
+and five inputs are being connected with this neuron.
+
+1551
+01:31:12.175 --> 01:31:13.655
+This is the model which I want to create.
+
+1552
+01:31:14.515 --> 01:31:16.695
+So I'm creating a class of that model,
+
+1553
+01:31:17.235 --> 01:31:19.975
+and this model will inherit the, uh,
+
+1554
+01:31:20.005 --> 01:31:22.935
+inherit the parent class that is called anin module,
+
+1555
+01:31:22.935 --> 01:31:25.335
+which is available here in this thought nl.
+
+1556
+01:31:25.595 --> 01:31:27.495
+So there is a concept of inheritance.
+
+1557
+01:31:27.865 --> 01:31:29.535
+There is a concept of inheritance.
+
+1558
+01:31:30.155 --> 01:31:32.935
+So NN dot module have lot of attributes
+
+1559
+01:31:33.075 --> 01:31:34.535
+and methods available.
+
+1560
+01:31:34.805 --> 01:31:36.375
+It's another class in the torch.
+
+1561
+01:31:37.275 --> 01:31:40.415
+So this, my class is inheriting all the
+
+1562
+01:31:40.415 --> 01:31:41.735
+properties of n ndot module.
+
+1563
+01:31:42.035 --> 01:31:46.775
+So this signature is about the inheritance in, in, uh, in,
+
+1564
+01:31:46.875 --> 01:31:49.895
+in, in, uh, Python right now.
+
+1565
+01:31:49.995 --> 01:31:53.135
+You will see that there is this particular method, uh,
+
+1566
+01:31:53.305 --> 01:31:56.175
+every time whenever you will build a model class,
+
+1567
+01:31:56.395 --> 01:32:00.125
+you will be having one line like that
+
+1568
+01:32:00.135 --> 01:32:01.445
+where you are writing in it.
+
+1569
+01:32:02.105 --> 01:32:03.645
+But this particular, this is a function.
+
+1570
+01:32:03.715 --> 01:32:06.645
+This is a function where, which we, we are defining
+
+1571
+01:32:06.665 --> 01:32:09.045
+and this function in known as this function is known
+
+1572
+01:32:09.045 --> 01:32:10.085
+as constructor.
+
+1573
+01:32:10.305 --> 01:32:12.245
+So there is a concept of constructor in
+
+1574
+01:32:12.245 --> 01:32:13.445
+object oriented programming.
+
+1575
+01:32:13.555 --> 01:32:15.565
+Okay? So I'm giving you pointers
+
+1576
+01:32:15.565 --> 01:32:18.925
+because I'm not going to explain you this whole code today.
+
+1577
+01:32:19.035 --> 01:32:20.045
+Next class I'll explain,
+
+1578
+01:32:20.065 --> 01:32:22.805
+but meanwhile you can ex just, just go
+
+1579
+01:32:22.805 --> 01:32:25.645
+through these pointers like what is inheritance concept
+
+1580
+01:32:26.305 --> 01:32:29.485
+and how can we do the inheritance, uh,
+
+1581
+01:32:29.545 --> 01:32:31.885
+in the objective preventing programming in Python?
+
+1582
+01:32:32.475 --> 01:32:34.245
+Then what are the concept of constructor?
+
+1583
+01:32:35.145 --> 01:32:38.005
+So constructor is a function by default.
+
+1584
+01:32:38.075 --> 01:32:39.965
+It's a function, but it's a special function.
+
+1585
+01:32:40.465 --> 01:32:44.085
+So whenever you will create an object of a particular class,
+
+1586
+01:32:44.425 --> 01:32:47.645
+the constructor will automatically execute.
+
+1587
+01:32:49.125 --> 01:32:51.145
+In general, what happened whenever you define a function
+
+1588
+01:32:51.145 --> 01:32:52.305
+like forward is a function.
+
+1589
+01:32:52.565 --> 01:32:55.665
+If you want to execute this forward, you need
+
+1590
+01:32:55.665 --> 01:32:56.985
+to call this forward function.
+
+1591
+01:32:56.985 --> 01:32:59.585
+Unless you are not calling the function, it cannot execute.
+
+1592
+01:33:00.085 --> 01:33:02.065
+But constructor is a special function
+
+1593
+01:33:02.675 --> 01:33:04.665
+which will get automatically executed
+
+1594
+01:33:05.105 --> 01:33:07.425
+whenever you will make your object of a particular class,
+
+1595
+01:33:07.765 --> 01:33:08.905
+if of this particular class.
+
+1596
+01:33:09.455 --> 01:33:12.465
+Okay? And how do we represent the constructor
+
+1597
+01:33:13.005 --> 01:33:16.945
+by the signature, it says underscore, underscore in it,
+
+1598
+01:33:16.975 --> 01:33:18.465
+then underscore, underscore.
+
+1599
+01:33:18.485 --> 01:33:22.425
+Now this is the special, uh, signature, uh, which we use
+
+1600
+01:33:22.445 --> 01:33:23.785
+for this, this constructor.
+
+1601
+01:33:24.045 --> 01:33:27.755
+So in it is representing that it a constructor. Okay?
+
+1602
+01:33:27.925 --> 01:33:30.035
+There is one more keyword, which you will see here.
+
+1603
+01:33:30.145 --> 01:33:31.715
+It's super, okay.
+
+1604
+01:33:31.715 --> 01:33:32.915
+Now this is also very important
+
+1605
+01:33:33.015 --> 01:33:35.115
+and we, you should be exploring it by yourself.
+
+1606
+01:33:35.575 --> 01:33:38.715
+So super is a key word which we use to connect
+
+1607
+01:33:38.745 --> 01:33:40.035
+with the parent class.
+
+1608
+01:33:40.135 --> 01:33:42.955
+So here you can see that the parent class is NN dot module.
+
+1609
+01:33:43.735 --> 01:33:48.075
+Now in the n dot module, the python, uh, pythons, uh, uh,
+
+1610
+01:33:48.075 --> 01:33:50.435
+programmer who, who has already written this particular
+
+1611
+01:33:50.435 --> 01:33:52.675
+parent class, we are inheriting this class here.
+
+1612
+01:33:53.295 --> 01:33:54.555
+So in that particular class, we,
+
+1613
+01:33:54.575 --> 01:33:57.395
+we already have some attributes, some methods defined
+
+1614
+01:33:57.985 --> 01:33:59.235
+with this super key word.
+
+1615
+01:33:59.235 --> 01:34:04.195
+What we are doing is we are trying to access the attributes
+
+1616
+01:34:04.255 --> 01:34:06.035
+and methods, which is already defined
+
+1617
+01:34:06.215 --> 01:34:08.075
+inside this particular parent class.
+
+1618
+01:34:08.615 --> 01:34:10.675
+So we are calling again the constructor.
+
+1619
+01:34:11.145 --> 01:34:14.475
+This again the, uh, signature of constructor in it,
+
+1620
+01:34:14.815 --> 01:34:16.235
+but of the parent class.
+
+1621
+01:34:16.255 --> 01:34:19.635
+So super keyword is used to call the constructor of the,
+
+1622
+01:34:19.895 --> 01:34:21.795
+or connected with the parent class.
+
+1623
+01:34:21.815 --> 01:34:25.235
+And in the parent class, I'm calling it constructor, okay?
+
+1624
+01:34:25.495 --> 01:34:27.595
+But these three lines are very important.
+
+1625
+01:34:27.815 --> 01:34:30.235
+So three in these three lines, there are three concept
+
+1626
+01:34:30.615 --> 01:34:32.675
+of the object object oriented programming.
+
+1627
+01:34:32.675 --> 01:34:36.195
+You have to learn. First one is the concept of inheritance.
+
+1628
+01:34:36.535 --> 01:34:38.795
+Second one is the concept of constructor.
+
+1629
+01:34:39.285 --> 01:34:42.435
+Third one is how to connect with the parent class,
+
+1630
+01:34:42.495 --> 01:34:44.275
+the concept of this super keyword.
+
+1631
+01:34:44.375 --> 01:34:45.595
+So, okay, super.
+
+1632
+01:34:46.415 --> 01:34:49.395
+So now there is last thing, which now I'm telling you,
+
+1633
+01:34:49.395 --> 01:34:50.755
+dressed we'll see in the next class.
+
+1634
+01:34:50.755 --> 01:34:52.435
+There is a self word.
+
+1635
+01:34:52.615 --> 01:34:54.275
+So you can see that self keyword self
+
+1636
+01:34:54.275 --> 01:34:55.475
+here, self here, everywhere.
+
+1637
+01:34:55.475 --> 01:34:57.115
+You will see self, self, self, self.
+
+1638
+01:34:57.785 --> 01:35:00.485
+So you have to also understand what is the importance
+
+1639
+01:35:00.485 --> 01:35:01.925
+or significance of the self.
+
+1640
+01:35:02.825 --> 01:35:05.045
+So I'll tell you now later, you can explore
+
+1641
+01:35:05.485 --> 01:35:07.805
+whenever you create a class like this, okay?
+
+1642
+01:35:08.265 --> 01:35:11.045
+And when you create an object of this particular class,
+
+1643
+01:35:11.475 --> 01:35:15.845
+okay, so the self represent self at the name says this,
+
+1644
+01:35:16.035 --> 01:35:17.525
+it's yourself, okay?
+
+1645
+01:35:17.955 --> 01:35:20.845
+Self is the object of this particular class.
+
+1646
+01:35:21.825 --> 01:35:23.875
+Self is the object of this particular class.
+
+1647
+01:35:23.875 --> 01:35:25.915
+Suppose I'm creating an object
+
+1648
+01:35:25.915 --> 01:35:27.755
+of this particular class as object one.
+
+1649
+01:35:28.295 --> 01:35:30.595
+So object one and self is same.
+
+1650
+01:35:30.975 --> 01:35:32.195
+Object one and self is,
+
+1651
+01:35:32.295 --> 01:35:34.875
+and that I'll, I'll show you in the next class why
+
+1652
+01:35:34.915 --> 01:35:35.955
+I am saying it to the self.
+
+1653
+01:35:36.575 --> 01:35:39.075
+And you see that self is going as an argument
+
+1654
+01:35:39.895 --> 01:35:42.475
+for this constructor self is going here.
+
+1655
+01:35:42.665 --> 01:35:44.675
+Also self is going here.
+
+1656
+01:35:44.705 --> 01:35:47.195
+Also self dot something like you call like
+
+1657
+01:35:47.215 --> 01:35:48.675
+object dot something, right?
+
+1658
+01:35:48.815 --> 01:35:52.275
+So self is acting is being acted here as an object.
+
+1659
+01:35:52.625 --> 01:35:54.995
+Self is acted here as a parameter Here.
+
+1660
+01:35:55.025 --> 01:35:57.315
+Also self is being acted as an object.
+
+1661
+01:35:57.655 --> 01:35:59.395
+So self is an object
+
+1662
+01:36:00.015 --> 01:36:02.955
+and it is representing for all those objects
+
+1663
+01:36:02.955 --> 01:36:05.555
+what you will create for, for this particular class.
+
+1664
+01:36:06.465 --> 01:36:10.395
+Okay? So what I would recommend, I'll stop now, uh,
+
+1665
+01:36:11.825 --> 01:36:14.115
+I'll share this slide for you here in the slide.
+
+1666
+01:36:14.175 --> 01:36:15.675
+You have three notebooks.
+
+1667
+01:36:15.825 --> 01:36:17.435
+This is the first notebook I've shown you.
+
+1668
+01:36:17.745 --> 01:36:19.555
+Then I have little more complicated network
+
+1669
+01:36:19.625 --> 01:36:21.115
+with one hidden neural network.
+
+1670
+01:36:21.295 --> 01:36:23.555
+One more demo, one more, uh,
+
+1671
+01:36:24.045 --> 01:36:27.035
+where I'm showing the sequential container, okay?
+
+1672
+01:36:27.255 --> 01:36:31.315
+And fourth notebook is about the neur network pipeline,
+
+1673
+01:36:31.315 --> 01:36:34.475
+where I have done all these things, loading data, train,
+
+1674
+01:36:34.475 --> 01:36:37.315
+test, place model, building, forward pass loss calculation,
+
+1675
+01:36:37.315 --> 01:36:38.995
+backward pass and optimization.
+
+1676
+01:36:39.855 --> 01:36:42.595
+I'm going to upload this, uh, uh, whole slide with you.
+
+1677
+01:36:43.015 --> 01:36:45.995
+You try to do the, the practice for all these notebooks,
+
+1678
+01:36:46.125 --> 01:36:48.715
+understand the concept of object programming,
+
+1679
+01:36:48.835 --> 01:36:50.595
+what I have explained in the next class.
+
+1680
+01:36:50.595 --> 01:36:51.595
+We'll start with this
+
+1681
+01:36:52.415 --> 01:36:54.475
+and I'll see that if you have any query, I will,
+
+1682
+01:36:54.595 --> 01:36:55.675
+I will quickly answer.
+
+1683
+01:36:56.185 --> 01:36:57.955
+Otherwise we'll pass on this one.
+
+1684
+01:36:58.015 --> 01:37:00.915
+You have to do the practice, all these things by yourself.
+
+1685
+01:37:00.915 --> 01:37:03.595
+It's are simple. Everything is simple so far, so
+
+1686
+01:37:03.595 --> 01:37:06.275
+that we can utilize these concept in the upcoming classes
+
+1687
+01:37:06.465 --> 01:37:08.755
+when we'll build even little complex network.
+
+1688
+01:37:09.765 --> 01:37:13.175
+Okay? So that is the, uh, that is what I, I, I just,
+
+1689
+01:37:13.595 --> 01:37:15.815
+so anyway, Saturday you will not have class.
+
+1690
+01:37:16.115 --> 01:37:19.535
+So now, uh, your task could be do, uh,
+
+1691
+01:37:19.535 --> 01:37:22.095
+just execute all these things by yourself,
+
+1692
+01:37:22.115 --> 01:37:24.455
+all these notebooks, by yourself, uh,
+
+1693
+01:37:24.515 --> 01:37:26.215
+and just see that what is happening.
+
+1694
+01:37:26.635 --> 01:37:31.495
+Use the, use the chat GPT uh, snippet up code to understand,
+
+1695
+01:37:31.495 --> 01:37:33.935
+okay, what it is doing, what is that particular keyword,
+
+1696
+01:37:33.935 --> 01:37:37.135
+what is that par parameter and all just do it by yourself.
+
+1697
+01:37:37.675 --> 01:37:39.095
+And still, if you'll have any query,
+
+1698
+01:37:39.145 --> 01:37:41.615
+we'll start from this slide in the next class, uh, to,
+
+1699
+01:37:41.795 --> 01:37:42.935
+and I explain everything.
+
+1700
+01:37:43.155 --> 01:37:47.305
+No problem. Okay? So I will stop here.
+
+1701
+01:37:47.325 --> 01:37:49.065
+If you have an inquiry, you can ask me,
+
+1702
+01:37:49.565 --> 01:37:50.565
+Sir. One question, sir.
+
+1703
+01:37:50.565 --> 01:37:51.665
+Yeah, sir.
+
+1704
+01:37:51.665 --> 01:37:55.365
+Instead of using constructor, like any module
+
+1705
+01:37:55.545 --> 01:37:58.645
+or package would be able to solve this problem, right?
+
+1706
+01:37:59.145 --> 01:38:02.485
+Why do we need to go with the constructor to, uh,
+
+1707
+01:38:04.355 --> 01:38:05.565
+protect this problem? So
+
+1708
+01:38:05.565 --> 01:38:08.165
+For, for that one, you have to understand
+
+1709
+01:38:08.165 --> 01:38:11.445
+that's why a little bit of concept of this object
+
+1710
+01:38:11.465 --> 01:38:12.485
+to inter programming
+
+1711
+01:38:13.235 --> 01:38:16.605
+that we see constructor is a function, as I said.
+
+1712
+01:38:16.665 --> 01:38:19.245
+So as you said that why can't I use any other module?
+
+1713
+01:38:19.665 --> 01:38:21.805
+Module is nothing but another function, right?
+
+1714
+01:38:22.385 --> 01:38:24.845
+So why can't I use, I use built-in function.
+
+1715
+01:38:25.465 --> 01:38:28.005
+Uh, that is your question, if I rightly understand.
+
+1716
+01:38:28.225 --> 01:38:29.605
+So yes, the
+
+1717
+01:38:29.675 --> 01:38:32.965
+what happens basically every time when you create your
+
+1718
+01:38:32.965 --> 01:38:35.845
+neural network, every neural network is slightly
+
+1719
+01:38:35.845 --> 01:38:37.365
+different, okay?
+
+1720
+01:38:37.745 --> 01:38:39.645
+Neural networks are quite flexible
+
+1721
+01:38:39.745 --> 01:38:41.525
+and you can design your neural networks.
+
+1722
+01:38:41.585 --> 01:38:43.645
+As for your requirement, it may be three layers.
+
+1723
+01:38:43.645 --> 01:38:46.565
+Sometimes with four, four neurons, it may be 10 layers,
+
+1724
+01:38:46.565 --> 01:38:48.685
+sometimes with a hundred hundred neurons,
+
+1725
+01:38:49.345 --> 01:38:52.765
+not this constructor gives you that flexibility
+
+1726
+01:38:53.745 --> 01:38:57.405
+to have the blueprint, what you want in your neural network.
+
+1727
+01:38:57.845 --> 01:38:59.125
+I mean, uh, that, that is how,
+
+1728
+01:38:59.145 --> 01:39:01.125
+and based on that, later on you will see
+
+1729
+01:39:01.125 --> 01:39:04.605
+that you will design the forward propagation, okay?
+
+1730
+01:39:05.145 --> 01:39:09.795
+So that if you will, uh, uh, import that module
+
+1731
+01:39:10.135 --> 01:39:11.635
+as you're saying that, uh, instead
+
+1732
+01:39:11.635 --> 01:39:13.435
+of constructed some other module, then what will,
+
+1733
+01:39:13.435 --> 01:39:15.035
+and that flexibility will go away.
+
+1734
+01:39:15.825 --> 01:39:18.915
+Okay? Now, but, uh, so if you want to have that flexibility
+
+1735
+01:39:18.985 --> 01:39:20.635
+that you, whatever way you want
+
+1736
+01:39:20.635 --> 01:39:22.795
+to design the neural network in that way,
+
+1737
+01:39:22.815 --> 01:39:24.395
+you can con construct it.
+
+1738
+01:39:24.545 --> 01:39:25.875
+Constructed is required
+
+1739
+01:39:25.975 --> 01:39:29.955
+and that is why the constructor is important in this, uh,
+
+1740
+01:39:30.375 --> 01:39:32.275
+uh, in this particular way.
+
+1741
+01:39:32.465 --> 01:39:34.275
+Okay? I'll explain that in the next class.
+
+1742
+01:39:34.325 --> 01:39:36.275
+Maybe you will understand it a bit.
+
+1743
+01:39:37.685 --> 01:39:40.765
+Thank you, sir. Okay.
+
+1744
+01:39:41.265 --> 01:39:43.525
+Any other queries so far from anyone?
+
+1745
+01:39:47.745 --> 01:39:49.095
+Maybe we'll go through that.
+
+1746
+01:39:49.715 --> 01:39:51.535
+Ah, please, I'll upload this slide.
+
+1747
+01:39:51.605 --> 01:39:54.095
+Just do the practice, at least just run it
+
+1748
+01:39:54.155 --> 01:39:55.455
+and see that what is happening
+
+1749
+01:39:55.715 --> 01:39:57.415
+and use the chat g PT
+
+1750
+01:39:57.515 --> 01:39:59.495
+to get the understanding of those codes.
+
+1751
+01:39:59.495 --> 01:40:00.775
+Then we'll see that in the next one.
+
+1752
+01:40:03.495 --> 01:40:05.225
+Okay? Bye. Thank you so much.
+
+1753
+01:40:06.355 --> 01:40:08.105
+Thank you, sir. Yes sir.
+
+1754
+01:40:10.455 --> 01:40:11.125
+Thank you, sir.
