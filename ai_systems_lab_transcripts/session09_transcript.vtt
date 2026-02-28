@@ -1,0 +1,4822 @@
+WEBVTT
+
+1
+00:00:04.635 --> 00:00:05.605
+Good evening, everyone.
+
+2
+00:00:07.585 --> 00:00:11.225
+Yeah, good evening, sir. Good evening, sir.
+
+3
+00:00:12.275 --> 00:00:13.275
+Okay, uh,
+
+4
+00:00:17.915 --> 00:00:20.345
+Share my screen and then we'll start until
+
+5
+00:00:20.655 --> 00:00:21.655
+Stop here.
+
+6
+00:00:26.255 --> 00:00:27.435
+The screen is visible, right?
+
+7
+00:00:28.555 --> 00:00:31.935
+Yes. Yes, sir. It is visible, yeah. Thank you.
+
+8
+00:00:44.415 --> 00:00:45.265
+Okay, so
+
+9
+00:00:46.085 --> 00:00:47.345
+Before I start this thing,
+
+10
+00:00:48.345 --> 00:00:50.385
+I did actually told you like a little bit
+
+11
+00:00:50.385 --> 00:00:52.785
+of like a regression in the last week you did, right?
+
+12
+00:00:53.365 --> 00:00:56.705
+And the, uh, regression as well as the classification.
+
+13
+00:00:57.045 --> 00:01:00.265
+We deal with two problems. Okay?
+
+14
+00:01:00.485 --> 00:01:04.465
+So I'll just, uh, tell you the, like a little bit info on
+
+15
+00:01:04.465 --> 00:01:08.305
+that one so we can start this ary, like today's factor,
+
+16
+00:01:09.175 --> 00:01:10.175
+Okay? So
+
+17
+00:01:10.175 --> 00:01:12.785
+whenever you are actually going for any, uh,
+
+18
+00:01:12.835 --> 00:01:15.585
+algorithms, uh, like development, uh, whether that's, uh,
+
+19
+00:01:15.585 --> 00:01:18.785
+like, uh, you know, uh, machine learning, deep planning,
+
+20
+00:01:19.745 --> 00:01:23.105
+whatever model you hear about, like whether applying centry,
+
+21
+00:01:23.205 --> 00:01:24.825
+uh, cane, uh, nearest neighbor,
+
+22
+00:01:25.365 --> 00:01:29.385
+or even like, uh, this SVM, uh, ion neural network,
+
+23
+00:01:30.085 --> 00:01:33.905
+or maybe you are going into like a erritory of deep planning
+
+24
+00:01:33.905 --> 00:01:37.665
+where, uh, you are applying CNN, uh, uh,
+
+25
+00:01:37.735 --> 00:01:40.465
+like a r versus a with any algorithm.
+
+26
+00:01:40.605 --> 00:01:42.385
+So basically whenever you're dealing with, uh,
+
+27
+00:01:42.385 --> 00:01:45.185
+you basically are actually predicting some kind of value,
+
+28
+00:01:45.965 --> 00:01:49.065
+uh, that value, okay?
+
+29
+00:01:49.205 --> 00:01:51.865
+The prediction, what is happening?
+
+30
+00:01:52.405 --> 00:01:55.145
+Either you are going predict some
+
+31
+00:01:55.145 --> 00:01:56.985
+numbers, some numeric value,
+
+32
+00:01:58.315 --> 00:01:59.315
+Okay?
+
+33
+00:01:59.585 --> 00:02:02.555
+Okay. This numeric value can range in finite.
+
+34
+00:02:02.615 --> 00:02:06.475
+So if we consider the decimal points like between zero
+
+35
+00:02:06.495 --> 00:02:09.035
+to one, how many po potential values can be there?
+
+36
+00:02:09.055 --> 00:02:10.835
+The finite number of numbers
+
+37
+00:02:10.865 --> 00:02:12.155
+will be there between zero to one.
+
+38
+00:02:12.265 --> 00:02:14.195
+That is the numeric value we are talking about.
+
+39
+00:02:14.195 --> 00:02:18.235
+So it can be zero point, um, 0.0, okay?
+
+40
+00:02:18.855 --> 00:02:20.275
+Uh, 0.1,
+
+41
+00:02:22.845 --> 00:02:24.295
+0.2.
+
+42
+00:02:25.865 --> 00:02:26.965
+So up to you.
+
+43
+00:02:26.965 --> 00:02:30.605
+Think of any number or up to like, uh, any possible number.
+
+44
+00:02:30.905 --> 00:02:33.005
+So that is the thing. Whenever you are doing, uh,
+
+45
+00:02:33.005 --> 00:02:36.245
+like this kind of operations, uh, where numeric value
+
+46
+00:02:36.345 --> 00:02:39.445
+as an output, you're expecting those things are we are
+
+47
+00:02:39.445 --> 00:02:40.525
+calling as regression.
+
+48
+00:02:41.525 --> 00:02:44.695
+Okay? So whenever actually applying any model, okay?
+
+49
+00:02:44.995 --> 00:02:46.815
+Uh, whether you are applying regression model
+
+50
+00:02:46.835 --> 00:02:48.415
+or classification in the regression,
+
+51
+00:02:48.415 --> 00:02:51.335
+you are basically predicting the numeric, uh, value, okay?
+
+52
+00:02:51.915 --> 00:02:55.825
+And whenever you are going for the, uh, like, uh,
+
+53
+00:02:55.865 --> 00:02:57.745
+predicting some kind of categorical
+
+54
+00:03:04.175 --> 00:03:04.995
+output, fine.
+
+55
+00:03:05.745 --> 00:03:08.285
+So the categorical output doesn't suppose, uh,
+
+56
+00:03:08.285 --> 00:03:10.805
+whether you are predicting the weather will be
+
+57
+00:03:10.905 --> 00:03:15.015
+or like hot, mild, or cold, okay?
+
+58
+00:03:15.195 --> 00:03:18.655
+So you can, like, we generally actually encode this
+
+59
+00:03:18.835 --> 00:03:20.175
+and, uh, give some number.
+
+60
+00:03:20.515 --> 00:03:23.775
+So for hot, suppose zero, mild supposed one code supposed
+
+61
+00:03:23.775 --> 00:03:26.575
+to, but these are divided into categorical manner.
+
+62
+00:03:26.755 --> 00:03:30.695
+As in like you get a, like a, you know, uh, out
+
+63
+00:03:30.695 --> 00:03:34.415
+of the options, you get some kind of like a fixated, uh,
+
+64
+00:03:34.555 --> 00:03:37.455
+number, which is representing some categorical output.
+
+65
+00:03:37.915 --> 00:03:40.575
+So those are known as your classification
+
+66
+00:03:42.545 --> 00:03:43.545
+Thing, Okay? So
+
+67
+00:03:43.545 --> 00:03:45.935
+whenever you're dealing with the problems, the regression
+
+68
+00:03:46.035 --> 00:03:48.375
+or the classification based on the output,
+
+69
+00:03:48.405 --> 00:03:50.015
+that is you are predicting.
+
+70
+00:03:50.275 --> 00:03:52.655
+If it is numeric value, then we are doing the regression.
+
+71
+00:03:53.035 --> 00:03:56.215
+So in previous class we did apply the logic regression,
+
+72
+00:03:56.215 --> 00:03:59.495
+we applied the, uh, uh, linear regression.
+
+73
+00:03:59.725 --> 00:04:02.655
+They will be learning the decent, decent reason, uh,
+
+74
+00:04:02.725 --> 00:04:04.975
+regressor as well as a classifier.
+
+75
+00:04:05.195 --> 00:04:07.695
+You have both the option to apply these algorithms
+
+76
+00:04:07.695 --> 00:04:09.455
+as a regression techniques
+
+77
+00:04:09.515 --> 00:04:11.935
+or classifi techniques based upon your requirement.
+
+78
+00:04:11.995 --> 00:04:15.775
+You choose what kinda like algorithms you are applying,
+
+79
+00:04:15.775 --> 00:04:18.215
+whether that's a regressor or that's classifier.
+
+80
+00:04:18.455 --> 00:04:19.775
+I hope this is clear. Okay?
+
+81
+00:04:19.775 --> 00:04:21.455
+Last class we, I forgot to tell you.
+
+82
+00:04:21.955 --> 00:04:24.135
+So regression, whenever we are actually having
+
+83
+00:04:24.245 --> 00:04:26.175
+some numeric value output.
+
+84
+00:04:26.275 --> 00:04:28.255
+So any possible fractional number
+
+85
+00:04:28.325 --> 00:04:30.135
+that is you are getting as an output.
+
+86
+00:04:30.155 --> 00:04:32.535
+So you are going for the regression, and
+
+87
+00:04:32.775 --> 00:04:35.495
+whenever you are selecting some target variable,
+
+88
+00:04:35.565 --> 00:04:38.135
+that is the why in our case, why you go
+
+89
+00:04:38.135 --> 00:04:39.215
+to something we're we're doing.
+
+90
+00:04:39.675 --> 00:04:42.615
+If that is a, like a categorical value, we are, uh, setting
+
+91
+00:04:42.635 --> 00:04:45.375
+as target, then that is classification.
+
+92
+00:04:45.395 --> 00:04:49.415
+Always remember based upon your output or target value
+
+93
+00:04:49.515 --> 00:04:53.055
+or why that you are selecting, we choose the regression
+
+94
+00:04:53.195 --> 00:04:55.135
+or the classification algorithm. Fine.
+
+95
+00:04:55.975 --> 00:04:59.995
+I hope This is clear. Okay?
+
+96
+00:05:00.215 --> 00:05:03.955
+Now, uh, we'll be jumping into this thing
+
+97
+00:05:05.025 --> 00:05:07.945
+that is the, okay,
+
+98
+00:05:10.325 --> 00:05:12.845
+Okay, so, uh,
+
+99
+00:05:13.375 --> 00:05:16.405
+Let's, uh, think of a scenario where, uh, there's a, uh,
+
+100
+00:05:16.405 --> 00:05:17.485
+like, uh, I want
+
+101
+00:05:17.485 --> 00:05:21.005
+to find like whose salary are more than a hundred thousand
+
+102
+00:05:21.005 --> 00:05:23.085
+dollars on a yearly basis.
+
+103
+00:05:23.145 --> 00:05:25.645
+So this is a graph taken from the internet.
+
+104
+00:05:26.265 --> 00:05:31.005
+Uh, like basically we have the, uh, data for the Google,
+
+105
+00:05:31.545 --> 00:05:33.685
+uh, Facebook and a b, c pharma.
+
+106
+00:05:34.625 --> 00:05:39.285
+So based on that, you can like, uh, do this kind
+
+107
+00:05:39.285 --> 00:05:41.925
+of tree, tree as in like, uh, you know,
+
+108
+00:05:42.035 --> 00:05:45.285
+this is the root node we say on the top side, whatever the,
+
+109
+00:05:45.625 --> 00:05:47.525
+you know, element is there, okay?
+
+110
+00:05:48.275 --> 00:05:50.565
+That entity we call is the root node.
+
+111
+00:05:50.595 --> 00:05:52.645
+This node is call is root node, okay?
+
+112
+00:05:53.115 --> 00:05:56.485
+From there, the branches, these are the branches
+
+113
+00:05:56.505 --> 00:05:58.085
+and followed by the lymph nodes
+
+114
+00:05:58.305 --> 00:06:00.285
+or the child nodes, we connect those.
+
+115
+00:06:00.985 --> 00:06:02.285
+Now, the basic idea is
+
+116
+00:06:02.605 --> 00:06:05.005
+whenever you are actually seeing a tree, uh,
+
+117
+00:06:05.105 --> 00:06:07.405
+in computer science or data science, uh, field,
+
+118
+00:06:07.665 --> 00:06:08.845
+it is reversing order.
+
+119
+00:06:08.985 --> 00:06:10.965
+The root is not beneath the surface.
+
+120
+00:06:11.145 --> 00:06:14.325
+It is above the surface in case of computer science thing.
+
+121
+00:06:14.625 --> 00:06:17.605
+So root is above the like, uh, the branches
+
+122
+00:06:17.605 --> 00:06:21.405
+and every nodes, lymph nodes, everything are actually below.
+
+123
+00:06:22.025 --> 00:06:25.685
+So in this one, uh, we are trying to predict, like, uh,
+
+124
+00:06:25.685 --> 00:06:26.965
+trying to predict that is the,
+
+125
+00:06:27.195 --> 00:06:28.725
+like whose salary we are more
+
+126
+00:06:28.725 --> 00:06:29.805
+than a hundred thousand dollars.
+
+127
+00:06:30.225 --> 00:06:31.845
+So you are having the data
+
+128
+00:06:31.905 --> 00:06:33.605
+for Google, Facebook, and AVC Pharma.
+
+129
+00:06:34.385 --> 00:06:37.005
+Now, on the basis of that, you are, um, like, uh,
+
+130
+00:06:37.005 --> 00:06:41.125
+understanding this Facebook pays very well for like any kind
+
+131
+00:06:41.125 --> 00:06:42.325
+of, uh, you know, employees.
+
+132
+00:06:42.505 --> 00:06:45.085
+So they are obviously, uh, all of the employees,
+
+133
+00:06:45.085 --> 00:06:47.805
+if they're from Facebook, they're directly saying, okay,
+
+134
+00:06:47.905 --> 00:06:49.045
+uh, that guy earns a lot.
+
+135
+00:06:49.045 --> 00:06:51.765
+Okay? If they're from Google, if
+
+136
+00:06:51.765 --> 00:06:54.205
+that is the business analyst, okay,
+
+137
+00:06:54.795 --> 00:06:56.605
+they are having higher salary if
+
+138
+00:06:56.605 --> 00:06:58.445
+that's a computer science engineer, okay?
+
+139
+00:06:58.825 --> 00:07:01.485
+If, uh, that computer science engineer is having bachelor's,
+
+140
+00:07:01.585 --> 00:07:04.525
+no, they're not getting, if that is they're having master's,
+
+141
+00:07:04.595 --> 00:07:06.525
+they're getting more than a hundred thousand dollars.
+
+142
+00:07:07.065 --> 00:07:09.725
+If that person is sale executive, uh,
+
+143
+00:07:09.725 --> 00:07:11.445
+they're not getting a hundred thousand bucks.
+
+144
+00:07:11.795 --> 00:07:13.285
+Same, same for the AVC pharma.
+
+145
+00:07:13.465 --> 00:07:16.645
+So different rules in a different company on
+
+146
+00:07:16.645 --> 00:07:18.005
+different kind of thing, fine.
+
+147
+00:07:18.665 --> 00:07:22.365
+Now The RY helps us to like understand,
+
+148
+00:07:22.395 --> 00:07:24.365
+like formulate the problem in such a way,
+
+149
+00:07:24.365 --> 00:07:28.485
+such a tree like structure, that kind of ethos condition,
+
+150
+00:07:28.485 --> 00:07:31.605
+what we do in programming with that order, okay?
+
+151
+00:07:31.605 --> 00:07:33.005
+You feed the data, okay?
+
+152
+00:07:33.005 --> 00:07:37.245
+You feed the like, uh, uh, data of a entity
+
+153
+00:07:37.245 --> 00:07:39.885
+that this person works in this company, okay?
+
+154
+00:07:39.955 --> 00:07:41.805
+What, uh, like what is the likelihood
+
+155
+00:07:41.805 --> 00:07:44.325
+that the person is earning more than a hundred thousand, uh,
+
+156
+00:07:44.865 --> 00:07:46.725
+dollar yearly or less than that?
+
+157
+00:07:47.185 --> 00:07:50.445
+So the idea is you are predicting some kind
+
+158
+00:07:50.445 --> 00:07:52.725
+of value based on this, you know, uh,
+
+159
+00:07:52.955 --> 00:07:54.045
+defined tree structure.
+
+160
+00:07:54.475 --> 00:07:57.725
+That is the, your wholesale idea of the decent,
+
+161
+00:08:00.095 --> 00:08:04.075
+Okay, now I'll do this one.
+
+162
+00:08:05.095 --> 00:08:08.755
+This is better one guess, okay?
+
+163
+00:08:12.745 --> 00:08:16.395
+Now, in this one, uh, okay, the visionary,
+
+164
+00:08:16.395 --> 00:08:19.235
+basically it is a supervised learning method used
+
+165
+00:08:19.235 --> 00:08:20.955
+for classification and regression,
+
+166
+00:08:21.775 --> 00:08:24.475
+and it help us to, uh, for the decision making.
+
+167
+00:08:25.055 --> 00:08:27.355
+And basically this is very popular algorithm
+
+168
+00:08:27.375 --> 00:08:29.315
+for the classification problem, uh, problem
+
+169
+00:08:29.315 --> 00:08:33.115
+because it's a pro probabilistic approach, okay?
+
+170
+00:08:34.175 --> 00:08:36.795
+Now we'll be understanding what are the things which is,
+
+171
+00:08:36.795 --> 00:08:38.675
+which are associated with the decision tree,
+
+172
+00:08:38.775 --> 00:08:41.155
+how the decision trees are made, okay?
+
+173
+00:08:41.185 --> 00:08:42.955
+Then we'll be going for the coding part.
+
+174
+00:08:44.195 --> 00:08:47.295
+Now, understand, like, uh, similar thing, suppose,
+
+175
+00:08:48.435 --> 00:08:51.255
+Uh, We are saying that, uh, uh,
+
+176
+00:08:52.005 --> 00:08:52.295
+Okay,
+
+177
+00:08:58.965 --> 00:08:59.965
+Okay. Suppose this,
+
+178
+00:08:59.965 --> 00:09:01.375
+this is a more like a
+
+179
+00:09:01.515 --> 00:09:03.815
+or also overview of some, uh, playing kind of stuff
+
+180
+00:09:03.815 --> 00:09:04.855
+that we'll discuss later.
+
+181
+00:09:04.985 --> 00:09:07.535
+Don't worry on this one. Okay? Let's go in this one.
+
+182
+00:09:07.535 --> 00:09:10.895
+What are the entities that, uh, Ry actually helps us,
+
+183
+00:09:10.995 --> 00:09:12.055
+uh, like, uh, to create?
+
+184
+00:09:12.515 --> 00:09:15.335
+So what are the entities, uh, like, uh,
+
+185
+00:09:15.365 --> 00:09:16.535
+that define edition tree?
+
+186
+00:09:16.635 --> 00:09:18.655
+We are having few of these nodes, okay?
+
+187
+00:09:18.715 --> 00:09:20.935
+Now these nodes are like defined as the
+
+188
+00:09:21.495 --> 00:09:24.615
+whatever the top most node that will call as addition node.
+
+189
+00:09:24.615 --> 00:09:28.135
+That is the root node we are saying, okay, followed by
+
+190
+00:09:29.175 --> 00:09:30.855
+whatever the successive nodes, the child nodes
+
+191
+00:09:30.855 --> 00:09:33.975
+that they are having, they might be two or no than two.
+
+192
+00:09:34.635 --> 00:09:37.815
+One parent can have two on more than two child classes,
+
+193
+00:09:38.595 --> 00:09:41.655
+and those nodes will have further child classes and all.
+
+194
+00:09:41.875 --> 00:09:44.935
+And then the last bottom, that will be the leaf node, okay?
+
+195
+00:09:45.075 --> 00:09:48.975
+And these leaf nodes, they'll be the output of your,
+
+196
+00:09:49.115 --> 00:09:51.695
+you know, um, classification problem.
+
+197
+00:09:51.805 --> 00:09:54.255
+Suppose we are saying yes
+
+198
+00:09:54.255 --> 00:09:56.815
+or no, something like that in the previous algorithm, uh,
+
+199
+00:09:56.835 --> 00:10:00.295
+you can see this is a problem of binary classification.
+
+200
+00:10:00.445 --> 00:10:03.215
+Suppose we are predicting for some kind of sports
+
+201
+00:10:03.705 --> 00:10:07.175
+where if it is outdoor, okay, outlook, outlook,
+
+202
+00:10:07.565 --> 00:10:10.095
+that means whether they're predicting whether
+
+203
+00:10:10.095 --> 00:10:11.255
+that's a sunny, whether
+
+204
+00:10:11.255 --> 00:10:12.855
+that's overcast or whether that's rain.
+
+205
+00:10:12.875 --> 00:10:15.055
+If it is a overcast, they're directly saying, yes,
+
+206
+00:10:15.075 --> 00:10:18.055
+you can play, you can play outside that sports, okay?
+
+207
+00:10:18.475 --> 00:10:21.775
+If it is sunny, and if it is also checking the humidity
+
+208
+00:10:21.825 --> 00:10:25.175
+level, if that is very, you know, uh, low
+
+209
+00:10:25.635 --> 00:10:27.095
+and also normal and high.
+
+210
+00:10:27.355 --> 00:10:29.015
+If the humidity level is very high,
+
+211
+00:10:29.085 --> 00:10:31.135
+then it is also saying if it is sunny,
+
+212
+00:10:31.195 --> 00:10:33.015
+if it humidity is very high,
+
+213
+00:10:33.365 --> 00:10:35.175
+that is not suitable for, uh, playing.
+
+214
+00:10:35.675 --> 00:10:36.895
+If it's humidity is normal
+
+215
+00:10:37.115 --> 00:10:40.015
+and the weather is sunny, then you can play similarly,
+
+216
+00:10:40.115 --> 00:10:44.375
+if it is raining and the wind that is strong in that case,
+
+217
+00:10:44.675 --> 00:10:46.055
+you don't play, okay?
+
+218
+00:10:46.155 --> 00:10:48.175
+And if the wind is, uh, you know, weak
+
+219
+00:10:48.915 --> 00:10:51.495
+and the rain is there, then you can also play.
+
+220
+00:10:51.755 --> 00:10:55.015
+So these leaf nodes are your decision, okay?
+
+221
+00:10:55.245 --> 00:10:57.375
+This leaves node are basically your decision
+
+222
+00:10:57.385 --> 00:11:00.295
+where you are saying whether you want to, will be able
+
+223
+00:11:00.295 --> 00:11:03.775
+to play or not, that the leaf nodes are saying whether
+
+224
+00:11:03.835 --> 00:11:04.855
+that's a yes or no,
+
+225
+00:11:05.195 --> 00:11:07.415
+and in between whatever the no are there.
+
+226
+00:11:07.615 --> 00:11:09.855
+Those are like your decision nodes, okay?
+
+227
+00:11:10.385 --> 00:11:12.335
+First we set up the root node
+
+228
+00:11:12.435 --> 00:11:13.935
+and followed by the other nodes.
+
+229
+00:11:13.995 --> 00:11:17.655
+Now the question is how we can like, uh, you know, al order,
+
+230
+00:11:18.905 --> 00:11:21.455
+which, you know, outlook should be here
+
+231
+00:11:21.515 --> 00:11:22.775
+or the humidity should be there,
+
+232
+00:11:22.795 --> 00:11:26.015
+or the wind should be there, which should be the, you know,
+
+233
+00:11:26.045 --> 00:11:28.935
+root and which should be, shouldn't be like a followed
+
+234
+00:11:28.955 --> 00:11:30.415
+by the, like a der
+
+235
+00:11:30.605 --> 00:11:33.335
+what are the like next node should be coming and all.
+
+236
+00:11:33.635 --> 00:11:34.775
+So how do we do it?
+
+237
+00:11:35.035 --> 00:11:36.255
+We have some algorithms
+
+238
+00:11:36.255 --> 00:11:37.775
+that we'll be going through those, okay?
+
+239
+00:11:38.475 --> 00:11:41.935
+The basic ideas finding this first, the root note,
+
+240
+00:11:41.935 --> 00:11:44.535
+which is the most important feature, okay?
+
+241
+00:11:47.385 --> 00:11:50.005
+Now this finding the root node
+
+242
+00:11:50.105 --> 00:11:53.165
+and, uh, you know, successive nodes, what are the features?
+
+243
+00:11:53.165 --> 00:11:54.725
+These nodes are basically the features.
+
+244
+00:11:55.465 --> 00:11:59.085
+So in this example, let's just uh, go this one,
+
+245
+00:12:02.655 --> 00:12:07.195
+we had multiple data, we had this job roles, okay,
+
+246
+00:12:07.255 --> 00:12:09.795
+job roles as in business manager, computer, uh,
+
+247
+00:12:09.795 --> 00:12:11.275
+programmer sales executive.
+
+248
+00:12:11.935 --> 00:12:14.355
+We had, uh, another feature, okay?
+
+249
+00:12:14.655 --> 00:12:17.795
+So if like let you do one thing
+
+250
+00:12:19.705 --> 00:12:21.925
+in a dataset, how can we write company?
+
+251
+00:12:25.955 --> 00:12:28.405
+Then we will have, you know, job role,
+
+252
+00:12:30.455 --> 00:12:32.145
+then we'll have degree
+
+253
+00:12:37.895 --> 00:12:39.075
+and we'll have another,
+
+254
+00:12:39.345 --> 00:12:42.115
+there's a target variable salary search.
+
+255
+00:12:42.625 --> 00:12:44.115
+Yeah, salary target variable.
+
+256
+00:12:44.115 --> 00:12:48.955
+Yeah, this will be our target variables, okay?
+
+257
+00:12:49.375 --> 00:12:53.635
+So one data, example being, uh, company Facebook,
+
+258
+00:12:53.635 --> 00:12:56.795
+suppose job always, uh, programmer
+
+259
+00:13:04.835 --> 00:13:08.355
+did we suppose masters salary, suppose
+
+260
+00:13:09.335 --> 00:13:11.255
+200, okay?
+
+261
+00:13:11.675 --> 00:13:13.815
+And so this kind of dataset we are having,
+
+262
+00:13:13.875 --> 00:13:16.095
+so another Facebook, then Google, we are having,
+
+263
+00:13:16.435 --> 00:13:19.535
+so these dataset from these, the node setting in.
+
+264
+00:13:19.635 --> 00:13:22.455
+Now each of these, you know, first
+
+265
+00:13:22.685 --> 00:13:25.255
+that is the features we are having four features we are
+
+266
+00:13:25.255 --> 00:13:29.335
+having, how this company node should be higher compared
+
+267
+00:13:29.335 --> 00:13:31.135
+to the job role or degree or salary.
+
+268
+00:13:31.845 --> 00:13:33.655
+This how we are actually adjusting
+
+269
+00:13:33.675 --> 00:13:35.575
+how we are taking this company as a root node.
+
+270
+00:13:35.575 --> 00:13:38.535
+The main vision maker based on that will be, you know,
+
+271
+00:13:38.895 --> 00:13:42.015
+distributing the other nodes and all that is actually, uh,
+
+272
+00:13:42.125 --> 00:13:44.095
+done through two algorithms.
+
+273
+00:13:44.235 --> 00:13:46.135
+One is, uh, you know, information gain.
+
+274
+00:13:46.135 --> 00:13:48.375
+Another is gene method that we'll discuss. Okay?
+
+275
+00:13:48.675 --> 00:13:50.455
+So one is the problem thing.
+
+276
+00:13:50.455 --> 00:13:53.815
+That is the entropy we calculate for your information gain
+
+277
+00:13:53.815 --> 00:13:58.455
+and entropy and combine both of them together to formulate,
+
+278
+00:13:58.635 --> 00:14:00.255
+uh, the root note and other things.
+
+279
+00:14:00.715 --> 00:14:04.215
+So entropy is refers to a common way of measuring impurity.
+
+280
+00:14:04.335 --> 00:14:07.815
+Impurity as in what are the attributes, which is directly
+
+281
+00:14:09.375 --> 00:14:12.955
+or in case indirectly impacting your, uh,
+
+282
+00:14:12.955 --> 00:14:14.195
+you know, target variable.
+
+283
+00:14:14.415 --> 00:14:17.515
+So we are measuring the impurity of the, each
+
+284
+00:14:17.515 --> 00:14:21.195
+of the attributes compared to your target variable, if
+
+285
+00:14:21.275 --> 00:14:22.795
+that is higher, okay?
+
+286
+00:14:23.145 --> 00:14:25.675
+Then we like suppose there are, uh,
+
+287
+00:14:26.005 --> 00:14:28.795
+three attributes which are actually having, uh,
+
+288
+00:14:28.795 --> 00:14:33.135
+like except the target variable in this one, in this one,
+
+289
+00:14:33.465 --> 00:14:34.815
+apart from the target variable,
+
+290
+00:14:34.835 --> 00:14:37.935
+we are having three different, uh, more attributes
+
+291
+00:14:37.995 --> 00:14:40.495
+or the other variables are there or the features.
+
+292
+00:14:41.185 --> 00:14:44.175
+We'll check the entropy of each of them, okay?
+
+293
+00:14:45.205 --> 00:14:46.815
+Company job, role and degree
+
+294
+00:14:47.115 --> 00:14:50.455
+and compare with the salary, the entropy, respect
+
+295
+00:14:50.455 --> 00:14:52.965
+to the salary, whichever is having the highest value
+
+296
+00:14:53.435 --> 00:14:56.205
+that is affecting the job, uh, salary higher.
+
+297
+00:14:56.585 --> 00:14:58.325
+So we'll make that as a root note
+
+298
+00:14:58.625 --> 00:15:01.765
+and followed by the successive reputation, uh, followed
+
+299
+00:15:01.825 --> 00:15:03.605
+by making the note, note.
+
+300
+00:15:03.715 --> 00:15:06.685
+Then following that, our addition note up on that
+
+301
+00:15:06.685 --> 00:15:08.645
+and all we go on by one
+
+302
+00:15:08.665 --> 00:15:11.685
+and finally, until we reach the, you know, all
+
+303
+00:15:11.685 --> 00:15:13.845
+of the divisions, okay?
+
+304
+00:15:14.105 --> 00:15:15.365
+So entropy is one of them.
+
+305
+00:15:15.985 --> 00:15:19.045
+We calculate each of the attribute compared
+
+306
+00:15:19.045 --> 00:15:20.205
+to the target variable,
+
+307
+00:15:20.425 --> 00:15:23.405
+and we check, which is having the higher, you know,
+
+308
+00:15:23.405 --> 00:15:24.445
+impact factor and all.
+
+309
+00:15:26.305 --> 00:15:29.685
+Now the entropy is a ca calculated by this formula
+
+310
+00:15:29.835 --> 00:15:33.925
+that is the minus of submission, POX into log up.
+
+311
+00:15:34.185 --> 00:15:38.005
+Px, PX is the, you know, the ratio between your, uh,
+
+312
+00:15:39.675 --> 00:15:40.845
+categorical output.
+
+313
+00:15:41.035 --> 00:15:42.925
+Suppose we are saying that yes
+
+314
+00:15:42.985 --> 00:15:46.285
+and no, suppose in a dataset five years are there
+
+315
+00:15:46.745 --> 00:15:48.125
+and seven nos are there.
+
+316
+00:15:48.145 --> 00:15:52.045
+So five by five plus seven, so five by uh, 12,
+
+317
+00:15:52.475 --> 00:15:53.845
+that will be the PX value.
+
+318
+00:15:54.105 --> 00:15:56.605
+So basically log a PX into px
+
+319
+00:15:56.985 --> 00:15:58.885
+and we do the submission of all those things
+
+320
+00:15:58.905 --> 00:16:01.565
+to calculate the entropy of the entire dataset.
+
+321
+00:16:02.145 --> 00:16:06.405
+Now, from the entire data set from this entropy will be, uh,
+
+322
+00:16:06.775 --> 00:16:09.125
+individual calculate for each of the data
+
+323
+00:16:09.195 --> 00:16:10.765
+that I'll show you in an example.
+
+324
+00:16:10.835 --> 00:16:14.365
+Then we get the, uh, like the final fellow
+
+325
+00:16:14.595 --> 00:16:16.445
+that the entropy, each of the dataset.
+
+326
+00:16:16.445 --> 00:16:20.945
+Then we can select our root note, okay?
+
+327
+00:16:20.945 --> 00:16:22.785
+That's the same thing how calculations been done.
+
+328
+00:16:22.855 --> 00:16:25.375
+I'll show you in a second. Okay?
+
+329
+00:16:25.585 --> 00:16:27.255
+These are the examples, okay?
+
+330
+00:16:27.715 --> 00:16:29.695
+Now, once you calculate the entropy,
+
+331
+00:16:29.695 --> 00:16:32.775
+then we calculate the information gain of each
+
+332
+00:16:32.775 --> 00:16:34.295
+of the attribute,
+
+333
+00:16:35.235 --> 00:16:36.775
+and we finally, uh,
+
+334
+00:16:36.875 --> 00:16:40.085
+get the whatever the value is highest, we get that one.
+
+335
+00:16:40.345 --> 00:16:42.085
+Now, this is the information gain
+
+336
+00:16:42.105 --> 00:16:44.485
+and entropy is one of the like option,
+
+337
+00:16:44.625 --> 00:16:46.565
+and another option is genie.
+
+338
+00:16:47.455 --> 00:16:50.465
+Okay? So whenever you are actually, uh, applying any,
+
+339
+00:16:50.605 --> 00:16:52.865
+any model, uh, decently based model,
+
+340
+00:16:53.045 --> 00:16:55.025
+or even you are going random forest
+
+341
+00:16:55.125 --> 00:16:58.425
+and enseal method, uh, methods and all of these, okay?
+
+342
+00:16:58.485 --> 00:17:00.025
+The, these two kind techniques,
+
+343
+00:17:00.025 --> 00:17:02.185
+you'll be actually applying either genie
+
+344
+00:17:02.365 --> 00:17:06.345
+or it'll be applying this, uh, entropy based algorithm.
+
+345
+00:17:06.965 --> 00:17:09.585
+Now, GENI is, uh, ca calculation wise,
+
+346
+00:17:09.805 --> 00:17:12.105
+it is not having any log log formula,
+
+347
+00:17:12.405 --> 00:17:14.945
+so it is much more easier on the computation,
+
+348
+00:17:15.525 --> 00:17:17.505
+but the problem is, uh, like, uh,
+
+349
+00:17:18.165 --> 00:17:20.025
+it can split in multiple ways.
+
+350
+00:17:20.645 --> 00:17:21.865
+So it is better
+
+351
+00:17:22.265 --> 00:17:25.705
+whenever you are having like a fewer, uh, you know,
+
+352
+00:17:25.705 --> 00:17:28.625
+attributes, the columns you're having lesser in number,
+
+353
+00:17:29.015 --> 00:17:30.985
+then you can rightly go for the genie.
+
+354
+00:17:30.985 --> 00:17:32.985
+If the data set is also less, you can apply
+
+355
+00:17:32.985 --> 00:17:35.865
+for the genie if the data set is huge, okay?
+
+356
+00:17:35.885 --> 00:17:37.545
+The attributes number is huge.
+
+357
+00:17:37.725 --> 00:17:40.665
+The, you know, uh, size of the rows are also huge.
+
+358
+00:17:40.695 --> 00:17:43.865
+Then, uh, like, uh, in those cases you can apply for the G
+
+359
+00:17:44.365 --> 00:17:45.745
+and if the calculation
+
+360
+00:17:45.745 --> 00:17:47.985
+and everything is a little bit on the lesser side,
+
+361
+00:17:47.985 --> 00:17:50.805
+you can rely on that, uh, entropy calculation
+
+362
+00:17:50.805 --> 00:17:53.645
+because, uh, competition is higher,
+
+363
+00:17:53.945 --> 00:17:55.885
+but you don't have to bother
+
+364
+00:17:55.885 --> 00:17:58.205
+because the data set is smaller in size.
+
+365
+00:17:58.745 --> 00:18:01.885
+Now, let's just go and see the example of how this,
+
+366
+00:18:02.025 --> 00:18:03.645
+you know, calculations are being done
+
+367
+00:18:03.645 --> 00:18:07.125
+and all, so we all already understood the things.
+
+368
+00:18:07.405 --> 00:18:11.285
+So additionally, non parametric supervisor, uh, you know,
+
+369
+00:18:11.645 --> 00:18:14.765
+learning algorithm, so this is another example.
+
+370
+00:18:14.795 --> 00:18:16.405
+This is, uh, like very nice.
+
+371
+00:18:16.615 --> 00:18:20.125
+Think of it like, uh, you know, I'll ask you 20 questions,
+
+372
+00:18:20.305 --> 00:18:23.125
+and based on that, I'll say whether in the Titan dataset,
+
+373
+00:18:23.125 --> 00:18:24.885
+whether you have survived or not, okay?
+
+374
+00:18:25.385 --> 00:18:28.565
+So I suppose if the passenger is male or female, okay?
+
+375
+00:18:28.865 --> 00:18:31.765
+If, uh, um, that person's age is 30
+
+376
+00:18:32.185 --> 00:18:33.285
+or like a greater than 30
+
+377
+00:18:33.385 --> 00:18:36.165
+or not, okay, uh, what was the like, uh, you know,
+
+378
+00:18:36.175 --> 00:18:39.725
+embarkment and other sorts of factor, then I'll, uh,
+
+379
+00:18:39.905 --> 00:18:42.245
+say the outcome whether that person has survived or not.
+
+380
+00:18:42.245 --> 00:18:44.205
+So I'll ask multiple questions, okay?
+
+381
+00:18:44.475 --> 00:18:46.165
+Similarly I can ask you, okay?
+
+382
+00:18:46.425 --> 00:18:48.285
+Uh, so where did you do your degree?
+
+383
+00:18:48.465 --> 00:18:51.165
+How, like, uh, whether you are having master or not or PhD
+
+384
+00:18:51.345 --> 00:18:54.085
+and all in which company you are, uh, currently working
+
+385
+00:18:54.105 --> 00:18:55.765
+and which job, how many years
+
+386
+00:18:55.825 --> 00:18:58.005
+of experiences you're having Based on that,
+
+387
+00:18:58.125 --> 00:19:01.205
+I can say like whether your salaries above, uh, suppose, uh,
+
+388
+00:19:01.205 --> 00:19:03.805
+20, like or less than 20, like something like that, okay?
+
+389
+00:19:03.835 --> 00:19:06.645
+That the decent I'm creating from multiple, you know,
+
+390
+00:19:06.845 --> 00:19:08.085
+questions, formulations.
+
+391
+00:19:08.625 --> 00:19:10.525
+So that is the idea of the decry.
+
+392
+00:19:11.225 --> 00:19:14.685
+So first this node structure we are creating, uh,
+
+393
+00:19:14.685 --> 00:19:18.165
+finding the, like what is the attribute is affecting higher
+
+394
+00:19:18.345 --> 00:19:20.565
+and followed by the other nodes and no,
+
+395
+00:19:23.195 --> 00:19:24.095
+Uh, okay,
+
+396
+00:19:28.765 --> 00:19:32.465
+So junior index, similarly, this is the formula
+
+397
+00:19:33.165 --> 00:19:35.065
+for calculations of the each of the node
+
+398
+00:19:35.065 --> 00:19:37.545
+and finding out the, which are having, uh,
+
+399
+00:19:37.765 --> 00:19:40.305
+the higher impact, and we set them as a root node.
+
+400
+00:19:40.365 --> 00:19:42.265
+And in this class, we'll be actually going
+
+401
+00:19:42.265 --> 00:19:43.985
+for this information again in TR P
+
+402
+00:19:43.985 --> 00:19:45.185
+and we will calculate this one.
+
+403
+00:19:45.565 --> 00:19:47.505
+So we're having this formula, we already discussed
+
+404
+00:19:47.505 --> 00:19:50.945
+submission off, uh, this p uh, PX
+
+405
+00:19:51.535 --> 00:19:55.185
+into log up to px, uh, this PX or, or PIR
+
+406
+00:19:55.185 --> 00:19:56.465
+or the probabilistic value.
+
+407
+00:19:56.525 --> 00:19:57.825
+So I told you one example,
+
+408
+00:19:58.325 --> 00:20:00.425
+you are having suppose in a data set, okay?
+
+409
+00:20:00.605 --> 00:20:02.865
+Uh, suppose, uh, play, uh,
+
+410
+00:20:03.735 --> 00:20:06.185
+that is some game was there.
+
+411
+00:20:06.185 --> 00:20:08.065
+Suppose that is play tennis, okay?
+
+412
+00:20:08.405 --> 00:20:10.705
+In this play tennis, you had the dataset.
+
+413
+00:20:10.705 --> 00:20:12.385
+Suppose there other 14 dataset
+
+414
+00:20:12.845 --> 00:20:15.305
+or 14 rows of data that is there in
+
+415
+00:20:15.305 --> 00:20:19.185
+that 14 data you are having, uh, suppose nine years
+
+416
+00:20:23.525 --> 00:20:25.335
+plus five, no.
+
+417
+00:20:25.885 --> 00:20:28.855
+Okay? In that case, the P of I,
+
+418
+00:20:29.795 --> 00:20:33.565
+that can be calculated as your, okay.
+
+419
+00:20:34.065 --> 00:20:36.245
+Uh, so submission of all the classes.
+
+420
+00:20:36.745 --> 00:20:40.205
+So first I'll calculate for the P of I, that is the yes,
+
+421
+00:20:40.985 --> 00:20:43.365
+yes I is equal to, yes, in this case
+
+422
+00:20:45.755 --> 00:20:50.085
+that will be, uh, okay, yes,
+
+423
+00:20:50.085 --> 00:20:53.415
+we are on nine y total submission is 14
+
+424
+00:20:53.795 --> 00:20:56.465
+and two log base two
+
+425
+00:20:58.025 --> 00:20:59.075
+nine y 14.
+
+426
+00:20:59.705 --> 00:21:04.305
+Similarly, I have to calculate four P of i is equal to no.
+
+427
+00:21:04.605 --> 00:21:05.605
+So
+
+428
+00:21:07.955 --> 00:21:08.075
+Hmm,
+
+429
+00:21:15.395 --> 00:21:16.925
+This will be five by 14
+
+430
+00:21:17.465 --> 00:21:18.325
+and to log
+
+431
+00:21:22.235 --> 00:21:23.565
+five y 14.
+
+432
+00:21:23.865 --> 00:21:26.965
+So you'll, uh, if there are multiple categories are there
+
+433
+00:21:26.965 --> 00:21:29.965
+based on that, you'll cal do calculation of the PUI
+
+434
+00:21:30.305 --> 00:21:32.485
+and basically calculate these things, okay?
+
+435
+00:21:32.945 --> 00:21:34.765
+And minus summation of that one,
+
+436
+00:21:34.835 --> 00:21:37.645
+what about the value you are getting of the entire dataset?
+
+437
+00:21:38.035 --> 00:21:39.445
+That will be the entropy.
+
+438
+00:21:40.505 --> 00:21:43.575
+Now, okay, that is there.
+
+439
+00:21:44.395 --> 00:21:46.935
+Now let's go like, let's go to the example.
+
+440
+00:21:47.095 --> 00:21:49.415
+I think that will be the better thing, okay? Understand.
+
+441
+00:21:50.845 --> 00:21:54.345
+Now, this is a like famous dataset, uh, for, you know, uh,
+
+442
+00:21:54.705 --> 00:21:57.185
+teaching this, uh, vision tree, okay?
+
+443
+00:21:57.285 --> 00:22:00.625
+Uh, along with the, for like a random forest,
+
+444
+00:22:01.245 --> 00:22:02.665
+and, uh, there are other sort
+
+445
+00:22:02.665 --> 00:22:04.825
+of things if you're into like in symbol methods
+
+446
+00:22:04.965 --> 00:22:08.115
+and all that also discuss, okay?
+
+447
+00:22:08.145 --> 00:22:10.905
+Suppose this is the data we are having.
+
+448
+00:22:11.255 --> 00:22:13.825
+Fine, just look at this data, okay?
+
+449
+00:22:14.105 --> 00:22:15.785
+I will do this in the next page.
+
+450
+00:22:21.585 --> 00:22:25.325
+So we are having all total 14 data, okay?
+
+451
+00:22:25.345 --> 00:22:26.885
+In this data, what is happening,
+
+452
+00:22:27.305 --> 00:22:31.245
+you are having multiple attributes in this attributes.
+
+453
+00:22:31.305 --> 00:22:32.645
+One of the feature is outlook.
+
+454
+00:22:32.645 --> 00:22:35.525
+Another feature is temperature, another is, uh, humidity,
+
+455
+00:22:35.875 --> 00:22:38.205
+another this wind and others s.
+
+456
+00:22:38.505 --> 00:22:42.565
+So each of them is data taken, okay?
+
+457
+00:22:42.785 --> 00:22:45.845
+And like some combination has been, uh, done
+
+458
+00:22:46.305 --> 00:22:48.685
+and data has been, uh, like, uh, you know,
+
+459
+00:22:50.025 --> 00:22:52.445
+now we are having this, no, sunny weather,
+
+460
+00:22:53.535 --> 00:22:56.905
+temperature was hot, humidity was high, wind was weak,
+
+461
+00:22:57.485 --> 00:22:59.585
+and is it ideal for playing tennis?
+
+462
+00:22:59.885 --> 00:23:02.545
+Uh, the answer is no in this case, uh,
+
+463
+00:23:02.545 --> 00:23:05.705
+similarly you say overcast weather was hot,
+
+464
+00:23:06.505 --> 00:23:08.265
+humidity was high, wind was weak,
+
+465
+00:23:08.645 --> 00:23:10.705
+and yeah, it is saying, yeah, you can play tennis.
+
+466
+00:23:11.135 --> 00:23:13.945
+Okay? So similarly, multiple data sets are there.
+
+467
+00:23:14.005 --> 00:23:17.185
+We need to now formulate decent based on that,
+
+468
+00:23:17.605 --> 00:23:19.585
+the target variables plate in it.
+
+469
+00:23:19.585 --> 00:23:22.025
+So I'll give you some, you know, dataset
+
+470
+00:23:22.205 --> 00:23:25.625
+or random, uh, like, uh, uh, current, uh, supposed to, uh,
+
+471
+00:23:25.895 --> 00:23:28.945
+today's weather, I'm checking it is, uh, uh, seeing that,
+
+472
+00:23:29.005 --> 00:23:30.265
+uh, temperatures moderate
+
+473
+00:23:30.565 --> 00:23:34.225
+or the cold, um, the, it is sunny outside,
+
+474
+00:23:34.465 --> 00:23:36.185
+humidity is low, wind is high.
+
+475
+00:23:36.445 --> 00:23:37.905
+So should I play tennis or not?
+
+476
+00:23:37.905 --> 00:23:39.225
+The RY algorithm
+
+477
+00:23:39.365 --> 00:23:42.065
+or the model will tell us is, is it ideal
+
+478
+00:23:42.205 --> 00:23:43.385
+for playing tennis or not?
+
+479
+00:23:43.735 --> 00:23:48.355
+Okay? So the first calculation is, uh, we have
+
+480
+00:23:48.355 --> 00:23:50.515
+to find the root note for finding the root note first,
+
+481
+00:23:50.515 --> 00:23:53.755
+you order to find the entropy of the entire dataset, fine.
+
+482
+00:23:54.495 --> 00:23:58.475
+Now, the entire dataset we calculate in it this way, okay?
+
+483
+00:23:58.655 --> 00:23:59.995
+Uh, okay, yeah.
+
+484
+00:24:00.575 --> 00:24:04.555
+So py of entire dataset, that is the
+
+485
+00:24:05.055 --> 00:24:07.195
+how many years, how many no, you are having.
+
+486
+00:24:07.455 --> 00:24:11.075
+So the target variable, target variable, having our,
+
+487
+00:24:11.865 --> 00:24:15.595
+that is the 14 examples are there, okay,
+
+488
+00:24:15.695 --> 00:24:16.995
+we have nine years.
+
+489
+00:24:17.025 --> 00:24:22.005
+Five, no, based on that, we calculate this one, nine by 14,
+
+490
+00:24:22.105 --> 00:24:23.805
+log two into this one.
+
+491
+00:24:24.105 --> 00:24:28.565
+So this is for the yes minus this one that is for no,
+
+492
+00:24:28.565 --> 00:24:29.845
+because this is binary.
+
+493
+00:24:30.635 --> 00:24:32.805
+More categories are there would've do
+
+494
+00:24:32.825 --> 00:24:35.005
+or do the like some minus sum submission of everything.
+
+495
+00:24:35.065 --> 00:24:36.405
+So that is there. So
+
+496
+00:24:36.405 --> 00:24:38.725
+after this calculation, okay, uh, this yes
+
+497
+00:24:38.785 --> 00:24:42.025
+and no for the entire dataset, okay?
+
+498
+00:24:42.095 --> 00:24:45.265
+0.940. That is the value we got. Okay?
+
+499
+00:24:46.085 --> 00:24:50.265
+Now we have to do for every, you know, other attributes
+
+500
+00:24:50.365 --> 00:24:53.425
+as well, uh, this entropy calculation, and
+
+501
+00:24:53.425 --> 00:24:56.225
+after this entropy liquidation, two stages there,
+
+502
+00:24:56.225 --> 00:24:59.065
+the information gain will calculate, okay?
+
+503
+00:24:59.565 --> 00:25:01.305
+Now we split the data 14 samples
+
+504
+00:25:01.445 --> 00:25:02.865
+by the value of the outlook.
+
+505
+00:25:03.365 --> 00:25:06.665
+Now we are taking the outlook in this outlook.
+
+506
+00:25:06.665 --> 00:25:09.105
+What is happening in the sunny?
+
+507
+00:25:09.205 --> 00:25:11.945
+We are having two years, three, no, okay,
+
+508
+00:25:12.525 --> 00:25:15.625
+and based on the similar calculation, okay, we are having
+
+509
+00:25:16.625 --> 00:25:20.425
+entropy of the sunny in the, you know, outlook.
+
+510
+00:25:20.965 --> 00:25:23.905
+We are having 0.971.
+
+511
+00:25:24.285 --> 00:25:26.665
+So basically the calculation is something like this.
+
+512
+00:25:29.585 --> 00:25:32.525
+Uh, okay, information can for that one.
+
+513
+00:25:34.935 --> 00:25:37.065
+Now, for outlook,
+
+514
+00:25:47.865 --> 00:25:51.365
+We have to individually calculate for each of those entro.
+
+515
+00:25:51.495 --> 00:25:56.405
+Sunny will be something like, uh, the P of, you know,
+
+516
+00:25:56.595 --> 00:25:58.525
+what is the, where is the sunny?
+
+517
+00:25:58.535 --> 00:26:03.495
+Sunny is P of x log off, p, f,
+
+518
+00:26:03.575 --> 00:26:06.775
+x, and this one P of X for the sunny.
+
+519
+00:26:07.285 --> 00:26:09.735
+Then this one I have total, uh,
+
+520
+00:26:09.735 --> 00:26:12.015
+value is total five values are there.
+
+521
+00:26:12.915 --> 00:26:16.625
+So two divided by five
+
+522
+00:26:17.985 --> 00:26:19.445
+and two log off.
+
+523
+00:26:21.895 --> 00:26:26.795
+Uh, this is two divided by five. So this is four hour. Yes.
+
+524
+00:26:27.495 --> 00:26:30.785
+So that's minus again, minus.
+
+525
+00:26:31.085 --> 00:26:33.505
+So again, category, we have two.
+
+526
+00:26:33.525 --> 00:26:36.505
+No, and this one, I'll do that. Sorry, three.
+
+527
+00:26:36.565 --> 00:26:39.665
+No, 3, 5, 5 star log.
+
+528
+00:26:41.585 --> 00:26:43.365
+3, 5, 5, okay?
+
+529
+00:26:44.025 --> 00:26:46.085
+Now, after calculation of doing this,
+
+530
+00:26:46.175 --> 00:26:48.485
+we'll get this value 0.971
+
+531
+00:26:50.095 --> 00:26:51.745
+that we have set here.
+
+532
+00:26:52.165 --> 00:26:56.065
+Now, similarly for overcast, we'll calculate again, okay, E
+
+533
+00:26:56.065 --> 00:27:00.905
+of overcast, okay?
+
+534
+00:27:00.905 --> 00:27:02.385
+Some value will be there. That is zero
+
+535
+00:27:02.415 --> 00:27:06.585
+because in all of the overcast, if you see the data,
+
+536
+00:27:07.135 --> 00:27:11.515
+okay, doesn't matter, whatever the other parameters are
+
+537
+00:27:12.155 --> 00:27:14.485
+playing tennis, it is saying yes, okay?
+
+538
+00:27:14.525 --> 00:27:17.205
+Overcast another data, it is saying playing. Yes.
+
+539
+00:27:17.995 --> 00:27:22.005
+Similarly, two more overcast. It is also saying yes, yes.
+
+540
+00:27:22.385 --> 00:27:23.965
+So if the weather is overcast,
+
+541
+00:27:24.145 --> 00:27:25.685
+I'm seeing whatever the other
+
+542
+00:27:25.855 --> 00:27:27.125
+datas are saying doesn't matter.
+
+543
+00:27:27.125 --> 00:27:28.645
+At our other features are saying we
+
+544
+00:27:28.645 --> 00:27:29.925
+are directly going for playing tennis.
+
+545
+00:27:30.505 --> 00:27:34.205
+So we also calculate for the overcast, we get something like
+
+546
+00:27:34.205 --> 00:27:37.925
+that is a pure, so it is affecting the highest, okay?
+
+547
+00:27:39.345 --> 00:27:41.925
+Now, same we do for the in calculate this one,
+
+548
+00:27:41.945 --> 00:27:43.005
+we also get some value.
+
+549
+00:27:43.745 --> 00:27:47.485
+Now, once you do that, you do the calculation
+
+550
+00:27:47.485 --> 00:27:51.325
+of the gain gain as in gain of, you know,
+
+551
+00:27:51.845 --> 00:27:53.325
+overlook, sorry, outlook.
+
+552
+00:27:54.925 --> 00:27:57.665
+So you calculate the gain of outlook overall.
+
+553
+00:27:58.365 --> 00:28:02.785
+Now, the formula says the entropy of the entire dataset
+
+554
+00:28:02.785 --> 00:28:04.945
+for the target average 0.940.
+
+555
+00:28:05.095 --> 00:28:06.545
+That is this value, okay?
+
+556
+00:28:06.785 --> 00:28:09.665
+EFS yes, no ca calculation that,
+
+557
+00:28:09.855 --> 00:28:14.105
+that we are having 0.940 minus whatever the, you know,
+
+558
+00:28:14.105 --> 00:28:16.105
+total submission of these, you know,
+
+559
+00:28:16.195 --> 00:28:18.465
+individual activities we just calculated
+
+560
+00:28:18.565 --> 00:28:21.625
+for this sunny overcast and the rain, okay?
+
+561
+00:28:21.805 --> 00:28:26.415
+You have rain, you're having whatever the value,
+
+562
+00:28:26.915 --> 00:28:30.175
+you are adding all of this as a, uh, like with the,
+
+563
+00:28:30.475 --> 00:28:33.615
+you know, how many this information gain,
+
+564
+00:28:33.615 --> 00:28:37.375
+you're putting 0.9 7 1 0 0 1, 9 7 1, along with
+
+565
+00:28:38.255 --> 00:28:42.425
+whatever the features are there based on that, you know, uh,
+
+566
+00:28:42.425 --> 00:28:45.785
+five features are there, sunny, um, uh,
+
+567
+00:28:45.785 --> 00:28:47.305
+came five times outta 14.
+
+568
+00:28:47.645 --> 00:28:51.385
+So five out of 14, our customer came five, four out, 14.
+
+569
+00:28:51.385 --> 00:28:53.265
+The PX value of that one basically.
+
+570
+00:28:53.365 --> 00:28:55.985
+So we get some kinda information gain.
+
+571
+00:28:56.445 --> 00:28:59.065
+So that is the main idea that we have
+
+572
+00:28:59.065 --> 00:29:01.745
+to calculate once you calculate this one, okay?
+
+573
+00:29:02.045 --> 00:29:05.425
+You have to go and do for, for the other features as well.
+
+574
+00:29:05.445 --> 00:29:07.625
+So Outlook, we did okay, humidity,
+
+575
+00:29:08.005 --> 00:29:09.865
+you do the calculation, you get this value.
+
+576
+00:29:09.975 --> 00:29:12.105
+When you did the do the calculation, this value
+
+577
+00:29:12.205 --> 00:29:14.065
+and temperature, the calculation,
+
+578
+00:29:14.285 --> 00:29:15.625
+you get this kind of value.
+
+579
+00:29:16.125 --> 00:29:18.465
+Now, once you, you compare each of them
+
+580
+00:29:18.725 --> 00:29:22.225
+and you check which is having the highest, you know, value.
+
+581
+00:29:22.325 --> 00:29:25.625
+So in this one we had the highest value that is a outlook.
+
+582
+00:29:26.465 --> 00:29:29.525
+So now we know what is the root node of the outlook.
+
+583
+00:29:29.665 --> 00:29:30.845
+The root node is outlook.
+
+584
+00:29:32.635 --> 00:29:35.175
+Sir, one quick question here, sir. Yes, please.
+
+585
+00:29:35.395 --> 00:29:39.655
+So as outlook, uh, uh, is categorical variables, uh,
+
+586
+00:29:40.035 --> 00:29:43.195
+it is having certain categories like our rain
+
+587
+00:29:43.415 --> 00:29:44.435
+and all things, so,
+
+588
+00:29:44.855 --> 00:29:47.715
+but what in, how we'll do for the continuous variable,
+
+589
+00:29:47.735 --> 00:29:49.995
+do we need to segment them or bucket them
+
+590
+00:29:50.055 --> 00:29:54.755
+and do it like, like it, like temperature we are having?
+
+591
+00:29:55.295 --> 00:29:56.995
+So continuous variable
+
+592
+00:29:57.555 --> 00:30:00.275
+I idea is see when we say no, uh,
+
+593
+00:30:00.305 --> 00:30:04.395
+that you are having a dataset and which algorithm to apply.
+
+594
+00:30:04.815 --> 00:30:07.275
+So based on this, uh, you know, decently
+
+595
+00:30:07.275 --> 00:30:09.915
+and symbol methods along with this, uh, random
+
+596
+00:30:10.095 --> 00:30:11.875
+for the basic idea is
+
+597
+00:30:12.155 --> 00:30:16.555
+whenever you are having the dataset, which are like, uh,
+
+598
+00:30:16.985 --> 00:30:19.995
+distributed categorically, you apply this algorithm.
+
+599
+00:30:20.455 --> 00:30:23.995
+If it is having, uh, values which are having like, uh,
+
+600
+00:30:24.045 --> 00:30:25.435
+continuous values
+
+601
+00:30:25.575 --> 00:30:27.395
+and all in that sense,
+
+602
+00:30:27.465 --> 00:30:32.435
+what happens is like this tree becomes a huge number, okay?
+
+603
+00:30:32.695 --> 00:30:36.475
+The decent tree are like a, not like binary or binary.
+
+604
+00:30:36.585 --> 00:30:39.355
+They're dividing, they're dividing in multiples.
+
+605
+00:30:40.215 --> 00:30:44.035
+In that way, it is not able to do the prediction very well,
+
+606
+00:30:44.295 --> 00:30:47.755
+if even if it is doing the computation cost is very higher.
+
+607
+00:30:48.535 --> 00:30:50.795
+So you do award these kind of situations
+
+608
+00:30:50.795 --> 00:30:52.715
+where you're dealing with, uh, you know,
+
+609
+00:30:52.955 --> 00:30:56.635
+numerical values instead of categorical values, uh, for, um,
+
+610
+00:30:56.785 --> 00:30:57.995
+this type of algorithm.
+
+611
+00:30:59.565 --> 00:31:01.125
+I hope you got the idea.
+
+612
+00:31:02.415 --> 00:31:05.515
+Yes, Yes. But, uh, in, uh, real time, we, uh,
+
+613
+00:31:05.615 --> 00:31:10.395
+we have a mix of data so we can can't drop uh,
+
+614
+00:31:10.455 --> 00:31:12.115
+uh, continuous variable.
+
+615
+00:31:12.775 --> 00:31:15.315
+No, you cannot drop the continuous variable,
+
+616
+00:31:15.735 --> 00:31:17.235
+but it will see, uh,
+
+617
+00:31:17.235 --> 00:31:21.795
+basically the idea is this calculation is getting done for
+
+618
+00:31:21.855 --> 00:31:24.395
+how many, like, uh, three categorical values instead
+
+619
+00:31:24.395 --> 00:31:27.715
+of three, if the data set is having thousands of like,
+
+620
+00:31:27.715 --> 00:31:28.795
+uh, values, okay?
+
+621
+00:31:29.295 --> 00:31:32.595
+And this will be calculated based on this thousands
+
+622
+00:31:32.595 --> 00:31:34.475
+of values, the information gain.
+
+623
+00:31:34.825 --> 00:31:37.355
+Yeah, The computation cost will be higher.
+
+624
+00:31:37.895 --> 00:31:39.475
+Ah, yes, That is the thing.
+
+625
+00:31:41.495 --> 00:31:42.795
+Yes, It'll do the job,
+
+626
+00:31:42.855 --> 00:31:44.595
+but the computation cost will be higher.
+
+627
+00:31:45.585 --> 00:31:47.075
+Nice. Yeah. Yeah.
+
+628
+00:31:47.415 --> 00:31:50.195
+And also the three, three node structure will be much more
+
+629
+00:31:50.195 --> 00:31:52.075
+complex, uh, compared like, uh, you know,
+
+630
+00:31:52.335 --> 00:31:55.595
+if you are applying only to the categorical data sets,
+
+631
+00:31:55.975 --> 00:31:57.115
+if you are having that one.
+
+632
+00:31:57.495 --> 00:31:59.355
+So it is much more also efficient if
+
+633
+00:31:59.355 --> 00:32:00.435
+you're applying on that one.
+
+634
+00:32:01.185 --> 00:32:03.995
+Yeah. Got It. So this is why like, um, you know,
+
+635
+00:32:04.145 --> 00:32:06.595
+getting the knowledge of this algorithms that is better.
+
+636
+00:32:06.615 --> 00:32:07.955
+So you understood the features
+
+637
+00:32:07.955 --> 00:32:10.395
+and all you are understanding categorically we are applying.
+
+638
+00:32:10.895 --> 00:32:12.435
+Now you had the idea, okay,
+
+639
+00:32:12.435 --> 00:32:15.115
+what if the data test set is having these kind of data
+
+640
+00:32:15.115 --> 00:32:16.675
+and all, why should I apply this one?
+
+641
+00:32:16.675 --> 00:32:17.795
+Because this will be tricky.
+
+642
+00:32:18.375 --> 00:32:19.395
+Now, these are the things
+
+643
+00:32:19.395 --> 00:32:21.115
+that makes you a better data scientist.
+
+644
+00:32:22.525 --> 00:32:26.185
+Yes, Sir. Sir, another quick question here. Yeah, sir.
+
+645
+00:32:26.295 --> 00:32:28.305
+This outlook, what you are saying it be
+
+646
+00:32:28.505 --> 00:32:29.705
+decision at the root node?
+
+647
+00:32:29.985 --> 00:32:32.985
+I yes, yes. And this, uh, humidity, wind,
+
+648
+00:32:32.985 --> 00:32:36.345
+and temperature are, uh, you know, kind of, uh, a state
+
+649
+00:32:36.345 --> 00:32:37.425
+of nature what we study.
+
+650
+00:32:38.025 --> 00:32:41.805
+Hmm. I mean, yes. So some probability values. Yeah.
+
+651
+00:32:41.805 --> 00:32:43.165
+Right? So these,
+
+652
+00:32:43.165 --> 00:32:45.565
+Yeah, we, we are calculating first the entropy,
+
+653
+00:32:45.565 --> 00:32:46.805
+then the information gain.
+
+654
+00:32:46.805 --> 00:32:48.965
+These are information gain calculated. Yeah.
+
+655
+00:32:49.305 --> 00:32:52.405
+Uh, based on the highest that becomes root node. Okay?
+
+656
+00:32:52.405 --> 00:32:54.805
+And from that root node, we'll calculate the, like
+
+657
+00:32:55.065 --> 00:32:57.885
+who are told with the secondary, uh, you know, uh,
+
+658
+00:32:58.175 --> 00:33:02.125
+prediction node, then the, uh, third node and also on.
+
+659
+00:33:02.225 --> 00:33:04.805
+So calculation is not over. We have to calculate again.
+
+660
+00:33:04.805 --> 00:33:07.285
+Yeah. Yeah. Now we'll, uh, compete this, uh, you know,
+
+661
+00:33:07.525 --> 00:33:09.645
+humidity, wind temperature against this outlook.
+
+662
+00:33:09.875 --> 00:33:11.605
+Yeah. Then we'll do the rest of the
+
+663
+00:33:11.605 --> 00:33:12.605
+Things. So, so, so
+
+664
+00:33:12.605 --> 00:33:14.885
+I, I can say this outlook depends on, uh,
+
+665
+00:33:15.405 --> 00:33:17.005
+humidity, wind, and, uh, temperature.
+
+666
+00:33:18.275 --> 00:33:19.335
+No, no, vice versa.
+
+667
+00:33:19.355 --> 00:33:21.495
+You don't have to do, like, this is kind of thing
+
+668
+00:33:21.865 --> 00:33:23.895
+where the humidity is having much more
+
+669
+00:33:23.895 --> 00:33:26.095
+to say whether you should play tennis or not.
+
+670
+00:33:26.555 --> 00:33:28.015
+If the hum, uh, like, sorry,
+
+671
+00:33:28.015 --> 00:33:30.815
+outlook is saying much more compared to the humidity, wind,
+
+672
+00:33:30.815 --> 00:33:33.775
+and temperature because if, if you see the dataset,
+
+673
+00:33:34.515 --> 00:33:36.695
+if the temperature is hot, okay?
+
+674
+00:33:36.695 --> 00:33:40.295
+Mm-hmm. In the hot it is saying you can play. Mm-hmm.
+
+675
+00:33:40.375 --> 00:33:42.215
+If it is, no, sorry, uh,
+
+676
+00:33:42.435 --> 00:33:45.295
+it is also saying in the hot weather, you cannot place no.
+
+677
+00:33:45.555 --> 00:33:48.015
+So it is, this is giving you ation.
+
+678
+00:33:48.355 --> 00:33:52.055
+If the humidity is high, it is saying no, you cannot play.
+
+679
+00:33:52.515 --> 00:33:54.095
+If the humidity is also high,
+
+680
+00:33:54.475 --> 00:33:55.815
+it is saying, yeah, you can play.
+
+681
+00:33:55.815 --> 00:33:57.535
+There's no problem in the wind.
+
+682
+00:33:57.595 --> 00:34:00.255
+If it is weak, say it is no, you cannot play.
+
+683
+00:34:00.355 --> 00:34:02.175
+If it is strong, it is saying no.
+
+684
+00:34:02.915 --> 00:34:06.455
+So there is no, you know, like a continuous,
+
+685
+00:34:07.405 --> 00:34:09.655
+like saying that whatever that guy is saying,
+
+686
+00:34:09.655 --> 00:34:11.535
+that is true all the time, that is not true.
+
+687
+00:34:11.835 --> 00:34:15.735
+But in case of outlook, if you see the sunny, for the sunny,
+
+688
+00:34:16.045 --> 00:34:18.015
+like, uh, uh, there are three categorical val
+
+689
+00:34:18.065 --> 00:34:19.335
+value for the sunny.
+
+690
+00:34:19.435 --> 00:34:21.815
+It is saying sometimes it is saying no,
+
+691
+00:34:21.845 --> 00:34:25.045
+sometimes it is saying yes. Okay?
+
+692
+00:34:25.585 --> 00:34:27.685
+So ultimate edition is whether to plate tennis
+
+693
+00:34:27.745 --> 00:34:28.765
+or not, yes or no,
+
+694
+00:34:29.225 --> 00:34:30.225
+Huh? Yes or no. That
+
+695
+00:34:30.225 --> 00:34:31.125
+we are calculating
+
+696
+00:34:31.385 --> 00:34:33.525
+And, and these other things given are
+
+697
+00:34:33.665 --> 00:34:34.845
+the state of nature. I mean,
+
+698
+00:34:34.915 --> 00:34:37.765
+Yeah, these all are actually dataset we are collecting.
+
+699
+00:34:37.765 --> 00:34:40.765
+Yeah, okay. Based on that different combination,
+
+700
+00:34:40.785 --> 00:34:42.685
+we are checking whether tennis or not.
+
+701
+00:34:42.945 --> 00:34:46.645
+So in this case, due to this overcast, you know, feature
+
+702
+00:34:46.775 --> 00:34:49.925
+where every overcast is saying that you should play,
+
+703
+00:34:50.515 --> 00:34:51.765
+Okay, okay, Fine.
+
+704
+00:34:51.895 --> 00:34:54.955
+Based on this, no, this, uh,
+
+705
+00:34:55.705 --> 00:34:59.035
+outlook has become much more stronger compared to the other,
+
+706
+00:34:59.735 --> 00:35:01.395
+you know, this, uh, attributes.
+
+707
+00:35:01.735 --> 00:35:04.395
+So, so I can understand finally here, uh, the
+
+708
+00:35:04.995 --> 00:35:07.675
+decision at root notice whether to play tennis or not.
+
+709
+00:35:08.175 --> 00:35:10.075
+Mm-hmm. Am I right?
+
+710
+00:35:10.895 --> 00:35:12.635
+We are setting this, uh, you know,
+
+711
+00:35:12.685 --> 00:35:14.875
+first edition we should go, always go
+
+712
+00:35:14.875 --> 00:35:16.195
+through the outlook, okay?
+
+713
+00:35:16.195 --> 00:35:17.515
+Then the other variables,
+
+714
+00:35:17.855 --> 00:35:19.715
+and finally on the left node,
+
+715
+00:35:19.715 --> 00:35:21.475
+we'll be finding out whether to play or not.
+
+716
+00:35:22.345 --> 00:35:23.355
+Okay? Okay.
+
+717
+00:35:23.855 --> 00:35:26.915
+So the idea is, let, let me draw this one. Mm-hmm.
+
+718
+00:35:27.495 --> 00:35:29.155
+Uh, Okay.
+
+719
+00:35:33.365 --> 00:35:34.365
+Oh,
+
+720
+00:35:43.885 --> 00:35:44.885
+Okay. Huh?
+
+721
+00:35:44.885 --> 00:35:46.535
+Now this outlook,
+
+722
+00:35:46.625 --> 00:35:48.855
+first we'll check it'll have three levels.
+
+723
+00:35:54.785 --> 00:35:57.005
+The first level is suppose if it is
+
+724
+00:35:57.045 --> 00:36:00.755
+overcast, okay?
+
+725
+00:36:01.625 --> 00:36:03.155
+Suppose second level is sunny.
+
+726
+00:36:06.525 --> 00:36:07.695
+Suppose this one is
+
+727
+00:36:08.235 --> 00:36:11.635
+or rain, if it is overcast, okay?
+
+728
+00:36:12.465 --> 00:36:14.165
+If it is overcast, we are saying play
+
+729
+00:36:14.165 --> 00:36:17.745
+tennis, you can play tennis.
+
+730
+00:36:18.575 --> 00:36:22.005
+There is a lymph node success to that. We don't want.
+
+731
+00:36:22.105 --> 00:36:23.885
+In the sunny, we are having two options.
+
+732
+00:36:24.505 --> 00:36:27.085
+It is saying yes, and also no.
+
+733
+00:36:27.935 --> 00:36:31.475
+Oh, in this rain also, yes, yes and no fine.
+
+734
+00:36:31.735 --> 00:36:35.995
+So we need to find more attributes so we can fit to the sun
+
+735
+00:36:36.135 --> 00:36:40.715
+and rain, whatever be the successive, you know, uh, this,
+
+736
+00:36:40.855 --> 00:36:41.955
+uh, outlook.
+
+737
+00:36:41.955 --> 00:36:44.155
+After sunny, what should you check whether you should check
+
+738
+00:36:44.185 --> 00:36:47.115
+wind or humidity in this space?
+
+739
+00:36:47.275 --> 00:36:48.355
+Humidity, yeah. Okay.
+
+740
+00:36:49.755 --> 00:36:51.975
+Now first you check the outlook every sunny,
+
+741
+00:36:51.975 --> 00:36:53.855
+whether you should check wind or humidity.
+
+742
+00:36:53.915 --> 00:36:56.615
+In this case, whether you should check the wind humidity,
+
+743
+00:36:58.045 --> 00:37:01.295
+because alone, the sunny
+
+744
+00:37:01.355 --> 00:37:03.495
+and rain is not able to make the decision,
+
+745
+00:37:03.755 --> 00:37:05.975
+but over alone can make the decision.
+
+746
+00:37:06.995 --> 00:37:09.375
+So now we need to calculate for the sunny
+
+747
+00:37:09.395 --> 00:37:11.375
+and rain what are, what the like next
+
+748
+00:37:12.365 --> 00:37:14.945
+node should be once it is done.
+
+749
+00:37:14.945 --> 00:37:16.825
+Suppose hypothetically I'm saying
+
+750
+00:37:17.315 --> 00:37:18.785
+after sunny it is,
+
+751
+00:37:18.805 --> 00:37:22.595
+it should check the humidity, okay?
+
+752
+00:37:22.935 --> 00:37:25.355
+If the humidity is high, okay?
+
+753
+00:37:25.655 --> 00:37:29.415
+If it is high, and if it is low
+
+754
+00:37:29.715 --> 00:37:32.865
+or normal, yeah, if it is high,
+
+755
+00:37:33.125 --> 00:37:35.185
+I'm saying no north, no.
+
+756
+00:37:36.575 --> 00:37:38.155
+If it is normal, yes.
+
+757
+00:37:38.185 --> 00:37:41.075
+Then again, suppose we are inviting the wind
+
+758
+00:37:41.695 --> 00:37:45.235
+or maybe we're saying directly, yes, you can play status.
+
+759
+00:37:46.215 --> 00:37:49.935
+So that is how the addition tree is made, okay?
+
+760
+00:37:51.295 --> 00:37:54.915
+Yeah. Okay.
+
+761
+00:37:55.295 --> 00:37:58.955
+Now first up to this point, it is done fine.
+
+762
+00:37:59.695 --> 00:38:03.995
+Now this point we need to calculate how like the combination
+
+763
+00:38:03.995 --> 00:38:05.275
+of these things will come or not.
+
+764
+00:38:06.435 --> 00:38:11.055
+Okay? Now work has done sunny, this thing.
+
+765
+00:38:11.235 --> 00:38:15.175
+Now calculation two for the sunny, okay, we are
+
+766
+00:38:15.715 --> 00:38:17.695
+taking this, you know, data only.
+
+767
+00:38:17.915 --> 00:38:19.295
+So we have cut the table.
+
+768
+00:38:20.125 --> 00:38:21.815
+This is the outlook for the sunny only,
+
+769
+00:38:22.195 --> 00:38:24.335
+and associated data, whatever it is having.
+
+770
+00:38:24.395 --> 00:38:27.455
+So five attributes we are having on this five attributes.
+
+771
+00:38:27.905 --> 00:38:30.415
+First, we'll calculate the entropy of the sunny.
+
+772
+00:38:31.465 --> 00:38:32.785
+Previously we calculated it for the,
+
+773
+00:38:33.125 --> 00:38:34.665
+now we'll calculate it for this one.
+
+774
+00:38:35.505 --> 00:38:38.285
+Now we, once you calculate for this one, entropy
+
+775
+00:38:38.285 --> 00:38:40.805
+of the sunny 0.7971,
+
+776
+00:38:40.825 --> 00:38:42.845
+we have already calculated for the previous table.
+
+777
+00:38:42.985 --> 00:38:44.965
+You can use that one. Now,
+
+778
+00:38:45.865 --> 00:38:48.875
+tasting the humidity on sunny days, whether two plate tennis
+
+779
+00:38:48.975 --> 00:38:52.715
+or not, and this based on this thing three, no, zero, yes,
+
+780
+00:38:52.855 --> 00:38:54.155
+two yes, zero no.
+
+781
+00:38:54.665 --> 00:38:57.875
+Okay, for the high and the no humidity cases.
+
+782
+00:38:58.615 --> 00:39:02.035
+Now you calculate the information gain with respect
+
+783
+00:39:02.055 --> 00:39:03.275
+to two the sunny.
+
+784
+00:39:03.815 --> 00:39:05.115
+Now you get some kind of value.
+
+785
+00:39:06.885 --> 00:39:09.545
+The similar approach, what you did in the last, you know,
+
+786
+00:39:10.325 --> 00:39:14.025
+uh, staged, you have to do this with respect to sun only.
+
+787
+00:39:14.205 --> 00:39:17.905
+Now, similarly, you are testing the hu wind.
+
+788
+00:39:17.975 --> 00:39:20.545
+That is, uh, another attribute which is left.
+
+789
+00:39:21.445 --> 00:39:22.625
+Now you crosscheck
+
+790
+00:39:22.685 --> 00:39:24.345
+and calculate the information again,
+
+791
+00:39:24.445 --> 00:39:25.585
+you get some kind of value.
+
+792
+00:39:26.725 --> 00:39:29.065
+Now, for the sun, you have calculated these two.
+
+793
+00:39:29.325 --> 00:39:32.545
+Now what, what is higher? This one humidity.
+
+794
+00:39:33.205 --> 00:39:36.265
+So on the base of sunny, you can directly set the humidity.
+
+795
+00:39:36.605 --> 00:39:40.345
+It is higher or lower. We will set this one. Okay?
+
+796
+00:39:40.765 --> 00:39:45.685
+Now in case of rain, okay, in case of rain,
+
+797
+00:39:45.745 --> 00:39:47.365
+we will calculate for this thing also.
+
+798
+00:39:47.545 --> 00:39:52.365
+So rain is having multiple attributes, sorry, five, five,
+
+799
+00:39:52.465 --> 00:39:53.765
+uh, rows of data in this.
+
+800
+00:39:53.765 --> 00:39:56.645
+Uh, also five, we are having some yes and some no.
+
+801
+00:39:56.745 --> 00:39:59.765
+We are, it alone cannot make the, we have to
+
+802
+00:40:00.395 --> 00:40:02.725
+combine these attributes as well, okay?
+
+803
+00:40:02.725 --> 00:40:04.725
+Temperature, humidity on wind and all those things.
+
+804
+00:40:05.345 --> 00:40:10.205
+Now for this wind, okay, uh, we are doing the test of wind,
+
+805
+00:40:10.625 --> 00:40:13.485
+we are doing testing of the other sets of data,
+
+806
+00:40:13.595 --> 00:40:15.165
+suppose temperature and all.
+
+807
+00:40:15.515 --> 00:40:18.165
+Then we'll be able to sort out this, you know,
+
+808
+00:40:18.355 --> 00:40:20.805
+what about the successive nodes and everything out there?
+
+809
+00:40:20.905 --> 00:40:22.805
+So that is the idea of the ry.
+
+810
+00:40:23.035 --> 00:40:26.765
+Similarly, instead of information gain calculation
+
+811
+00:40:26.765 --> 00:40:28.965
+and the tropical calculation, you can also go
+
+812
+00:40:28.965 --> 00:40:30.165
+for the genie index.
+
+813
+00:40:30.165 --> 00:40:32.685
+That is the, like a different formula you use,
+
+814
+00:40:33.245 --> 00:40:34.485
+whatever the higher value you are getting,
+
+815
+00:40:34.545 --> 00:40:35.725
+you set the root node
+
+816
+00:40:35.725 --> 00:40:39.605
+and associativity with the successive nodes
+
+817
+00:40:39.605 --> 00:40:42.365
+and new formula, the dic, that is the idea right
+
+818
+00:40:44.765 --> 00:40:47.665
+Now we'll go and do this coding also.
+
+819
+00:40:47.975 --> 00:40:49.785
+That is the thing, okay?
+
+820
+00:40:50.045 --> 00:40:52.785
+So this actually I scripted from this one
+
+821
+00:40:52.885 --> 00:40:54.625
+for the Titan dataset itself
+
+822
+00:40:54.625 --> 00:40:57.425
+because in the last class we also, this, this one
+
+823
+00:40:59.145 --> 00:41:00.725
+we use the Titan dataset.
+
+824
+00:41:00.725 --> 00:41:03.325
+So I uh, thought you guys will be a little bit familiar
+
+825
+00:41:03.325 --> 00:41:04.485
+with the Titan dataset.
+
+826
+00:41:06.745 --> 00:41:08.995
+Okay? Do a new one.
+
+827
+00:41:11.535 --> 00:41:11.825
+Okay?
+
+828
+00:41:51.105 --> 00:41:53.805
+So what are the things we need for the library or library?
+
+829
+00:41:54.025 --> 00:41:55.325
+We are importing one way thing.
+
+830
+00:41:55.385 --> 00:41:59.045
+One way I'll tell you, okay, so first the pandas
+
+831
+00:41:59.065 --> 00:42:01.605
+for data loading and all this will need, okay,
+
+832
+00:42:02.065 --> 00:42:03.765
+sacred LED model selector.
+
+833
+00:42:03.765 --> 00:42:06.805
+From there split that. We need to do that.
+
+834
+00:42:06.805 --> 00:42:09.605
+We are taking decent entry classifier.
+
+835
+00:42:09.605 --> 00:42:11.445
+In this case, we're taking because we want
+
+836
+00:42:11.445 --> 00:42:14.165
+to do the classification based on the, whether the,
+
+837
+00:42:14.585 --> 00:42:16.205
+you know, person has survived or not.
+
+838
+00:42:16.265 --> 00:42:18.285
+We are using the same titan data set.
+
+839
+00:42:20.305 --> 00:42:23.205
+We are using the accuracy metrics in this case, okay?
+
+840
+00:42:23.345 --> 00:42:26.805
+And we are also using the level code and min mix color
+
+841
+00:42:26.805 --> 00:42:29.365
+because in the dataset we we're having few attributes.
+
+842
+00:42:29.585 --> 00:42:32.165
+Uh, if you actually was in the last class,
+
+843
+00:42:32.225 --> 00:42:33.725
+you would be able to remember this one.
+
+844
+00:42:33.775 --> 00:42:37.765
+Let's just run this one, okay? And load the dataset.
+
+845
+00:42:38.355 --> 00:42:39.965
+Yeah, physical to ed.
+
+846
+00:42:41.485 --> 00:42:43.965
+I think I need to upload the data as well.
+
+847
+00:43:17.555 --> 00:43:20.175
+So I uploaded the data, okay? Already it,
+
+848
+00:43:22.265 --> 00:43:23.265
+Okay?
+
+849
+00:43:37.485 --> 00:43:38.855
+Alright, CS V
+
+850
+00:43:43.775 --> 00:43:45.805
+Again, the things we did in the last class,
+
+851
+00:43:45.895 --> 00:43:47.165
+we'll do the repeat, the same
+
+852
+00:43:47.355 --> 00:43:51.065
+Drop NA, okay,
+
+853
+00:43:57.905 --> 00:43:59.195
+Euro wrote and no sir
+
+854
+00:43:59.495 --> 00:44:03.555
+na, it should be.
+
+855
+00:44:04.895 --> 00:44:07.905
+No. Okay, that's just like a mistake,
+
+856
+00:44:08.055 --> 00:44:09.055
+Okay? Do you not drop
+
+857
+00:44:09.055 --> 00:44:09.505
+na?
+
+858
+00:44:09.805 --> 00:44:11.865
+Now what are the things we are dealing with?
+
+859
+00:44:12.665 --> 00:44:14.105
+I will go a little bit faster, okay?
+
+860
+00:44:14.105 --> 00:44:17.915
+State by stage, but no, apply this one head. Okay?
+
+861
+00:44:18.335 --> 00:44:20.915
+Now the features and everything that is there,
+
+862
+00:44:22.105 --> 00:44:23.105
+Okay? I'll
+
+863
+00:44:23.105 --> 00:44:25.395
+take a quick dip on this one.
+
+864
+00:44:34.535 --> 00:44:36.635
+So level encoder
+
+865
+00:44:36.975 --> 00:44:40.505
+and this one embarkment.
+
+866
+00:44:46.415 --> 00:44:49.355
+So we are doing the level encoding on the six
+
+867
+00:44:49.415 --> 00:44:50.595
+as well as the embarkment.
+
+868
+00:44:50.745 --> 00:44:54.325
+Fine. Once it is done,
+
+869
+00:44:57.085 --> 00:45:00.245
+what we need to do, huh?
+
+870
+00:45:00.585 --> 00:45:05.245
+And this features on, okay, now this features,
+
+871
+00:45:05.545 --> 00:45:08.405
+it is taking the p class, x, H, uh,
+
+872
+00:45:08.685 --> 00:45:11.125
+S-I-V-S-P, we embarked.
+
+873
+00:45:11.905 --> 00:45:13.925
+So we can reduce a few of them
+
+874
+00:45:14.065 --> 00:45:15.685
+or you can include all of these things.
+
+875
+00:45:15.825 --> 00:45:17.805
+So let's just keep this way, okay?
+
+876
+00:45:18.265 --> 00:45:19.525
+Now let's understand
+
+877
+00:45:19.525 --> 00:45:22.485
+what are the things we are having on this passenger id,
+
+878
+00:45:22.485 --> 00:45:24.205
+which is already removed, survived.
+
+879
+00:45:24.205 --> 00:45:27.085
+That is our target variable P class.
+
+880
+00:45:27.345 --> 00:45:28.925
+It is mostly categorical value.
+
+881
+00:45:28.985 --> 00:45:30.285
+1, 2, 3, something like that.
+
+882
+00:45:30.385 --> 00:45:33.845
+So we are taking this one name, we are dropping, uh, six.
+
+883
+00:45:33.865 --> 00:45:35.645
+We are keeping, okay, age.
+
+884
+00:45:35.645 --> 00:45:37.325
+We have to keep, because this is like
+
+885
+00:45:37.325 --> 00:45:38.565
+very important data set.
+
+886
+00:45:39.565 --> 00:45:43.485
+S-I-V-S-P. So this also categorical data, so not numeric
+
+887
+00:45:43.745 --> 00:45:44.765
+for this age only.
+
+888
+00:45:44.815 --> 00:45:47.725
+We'll be having a little bit of complexity for, uh,
+
+889
+00:45:47.725 --> 00:45:49.205
+calculation in this duration tree
+
+890
+00:45:49.945 --> 00:45:53.165
+and, uh, ticket price, uh, sorry, ticket name, fair,
+
+891
+00:45:53.435 --> 00:45:56.365
+fair will also have a, like a huge, you know, uh,
+
+892
+00:45:56.395 --> 00:46:00.205
+calculation thing and not, because it is not done manually
+
+893
+00:46:00.425 --> 00:46:03.205
+and we have don't have to do with the hands and all.
+
+894
+00:46:03.305 --> 00:46:05.965
+We can rely on the computer to like, you know,
+
+895
+00:46:06.345 --> 00:46:08.205
+use their C-P-U-G-P-U or DAM
+
+896
+00:46:08.345 --> 00:46:10.125
+and all those things to calculate
+
+897
+00:46:10.125 --> 00:46:11.405
+like behavior tasks and all.
+
+898
+00:46:11.505 --> 00:46:14.205
+Uh, because the data is fairly on lower in size,
+
+899
+00:46:14.205 --> 00:46:16.605
+we can like also include this in this.
+
+900
+00:46:16.605 --> 00:46:18.685
+Fear is an age, okay?
+
+901
+00:46:18.745 --> 00:46:21.565
+And other things are basically the categorical value.
+
+902
+00:46:22.345 --> 00:46:24.485
+Now, once we actually have this one,
+
+903
+00:46:24.625 --> 00:46:27.685
+the XY value are already then taken.
+
+904
+00:46:28.505 --> 00:46:30.965
+Now we'll go and do the trend test plate fine.
+
+905
+00:46:31.105 --> 00:46:34.045
+So we have to do this x strain in
+
+906
+00:46:36.055 --> 00:46:39.985
+X test by
+
+907
+00:46:43.305 --> 00:46:43.595
+test
+
+908
+00:46:48.035 --> 00:46:48.595
+splitter,
+
+909
+00:46:49.645 --> 00:46:50.835
+Sorry, X test.
+
+910
+00:46:51.555 --> 00:46:52.555
+TEST.
+
+911
+00:46:54.675 --> 00:46:57.665
+Oh, sorry, yeah, like, uh,
+
+912
+00:46:57.765 --> 00:46:59.505
+I'm getting used to this new keyboard.
+
+913
+00:46:59.565 --> 00:47:01.745
+So that is one of the problem that I'm having
+
+914
+00:47:02.705 --> 00:47:03.905
+a lot mistakes and all.
+
+915
+00:47:04.455 --> 00:47:05.705
+Okay? Anyways, that is there.
+
+916
+00:47:05.965 --> 00:47:09.185
+Now, uh, another thing you need to do on this random 42,
+
+917
+00:47:09.185 --> 00:47:13.865
+generally we keep whenever actually, uh, taking data, uh,
+
+918
+00:47:14.085 --> 00:47:16.105
+or you know, breaking the data into sub
+
+919
+00:47:16.935 --> 00:47:18.265
+smaller chunks and all.
+
+920
+00:47:18.725 --> 00:47:21.305
+So this randomly you're taking the data, but
+
+921
+00:47:21.585 --> 00:47:23.705
+whenever you are running the data, rerunning the code,
+
+922
+00:47:23.925 --> 00:47:27.185
+you are not getting every time the random values from the
+
+923
+00:47:27.185 --> 00:47:29.685
+entire data set, these values are fixed.
+
+924
+00:47:29.905 --> 00:47:31.685
+And every time you rerun the code
+
+925
+00:47:31.685 --> 00:47:33.565
+and all, you get the exact, you know,
+
+926
+00:47:33.875 --> 00:47:37.045
+this random values again from the entire dataset.
+
+927
+00:47:37.065 --> 00:47:39.525
+So your calculation for the acquisition,
+
+928
+00:47:39.585 --> 00:47:41.565
+all those things doesn't change.
+
+929
+00:47:41.625 --> 00:47:44.525
+So this is the random state is called 42 instead of 42.
+
+930
+00:47:44.585 --> 00:47:47.365
+You can apply any numbers that is like,
+
+931
+00:47:47.465 --> 00:47:49.085
+but the random state you have to apply.
+
+932
+00:47:52.175 --> 00:47:53.555
+Now once you've done that,
+
+933
+00:47:54.345 --> 00:47:55.475
+Okay, uh, now
+
+934
+00:47:57.985 --> 00:48:01.985
+Anything else we need to do, I don't think uhha scaler,
+
+935
+00:48:02.375 --> 00:48:04.865
+okay, because this is like a probabilistic, uh, thing
+
+936
+00:48:04.865 --> 00:48:06.305
+that we are calculating.
+
+937
+00:48:06.445 --> 00:48:09.105
+So you can skip the scaling part, fine,
+
+938
+00:48:11.335 --> 00:48:12.335
+Okay? That is
+
+939
+00:48:12.335 --> 00:48:12.625
+there,
+
+940
+00:48:25.075 --> 00:48:25.775
+no, this side.
+
+941
+00:48:26.715 --> 00:48:29.655
+Now like every algorithm you apply, basically
+
+942
+00:48:30.865 --> 00:48:32.695
+those are like two, three lines of code.
+
+943
+00:48:32.695 --> 00:48:35.775
+That is not the problem. So in this one also, uh,
+
+944
+00:48:36.115 --> 00:48:39.815
+we are creating the, you know, objects for the ry, okay?
+
+945
+00:48:39.835 --> 00:48:43.455
+In this duration classifier, which we included in this one,
+
+946
+00:48:44.555 --> 00:48:45.655
+Uh, this one,
+
+947
+00:48:45.665 --> 00:48:49.935
+Sorry, third leg learn three import re classifier.
+
+948
+00:48:50.275 --> 00:48:52.295
+So we are taking this RY classifier
+
+949
+00:48:52.295 --> 00:48:55.495
+and we are two train the model on the base of our data set.
+
+950
+00:48:56.155 --> 00:49:00.695
+Now, in this one ter, either you can go for this entropy
+
+951
+00:49:00.915 --> 00:49:02.575
+or you can go for the geni.
+
+952
+00:49:04.115 --> 00:49:06.295
+So based on your, you know, requirement
+
+953
+00:49:06.315 --> 00:49:07.815
+and the data complexity
+
+954
+00:49:07.815 --> 00:49:10.215
+and all, if the data complexity is very higher
+
+955
+00:49:10.235 --> 00:49:11.975
+and all, you can go for the geni,
+
+956
+00:49:12.085 --> 00:49:13.935
+otherwise you can stick to this, uh,
+
+957
+00:49:14.445 --> 00:49:16.175
+more popular the in P one.
+
+958
+00:49:16.285 --> 00:49:19.775
+Okay? Now the depth you are saying like whatever the like
+
+959
+00:49:19.775 --> 00:49:23.055
+maximum level of, you know, uh, trees depth can be there.
+
+960
+00:49:23.355 --> 00:49:26.535
+So this, you can do like hidden trial method on the basis
+
+961
+00:49:26.555 --> 00:49:27.775
+of the dataset as well.
+
+962
+00:49:28.765 --> 00:49:31.895
+Once you do that, again, we have to do model, do fit.
+
+963
+00:49:31.955 --> 00:49:34.855
+In this case also, we are doing the same trend
+
+964
+00:49:35.195 --> 00:49:39.015
+and for the AC receive checking, we are doing the, uh,
+
+965
+00:49:39.825 --> 00:49:41.055
+prediction of this one.
+
+966
+00:49:41.155 --> 00:49:42.975
+So there's a different line I'll
+
+967
+00:49:42.975 --> 00:49:43.975
+Do.
+
+968
+00:49:55.445 --> 00:49:57.065
+Now we are doing the white prediction
+
+969
+00:49:58.085 --> 00:50:01.655
+extract we are giving, and based on that we're calculating.
+
+970
+00:50:01.915 --> 00:50:02.655
+Now print
+
+971
+00:50:10.125 --> 00:50:11.125
+I see off
+
+972
+00:50:18.875 --> 00:50:19.095
+is,
+
+973
+00:50:24.775 --> 00:50:25.195
+is it
+
+974
+00:50:31.595 --> 00:50:32.595
+Okay? Understood.
+
+975
+00:50:32.595 --> 00:50:34.165
+I'll run this code
+
+976
+00:50:34.185 --> 00:50:36.245
+and let's see what is the output we are having?
+
+977
+00:50:37.035 --> 00:50:40.365
+Okay, that why train? I think capital Y was there.
+
+978
+00:50:49.635 --> 00:50:52.045
+Okay? So after training the model
+
+979
+00:50:52.065 --> 00:50:55.725
+and all, we are getting almost 81% accuracy.
+
+980
+00:50:55.725 --> 00:50:56.805
+That is the thing we are think.
+
+981
+00:50:57.145 --> 00:51:00.685
+So this is how you know the, like, you know, this
+
+982
+00:51:01.635 --> 00:51:03.135
+coding is very much simple
+
+983
+00:51:03.775 --> 00:51:06.255
+because you like write few lines of, you know,
+
+984
+00:51:06.275 --> 00:51:10.375
+so scripts on the, uh, chat G will be able to fetch the code
+
+985
+00:51:10.395 --> 00:51:12.855
+and you can like, uh, execute those things,
+
+986
+00:51:12.995 --> 00:51:15.415
+but understanding why to use this code, that is,
+
+987
+00:51:15.495 --> 00:51:18.775
+I do think like I get IV cannot like, uh,
+
+988
+00:51:18.775 --> 00:51:20.975
+teach you on direct in a shortcut manner.
+
+989
+00:51:21.035 --> 00:51:23.055
+You have to understand the algorithms and everything.
+
+990
+00:51:23.055 --> 00:51:26.095
+Then you can go and do these things, okay?
+
+991
+00:51:26.285 --> 00:51:28.815
+Once you know, okay, this is the data set I'm dealing with,
+
+992
+00:51:28.815 --> 00:51:31.095
+these are the stages I have to go through, then
+
+993
+00:51:31.815 --> 00:51:33.735
+I should be applying this model.
+
+994
+00:51:34.195 --> 00:51:37.015
+You can take the help of the like dataset, uh, like, uh,
+
+995
+00:51:37.015 --> 00:51:38.535
+the coding part and all from the chat,
+
+996
+00:51:38.695 --> 00:51:40.135
+GPT, Gemini, all those things.
+
+997
+00:51:40.235 --> 00:51:43.535
+But the knowledge for applying the switch algorithm
+
+998
+00:51:43.595 --> 00:51:45.855
+to apply, what are the stages I should be going through
+
+999
+00:51:46.075 --> 00:51:48.175
+for data cleaning and data reprocessing?
+
+1000
+00:51:48.245 --> 00:51:50.775
+That is more knowledge that is still required
+
+1001
+00:51:50.795 --> 00:51:53.175
+and I don't think currently, uh,
+
+1002
+00:51:53.275 --> 00:51:55.535
+the chat GPTs are not able to solve.
+
+1003
+00:51:56.325 --> 00:51:58.815
+Okay? Anyways, uh, I think I'll conclude the class.
+
+1004
+00:51:58.965 --> 00:52:01.455
+I'll share the, uh, this, uh, whole document,
+
+1005
+00:52:01.515 --> 00:52:04.095
+the two documents I created for this, uh, today's class,
+
+1006
+00:52:04.835 --> 00:52:06.495
+and, uh, based on that you do what?
+
+1007
+00:52:06.495 --> 00:52:09.615
+Ha another thing I forgot to tell you. Okay?
+
+1008
+00:52:13.875 --> 00:52:17.975
+Random forest in simple methods. So what is happening now?
+
+1009
+00:52:17.975 --> 00:52:19.295
+You know, what is recently,
+
+1010
+00:52:19.395 --> 00:52:21.255
+how it is calculated and all fine.
+
+1011
+00:52:21.915 --> 00:52:25.695
+Now, this random forest you have might have heard in simple,
+
+1012
+00:52:25.915 --> 00:52:27.335
+um, models we might have heard.
+
+1013
+00:52:27.555 --> 00:52:31.575
+So these algorithms just what it takes numerous amount
+
+1014
+00:52:31.675 --> 00:52:35.935
+of your, uh, decent trees and create the random forest.
+
+1015
+00:52:36.075 --> 00:52:38.295
+So it's a forest made out of decent trees.
+
+1016
+00:52:39.715 --> 00:52:44.015
+So you add like, uh, two or multiple, uh, decent trees
+
+1017
+00:52:44.075 --> 00:52:45.695
+and you can create a random forest.
+
+1018
+00:52:46.035 --> 00:52:47.815
+So that is the basis of the random forest
+
+1019
+00:52:48.155 --> 00:52:49.175
+and assemble methods.
+
+1020
+00:52:49.315 --> 00:52:52.575
+You also apply those, uh, models in a ratio way.
+
+1021
+00:52:53.075 --> 00:52:55.615
+So few of the models will be like, uh, having higher weight,
+
+1022
+00:52:55.635 --> 00:52:58.655
+uh, you know, uh, uh, weights
+
+1023
+00:52:58.655 --> 00:53:01.255
+and few of the models will be having the lower weights.
+
+1024
+00:53:01.435 --> 00:53:03.775
+So for your own task understanding,
+
+1025
+00:53:03.775 --> 00:53:05.175
+because you're a master student, I,
+
+1026
+00:53:05.175 --> 00:53:07.255
+once you understood this, you, you know,
+
+1027
+00:53:08.095 --> 00:53:10.855
+additionally I want you to explore this random forest enseal
+
+1028
+00:53:10.855 --> 00:53:14.295
+method and do practice on these algorithms as well.
+
+1029
+00:53:14.405 --> 00:53:16.295
+That is, that will be my request to you.
+
+1030
+00:53:16.355 --> 00:53:19.255
+So you'll have a better understanding of the decry
+
+1031
+00:53:19.255 --> 00:53:22.735
+and decry based, you know, uh, derived algorithms.
+
+1032
+00:53:22.735 --> 00:53:24.335
+That is a random forest enseal methods.
+
+1033
+00:53:24.765 --> 00:53:27.765
+Fine. I think I'll conclude the class,
+
+1034
+00:53:27.865 --> 00:53:29.045
+uh, for today. Uh,
+
+1035
+00:53:29.745 --> 00:53:31.645
+Uh, Here only.
+
+1036
+00:53:31.785 --> 00:53:33.605
+So if you're having any doubts and questions,
+
+1037
+00:53:35.725 --> 00:53:40.065
+So instead of, uh, uh, instead of using this entropy,
+
+1038
+00:53:40.085 --> 00:53:43.985
+if you give Jeanie any, like, uh, the output will change or
+
+1039
+00:53:44.525 --> 00:53:46.465
+Let, let, let's just see, okay, let's just see
+
+1040
+00:53:47.205 --> 00:53:48.785
+in, let's just use the
+
+1041
+00:53:48.875 --> 00:53:49.875
+Genie. Fine,
+
+1042
+00:53:49.875 --> 00:53:50.775
+
+1043
+00:53:51.325 --> 00:53:52.325
+Rerun the code.
+
+1044
+00:53:52.545 --> 00:53:54.285
+We have this 0.81
+
+1045
+00:53:54.695 --> 00:53:56.725
+Percentage, fine. Now
+
+1046
+00:53:56.755 --> 00:53:58.045
+Just rerun this code.
+
+1047
+00:53:58.585 --> 00:54:02.005
+We are having almost says 0.8108.
+
+1048
+00:54:02.105 --> 00:54:04.765
+We had the 0.8101,
+
+1049
+00:54:05.525 --> 00:54:08.165
+I guess a little bit higher on the genie in this case.
+
+1050
+00:54:08.465 --> 00:54:12.805
+No, sir. Same, Same, right? Yeah, yeah. Then
+
+1051
+00:54:13.005 --> 00:54:15.085
+I guess, uh, no changes in this data set.
+
+1052
+00:54:15.325 --> 00:54:17.525
+Actually, if you're having like complex data set
+
+1053
+00:54:17.525 --> 00:54:22.025
+and all the calculation, I think that will be, uh, like, uh,
+
+1054
+00:54:22.045 --> 00:54:23.265
+for this computation part
+
+1055
+00:54:23.265 --> 00:54:25.345
+and all that will be a, a different story.
+
+1056
+00:54:26.245 --> 00:54:29.185
+So drastic changes or, uh, like minimal,
+
+1057
+00:54:29.685 --> 00:54:31.785
+Not drastic, because the algorithms are same.
+
+1058
+00:54:31.785 --> 00:54:33.785
+Their calculation is a little bit different.
+
+1059
+00:54:34.245 --> 00:54:36.225
+One is calculating on the base of log,
+
+1060
+00:54:36.225 --> 00:54:38.465
+the calculation is higher based on entropy.
+
+1061
+00:54:39.085 --> 00:54:42.785
+Uh, gene is nonno logarithmic, so it is, uh,
+
+1062
+00:54:43.735 --> 00:54:46.185
+like much more easier on the, uh, computation.
+
+1063
+00:54:48.775 --> 00:54:52.535
+Okay, So why didn't we use the MinMax scaler here?
+
+1064
+00:54:53.085 --> 00:54:55.855
+Okay, uh, because, uh, in this one, uh,
+
+1065
+00:54:55.915 --> 00:54:58.815
+the three based algorithms, what is happening, uh,
+
+1066
+00:54:58.875 --> 00:55:01.775
+you are actually individually taking one of these, you know,
+
+1067
+00:55:01.825 --> 00:55:04.695
+attributes and calculating the entropy again,
+
+1068
+00:55:04.695 --> 00:55:06.375
+and everything doesn't matter.
+
+1069
+00:55:06.375 --> 00:55:08.135
+They're having higher values, lower values,
+
+1070
+00:55:08.395 --> 00:55:11.455
+so it won't affect the, you know, uh, choosing
+
+1071
+00:55:11.515 --> 00:55:13.815
+of the decent trees and decent nodes and all.
+
+1072
+00:55:14.515 --> 00:55:18.775
+So it is not having that, uh, impact, uh, where you are
+
+1073
+00:55:19.335 --> 00:55:20.935
+actually using this, uh, SVM
+
+1074
+00:55:20.995 --> 00:55:22.215
+or even those, uh,
+
+1075
+00:55:22.225 --> 00:55:23.815
+regression based model linear
+
+1076
+00:55:23.815 --> 00:55:25.095
+regression logistic regression.
+
+1077
+00:55:25.095 --> 00:55:28.855
+There, the biasness can occur in this one,
+
+1078
+00:55:28.915 --> 00:55:31.615
+it is like a much more resilient towards biasness.
+
+1079
+00:55:31.755 --> 00:55:32.755
+So you can skip those.
+
+1080
+00:55:34.295 --> 00:55:35.625
+Okay, sir? Yeah.
+
+1081
+00:55:37.725 --> 00:55:39.625
+Uh, but still if we want we can add it,
+
+1082
+00:55:39.625 --> 00:55:40.625
+Right? Yeah, yeah. Obviously
+
+1083
+00:55:40.625 --> 00:55:42.865
+it's a, like a good practice to have.
+
+1084
+00:55:43.495 --> 00:55:47.825
+Okay. Can we see the, can we see the decision tree,
+
+1085
+00:55:49.615 --> 00:55:51.415
+Decision tree as it Like, uh,
+
+1086
+00:55:52.215 --> 00:55:54.735
+I would actually deciding, I mean, overall it's going
+
+1087
+00:55:54.735 --> 00:55:58.735
+to use these features to decide on a, a specific, uh,
+
+1088
+00:55:59.005 --> 00:56:00.335
+test value to predict, right?
+
+1089
+00:56:00.925 --> 00:56:03.055
+Yeah. Let me see whether we can print the,
+
+1090
+00:56:03.915 --> 00:56:07.805
+Can we print the
+
+1091
+00:56:09.235 --> 00:56:11.615
+decision tree, um,
+
+1092
+00:56:13.155 --> 00:56:14.325
+make it learn,
+
+1093
+00:56:19.285 --> 00:56:19.505
+uh,
+
+1094
+00:56:21.325 --> 00:56:25.245
+If it is there, the explainable AI part is coming,
+
+1095
+00:56:25.585 --> 00:56:26.805
+uh, into play in this one.
+
+1096
+00:56:26.805 --> 00:56:29.205
+If it is there, if it is not there, there,
+
+1097
+00:56:29.205 --> 00:56:32.245
+like the same concept that we say the AI is,
+
+1098
+00:56:32.265 --> 00:56:34.045
+are like mostly black box.
+
+1099
+00:56:34.555 --> 00:56:36.765
+They take the input, they give you the output.
+
+1100
+00:56:36.765 --> 00:56:38.805
+They don't say whatever the things
+
+1101
+00:56:38.805 --> 00:56:40.165
+they're doing in this side.
+
+1102
+00:56:40.295 --> 00:56:42.485
+Let's see if they're doing this one.
+
+1103
+00:56:44.115 --> 00:56:48.095
+Uh, three fit.
+
+1104
+00:56:53.775 --> 00:56:54.285
+Let's see.
+
+1105
+00:56:54.795 --> 00:56:56.805
+Yeah, I'm, I'm mostly interested in
+
+1106
+00:56:56.805 --> 00:56:59.585
+how it is treating the age because it's a,
+
+1107
+00:57:00.525 --> 00:57:02.185
+Ah, Continuous value
+
+1108
+00:57:18.775 --> 00:57:19.825
+Feature names
+
+1109
+00:57:25.415 --> 00:57:27.585
+feature we can use this features.
+
+1110
+00:57:33.865 --> 00:57:35.625
+I think there's something called plot three in
+
+1111
+00:57:35.625 --> 00:57:36.705
+the documentation.
+
+1112
+00:57:37.235 --> 00:57:40.245
+Maybe it's maybe made up.
+
+1113
+00:57:47.915 --> 00:57:48.975
+No, we Had to put
+
+1114
+00:57:51.975 --> 00:57:53.035
+Export text.
+
+1115
+00:57:55.735 --> 00:57:59.495
+Uh, okay, this one we need to report.
+
+1116
+00:58:03.355 --> 00:58:07.015
+Let's just see. Okay,
+
+1117
+00:58:07.035 --> 00:58:08.815
+So this is how they have calculated.
+
+1118
+00:58:12.535 --> 00:58:14.395
+So the primary, you know,
+
+1119
+00:58:14.395 --> 00:58:17.935
+attribute they have taken the six followed by six.
+
+1120
+00:58:17.935 --> 00:58:21.935
+They have taken the age, okay, followed by the age,
+
+1121
+00:58:21.965 --> 00:58:25.855
+then fear, then other sorts of factors.
+
+1122
+00:58:31.005 --> 00:58:34.335
+Excuse me, sir. I have one doubt here. Yeah, sir.
+
+1123
+00:58:34.515 --> 00:58:37.655
+Uh, is there any impact for conditional probability here?
+
+1124
+00:58:39.045 --> 00:58:41.305
+Uh, conditional probability in this case,
+
+1125
+00:58:41.445 --> 00:58:43.905
+we are not introducing when we'll be, uh,
+
+1126
+00:58:44.295 --> 00:58:46.105
+delving into the name base.
+
+1127
+00:58:46.845 --> 00:58:49.305
+We directly actually apply this, uh,
+
+1128
+00:58:49.305 --> 00:58:50.985
+conditional probability in that one.
+
+1129
+00:58:51.965 --> 00:58:54.175
+Okay? Here we assume that, uh,
+
+1130
+00:58:54.915 --> 00:58:56.895
+We are actually calculating the, uh,
+
+1131
+00:58:56.895 --> 00:58:59.175
+individual probability for each of the attribute,
+
+1132
+00:58:59.395 --> 00:59:01.095
+not the like conditional probability.
+
+1133
+00:59:03.625 --> 00:59:07.045
+Yes, sir, but only, uh, in our referrals conditions.
+
+1134
+00:59:07.105 --> 00:59:08.455
+If, if,
+
+1135
+00:59:08.455 --> 00:59:11.295
+and only if certain things are satisfied, we are moving it
+
+1136
+00:59:11.295 --> 00:59:12.375
+to the other ways.
+
+1137
+00:59:12.635 --> 00:59:14.335
+Ah, that, that is like a, you know,
+
+1138
+00:59:14.425 --> 00:59:16.055
+three like structure we are creating,
+
+1139
+00:59:16.555 --> 00:59:20.495
+but we are not creating like a, if the windows will go, the
+
+1140
+00:59:20.495 --> 00:59:23.245
+what would be be happening to the weather, then, uh,
+
+1141
+00:59:23.275 --> 00:59:25.365
+what if I like, uh, go for, uh,
+
+1142
+00:59:25.365 --> 00:59:26.565
+playing tennis or something like that.
+
+1143
+00:59:26.905 --> 00:59:28.685
+The conditional probability is affecting
+
+1144
+00:59:28.755 --> 00:59:29.765
+each other's results.
+
+1145
+00:59:30.665 --> 00:59:32.125
+Uh, that is not the good here,
+
+1146
+00:59:32.155 --> 00:59:34.325
+here you are taking individual attributes
+
+1147
+00:59:34.345 --> 00:59:37.965
+and you're comparing against the final or target variable.
+
+1148
+00:59:38.395 --> 00:59:39.395
+That is the idea,
+
+1149
+00:59:40.475 --> 00:59:41.475
+Okay?
+
+1150
+00:59:42.145 --> 00:59:44.165
+Now combine all of these things together,
+
+1151
+00:59:44.195 --> 00:59:45.645
+then you get the final results.
+
+1152
+00:59:46.065 --> 00:59:50.205
+And in this, uh, like a algorithm, you are having directly
+
+1153
+00:59:50.265 --> 00:59:52.125
+to deal with this conditional probability,
+
+1154
+00:59:52.225 --> 00:59:54.725
+and we are trying to find out the final results and all.
+
+1155
+00:59:55.965 --> 01:00:00.885
+Okay, sir? Yeah.
+
+1156
+01:00:00.985 --> 01:00:02.325
+Any more doubts and questions?
+
+1157
+01:00:06.495 --> 01:00:09.235
+So, uh, here I choose the sex here.
+
+1158
+01:00:09.235 --> 01:00:12.355
+That's the root purely on the entropy, uh, value.
+
+1159
+01:00:12.625 --> 01:00:14.995
+That is it, and nothing relevant to how it's related
+
+1160
+01:00:15.015 --> 01:00:17.275
+to age or fair here, right? So,
+
+1161
+01:00:17.835 --> 01:00:20.035
+Hmm, fir first, uh, the, uh, root note will be
+
+1162
+01:00:20.605 --> 01:00:23.035
+based on this a, uh, sex only.
+
+1163
+01:00:23.455 --> 01:00:26.275
+In this case, I do think the females survived more
+
+1164
+01:00:26.275 --> 01:00:27.475
+in the stit dataset.
+
+1165
+01:00:27.585 --> 01:00:31.675
+Okay? Uh, because the data, whichever you are taken, if, uh,
+
+1166
+01:00:31.935 --> 01:00:35.595
+the, the females are there, they actually get like a,
+
+1167
+01:00:35.595 --> 01:00:37.195
+you know, whenever the panic sessions comes,
+
+1168
+01:00:37.195 --> 01:00:40.475
+something hazardous, we mostly give, give preference to the,
+
+1169
+01:00:40.815 --> 01:00:42.275
+and women for their own safety.
+
+1170
+01:00:42.775 --> 01:00:44.595
+Uh, then the men, uh, goes.
+
+1171
+01:00:44.855 --> 01:00:47.795
+So in this case, uh, the primary this, uh,
+
+1172
+01:00:48.095 --> 01:00:50.355
+female will be having much more higher
+
+1173
+01:00:50.355 --> 01:00:51.435
+chance of the survival.
+
+1174
+01:00:51.825 --> 01:00:54.155
+Then the age comes because the children will be there,
+
+1175
+01:00:54.155 --> 01:00:55.475
+which are having the lesser age,
+
+1176
+01:00:55.475 --> 01:00:57.315
+and all due to like, uh,
+
+1177
+01:00:57.455 --> 01:01:00.555
+to certain age only suppose they're like, uh,
+
+1178
+01:01:00.555 --> 01:01:04.635
+greater than 10, less than 20, they're having higher chances
+
+1179
+01:01:04.735 --> 01:01:06.715
+to survive if they're less than 10
+
+1180
+01:01:06.715 --> 01:01:09.755
+with this like environment and not, they don't survive.
+
+1181
+01:01:10.255 --> 01:01:13.115
+So based on this, I, I do think this, uh, like, uh,
+
+1182
+01:01:13.785 --> 01:01:15.675
+also the dataset has been formed
+
+1183
+01:01:15.775 --> 01:01:19.355
+and this calculation is also carried out or from them on the
+
+1184
+01:01:19.595 --> 01:01:24.305
+Derivation And each
+
+1185
+01:01:24.305 --> 01:01:26.025
+of the value that is there, you
+
+1186
+01:01:26.025 --> 01:01:27.025
+Can see.
+
+1187
+01:01:29.155 --> 01:01:32.235
+Okay, sir. Thank you. Okay.
+
+1188
+01:01:32.455 --> 01:01:34.435
+Uh, any other, uh, doubts and questions?
+
+1189
+01:01:36.295 --> 01:01:39.715
+Sir? Will we have an assignment for this class or no?
+
+1190
+01:01:40.215 --> 01:01:41.515
+Uh, you can skip this one. It
+
+1191
+01:01:41.515 --> 01:01:42.515
+Is. Okay.
+
+1192
+01:01:42.515 --> 01:01:42.665
+
+1193
+01:01:43.015 --> 01:01:47.635
+Uh, I, but highly I'll suggest you to go through this,
+
+1194
+01:01:47.655 --> 01:01:51.235
+you know, ex explore this, uh, Ry along
+
+1195
+01:01:51.235 --> 01:01:52.915
+with this random first method.
+
+1196
+01:01:52.925 --> 01:01:54.835
+Learn about these two models as well,
+
+1197
+01:01:54.985 --> 01:01:57.915
+because once you learn the Ry, these are like, uh,
+
+1198
+01:01:57.915 --> 01:02:00.115
+successful derive models from the RY
+
+1199
+01:02:00.175 --> 01:02:03.475
+and assemble method is very popular, uh,
+
+1200
+01:02:03.475 --> 01:02:05.315
+machine learning algorithm, it is like
+
+1201
+01:02:05.835 --> 01:02:07.955
+a little bit advanced, you can say.
+
+1202
+01:02:09.355 --> 01:02:14.265
+Sure, sir. Yeah. Okay.
+
+1203
+01:02:15.765 --> 01:02:17.405
+I guess, uh, I'll close the season now,
+
+1204
+01:02:19.215 --> 01:02:20.215
+Sir. Yes, yes.
+
+1205
+01:02:20.215 --> 01:02:20.215
+
+1206
+01:02:25.005 --> 01:02:25.355
+Thank.
