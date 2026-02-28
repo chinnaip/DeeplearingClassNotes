@@ -1,0 +1,7625 @@
+WEBVTT
+
+1
+00:15:01.955 --> 00:15:02.355
+Good morning.
+
+2
+00:15:02.825 --> 00:15:06.405
+Good morning, sir. Morning. Morning, sir.
+
+3
+00:15:07.845 --> 00:15:10.815
+Morning. Good ones.
+
+4
+00:15:14.595 --> 00:15:17.525
+Good morning, sir. Good morning. Good morning.
+
+5
+00:17:16.175 --> 00:17:20.135
+Good morning, sir. Good morning. Good.
+
+6
+00:18:16.345 --> 00:18:18.725
+So I guess we can start now.
+
+7
+00:18:19.025 --> 00:18:23.325
+Um, uh, okay. Has also joined.
+
+8
+00:18:23.435 --> 00:18:24.435
+Good morning, sir.
+
+9
+00:18:35.465 --> 00:18:36.805
+So Neil, how do we go?
+
+10
+00:18:38.665 --> 00:18:41.765
+Uh, yes, sir. So in the last class we have, uh, started
+
+11
+00:18:41.795 --> 00:18:45.605
+with R and n, and, uh, we had just made clear
+
+12
+00:18:45.605 --> 00:18:47.325
+with the sequential data why r
+
+13
+00:18:47.325 --> 00:18:49.365
+and n needs required only that much point.
+
+14
+00:18:50.345 --> 00:18:53.565
+Now we can go with RN architecture a little bit in depth.
+
+15
+00:18:55.095 --> 00:18:57.435
+So first up we can, uh, you can explain,
+
+16
+00:18:57.655 --> 00:19:00.915
+and then I will take them again to some examples and on.
+
+17
+00:19:02.935 --> 00:19:06.635
+So we'll, uh, today discuss about only this RN
+
+18
+00:19:06.635 --> 00:19:09.475
+and part, uh, not the lstm. And, you know,
+
+19
+00:19:09.695 --> 00:19:10.695
+Uh, yes, sir, yes.
+
+20
+00:19:10.905 --> 00:19:12.235
+Only rn. Yes.
+
+21
+00:19:12.825 --> 00:19:17.575
+Okay. Let me share this. Yes,
+
+22
+00:20:07.475 --> 00:20:10.925
+Some network issues slightly just sharing,
+
+23
+00:20:11.445 --> 00:20:12.805
+speaking some time.
+
+24
+00:20:30.435 --> 00:20:31.655
+Is my screen shared?
+
+25
+00:20:32.355 --> 00:20:36.655
+No, sir. No, sir. I, I'm going to share this.
+
+26
+00:21:08.785 --> 00:21:13.165
+Um, Sunni just, uh, uh, continue
+
+27
+00:21:13.345 --> 00:21:14.725
+for five minutes.
+
+28
+00:21:14.965 --> 00:21:17.205
+I will re reboot the system and join.
+
+29
+00:21:17.755 --> 00:21:20.005
+Okay, sir. Thanks. Yeah, until that point,
+
+30
+00:21:20.025 --> 00:21:21.445
+you can just discuss few points.
+
+31
+00:21:21.515 --> 00:21:22.515
+Yeah.
+
+32
+00:21:23.565 --> 00:21:25.295
+Okay, sir. My,
+
+33
+00:21:48.095 --> 00:21:48.385
+okay.
+
+34
+00:21:48.485 --> 00:21:52.825
+So, uh, as a quick recap, what we did in the, uh,
+
+35
+00:21:52.935 --> 00:21:55.425
+last class, I will just,
+
+36
+00:22:08.805 --> 00:22:13.065
+So in the last class, uh, uh, first of all,
+
+37
+00:22:13.125 --> 00:22:16.545
+we understood, uh, a clear difference, uh, that
+
+38
+00:22:16.575 --> 00:22:18.225
+what is the sequential data?
+
+39
+00:22:18.585 --> 00:22:20.745
+How or how is the nature of the sequential data
+
+40
+00:22:21.965 --> 00:22:24.305
+and how it is different from non-sequential data?
+
+41
+00:22:24.485 --> 00:22:27.065
+So in the case of non-sequential data, maybe the order,
+
+42
+00:22:27.605 --> 00:22:30.825
+the sequence doesn't matter much, right?
+
+43
+00:22:30.825 --> 00:22:31.945
+But at the sequential data,
+
+44
+00:22:31.965 --> 00:22:34.145
+unless you don't have that sequence
+
+45
+00:22:34.685 --> 00:22:38.825
+or context preserved, it'll be very difficult for the model,
+
+46
+00:22:38.885 --> 00:22:41.105
+the neural network model, which you're trying to build
+
+47
+00:22:41.565 --> 00:22:42.905
+to understand that context
+
+48
+00:22:43.405 --> 00:22:45.625
+and then to give you the output accordingly.
+
+49
+00:22:46.005 --> 00:22:49.825
+And we have seen that the a NN struggles with, with that,
+
+50
+00:22:49.885 --> 00:22:53.465
+uh, uh, in, in maintaining those sequence, A
+
+51
+00:22:53.465 --> 00:22:56.905
+and N also has, uh, uh, some more problems
+
+52
+00:22:57.675 --> 00:22:59.465
+while processing the sequential data.
+
+53
+00:22:59.565 --> 00:23:01.385
+And the first problem, what we discussed,
+
+54
+00:23:01.385 --> 00:23:05.705
+that if your sequential data like text, uh, uh,
+
+55
+00:23:06.135 --> 00:23:08.945
+text, which is in the variable length in size,
+
+56
+00:23:08.945 --> 00:23:10.345
+because once you have a corpus,
+
+57
+00:23:10.885 --> 00:23:13.825
+you will never have all the sentences
+
+58
+00:23:14.045 --> 00:23:15.345
+of equal length, right?
+
+59
+00:23:15.685 --> 00:23:18.665
+So the every sentence will be of, uh, uh,
+
+60
+00:23:18.665 --> 00:23:21.785
+or every sentence, uh, will be of slightly different length.
+
+61
+00:23:21.835 --> 00:23:24.145
+There is a possibility, high possibility of that, right?
+
+62
+00:23:24.895 --> 00:23:27.745
+Some sentences might be having the same length also,
+
+63
+00:23:27.745 --> 00:23:30.425
+but then overall, if you see the sentences will be
+
+64
+00:23:30.885 --> 00:23:32.465
+of different, different length.
+
+65
+00:23:33.205 --> 00:23:36.185
+But the requirement from the a n is
+
+66
+00:23:36.335 --> 00:23:39.945
+that you should have always fixed number of inputs,
+
+67
+00:23:39.995 --> 00:23:42.065
+which you have to feed to the a NN.
+
+68
+00:23:42.645 --> 00:23:46.005
+But my number of words are different in each sequence.
+
+69
+00:23:46.345 --> 00:23:47.885
+No, that's where there is a mismatch.
+
+70
+00:23:48.625 --> 00:23:52.925
+So model side requirement is you always feed me the fixed
+
+71
+00:23:52.925 --> 00:23:54.405
+number of tokens or words,
+
+72
+00:23:55.465 --> 00:23:59.365
+but when we see our sentence, the fixed number of words,
+
+73
+00:23:59.385 --> 00:24:01.365
+we can't be, sometimes there is only three words here.
+
+74
+00:24:01.365 --> 00:24:03.805
+Sometimes there might be four words here.
+
+75
+00:24:03.805 --> 00:24:05.525
+Sometimes there might be five words here.
+
+76
+00:24:05.755 --> 00:24:08.405
+That means that data structure is different,
+
+77
+00:24:08.495 --> 00:24:09.965
+model requirement is different,
+
+78
+00:24:09.965 --> 00:24:11.925
+and that's where there is a mismatch, okay?
+
+79
+00:24:12.545 --> 00:24:15.765
+So what we, what we talked, we can do,
+
+80
+00:24:16.105 --> 00:24:18.325
+we can fix this problem, okay?
+
+81
+00:24:18.325 --> 00:24:21.045
+If we, if at all, we try to use the ENN
+
+82
+00:24:21.265 --> 00:24:23.245
+and we want to fix this problem,
+
+83
+00:24:23.345 --> 00:24:25.085
+we can use this zero padding approach.
+
+84
+00:24:25.705 --> 00:24:28.045
+We can just see the maximum length
+
+85
+00:24:28.345 --> 00:24:30.325
+of a sentence in our whole corpus,
+
+86
+00:24:30.825 --> 00:24:33.085
+and then we can start padding zeros.
+
+87
+00:24:33.275 --> 00:24:36.205
+Okay? So every sentence will be of the equal length,
+
+88
+00:24:36.205 --> 00:24:38.165
+having some zeros added at the last,
+
+89
+00:24:38.865 --> 00:24:42.125
+and then we can feed all the sentences in
+
+90
+00:24:42.125 --> 00:24:43.245
+a similar way, right?
+
+91
+00:24:43.785 --> 00:24:46.485
+But this, this approach has its own problem.
+
+92
+00:24:46.665 --> 00:24:49.925
+The problem is, first of all, in this case, the number
+
+93
+00:24:49.945 --> 00:24:52.485
+of inputs will be in will increase massively.
+
+94
+00:24:52.975 --> 00:24:54.685
+Hence, computation will also increase.
+
+95
+00:24:55.255 --> 00:24:56.805
+Parameters will also increase.
+
+96
+00:24:56.805 --> 00:25:01.045
+Because if you have here 15 inputs, then 15 into three,
+
+97
+00:25:01.045 --> 00:25:03.005
+only 45 parameters are required.
+
+98
+00:25:03.025 --> 00:25:05.285
+If you will have a hundred inputs,
+
+99
+00:25:05.515 --> 00:25:06.925
+then maybe a hundred into three,
+
+100
+00:25:07.015 --> 00:25:08.765
+300 inputs would be required.
+
+101
+00:25:09.265 --> 00:25:10.925
+And we are just adding zeros
+
+102
+00:25:11.185 --> 00:25:13.165
+to make all the sentences of equal.
+
+103
+00:25:13.165 --> 00:25:16.245
+And so in every, in most of the cases, what will happen,
+
+104
+00:25:16.435 --> 00:25:20.245
+your sentence will not be equivalent to the maximum length
+
+105
+00:25:20.945 --> 00:25:22.365
+of a sentence in the corpus.
+
+106
+00:25:22.425 --> 00:25:25.205
+And hence, you're simply adding the zeros sum
+
+107
+00:25:25.345 --> 00:25:26.805
+and then parameters, you are,
+
+108
+00:25:27.605 --> 00:25:29.185
+or computation, first of all, increase.
+
+109
+00:25:29.205 --> 00:25:32.105
+And the parameters also, it has to be updated in
+
+110
+00:25:32.105 --> 00:25:33.625
+with the back position and all.
+
+111
+00:25:34.085 --> 00:25:37.265
+So these are the, these are all the issues.
+
+112
+00:25:37.415 --> 00:25:40.665
+What you can see what happens when you process the variable
+
+113
+00:25:40.665 --> 00:25:44.425
+length input with the ENN one more problem, what we talked,
+
+114
+00:25:44.425 --> 00:25:47.465
+if you can remember now, suppose somehow you manage it
+
+115
+00:25:48.115 --> 00:25:49.945
+parameters, computer resources
+
+116
+00:25:49.945 --> 00:25:52.865
+and everything, it is possible that at the test time,
+
+117
+00:25:54.285 --> 00:25:57.685
+a new sentence will come whose length will be even more than
+
+118
+00:25:57.685 --> 00:26:00.405
+what you had fixed at the training time here, okay?
+
+119
+00:26:00.405 --> 00:26:02.685
+And that time, again, that network will fail.
+
+120
+00:26:02.785 --> 00:26:04.925
+And there is always possibility of getting a new,
+
+121
+00:26:05.105 --> 00:26:08.925
+new sentence of having the more, more, uh, uh, length,
+
+122
+00:26:08.925 --> 00:26:10.085
+more number of words, right?
+
+123
+00:26:10.145 --> 00:26:11.365
+So this was another problem.
+
+124
+00:26:12.065 --> 00:26:16.165
+And this problem was, uh, we already talked that A and n,
+
+125
+00:26:16.165 --> 00:26:19.125
+because it's process, all the words parallelly right?
+
+126
+00:26:19.145 --> 00:26:21.365
+In the network, hence, it doesn't preserve the context.
+
+127
+00:26:21.585 --> 00:26:25.125
+At the same time it is processing. We are in LLM class.
+
+128
+00:26:25.505 --> 00:26:27.365
+So these, these nodes
+
+129
+00:26:27.365 --> 00:26:30.085
+or these neurons receives all these informations
+
+130
+00:26:30.395 --> 00:26:31.645
+equally, okay?
+
+131
+00:26:32.225 --> 00:26:33.965
+And hence, they don't able
+
+132
+00:26:33.985 --> 00:26:37.405
+to differentiate whether R has come first V has come later,
+
+133
+00:26:37.505 --> 00:26:41.405
+or whatever it is, whatever that, that sequence information,
+
+134
+00:26:41.405 --> 00:26:43.125
+it is not able to because everything we are
+
+135
+00:26:43.125 --> 00:26:44.365
+processing once, right?
+
+136
+00:26:44.985 --> 00:26:47.685
+So this is another problem, what we talked about in the,
+
+137
+00:26:48.185 --> 00:26:49.565
+in the case of ENN.
+
+138
+00:26:49.565 --> 00:26:54.445
+So overall, we talked like fixed input size, uh, um,
+
+139
+00:26:54.745 --> 00:26:56.765
+uh, of, uh, this is the nature of the feed
+
+140
+00:26:56.765 --> 00:26:59.605
+for one neural network, always expect the fixed input size.
+
+141
+00:27:00.115 --> 00:27:03.005
+Then it cannot handle the text, which is a sequential
+
+142
+00:27:03.845 --> 00:27:06.805
+variable length sequences, loss of order information.
+
+143
+00:27:06.805 --> 00:27:09.965
+Suppose we start feeding the text data
+
+144
+00:27:10.665 --> 00:27:12.405
+to the a NN order.
+
+145
+00:27:12.465 --> 00:27:14.725
+We are losing inefficient computation
+
+146
+00:27:14.725 --> 00:27:16.965
+and poor generalization, all these things we talked about.
+
+147
+00:27:17.465 --> 00:27:20.925
+And hence, we, we require a network, a neural network,
+
+148
+00:27:21.015 --> 00:27:22.365
+which can fix these problem,
+
+149
+00:27:22.375 --> 00:27:23.725
+which can address these problem.
+
+150
+00:27:24.435 --> 00:27:27.925
+What is the problem means a new neural network should handle
+
+151
+00:27:27.985 --> 00:27:29.325
+the variable length inputs.
+
+152
+00:27:29.945 --> 00:27:32.645
+It also preserve the order information.
+
+153
+00:27:33.425 --> 00:27:37.885
+And because your inputs, uh, the, the words in a sequence
+
+154
+00:27:39.165 --> 00:27:42.135
+will be, uh, handled, uh, eh, we want,
+
+155
+00:27:42.485 --> 00:27:45.815
+because, uh, we want the context to be preserved, right?
+
+156
+00:27:45.835 --> 00:27:49.855
+So somehow we want also the parameter, which is going,
+
+157
+00:27:50.315 --> 00:27:51.775
+or, uh, through these words,
+
+158
+00:27:51.785 --> 00:27:54.495
+while processing should also be shared so that
+
+159
+00:27:54.495 --> 00:27:57.455
+that information will go to the neuron, right?
+
+160
+00:27:57.535 --> 00:27:59.335
+That, okay, this, this, uh, uh,
+
+161
+00:27:59.335 --> 00:28:01.295
+somehow those information will go to the neuron
+
+162
+00:28:01.295 --> 00:28:04.215
+that this words and all I have already seen, right?
+
+163
+00:28:04.715 --> 00:28:06.415
+And it'll reduce the parameters
+
+164
+00:28:06.415 --> 00:28:07.775
+overall computations as well.
+
+165
+00:28:07.775 --> 00:28:09.415
+So share parameter across time
+
+166
+00:28:09.595 --> 00:28:11.455
+and maintain memory of the past input.
+
+167
+00:28:12.115 --> 00:28:14.695
+So all these are the requirement which this recurrent
+
+168
+00:28:14.765 --> 00:28:16.335
+network is going to address.
+
+169
+00:28:16.875 --> 00:28:19.615
+And at last we said this is the, this is the plan,
+
+170
+00:28:19.615 --> 00:28:22.375
+what we have for this RNN to, uh, approach.
+
+171
+00:28:22.395 --> 00:28:24.855
+So first we'll start with a simple RNN today,
+
+172
+00:28:25.515 --> 00:28:28.255
+and then we'll talk about the back replication a little bit.
+
+173
+00:28:28.285 --> 00:28:30.775
+Then we'll jump into the S-T-M-G-R-U, then we'll go
+
+174
+00:28:30.775 --> 00:28:32.695
+to the deep RNN and bidirectional.
+
+175
+00:28:33.275 --> 00:28:34.775
+So this is what we covered.
+
+176
+00:28:35.015 --> 00:28:36.695
+I, sir has also covered the same thing,
+
+177
+00:28:36.695 --> 00:28:39.055
+and I had also given you some, uh,
+
+178
+00:28:39.125 --> 00:28:40.815
+with the examples, the same perspective.
+
+179
+00:28:41.105 --> 00:28:43.335
+Maybe if you have any questions still that you can ask.
+
+180
+00:28:43.355 --> 00:28:45.015
+And then we'll go to the next.
+
+181
+00:28:47.815 --> 00:28:51.075
+Sir, one question sharing across the parameters, is it
+
+182
+00:28:51.075 --> 00:28:52.275
+to only the weight, sir?
+
+183
+00:28:52.815 --> 00:28:56.035
+Shared? Wait, wait. Yeah.
+
+184
+00:28:56.035 --> 00:28:57.115
+We'll, we'll show that the
+
+185
+00:28:57.115 --> 00:28:58.475
+architecture, it'll be more clear.
+
+186
+00:28:58.585 --> 00:29:02.285
+What does it mean? Yeah, I'm sharing my screen.
+
+187
+00:29:03.865 --> 00:29:06.485
+Yes. See that kindly confirm.
+
+188
+00:29:09.705 --> 00:29:14.155
+Otherwise, you may have to share. Yes, sir. I'll just
+
+189
+00:29:14.185 --> 00:29:15.185
+Confirm you.
+
+190
+00:29:18.885 --> 00:29:20.625
+Is it coming? My No,
+
+191
+00:29:20.625 --> 00:29:21.625
+No, no, no, sir. No,
+
+192
+00:29:21.625 --> 00:29:22.465
+sir. I'll share.
+
+193
+00:29:25.675 --> 00:29:28.255
+And then you come here, there is some issue here.
+
+194
+00:29:28.805 --> 00:29:30.455
+Yeah, I just share Second. Second.
+
+195
+00:29:40.205 --> 00:29:41.605
+Any other Question from anyone?
+
+196
+00:29:44.875 --> 00:29:45.165
+Yeah,
+
+197
+00:29:53.955 --> 00:29:54.955
+Yeah, Yeah.
+
+198
+00:29:55.665 --> 00:30:00.005
+Uh, so we have covered till here. Go down, go down, go down.
+
+199
+00:30:00.005 --> 00:30:02.045
+Up to this point, yes, you can.
+
+200
+00:30:02.045 --> 00:30:04.685
+You can go for the screen more.
+
+201
+00:30:05.745 --> 00:30:05.965
+Yes.
+
+202
+00:30:11.585 --> 00:30:13.085
+Any, any questions from any of you
+
+203
+00:30:13.945 --> 00:30:16.285
+see the sequence modeling as, uh, Dr.
+
+204
+00:30:16.495 --> 00:30:20.405
+Sunil was mentioning, even though, see, both
+
+205
+00:30:20.405 --> 00:30:22.245
+of us are trying to repeat,
+
+206
+00:30:22.385 --> 00:30:24.485
+but there's a very, very crucial link.
+
+207
+00:30:25.385 --> 00:30:29.325
+How essentially we capture the sequence knowledge, um,
+
+208
+00:30:30.665 --> 00:30:33.125
+in a neural network is a very, very important concept
+
+209
+00:30:33.195 --> 00:30:35.445
+that we have to get hold onto.
+
+210
+00:30:36.785 --> 00:30:40.965
+Um, otherwise, uh, the conventional, um,
+
+211
+00:30:41.995 --> 00:30:45.445
+multi-layer perception is essentially
+
+212
+00:30:45.505 --> 00:30:47.565
+to capture a snapshot like thing.
+
+213
+00:30:47.665 --> 00:30:49.645
+The sequence has no meaning there.
+
+214
+00:30:50.465 --> 00:30:53.125
+So that is where, uh, the whole thing, uh,
+
+215
+00:30:53.625 --> 00:30:55.005
+the current neur network, uh,
+
+216
+00:30:55.525 --> 00:30:57.445
+I think came into picture in the last session.
+
+217
+00:30:57.635 --> 00:31:00.565
+Also, we explained about pictorially.
+
+218
+00:31:01.145 --> 00:31:04.485
+Uh, an RA is represented like this in the literature,
+
+219
+00:31:05.265 --> 00:31:08.285
+so you should not be confused by no, there are only one
+
+220
+00:31:08.285 --> 00:31:09.285
+or two, three neurons
+
+221
+00:31:09.285 --> 00:31:10.485
+or something just
+
+222
+00:31:10.485 --> 00:31:13.325
+as a compact representation they are mentioning.
+
+223
+00:31:14.715 --> 00:31:19.335
+And second thing is, um, on this, uh, uh, hedge node,
+
+224
+00:31:19.345 --> 00:31:22.215
+which is representing all the hidden layers,
+
+225
+00:31:23.115 --> 00:31:25.495
+the sequence knowledge is captured in the hidden layers,
+
+226
+00:31:25.635 --> 00:31:29.375
+and then pass it on from one position
+
+227
+00:31:29.375 --> 00:31:31.055
+to the next position in the sequence,
+
+228
+00:31:31.155 --> 00:31:31.895
+or one timing
+
+229
+00:31:35.405 --> 00:31:36.455
+instant to the next.
+
+230
+00:31:36.725 --> 00:31:38.135
+That is what it indicates.
+
+231
+00:31:39.455 --> 00:31:42.695
+Actually, we may not study as a part of this, uh,
+
+232
+00:31:42.695 --> 00:31:47.495
+deep learning, but, um, cd, just like all these,
+
+233
+00:31:47.555 --> 00:31:48.935
+uh, neural network architectures
+
+234
+00:31:48.935 --> 00:31:50.495
+that we are studying are all feed forward
+
+235
+00:31:51.235 --> 00:31:52.855
+neural network architectures.
+
+236
+00:31:53.205 --> 00:31:56.055
+That means, say the data flows from
+
+237
+00:31:56.635 --> 00:31:58.215
+the input layer to the output layer.
+
+238
+00:31:59.355 --> 00:32:02.255
+And recurrent neural network is also a feed
+
+239
+00:32:02.445 --> 00:32:03.655
+forward neural network.
+
+240
+00:32:04.565 --> 00:32:09.535
+Okay? So in, in that condition, um, that mr,
+
+241
+00:32:09.775 --> 00:32:11.655
+a signal flow happens from input layer output,
+
+242
+00:32:11.685 --> 00:32:14.015
+then we are showing an arrow which is coming back.
+
+243
+00:32:14.155 --> 00:32:15.295
+It should not be confused
+
+244
+00:32:15.325 --> 00:32:18.495
+with the feedback neural network in the feedback neural
+
+245
+00:32:18.495 --> 00:32:21.415
+network, the signal flow happens in the, uh,
+
+246
+00:32:21.455 --> 00:32:22.455
+backward direction.
+
+247
+00:32:22.455 --> 00:32:24.095
+Here, there is nothing. It's still a field
+
+248
+00:32:24.095 --> 00:32:25.255
+forward architecture.
+
+249
+00:32:28.395 --> 00:32:30.685
+This, this loop is just to indicate
+
+250
+00:32:30.685 --> 00:32:32.965
+that the weight parameters of the run layers,
+
+251
+00:32:34.115 --> 00:32:36.325
+that knowledge is passed from one
+
+252
+00:32:36.645 --> 00:32:37.805
+position to the next position.
+
+253
+00:32:37.985 --> 00:32:42.215
+That's all it means. Okay, next slide.
+
+254
+00:32:42.215 --> 00:32:46.635
+Uh, so yeah,
+
+255
+00:32:47.255 --> 00:32:51.595
+so, uh, now just, uh, uh, for your information,
+
+256
+00:32:53.255 --> 00:32:57.115
+the recurrent neural network concept were proposed way back
+
+257
+00:32:57.115 --> 00:33:01.315
+in 1986 by, um,
+
+258
+00:33:01.885 --> 00:33:03.995
+again, know a contemporary of, uh,
+
+259
+00:33:04.255 --> 00:33:06.635
+or Jeffrey intern and all those things.
+
+260
+00:33:06.995 --> 00:33:11.355
+Al Hart, his name is Al Har, uh, he proposed,
+
+261
+00:33:14.065 --> 00:33:15.685
+he and his team proposed
+
+262
+00:33:16.545 --> 00:33:18.965
+and neur network architecture, they called it
+
+263
+00:33:19.205 --> 00:33:20.845
+as a current neural networks for
+
+264
+00:33:22.165 --> 00:33:23.605
+modeling the sequence information.
+
+265
+00:33:25.035 --> 00:33:29.815
+So essentially, they mentioned them
+
+266
+00:33:30.075 --> 00:33:33.335
+as a family of neural networks meant
+
+267
+00:33:33.355 --> 00:33:35.175
+for processing the sequential data.
+
+268
+00:33:36.315 --> 00:33:39.855
+And again, no, this is also motivated from
+
+269
+00:33:40.515 --> 00:33:43.855
+the CNN architecture, uh, which we studied earlier,
+
+270
+00:33:44.145 --> 00:33:46.935
+which was meant for processing a grid of values.
+
+271
+00:33:47.675 --> 00:33:50.535
+The X will be a, typically when they propose it
+
+272
+00:33:50.535 --> 00:33:51.615
+to the two dimensional data,
+
+273
+00:33:53.185 --> 00:33:56.765
+and a two dimensional data is divided into smaller blocks,
+
+274
+00:33:57.875 --> 00:34:01.655
+and a very small block is processed parallelly
+
+275
+00:34:02.515 --> 00:34:03.975
+to model the information
+
+276
+00:34:04.005 --> 00:34:08.535
+because the neighborhood carries, uh, um, uh, information,
+
+277
+00:34:08.535 --> 00:34:12.695
+which will help, uh, to model knowledge about a particular
+
+278
+00:34:13.265 --> 00:34:15.415
+focus point there in the grid.
+
+279
+00:34:15.885 --> 00:34:19.655
+Okay? In the same way, uh,
+
+280
+00:34:20.075 --> 00:34:25.025
+in the recurrent neur network, they visualize
+
+281
+00:34:26.325 --> 00:34:28.385
+the recurrent neur network as a neural network
+
+282
+00:34:28.535 --> 00:34:32.185
+that is specialized for processing a sequence of values.
+
+283
+00:34:32.325 --> 00:34:37.105
+For example, XF one, XF two of three, et cetera, X of two.
+
+284
+00:34:38.015 --> 00:34:41.185
+This, the indices in the bracket represent
+
+285
+00:34:42.445 --> 00:34:45.705
+the position in the sequence or the order in the sequence.
+
+286
+00:34:47.035 --> 00:34:50.665
+And, um, suppose if I take, uh,
+
+287
+00:34:50.985 --> 00:34:55.905
+a speech recognition task, the input sequence can be
+
+288
+00:34:58.195 --> 00:35:00.955
+a sequence of feature vectors, say XF one,
+
+289
+00:35:01.215 --> 00:35:02.235
+XF two, et cetera.
+
+290
+00:35:03.155 --> 00:35:06.015
+Uh, means I have a recorded speed signal
+
+291
+00:35:06.795 --> 00:35:10.415
+and I'm processing them to extract the feature vectors
+
+292
+00:35:11.155 --> 00:35:14.455
+and the feature extracted for each frame of data.
+
+293
+00:35:14.465 --> 00:35:16.895
+Frame one is XF one, feature vector.
+
+294
+00:35:17.305 --> 00:35:19.375
+Frame two is XF two feature vector,
+
+295
+00:35:19.475 --> 00:35:22.615
+and frame three is XF three and so on.
+
+296
+00:35:23.195 --> 00:35:26.815
+And whereas the output, uh, can be a text, uh,
+
+297
+00:35:27.855 --> 00:35:28.935
+sequence of text words, whatever.
+
+298
+00:35:28.995 --> 00:35:33.495
+Now, for example, um, um, if I say,
+
+299
+00:35:34.115 --> 00:35:37.845
+um, assume that, uh,
+
+300
+00:35:38.685 --> 00:35:41.845
+I record a speech signal for the phrase
+
+301
+00:35:42.965 --> 00:35:47.165
+recurrent neural network is the, uh, sequence
+
+302
+00:35:47.225 --> 00:35:49.525
+of words in the text format.
+
+303
+00:35:49.625 --> 00:35:51.365
+It has only three words. Recurrent neural network.
+
+304
+00:35:51.915 --> 00:35:55.685
+That is why one Y two, Y three, whereas the speech recorded
+
+305
+00:35:55.865 --> 00:35:59.445
+for this world recurrent neur network, when we extract it
+
+306
+00:35:59.445 --> 00:36:03.005
+as features, it represents x of one, x of two, x of three,
+
+307
+00:36:03.295 --> 00:36:05.965
+maybe some hundred feature vectors are there.
+
+308
+00:36:06.085 --> 00:36:08.005
+X of one, two x of hundred will be there.
+
+309
+00:36:08.555 --> 00:36:11.645
+That needs to be converted into Y one, Y two, Y three,
+
+310
+00:36:11.645 --> 00:36:14.445
+where Y one is recurrent, Y two is neural,
+
+311
+00:36:14.825 --> 00:36:19.405
+and Y three is, uh, um, network as a neural network.
+
+312
+00:36:19.585 --> 00:36:20.845
+So that is nothing
+
+313
+00:36:20.985 --> 00:36:24.845
+but this, no, that is an example of, uh, um,
+
+314
+00:36:25.815 --> 00:36:28.125
+model training and test training purpose
+
+315
+00:36:28.225 --> 00:36:29.365
+of the neural network.
+
+316
+00:36:30.385 --> 00:36:35.085
+The point I wanted to emphasize is there is no relation
+
+317
+00:36:35.085 --> 00:36:36.645
+between the time indices
+
+318
+00:36:36.905 --> 00:36:40.245
+or sequence position indices of the input and the output.
+
+319
+00:36:40.905 --> 00:36:43.285
+In this case, as I was telling you, when I take,
+
+320
+00:36:43.395 --> 00:36:45.765
+when I record this P signal for a grand neural network
+
+321
+00:36:46.705 --> 00:36:49.125
+and convert them to sequence of feature vectors,
+
+322
+00:36:49.705 --> 00:36:53.085
+it can be having say, 50 feature vectors.
+
+323
+00:36:53.395 --> 00:36:55.325
+Then first feature vector is X of one.
+
+324
+00:36:55.325 --> 00:36:56.725
+Second feature vector is x of two,
+
+325
+00:36:56.725 --> 00:37:01.125
+and so on X of 50, whereas the output when it is decoded,
+
+326
+00:37:01.125 --> 00:37:02.645
+there are only three positions.
+
+327
+00:37:03.285 --> 00:37:06.285
+YF one is recurrent, YF two is neural,
+
+328
+00:37:06.545 --> 00:37:07.885
+and YF three is network.
+
+329
+00:37:08.385 --> 00:37:10.925
+That's all I need to convert the input sequence.
+
+330
+00:37:11.375 --> 00:37:15.285
+50 feature vectors into three words in the output.
+
+331
+00:37:16.275 --> 00:37:18.285
+Similarly suppose, um,
+
+332
+00:37:18.625 --> 00:37:21.485
+the same recurrent neural network I generate next,
+
+333
+00:37:21.765 --> 00:37:24.805
+I generate the speech for the same sequence of three words.
+
+334
+00:37:25.035 --> 00:37:27.885
+Next time it can be a, it can be a four,
+
+335
+00:37:27.905 --> 00:37:32.445
+it can have 47 feature vectors, then x
+
+336
+00:37:32.465 --> 00:37:37.015
+of X one, x two, et cetera, X 48,
+
+337
+00:37:37.085 --> 00:37:39.655
+whereas the output is still remains at Y one, Y two,
+
+338
+00:37:39.695 --> 00:37:40.815
+Y three, and so on.
+
+339
+00:37:40.815 --> 00:37:44.895
+So that is, that means the input sequence changes in length
+
+340
+00:37:45.835 --> 00:37:48.335
+and, uh, the output sequence can be fixed
+
+341
+00:37:48.515 --> 00:37:50.335
+or it can also change in length.
+
+342
+00:37:50.915 --> 00:37:53.775
+But at this point of time, I just want to say that
+
+343
+00:37:54.475 --> 00:37:58.375
+we should not, uh, uh, no, um,
+
+344
+00:37:59.845 --> 00:38:03.455
+have a view that, um, the
+
+345
+00:38:04.495 --> 00:38:07.255
+sequence input and output sequence will have same length
+
+346
+00:38:08.165 --> 00:38:11.555
+input and output sequence length can be different
+
+347
+00:38:12.935 --> 00:38:15.755
+in each example for training
+
+348
+00:38:17.185 --> 00:38:18.965
+and each example for test,
+
+349
+00:38:19.635 --> 00:38:21.765
+because I'm, I'm slightly worried in this slide,
+
+350
+00:38:21.845 --> 00:38:23.725
+I have mentioned it as X one, x two X extend,
+
+351
+00:38:23.725 --> 00:38:27.165
+and Y one, Y 2 8 10, we should not mistake that.
+
+352
+00:38:27.185 --> 00:38:29.845
+No, whether there are 10 value in the sequence
+
+353
+00:38:29.845 --> 00:38:32.925
+and 10 will be map into 10 values in the output.
+
+354
+00:38:33.785 --> 00:38:36.565
+Why, you know, while writing, we might have done that,
+
+355
+00:38:36.705 --> 00:38:39.765
+but there is no relation between the length
+
+356
+00:38:39.785 --> 00:38:41.845
+of the sequence in the input and the output.
+
+357
+00:38:42.985 --> 00:38:44.715
+Okay, next slide.
+
+358
+00:38:48.975 --> 00:38:53.195
+So I think, uh, I, I also emphasize it many times, uh,
+
+359
+00:38:53.225 --> 00:38:55.155
+that Sunil was also mentioning.
+
+360
+00:38:55.255 --> 00:38:58.475
+Now the key idea, the key idea
+
+361
+00:38:59.135 --> 00:39:01.675
+in moving from this multi-layer percept arm
+
+362
+00:39:02.095 --> 00:39:05.555
+or whatever network that we have studied so far
+
+363
+00:39:07.455 --> 00:39:11.395
+to recurrent neur network is sharing parameters across
+
+364
+00:39:11.395 --> 00:39:13.235
+different parts of the model,
+
+365
+00:39:14.215 --> 00:39:17.545
+sharing parameters across different parts of the model.
+
+366
+00:39:18.685 --> 00:39:23.465
+Um, essentially, um, for example,
+
+367
+00:39:24.405 --> 00:39:25.705
+the different parts
+
+368
+00:39:25.725 --> 00:39:28.385
+of the model means I will take the same example.
+
+369
+00:39:28.865 --> 00:39:32.625
+I recorded the speech signal for the sequence of words,
+
+370
+00:39:32.945 --> 00:39:34.545
+a phrase that's a network.
+
+371
+00:39:35.425 --> 00:39:40.395
+I take the first feature vector XF one, using that, say
+
+372
+00:39:40.995 --> 00:39:44.385
+I compute some weight parameters, okay?
+
+373
+00:39:45.165 --> 00:39:48.825
+And, uh, then I move to the next position, XF two.
+
+374
+00:39:50.615 --> 00:39:53.195
+XF two is the input value I'm getting
+
+375
+00:39:54.215 --> 00:39:57.755
+and, uh, while processing XF two
+
+376
+00:39:58.855 --> 00:40:00.675
+to update the weight parameters.
+
+377
+00:40:02.515 --> 00:40:06.855
+And I not only consider the information given by XF two,
+
+378
+00:40:08.395 --> 00:40:13.155
+I will also consider the information that was present, uh,
+
+379
+00:40:13.655 --> 00:40:18.195
+in frame X one, but I don't connect it directly to the X two
+
+380
+00:40:18.215 --> 00:40:20.275
+or the X two position from X one.
+
+381
+00:40:21.275 --> 00:40:24.235
+I have captured whatever information available in X one in
+
+382
+00:40:24.235 --> 00:40:26.395
+the form of the weights in the hidden layers,
+
+383
+00:40:27.755 --> 00:40:31.295
+and the weights in the hidden layers from the previous
+
+384
+00:40:31.565 --> 00:40:32.695
+timestamp position.
+
+385
+00:40:34.185 --> 00:40:37.785
+X one, I call it as H one, that weights from
+
+386
+00:40:37.815 --> 00:40:41.185
+that position are used along with the weights associated
+
+387
+00:40:41.185 --> 00:40:43.185
+with X two to update the weights
+
+388
+00:40:43.185 --> 00:40:45.345
+for this position of the hidden layers.
+
+389
+00:40:45.645 --> 00:40:47.985
+So that is what is the sharing parameters
+
+390
+00:40:48.065 --> 00:40:49.425
+across different parts of product.
+
+391
+00:40:49.755 --> 00:40:50.825
+We'll see that when you go
+
+392
+00:40:50.825 --> 00:40:52.185
+to the next pictorial representation.
+
+393
+00:40:53.125 --> 00:40:56.565
+So essentially, uh,
+
+394
+00:40:56.705 --> 00:41:00.005
+it involves sharing parameters across different hidden
+
+395
+00:41:00.005 --> 00:41:03.285
+layers as opposed to independent weights.
+
+396
+00:41:03.285 --> 00:41:06.525
+In the case of multi-layer perceptor, so this,
+
+397
+00:41:06.655 --> 00:41:08.685
+maybe you have to pause for a while
+
+398
+00:41:08.705 --> 00:41:13.285
+and think over, um, if, if I visualize, um,
+
+399
+00:41:13.685 --> 00:41:15.085
+a multilayer percept run,
+
+400
+00:41:16.635 --> 00:41:19.945
+every link weight is unique.
+
+401
+00:41:20.915 --> 00:41:25.145
+There is no, uh, sharing of that value with any other link.
+
+402
+00:41:25.405 --> 00:41:28.505
+So I have a new feedforward network structure,
+
+403
+00:41:29.505 --> 00:41:30.985
+a multilayer ance structure.
+
+404
+00:41:31.955 --> 00:41:34.365
+Every link is given one weight parameter
+
+405
+00:41:35.565 --> 00:41:38.185
+and, um, that will remain unique.
+
+406
+00:41:38.315 --> 00:41:41.625
+There is no sharing across in another link
+
+407
+00:41:41.625 --> 00:41:43.145
+or another layer or something.
+
+408
+00:41:43.365 --> 00:41:45.345
+So that is the unique characteristics
+
+409
+00:41:45.345 --> 00:41:46.585
+of multi-layer perception.
+
+410
+00:41:48.635 --> 00:41:52.165
+Whereas in case of recurrent network, we share
+
+411
+00:41:52.165 --> 00:41:54.285
+that parameters why we share that parameters
+
+412
+00:41:54.755 --> 00:41:58.365
+that essentially is expected to model the sequence knowledge
+
+413
+00:41:58.365 --> 00:42:01.805
+that Mr say what was present in the, uh,
+
+414
+00:42:01.905 --> 00:42:03.165
+in the previous position,
+
+415
+00:42:06.495 --> 00:42:11.375
+that knowledge is, um, carried
+
+416
+00:42:11.755 --> 00:42:14.455
+by the weights in the layer parameters.
+
+417
+00:42:14.595 --> 00:42:18.615
+Now I will add that to the knowledge
+
+418
+00:42:18.615 --> 00:42:20.735
+that is being exhibited by the current position
+
+419
+00:42:20.875 --> 00:42:22.175
+and then update this one.
+
+420
+00:42:22.195 --> 00:42:26.515
+So that means to say, as I go on sharing, maybe
+
+421
+00:42:27.495 --> 00:42:31.515
+saying other ways, assume that, uh,
+
+422
+00:42:31.655 --> 00:42:34.395
+in a multilayer perception, I have 48 feature vectors,
+
+423
+00:42:34.755 --> 00:42:38.755
+I apply first feature vector and update the weights,
+
+424
+00:42:40.005 --> 00:42:42.905
+and, um, I apply second feature vector,
+
+425
+00:42:43.045 --> 00:42:46.425
+but need not be X two randomly anyone out of that four eight
+
+426
+00:42:47.425 --> 00:42:48.885
+and update the weights.
+
+427
+00:42:49.305 --> 00:42:52.325
+Update the weights means what happens is, um,
+
+428
+00:42:53.295 --> 00:42:56.005
+there is no provision in the hidden layer structure,
+
+429
+00:42:56.255 --> 00:42:59.725
+other neural network structure that you,
+
+430
+00:43:00.105 --> 00:43:03.205
+you org you join the information available
+
+431
+00:43:03.345 --> 00:43:04.765
+by both the weights or something,
+
+432
+00:43:04.825 --> 00:43:06.285
+you just update the weights.
+
+433
+00:43:06.395 --> 00:43:10.005
+That is to say, um, uh,
+
+434
+00:43:10.595 --> 00:43:13.565
+there's no almost like a replacement of the weights,
+
+435
+00:43:13.755 --> 00:43:17.685
+whereas here, it's like a fractional update like thing will
+
+436
+00:43:17.685 --> 00:43:19.645
+happen, uh, as I move from one
+
+437
+00:43:19.925 --> 00:43:21.045
+position to the other position.
+
+438
+00:43:21.555 --> 00:43:23.205
+Okay? Then, um,
+
+439
+00:43:24.865 --> 00:43:29.405
+but why this sharing of parameters, um, or
+
+440
+00:43:29.405 --> 00:43:31.725
+otherwise, no, I would've just captured the sequence
+
+441
+00:43:31.725 --> 00:43:34.485
+knowledge in each position and kept it separately.
+
+442
+00:43:35.025 --> 00:43:37.925
+But why the sharing of thing happens, mainly
+
+443
+00:43:37.925 --> 00:43:42.125
+because the sequence lens are different from one example
+
+444
+00:43:42.145 --> 00:43:46.445
+to the other example, I will not be able to, you know, uh,
+
+445
+00:43:46.705 --> 00:43:50.165
+handle that variable sequence length if I don't have this
+
+446
+00:43:50.195 --> 00:43:51.485
+sharing of parameters.
+
+447
+00:43:51.505 --> 00:43:55.165
+It is almost like, you know, folding unfolding, for example,
+
+448
+00:43:55.945 --> 00:43:59.445
+on an average, the number of feature vectors are 45
+
+449
+00:44:00.355 --> 00:44:02.565
+some in one example is 45.
+
+450
+00:44:02.565 --> 00:44:05.405
+Another example, 41, another example, 47.
+
+451
+00:44:05.905 --> 00:44:09.925
+So that what will happen around that 41 case when it has 41,
+
+452
+00:44:09.925 --> 00:44:12.965
+another case around 48, we don't know how to deal with
+
+453
+00:44:12.965 --> 00:44:15.445
+that variable, whereas the sharing is there.
+
+454
+00:44:15.925 --> 00:44:20.565
+I just go on know, uh, the, just go on updating.
+
+455
+00:44:20.565 --> 00:44:23.005
+That is another element for updating the weight.
+
+456
+00:44:23.585 --> 00:44:28.565
+That's how it happens. So the other
+
+457
+00:44:28.775 --> 00:44:29.525
+other thing is,
+
+458
+00:44:39.315 --> 00:44:41.775
+Is, um, important
+
+459
+00:44:41.925 --> 00:44:44.215
+because, uh, positions in the sequence,
+
+460
+00:44:44.315 --> 00:44:46.495
+so when you are having a compressional expansion,
+
+461
+00:44:46.875 --> 00:44:48.055
+the same piece of information
+
+462
+00:44:48.075 --> 00:44:49.175
+can happen at multiple culture.
+
+463
+00:44:49.715 --> 00:44:51.615
+Um, that's what, no, finally, it, uh,
+
+464
+00:44:51.615 --> 00:44:54.135
+results in an optimizer structure compared to MLP.
+
+465
+00:44:54.395 --> 00:44:57.815
+Uh, so some sort
+
+466
+00:44:57.815 --> 00:45:02.375
+of recurring recurrence is happening, let me say the same
+
+467
+00:45:03.855 --> 00:45:06.175
+phenomenon is repeating and again and again,
+
+468
+00:45:06.985 --> 00:45:09.525
+and that's why they call as a current neural network
+
+469
+00:45:09.915 --> 00:45:14.165
+that Mr say the weight parameters are
+
+470
+00:45:15.155 --> 00:45:18.405
+updated as we move from one time position
+
+471
+00:45:18.405 --> 00:45:19.725
+to the other time position,
+
+472
+00:45:20.355 --> 00:45:22.005
+that means the sequence knowledge will
+
+473
+00:45:22.005 --> 00:45:23.125
+occur again and again.
+
+474
+00:45:23.545 --> 00:45:25.525
+And that is what we are trying to model.
+
+475
+00:45:26.105 --> 00:45:28.245
+And hence the call the name of the network
+
+476
+00:45:28.305 --> 00:45:29.925
+as recurrent neur networks works.
+
+477
+00:45:31.315 --> 00:45:32.165
+Next slide, Sue.
+
+478
+00:45:36.195 --> 00:45:38.775
+So whatever I said, uh, so far,
+
+479
+00:45:40.315 --> 00:45:44.655
+let me try to explain using this pictorial representation,
+
+480
+00:45:47.875 --> 00:45:51.135
+The left part of this diagram, if you see now
+
+481
+00:45:52.845 --> 00:45:56.975
+this is a typical representation of
+
+482
+00:45:58.165 --> 00:45:59.325
+a recurrent neural network.
+
+483
+00:46:00.635 --> 00:46:04.695
+So this X of T represent the input layer,
+
+484
+00:46:05.915 --> 00:46:10.815
+input layer at, uh, time position, TX
+
+485
+00:46:10.835 --> 00:46:15.795
+of T, and the corresponding predicted output vector
+
+486
+00:46:16.975 --> 00:46:21.115
+is y cap of T means using this input
+
+487
+00:46:22.015 --> 00:46:25.555
+at time position, I can predict the corresponding output at
+
+488
+00:46:26.115 --> 00:46:30.355
+position T, the predicted value is Y cap of T.
+
+489
+00:46:31.415 --> 00:46:35.395
+And the goal is you, when you are,
+
+490
+00:46:35.785 --> 00:46:38.635
+when you are applying an input at time t
+
+491
+00:46:39.575 --> 00:46:41.715
+you predict the corresponding at that time.
+
+492
+00:46:42.475 --> 00:46:46.315
+T by pausing this information through a,
+
+493
+00:46:46.875 --> 00:46:49.595
+a cell called recurrent cell,
+
+494
+00:46:50.955 --> 00:46:52.875
+recurrent cell is nothing, but is the bunch
+
+495
+00:46:52.975 --> 00:46:55.155
+of all the hidden layers present
+
+496
+00:46:55.175 --> 00:46:56.235
+in the recurrent neural network.
+
+497
+00:46:56.705 --> 00:47:01.315
+Okay? Now, if you see
+
+498
+00:47:01.975 --> 00:47:06.765
+to predict this output, yt, you need, for example,
+
+499
+00:47:06.765 --> 00:47:07.965
+you're applying the input.
+
+500
+00:47:08.185 --> 00:47:10.445
+If you see this connection, uh,
+
+501
+00:47:10.445 --> 00:47:12.965
+roll called rolling connection of ht, you have,
+
+502
+00:47:13.755 --> 00:47:17.605
+what it indicates is when it is feeding back here,
+
+503
+00:47:18.705 --> 00:47:21.455
+which essentially this is HT, means, this is assumed
+
+504
+00:47:21.515 --> 00:47:23.015
+to be HT minus one.
+
+505
+00:47:23.245 --> 00:47:25.735
+This assumed to be hd, this position is assumed to
+
+506
+00:47:27.155 --> 00:47:29.485
+the left side where the RO is entering.
+
+507
+00:47:30.115 --> 00:47:33.295
+That is a previous sequence position, okay?
+
+508
+00:47:34.195 --> 00:47:36.535
+Now, what will happen is you see the equation.
+
+509
+00:47:36.755 --> 00:47:40.845
+Now the, the recurrent
+
+510
+00:47:41.605 --> 00:47:44.325
+sequence value that is a hidden recurrent cell
+
+511
+00:47:45.325 --> 00:47:48.885
+sequence knowledge, and we call this as recurrent cell,
+
+512
+00:47:49.425 --> 00:47:53.005
+and that cell is nothing but the whole bunch of,
+
+513
+00:47:54.705 --> 00:47:57.365
+all the layer that are present, okay?
+
+514
+00:47:58.035 --> 00:48:02.525
+That, uh, uh, recurrent cell, the current, uh,
+
+515
+00:48:03.175 --> 00:48:07.285
+state, our value of the recurrent cell is HFT
+
+516
+00:48:07.985 --> 00:48:12.485
+is computed using the current input XFT
+
+517
+00:48:13.225 --> 00:48:17.845
+and the previous state of the recurrent cell, HFT minus one,
+
+518
+00:48:18.235 --> 00:48:19.605
+this is the old state.
+
+519
+00:48:19.925 --> 00:48:23.165
+HFT minus is the old state of the recurrent neural network,
+
+520
+00:48:24.785 --> 00:48:28.165
+and the current input vector is X of T.
+
+521
+00:48:29.315 --> 00:48:29.535
+And
+
+522
+00:48:34.545 --> 00:48:38.965
+the, uh, current, the recurrence cell is computed as a fund
+
+523
+00:48:39.585 --> 00:48:41.805
+of both the current input as well
+
+524
+00:48:41.805 --> 00:48:43.685
+as the previous state of the recurrence cell.
+
+525
+00:48:44.025 --> 00:48:45.125
+And what is that function?
+
+526
+00:48:45.565 --> 00:48:47.725
+Function is given by a set of weight values.
+
+527
+00:48:48.205 --> 00:48:52.845
+W which is there is a weight associated with the old state
+
+528
+00:48:52.845 --> 00:48:55.005
+of the network and a weight associated
+
+529
+00:48:55.005 --> 00:48:56.605
+with the current bonding input vector.
+
+530
+00:48:57.145 --> 00:49:01.205
+And that is, uh, multiplied with these values.
+
+531
+00:49:01.425 --> 00:49:05.045
+And, uh, nonlinear processing happens to give you the
+
+532
+00:49:05.955 --> 00:49:09.205
+current cell state, current cell state,
+
+533
+00:49:13.385 --> 00:49:16.605
+we need to appreciate what I explained here.
+
+534
+00:49:16.625 --> 00:49:18.165
+If you have any doubt, let me know.
+
+535
+00:49:20.285 --> 00:49:23.945
+So here we are, we are seeing the old state, right? Um,
+
+536
+00:49:24.865 --> 00:49:29.315
+Ava current, please, can you please repeat Akan
+
+537
+00:49:29.865 --> 00:49:31.635
+Here we are just sharing weight
+
+538
+00:49:31.775 --> 00:49:33.995
+or we are also using the old state
+
+539
+00:49:34.695 --> 00:49:36.795
+of the function as well as,
+
+540
+00:49:38.185 --> 00:49:40.235
+Okay, uh, that's a very good question.
+
+541
+00:49:40.495 --> 00:49:44.075
+So see here, uh,
+
+542
+00:49:44.775 --> 00:49:47.315
+we are using the old state value
+
+543
+00:49:47.505 --> 00:49:50.235
+that is this ro is there no left side RO
+
+544
+00:49:51.215 --> 00:49:53.985
+that is hf T minus one old state.
+
+545
+00:49:54.645 --> 00:49:56.265
+And the old state value is nothing
+
+546
+00:49:56.325 --> 00:49:59.105
+but the weight values, which are there at that till
+
+547
+00:49:59.105 --> 00:50:00.465
+that point, okay?
+
+548
+00:50:01.655 --> 00:50:05.985
+Okay. And similarly, the current state xft is represented
+
+549
+00:50:05.985 --> 00:50:10.865
+through a, in this link, xft entering into the recurrent,
+
+550
+00:50:11.165 --> 00:50:14.985
+uh, that is given by a weight metrics,
+
+551
+00:50:16.045 --> 00:50:17.145
+say WXX
+
+552
+00:50:18.475 --> 00:50:23.295
+and the weight value for the previous S-A-W-H-H HT
+
+553
+00:50:23.675 --> 00:50:27.365
+or HH minus one, we'll see the XH two X or something
+
+554
+00:50:27.905 --> 00:50:32.125
+and the weight parameters, that was their weight values
+
+555
+00:50:32.505 --> 00:50:34.205
+of the recurrence cells that were there
+
+556
+00:50:36.225 --> 00:50:37.955
+till the previous incident of time.
+
+557
+00:50:38.025 --> 00:50:41.235
+That is given by this weight value WHFS.
+
+558
+00:50:41.735 --> 00:50:43.555
+And that H of T minus that is nothing
+
+559
+00:50:43.555 --> 00:50:45.115
+but this H of T minus one.
+
+560
+00:50:49.095 --> 00:50:53.165
+Oh, sir, thank you Sir. Ish. Yes, sir.
+
+561
+00:50:53.785 --> 00:50:56.885
+Sir, when we are sharing the parameter in the previous
+
+562
+00:50:56.895 --> 00:50:59.085
+slide, it was mentioned that, uh,
+
+563
+00:50:59.145 --> 00:51:02.045
+it also identifies the variable length, sir.
+
+564
+00:51:02.305 --> 00:51:06.835
+So how sharing the parameter identifies the length
+
+565
+00:51:06.895 --> 00:51:09.795
+of variable length of the words, sir, of the sentences.
+
+566
+00:51:11.005 --> 00:51:13.075
+It'll not identify the very variable length.
+
+567
+00:51:13.395 --> 00:51:14.515
+I don't know whether I set
+
+568
+00:51:14.515 --> 00:51:16.355
+that point down there in the slide.
+
+569
+00:51:17.255 --> 00:51:19.275
+I'm not sure, but go to the previous slide.
+
+570
+00:51:19.295 --> 00:51:22.595
+Uh, it'll not need not identify the variable
+
+571
+00:51:22.955 --> 00:51:24.835
+Variables in the third point.
+
+572
+00:51:25.315 --> 00:51:27.915
+Variable sequence length sharing parameter
+
+573
+00:51:27.915 --> 00:51:29.115
+helps to generalize it.
+
+574
+00:51:30.275 --> 00:51:32.475
+Variable sequence lens, variable sequence,
+
+575
+00:51:33.035 --> 00:51:36.795
+I means the sequence lens, uh, uh, sequence lens will be of,
+
+576
+00:51:37.255 --> 00:51:39.675
+uh, sequences will be of different length,
+
+577
+00:51:40.815 --> 00:51:42.795
+and, uh, it should be able to handle
+
+578
+00:51:42.795 --> 00:51:46.235
+that without worrying about no, whatever the length
+
+579
+00:51:46.235 --> 00:51:47.915
+of the sequence that is the meaning of that.
+
+580
+00:51:48.155 --> 00:51:50.515
+I don't recognize the sequence lens,
+
+581
+00:51:51.185 --> 00:51:52.185
+Okay? That
+
+582
+00:51:52.185 --> 00:51:53.435
+that is very, no.
+
+583
+00:51:53.895 --> 00:51:57.235
+Uh, you just go to the, uh, next slide.
+
+584
+00:51:58.615 --> 00:52:01.235
+Uh, see this recurrent cell, no.
+
+585
+00:52:01.335 --> 00:52:05.195
+If you see, uh, this looping
+
+586
+00:52:05.195 --> 00:52:08.575
+that is available here, it doesn't matter.
+
+587
+00:52:08.675 --> 00:52:11.915
+For example, if, uh, I was telling
+
+588
+00:52:11.915 --> 00:52:16.275
+that if there is a 45 lens, normal length is 45,
+
+589
+00:52:17.185 --> 00:52:19.635
+this structure is used 45 times.
+
+590
+00:52:21.075 --> 00:52:23.885
+Alternatively, if the next example,
+
+591
+00:52:24.105 --> 00:52:28.685
+the sequence length is 41, this loop is run 41 times.
+
+592
+00:52:30.815 --> 00:52:34.995
+Yes sir. Another case, it is 49, it'll be run 49 times.
+
+593
+00:52:36.515 --> 00:52:38.835
+I don't have to bother as long as I re
+
+594
+00:52:38.835 --> 00:52:41.195
+until I reach the last position in the sequence,
+
+595
+00:52:41.755 --> 00:52:44.115
+I can go on reusing that, uh, structure.
+
+596
+00:52:45.775 --> 00:52:48.755
+Yes. So it, that means that each hidden layer,
+
+597
+00:52:48.815 --> 00:52:52.595
+we will have one, uh, neuron, uh, neural, uh,
+
+598
+00:52:52.595 --> 00:52:55.235
+recurring cell in each of the hidden layers.
+
+599
+00:52:56.525 --> 00:53:01.075
+Apart from hidden neuron cell. No,
+
+600
+00:53:01.665 --> 00:53:05.445
+The whole, the whole recurrent neural network is the
+
+601
+00:53:05.445 --> 00:53:06.885
+entire hidden layer structure.
+
+602
+00:53:07.185 --> 00:53:08.685
+The entire hidden layer structure
+
+603
+00:53:09.535 --> 00:53:11.915
+is recorded as recurrent cell. Okay?
+
+604
+00:53:12.735 --> 00:53:14.305
+Yes. Thank you.
+
+605
+00:53:14.725 --> 00:53:18.825
+So only let me, let me say like this.
+
+606
+00:53:20.455 --> 00:53:24.235
+Um, maybe, uh, just to further impress on,
+
+607
+00:53:25.545 --> 00:53:28.965
+uh, suppose if, if I have to write,
+
+608
+00:53:30.645 --> 00:53:34.865
+um, this equation, um,
+
+609
+00:53:35.765 --> 00:53:39.345
+of multi-layer perception network, okay,
+
+610
+00:53:40.565 --> 00:53:43.215
+that could have been this HT minus one
+
+611
+00:53:43.215 --> 00:53:44.295
+would not have been there.
+
+612
+00:53:45.165 --> 00:53:46.775
+Only FFW
+
+613
+00:53:46.915 --> 00:53:51.915
+of XFT would've been there,
+
+614
+00:53:52.675 --> 00:53:56.575
+No, uh, this HT minus one is specifically preserving the
+
+615
+00:53:56.775 --> 00:53:57.975
+sequence knowledge sequence.
+
+616
+00:53:58.315 --> 00:54:03.095
+Yes. And what otherwise, uh, what is the equation for
+
+617
+00:54:03.665 --> 00:54:04.815
+multilayer receptor?
+
+618
+00:54:05.915 --> 00:54:09.815
+HFT is got the FW of xft X. Yes.
+
+619
+00:54:09.825 --> 00:54:12.375
+Which is, anyway, you don't have to preserve
+
+620
+00:54:12.685 --> 00:54:14.135
+that goes to the output.
+
+621
+00:54:14.355 --> 00:54:15.855
+No. And try to take that.
+
+622
+00:54:17.335 --> 00:54:19.065
+Okay, we'll go to the next, uh,
+
+623
+00:54:19.895 --> 00:54:22.845
+yeah, Sunil.
+
+624
+00:54:23.475 --> 00:54:27.085
+Yeah. So slightly expanding that,
+
+625
+00:54:28.635 --> 00:54:30.815
+uh, you'll see how it is happening here.
+
+626
+00:54:31.955 --> 00:54:34.815
+Uh, please remember the previous equation,
+
+627
+00:54:37.695 --> 00:54:40.735
+F of W, that F is nothing
+
+628
+00:54:40.795 --> 00:54:42.695
+but 10 hyperbolic function.
+
+629
+00:54:44.055 --> 00:54:47.395
+And the W is given like this
+
+630
+00:54:48.735 --> 00:54:53.275
+HF minus one Neil multiplied by a weight matrix, WHH
+
+631
+00:54:54.925 --> 00:54:57.625
+and A weight material WXH.
+
+632
+00:54:59.125 --> 00:55:03.865
+So, um, symbolically also it represents, uh,
+
+633
+00:55:04.405 --> 00:55:07.585
+uh, this one that H two H is nothing
+
+634
+00:55:07.685 --> 00:55:11.465
+but the weight values at the previous instant of position
+
+635
+00:55:12.095 --> 00:55:15.385
+carried to the weight values at the current instant
+
+636
+00:55:15.385 --> 00:55:18.385
+of position, the WHH means they kept these weight metrics
+
+637
+00:55:18.415 --> 00:55:20.225
+capture the sequence knowledge.
+
+638
+00:55:21.735 --> 00:55:25.175
+WXH means the, the
+
+639
+00:55:25.715 --> 00:55:30.455
+weight values due to the input vector X to the hidden cell
+
+640
+00:55:30.455 --> 00:55:33.175
+or the recurrent cell, the WXH.
+
+641
+00:55:34.045 --> 00:55:38.375
+Okay? And now what come through the cell,
+
+642
+00:55:39.565 --> 00:55:43.405
+I use the sequence HT minus one input
+
+643
+00:55:44.725 --> 00:55:47.685
+multiplied by the reference weight weight vector.
+
+644
+00:55:48.505 --> 00:55:51.125
+And this is nothing about activation value of the current,
+
+645
+00:55:51.805 --> 00:55:53.965
+possibly the output function done hyper body
+
+646
+00:55:54.425 --> 00:55:57.845
+to get the recurrent cell output at current instant
+
+647
+00:55:57.845 --> 00:55:59.125
+of time ht.
+
+648
+00:55:59.715 --> 00:56:03.565
+Okay? I think the T at this point also
+
+649
+00:56:04.185 --> 00:56:06.765
+tap the upper of the position also,
+
+650
+00:56:07.585 --> 00:56:09.725
+and that is further pass through.
+
+651
+00:56:10.305 --> 00:56:12.565
+If I want to compute the output value at
+
+652
+00:56:12.565 --> 00:56:14.885
+that particular incident of time, there is a weight metrics
+
+653
+00:56:15.685 --> 00:56:19.205
+H two Y, the current recurrent value, uh,
+
+654
+00:56:19.205 --> 00:56:20.725
+weight metrics I'm considering
+
+655
+00:56:21.745 --> 00:56:24.645
+and multiplying with the, you know,
+
+656
+00:56:25.105 --> 00:56:28.845
+weight vector WHY, multiplied by HT
+
+657
+00:56:29.145 --> 00:56:31.845
+to get the corresponding output value at timet.
+
+658
+00:56:33.465 --> 00:56:37.085
+Now you see now, um, you have three weight metrics here,
+
+659
+00:56:37.665 --> 00:56:40.925
+one weight metrics, WXH sitting on the lower
+
+660
+00:56:41.525 --> 00:56:44.685
+RO from XT to the input of the recurrence cell.
+
+661
+00:56:45.985 --> 00:56:49.805
+And there is another WHHT
+
+662
+00:56:50.355 --> 00:56:55.125
+sitting on the left ro that is sequence knowledge
+
+663
+00:56:55.775 --> 00:56:58.245
+using W-X-H-W-H-H
+
+664
+00:56:59.185 --> 00:57:01.245
+and the correspond HT minus one
+
+665
+00:57:01.545 --> 00:57:05.365
+and xd I compute the current state value H of T
+
+666
+00:57:05.985 --> 00:57:10.205
+and the current state value H of T will be passed on to the,
+
+667
+00:57:10.825 --> 00:57:12.725
+uh, this w uh,
+
+668
+00:57:13.965 --> 00:57:17.165
+HH updated WHH will be pass on
+
+669
+00:57:17.165 --> 00:57:18.885
+to the next sequence position.
+
+670
+00:57:20.365 --> 00:57:24.385
+Um, and, uh, the HD value is computed that is used
+
+671
+00:57:24.525 --> 00:57:27.265
+for computing the corresponding output position at this
+
+672
+00:57:27.265 --> 00:57:31.845
+point, I think this is another, the previous one
+
+673
+00:57:32.185 --> 00:57:34.805
+and this current one, this is how the computation happens
+
+674
+00:57:35.465 --> 00:57:36.525
+at each position.
+
+675
+00:57:40.845 --> 00:57:43.825
+So this is slide as soon, the previous slide
+
+676
+00:57:43.845 --> 00:57:48.825
+and uh, see now I'm expanding the generic equation.
+
+677
+00:57:49.005 --> 00:57:52.585
+How it is there. We essentially, first thing is
+
+678
+00:57:52.645 --> 00:57:54.825
+how do I compute the, uh,
+
+679
+00:57:55.085 --> 00:57:58.425
+the recurrent cell output at time T is given
+
+680
+00:57:58.605 --> 00:57:59.785
+by this equation?
+
+681
+00:58:00.855 --> 00:58:03.985
+Then how do I compare the output at this current time
+
+682
+00:58:04.325 --> 00:58:05.385
+is another equation.
+
+683
+00:58:05.925 --> 00:58:07.145
+And we are expanding, you know,
+
+684
+00:58:07.145 --> 00:58:10.985
+there is a weight metrics here, W-X-H-W-H-H
+
+685
+00:58:11.245 --> 00:58:13.385
+and then WHY next slide.
+
+686
+00:58:13.805 --> 00:58:15.225
+And this is what is shown here.
+
+687
+00:58:15.595 --> 00:58:18.905
+Maybe I want you people to now compare these two slides
+
+688
+00:58:19.005 --> 00:58:20.665
+and spend some time in understanding
+
+689
+00:58:20.805 --> 00:58:22.185
+how the sequence knowledge works.
+
+690
+00:58:23.295 --> 00:58:26.965
+Next slide. Ah,
+
+691
+00:58:28.305 --> 00:58:33.245
+now, uh, you see how, uh, this,
+
+692
+00:58:34.985 --> 00:58:38.765
+now I don't want to show this repeated symbol.
+
+693
+00:58:40.375 --> 00:58:43.835
+If, if you want to actually show me how
+
+694
+00:58:44.415 --> 00:58:46.795
+an unfolded recurrent neural network happens,
+
+695
+00:58:46.795 --> 00:58:49.715
+because I mentioned it as a feed forward neural network.
+
+696
+00:58:50.465 --> 00:58:51.515
+This is how it happens.
+
+697
+00:58:52.725 --> 00:58:55.945
+Uh, in this figure, we have taken time in the starting from
+
+698
+00:58:55.945 --> 00:58:57.145
+time T equal to zero.
+
+699
+00:58:57.965 --> 00:59:02.325
+Now X zero is there, I'm applying to the recurrent cell
+
+700
+00:59:03.255 --> 00:59:06.505
+through a weight metrics WXH,
+
+701
+00:59:08.005 --> 00:59:11.495
+then, then I compute the
+
+702
+00:59:12.195 --> 00:59:14.815
+weight value WHH,
+
+703
+00:59:15.965 --> 00:59:18.335
+that is capturing the sequence knowledge,
+
+704
+00:59:19.155 --> 00:59:23.005
+and that is passed on to the next instant of time, x
+
+705
+00:59:23.105 --> 00:59:24.365
+of X one.
+
+706
+00:59:25.585 --> 00:59:27.325
+And before
+
+707
+00:59:27.325 --> 00:59:30.845
+that there is a WHH coming from the previous position.
+
+708
+00:59:30.945 --> 00:59:35.285
+But since I'm starting at uh, uh, um,
+
+709
+00:59:37.725 --> 00:59:41.945
+starting at the time, t equal to zero, that is
+
+710
+00:59:41.945 --> 00:59:43.065
+that initial value.
+
+711
+00:59:43.065 --> 00:59:45.065
+Maybe it can be a random value or something.
+
+712
+00:59:45.165 --> 00:59:47.305
+But once that is over next loop onwards,
+
+713
+00:59:47.305 --> 00:59:51.865
+there is a previous instant computed value using these two.
+
+714
+00:59:52.065 --> 00:59:55.825
+I compute the, um, no hidden value
+
+715
+00:59:56.635 --> 00:59:58.025
+state value HF T,
+
+716
+00:59:58.165 --> 01:00:01.025
+and that is ED through is WHY
+
+717
+01:00:01.085 --> 01:00:02.585
+to get the corresponding output.
+
+718
+01:00:02.645 --> 01:00:04.145
+Why not that means to say
+
+719
+01:00:04.205 --> 01:00:06.225
+for every position there is an output computer.
+
+720
+01:00:06.365 --> 01:00:09.545
+Let me tell. In the simplified value at time T equal
+
+721
+01:00:09.545 --> 01:00:12.865
+to zero, I will predict the corresponding output YY zero
+
+722
+01:00:13.005 --> 01:00:16.425
+cap, then at time T equal to one.
+
+723
+01:00:17.625 --> 01:00:20.465
+I predict the output at that point Y cap one,
+
+724
+01:00:22.065 --> 01:00:25.315
+similarly time T equal to two, I predict the, uh,
+
+725
+01:00:25.495 --> 01:00:26.915
+output Y cap two.
+
+726
+01:00:26.975 --> 01:00:30.155
+And so on a time T small TI predict
+
+727
+01:00:30.155 --> 01:00:32.475
+that final output Y cap T, that is that.
+
+728
+01:00:33.095 --> 01:00:36.395
+Now what is that we have to see is when a time T equal
+
+729
+01:00:36.395 --> 01:00:38.675
+to one while predicting Y cap one,
+
+730
+01:00:39.115 --> 01:00:41.515
+I not only use the current current input XF
+
+731
+01:00:41.655 --> 01:00:44.395
+and XF one, I will also improve,
+
+732
+01:00:45.775 --> 01:00:48.795
+use the knowledge from the previous time instant T equal
+
+733
+01:00:48.795 --> 01:00:51.275
+to zero through this link, which is pass on
+
+734
+01:00:51.275 --> 01:00:54.115
+that is W-H-H-W-H-H
+
+735
+01:00:54.215 --> 01:00:56.875
+and the HT minus one value that is coming here
+
+736
+01:00:57.465 --> 01:01:00.075
+that will be used for computing the output.
+
+737
+01:01:00.785 --> 01:01:03.875
+Okay? Rab, the, this will,
+
+738
+01:01:04.095 --> 01:01:06.075
+did this answer your Yes, sir.
+
+739
+01:01:06.075 --> 01:01:11.025
+Yeah, yeah, thank you. HHT minus one is coming
+
+740
+01:01:11.055 --> 01:01:12.745
+here along with this WHH.
+
+741
+01:01:13.915 --> 01:01:17.525
+Okay, so this is how, uh, this, this is the difference.
+
+742
+01:01:17.685 --> 01:01:20.685
+I know in MLP there is this link is missing in
+
+743
+01:01:20.845 --> 01:01:22.245
+MLP, this link is missing.
+
+744
+01:01:23.395 --> 01:01:25.645
+That is how, and for example,
+
+745
+01:01:26.165 --> 01:01:28.645
+I can compute the error in prediction separately,
+
+746
+01:01:28.645 --> 01:01:31.645
+locally at each test timestamp position, L zero, L one,
+
+747
+01:01:32.005 --> 01:01:33.005
+L two, L three,
+
+748
+01:01:33.745 --> 01:01:35.925
+and then you can accumulate all of them
+
+749
+01:01:36.105 --> 01:01:38.285
+to get the total layer in prediction.
+
+750
+01:01:38.285 --> 01:01:41.885
+That is what it is. Capital L is, uh, represented here.
+
+751
+01:01:45.315 --> 01:01:47.635
+Actually, when you, when you actually write
+
+752
+01:01:49.905 --> 01:01:51.625
+expanded way, you want to write an RNN diagram.
+
+753
+01:01:51.725 --> 01:01:56.425
+It goes like this way, this, all this, uh,
+
+754
+01:01:56.805 --> 01:01:59.465
+see the, the, the same, uh,
+
+755
+01:02:00.825 --> 01:02:02.105
+a very, very important point.
+
+756
+01:02:03.165 --> 01:02:06.705
+See when I'm saying sharing parameters across the time
+
+757
+01:02:06.945 --> 01:02:09.705
+position, you see the position X zero X one,
+
+758
+01:02:09.785 --> 01:02:13.465
+x two XT are coming, whereas you see the weight parameters,
+
+759
+01:02:13.885 --> 01:02:15.785
+the same weight parameters are shared.
+
+760
+01:02:16.165 --> 01:02:19.025
+It is always W-H-H-W-X-W-H-Y.
+
+761
+01:02:19.595 --> 01:02:21.485
+That means to say the same set
+
+762
+01:02:21.485 --> 01:02:24.245
+of y parameters are, are shared.
+
+763
+01:02:24.265 --> 01:02:27.405
+That's why it's called the sharing of parameters. Okay?
+
+764
+01:02:27.945 --> 01:02:29.005
+So that is the,
+
+765
+01:02:29.465 --> 01:02:30.605
+and now what happens,
+
+766
+01:02:31.545 --> 01:02:33.725
+it doesn't matter the sequence length folding
+
+767
+01:02:33.745 --> 01:02:37.325
+or unfolding, this tee can be, uh, different length.
+
+768
+01:02:37.545 --> 01:02:38.685
+It doesn't matter for that.
+
+769
+01:02:39.025 --> 01:02:42.325
+If it is 41, it stops there, it'll fortify, it increases
+
+770
+01:02:42.345 --> 01:02:43.965
+by four times, it'll run more.
+
+771
+01:02:44.075 --> 01:02:47.525
+It's unfolding. Uh, 49 means it unfolds another four times.
+
+772
+01:02:49.325 --> 01:02:50.655
+Okay? Next slide,
+
+773
+01:02:52.025 --> 01:02:53.025
+Sir.
+
+774
+01:02:53.345 --> 01:02:55.565
+Yes, previously, Uh, sir, uh, sir, in this,
+
+775
+01:02:55.585 --> 01:02:56.805
+I'm not able to understand this,
+
+776
+01:02:56.965 --> 01:02:58.925
+WHH will be the same weight parameter.
+
+777
+01:02:59.345 --> 01:03:02.325
+So like initially we have this X zero will be zero also
+
+778
+01:03:02.325 --> 01:03:03.885
+because we are taking the initial state.
+
+779
+01:03:04.945 --> 01:03:09.125
+So zero is not zero x zero will be the input vector
+
+780
+01:03:09.315 --> 01:03:11.645
+parameter vector value time t equal to zero.
+
+781
+01:03:12.595 --> 01:03:16.645
+Okay? Yes, ma'am. This WC in this diagram,
+
+782
+01:03:17.425 --> 01:03:19.165
+uh, since it is starting position,
+
+783
+01:03:19.165 --> 01:03:21.965
+this WH will be there in from a previous link.
+
+784
+01:03:21.965 --> 01:03:23.085
+There is no previous link.
+
+785
+01:03:23.625 --> 01:03:26.805
+The WHH, maybe you can keep it for some, uh,
+
+786
+01:03:27.115 --> 01:03:28.525
+some non-zero value or something.
+
+787
+01:03:28.695 --> 01:03:31.805
+Sunil will show when it is showing the implementation,
+
+788
+01:03:32.335 --> 01:03:35.325
+maybe initially the WHH has kept some arbitrary
+
+789
+01:03:35.325 --> 01:03:37.535
+value, okay?
+
+790
+01:03:37.905 --> 01:03:41.815
+After first iteration, that gets updated. WHH, yes, yes.
+
+791
+01:03:42.515 --> 01:03:45.295
+So yes. So this WHH is this the output
+
+792
+01:03:45.295 --> 01:03:47.135
+that we are tapping from the activation function
+
+793
+01:03:47.195 --> 01:03:48.415
+output of the out function?
+
+794
+01:03:48.415 --> 01:03:50.055
+We are tapping it and we giving it to the next layer.
+
+795
+01:03:50.715 --> 01:03:53.055
+Yes, yes. That is a updated weight.
+
+796
+01:03:53.555 --> 01:03:55.295
+Yes, sir. So in that case, now, if we go
+
+797
+01:03:55.295 --> 01:03:57.655
+for the second layer, we have this X one parameter,
+
+798
+01:03:57.655 --> 01:04:00.015
+then we have the two weights coming into the activation
+
+799
+01:04:00.255 --> 01:04:01.975
+function, and then that output of
+
+800
+01:04:01.975 --> 01:04:04.095
+that function again given to the third layer.
+
+801
+01:04:04.595 --> 01:04:05.695
+So in this case then
+
+802
+01:04:05.695 --> 01:04:06.735
+how the weights will be common
+
+803
+01:04:06.735 --> 01:04:08.055
+across the layers, there'll be different.
+
+804
+01:04:08.055 --> 01:04:10.495
+No. So because we are taking the input of the other layer,
+
+805
+01:04:10.495 --> 01:04:12.335
+then we are adding the percent weights,
+
+806
+01:04:12.635 --> 01:04:14.255
+and then we are tapping the output of
+
+807
+01:04:14.255 --> 01:04:15.375
+that activation function,
+
+808
+01:04:15.375 --> 01:04:16.775
+giving it across to all the layers.
+
+809
+01:04:17.235 --> 01:04:18.455
+So in that way, the weight will be,
+
+810
+01:04:18.455 --> 01:04:20.135
+there'll be some variation in the weights.
+
+811
+01:04:21.395 --> 01:04:22.615
+No, wonderful, wonderful.
+
+812
+01:04:22.835 --> 01:04:25.855
+So, um, the, the, when, what I meant
+
+813
+01:04:26.365 --> 01:04:30.975
+when it's called sharing of parameters, uh, rajesh, um,
+
+814
+01:04:32.155 --> 01:04:36.855
+it is, I am not suppose if
+
+815
+01:04:37.525 --> 01:04:38.815
+updated weights are there.
+
+816
+01:04:38.875 --> 01:04:42.215
+For example, uh, let us call this position.
+
+817
+01:04:42.435 --> 01:04:45.535
+One weight parameter says just for example, uh,
+
+818
+01:04:45.735 --> 01:04:50.055
+I put W superscript 1 1 1 in
+
+819
+01:04:50.055 --> 01:04:51.295
+all positions, okay?
+
+820
+01:04:51.355 --> 01:04:56.135
+Yes, sir. Wx, H one W hh one WHY one, okay? Yes.
+
+821
+01:04:56.135 --> 01:05:00.015
+Then I keep it. Then I take WXH two
+
+822
+01:05:00.735 --> 01:05:03.695
+WHH two WHY two for position two.
+
+823
+01:05:04.285 --> 01:05:07.895
+Okay? Then I'm preserving a separate copies
+
+824
+01:05:07.955 --> 01:05:10.045
+of the weights, okay?
+
+825
+01:05:10.465 --> 01:05:13.125
+Yes. Whereas what, what I'm doing is the same set
+
+826
+01:05:13.125 --> 01:05:14.525
+of parameters are getting updated
+
+827
+01:05:14.625 --> 01:05:16.045
+and going to the next position.
+
+828
+01:05:16.435 --> 01:05:18.485
+Okay? Understood. Understood. No, I understood, sir.
+
+829
+01:05:18.835 --> 01:05:22.365
+Otherwise, no, you need to keep the metrics values of,
+
+830
+01:05:22.425 --> 01:05:24.045
+uh, each positions,
+
+831
+01:05:24.985 --> 01:05:25.985
+Yes, yes, yes.
+
+832
+01:05:26.235 --> 01:05:28.285
+That is what is, Yes. Thank you, sir.
+
+833
+01:05:28.735 --> 01:05:32.575
+Thank you. Thank you. Yeah, we'll go to the next slide.
+
+834
+01:05:33.635 --> 01:05:35.135
+Ah, see, uh,
+
+835
+01:05:35.595 --> 01:05:39.535
+before I come to this, uh, previous slide, previous slide.
+
+836
+01:05:39.995 --> 01:05:43.535
+So see what happens now, uh, you,
+
+837
+01:05:43.595 --> 01:05:45.375
+you go starting from X code
+
+838
+01:05:45.375 --> 01:05:48.895
+to zero time t there is a signal flow happening.
+
+839
+01:05:49.555 --> 01:05:52.935
+See, there is something at every snapshot, if you see
+
+840
+01:05:53.505 --> 01:05:57.215
+every snapshot X zero X one, x two, you see it
+
+841
+01:05:57.215 --> 01:05:59.015
+as separate MLP connection.
+
+842
+01:05:59.545 --> 01:06:01.855
+There is an input applying a sequence
+
+843
+01:06:01.855 --> 01:06:05.095
+of done layers are there from their output gets computed.
+
+844
+01:06:05.325 --> 01:06:06.895
+Okay? I see that vertically.
+
+845
+01:06:07.075 --> 01:06:09.975
+One slide, and there can be multiple hidden layers.
+
+846
+01:06:09.975 --> 01:06:11.215
+They're all put into one
+
+847
+01:06:12.015 --> 01:06:14.495
+recurrent neural network block or a current cell.
+
+848
+01:06:15.595 --> 01:06:19.095
+If you see there is a know
+
+849
+01:06:21.405 --> 01:06:26.095
+what we call, um, signal flow happens up
+
+850
+01:06:26.095 --> 01:06:27.255
+to the output layer and the bap
+
+851
+01:06:27.255 --> 01:06:28.415
+propagation of error happens.
+
+852
+01:06:29.205 --> 01:06:30.935
+Then using that BAP propagation error,
+
+853
+01:06:30.955 --> 01:06:32.615
+you can adjust the weights of the network.
+
+854
+01:06:33.405 --> 01:06:37.135
+Okay? The, that is one way of adjusting the weights.
+
+855
+01:06:37.795 --> 01:06:42.135
+The other way of adjusting the weight is, uh, uh,
+
+856
+01:06:42.165 --> 01:06:46.815
+essentially, um, uh, vertically at each position,
+
+857
+01:06:46.895 --> 01:06:50.215
+I can adjust the weights by considering one snapshot,
+
+858
+01:06:51.745 --> 01:06:53.285
+the same set of weight parameters.
+
+859
+01:06:53.445 --> 01:06:57.365
+I can adjust by considering this horizontal movement also
+
+860
+01:06:57.475 --> 01:06:58.645
+from right to left.
+
+861
+01:06:58.705 --> 01:07:01.325
+If I see that the sequence knowledge captured,
+
+862
+01:07:01.505 --> 01:07:03.845
+and based on that, I can adjust the weights of the network.
+
+863
+01:07:04.275 --> 01:07:07.485
+Okay? If, if I take the vertical snap,
+
+864
+01:07:08.195 --> 01:07:09.805
+that propagation error happening at
+
+865
+01:07:10.005 --> 01:07:13.255
+that particular one slice, that is nothing
+
+866
+01:07:13.395 --> 01:07:16.255
+but the vanishing gradient problem that we discussed.
+
+867
+01:07:17.075 --> 01:07:20.055
+If you see no deep learning model had a vanishing gradient
+
+868
+01:07:20.055 --> 01:07:22.975
+problem or something that is at a given snapshot,
+
+869
+01:07:22.975 --> 01:07:24.335
+there can be a number of layers.
+
+870
+01:07:24.945 --> 01:07:27.855
+It'll data goes to the output layer and feedback happen.
+
+871
+01:07:27.915 --> 01:07:30.575
+The error, uh, comes down
+
+872
+01:07:31.115 --> 01:07:34.095
+and it can end up in becoming a vanishing gradient.
+
+873
+01:07:34.095 --> 01:07:35.495
+Accordingly, I may not be able
+
+874
+01:07:35.495 --> 01:07:37.135
+to adjust the weights of some layers.
+
+875
+01:07:37.725 --> 01:07:39.895
+That phenomenon is still relevant,
+
+876
+01:07:40.505 --> 01:07:43.415
+still relevant in each each vertical snapshot.
+
+877
+01:07:44.095 --> 01:07:45.235
+The vanishing gradient problem,
+
+878
+01:07:45.295 --> 01:07:49.195
+but, uh, X zero is relevant, X one is relevant,
+
+879
+01:07:49.315 --> 01:07:51.715
+X two is relevant, and XT is relevant, like
+
+880
+01:07:51.715 --> 01:07:53.075
+what we discussed so far.
+
+881
+01:07:53.575 --> 01:07:56.155
+If you see in, in general, suppose
+
+882
+01:07:56.155 --> 01:07:57.755
+that any person X one position,
+
+883
+01:07:57.875 --> 01:07:59.995
+I consider one snapshot of RNN.
+
+884
+01:08:00.215 --> 01:08:02.395
+Assume that there's recurrence cell as some five layers,
+
+885
+01:08:03.175 --> 01:08:05.715
+and then it is essentially a deep network
+
+886
+01:08:05.855 --> 01:08:06.915
+of five layers say,
+
+887
+01:08:07.375 --> 01:08:10.275
+and naturally there is a vanish ingredient problem, uh,
+
+888
+01:08:10.715 --> 01:08:15.245
+inherent in that snapshot of the, that we have studied.
+
+889
+01:08:15.945 --> 01:08:17.485
+But now the other thing is,
+
+890
+01:08:17.875 --> 01:08:20.085
+suppose I go on moving like this up
+
+891
+01:08:20.085 --> 01:08:24.165
+to time T from X sub zero, then I get the final error,
+
+892
+01:08:24.985 --> 01:08:28.365
+and using the error I horizontally, I come back
+
+893
+01:08:28.365 --> 01:08:29.405
+and adjust the weights
+
+894
+01:08:29.405 --> 01:08:32.885
+of all the weight parameters essentially to adjust
+
+895
+01:08:32.885 --> 01:08:34.765
+with reference to the sequence knowledge.
+
+896
+01:08:35.655 --> 01:08:40.185
+Okay? And that also as the number of unfolding increases,
+
+897
+01:08:40.595 --> 01:08:43.505
+there is also a vanishing gradient problem happens,
+
+898
+01:08:44.165 --> 01:08:45.425
+and that is, that is nothing
+
+899
+01:08:45.445 --> 01:08:47.145
+but bad propagation through time.
+
+900
+01:08:47.765 --> 01:08:50.425
+Uh, the weight parameters adjustment due
+
+901
+01:08:50.425 --> 01:08:52.145
+to the sequence knowledge that is happening
+
+902
+01:08:52.145 --> 01:08:53.505
+from right to left.
+
+903
+01:08:54.925 --> 01:08:59.265
+And uh, then the cons, the propagation
+
+904
+01:08:59.415 --> 01:09:02.385
+that we discuss about propagation of error that we discussed
+
+905
+01:09:02.485 --> 01:09:06.665
+so far is at any one type sequence times,
+
+906
+01:09:06.925 --> 01:09:08.305
+uh, sequence snapshot.
+
+907
+01:09:08.695 --> 01:09:11.105
+Whereas in the recurrent neural network,
+
+908
+01:09:11.445 --> 01:09:14.145
+we also have another concept called BAP propagation
+
+909
+01:09:14.145 --> 01:09:18.945
+through time where in any position, I can move back, uh,
+
+910
+01:09:19.085 --> 01:09:23.645
+to adjust of those
+
+911
+01:09:23.655 --> 01:09:26.685
+parameters to capture the knowledge
+
+912
+01:09:26.685 --> 01:09:27.765
+with reference to the sequence.
+
+913
+01:09:28.065 --> 01:09:30.485
+And that is the BAP propagation through time that we are,
+
+914
+01:09:30.865 --> 01:09:34.125
+and that will also complicate the vanishing gradient problem
+
+915
+01:09:34.825 --> 01:09:35.885
+in the recurrent neur network.
+
+916
+01:09:36.225 --> 01:09:38.925
+So that is one new phenomenon which is not there
+
+917
+01:09:38.985 --> 01:09:41.965
+so far will evolve now. Okay, next,
+
+918
+01:09:42.385 --> 01:09:43.805
+Sir, one second sir, please.
+
+919
+01:09:43.825 --> 01:09:45.565
+Yes, I have a question, sir.
+
+920
+01:09:45.845 --> 01:09:48.485
+I can, we, um, I mean the question is,
+
+921
+01:09:48.485 --> 01:09:51.605
+suppose the input was say RNN
+
+922
+01:09:51.705 --> 01:09:54.005
+uh, recurrent neural network.
+
+923
+01:09:54.825 --> 01:09:59.045
+So in this case, X zero will be recurrent X one will be, um,
+
+924
+01:09:59.345 --> 01:10:01.845
+neural, and uh, X two will be in network.
+
+925
+01:10:03.225 --> 01:10:06.005
+And um, these three inputs X zero, X one,
+
+926
+01:10:06.045 --> 01:10:08.365
+x two are put at the same time, sir,
+
+927
+01:10:08.465 --> 01:10:10.005
+or T one, T two, T three,
+
+928
+01:10:10.105 --> 01:10:12.885
+or at the time T zero, all the three will have,
+
+929
+01:10:13.065 --> 01:10:15.045
+all the three X's will have these three words.
+
+930
+01:10:15.995 --> 01:10:18.725
+Wonderful, wonderful. That's a very good question.
+
+931
+01:10:18.995 --> 01:10:22.925
+Next, uh, question. So suppose assume
+
+932
+01:10:22.925 --> 01:10:26.485
+that X zero X one, et cetera, XT is given to you
+
+933
+01:10:26.785 --> 01:10:27.885
+for training the network.
+
+934
+01:10:29.435 --> 01:10:31.215
+We maintain the order like this.
+
+935
+01:10:31.865 --> 01:10:35.535
+First I apply X zero, okay?
+
+936
+01:10:36.035 --> 01:10:38.815
+And do all this snapshot of X zero
+
+937
+01:10:39.115 --> 01:10:41.835
+to Y zero prediction, okay?
+
+938
+01:10:42.605 --> 01:10:47.245
+Then I get this WHH, then I take X one
+
+939
+01:10:48.785 --> 01:10:51.725
+and apply x one and com.
+
+940
+01:10:52.465 --> 01:10:57.345
+Use the updated weight value, WHH, updated weight value,
+
+941
+01:10:57.505 --> 01:11:00.145
+WXH and WHA and compute Y one.
+
+942
+01:11:01.095 --> 01:11:04.905
+Okay? So at every position I apply
+
+943
+01:11:05.015 --> 01:11:06.265
+only one input.
+
+944
+01:11:06.725 --> 01:11:09.265
+Mm-hmm. And predict the output
+
+945
+01:11:10.165 --> 01:11:11.835
+while predicting the output.
+
+946
+01:11:12.875 --> 01:11:16.445
+I will use the most recent updated weight parameters.
+
+947
+01:11:18.725 --> 01:11:22.925
+I if you see the same as previous, uh, question asked, no,
+
+948
+01:11:23.865 --> 01:11:27.285
+we are not in the weight, uh, metrics value,
+
+949
+01:11:27.445 --> 01:11:31.045
+WXH is a weight metrics, WHH is another weight metrics,
+
+950
+01:11:31.365 --> 01:11:33.045
+WHY is another weight metrics.
+
+951
+01:11:33.575 --> 01:11:35.965
+There is no position index given to them.
+
+952
+01:11:36.835 --> 01:11:38.485
+That means to say the same set
+
+953
+01:11:38.485 --> 01:11:40.045
+of weight parameters are recurrent,
+
+954
+01:11:40.465 --> 01:11:42.605
+are repeating at all position.
+
+955
+01:11:42.605 --> 01:11:45.365
+That's why the name recurrent neural networks, okay?
+
+956
+01:11:45.675 --> 01:11:49.725
+That is one part why it is called recurrent the same set
+
+957
+01:11:49.725 --> 01:11:50.725
+of weight parameters.
+
+958
+01:11:50.745 --> 01:11:53.205
+We are using a different instance of time
+
+959
+01:11:53.265 --> 01:11:54.365
+or sequence position.
+
+960
+01:11:55.465 --> 01:11:57.805
+And when I'm computing at X one,
+
+961
+01:11:58.535 --> 01:12:02.125
+these are inherently already updated, corresponding
+
+962
+01:12:02.125 --> 01:12:03.205
+to the previous position.
+
+963
+01:12:04.055 --> 01:12:07.665
+Okay? When I go to X two, this WHH is already updated,
+
+964
+01:12:07.695 --> 01:12:11.355
+corresponding to the previous position, okay?
+
+965
+01:12:11.855 --> 01:12:14.555
+Mm-hmm. And we apply one at a time.
+
+966
+01:12:15.115 --> 01:12:17.195
+I use X zero compute output.
+
+967
+01:12:18.335 --> 01:12:20.715
+At that point, this remaining position is not there
+
+968
+01:12:22.285 --> 01:12:24.825
+at when I apply X one only,
+
+969
+01:12:24.905 --> 01:12:26.465
+I apply X one and compute the output.
+
+970
+01:12:28.225 --> 01:12:30.195
+Okay? And that is how,
+
+971
+01:12:30.855 --> 01:12:35.835
+and that is how I come one position at a time
+
+972
+01:12:37.815 --> 01:12:40.905
+till the expiry of the last position in the sequence.
+
+973
+01:12:41.145 --> 01:12:43.305
+I come like that left to right,
+
+974
+01:12:44.625 --> 01:12:45.625
+Right, sir? Sir.
+
+975
+01:12:45.625 --> 01:12:48.295
+And, um, WXH
+
+976
+01:12:48.995 --> 01:12:52.855
+and WHY will only change in the normal
+
+977
+01:12:53.365 --> 01:12:54.895
+like we read in a NN.
+
+978
+01:12:55.265 --> 01:12:57.975
+It'll only change during that backdrop. Yes.
+
+979
+01:12:57.995 --> 01:13:02.215
+But WHH will change from X zero to X one.
+
+980
+01:13:02.235 --> 01:13:04.815
+Uh, I mean, it'll keep on changing in time
+
+981
+01:13:05.395 --> 01:13:06.815
+as we are applying those inputs.
+
+982
+01:13:06.995 --> 01:13:08.255
+Yes, correct. Okay.
+
+983
+01:13:08.485 --> 01:13:09.895
+Okay, sir. Okay.
+
+984
+01:13:10.315 --> 01:13:15.295
+And there thereby wise will also be generated, uh,
+
+985
+01:13:15.975 --> 01:13:17.815
+sequentially, like, you know, okay.
+
+986
+01:13:17.955 --> 01:13:20.575
+Yes, yes. No, I, I this is generic.
+
+987
+01:13:21.075 --> 01:13:23.855
+That's a very good, uh, observation you have pointed out.
+
+988
+01:13:24.475 --> 01:13:27.015
+See, at any position, when I see no,
+
+989
+01:13:27.405 --> 01:13:31.935
+when I'm predicting X one, I have from X one position,
+
+990
+01:13:32.015 --> 01:13:33.455
+I should be able to predict Y one.
+
+991
+01:13:33.715 --> 01:13:36.055
+Mm-hmm. So according with this WXH
+
+992
+01:13:36.055 --> 01:13:38.135
+and WHI will be dominated
+
+993
+01:13:38.515 --> 01:13:41.455
+by this vertical computing that I'm doing.
+
+994
+01:13:41.555 --> 01:13:44.015
+Mm-hmm. Whereas this one has to carry
+
+995
+01:13:44.015 --> 01:13:45.175
+that sequence knowledge.
+
+996
+01:13:45.715 --> 01:13:47.735
+So that is where they are changed
+
+997
+01:13:47.955 --> 01:13:49.775
+as you move from one sequence version to others,
+
+998
+01:13:50.465 --> 01:13:55.335
+maybe I think this will, I, I thank you all
+
+999
+01:13:55.355 --> 01:13:56.455
+for asking this question.
+
+1000
+01:13:56.695 --> 01:14:00.175
+I think when are explaining the one work examples,
+
+1001
+01:14:00.175 --> 01:14:04.575
+then it'll be become more, uh, no, we will get more clarity.
+
+1002
+01:14:06.245 --> 01:14:10.615
+Okay? Uh, what I wanted to say is see
+
+1003
+01:14:11.295 --> 01:14:16.145
+BAP propagation we studied in the multilayer perceptron.
+
+1004
+01:14:17.485 --> 01:14:19.065
+In case of this RNN,
+
+1005
+01:14:19.715 --> 01:14:22.745
+there is something called bap propagation through time
+
+1006
+01:14:23.895 --> 01:14:27.105
+that also comes, which I position X zero to xt,
+
+1007
+01:14:27.145 --> 01:14:28.225
+I go and then come back.
+
+1008
+01:14:28.755 --> 01:14:31.625
+There is an error coming back through time.
+
+1009
+01:14:32.005 --> 01:14:33.105
+And that is called bpro.
+
+1010
+01:14:33.105 --> 01:14:34.785
+That is uniquely meant
+
+1011
+01:14:34.845 --> 01:14:37.665
+for our sequence knowledge network sequence networks.
+
+1012
+01:14:38.745 --> 01:14:42.985
+Okay? Next slide. This is what, uh, this is
+
+1013
+01:14:42.985 --> 01:14:46.105
+what we have started study bion in feedforward model.
+
+1014
+01:14:46.125 --> 01:14:49.225
+We have studied this very, if you recall now, no,
+
+1015
+01:14:49.585 --> 01:14:53.265
+I apply input X get the output and error ation happens
+
+1016
+01:14:53.965 --> 01:14:55.185
+and we are told no.
+
+1017
+01:14:55.185 --> 01:14:56.785
+As the number of redan layer increases,
+
+1018
+01:14:56.785 --> 01:14:58.385
+the vanishing gradient problem comes.
+
+1019
+01:14:58.695 --> 01:15:02.225
+That is what we have been exposed to. Now next slide.
+
+1020
+01:15:02.225 --> 01:15:06.075
+As this is what happens now in the AL network.
+
+1021
+01:15:06.585 --> 01:15:09.035
+Okay, see this vertical, uh,
+
+1022
+01:15:09.135 --> 01:15:11.515
+red s which this is the conventional BA
+
+1023
+01:15:11.515 --> 01:15:12.555
+propagation we have studied.
+
+1024
+01:15:13.675 --> 01:15:16.855
+Now we also have what is called B propagation through time.
+
+1025
+01:15:17.725 --> 01:15:21.505
+Uh, you see no left arrow coming red darrow that, uh,
+
+1026
+01:15:21.725 --> 01:15:23.785
+no ba propagation other happens through time.
+
+1027
+01:15:23.935 --> 01:15:28.425
+Also, see this paper propagation conventional pap
+
+1028
+01:15:28.425 --> 01:15:30.905
+application that we have studied in forward backward pass.
+
+1029
+01:15:31.805 --> 01:15:34.545
+As the number of layer increases, it'll contribute
+
+1030
+01:15:34.545 --> 01:15:35.785
+to vanishing gradient problem.
+
+1031
+01:15:36.815 --> 01:15:39.595
+Now, at every snapshot I have a vanishing gradient problem
+
+1032
+01:15:39.775 --> 01:15:42.355
+due to that vertical pass, conventional map propagation.
+
+1033
+01:15:43.405 --> 01:15:45.635
+Along with that, you see there is another
+
+1034
+01:15:45.635 --> 01:15:46.915
+complication coming here.
+
+1035
+01:15:47.325 --> 01:15:50.395
+There is a propagation through time, which is happening,
+
+1036
+01:15:51.215 --> 01:15:53.235
+and that will also add value
+
+1037
+01:15:53.375 --> 01:15:55.075
+to your vanishing gradient problem.
+
+1038
+01:15:55.105 --> 01:15:58.115
+That means say the vanishing gradient problem becomes more
+
+1039
+01:15:58.435 --> 01:16:01.515
+aggravated in case of recurrent network compared to
+
+1040
+01:16:01.665 --> 01:16:03.515
+what was happening in the previous case.
+
+1041
+01:16:04.145 --> 01:16:06.075
+Okay, fine.
+
+1042
+01:16:09.065 --> 01:16:12.905
+Next slide. Actually,
+
+1043
+01:16:13.005 --> 01:16:16.345
+see this experiment one student did and gave me the result.
+
+1044
+01:16:17.125 --> 01:16:20.865
+Um, you don't have to take these numbers, uh,
+
+1045
+01:16:21.855 --> 01:16:22.985
+very seriously,
+
+1046
+01:16:23.905 --> 01:16:28.885
+but just, uh, to give an illustration of,
+
+1047
+01:16:29.065 --> 01:16:32.945
+um, um, sequence knowledge.
+
+1048
+01:16:32.945 --> 01:16:35.985
+He has done it, but I'm not happy with the, uh,
+
+1049
+01:16:35.985 --> 01:16:37.505
+numbers, what he has generated.
+
+1050
+01:16:37.725 --> 01:16:41.745
+But at least just to, uh, indicate no the process.
+
+1051
+01:16:42.165 --> 01:16:44.145
+Uh, for example, there is a sentiment
+
+1052
+01:16:44.505 --> 01:16:45.665
+classification problem.
+
+1053
+01:16:46.155 --> 01:16:48.065
+There is an IMDB data set.
+
+1054
+01:16:48.065 --> 01:16:50.265
+Is there, which is movie reviews dataset,
+
+1055
+01:16:50.425 --> 01:16:51.585
+standard data set is there.
+
+1056
+01:16:52.285 --> 01:16:54.705
+So to ca, oh, there is a standard thing.
+
+1057
+01:16:54.945 --> 01:16:56.225
+Sentiment classification is there,
+
+1058
+01:16:56.685 --> 01:16:58.985
+and the sentiment information is, uh,
+
+1059
+01:16:59.055 --> 01:17:00.585
+essentially sequence knowledge.
+
+1060
+01:17:00.665 --> 01:17:03.505
+I read the review based around that.
+
+1061
+01:17:03.585 --> 01:17:05.825
+I want to give a sentiment, positive sentiment
+
+1062
+01:17:05.825 --> 01:17:07.305
+or negative sentiment or something.
+
+1063
+01:17:07.765 --> 01:17:09.445
+And that is that classification task.
+
+1064
+01:17:09.875 --> 01:17:14.285
+What he did is he considered sequence length as of 50, uh,
+
+1065
+01:17:14.985 --> 01:17:18.165
+the see what sequence length, uh, reviews, which are
+
+1066
+01:17:18.165 --> 01:17:19.245
+of 50 word length.
+
+1067
+01:17:20.375 --> 01:17:24.315
+And uh, um, typically, you know,
+
+1068
+01:17:24.365 --> 01:17:26.755
+don't worry about the time what is required.
+
+1069
+01:17:27.655 --> 01:17:31.315
+Um, the accuracy he got by the 50
+
+1070
+01:17:31.925 --> 01:17:35.275
+uhfor network is about 50% binary classification, positive
+
+1071
+01:17:35.295 --> 01:17:36.395
+or negative.
+
+1072
+01:17:37.095 --> 01:17:39.515
+Uh, he got only accuracy of 50%,
+
+1073
+01:17:39.565 --> 01:17:40.995
+which is stands probably binary
+
+1074
+01:17:41.355 --> 01:17:42.515
+classification, positive or negative.
+
+1075
+01:17:43.105 --> 01:17:46.555
+That means to say the neural network is not able to
+
+1076
+01:17:47.795 --> 01:17:49.595
+classify build a classifier,
+
+1077
+01:17:49.595 --> 01:17:51.355
+which can do sentiment classification of
+
+1078
+01:17:51.355 --> 01:17:52.355
+what it is expected.
+
+1079
+01:17:53.385 --> 01:17:57.765
+Uh, mainly because whether it's positive or negative.
+
+1080
+01:17:57.765 --> 01:17:59.845
+Suppose I have sequence lens of 50 words.
+
+1081
+01:18:00.045 --> 01:18:02.205
+I scan through that 50 words based around that.
+
+1082
+01:18:02.245 --> 01:18:05.285
+I develop a sentiment as a positive or negative.
+
+1083
+01:18:05.585 --> 01:18:08.165
+But in the feed four network, there is no way I can give
+
+1084
+01:18:08.165 --> 01:18:10.765
+that, uh, capture the sequence knowledge.
+
+1085
+01:18:11.195 --> 01:18:12.805
+Whereas in the recurrent neur network,
+
+1086
+01:18:13.225 --> 01:18:15.285
+the same sequence length, it gives me some
+
+1087
+01:18:15.885 --> 01:18:17.815
+significantly higher performance
+
+1088
+01:18:17.925 --> 01:18:20.735
+because it processes the sequence knowledge.
+
+1089
+01:18:21.395 --> 01:18:24.175
+And uh, of course, naturally, you know,
+
+1090
+01:18:24.565 --> 01:18:26.095
+here I'm randomly choosing
+
+1091
+01:18:26.195 --> 01:18:28.415
+and applying, uh, this one, whereas here
+
+1092
+01:18:28.975 --> 01:18:33.015
+I can apply in batch process, whereas in the time as I have
+
+1093
+01:18:33.015 --> 01:18:34.775
+to apply in sequence one
+
+1094
+01:18:34.775 --> 01:18:36.175
+after the other, that sequence,
+
+1095
+01:18:36.175 --> 01:18:37.975
+that's why it takes more time to compute.
+
+1096
+01:18:38.555 --> 01:18:40.855
+Uh, that is the difference between FFN
+
+1097
+01:18:40.855 --> 01:18:42.215
+and the recurrent neur network.
+
+1098
+01:18:42.725 --> 01:18:44.615
+Okay? Same way, if I take a hundred
+
+1099
+01:18:45.455 --> 01:18:48.335
+sequence length this time, fit four network time
+
+1100
+01:18:48.835 --> 01:18:51.655
+for testing remains same, whereas, uh,
+
+1101
+01:18:51.655 --> 01:18:53.495
+in the recurrent network takes more time
+
+1102
+01:18:53.495 --> 01:18:58.215
+because I'm processing the sequence length of some improve.
+
+1103
+01:18:58.595 --> 01:19:00.455
+But of course, you know, this further numbers,
+
+1104
+01:19:01.075 --> 01:19:03.495
+as you increase the sequence length, it's not improving.
+
+1105
+01:19:03.715 --> 01:19:06.335
+I'm not really trusting these numbers.
+
+1106
+01:19:06.425 --> 01:19:10.375
+Third and fourth row only, I just want to say for through,
+
+1107
+01:19:10.915 --> 01:19:15.425
+if you take, um, uh, since recurrent neur network is able
+
+1108
+01:19:15.425 --> 01:19:18.345
+to capture the sequence length, uh,
+
+1109
+01:19:19.765 --> 01:19:22.225
+it is able to do a better classification
+
+1110
+01:19:22.225 --> 01:19:24.105
+of sentiment compared to the feed farm,
+
+1111
+01:19:24.415 --> 01:19:25.585
+even though you don't,
+
+1112
+01:19:25.885 --> 01:19:28.905
+please don't look at this much improvement in the
+
+1113
+01:19:28.905 --> 01:19:31.745
+performance, but just to say that it is, uh,
+
+1114
+01:19:32.005 --> 01:19:33.905
+indeed a sequence knowledge is important.
+
+1115
+01:19:35.865 --> 01:19:37.315
+Next slide. Uh,
+
+1116
+01:19:38.785 --> 01:19:41.615
+maybe it's really pla possible we should show on the
+
+1117
+01:19:41.775 --> 01:19:44.015
+sentiment classification IMDV database itself.
+
+1118
+01:19:47.225 --> 01:19:48.995
+Okay? I think this basic assumptions
+
+1119
+01:19:48.995 --> 01:19:52.675
+that I explained in the, uh, already in the explanation,
+
+1120
+01:19:52.705 --> 01:19:53.915
+next position, next slide.
+
+1121
+01:19:53.935 --> 01:19:56.315
+Uh, this one, yeah,
+
+1122
+01:19:56.595 --> 01:19:59.585
+I think this also I explained next.
+
+1123
+01:20:02.015 --> 01:20:05.105
+This is some mathematical equation to say how, uh,
+
+1124
+01:20:05.445 --> 01:20:07.365
+it is, uh, computed.
+
+1125
+01:20:08.145 --> 01:20:10.405
+Uh, I don't have to worry too much about that.
+
+1126
+01:20:10.795 --> 01:20:15.495
+Next, yeah,
+
+1127
+01:20:15.965 --> 01:20:20.375
+next, next slide.
+
+1128
+01:20:21.515 --> 01:20:23.015
+Uh, this vanishing gradient problem.
+
+1129
+01:20:23.715 --> 01:20:26.455
+Uh, this also I explained, uh, next slide.
+
+1130
+01:20:28.065 --> 01:20:29.565
+Uh, I think up to this point,
+
+1131
+01:20:29.745 --> 01:20:32.845
+the short term versus long term will go to lstm.
+
+1132
+01:20:33.345 --> 01:20:36.125
+So the previous, I think with that, I'm stopping here.
+
+1133
+01:20:36.145 --> 01:20:39.515
+If you have any questions, Sunil can continue.
+
+1134
+01:20:39.985 --> 01:20:44.075
+Well, one question you, so apart from sharing the weight,
+
+1135
+01:20:44.335 --> 01:20:47.675
+uh, each of the neuron is sharing input,
+
+1136
+01:20:47.695 --> 01:20:51.275
+is sharing the output also, that way they are able
+
+1137
+01:20:51.295 --> 01:20:53.235
+to remember the sequence of the work.
+
+1138
+01:20:55.555 --> 01:20:59.405
+Ah, can you repeat Rakesh? I,
+
+1139
+01:20:59.745 --> 01:21:00.745
+Uh, yeah. What I'm
+
+1140
+01:21:00.745 --> 01:21:02.485
+saying, apart from sharing the weights,
+
+1141
+01:21:02.915 --> 01:21:05.285
+they are sharing the previous output also.
+
+1142
+01:21:05.505 --> 01:21:09.125
+So yes, that's, uh, where it's remembering the sequence.
+
+1143
+01:21:09.465 --> 01:21:10.725
+Yes, yes, yes, yes.
+
+1144
+01:21:11.185 --> 01:21:13.445
+Now that is influencing the sequence knowledge,
+
+1145
+01:21:13.445 --> 01:21:14.445
+computation value,
+
+1146
+01:21:15.235 --> 01:21:16.235
+Yeah. Yes, somewhat.
+
+1147
+01:21:16.235 --> 01:21:16.965
+Thank you.
+
+1148
+01:21:18.755 --> 01:21:22.285
+Yeah. Uh, I think Sunni,
+
+1149
+01:21:22.285 --> 01:21:24.325
+do you have some examples to show that?
+
+1150
+01:21:26.875 --> 01:21:30.385
+Yeah, I think you have this. You can proceed.
+
+1151
+01:21:32.155 --> 01:21:32.625
+Thank you.
+
+1152
+01:21:37.495 --> 01:21:39.755
+You are muted your mic, so you're muted your mic.
+
+1153
+01:21:41.155 --> 01:21:42.895
+Oh, sorry, sorry. Yeah.
+
+1154
+01:21:43.635 --> 01:21:45.615
+Um, so I'll just continue from here
+
+1155
+01:21:45.875 --> 01:21:50.095
+and I'll try to, uh, again, emphasize on the same points
+
+1156
+01:21:50.125 --> 01:21:52.215
+what Sarah has told with some examples
+
+1157
+01:21:52.275 --> 01:21:55.015
+and maybe some pictorial representation. Understand,
+
+1158
+01:21:55.445 --> 01:21:58.775
+Just, so, even though it looks slightly repetitive,
+
+1159
+01:21:59.445 --> 01:22:02.015
+this sequence knowledge processing is a very important
+
+1160
+01:22:02.155 --> 01:22:03.175
+aspect of deep learning.
+
+1161
+01:22:04.095 --> 01:22:06.615
+I know. I think, uh, kindly bear with that
+
+1162
+01:22:07.315 --> 01:22:08.375
+double explanation.
+
+1163
+01:22:10.005 --> 01:22:11.765
+Yes. Yes.
+
+1164
+01:22:16.425 --> 01:22:17.425
+Okay.
+
+1165
+01:22:18.145 --> 01:22:22.975
+So I have taken the similar examples what, uh, uh,
+
+1166
+01:22:23.195 --> 01:22:24.935
+uh, took in the last class as well,
+
+1167
+01:22:25.365 --> 01:22:29.095
+that suppose we have a corpus where we have the three
+
+1168
+01:22:29.815 --> 01:22:32.135
+sentences and first sentences of length,
+
+1169
+01:22:32.185 --> 01:22:35.575
+three second sentences of length, five
+
+1170
+01:22:35.795 --> 01:22:39.775
+and third sentence has forward, so of length four.
+
+1171
+01:22:40.875 --> 01:22:44.875
+So what happened when you will build this RN network, uh,
+
+1172
+01:22:45.015 --> 01:22:48.075
+in, in, when you will actually implement that.
+
+1173
+01:22:48.415 --> 01:22:52.075
+So RNN always expect the input
+
+1174
+01:22:52.095 --> 01:22:53.795
+to be in this particular shape.
+
+1175
+01:22:54.305 --> 01:22:57.515
+Okay? Input shape is something like this that
+
+1176
+01:22:58.255 --> 01:23:01.115
+you first say that what is your batch size?
+
+1177
+01:23:01.295 --> 01:23:03.915
+The first number here represent the passage here.
+
+1178
+01:23:03.995 --> 01:23:06.325
+I will be processing each, each sentence separately.
+
+1179
+01:23:06.345 --> 01:23:10.325
+So I'm writing best equal to one, one sentence, uh,
+
+1180
+01:23:10.625 --> 01:23:11.805
+one sentence at a time.
+
+1181
+01:23:12.505 --> 01:23:15.965
+But it is possible that you can group the multiple sentence
+
+1182
+01:23:16.165 --> 01:23:17.525
+together and do the calculation.
+
+1183
+01:23:18.185 --> 01:23:20.165
+So here, but I'll show you one by one maybe.
+
+1184
+01:23:20.545 --> 01:23:22.605
+So that's why the ba batch equal to one.
+
+1185
+01:23:23.905 --> 01:23:26.925
+And the second parameter says that how many words
+
+1186
+01:23:27.025 --> 01:23:28.445
+or what is the sequence length?
+
+1187
+01:23:28.545 --> 01:23:30.445
+So how many times stamp it'll go.
+
+1188
+01:23:30.585 --> 01:23:34.085
+So three essentially says that it'll start from X, no,
+
+1189
+01:23:34.175 --> 01:23:36.645
+it'll go to X one and it'll end at X two.
+
+1190
+01:23:37.145 --> 01:23:40.165
+But in the second sentence, it'll go to start at X.
+
+1191
+01:23:40.225 --> 01:23:44.085
+No, it'll go to X one, the next two, the next three
+
+1192
+01:23:44.085 --> 01:23:45.925
+and X four, right?
+
+1193
+01:23:45.945 --> 01:23:48.805
+And then the third one, it'll go from next node will be deep
+
+1194
+01:23:49.085 --> 01:23:50.165
+X one will be learning.
+
+1195
+01:23:51.025 --> 01:23:54.405
+The next two will be is and x. Uh, three will be powerful.
+
+1196
+01:23:54.425 --> 01:23:57.845
+So this is how at each time stamp, we are going to feed one,
+
+1197
+01:23:57.945 --> 01:23:59.445
+one word, okay?
+
+1198
+01:23:59.905 --> 01:24:03.125
+And the next time stamp will come once we have already done
+
+1199
+01:24:03.125 --> 01:24:04.205
+with the previous time stamp,
+
+1200
+01:24:04.205 --> 01:24:05.885
+it is just like your clock, right?
+
+1201
+01:24:06.265 --> 01:24:08.085
+So the next, uh, next, uh,
+
+1202
+01:24:08.235 --> 01:24:10.965
+next minute will come once this minute has already done.
+
+1203
+01:24:10.965 --> 01:24:12.645
+Next hour will come. This, this,
+
+1204
+01:24:12.645 --> 01:24:15.165
+this time has already, uh, done.
+
+1205
+01:24:15.625 --> 01:24:19.245
+So this is how this RNN will, will work, right?
+
+1206
+01:24:19.265 --> 01:24:20.565
+And this v size, you know,
+
+1207
+01:24:20.565 --> 01:24:22.485
+that I have already told you earlier also,
+
+1208
+01:24:22.485 --> 01:24:23.765
+this V represents, okay,
+
+1209
+01:24:23.765 --> 01:24:27.325
+what are the unique words you have in the entire corpus?
+
+1210
+01:24:27.325 --> 01:24:30.845
+Because, uh, we can't be feeding these words
+
+1211
+01:24:31.105 --> 01:24:32.725
+as it is to the network.
+
+1212
+01:24:32.945 --> 01:24:35.565
+We have to represent them in one vector form.
+
+1213
+01:24:35.565 --> 01:24:38.725
+And this vector, what will the vector length in which each
+
+1214
+01:24:38.755 --> 01:24:42.445
+word here will be represented will be we, right?
+
+1215
+01:24:42.465 --> 01:24:45.245
+So you can see here the representation of each word,
+
+1216
+01:24:45.955 --> 01:24:49.125
+like we, uh, will be this one hot vector.
+
+1217
+01:24:49.405 --> 01:24:52.245
+R will be this, and so on. This is, this is just one.
+
+1218
+01:24:52.385 --> 01:24:54.085
+Uh, as similarly, the other vectors will
+
+1219
+01:24:54.155 --> 01:24:55.365
+also will be represented.
+
+1220
+01:24:55.465 --> 01:24:57.685
+For example, the deep learning, powerful,
+
+1221
+01:24:57.685 --> 01:24:58.965
+everything can be represented,
+
+1222
+01:24:59.105 --> 01:25:02.445
+but here it is shown only for this particular sentence.
+
+1223
+01:25:02.585 --> 01:25:03.685
+We are in LLM class.
+
+1224
+01:25:04.305 --> 01:25:06.325
+And here the stable essentially says
+
+1225
+01:25:06.325 --> 01:25:08.085
+that at the time stamp number, uh,
+
+1226
+01:25:08.615 --> 01:25:10.525
+first we are processing the first word.
+
+1227
+01:25:10.525 --> 01:25:12.725
+Then second, we are processing the second word,
+
+1228
+01:25:12.725 --> 01:25:14.925
+then in then l, l, m, and then class.
+
+1229
+01:25:15.345 --> 01:25:18.565
+So it, it goes, it goes one by one at the time still.
+
+1230
+01:25:19.735 --> 01:25:21.675
+Now, this is for, for a particular example.
+
+1231
+01:25:21.775 --> 01:25:23.115
+Now, in general, what will happen,
+
+1232
+01:25:24.015 --> 01:25:25.755
+the input sequence will be off.
+
+1233
+01:25:25.965 --> 01:25:27.235
+It'll go from x no
+
+1234
+01:25:27.235 --> 01:25:29.675
+to X two in general means XT can be anything.
+
+1235
+01:25:29.855 --> 01:25:32.635
+Uh, it is sometime three to sometime four, five.
+
+1236
+01:25:33.215 --> 01:25:37.035
+So it'll go from X not to xt TT timestamp.
+
+1237
+01:25:37.535 --> 01:25:39.715
+And similarly, the output, uh,
+
+1238
+01:25:39.815 --> 01:25:42.635
+output sequences can be o or not to ot.
+
+1239
+01:25:42.655 --> 01:25:45.875
+But as Sarah also said, that one, these length of X
+
+1240
+01:25:45.895 --> 01:25:47.315
+and O need not to be same.
+
+1241
+01:25:47.365 --> 01:25:50.635
+It'll be different. It, it will, it'll be, for example,
+
+1242
+01:25:50.655 --> 01:25:52.715
+you take the example of the machine translation
+
+1243
+01:25:53.205 --> 01:25:56.835
+where say in English, we have a sentence like, uh,
+
+1244
+01:25:57.075 --> 01:25:58.075
+I am going, right?
+
+1245
+01:25:58.815 --> 01:26:00.515
+Uh, then I am going,
+
+1246
+01:26:00.515 --> 01:26:02.755
+there is three word in this sequence, right?
+
+1247
+01:26:02.985 --> 01:26:05.725
+If I do the, uh, parallel, uh,
+
+1248
+01:26:05.725 --> 01:26:08.365
+translation in Hindi, it'll say me.
+
+1249
+01:26:09.305 --> 01:26:13.125
+So me, it'll be four words in a sentence, right?
+
+1250
+01:26:13.545 --> 01:26:15.725
+So input sequence, length
+
+1251
+01:26:16.425 --> 01:26:19.165
+and output, sequence length, they will not be equal.
+
+1252
+01:26:19.635 --> 01:26:22.165
+Okay? There might be sometimes where there is equal,
+
+1253
+01:26:22.225 --> 01:26:25.165
+but then that is, that is what we don't have to, uh,
+
+1254
+01:26:25.605 --> 01:26:28.405
+consider that it is also going up to t starting with zero.
+
+1255
+01:26:28.465 --> 01:26:31.285
+It is also going up tot h so they are having the same,
+
+1256
+01:26:31.515 --> 01:26:32.605
+same length, right?
+
+1257
+01:26:33.145 --> 01:26:34.805
+So machine translation is a good example.
+
+1258
+01:26:35.125 --> 01:26:37.005
+Whatever language it can be, you know, that one language
+
+1259
+01:26:37.065 --> 01:26:39.805
+to other language length will be different.
+
+1260
+01:26:41.065 --> 01:26:45.005
+Now, what I'll do here is I will just build one neural
+
+1261
+01:26:45.005 --> 01:26:48.685
+network and then show you that how, how this r
+
+1262
+01:26:48.685 --> 01:26:51.925
+and n, uh, pictorially, how it, it is represented,
+
+1263
+01:26:52.405 --> 01:26:53.525
+although sir has explained that,
+
+1264
+01:26:53.585 --> 01:26:56.285
+but just to have a little more insight, understanding
+
+1265
+01:26:57.175 --> 01:26:59.045
+maybe I, I will take this example.
+
+1266
+01:26:59.705 --> 01:27:03.405
+So what I will do, I will take the input dimension as equal
+
+1267
+01:27:03.405 --> 01:27:05.965
+to four, input dimension as equal to four,
+
+1268
+01:27:05.985 --> 01:27:07.765
+and output dimension as equal to three.
+
+1269
+01:27:08.195 --> 01:27:10.805
+Okay? For example, suppose there is any x,
+
+1270
+01:27:10.805 --> 01:27:12.485
+whether it is X node, X one,
+
+1271
+01:27:12.485 --> 01:27:15.485
+or XT for any sentence, every,
+
+1272
+01:27:15.935 --> 01:27:18.965
+every input here will be represented by four dimension,
+
+1273
+01:27:18.965 --> 01:27:23.045
+maybe the four values, where two value will be, uh, uh,
+
+1274
+01:27:23.955 --> 01:27:25.245
+zero, two value heritage,
+
+1275
+01:27:25.305 --> 01:27:27.005
+or two value zero, two value one,
+
+1276
+01:27:27.005 --> 01:27:31.125
+it is a one hot vector representation, or, uh, right?
+
+1277
+01:27:31.385 --> 01:27:35.005
+But then, uh, I, I'll show you that one, how
+
+1278
+01:27:35.945 --> 01:27:37.485
+you can also represent this X node
+
+1279
+01:27:37.485 --> 01:27:39.925
+as an embedded dense vector representation later on.
+
+1280
+01:27:39.945 --> 01:27:42.365
+But here, let us say that this is what is the representation
+
+1281
+01:27:42.545 --> 01:27:45.005
+of XX node, okay?
+
+1282
+01:27:45.065 --> 01:27:46.365
+And, uh, similarly,
+
+1283
+01:27:46.365 --> 01:27:48.645
+because I have fixed your output dimension as you call
+
+1284
+01:27:48.645 --> 01:27:53.205
+to three, then, uh, here the, every output,
+
+1285
+01:27:53.335 --> 01:27:55.965
+every output will be represented by three dimension.
+
+1286
+01:27:56.015 --> 01:28:00.235
+Right Now, neural network architecture, how I want to build,
+
+1287
+01:28:00.425 --> 01:28:03.435
+because I have fixed the number of input dimension equal
+
+1288
+01:28:03.435 --> 01:28:06.315
+to four, at the input layer, you will have four neurons
+
+1289
+01:28:06.315 --> 01:28:08.075
+or four inputs, whatever you say, right?
+
+1290
+01:28:08.215 --> 01:28:11.475
+So four, it is written. Now these four inputs will be
+
+1291
+01:28:11.475 --> 01:28:14.075
+connected with three output layer, just for the simplicity.
+
+1292
+01:28:14.175 --> 01:28:16.315
+I'm not keeping any hidden layer, okay?
+
+1293
+01:28:16.695 --> 01:28:19.235
+Uh, but obviously you can keep the hidden layers also
+
+1294
+01:28:19.255 --> 01:28:20.475
+as as many as you can.
+
+1295
+01:28:20.495 --> 01:28:22.355
+But then here, I'm not keeping any hidden layer.
+
+1296
+01:28:22.855 --> 01:28:24.315
+I'm just keeping one input.
+
+1297
+01:28:24.495 --> 01:28:26.235
+And there is one layer, uh,
+
+1298
+01:28:26.415 --> 01:28:30.235
+and that itself is output layer where I have three neurons.
+
+1299
+01:28:30.295 --> 01:28:32.035
+Why three neurons? Because output
+
+1300
+01:28:32.035 --> 01:28:33.475
+dimension, I have fixed as three.
+
+1301
+01:28:33.935 --> 01:28:36.035
+So I need just three neurons here.
+
+1302
+01:28:36.055 --> 01:28:38.115
+If I output dimension, I'll fix as 10.
+
+1303
+01:28:38.385 --> 01:28:41.955
+That output number of layer neurons will be 10.
+
+1304
+01:28:41.955 --> 01:28:44.235
+That is how it'll be. Now with this setting,
+
+1305
+01:28:44.415 --> 01:28:48.395
+let us now process the time stamp wise, uh, uh,
+
+1306
+01:28:48.645 --> 01:28:49.875
+input, and we'll see that.
+
+1307
+01:28:50.075 --> 01:28:51.555
+How does it look like? Okay?
+
+1308
+01:28:51.825 --> 01:28:54.035
+Just, just, uh, visualization that we are going
+
+1309
+01:28:54.035 --> 01:28:55.555
+to see just everything you know already.
+
+1310
+01:28:56.375 --> 01:29:00.315
+So now, at the time, stamp number T no. Okay?
+
+1311
+01:29:00.315 --> 01:29:02.625
+This is how your network will look like. Okay?
+
+1312
+01:29:02.645 --> 01:29:05.585
+For example, you are feeding the first input that is X.
+
+1313
+01:29:05.645 --> 01:29:08.785
+No, this X is nothing but x sno. You are feeding it.
+
+1314
+01:29:09.005 --> 01:29:12.945
+So X nod is represented by four dimension, okay?
+
+1315
+01:29:12.945 --> 01:29:14.865
+It, it can be a one hot vector representation.
+
+1316
+01:29:15.175 --> 01:29:16.585
+Here I'm showing double one,
+
+1317
+01:29:16.885 --> 01:29:18.505
+but you can just assume that there are,
+
+1318
+01:29:18.725 --> 01:29:22.625
+if it is just one hot vector representation, it may be, uh,
+
+1319
+01:29:23.595 --> 01:29:25.225
+three zeros and one, one.
+
+1320
+01:29:25.245 --> 01:29:26.465
+That's all. Okay?
+
+1321
+01:29:26.465 --> 01:29:29.665
+Three zeros and one, one, maybe I'll put this zero.
+
+1322
+01:29:29.835 --> 01:29:31.625
+Let's just do not get confused further,
+
+1323
+01:29:32.675 --> 01:29:34.485
+because it's just one hot vector representative.
+
+1324
+01:29:34.505 --> 01:29:37.485
+So we have seen that, how to build the one hot vector from,
+
+1325
+01:29:37.635 --> 01:29:39.245
+from the given corpus.
+
+1326
+01:29:40.025 --> 01:29:42.205
+So now see this, this is the, uh,
+
+1327
+01:29:42.225 --> 01:29:44.685
+so every input is represented by one hot vector.
+
+1328
+01:29:44.745 --> 01:29:46.325
+In one hot vector. I have four values.
+
+1329
+01:29:46.785 --> 01:29:49.365
+So four values depends on your vocabulary size.
+
+1330
+01:29:49.365 --> 01:29:51.485
+So I assume that I have only four unique
+
+1331
+01:29:51.485 --> 01:29:52.525
+words in my vocabulary.
+
+1332
+01:29:52.635 --> 01:29:56.165
+Alright? So that's why there is a four. Okay? X.
+
+1333
+01:29:56.355 --> 01:29:58.085
+Well, uh, there are four inputs here.
+
+1334
+01:29:58.665 --> 01:30:00.685
+Now, why we have three, three neurons here.
+
+1335
+01:30:00.685 --> 01:30:02.165
+This is the neurons, okay?
+
+1336
+01:30:02.425 --> 01:30:05.405
+And this is the itself is acting like my output layer.
+
+1337
+01:30:05.925 --> 01:30:07.645
+I am not showing any hidden layer in
+
+1338
+01:30:07.645 --> 01:30:09.045
+between just for the simplicity.
+
+1339
+01:30:09.315 --> 01:30:13.805
+Okay? So these are the three neurons, and, uh, Y three,
+
+1340
+01:30:13.805 --> 01:30:16.925
+because I have assumed that output dimension is three.
+
+1341
+01:30:16.945 --> 01:30:18.525
+So I need to keep three neurons.
+
+1342
+01:30:18.525 --> 01:30:20.725
+Each neuron will give one word output. That's all.
+
+1343
+01:30:21.305 --> 01:30:24.045
+Now, you can treat this, this network
+
+1344
+01:30:24.265 --> 01:30:27.085
+as if Feedforward network, a NN type network,
+
+1345
+01:30:27.085 --> 01:30:29.085
+because every input here is connected
+
+1346
+01:30:29.085 --> 01:30:30.085
+with every other neuron.
+
+1347
+01:30:30.085 --> 01:30:34.125
+You can see that three, sorry, uh, four plus four plus four,
+
+1348
+01:30:34.125 --> 01:30:35.485
+12 connections are there.
+
+1349
+01:30:35.955 --> 01:30:38.845
+Okay? 12 connections are there, right?
+
+1350
+01:30:38.865 --> 01:30:41.925
+So this is, this is nothing but a a NN, right?
+
+1351
+01:30:42.065 --> 01:30:45.005
+It is, it is, uh, it, it has no difference from there.
+
+1352
+01:30:45.065 --> 01:30:46.085
+At least this architecture,
+
+1353
+01:30:46.085 --> 01:30:47.645
+what you're seeing at ts called two zero,
+
+1354
+01:30:48.325 --> 01:30:50.325
+although there is something which I'm not showing you,
+
+1355
+01:30:50.325 --> 01:30:53.765
+that there is one more connection, which is coming from, uh,
+
+1356
+01:30:53.895 --> 01:30:57.365
+which is connected with these neurons at the output layer,
+
+1357
+01:30:57.365 --> 01:30:59.565
+which I'm not showing you, but you can see
+
+1358
+01:30:59.565 --> 01:31:00.965
+that in the equation.
+
+1359
+01:31:00.985 --> 01:31:02.005
+It is written ip.
+
+1360
+01:31:02.005 --> 01:31:06.525
+Suppose ip suppose it is only a NN like the a NN it works.
+
+1361
+01:31:06.545 --> 01:31:10.405
+It would have been x it you plus B.
+
+1362
+01:31:10.405 --> 01:31:13.085
+Because what we do in the a NN at each neuron,
+
+1363
+01:31:13.105 --> 01:31:16.405
+we do the weighted sum plus bias, right?
+
+1364
+01:31:16.705 --> 01:31:19.205
+So weighted sum for this particular neuron would be
+
+1365
+01:31:19.725 --> 01:31:23.125
+whatever input it is receiving that is the, uh, this,
+
+1366
+01:31:23.155 --> 01:31:24.165
+this, this, and this.
+
+1367
+01:31:24.165 --> 01:31:27.765
+Four inputs. And then whatever weights it, it is, uh,
+
+1368
+01:31:27.915 --> 01:31:31.445
+connected with, so X into U, you can just, uh, rep, uh,
+
+1369
+01:31:31.445 --> 01:31:32.925
+understand that.
+
+1370
+01:31:32.925 --> 01:31:35.325
+Uh, X is a collective input representation.
+
+1371
+01:31:35.685 --> 01:31:38.805
+U is a collective output, or sorry, weight representation.
+
+1372
+01:31:38.985 --> 01:31:41.645
+So X into U is the input which is going
+
+1373
+01:31:41.665 --> 01:31:42.965
+to each of these neuron.
+
+1374
+01:31:43.755 --> 01:31:48.685
+Okay? So that's why X dot u dot x node,
+
+1375
+01:31:48.685 --> 01:31:51.005
+you can see that and which is nothing but the a NN.
+
+1376
+01:31:51.225 --> 01:31:55.165
+Now, this is w no, uh, W oh minus one,
+
+1377
+01:31:55.335 --> 01:31:56.645
+which is not visible here.
+
+1378
+01:31:56.645 --> 01:31:57.645
+I'll show you in the next slide.
+
+1379
+01:31:58.105 --> 01:32:01.685
+And that's how you get something at, uh, at this, at each
+
+1380
+01:32:01.685 --> 01:32:03.565
+of these neurons, three different outputs you get,
+
+1381
+01:32:03.565 --> 01:32:05.005
+there's nothing but A and N, right?
+
+1382
+01:32:05.265 --> 01:32:06.965
+But RNN is slightly different,
+
+1383
+01:32:06.965 --> 01:32:08.245
+which I'm going to show you next.
+
+1384
+01:32:09.065 --> 01:32:11.885
+Now, say that at time, time is called to two zero.
+
+1385
+01:32:11.915 --> 01:32:13.685
+This is how my neural network looks like.
+
+1386
+01:32:13.705 --> 01:32:15.485
+And when it comes to time, musical called two one.
+
+1387
+01:32:16.225 --> 01:32:18.445
+Now, when it comes to time is called two one x node.
+
+1388
+01:32:18.445 --> 01:32:22.005
+I have already processed, okay, say that and X one.
+
+1389
+01:32:22.105 --> 01:32:25.595
+I'm trying to process now, okay, X one, I'm trying
+
+1390
+01:32:25.595 --> 01:32:29.675
+to process now see at the x, X is equal to, uh,
+
+1391
+01:32:29.815 --> 01:32:31.995
+one also means time is equal to one also.
+
+1392
+01:32:32.175 --> 01:32:34.115
+And when we are processing X one,
+
+1393
+01:32:34.705 --> 01:32:37.035
+then also my network remains same.
+
+1394
+01:32:37.495 --> 01:32:40.355
+See the connections? I'm, I'm talking about the connections.
+
+1395
+01:32:41.175 --> 01:32:44.235
+Uh, the, here again, you have your number of weights
+
+1396
+01:32:44.455 --> 01:32:46.155
+or you represents all these weights.
+
+1397
+01:32:46.375 --> 01:32:48.995
+How many weights? 12 weights, because you have four inputs
+
+1398
+01:32:49.455 --> 01:32:51.675
+and three outputs, four into three 12 weights.
+
+1399
+01:32:52.455 --> 01:32:56.235
+And every, uh, here, here for, from every neuron,
+
+1400
+01:32:56.235 --> 01:32:58.635
+you are going to get the output that you're getting here.
+
+1401
+01:32:58.695 --> 01:33:02.275
+So doesn't, uh, so, uh, you can see
+
+1402
+01:33:02.275 --> 01:33:05.515
+that the appearance wise, the network wise,
+
+1403
+01:33:05.855 --> 01:33:08.595
+the network which is showing at x, no,
+
+1404
+01:33:08.695 --> 01:33:09.995
+at at t equal two zero.
+
+1405
+01:33:09.995 --> 01:33:13.235
+And at t equal two, one remains same, remains same.
+
+1406
+01:33:13.315 --> 01:33:14.755
+Obviously these inputs will change.
+
+1407
+01:33:15.025 --> 01:33:18.035
+This X one is different from X, not input. Okay?
+
+1408
+01:33:18.255 --> 01:33:20.115
+And accordingly, this output will also change
+
+1409
+01:33:20.115 --> 01:33:21.155
+because input is changing.
+
+1410
+01:33:21.785 --> 01:33:24.915
+What you will get this different set of outputs.
+
+1411
+01:33:25.575 --> 01:33:28.195
+So, uh, this is, this is, again, it looks like a a n, right?
+
+1412
+01:33:28.535 --> 01:33:30.355
+You feed the input, you get the output
+
+1413
+01:33:30.355 --> 01:33:31.395
+feed four one neural network.
+
+1414
+01:33:31.455 --> 01:33:33.075
+So it is also feed four one neural network.
+
+1415
+01:33:33.215 --> 01:33:36.795
+But the only change, which what brings in, in case of this,
+
+1416
+01:33:36.795 --> 01:33:39.595
+uh, RNN, is this one.
+
+1417
+01:33:40.585 --> 01:33:42.685
+Now I am just trying to connect these two
+
+1418
+01:33:42.685 --> 01:33:44.445
+to make you understand it a little better.
+
+1419
+01:33:44.505 --> 01:33:47.685
+So what has happened is this, you can read as X, no,
+
+1420
+01:33:47.735 --> 01:33:49.085
+which we processed already.
+
+1421
+01:33:49.085 --> 01:33:52.205
+Nothing, nothing but this, this particular network, okay?
+
+1422
+01:33:52.205 --> 01:33:54.765
+This is X note means time is stamp physical two zero.
+
+1423
+01:33:54.835 --> 01:33:57.685
+This is what we did. And time is, uh,
+
+1424
+01:33:57.685 --> 01:33:58.965
+timestamp physical two, one.
+
+1425
+01:33:58.965 --> 01:34:02.965
+This is what we are doing. And what happens in the case
+
+1426
+01:34:02.965 --> 01:34:04.645
+of RNN, right?
+
+1427
+01:34:04.915 --> 01:34:07.565
+That they are connected, they are connected by
+
+1428
+01:34:08.495 --> 01:34:11.805
+these weights, they are connected by the, this is
+
+1429
+01:34:11.805 --> 01:34:13.085
+what is the connection,
+
+1430
+01:34:13.085 --> 01:34:15.005
+which is coming from the previous timestamp.
+
+1431
+01:34:15.025 --> 01:34:17.645
+So this is at time stamp is called two zero,
+
+1432
+01:34:17.945 --> 01:34:19.885
+and this is at timestamp, is called two one.
+
+1433
+01:34:20.105 --> 01:34:21.405
+The only difference, you can see
+
+1434
+01:34:21.405 --> 01:34:23.165
+that here we are processing x, no input.
+
+1435
+01:34:23.185 --> 01:34:24.725
+We will have different one hot representation,
+
+1436
+01:34:25.005 --> 01:34:26.525
+x one input will have different
+
+1437
+01:34:27.305 --> 01:34:30.565
+or, uh, input representation goes to the same network.
+
+1438
+01:34:30.945 --> 01:34:33.805
+The only difference is now you can see that each input,
+
+1439
+01:34:34.295 --> 01:34:37.005
+sorry, each neuron here at the output layer
+
+1440
+01:34:37.915 --> 01:34:41.125
+also receives the connections from the last hidden
+
+1441
+01:34:42.195 --> 01:34:45.165
+last la last time stamp hidden layer.
+
+1442
+01:34:45.345 --> 01:34:47.165
+So hidden layer or output layer here in,
+
+1443
+01:34:47.165 --> 01:34:48.165
+in this particular case,
+
+1444
+01:34:48.315 --> 01:34:50.125
+because here, there is no hidden layer.
+
+1445
+01:34:50.425 --> 01:34:52.885
+So the output layer itself is acting as a hidden layer.
+
+1446
+01:34:53.105 --> 01:34:55.805
+So whatever output you get here, it is connected
+
+1447
+01:34:55.805 --> 01:34:58.925
+with all the three neurons in this next time stamp
+
+1448
+01:34:59.385 --> 01:35:00.445
+or put layer neurons.
+
+1449
+01:35:00.465 --> 01:35:02.685
+So you see that three connections goes from this,
+
+1450
+01:35:03.095 --> 01:35:04.725
+three connections goes from this,
+
+1451
+01:35:05.065 --> 01:35:06.685
+and three connections goes from this.
+
+1452
+01:35:07.255 --> 01:35:10.165
+Right? Now, this is what is unique in RNN,
+
+1453
+01:35:10.165 --> 01:35:11.285
+which is not there in the a n
+
+1454
+01:35:11.285 --> 01:35:14.525
+otherwise, if you don't do this, then what is happening,
+
+1455
+01:35:14.525 --> 01:35:17.445
+you know, it is something like this, that X node,
+
+1456
+01:35:17.445 --> 01:35:20.685
+you process one, then, then you process the next word,
+
+1457
+01:35:20.685 --> 01:35:21.805
+then you process the next word.
+
+1458
+01:35:21.805 --> 01:35:23.925
+And that is what happens in the case of a NN, right?
+
+1459
+01:35:25.345 --> 01:35:27.805
+But in the RNN, this is the change what we do.
+
+1460
+01:35:28.065 --> 01:35:29.725
+So these are the set of weight.
+
+1461
+01:35:29.785 --> 01:35:32.805
+Um, this is how the two timestamp, uh,
+
+1462
+01:35:32.805 --> 01:35:35.125
+when you have the same network, they are connected
+
+1463
+01:35:35.125 --> 01:35:37.285
+with this, this, uh, this connection.
+
+1464
+01:35:37.305 --> 01:35:38.525
+The, and this, this is nothing.
+
+1465
+01:35:38.545 --> 01:35:39.845
+But again, the set of weights,
+
+1466
+01:35:39.845 --> 01:35:41.885
+which is represented here by w.
+
+1467
+01:35:42.225 --> 01:35:44.445
+So now you will understand this equation very well.
+
+1468
+01:35:44.705 --> 01:35:46.845
+In the first slide when I showed this equation
+
+1469
+01:35:47.385 --> 01:35:50.205
+was a little confusing, but now you can understand that each
+
+1470
+01:35:50.795 --> 01:35:53.325
+haal layer, or in this case it is an output layer,
+
+1471
+01:35:53.325 --> 01:35:54.485
+receives two inputs.
+
+1472
+01:35:54.665 --> 01:35:58.205
+You can just see here it receives the input from the current
+
+1473
+01:35:58.225 --> 01:35:59.525
+estate, which is X one.
+
+1474
+01:35:59.705 --> 01:36:02.005
+So X one, N two U, it receives here,
+
+1475
+01:36:02.345 --> 01:36:05.085
+it also receives the input from the last hidden estate,
+
+1476
+01:36:05.095 --> 01:36:07.045
+which is this O no, oh, no,
+
+1477
+01:36:07.075 --> 01:36:09.085
+into W And that is what it is written here.
+
+1478
+01:36:09.595 --> 01:36:12.645
+Okay? This is, oh, so this should be or not, okay?
+
+1479
+01:36:12.645 --> 01:36:14.165
+Because we are calculating O one.
+
+1480
+01:36:14.165 --> 01:36:16.975
+This should be or not fine.
+
+1481
+01:36:17.435 --> 01:36:19.895
+Uh, but I guess you're getting this.
+
+1482
+01:36:20.675 --> 01:36:24.175
+Yes, sir. Got it, sir? So I have one quick question. Yeah.
+
+1483
+01:36:24.675 --> 01:36:26.255
+So this recurrence, uh,
+
+1484
+01:36:26.455 --> 01:36:28.375
+previously it was mentioned it would be
+
+1485
+01:36:28.555 --> 01:36:29.855
+for the hidden layer, right?
+
+1486
+01:36:29.955 --> 01:36:31.575
+And not for the output layer.
+
+1487
+01:36:32.515 --> 01:36:34.455
+So why is it for the output layer now?
+
+1488
+01:36:34.995 --> 01:36:37.095
+So I, I don't have any, uh,
+
+1489
+01:36:37.255 --> 01:36:39.295
+I I'm treating this itself as a hidden layer.
+
+1490
+01:36:39.295 --> 01:36:40.975
+You can see that whatever it goes
+
+1491
+01:36:41.065 --> 01:36:42.975
+after this, that's the self.
+
+1492
+01:36:43.015 --> 01:36:44.535
+I, so after this layer, there is
+
+1493
+01:36:44.605 --> 01:36:46.135
+that itself is my output layer.
+
+1494
+01:36:46.135 --> 01:36:47.175
+So there is no hidden layer.
+
+1495
+01:36:47.215 --> 01:36:50.375
+I have assumed that one assume no here
+
+1496
+01:36:50.375 --> 01:36:52.815
+and layer, okay, that's just an assumption.
+
+1497
+01:36:53.275 --> 01:36:55.495
+But you can always have one more layer in between
+
+1498
+01:36:55.565 --> 01:36:57.415
+through which you can show this,
+
+1499
+01:36:57.795 --> 01:37:00.605
+uh, connection. Yeah,
+
+1500
+01:37:01.195 --> 01:37:02.405
+Okay, sir. Got it. So,
+
+1501
+01:37:02.545 --> 01:37:05.325
+But here what I'm doing is this itself is my output layer,
+
+1502
+01:37:05.465 --> 01:37:07.045
+and there this connections is going,
+
+1503
+01:37:08.075 --> 01:37:10.005
+Okay, So, and one more thing, sir.
+
+1504
+01:37:10.155 --> 01:37:12.845
+Like in the previous slide, we had that arrow coming,
+
+1505
+01:37:13.545 --> 01:37:14.565
+it was a single arrow.
+
+1506
+01:37:14.945 --> 01:37:17.325
+Mm-hmm. Uh, now here we are saying
+
+1507
+01:37:17.435 --> 01:37:21.845
+that this feedback from the first neuron, uh, vertical goes
+
+1508
+01:37:21.845 --> 01:37:23.365
+through every, every, ah,
+
+1509
+01:37:24.395 --> 01:37:26.485
+Okay, so it, it a little, uh,
+
+1510
+01:37:26.705 --> 01:37:28.525
+but that's why I said you will go
+
+1511
+01:37:28.525 --> 01:37:31.045
+inside a little bit more insight into the network.
+
+1512
+01:37:31.635 --> 01:37:33.845
+That single arrow when it was coming,
+
+1513
+01:37:34.515 --> 01:37:37.125
+that also represented the same meaning here.
+
+1514
+01:37:37.435 --> 01:37:40.485
+Because usually what happen when you do this, the, uh,
+
+1515
+01:37:40.485 --> 01:37:43.485
+the figure becomes more complex to draw, so
+
+1516
+01:37:43.745 --> 01:37:44.805
+to understand also.
+
+1517
+01:37:44.865 --> 01:37:47.165
+So usually we represent it by single arrow,
+
+1518
+01:37:47.585 --> 01:37:48.925
+but this is the actual case.
+
+1519
+01:37:48.925 --> 01:37:52.605
+What you're seeing here, every output in the previous time
+
+1520
+01:37:52.605 --> 01:37:54.405
+of time are connected with
+
+1521
+01:37:55.065 --> 01:37:56.685
+all the neurons in the current
+
+1522
+01:37:56.795 --> 01:37:58.525
+timestamp in the head and earth.
+
+1523
+01:37:58.755 --> 01:37:59.805
+That is what is happening
+
+1524
+01:38:00.465 --> 01:38:03.645
+In the, so it's quite like that transformer model also,
+
+1525
+01:38:05.295 --> 01:38:07.035
+Uh, transformer that,
+
+1526
+01:38:07.175 --> 01:38:08.515
+Uh, attention
+
+1527
+01:38:08.695 --> 01:38:11.075
+or something is to be, uh, anyway,
+
+1528
+01:38:11.205 --> 01:38:12.555
+leave that sir. I'll, I'll
+
+1529
+01:38:13.095 --> 01:38:14.755
+Let us, let us not bring that yes,
+
+1530
+01:38:14.975 --> 01:38:17.315
+as doesn't have this, this connection.
+
+1531
+01:38:17.365 --> 01:38:18.555
+We'll see that one uhhuh, okay?
+
+1532
+01:38:18.555 --> 01:38:22.195
+As funnel has removed this lstm or RNN sort of connection.
+
+1533
+01:38:22.195 --> 01:38:24.115
+Yeah, yeah, we'll see. Yeah,
+
+1534
+01:38:25.775 --> 01:38:26.775
+Sure. Uh, one more
+
+1535
+01:38:26.775 --> 01:38:27.945
+question. So you said, uh,
+
+1536
+01:38:27.945 --> 01:38:29.465
+the input sequence length
+
+1537
+01:38:29.465 --> 01:38:31.345
+and output sequence would be different, right?
+
+1538
+01:38:32.005 --> 01:38:34.545
+Uh, did you, uh, uh, so in this case,
+
+1539
+01:38:34.545 --> 01:38:37.385
+if we have X zero input, uh, it has its output
+
+1540
+01:38:37.405 --> 01:38:39.305
+and X one has its correspond output.
+
+1541
+01:38:39.805 --> 01:38:42.505
+Uh, so similarly for every other input you on a
+
+1542
+01:38:42.625 --> 01:38:43.745
+positive have its output, right?
+
+1543
+01:38:44.005 --> 01:38:46.865
+So it's always one input and one output.
+
+1544
+01:38:47.045 --> 01:38:49.585
+How, where, where do we depict that, you know,
+
+1545
+01:38:49.585 --> 01:38:53.385
+the input length different from, in my opinion, maybe X zero
+
+1546
+01:38:53.485 --> 01:38:55.425
+to extend is one sequence
+
+1547
+01:38:55.445 --> 01:38:58.225
+and output could be, you know, Y zero to Y five only.
+
+1548
+01:38:58.405 --> 01:38:59.825
+So that was my assumption,
+
+1549
+01:38:59.925 --> 01:39:02.425
+but looks like here, uh, every input has its output.
+
+1550
+01:39:03.605 --> 01:39:06.905
+Uh, here it is like every input has has its own output.
+
+1551
+01:39:07.445 --> 01:39:11.025
+But we'll see that when we go for the, uh,
+
+1552
+01:39:11.255 --> 01:39:13.945
+machine translation case where it is, uh,
+
+1553
+01:39:14.075 --> 01:39:17.105
+where you can understand that that, uh,
+
+1554
+01:39:17.125 --> 01:39:19.065
+the input sequence length is different from
+
+1555
+01:39:19.065 --> 01:39:20.225
+the output sequence length.
+
+1556
+01:39:20.875 --> 01:39:25.665
+We'll see that there is some more, uh, some more, uh,
+
+1557
+01:39:25.665 --> 01:39:29.025
+like, uh, modules come into the picture, okay?
+
+1558
+01:39:29.025 --> 01:39:31.385
+Usually in the machine translation case, what happened,
+
+1559
+01:39:31.465 --> 01:39:33.345
+I will tell you, okay, that, uh,
+
+1560
+01:39:33.945 --> 01:39:35.105
+transformer also you have seen that
+
+1561
+01:39:35.105 --> 01:39:36.185
+you must have observed it.
+
+1562
+01:39:36.185 --> 01:39:39.075
+There is encoder, there is a decoder. Okay? Yeah, yeah.
+
+1563
+01:39:39.295 --> 01:39:41.315
+So, which I'm not showing at least with this, this,
+
+1564
+01:39:41.795 --> 01:39:43.675
+I just trying to relate it to previous side.
+
+1565
+01:39:43.695 --> 01:39:46.915
+We can go back. Um, uh, yeah, one more sir.
+
+1566
+01:39:47.015 --> 01:39:50.235
+One more, one more. Sorry. Yeah. Here, right?
+
+1567
+01:39:50.375 --> 01:39:52.075
+So we thought that X zero
+
+1568
+01:39:52.655 --> 01:39:56.115
+and O zero, uh, the dimension is different, right?
+
+1569
+01:39:56.135 --> 01:39:59.115
+So I was relating to this dimension actually,
+
+1570
+01:39:59.265 --> 01:40:00.995
+it's just one part dimension difference.
+
+1571
+01:40:01.095 --> 01:40:03.635
+It is not real sequence, uh, difference.
+
+1572
+01:40:03.745 --> 01:40:05.595
+This is, this is just a dimension difference.
+
+1573
+01:40:06.025 --> 01:40:09.195
+This is not, uh, related to the sequence directly here,
+
+1574
+01:40:09.285 --> 01:40:10.285
+Right? Okay, got it.
+
+1575
+01:40:10.285 --> 01:40:11.195
+Okay, thank, good.
+
+1576
+01:40:13.525 --> 01:40:15.375
+This is the sequence of what I was talking.
+
+1577
+01:40:15.975 --> 01:40:18.375
+X can have a sequence going from X not to xt.
+
+1578
+01:40:18.815 --> 01:40:21.015
+O can have a sequence going from O, not T.
+
+1579
+01:40:21.155 --> 01:40:24.575
+So each X is represented by these four dimension,
+
+1580
+01:40:24.635 --> 01:40:27.615
+or each O is represented by this three dimension.
+
+1581
+01:40:27.615 --> 01:40:30.655
+This will be fixed, but then this sequence might vary.
+
+1582
+01:40:30.675 --> 01:40:32.015
+It may not go up to T
+
+1583
+01:40:32.115 --> 01:40:35.495
+or O may not go up to T means, uh, it'll go up to T,
+
+1584
+01:40:35.495 --> 01:40:38.095
+but then it'll be less lesser than what X.
+
+1585
+01:40:38.125 --> 01:40:42.975
+That is what I was talking about. Yeah. Okay.
+
+1586
+01:40:43.595 --> 01:40:46.575
+So I guess you understood that. Yeah.
+
+1587
+01:40:46.935 --> 01:40:48.375
+I have one confusion actually.
+
+1588
+01:40:48.835 --> 01:40:52.775
+So sir, for the X one, like it has to be
+
+1589
+01:40:52.795 --> 01:40:55.565
+of the same length of input as the xo.
+
+1590
+01:40:55.835 --> 01:40:57.045
+Yeah, like in this case,
+
+1591
+01:40:57.915 --> 01:40:58.915
+That has to be same. That
+
+1592
+01:40:58.915 --> 01:41:00.045
+has to be same. Okay?
+
+1593
+01:41:00.155 --> 01:41:02.885
+It's, uh, because I told you right, it's nothing
+
+1594
+01:41:02.905 --> 01:41:05.805
+but a NN if you remove this connection red part,
+
+1595
+01:41:06.685 --> 01:41:08.825
+and we have already talked in the case of a NN,
+
+1596
+01:41:08.855 --> 01:41:13.665
+what was happening is that you can't change the input,
+
+1597
+01:41:13.925 --> 01:41:16.585
+uh, how many inputs you want to feed to the neural network.
+
+1598
+01:41:16.685 --> 01:41:18.105
+And that is true for any case.
+
+1599
+01:41:18.165 --> 01:41:21.465
+But only change, which we are bringing is now in the r
+
+1600
+01:41:21.465 --> 01:41:26.185
+and n, we process as many word we have in a sentence,
+
+1601
+01:41:26.325 --> 01:41:27.745
+in a timestamp manner.
+
+1602
+01:41:27.845 --> 01:41:30.785
+And the timestamp manner is possible with this connection
+
+1603
+01:41:30.855 --> 01:41:33.545
+because now we are connecting with same network.
+
+1604
+01:41:33.545 --> 01:41:35.505
+This is this, these two are the same network, right?
+
+1605
+01:41:35.615 --> 01:41:36.985
+This, there is no difference.
+
+1606
+01:41:37.815 --> 01:41:39.705
+Only this makes the difference
+
+1607
+01:41:39.885 --> 01:41:43.505
+and this makes the difference when I say it can only come
+
+1608
+01:41:43.505 --> 01:41:44.665
+with a time stamp, because
+
+1609
+01:41:44.845 --> 01:41:47.225
+unless you don't have these outputs available,
+
+1610
+01:41:47.805 --> 01:41:51.465
+you can't feed it as an input for the next outputs.
+
+1611
+01:41:51.605 --> 01:41:53.345
+As you can see, these connections are going,
+
+1612
+01:41:53.565 --> 01:41:56.585
+so these o nodes should be available to get it connected
+
+1613
+01:41:56.585 --> 01:41:58.065
+with these O one neurons.
+
+1614
+01:41:58.845 --> 01:42:01.505
+So this can only happen with the timestamp, right?
+
+1615
+01:42:01.765 --> 01:42:03.705
+Uh, unless you don't have this, you can't have this.
+
+1616
+01:42:04.125 --> 01:42:06.585
+So that's why I say it goes in the timestamp manner,
+
+1617
+01:42:07.205 --> 01:42:08.745
+but these has to be same.
+
+1618
+01:42:09.185 --> 01:42:12.265
+I mean x, because X is representation, X is a word,
+
+1619
+01:42:12.535 --> 01:42:14.745
+word you can't feed, and what you're representing
+
+1620
+01:42:14.745 --> 01:42:17.345
+with some vector, this vector length, you can't change.
+
+1621
+01:42:17.485 --> 01:42:19.905
+It has to be same for that RNA. Yeah.
+
+1622
+01:42:20.365 --> 01:42:22.785
+So sir, what about different, uh, word length
+
+1623
+01:42:22.885 --> 01:42:24.465
+or like for different sentences?
+
+1624
+01:42:24.725 --> 01:42:25.985
+So, so that's what
+
+1625
+01:42:26.065 --> 01:42:27.225
+I said, that's what I said.
+
+1626
+01:42:27.225 --> 01:42:29.505
+Suppose you have three words in a sentence.
+
+1627
+01:42:29.505 --> 01:42:31.945
+So it'll go from X node, X one, X two,
+
+1628
+01:42:33.115 --> 01:42:35.295
+but X one X node representation
+
+1629
+01:42:36.205 --> 01:42:38.135
+will still be in the four dimension.
+
+1630
+01:42:38.285 --> 01:42:41.415
+It's a representation of X nod or X one or X two.
+
+1631
+01:42:41.605 --> 01:42:43.695
+Suppose you have 10 words in a sentence.
+
+1632
+01:42:43.835 --> 01:42:48.385
+So it'll go from XO to x, extend in that way.
+
+1633
+01:42:48.685 --> 01:42:50.185
+You are, you are, uh,
+
+1634
+01:42:50.435 --> 01:42:53.145
+addressing the variable length sequence problem,
+
+1635
+01:42:54.525 --> 01:42:59.305
+but every input itself will be represented by the same, uh,
+
+1636
+01:42:59.305 --> 01:43:00.505
+same vector length.
+
+1637
+01:43:00.825 --> 01:43:03.025
+Whatever you have planned for this particular network.
+
+1638
+01:43:04.355 --> 01:43:05.135
+Are you getting this point?
+
+1639
+01:43:05.135 --> 01:43:06.375
+These two are two different things.
+
+1640
+01:43:06.375 --> 01:43:08.295
+First of all, then in sentence,
+
+1641
+01:43:08.315 --> 01:43:09.735
+you may have the different words.
+
+1642
+01:43:10.355 --> 01:43:12.335
+Uh, like a sentence can have three words.
+
+1643
+01:43:12.455 --> 01:43:13.695
+A sentence can have 10 words.
+
+1644
+01:43:14.595 --> 01:43:16.575
+How we are addressing that problem by going
+
+1645
+01:43:16.575 --> 01:43:17.895
+with a time stamp manner.
+
+1646
+01:43:18.475 --> 01:43:19.615
+I'm not process. So first,
+
+1647
+01:43:19.945 --> 01:43:22.295
+first time I'm only processing the first word,
+
+1648
+01:43:22.405 --> 01:43:24.175
+then second timestamp, second word.
+
+1649
+01:43:24.445 --> 01:43:26.175
+Obviously there is a connection coming from.
+
+1650
+01:43:26.235 --> 01:43:27.735
+And the third time stem, third word,
+
+1651
+01:43:27.935 --> 01:43:30.455
+likewise, I can go up to 10 also sometime up
+
+1652
+01:43:30.455 --> 01:43:32.895
+to three also sometime at 200 also.
+
+1653
+01:43:33.485 --> 01:43:37.255
+Okay? But in that way it is different in that way.
+
+1654
+01:43:38.095 --> 01:43:39.455
+Variable lens sequence we are addressing.
+
+1655
+01:43:39.555 --> 01:43:43.015
+But what I'm saying is at every time a stem,
+
+1656
+01:43:43.385 --> 01:43:44.815
+every x is a word, right?
+
+1657
+01:43:44.815 --> 01:43:47.055
+You have to represent that word in a vector.
+
+1658
+01:43:47.635 --> 01:43:49.175
+Vector length doesn't change.
+
+1659
+01:43:49.755 --> 01:43:51.565
+Vector is still four here,
+
+1660
+01:43:51.755 --> 01:43:55.005
+four here in the next time stamp also, also, it'll be four
+
+1661
+01:43:55.065 --> 01:43:57.325
+for whatever word we will feed, okay?
+
+1662
+01:43:57.325 --> 01:43:58.645
+Vector length doesn't change.
+
+1663
+01:43:59.275 --> 01:44:03.015
+Time stamp changes for the different sequence length.
+
+1664
+01:44:03.755 --> 01:44:04.895
+Got it, sir? Thank you. Thank
+
+1665
+01:44:08.715 --> 01:44:10.295
+one more question, sir? Yes, yes,
+
+1666
+01:44:10.295 --> 01:44:11.295
+Please, please.
+
+1667
+01:44:11.355 --> 01:44:14.495
+Yes, sir. Sir. Uh, previously we discussed that, uh,
+
+1668
+01:44:15.395 --> 01:44:18.735
+the X will have multiple variance in the first
+
+1669
+01:44:18.745 --> 01:44:22.845
+level, multiple variance
+
+1670
+01:44:23.065 --> 01:44:27.205
+In the sense, Uh, I mean be below U we have x, X zero,
+
+1671
+01:44:27.405 --> 01:44:28.965
+X one, X two, X three, correct?
+
+1672
+01:44:28.965 --> 01:44:33.765
+But now we have, uh, x, x, x one in the,
+
+1673
+01:44:34.505 --> 01:44:35.645
+uh, vertical weight.
+
+1674
+01:44:36.105 --> 01:44:37.885
+So that is kind of confusing, sir.
+
+1675
+01:44:38.185 --> 01:44:39.525
+Oh, it's, it's just, just for representative
+
+1676
+01:44:39.525 --> 01:44:43.645
+because I had to connect these three, uh, outputs
+
+1677
+01:44:44.435 --> 01:44:47.405
+with these weights to these outputs here, right?
+
+1678
+01:44:47.625 --> 01:44:50.125
+Neuron, that's why I have taken it little up.
+
+1679
+01:44:50.595 --> 01:44:53.565
+Otherwise, I, if I would've taken here these many
+
+1680
+01:44:53.565 --> 01:44:55.085
+connection, I would've not shown nucle.
+
+1681
+01:44:55.085 --> 01:44:56.325
+This just a visualization.
+
+1682
+01:44:57.375 --> 01:44:58.915
+It doesn't go vertical way
+
+1683
+01:44:58.915 --> 01:45:00.915
+or so it just a visualization
+
+1684
+01:45:01.015 --> 01:45:02.995
+to connect these mini weights here.
+
+1685
+01:45:04.215 --> 01:45:06.735
+Okay, sir? Thanks, Uh, sir.
+
+1686
+01:45:06.915 --> 01:45:09.175
+In case, uh, in this, uh, diagram,
+
+1687
+01:45:09.315 --> 01:45:10.455
+if we have a hidden layer,
+
+1688
+01:45:10.605 --> 01:45:13.055
+even though then the hidden layer weights will also get
+
+1689
+01:45:13.055 --> 01:45:15.535
+shared to the X one network message.
+
+1690
+01:45:16.165 --> 01:45:19.255
+Yeah, that, that is what, uh, so this treat, this is
+
+1691
+01:45:19.255 --> 01:45:21.375
+as a hidden layer itself and whatever, okay?
+
+1692
+01:45:21.925 --> 01:45:24.455
+Yeah. This is as a hidden layer itself. It is, yeah.
+
+1693
+01:45:29.105 --> 01:45:31.335
+Okay. Now what happened?
+
+1694
+01:45:31.405 --> 01:45:32.935
+This is a time stamp number one,
+
+1695
+01:45:33.075 --> 01:45:35.935
+and it goes on, say that now I have timestamp number two,
+
+1696
+01:45:36.325 --> 01:45:37.615
+that there also it goes on.
+
+1697
+01:45:37.615 --> 01:45:39.215
+So now what, what is current
+
+1698
+01:45:39.385 --> 01:45:43.175
+input? Yes, sir. So it
+
+1699
+01:45:43.175 --> 01:45:45.895
+Is 10 30, I don't know whether they have a class. Yes,
+
+1700
+01:45:46.045 --> 01:45:48.835
+Something, uh, even I have, uh,
+
+1701
+01:45:48.835 --> 01:45:50.315
+so I'll just wrap up within five minutes,
+
+1702
+01:45:50.775 --> 01:45:51.775
+Okay?
+
+1703
+01:45:51.925 --> 01:45:52.925
+Yes.
+
+1704
+01:45:56.385 --> 01:45:57.765
+So, uh, this is what happened.
+
+1705
+01:45:57.985 --> 01:46:00.845
+Uh, see even at the timestamp number two, you can see that
+
+1706
+01:46:00.845 --> 01:46:01.925
+what happened, no, it's not.
+
+1707
+01:46:01.945 --> 01:46:06.205
+We processed, and those connections from OO are connected
+
+1708
+01:46:06.205 --> 01:46:07.605
+with O one neurons here.
+
+1709
+01:46:08.345 --> 01:46:13.085
+So O one receives two input as an X one and as an od.
+
+1710
+01:46:13.305 --> 01:46:15.885
+So for every hidden layer neurons,
+
+1711
+01:46:15.885 --> 01:46:17.325
+they're receiving two inputs.
+
+1712
+01:46:17.545 --> 01:46:20.285
+You see that two input is the same two set of inputs.
+
+1713
+01:46:20.785 --> 01:46:22.885
+One set is coming from the current input,
+
+1714
+01:46:22.885 --> 01:46:23.965
+current word X one.
+
+1715
+01:46:24.115 --> 01:46:27.165
+Another set is coming from last hidden layer output,
+
+1716
+01:46:27.165 --> 01:46:30.885
+which is O not that's why X, X, uh, uh,
+
+1717
+01:46:31.155 --> 01:46:34.125
+here you have disconnected with the weights U
+
+1718
+01:46:34.545 --> 01:46:36.205
+and disconnected with the way W
+
+1719
+01:46:36.825 --> 01:46:39.525
+Now at the timestamp number two, the same thing happened.
+
+1720
+01:46:39.585 --> 01:46:42.045
+The X two gets connected with the U, these are the set
+
+1721
+01:46:42.045 --> 01:46:46.845
+of weights U and this, uh, O one is connected with the W
+
+1722
+01:46:47.065 --> 01:46:48.485
+and hence you get the O2.
+
+1723
+01:46:48.665 --> 01:46:52.605
+That's why O2 is a function of two inputs,
+
+1724
+01:46:53.085 --> 01:46:54.285
+X two and O one.
+
+1725
+01:46:54.595 --> 01:46:57.005
+Obviously they are weighted, uh, connections.
+
+1726
+01:46:57.005 --> 01:47:01.075
+So w and u has to be multiplied respectively. Okay?
+
+1727
+01:47:01.075 --> 01:47:03.035
+So this, this, this, this goes like that, okay?
+
+1728
+01:47:03.375 --> 01:47:05.155
+Now why I'm showing you a little vertically
+
+1729
+01:47:05.155 --> 01:47:07.275
+because I had to show these connection.
+
+1730
+01:47:07.275 --> 01:47:09.155
+That is the only reason, right?
+
+1731
+01:47:09.535 --> 01:47:12.515
+So, uh, uh, you can understand now, uh,
+
+1732
+01:47:12.695 --> 01:47:14.075
+how the weights are being shared.
+
+1733
+01:47:14.215 --> 01:47:16.595
+So huge number of weights we have here. How many?
+
+1734
+01:47:16.705 --> 01:47:19.995
+Four into three 12, same 12 weights are being used here.
+
+1735
+01:47:19.995 --> 01:47:21.515
+Same 12 weights are being used here.
+
+1736
+01:47:21.735 --> 01:47:23.795
+If you have here three neurons connected
+
+1737
+01:47:23.795 --> 01:47:26.075
+with three neurons here, three into three,
+
+1738
+01:47:26.075 --> 01:47:27.675
+nine connections you have here.
+
+1739
+01:47:27.905 --> 01:47:28.955
+Here, okay?
+
+1740
+01:47:29.135 --> 01:47:31.995
+So total number of waves, if you will calculate in this kind
+
+1741
+01:47:31.995 --> 01:47:34.915
+of network, it'll be 12 plus nine.
+
+1742
+01:47:35.415 --> 01:47:39.995
+12 plus nine is equal to uh, how much? 21.
+
+1743
+01:47:40.295 --> 01:47:41.675
+Uh, 21. 21.
+
+1744
+01:47:41.775 --> 01:47:46.235
+And there are three biases with these three neurons, okay?
+
+1745
+01:47:46.235 --> 01:47:49.275
+Bias, also shared bias. Our values are also not changing.
+
+1746
+01:47:49.615 --> 01:47:53.555
+So 21 plus 3, 24, okay? 24.
+
+1747
+01:47:54.175 --> 01:47:56.115
+Uh, so that is, that is what is the number
+
+1748
+01:47:56.135 --> 01:47:57.875
+of parameters in this particular network.
+
+1749
+01:47:58.225 --> 01:48:00.275
+That is what it's okay.
+
+1750
+01:48:01.305 --> 01:48:05.275
+Then timestamp three, the same way it goes on, you see
+
+1751
+01:48:05.275 --> 01:48:06.715
+that this is the connection.
+
+1752
+01:48:06.715 --> 01:48:08.755
+This is how the RNN looks like,
+
+1753
+01:48:08.855 --> 01:48:11.835
+and this is the completely unfolded structure
+
+1754
+01:48:12.455 --> 01:48:14.955
+and this is what sir has shown, uh, later,
+
+1755
+01:48:15.025 --> 01:48:17.315
+that this whole unfolded structure can be
+
+1756
+01:48:17.485 --> 01:48:18.595
+shown here like this.
+
+1757
+01:48:19.175 --> 01:48:22.475
+So, but now this is just a one level
+
+1758
+01:48:22.695 --> 01:48:26.155
+of the slice representation where each input X node,
+
+1759
+01:48:26.455 --> 01:48:30.235
+so every neuron receives two input X, the current input
+
+1760
+01:48:30.265 --> 01:48:33.555
+that is X and the last hidden in output, that is O.
+
+1761
+01:48:33.985 --> 01:48:36.155
+Okay? So you can understand this one here.
+
+1762
+01:48:36.535 --> 01:48:38.995
+It, uh, X one is the current input,
+
+1763
+01:48:39.175 --> 01:48:41.155
+and O node is the last hidden in output.
+
+1764
+01:48:41.175 --> 01:48:45.355
+So X gets multiplied with a u and O gets multiplied with W.
+
+1765
+01:48:45.415 --> 01:48:48.275
+But you always have to remember O is not a scaler.
+
+1766
+01:48:48.795 --> 01:48:52.555
+X is not a scaler, U is not a scaler, and w is not a scale.
+
+1767
+01:48:52.615 --> 01:48:53.635
+All are vectors.
+
+1768
+01:48:53.975 --> 01:48:57.315
+So O also has multiple o's like you can see here, three in,
+
+1769
+01:48:57.695 --> 01:49:00.715
+uh, one output here, one output here, one output here.
+
+1770
+01:49:01.085 --> 01:49:03.835
+These three gets connected with these three.
+
+1771
+01:49:03.835 --> 01:49:06.075
+That's why nine connections are required here, right?
+
+1772
+01:49:06.575 --> 01:49:09.235
+So although, uh, just for the representation,
+
+1773
+01:49:09.495 --> 01:49:11.155
+we show single, single neuron,
+
+1774
+01:49:11.215 --> 01:49:13.435
+but actually they are set of values,
+
+1775
+01:49:13.575 --> 01:49:15.315
+not a single values, they're a vector.
+
+1776
+01:49:16.225 --> 01:49:21.155
+Okay? And then further, uh, if you will see the compact view
+
+1777
+01:49:21.155 --> 01:49:24.955
+of the RNN, this is the view you will have where every X
+
+1778
+01:49:25.855 --> 01:49:29.355
+is connected with the neuron with the U weight.
+
+1779
+01:49:29.385 --> 01:49:32.715
+Like you can see X not connected with UX one, connected
+
+1780
+01:49:32.715 --> 01:49:34.275
+with UX two, connected with U.
+
+1781
+01:49:34.815 --> 01:49:37.235
+So here it is showing that particular connection
+
+1782
+01:49:37.535 --> 01:49:40.755
+and every O is connected with itself.
+
+1783
+01:49:41.295 --> 01:49:43.595
+So this loop is nothing where this, the,
+
+1784
+01:49:43.595 --> 01:49:45.955
+here the output gets connected with this output.
+
+1785
+01:49:45.955 --> 01:49:48.330
+Here, here the output gets connected with this output here.
+
+1786
+01:49:48.345 --> 01:49:51.205
+And that's why this loop, it's showing that it is connected
+
+1787
+01:49:51.205 --> 01:49:53.485
+with itself with the next time step in,
+
+1788
+01:49:53.485 --> 01:49:54.965
+the next time step, right?
+
+1789
+01:49:55.385 --> 01:49:57.165
+And that's how you get the final and,
+
+1790
+01:49:57.625 --> 01:49:59.285
+and uh, that's, that's
+
+1791
+01:49:59.285 --> 01:50:01.645
+how you can calculate the final output at each time stamp
+
+1792
+01:50:01.645 --> 01:50:03.245
+and even at the final time step.
+
+1793
+01:50:03.915 --> 01:50:06.805
+Okay? So this is even the compact implementation
+
+1794
+01:50:06.805 --> 01:50:08.405
+or complete compact representation
+
+1795
+01:50:08.585 --> 01:50:10.085
+of the recurrent neur network.
+
+1796
+01:50:10.875 --> 01:50:14.885
+Okay? Rest, I guess sir has explained, maybe I'll stop here.
+
+1797
+01:50:15.025 --> 01:50:16.405
+We have already exceeded the time.
+
+1798
+01:50:16.405 --> 01:50:18.445
+You may also have the class, right?
+
+1799
+01:50:18.545 --> 01:50:20.365
+So if you have any quick question, you can ask.
+
+1800
+01:50:20.365 --> 01:50:21.925
+Otherwise we'll continue with the next class,
+
+1801
+01:50:23.135 --> 01:50:24.135
+Sir. Uh, so in
+
+1802
+01:50:24.135 --> 01:50:26.355
+this type of inter sharing of weights
+
+1803
+01:50:26.355 --> 01:50:28.595
+and connections across the timestamps,
+
+1804
+01:50:28.655 --> 01:50:30.115
+so then it is much more prone
+
+1805
+01:50:30.115 --> 01:50:31.635
+to this vanishing ingredient. No, sir.
+
+1806
+01:50:31.705 --> 01:50:33.595
+Yeah, yeah, that's what I had told. Yes
+
+1807
+01:50:33.595 --> 01:50:34.595
+Sir. That what we
+
+1808
+01:50:34.595 --> 01:50:36.355
+now we can able to able to see
+
+1809
+01:50:36.355 --> 01:50:37.715
+that visually and how this thing,
+
+1810
+01:50:37.895 --> 01:50:40.585
+Yes, yes, yes, yes, correct
+
+1811
+01:50:42.905 --> 01:50:43.905
+Sir. From application
+
+1812
+01:50:43.905 --> 01:50:46.845
+point of view, where can we find RN
+
+1813
+01:50:46.845 --> 01:50:48.205
+and being dominant
+
+1814
+01:50:48.935 --> 01:50:52.605
+Everywhere, wherever you are dealing with text, if you go
+
+1815
+01:50:52.605 --> 01:50:54.645
+to the Gmail and you see that there is a,
+
+1816
+01:50:54.645 --> 01:50:56.645
+next word it is suggesting you RN
+
+1817
+01:50:56.645 --> 01:50:59.565
+and WhatsApp, when you use in the keyboard, you see
+
+1818
+01:50:59.565 --> 01:51:01.965
+that it giving you the next word prediction, rn
+
+1819
+01:51:01.965 --> 01:51:06.125
+and everywhere there is an RNN transformer network has come
+
+1820
+01:51:06.145 --> 01:51:08.605
+now, but transformer networks are difficult
+
+1821
+01:51:08.605 --> 01:51:10.685
+to implement everywhere, right?
+
+1822
+01:51:10.685 --> 01:51:11.725
+Because it's a heavy network,
+
+1823
+01:51:11.865 --> 01:51:14.805
+but the RN that simple as compared to the transformer
+
+1824
+01:51:15.425 --> 01:51:18.725
+and for certain cases it really performs well when the
+
+1825
+01:51:18.965 --> 01:51:21.245
+sequence length is a small, like five words, 10 words.
+
+1826
+01:51:21.755 --> 01:51:24.125
+Okay? It, it works well in such cases,
+
+1827
+01:51:24.925 --> 01:51:26.205
+wherever you see the text data
+
+1828
+01:51:26.305 --> 01:51:29.445
+and it's any kind of intelligence is happening.
+
+1829
+01:51:29.705 --> 01:51:31.005
+That's RNN. Yeah.
+
+1830
+01:51:31.075 --> 01:51:34.905
+Whether anywhere you just see that one. Okay.
+
+1831
+01:51:35.215 --> 01:51:39.305
+Okay. Thanks. One quick question sir.
+
+1832
+01:51:39.485 --> 01:51:42.345
+Uh, so since we have this, uh, recurrent, uh, factory,
+
+1833
+01:51:42.395 --> 01:51:44.265
+we've added to the existing neural network.
+
+1834
+01:51:44.405 --> 01:51:46.025
+Mm-hmm. So similarly do we have a concept
+
+1835
+01:51:46.085 --> 01:51:48.465
+of recurrent adding to the existing CNN network?
+
+1836
+01:51:48.565 --> 01:51:50.305
+Sir, is there anything, something you like that sir,
+
+1837
+01:51:50.755 --> 01:51:52.585
+There that is called our CNN.
+
+1838
+01:51:52.735 --> 01:51:56.665
+Okay. So it is there where people have tried to, uh,
+
+1839
+01:51:57.415 --> 01:52:00.545
+combine these two concept of recurrent with the CNN,
+
+1840
+01:52:00.695 --> 01:52:02.145
+that is called RCN.
+
+1841
+01:52:02.365 --> 01:52:04.825
+Uh, we may not cover that, but you can look into that. Yeah.
+
+1842
+01:52:04.895 --> 01:52:09.405
+Okay. Okay, Sir, on behalf of the class, um,
+
+1843
+01:52:10.305 --> 01:52:12.805
+we had an assignment due tomorrow, graded one.
+
+1844
+01:52:12.905 --> 01:52:16.005
+So somebody had told us that, that you had agreed with him
+
+1845
+01:52:16.025 --> 01:52:17.965
+to change the date to the next week.
+
+1846
+01:52:18.705 --> 01:52:20.005
+So the class is asking sir.
+
+1847
+01:52:20.275 --> 01:52:21.765
+Okay. Okay. We'll do that. We'll do that.
+
+1848
+01:52:22.145 --> 01:52:23.645
+So next week, not tomorrow, sir?
+
+1849
+01:52:23.875 --> 01:52:26.485
+Yeah, yeah, not tomorrow, next week? No, that's fine.
+
+1850
+01:52:27.115 --> 01:52:28.365
+Okay. Next Sunday then. Yeah,
+
+1851
+01:52:28.425 --> 01:52:29.425
+Please. Uh, vial,
+
+1852
+01:52:29.425 --> 01:52:30.125
+are you there?
+
+1853
+01:52:30.225 --> 01:52:32.205
+You can just change the, extend the deadline.
+
+1854
+01:52:34.415 --> 01:52:37.075
+Yes, sir. We we'll do that, sir. Yeah,
+
+1855
+01:52:37.185 --> 01:52:38.195
+Fine. Thank, thank you
+
+1856
+01:52:38.975 --> 01:52:39.975
+Sir. Uh, did you get
+
+1857
+01:52:39.975 --> 01:52:42.235
+to check on the mid, oh,
+
+1858
+01:52:42.515 --> 01:52:44.195
+I have checked that one question.
+
+1859
+01:52:44.215 --> 01:52:48.645
+Anyway, we are, uh, that, that, uh, L two problem, uh,
+
+1860
+01:52:48.845 --> 01:52:50.765
+I have checked that we'll discuss in the next class.
+
+1861
+01:52:50.845 --> 01:52:52.805
+I forgot to discuss today. That is fine.
+
+1862
+01:52:52.925 --> 01:52:55.205
+I guess I will discuss with you one more question.
+
+1863
+01:52:55.235 --> 01:52:57.965
+What was asked, uh, you have told
+
+1864
+01:52:57.965 --> 01:53:00.165
+that we are not considering there is some that
+
+1865
+01:53:01.045 --> 01:53:02.765
+complete information is not given in that question.
+
+1866
+01:53:04.075 --> 01:53:07.045
+That actually this got one question on that, uh,
+
+1867
+01:53:07.885 --> 01:53:10.325
+reduction on the weight parameters when we do implementing
+
+1868
+01:53:10.325 --> 01:53:12.445
+feedforward new network and see an answer.
+
+1869
+01:53:12.745 --> 01:53:14.445
+So that calculation also have shared
+
+1870
+01:53:14.445 --> 01:53:17.685
+with the women today morning, like how we Yes, sir.
+
+1871
+01:53:17.825 --> 01:53:19.445
+So I considered the number of filters
+
+1872
+01:53:19.445 --> 01:53:22.685
+and this, I can see it's coming approximately 9.91%,
+
+1873
+01:53:23.015 --> 01:53:25.205
+which is, uh, you can say approximately 10 times.
+
+1874
+01:53:25.795 --> 01:53:28.805
+Okay? So because CN will not have a minimum reduction,
+
+1875
+01:53:28.805 --> 01:53:30.325
+like 2.7 if you take,
+
+1876
+01:53:30.325 --> 01:53:31.885
+because we are having this pretest. Ah,
+
+1877
+01:53:31.885 --> 01:53:32.885
+That's what I said. That
+
+1878
+01:53:32.885 --> 01:53:34.765
+question is not, uh, that,
+
+1879
+01:53:34.765 --> 01:53:35.925
+that question will not consider.
+
+1880
+01:53:35.925 --> 01:53:37.685
+Yeah, I have seen that question. Yes, yes.
+
+1881
+01:53:37.685 --> 01:53:40.005
+That question will not consider for evaluation. Yes.
+
+1882
+01:53:41.065 --> 01:53:43.605
+Is it, uh, 10 times? No, sir. It not 2.7.
+
+1883
+01:53:44.905 --> 01:53:47.925
+Uh, I not, uh, so that is a confusion. I understand that.
+
+1884
+01:53:48.145 --> 01:53:50.885
+Uh, so it, it is not completely clear.
+
+1885
+01:53:50.885 --> 01:53:54.405
+When you draw the architecture, it is 2.7% or 10%, right?
+
+1886
+01:53:54.405 --> 01:53:57.085
+Yes. It's not clear with that question, sir. Yes,
+
+1887
+01:53:57.155 --> 01:53:58.155
+That question. It depends upon
+
+1888
+01:53:58.155 --> 01:54:00.005
+the number of learn, like
+
+1889
+01:54:00.105 --> 01:54:01.805
+how much is the depth we take
+
+1890
+01:54:02.145 --> 01:54:03.965
+and how much is the size of the filters we see
+
+1891
+01:54:03.965 --> 01:54:04.965
+Size of the filter. It
+
+1892
+01:54:04.965 --> 01:54:07.165
+depends on multiple factor, which is not Yes, sir.
+
+1893
+01:54:07.525 --> 01:54:09.405
+Question, sir. Yeah, I understand that. Correct.
+
+1894
+01:54:10.065 --> 01:54:12.965
+So, so, uh, so based on architecture, it depends, right?
+
+1895
+01:54:13.105 --> 01:54:16.325
+Yes. So the reduction varies?
+
+1896
+01:54:16.905 --> 01:54:19.765
+Yes. Yes. We'll not consider that for evaluation.
+
+1897
+01:54:20.585 --> 01:54:22.035
+Sure, sir. And al two,
+
+1898
+01:54:22.435 --> 01:54:23.635
+al two question we'll discuss in next
+
+1899
+01:54:24.195 --> 01:54:25.195
+Al two question will discuss. That
+
+1900
+01:54:25.195 --> 01:54:27.395
+question is fine. I believe that we'll discuss that.
+
+1901
+01:54:27.495 --> 01:54:28.595
+No, no problem. Okay,
+
+1902
+01:54:28.735 --> 01:54:29.875
+Sir. Thank you sir.
+
+1903
+01:54:30.435 --> 01:54:32.425
+Thank you. Thank you all. Thank you, sir. Sir,
+
+1904
+01:54:32.425 --> 01:54:33.425
+Thank you sir.
+
+1905
+01:54:33.835 --> 01:54:35.265
+Thank you, sir. Thank you, sir.
+
+1906
+01:54:37.925 --> 01:54:39.915
+Thank you, sir. Thank you, sir.
