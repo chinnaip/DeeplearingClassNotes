@@ -1,0 +1,6649 @@
+WEBVTT
+
+1
+00:00:21.475 --> 00:00:22.285
+Good evening, sir.
+
+2
+00:00:22.475 --> 00:00:25.445
+Good evening, sir. Good evening, sir. Good evening, sir.
+
+3
+00:00:27.075 --> 00:00:29.525
+Good evening. Good evening. Good evening.
+
+4
+00:00:33.115 --> 00:00:35.055
+We wait for two minutes and then we'll start.
+
+5
+00:03:23.510 --> 00:03:26.765
+Alright, so let's start now. Okay.
+
+6
+00:03:26.765 --> 00:03:28.805
+Well, let's first quickly recap from
+
+7
+00:03:28.805 --> 00:03:31.245
+what we did in the last session.
+
+8
+00:03:32.425 --> 00:03:35.165
+So, uh, if you can record our, uh,
+
+9
+00:03:35.165 --> 00:03:39.085
+last session was mostly hands-on where we built
+
+10
+00:03:39.695 --> 00:03:41.845
+three different versions of the neural network
+
+11
+00:03:43.755 --> 00:03:46.215
+on our fashion evidence data set.
+
+12
+00:03:46.795 --> 00:03:50.615
+And I had shared the same, uh, with you in the, like,
+
+13
+00:03:50.615 --> 00:03:53.215
+those notebooks as well as the data set was shared with you.
+
+14
+00:03:54.285 --> 00:03:56.785
+So, um, let me just open that once
+
+15
+00:03:56.885 --> 00:03:59.185
+and then I'll quickly go through it.
+
+16
+00:04:01.915 --> 00:04:04.125
+Okay. So it was
+
+17
+00:04:09.735 --> 00:04:10.155
+second
+
+18
+00:04:24.095 --> 00:04:25.225
+tail and module.
+
+19
+00:04:26.135 --> 00:04:28.905
+Yeah, this one. Let me share my screen.
+
+20
+00:04:52.135 --> 00:04:55.605
+Okay. So, uh,
+
+21
+00:04:56.155 --> 00:04:57.285
+this is what we did.
+
+22
+00:04:57.905 --> 00:04:59.125
+So, uh, first of all,
+
+23
+00:04:59.985 --> 00:05:02.495
+these things we have already discussed.
+
+24
+00:05:03.795 --> 00:05:05.455
+Now, what I did in the last class,
+
+25
+00:05:05.475 --> 00:05:07.495
+we started from this slide, if you can recall,
+
+26
+00:05:07.735 --> 00:05:10.375
+I first explained what is this data set
+
+27
+00:05:10.375 --> 00:05:14.935
+and dataset loader class in PyTorch and what is their role?
+
+28
+00:05:16.315 --> 00:05:20.175
+And we understood that the dataset class is,
+
+29
+00:05:20.475 --> 00:05:23.055
+is used mainly to load the data.
+
+30
+00:05:24.165 --> 00:05:27.055
+Okay? So sometimes your data might, might be in one form,
+
+31
+00:05:28.455 --> 00:05:29.575
+sometime in another form.
+
+32
+00:05:30.195 --> 00:05:34.455
+Now, this dataset, cl plus, uh, help us to load,
+
+33
+00:05:35.245 --> 00:05:38.175
+load the data, whatever we have in whichever format we have,
+
+34
+00:05:39.235 --> 00:05:42.775
+and convert them into the tens.
+
+35
+00:05:42.775 --> 00:05:46.775
+Because ultimately in everything we do as a tensor,
+
+36
+00:05:47.285 --> 00:05:49.015
+that is the data pipe what we want.
+
+37
+00:05:49.275 --> 00:05:52.015
+So in the data dataset class, we saw
+
+38
+00:05:52.015 --> 00:05:54.175
+that we have these three, uh, methods.
+
+39
+00:05:54.555 --> 00:05:57.805
+The init method, the length method, and the get item method.
+
+40
+00:05:59.025 --> 00:06:02.165
+So in it method is by default, it, it's a constructor.
+
+41
+00:06:02.425 --> 00:06:05.725
+So whenever we will make any object of this dataset class,
+
+42
+00:06:05.755 --> 00:06:08.005
+this constructor will get called automatically.
+
+43
+00:06:08.945 --> 00:06:11.485
+And inside the constructor, we mainly do the loading
+
+44
+00:06:11.485 --> 00:06:13.205
+of the data in the form of tens.
+
+45
+00:06:13.305 --> 00:06:15.165
+That's all. Now this length
+
+46
+00:06:15.625 --> 00:06:19.925
+and get items, these two are the function, which is,
+
+47
+00:06:20.495 --> 00:06:24.485
+which is, uh, which is utilized by the other
+
+48
+00:06:25.015 --> 00:06:27.405
+other class that is called dataset loader class.
+
+49
+00:06:28.195 --> 00:06:29.845
+Okay? So dataset loader class.
+
+50
+00:06:30.075 --> 00:06:34.555
+Main job is to make the batches mini batches.
+
+51
+00:06:35.265 --> 00:06:36.515
+Okay? So what it does,
+
+52
+00:06:36.585 --> 00:06:38.835
+suppose you have a hundred rows in my data
+
+53
+00:06:39.375 --> 00:06:42.715
+it first ask this dataset class to returns
+
+54
+00:06:43.365 --> 00:06:46.475
+total length means total number of rows in the dataset.
+
+55
+00:06:47.015 --> 00:06:48.875
+So then this length will return a hundred
+
+56
+00:06:49.985 --> 00:06:52.635
+dataset loader takes one parameter, okay?
+
+57
+00:06:52.715 --> 00:06:54.835
+What is the size of each batch you want?
+
+58
+00:06:55.735 --> 00:06:59.355
+So if it is 32, then it just simply divide a hundred by 32
+
+59
+00:06:59.375 --> 00:07:02.315
+and those mini mini batch gets formed.
+
+60
+00:07:03.715 --> 00:07:08.435
+Now, once the mini batches are created, find, so how to, uh,
+
+61
+00:07:08.655 --> 00:07:10.915
+how mini batch size is created, we have
+
+62
+00:07:10.915 --> 00:07:15.155
+to now create those mini batch of data means the rules for
+
+63
+00:07:15.155 --> 00:07:16.555
+that one, this gate item is used.
+
+64
+00:07:16.555 --> 00:07:19.835
+So whatever index we feed to the dataset class,
+
+65
+00:07:20.015 --> 00:07:22.115
+it returns those rules, okay?
+
+66
+00:07:22.115 --> 00:07:23.755
+Because what we do
+
+67
+00:07:24.095 --> 00:07:26.955
+before creating the mini batches, we shuffle the data.
+
+68
+00:07:27.415 --> 00:07:28.755
+It, that means that suppose I have
+
+69
+00:07:28.755 --> 00:07:31.155
+to create the mini badge of 32.
+
+70
+00:07:31.875 --> 00:07:33.955
+I don't, I don't go on creating
+
+71
+00:07:34.935 --> 00:07:39.035
+the samples like row number zero to row number th uh,
+
+72
+00:07:39.375 --> 00:07:41.195
+31 as one mini badge
+
+73
+00:07:41.735 --> 00:07:44.795
+and row number 32, then 61 as another mini badge.
+
+74
+00:07:44.855 --> 00:07:47.915
+We don't go serially first we shuffle the dataset,
+
+75
+00:07:48.375 --> 00:07:51.075
+and then we see that, okay, what are what, 32 data,
+
+76
+00:07:51.075 --> 00:07:53.555
+which is coming in the first 32 positions.
+
+77
+00:07:53.805 --> 00:07:54.875
+Index can be anything.
+
+78
+00:07:55.335 --> 00:07:57.195
+And those index, we ask from this get
+
+79
+00:07:57.195 --> 00:07:59.035
+item function to returns.
+
+80
+00:07:59.215 --> 00:08:01.475
+And that's how we get the mini batches.
+
+81
+00:08:01.475 --> 00:08:02.755
+That's why this dataset
+
+82
+00:08:02.755 --> 00:08:05.475
+and data dataset loaded these two are the different
+
+83
+00:08:05.475 --> 00:08:07.275
+classes we had seen.
+
+84
+00:08:07.745 --> 00:08:10.675
+Okay? So in a nutshell, dataset is used.
+
+85
+00:08:10.675 --> 00:08:15.355
+Dataset class is used to load your data in the form
+
+86
+00:08:15.355 --> 00:08:16.995
+of tens and dataset.
+
+87
+00:08:16.995 --> 00:08:18.155
+Loader class is used
+
+88
+00:08:18.175 --> 00:08:20.835
+to convert those data in the form of mini batches.
+
+89
+00:08:20.985 --> 00:08:23.515
+That is what is the main role of these two. Okay?
+
+90
+00:08:25.445 --> 00:08:27.705
+Now we also talked about
+
+91
+00:08:27.805 --> 00:08:31.025
+how these then mini batches is used in the training
+
+92
+00:08:31.215 --> 00:08:32.745
+loop at the time of the training.
+
+93
+00:08:32.845 --> 00:08:35.985
+So what we do, we fetch the data batch by batch
+
+94
+00:08:35.985 --> 00:08:38.265
+because we have already created those mini batches.
+
+95
+00:08:38.925 --> 00:08:41.225
+So what we do in the training loader
+
+96
+00:08:41.285 --> 00:08:43.385
+and test loader, we have those mini batches ready
+
+97
+00:08:44.205 --> 00:08:45.465
+at the training loop.
+
+98
+00:08:45.685 --> 00:08:48.265
+We fetch those batches from the train loader in the form
+
+99
+00:08:48.265 --> 00:08:49.905
+of a loop, one by one.
+
+100
+00:08:49.905 --> 00:08:52.505
+Those batches will come, X batch will have the features,
+
+101
+00:08:53.105 --> 00:08:54.465
+y batch will have the labels,
+
+102
+00:08:54.765 --> 00:08:56.765
+and that's how that then we will go on
+
+103
+00:08:57.335 --> 00:09:00.485
+doing all those things like forward propagation, okay?
+
+104
+00:09:00.485 --> 00:09:02.685
+And all the rest of the things, whatever is required
+
+105
+00:09:02.705 --> 00:09:05.805
+for the, uh, training of our neural network.
+
+106
+00:09:06.235 --> 00:09:09.285
+Okay? So this was the, uh, uh,
+
+107
+00:09:09.285 --> 00:09:12.045
+first we understood these two, uh, classes,
+
+108
+00:09:12.255 --> 00:09:13.845
+which is available in PyTorch.
+
+109
+00:09:13.845 --> 00:09:15.685
+And then we took an example use case
+
+110
+00:09:15.785 --> 00:09:20.485
+of this fashion AMS dataset where our dataset was,
+
+111
+00:09:20.625 --> 00:09:22.725
+uh, data, actual dataset was image,
+
+112
+00:09:22.725 --> 00:09:25.165
+but the, it was given in the form of CSV in the form
+
+113
+00:09:25.165 --> 00:09:26.445
+of pixels, okay?
+
+114
+00:09:27.225 --> 00:09:29.445
+And we built this network, 7 84,
+
+115
+00:09:31.335 --> 00:09:34.805
+which was the input because 28 plus 28 image size.
+
+116
+00:09:34.865 --> 00:09:36.245
+So 7 84 pixels.
+
+117
+00:09:36.245 --> 00:09:39.565
+So in the input we have 7 84, uh, inputs
+
+118
+00:09:40.725 --> 00:09:42.405
+represents the pixels of the image.
+
+119
+00:09:42.715 --> 00:09:45.965
+Then in this hidden one, we have 1 28 neurons.
+
+120
+00:09:46.345 --> 00:09:49.445
+In this hidden two layer, we have 64 neurons,
+
+121
+00:09:49.705 --> 00:09:52.565
+and in the output 10 neurons, because we had 10 class.
+
+122
+00:09:53.455 --> 00:09:56.865
+Okay? Now, if you can recall this,
+
+123
+00:10:00.235 --> 00:10:04.495
+uh, we had first used this, we loaded the data, okay,
+
+124
+00:10:04.715 --> 00:10:06.455
+in the form of the data frame,
+
+125
+00:10:07.075 --> 00:10:10.415
+and then just showed you some of the samples that, how those
+
+126
+00:10:10.965 --> 00:10:12.295
+does our data look like.
+
+127
+00:10:13.435 --> 00:10:17.535
+We did then train test a split little feature scaling, okay?
+
+128
+00:10:17.875 --> 00:10:19.295
+Now custom dataset, this is
+
+129
+00:10:19.295 --> 00:10:21.095
+where we actually create our custom
+
+130
+00:10:21.165 --> 00:10:22.495
+dataset from dataset class.
+
+131
+00:10:23.115 --> 00:10:24.735
+And there was three method in method,
+
+132
+00:10:24.745 --> 00:10:26.655
+which is converting our data,
+
+133
+00:10:26.905 --> 00:10:30.095
+which we have already wrote in the, in the form
+
+134
+00:10:30.095 --> 00:10:31.855
+of tensors, okay?
+
+135
+00:10:31.855 --> 00:10:34.535
+With the flow 32, 32 data type
+
+136
+00:10:35.035 --> 00:10:37.175
+and labels also in the form of tensors.
+
+137
+00:10:38.315 --> 00:10:43.215
+And the type is long then length method and get item method.
+
+138
+00:10:43.445 --> 00:10:46.895
+This is also part of these, uh, of custom dataset,
+
+139
+00:10:46.895 --> 00:10:50.655
+which we have not called, uh, I immediately,
+
+140
+00:10:50.715 --> 00:10:53.575
+but when we next created the data loader class,
+
+141
+00:10:53.715 --> 00:10:56.575
+you see here, data loader class, actually internally,
+
+142
+00:10:56.635 --> 00:10:58.215
+it caused the custom data set.
+
+143
+00:10:59.335 --> 00:11:01.655
+Identify, okay, total, what is the length of my data means
+
+144
+00:11:01.655 --> 00:11:04.335
+how many rows are there in my data, divided
+
+145
+00:11:04.435 --> 00:11:07.405
+by whatever batch size you will give here, okay?
+
+146
+00:11:07.405 --> 00:11:10.245
+And then create those many mini badges. Okay?
+
+147
+00:11:10.245 --> 00:11:12.365
+That is what it does. Okay?
+
+148
+00:11:12.785 --> 00:11:16.165
+And then this, this, we have already seen it earlier also,
+
+149
+00:11:16.165 --> 00:11:19.405
+that how to create the neural network module in the,
+
+150
+00:11:20.645 --> 00:11:23.585
+this we have already seen, okay?
+
+151
+00:11:23.845 --> 00:11:26.905
+And uh, then rest of the things were same.
+
+152
+00:11:27.085 --> 00:11:29.785
+We came to the training loop in the training
+
+153
+00:11:29.895 --> 00:11:31.065
+loop ordered loop.
+
+154
+00:11:31.065 --> 00:11:32.345
+Decide how many epochs.
+
+155
+00:11:32.415 --> 00:11:33.585
+That means that for, uh,
+
+156
+00:11:34.675 --> 00:11:37.945
+every och there will be an update in those weights.
+
+157
+00:11:38.505 --> 00:11:40.425
+Whatever is the weights in your model.
+
+158
+00:11:41.285 --> 00:11:45.145
+Now, that would decided by how many epochs you want to run
+
+159
+00:11:45.605 --> 00:11:48.345
+and inside each epoch how many mini badge you have created.
+
+160
+00:11:48.895 --> 00:11:51.345
+Okay? So there are two for loop. You can see here.
+
+161
+00:11:52.405 --> 00:11:54.645
+Now, for each mini, uh, mini batch,
+
+162
+00:11:54.945 --> 00:11:58.245
+we first do the forward pass, then calculate the loss,
+
+163
+00:11:58.955 --> 00:12:01.805
+then do the backward pass, and then update the weight.
+
+164
+00:12:01.915 --> 00:12:03.565
+This is what we do in the neural network.
+
+165
+00:12:03.705 --> 00:12:07.125
+So these four steps, and finally we calculate the average
+
+166
+00:12:07.235 --> 00:12:10.325
+loss per oc, and that is what is listed here.
+
+167
+00:12:11.745 --> 00:12:12.875
+This is what we had seen.
+
+168
+00:12:13.015 --> 00:12:15.715
+And then we set our model model into the evaluation mode.
+
+169
+00:12:16.175 --> 00:12:19.035
+And on the test from the test load
+
+170
+00:12:19.575 --> 00:12:21.675
+loaded on the test dataset, we calculated
+
+171
+00:12:21.675 --> 00:12:24.115
+what is the accuracy, which is coming on test data.
+
+172
+00:12:25.055 --> 00:12:27.395
+So that was coming as 83%.
+
+173
+00:12:27.855 --> 00:12:30.195
+So this was the first version which I had shown you
+
+174
+00:12:30.455 --> 00:12:31.635
+and I mentioned it
+
+175
+00:12:32.105 --> 00:12:35.195
+that here I am using only a sample of data.
+
+176
+00:12:35.255 --> 00:12:39.355
+If you can see here, we used only 6,000 of 6,000 rules.
+
+177
+00:12:41.015 --> 00:12:43.395
+In fact, in the total data a file,
+
+178
+00:12:43.415 --> 00:12:45.915
+we had 60,000 rules, okay?
+
+179
+00:12:46.295 --> 00:12:49.275
+And we did the training completely on CPU
+
+180
+00:12:49.275 --> 00:12:52.035
+because our, uh, uh, data set was small,
+
+181
+00:12:52.095 --> 00:12:53.515
+we were able to do it quickly.
+
+182
+00:12:54.695 --> 00:12:59.605
+Now, as a second version, then, uh, we started exploring
+
+183
+00:12:59.605 --> 00:13:03.165
+that how to train the same network with GPU, okay?
+
+184
+00:13:03.545 --> 00:13:07.085
+And, but this time, uh, the plan was to use the entire
+
+185
+00:13:07.845 --> 00:13:09.725
+training, uh, entire data samples,
+
+186
+00:13:10.145 --> 00:13:11.805
+and we had 60,000 data samples,
+
+187
+00:13:11.805 --> 00:13:14.005
+60,000 rows in my data, okay?
+
+188
+00:13:14.545 --> 00:13:16.245
+So we said that it is doable,
+
+189
+00:13:16.305 --> 00:13:18.165
+but then there are few changes which we
+
+190
+00:13:18.165 --> 00:13:19.245
+have to do in our code.
+
+191
+00:13:19.245 --> 00:13:20.285
+First of all, we need
+
+192
+00:13:20.285 --> 00:13:22.125
+to check whether the GPU is available or not.
+
+193
+00:13:22.125 --> 00:13:25.245
+And with this code, we had checked whether the GPU is
+
+194
+00:13:25.245 --> 00:13:28.045
+available or not, correct?
+
+195
+00:13:28.825 --> 00:13:33.525
+And then what we did, whatever model we created, model, uh,
+
+196
+00:13:33.585 --> 00:13:38.325
+uh, uh, we created from my NN module,
+
+197
+00:13:39.265 --> 00:13:40.565
+we moved it to the device.
+
+198
+00:13:40.565 --> 00:13:42.365
+Device is representing the GPU
+
+199
+00:13:42.365 --> 00:13:44.045
+or cuda in this particular case.
+
+200
+00:13:44.065 --> 00:13:46.365
+So first of all, we checked whether this device
+
+201
+00:13:46.385 --> 00:13:47.445
+is available or not.
+
+202
+00:13:47.585 --> 00:13:50.245
+If yes, then we moved it to the device.
+
+203
+00:13:50.245 --> 00:13:52.285
+And device is nothing. But here, the GPU.
+
+204
+00:13:52.945 --> 00:13:54.245
+And then in the training loop,
+
+205
+00:13:54.425 --> 00:13:58.205
+we did some changes in the sense once we are extracting
+
+206
+00:13:58.205 --> 00:14:00.845
+batch feature, batch label from the train loader
+
+207
+00:14:01.385 --> 00:14:02.845
+and later part in the test loader
+
+208
+00:14:03.945 --> 00:14:05.805
+before going into the forward pass,
+
+209
+00:14:06.065 --> 00:14:09.165
+and then calculating laws, doing ev, everything else,
+
+210
+00:14:09.515 --> 00:14:13.845
+what we do, first of all, we move the data to the GPU,
+
+211
+00:14:13.845 --> 00:14:17.605
+these, these batches also, we have to move to the GPU, okay?
+
+212
+00:14:17.625 --> 00:14:19.445
+And for that, again, the code is very simple.
+
+213
+00:14:20.085 --> 00:14:22.725
+Whatever batch features we are getting, we just have
+
+214
+00:14:22.725 --> 00:14:24.125
+to write dot two device.
+
+215
+00:14:24.395 --> 00:14:26.525
+Okay? Two device means we are moving it
+
+216
+00:14:26.545 --> 00:14:27.885
+to this particular device,
+
+217
+00:14:27.885 --> 00:14:29.325
+and this device is nothing but gp.
+
+218
+00:14:29.675 --> 00:14:32.165
+Similarly, for label also, this is one change.
+
+219
+00:14:32.165 --> 00:14:33.605
+Similarly, for the test loader,
+
+220
+00:14:33.635 --> 00:14:34.965
+when we are doing the evaluation,
+
+221
+00:14:35.345 --> 00:14:38.445
+we had done two device part in these two lines, okay?
+
+222
+00:14:38.985 --> 00:14:42.405
+And then again, I had shown you the next, uh,
+
+223
+00:14:42.405 --> 00:14:44.325
+version of this.
+
+224
+00:14:44.545 --> 00:14:48.675
+Let me just open now here, what I, what I did, first of all,
+
+225
+00:14:48.715 --> 00:14:51.605
+I loaded the entire data sample, okay?
+
+226
+00:14:51.605 --> 00:14:54.405
+Entire data sample, 60,000 rows I can show you here.
+
+227
+00:14:54.585 --> 00:14:57.645
+So first of all, I checked with this line of code,
+
+228
+00:14:57.755 --> 00:14:59.885
+whether the GPU is available or not.
+
+229
+00:15:00.075 --> 00:15:02.365
+Very simple to device, you just have
+
+230
+00:15:02.365 --> 00:15:04.445
+to write this one conditional statement.
+
+231
+00:15:04.775 --> 00:15:06.205
+It'll save that the COURA
+
+232
+00:15:06.465 --> 00:15:09.245
+or CPU on which device you're working.
+
+233
+00:15:09.425 --> 00:15:14.165
+So because we had set it to, uh, runtime to GPU,
+
+234
+00:15:14.185 --> 00:15:17.285
+so it showed that we are running on the kuda means CPU,
+
+235
+00:15:17.635 --> 00:15:20.325
+then we read the entire data sample.
+
+236
+00:15:20.915 --> 00:15:23.565
+That is 60,070.
+
+237
+00:15:23.565 --> 00:15:24.765
+Column wise, there is no change,
+
+238
+00:15:24.765 --> 00:15:29.445
+but row wise, we now used 60,000 data samples, okay?
+
+239
+00:15:29.465 --> 00:15:31.525
+Or roads, you can say that. Okay?
+
+240
+00:15:31.525 --> 00:15:33.245
+These just a sample of data which we showed,
+
+241
+00:15:33.265 --> 00:15:35.365
+and again, these two steps were the same.
+
+242
+00:15:35.385 --> 00:15:37.005
+We divided the data into train
+
+243
+00:15:37.025 --> 00:15:41.685
+and validation train, test split, then normalized it, okay?
+
+244
+00:15:41.715 --> 00:15:44.165
+Here, there was no change in the custom data set
+
+245
+00:15:44.165 --> 00:15:46.405
+where we converted our data in the form
+
+246
+00:15:46.405 --> 00:15:49.565
+of tensors labeled in the form of tensors, right?
+
+247
+00:15:50.185 --> 00:15:53.085
+And then we called the data loader class in the same way.
+
+248
+00:15:53.085 --> 00:15:54.085
+There was no change in that.
+
+249
+00:15:55.105 --> 00:15:57.965
+Now, in the my, once we built our neural network,
+
+250
+00:15:58.015 --> 00:15:59.965
+there was also no change in the neural network.
+
+251
+00:16:00.055 --> 00:16:03.245
+Again, one sequential layer where sequential container,
+
+252
+00:16:03.245 --> 00:16:05.685
+where we have one linear layer followed by relu,
+
+253
+00:16:05.685 --> 00:16:07.485
+another linear layer followed by relu.
+
+254
+00:16:07.705 --> 00:16:09.565
+And finally, the output layer, the same thing,
+
+255
+00:16:09.565 --> 00:16:10.765
+which I showed you in the slide.
+
+256
+00:16:11.595 --> 00:16:14.525
+Okay? And finally, what we did, uh,
+
+257
+00:16:14.525 --> 00:16:18.045
+while creating the object of high model, in the next slide,
+
+258
+00:16:18.125 --> 00:16:21.925
+I wrote red wrote model models model dot two device.
+
+259
+00:16:21.925 --> 00:16:26.165
+That means that we are again, moving the model into the GPU,
+
+260
+00:16:26.345 --> 00:16:29.325
+but this part is required whenever you want to use the GPU.
+
+261
+00:16:31.055 --> 00:16:34.145
+Okay? Then in the training loop, this one lineup change,
+
+262
+00:16:34.165 --> 00:16:37.425
+we did, as I said, move the data to the GPU model.
+
+263
+00:16:37.545 --> 00:16:39.145
+VID now data to the GPU.
+
+264
+00:16:39.145 --> 00:16:40.785
+In the earlier case, if you can see,
+
+265
+00:16:41.445 --> 00:16:44.385
+we did not have this code, uh, here,
+
+266
+00:16:44.795 --> 00:16:47.025
+after extracting the batch feature,
+
+267
+00:16:47.075 --> 00:16:50.185
+batch labels from train loader, we are simply feeding you
+
+268
+00:16:50.185 --> 00:16:52.345
+to the model for the prediction.
+
+269
+00:16:52.345 --> 00:16:54.665
+And that's then lost calculation and backward.
+
+270
+00:16:55.165 --> 00:16:57.505
+But here, what we are doing is
+
+271
+00:16:57.505 --> 00:17:00.465
+before feeding you to the model for the prediction, first,
+
+272
+00:17:00.485 --> 00:17:01.905
+we are moving the data to gpu.
+
+273
+00:17:01.905 --> 00:17:03.745
+So this line, one line of code we have done
+
+274
+00:17:03.805 --> 00:17:05.385
+for the feature also for the label.
+
+275
+00:17:05.485 --> 00:17:08.985
+So we moved it to the GPU for the GPU users, then trained
+
+276
+00:17:09.015 --> 00:17:11.065
+with the complete 60,000 data.
+
+277
+00:17:11.765 --> 00:17:14.105
+And in the evaluation also, we did the same exercise,
+
+278
+00:17:14.175 --> 00:17:16.165
+this one, okay?
+
+279
+00:17:17.145 --> 00:17:19.525
+Now one more thing, which I have showed you in,
+
+280
+00:17:19.625 --> 00:17:23.725
+in this notebook was evaluation, uh, uh, uh,
+
+281
+00:17:24.145 --> 00:17:25.965
+the training accuracy.
+
+282
+00:17:26.075 --> 00:17:30.205
+Earlier case, it was coming as if I, uh,
+
+283
+00:17:30.205 --> 00:17:33.565
+just know I showed you it was coming as it was coming, uh,
+
+284
+00:17:33.905 --> 00:17:35.765
+as point 83%.
+
+285
+00:17:35.865 --> 00:17:40.245
+But when we use with the GPU, it was coming as 88%.
+
+286
+00:17:40.675 --> 00:17:42.805
+Okay? Because now again, the reason was
+
+287
+00:17:42.805 --> 00:17:45.405
+because we use the entire data sample earlier.
+
+288
+00:17:45.505 --> 00:17:49.485
+We use only 6,000 here, we use 60,000 data sample, right?
+
+289
+00:17:49.485 --> 00:17:52.645
+So obviously the training accuracy has improved. Oh, sorry.
+
+290
+00:17:52.645 --> 00:17:54.045
+Testing accuracy has improved.
+
+291
+00:17:54.825 --> 00:17:57.485
+Now, in this case, what we did, we also checked
+
+292
+00:17:57.515 --> 00:17:59.925
+what is the training accuracy means.
+
+293
+00:17:59.945 --> 00:18:01.765
+At the training time, what was the accuracy?
+
+294
+00:18:01.765 --> 00:18:04.005
+And we found that the training time accuracy was
+
+295
+00:18:04.005 --> 00:18:06.125
+98% testing time.
+
+296
+00:18:06.125 --> 00:18:07.285
+It was 88%.
+
+297
+00:18:07.345 --> 00:18:09.725
+And this is where, if you re recall,
+
+298
+00:18:09.865 --> 00:18:14.805
+we discussed the concept of over fitting, over fitting.
+
+299
+00:18:15.305 --> 00:18:18.045
+And we say that in such a case where you see
+
+300
+00:18:18.045 --> 00:18:20.565
+that there is a huge gap between the training accuracy
+
+301
+00:18:20.565 --> 00:18:21.565
+and testing accuracy.
+
+302
+00:18:22.065 --> 00:18:25.365
+You have to understand that my model is under the over
+
+303
+00:18:25.365 --> 00:18:26.645
+overfit condition,
+
+304
+00:18:27.025 --> 00:18:29.725
+and you need to optimize your neural network model in order
+
+305
+00:18:29.745 --> 00:18:32.485
+to reduce the overfit problem, okay?
+
+306
+00:18:33.185 --> 00:18:36.085
+And there are multiple ways of doing that,
+
+307
+00:18:36.275 --> 00:18:39.245
+that you can add more data, which we did not do
+
+308
+00:18:39.245 --> 00:18:40.245
+because 60,000
+
+309
+00:18:40.265 --> 00:18:42.645
+and that was the only data sets we have been given.
+
+310
+00:18:42.705 --> 00:18:45.685
+And we don't have much data because many case it'll happen.
+
+311
+00:18:45.705 --> 00:18:47.405
+You don't have immediately more data
+
+312
+00:18:47.745 --> 00:18:50.245
+to train your model further, okay?
+
+313
+00:18:50.245 --> 00:18:51.685
+But this is one such solution,
+
+314
+00:18:51.745 --> 00:18:54.045
+and it may reduce your over fitting a little bit.
+
+315
+00:18:54.995 --> 00:18:57.405
+Then reduce model complexity in the sense,
+
+316
+00:18:57.405 --> 00:18:59.565
+suppose you have two hidden layer, you keep it
+
+317
+00:18:59.565 --> 00:19:01.485
+to only one hidden layer, okay?
+
+318
+00:19:02.235 --> 00:19:03.365
+Less than one hidden layer.
+
+319
+00:19:03.365 --> 00:19:06.125
+Anyway, it'll not make much, make much, much sense.
+
+320
+00:19:06.835 --> 00:19:09.125
+Even in fact, what we discussed,
+
+321
+00:19:09.265 --> 00:19:11.565
+two hidden layer is also not a very complex network.
+
+322
+00:19:12.305 --> 00:19:14.765
+So maybe reducing the model complexity also will
+
+323
+00:19:14.765 --> 00:19:15.885
+not solve our problem.
+
+324
+00:19:16.595 --> 00:19:18.485
+That is what we understood what we discussed,
+
+325
+00:19:18.845 --> 00:19:20.525
+although we can try this, but we did not do
+
+326
+00:19:20.705 --> 00:19:21.925
+in the previous class.
+
+327
+00:19:23.025 --> 00:19:24.565
+But this is one another solution
+
+328
+00:19:24.625 --> 00:19:25.965
+for reducing the over fitting.
+
+329
+00:19:26.095 --> 00:19:29.445
+Early stopping means you, uh, for
+
+330
+00:19:29.445 --> 00:19:33.035
+after every oc you also check that, uh,
+
+331
+00:19:33.085 --> 00:19:35.795
+after every oc you check what is training accuracy also,
+
+332
+00:19:35.795 --> 00:19:37.155
+and validation accuracy also.
+
+333
+00:19:37.935 --> 00:19:39.875
+And you, wherever you see that in the training,
+
+334
+00:19:40.195 --> 00:19:41.275
+accuracy is not improving.
+
+335
+00:19:41.375 --> 00:19:44.835
+You stop there itself. Don't train for more number of,
+
+336
+00:19:45.495 --> 00:19:46.955
+so you do early stopping.
+
+337
+00:19:47.705 --> 00:19:51.015
+Maybe that will have some control over the
+
+338
+00:19:51.015 --> 00:19:52.055
+over fitting, okay?
+
+339
+00:19:52.055 --> 00:19:54.175
+That is what, uh, another solution says,
+
+340
+00:19:54.185 --> 00:19:55.295
+which we have not yet tried.
+
+341
+00:19:55.295 --> 00:19:57.815
+We'll see that in future, if we can try that.
+
+342
+00:20:00.025 --> 00:20:02.475
+Then the next thing is the dropout.
+
+343
+00:20:03.935 --> 00:20:07.755
+Um, uh, next thing is dropout, where, uh,
+
+344
+00:20:09.035 --> 00:20:11.235
+actually we use this, this method, okay?
+
+345
+00:20:11.255 --> 00:20:13.875
+We use this dropout method, batch normalization method
+
+346
+00:20:13.935 --> 00:20:15.195
+and regularization method.
+
+347
+00:20:15.655 --> 00:20:18.355
+So in the dropout, what happens for a particular head layer,
+
+348
+00:20:18.575 --> 00:20:20.155
+we drop some of the neurons.
+
+349
+00:20:21.035 --> 00:20:25.445
+Okay? So, uh, what happens while, uh, if we drop
+
+350
+00:20:26.085 --> 00:20:28.565
+randomly some neurons, we are making, uh,
+
+351
+00:20:29.745 --> 00:20:32.805
+for every batch we are make, we are doing this practice.
+
+352
+00:20:32.805 --> 00:20:34.445
+That means that for every batch, it may happen
+
+353
+00:20:34.445 --> 00:20:38.485
+for first batch, this neuron is dropped for the next batch,
+
+354
+00:20:38.495 --> 00:20:41.365
+first neuron would be dropped for the next batch.
+
+355
+00:20:41.375 --> 00:20:44.245
+Third neuron would be dropped. But randomly it is happening.
+
+356
+00:20:44.825 --> 00:20:47.870
+So what is happening? Every batch is seeing different neural
+
+357
+00:20:47.870 --> 00:20:49.085
+network, okay?
+
+358
+00:20:49.135 --> 00:20:51.325
+Every batch is seeing somehow different neural network.
+
+359
+00:20:52.065 --> 00:20:54.685
+So it tried to capture different aspects
+
+360
+00:20:54.745 --> 00:20:57.195
+of the input, okay?
+
+361
+00:20:57.195 --> 00:20:59.275
+And it's not trying to memorize the input,
+
+362
+00:21:00.195 --> 00:21:03.095
+and that helps the neural network in order to generalize
+
+363
+00:21:03.095 --> 00:21:04.695
+and reduce the overfeeding problem.
+
+364
+00:21:05.445 --> 00:21:09.375
+Okay? So that's, that, that's what we used, uh, dropout.
+
+365
+00:21:09.755 --> 00:21:13.215
+And we also used the patch normalization. We say that, okay?
+
+366
+00:21:13.715 --> 00:21:18.015
+Before, uh, once we do the linear, uh, uh,
+
+367
+00:21:18.755 --> 00:21:21.135
+um, linear function in a linear, uh, process,
+
+368
+00:21:21.135 --> 00:21:25.295
+that means weight, some plus bias as J one and jet two,
+
+369
+00:21:25.555 --> 00:21:27.735
+before passing it through the activation function,
+
+370
+00:21:28.675 --> 00:21:30.255
+you apply the batch normalization.
+
+371
+00:21:30.285 --> 00:21:32.735
+What it does, suppose jet one value is too high.
+
+372
+00:21:32.795 --> 00:21:35.735
+Jet two value is too slow. Then batch normalization.
+
+373
+00:21:35.875 --> 00:21:40.455
+It, it brings these, these activations, these jet one
+
+374
+00:21:40.455 --> 00:21:43.695
+and jet two in a within range, so that it'll go to,
+
+375
+00:21:43.695 --> 00:21:46.775
+if it'll go to the next activation function like relu,
+
+376
+00:21:47.365 --> 00:21:50.455
+they will not see these two value as very away.
+
+377
+00:21:50.845 --> 00:21:53.255
+They, for them, these two value are very close
+
+378
+00:21:53.255 --> 00:21:55.255
+between a range of zero to one or whatever.
+
+379
+00:21:55.325 --> 00:21:58.755
+It's, and hence it, uh, hence, it'll,
+
+380
+00:21:58.755 --> 00:22:00.475
+it'll normalize the network again.
+
+381
+00:22:01.105 --> 00:22:02.555
+Okay? So that is the concept.
+
+382
+00:22:02.735 --> 00:22:06.595
+So again, it helps in the, in bringing the, uh, our fitting
+
+383
+00:22:07.235 --> 00:22:08.875
+a little bit, uh, low.
+
+384
+00:22:09.545 --> 00:22:12.515
+Finally, we also talked about the
+
+385
+00:22:13.515 --> 00:22:14.555
+L two regularization.
+
+386
+00:22:15.075 --> 00:22:17.755
+L two ization is represented by this particular formula
+
+387
+00:22:17.805 --> 00:22:19.795
+where total loss is equal to loss,
+
+388
+00:22:19.885 --> 00:22:21.155
+which is coming from data.
+
+389
+00:22:21.815 --> 00:22:26.315
+And then we added some, uh, lambda into WIS squared.
+
+390
+00:22:26.315 --> 00:22:28.715
+So we said that, uh, uh, that
+
+391
+00:22:29.335 --> 00:22:31.315
+by adding this particular parameter,
+
+392
+00:22:31.375 --> 00:22:33.115
+we are reducing the weight.
+
+393
+00:22:33.655 --> 00:22:38.355
+Uh, we are trying to, uh, uh, control our weight
+
+394
+00:22:38.355 --> 00:22:42.715
+because the WI represent the weights, say a hundred weights.
+
+395
+00:22:42.715 --> 00:22:45.955
+So all, all a hundred weights, W one, W2, W three,
+
+396
+00:22:45.975 --> 00:22:48.835
+for every weight, we are having this lambda component.
+
+397
+00:22:48.865 --> 00:22:50.395
+What this lambda component does,
+
+398
+00:22:50.855 --> 00:22:54.715
+if some weights are very high, somehow it is controlling
+
+399
+00:22:54.715 --> 00:22:58.155
+that one so that that weight will not dominate, okay?
+
+400
+00:22:58.175 --> 00:23:00.475
+In, in, at, at the time of the back replication.
+
+401
+00:23:01.175 --> 00:23:03.035
+So all these things are the factors, okay?
+
+402
+00:23:03.375 --> 00:23:08.275
+So what we did in the third version, what we saw that, uh,
+
+403
+00:23:09.205 --> 00:23:11.155
+everything was same, there were three change.
+
+404
+00:23:11.155 --> 00:23:14.965
+What we then did in the, in the, in the notebook,
+
+405
+00:23:15.825 --> 00:23:16.965
+all these things were same.
+
+406
+00:23:17.025 --> 00:23:19.645
+All these things were same here.
+
+407
+00:23:20.065 --> 00:23:23.565
+The first change was in terms of the neural network itself.
+
+408
+00:23:23.625 --> 00:23:25.925
+So we added the badge normalization here
+
+409
+00:23:26.385 --> 00:23:29.925
+before passing to the relu, I added a badge, normalization,
+
+410
+00:23:30.385 --> 00:23:33.685
+and after the relu, we added the dropout layer.
+
+411
+00:23:34.185 --> 00:23:35.485
+So these two are the layers.
+
+412
+00:23:35.555 --> 00:23:38.605
+What we added similarly for the second neural, uh, thick
+
+413
+00:23:38.605 --> 00:23:42.565
+and hidden, hidden layer, batch normalization, we added 10
+
+414
+00:23:43.105 --> 00:23:45.245
+and then dropout, okay?
+
+415
+00:23:45.305 --> 00:23:46.525
+So this is what is the change,
+
+416
+00:23:46.525 --> 00:23:48.365
+what we introduce in the neural network
+
+417
+00:23:48.705 --> 00:23:52.205
+and in terms of batch normalization and dropout.
+
+418
+00:23:52.225 --> 00:23:55.885
+And one more change was in the optimizer
+
+419
+00:23:55.895 --> 00:23:58.885
+where we are actually updating our parameters.
+
+420
+00:23:59.025 --> 00:24:01.285
+But in the parameter update, what we said that we will,
+
+421
+00:24:01.785 --> 00:24:06.285
+we will add, uh, this, this, uh, this, um,
+
+422
+00:24:06.465 --> 00:24:09.045
+regularization that is the L two regularization.
+
+423
+00:24:09.465 --> 00:24:10.605
+And how did we do that?
+
+424
+00:24:11.065 --> 00:24:13.245
+We did it using, uh,
+
+425
+00:24:16.805 --> 00:24:19.745
+We did it using this, uh, we dk which,
+
+426
+00:24:19.745 --> 00:24:23.185
+what parameter called we dk, which we, uh, that is nothing
+
+427
+00:24:23.205 --> 00:24:25.465
+but lambda, which is called to 10, to the per minus
+
+428
+00:24:25.975 --> 00:24:27.305
+port, okay?
+
+429
+00:24:27.305 --> 00:24:29.865
+With this change, when we again, did the training loop,
+
+430
+00:24:29.865 --> 00:24:32.265
+there was no change, but we simply trained our network.
+
+431
+00:24:32.645 --> 00:24:34.545
+And in the evaluation,
+
+432
+00:24:34.605 --> 00:24:36.905
+we eval evaluated our model for the test.
+
+433
+00:24:36.975 --> 00:24:39.905
+Data accuracy was same pointed,
+
+434
+00:24:40.605 --> 00:24:44.705
+but for the train data, we saw that accuracy reduced to 93%.
+
+435
+00:24:44.725 --> 00:24:48.905
+In the earlier case, it was 98% for the train data,
+
+436
+00:24:48.965 --> 00:24:50.785
+but now it has reduced to 93.
+
+437
+00:24:51.445 --> 00:24:55.785
+So now we could able to reduce the gap between the, uh,
+
+438
+00:24:55.815 --> 00:24:59.385
+this, this, uh, data, this, uh, uh, test accuracy
+
+439
+00:24:59.525 --> 00:25:00.625
+and train accuracy.
+
+440
+00:25:01.215 --> 00:25:04.745
+Okay? This is what we, uh, we did that, that is
+
+441
+00:25:04.745 --> 00:25:06.425
+what we did in, in the previous class.
+
+442
+00:25:06.615 --> 00:25:09.505
+Okay? So, so far, this is what we have covered.
+
+443
+00:25:09.765 --> 00:25:11.865
+Now, I will, I will just stop for a while
+
+444
+00:25:11.885 --> 00:25:13.985
+for your questions, and then we will see that
+
+445
+00:25:13.985 --> 00:25:15.345
+what we have for today's class.
+
+446
+00:25:16.005 --> 00:25:19.385
+Yes. Uh, so first question, I have few questions
+
+447
+00:25:19.385 --> 00:25:20.465
+regarding Yes, yes.
+
+448
+00:25:20.485 --> 00:25:22.585
+So first question is that how q uh,
+
+449
+00:25:22.845 --> 00:25:25.705
+qda function identifies the GPU, sir.
+
+450
+00:25:26.005 --> 00:25:28.385
+So it is me, uh, function in me as
+
+451
+00:25:28.385 --> 00:25:30.665
+that it identifies the GPU.
+
+452
+00:25:30.925 --> 00:25:33.785
+And once data is loaded on the GPU, how it,
+
+453
+00:25:34.335 --> 00:25:38.625
+once we stop the processing, then whether it is on the GPU
+
+454
+00:25:38.925 --> 00:25:41.505
+or the data is released from the GPU, sir,
+
+455
+00:25:42.415 --> 00:25:44.425
+What was the first question? I did not hear. So
+
+456
+00:25:44.445 --> 00:25:46.545
+How qda identifies the system.
+
+457
+00:25:46.765 --> 00:25:49.265
+We have GPU in that, in our system,
+
+458
+00:25:49.565 --> 00:25:50.865
+it is a hardware, no, sir,
+
+459
+00:25:51.045 --> 00:25:52.045
+It is a hardware. So that's
+
+460
+00:25:52.045 --> 00:25:54.985
+why what we do the TOS directly, uh,
+
+461
+00:25:54.985 --> 00:25:57.145
+there is a device function, okay?
+
+462
+00:25:57.525 --> 00:25:59.385
+Yes, sir. Like we have a function called
+
+463
+00:25:59.905 --> 00:26:00.905
+regional school CSV,
+
+464
+00:26:00.925 --> 00:26:04.025
+and it understand that my file is in the,
+
+465
+00:26:04.025 --> 00:26:05.345
+in the form of the CSV.
+
+466
+00:26:05.975 --> 00:26:07.585
+Okay? Yes, sir. Similarly,
+
+467
+00:26:08.205 --> 00:26:10.265
+the torch has a function called device.
+
+468
+00:26:10.685 --> 00:26:14.305
+Now, what it does, it, it identify in this collab notebook
+
+469
+00:26:14.535 --> 00:26:16.905
+that, okay, what is the runtime?
+
+470
+00:26:16.905 --> 00:26:19.585
+Because you must be having a GPU
+
+471
+00:26:19.585 --> 00:26:22.425
+or CPU on which your program will actually run.
+
+472
+00:26:23.445 --> 00:26:25.425
+Yes, sir. So It identifies you.
+
+473
+00:26:25.425 --> 00:26:28.185
+And so if you want further, uh, what is this?
+
+474
+00:26:28.325 --> 00:26:32.785
+You can go and explore this function on the PyTorch.
+
+475
+00:26:33.625 --> 00:26:38.425
+Actually, it has the whole, uh, uh, uh, definition
+
+476
+00:26:38.425 --> 00:26:40.345
+that how this function is defined.
+
+477
+00:26:40.605 --> 00:26:43.065
+So this class is already defined in the PyTorch,
+
+478
+00:26:43.195 --> 00:26:44.405
+just have a look into it.
+
+479
+00:26:45.185 --> 00:26:47.085
+Yes, yes. But, uh,
+
+480
+00:26:47.625 --> 00:26:49.645
+but, uh, this is a simplified function,
+
+481
+00:26:49.645 --> 00:26:52.965
+which checks the same thing, whether your system,
+
+482
+00:26:53.055 --> 00:26:54.565
+right now it is using GP
+
+483
+00:26:54.565 --> 00:26:57.605
+or CCP internally, even, I don't know how it goes
+
+484
+00:26:57.605 --> 00:26:58.965
+and, uh, explore that one.
+
+485
+00:26:58.965 --> 00:27:01.245
+But you can go and check further this documentation,
+
+486
+00:27:01.405 --> 00:27:02.965
+what it has, okay? Yeah,
+
+487
+00:27:03.115 --> 00:27:04.115
+Sure.
+
+488
+00:27:04.265 --> 00:27:05.965
+And another, yes.
+
+489
+00:27:05.965 --> 00:27:08.485
+Second, second thing is that what you asked, uh, uh,
+
+490
+00:27:08.485 --> 00:27:12.285
+regarding that, once suppose we, uh, done with the training
+
+491
+00:27:12.425 --> 00:27:14.525
+and all and everything, whether the, uh,
+
+492
+00:27:14.535 --> 00:27:16.325
+still we are using GPU or CPU?
+
+493
+00:27:16.825 --> 00:27:20.125
+Yes. The answer is, unless you don't close that,
+
+494
+00:27:20.205 --> 00:27:22.445
+you're still, uh, using that GPU
+
+495
+00:27:23.025 --> 00:27:25.405
+unless you are not opting out by yourself.
+
+496
+00:27:26.505 --> 00:27:30.205
+Yes, sir. For example, sir, if we are using in our laptop,
+
+497
+00:27:30.505 --> 00:27:34.445
+not in, uh, collab notebook, uh, then in that case how
+
+498
+00:27:34.445 --> 00:27:36.605
+to release the data from GPUs.
+
+499
+00:27:37.305 --> 00:27:39.565
+Is there any function so that we can run?
+
+500
+00:27:40.005 --> 00:27:41.125
+I guess there must be some function.
+
+501
+00:27:41.365 --> 00:27:43.325
+I, I'm not sure about what is that function,
+
+502
+00:27:43.385 --> 00:27:44.565
+but you can see that one.
+
+503
+00:27:44.565 --> 00:27:46.845
+If you don't want to use GPU, there must be some function.
+
+504
+00:27:48.115 --> 00:27:50.885
+Just do that. Uh, ask that GP, it'll tell you one line
+
+505
+00:27:50.885 --> 00:27:52.725
+of one line of code. That's all.
+
+506
+00:27:52.825 --> 00:27:55.565
+Uh, yes, that's sure, sir. And
+
+507
+00:27:55.805 --> 00:27:57.845
+I have not used, Yeah.
+
+508
+00:27:57.905 --> 00:28:00.645
+Yes. A another question is regarding,
+
+509
+00:28:00.705 --> 00:28:04.005
+and the, uh, which we are using
+
+510
+00:28:04.105 --> 00:28:06.005
+to train the neural network,
+
+511
+00:28:06.035 --> 00:28:10.325
+different parameters like dropout, regularization and all.
+
+512
+00:28:10.905 --> 00:28:13.445
+So when we are using, uh, dropout
+
+513
+00:28:13.905 --> 00:28:18.125
+and, uh, regularization, um, bash, bash normal.
+
+514
+00:28:18.465 --> 00:28:21.725
+Mm-hmm. So, uh, can we use in the combination, sir,
+
+515
+00:28:22.075 --> 00:28:25.685
+because previous I had idea, either we can use dropout
+
+516
+00:28:26.105 --> 00:28:29.245
+or something like that, or batch normalization.
+
+517
+00:28:29.305 --> 00:28:33.805
+But here I'm saying that, um, we are using bash normal also
+
+518
+00:28:33.945 --> 00:28:35.205
+and dropout also.
+
+519
+00:28:35.585 --> 00:28:38.005
+So at which position we, we'll decide
+
+520
+00:28:38.305 --> 00:28:41.445
+before relu we'll use, um, batch normalization
+
+521
+00:28:41.445 --> 00:28:45.565
+after relu, we, or before linear, we'll use dropout.
+
+522
+00:28:46.705 --> 00:28:49.445
+So the usual practices, uh, that's what I,
+
+523
+00:28:49.565 --> 00:28:51.045
+I explained it in the last class.
+
+524
+00:28:51.145 --> 00:28:53.165
+The usual practices. Yeah,
+
+525
+00:28:53.965 --> 00:28:55.525
+I was not there, sir. Sorry, Uhhuh,
+
+526
+00:28:55.665 --> 00:29:00.405
+That's what, so, uh, drop dropout we usually use
+
+527
+00:29:01.035 --> 00:29:04.445
+here, if you can see here, dropout is after the activation.
+
+528
+00:29:05.775 --> 00:29:08.675
+So in a, in a particular layer, you have a neuron.
+
+529
+00:29:09.055 --> 00:29:10.515
+Neuron does two operation.
+
+530
+00:29:10.965 --> 00:29:12.395
+First, the linear operation
+
+531
+00:29:12.395 --> 00:29:14.155
+where it is doing the weighted sum
+
+532
+00:29:14.575 --> 00:29:16.275
+and then followed by activation function.
+
+533
+00:29:16.275 --> 00:29:19.235
+These are the two operation dropout we use
+
+534
+00:29:20.085 --> 00:29:22.515
+after the, uh, activation,
+
+535
+00:29:22.845 --> 00:29:24.195
+after the active, you can see that
+
+536
+00:29:24.195 --> 00:29:25.795
+after relu I have used here.
+
+537
+00:29:25.795 --> 00:29:27.675
+That is a usual practice, okay?
+
+538
+00:29:28.015 --> 00:29:30.955
+Yes, sir. Yes. Now, uh, batch normalization,
+
+539
+00:29:31.055 --> 00:29:33.915
+the usual practice is to use before the activation.
+
+540
+00:29:34.295 --> 00:29:36.435
+That's why the batch norm is coming
+
+541
+00:29:36.435 --> 00:29:38.955
+after the here also here also, okay?
+
+542
+00:29:39.015 --> 00:29:41.325
+Yes, that is the usual practice,
+
+543
+00:29:41.865 --> 00:29:45.005
+but you may see there is slightly variations in that.
+
+544
+00:29:45.155 --> 00:29:46.445
+Also, certain times, maybe
+
+545
+00:29:46.455 --> 00:29:47.725
+after activation only,
+
+546
+00:29:47.755 --> 00:29:49.645
+both the things are being used as normal.
+
+547
+00:29:49.825 --> 00:29:52.285
+So dropper also, okay,
+
+548
+00:29:52.705 --> 00:29:55.005
+but I have given you the reason why this is a usual
+
+549
+00:29:55.365 --> 00:29:56.605
+practice, okay?
+
+550
+00:29:56.605 --> 00:30:00.565
+Because see, once, uh, what we do, we randomly
+
+551
+00:30:01.395 --> 00:30:02.845
+drop some neurons.
+
+552
+00:30:03.705 --> 00:30:06.845
+So whatever neurons you have to drop, okay?
+
+553
+00:30:06.915 --> 00:30:10.725
+That, uh, that, that, that call you take,
+
+554
+00:30:10.795 --> 00:30:13.645
+once you calculate all the neurons output,
+
+555
+00:30:13.645 --> 00:30:14.845
+and then you decide that, okay,
+
+556
+00:30:14.845 --> 00:30:17.445
+this neurons has something which I don't want to carry out,
+
+557
+00:30:17.605 --> 00:30:19.405
+you drop it, okay?
+
+558
+00:30:19.405 --> 00:30:23.525
+You drop it. So that's why the, usually the dropout has
+
+559
+00:30:23.935 --> 00:30:27.445
+after the all the functionality, what you have to, you have
+
+560
+00:30:27.445 --> 00:30:29.445
+to perform in the neuron usual practices.
+
+561
+00:30:29.445 --> 00:30:31.285
+That is what I'm saying. Okay?
+
+562
+00:30:31.305 --> 00:30:35.325
+But ization, why before the why before this,
+
+563
+00:30:35.325 --> 00:30:37.445
+because, uh, uh,
+
+564
+00:30:38.195 --> 00:30:41.485
+because to the activation function, whatever I want to pass,
+
+565
+00:30:41.965 --> 00:30:44.285
+I want to pass as a, as a normalized value.
+
+566
+00:30:44.305 --> 00:30:46.605
+So the activation function like sigmoid,
+
+567
+00:30:47.345 --> 00:30:49.205
+it should not see some value very high,
+
+568
+00:30:49.225 --> 00:30:50.605
+and it'll assign it to one
+
+569
+00:30:50.785 --> 00:30:52.925
+and very low, then it'll assign to zero,
+
+570
+00:30:52.995 --> 00:30:55.085
+then it'll be a problem for me.
+
+571
+00:30:55.665 --> 00:30:57.405
+Yes, Sir. That's why I just want to normalize
+
+572
+00:30:57.405 --> 00:30:59.805
+and then send, yeah, that is the main reason, okay?
+
+573
+00:31:00.705 --> 00:31:03.285
+Yes. So is there any way,
+
+574
+00:31:03.345 --> 00:31:05.325
+and that we can, for example,
+
+575
+00:31:06.075 --> 00:31:07.765
+they are having different layers.
+
+576
+00:31:08.635 --> 00:31:10.525
+Each cell is having different values.
+
+577
+00:31:11.265 --> 00:31:14.685
+So how, like in ml, uh, we can we come
+
+578
+00:31:14.685 --> 00:31:16.605
+to know which feature is more important?
+
+579
+00:31:17.265 --> 00:31:21.165
+So is there any way for dropout, I am asking specifically
+
+580
+00:31:21.665 --> 00:31:24.645
+to come to know that which neuron is less significant
+
+581
+00:31:24.865 --> 00:31:26.285
+and we can drop out something.
+
+582
+00:31:26.475 --> 00:31:27.485
+It's random operation.
+
+583
+00:31:27.685 --> 00:31:30.045
+Actually, the drop dropout operation is a random operation.
+
+584
+00:31:30.795 --> 00:31:33.205
+Obviously there are some intuition behind it.
+
+585
+00:31:34.345 --> 00:31:35.365
+Yes, sir. Okay. Yes,
+
+586
+00:31:35.585 --> 00:31:36.585
+Sir. But, uh,
+
+587
+00:31:36.585 --> 00:31:38.365
+I mean, manually we are not deciding
+
+588
+00:31:38.365 --> 00:31:40.965
+that which neuron we are going to drop
+
+589
+00:31:40.985 --> 00:31:42.125
+or which neuron we are not.
+
+590
+00:31:42.745 --> 00:31:46.165
+Uh, I would say that it is more like a random forest
+
+591
+00:31:46.295 --> 00:31:48.325
+where we weigh multiple trees.
+
+592
+00:31:48.875 --> 00:31:53.005
+Okay? Multiple trees we make based on some criteria where,
+
+593
+00:31:53.105 --> 00:31:55.045
+uh, why, uh, why choosing random,
+
+594
+00:31:55.265 --> 00:31:58.765
+random columns in from your features, you make the tree,
+
+595
+00:31:58.825 --> 00:32:00.445
+and then at the time of prediction,
+
+596
+00:32:00.445 --> 00:32:02.685
+you ask from all the tree, okay?
+
+597
+00:32:02.685 --> 00:32:04.925
+And then take them, uh, majority word count,
+
+598
+00:32:05.075 --> 00:32:09.045
+similar intuition is here we train batch wise
+
+599
+00:32:09.145 --> 00:32:11.525
+for each batch you make different neural network,
+
+600
+00:32:11.525 --> 00:32:13.685
+different neural network in the sense you drop some
+
+601
+00:32:13.685 --> 00:32:14.685
+of the neurons in between.
+
+602
+00:32:14.965 --> 00:32:16.165
+Architecture will be same,
+
+603
+00:32:16.165 --> 00:32:17.805
+but some neurons will be deactivated
+
+604
+00:32:17.825 --> 00:32:19.125
+and that we do randomly.
+
+605
+00:32:19.785 --> 00:32:22.565
+So that is the intuition what you can understand from here.
+
+606
+00:32:22.665 --> 00:32:24.725
+But there is no, uh, there is no, uh,
+
+607
+00:32:24.835 --> 00:32:26.645
+this operation is completely random.
+
+608
+00:32:26.755 --> 00:32:28.605
+This drop that which neuron will be dropped,
+
+609
+00:32:28.735 --> 00:32:29.765
+which neuro will not.
+
+610
+00:32:29.875 --> 00:32:30.875
+That is completely,
+
+611
+00:32:31.995 --> 00:32:32.995
+Yeah. Yes.
+
+612
+00:32:32.995 --> 00:32:35.435
+Thank you, sir.
+
+613
+00:32:35.435 --> 00:32:37.795
+What is the p value in the dropout? Like p
+
+614
+00:32:38.575 --> 00:32:40.445
+It says that how many neurons
+
+615
+00:32:40.445 --> 00:32:42.445
+or how many per, what is the percentage
+
+616
+00:32:42.445 --> 00:32:45.045
+of neuron in one layer would you want to drop?
+
+617
+00:32:45.315 --> 00:32:47.245
+Suppose 10 neurons you have kept three
+
+618
+00:32:47.245 --> 00:32:48.285
+neurons would be dropped.
+
+619
+00:32:50.025 --> 00:32:51.195
+Okay, sir, sir.
+
+620
+00:32:51.255 --> 00:32:53.795
+And the decision of dropping, like I have a bit
+
+621
+00:32:53.795 --> 00:32:55.435
+of a confusion, like sir, decision
+
+622
+00:32:55.435 --> 00:32:56.635
+of the dropping out happens
+
+623
+00:32:56.695 --> 00:32:59.995
+during the forward progression only, or like, uh, during
+
+624
+00:32:59.995 --> 00:33:01.795
+The only forward propagation only, okay,
+
+625
+00:33:01.855 --> 00:33:05.435
+at the means when means forward propagation note,
+
+626
+00:33:05.555 --> 00:33:07.515
+I would say that training time.
+
+627
+00:33:07.745 --> 00:33:09.275
+Yeah, training time, okay.
+
+628
+00:33:09.905 --> 00:33:12.675
+Because while training the network, this is what happens.
+
+629
+00:33:13.335 --> 00:33:15.435
+So at the training time, what happens
+
+630
+00:33:15.775 --> 00:33:19.075
+during the forward propagation, you drop some of the neuron,
+
+631
+00:33:19.295 --> 00:33:21.035
+get the output, and then
+
+632
+00:33:21.735 --> 00:33:24.555
+at in the backward propagation you update all the weights.
+
+633
+00:33:24.555 --> 00:33:25.675
+Okay? So,
+
+634
+00:33:25.815 --> 00:33:28.715
+but next time, again, for the next batch, again, you do
+
+635
+00:33:28.715 --> 00:33:31.035
+that, uh, drop some of the neurons obviously at the forward
+
+636
+00:33:31.035 --> 00:33:34.555
+propagation, but same thing doesn't have the happen at the
+
+637
+00:33:34.555 --> 00:33:36.155
+testing time because at the testing time,
+
+638
+00:33:36.155 --> 00:33:38.795
+also we do the forward propagation calculates the
+
+639
+00:33:38.795 --> 00:33:41.955
+prediction, but then you don't drop any, any neuron. Yeah.
+
+640
+00:33:42.295 --> 00:33:43.675
+So sir, when we are dropping,
+
+641
+00:33:43.985 --> 00:33:47.115
+suppose two neurons in the training time, so sir,
+
+642
+00:33:47.115 --> 00:33:48.595
+when we do the backward propagation,
+
+643
+00:33:48.695 --> 00:33:50.675
+do we update the weights of those neurons also,
+
+644
+00:33:50.815 --> 00:33:52.075
+or those are skipped?
+
+645
+00:33:52.775 --> 00:33:57.435
+Um, and no, I mean, see those, we, those are, uh, for, at,
+
+646
+00:33:57.455 --> 00:33:58.635
+for the backward propagation,
+
+647
+00:33:58.855 --> 00:34:00.595
+the connections looks the same, okay?
+
+648
+00:34:00.595 --> 00:34:04.795
+Uh, in the sense that connections are as it is only thing is
+
+649
+00:34:05.015 --> 00:34:08.635
+during the forward propagation, we don't give any, uh,
+
+650
+00:34:08.845 --> 00:34:12.395
+input, uh, any input to the next neuron and the next layer.
+
+651
+00:34:13.265 --> 00:34:14.595
+Okay? So from those, okay, sir,
+
+652
+00:34:14.735 --> 00:34:17.275
+but at the backward propagation, the way it is connected,
+
+653
+00:34:17.335 --> 00:34:20.635
+it, it goes, yeah, it goes as as it is, yeah.
+
+654
+00:34:21.025 --> 00:34:22.955
+Okay, sir. But I believe that, uh, yeah,
+
+655
+00:34:22.985 --> 00:34:25.715
+that whatever is the neural network we have built, I believe
+
+656
+00:34:25.715 --> 00:34:26.875
+that, uh, all the weights,
+
+657
+00:34:26.875 --> 00:34:28.275
+weights are being updated at the
+
+658
+00:34:28.275 --> 00:34:29.515
+backward propagation. Yeah.
+
+659
+00:34:29.865 --> 00:34:31.795
+Okay, sir. Thank you, Sir.
+
+660
+00:34:32.195 --> 00:34:34.275
+A small, uh, con uh, confusion, sir.
+
+661
+00:34:34.295 --> 00:34:38.355
+Uh, just what, uh, extending the Annie, uh, query in, uh,
+
+662
+00:34:38.375 --> 00:34:42.375
+in case of in forward, we are dropping the neurons, right?
+
+663
+00:34:42.375 --> 00:34:45.295
+Mm-hmm. And while in coming to the backward, uh,
+
+664
+00:34:45.445 --> 00:34:48.335
+propagation, uh, that neuron will not be there.
+
+665
+00:34:48.335 --> 00:34:51.855
+No, sir. When we drop it out, that one then how the weights
+
+666
+00:34:51.855 --> 00:34:53.215
+and all those people will get, uh,
+
+667
+00:34:54.095 --> 00:34:55.095
+That's what I was telling. You're
+
+668
+00:34:55.095 --> 00:34:57.455
+right, you're right. So what I was telling is
+
+669
+00:34:58.155 --> 00:35:01.575
+in the forward propagation, whatever neural network here,
+
+670
+00:35:01.575 --> 00:35:04.135
+because I said here by showing this particular thing, yes,
+
+671
+00:35:04.155 --> 00:35:05.615
+for example, say that this is one neural network.
+
+672
+00:35:06.475 --> 00:35:07.735
+Now, in this neural network,
+
+673
+00:35:07.845 --> 00:35:09.255
+this neuro neuron doesn't exist.
+
+674
+00:35:09.465 --> 00:35:13.455
+Exist, okay? So you have only these connections when you do
+
+675
+00:35:13.455 --> 00:35:15.735
+the forward this way, this way, this way,
+
+676
+00:35:15.735 --> 00:35:17.135
+this way will get updated.
+
+677
+00:35:17.195 --> 00:35:19.695
+So whatever is the neural network, which is, uh,
+
+678
+00:35:19.785 --> 00:35:20.975
+there in this batch,
+
+679
+00:35:21.275 --> 00:35:24.415
+or sorry, in that, in that, uh, what is that?
+
+680
+00:35:25.715 --> 00:35:29.335
+Uh, a forward propagation
+
+681
+00:35:29.555 --> 00:35:32.535
+and yeah, in that particular batch, suppose,
+
+682
+00:35:32.595 --> 00:35:33.735
+see, there are two, two things.
+
+683
+00:35:33.735 --> 00:35:36.015
+What you have to understand, there are two loops.
+
+684
+00:35:36.075 --> 00:35:39.565
+One was the, uh, uh, uh, epoch.
+
+685
+00:35:39.865 --> 00:35:42.765
+Inside the epoch, you have the mini batches, okay?
+
+686
+00:35:42.765 --> 00:35:44.485
+Inside the och, we have the mini batches.
+
+687
+00:35:45.145 --> 00:35:48.645
+So in, uh, when this inside the second loop,
+
+688
+00:35:48.645 --> 00:35:51.085
+when we are building here inside the second loop,
+
+689
+00:35:51.085 --> 00:35:52.805
+when we are building here, this one, this is
+
+690
+00:35:52.805 --> 00:35:54.525
+where the mini batches concept come,
+
+691
+00:35:54.525 --> 00:35:57.325
+and this is where those, uh, the,
+
+692
+00:35:57.325 --> 00:35:59.765
+this neural networks you are calling, okay?
+
+693
+00:35:59.765 --> 00:36:02.645
+Neural networks, you're calling. So what happened?
+
+694
+00:36:03.385 --> 00:36:07.565
+The backward propagation happened para epoch
+
+695
+00:36:07.595 --> 00:36:09.805
+wise, okay?
+
+696
+00:36:09.805 --> 00:36:12.045
+Backward propagation happens.
+
+697
+00:36:12.545 --> 00:36:16.125
+Uh, so para wise and inside this one, okay? Yeah.
+
+698
+00:36:16.385 --> 00:36:18.845
+So you, uh, yes. Now it is, uh, correct.
+
+699
+00:36:18.905 --> 00:36:20.525
+So backward propagation happened.
+
+700
+00:36:20.985 --> 00:36:22.765
+How many times here, suppose this is a hundred
+
+701
+00:36:22.875 --> 00:36:25.005
+that says one 50, so one 50
+
+702
+00:36:25.065 --> 00:36:28.285
+and 200 1500 times those many times backward, yes.
+
+703
+00:36:28.305 --> 00:36:30.805
+For each backward propagation, the only thing what you have
+
+704
+00:36:30.805 --> 00:36:33.605
+to consider that what is that neural network,
+
+705
+00:36:33.855 --> 00:36:37.485
+which was just, uh, which, which you have just used, okay?
+
+706
+00:36:37.545 --> 00:36:40.365
+Mm-hmm. Only that particular neural networks weight are
+
+707
+00:36:40.365 --> 00:36:41.365
+going to be updated
+
+708
+00:36:41.435 --> 00:36:45.765
+because for every batch, when you are doing the update, uh,
+
+709
+00:36:45.765 --> 00:36:47.485
+the neural network is different, okay?
+
+710
+00:36:47.665 --> 00:36:50.005
+And whatever is the neural network valid for
+
+711
+00:36:50.005 --> 00:36:51.525
+that particular mini batch?
+
+712
+00:36:51.835 --> 00:36:55.245
+Only those weights, uh, are being updated. Yes. Yes.
+
+713
+00:36:56.105 --> 00:36:58.205
+Not the, not the entire weight, correct? Yeah.
+
+714
+00:36:59.225 --> 00:37:00.325
+And one more doubt, sir.
+
+715
+00:37:00.405 --> 00:37:03.445
+I means, uh, if some means while calculating the loss, also,
+
+716
+00:37:03.985 --> 00:37:07.925
+uh, there will be a difference will be there, right, sir?
+
+717
+00:37:08.555 --> 00:37:11.005
+Depends, will be there. But then it is very simple, right?
+
+718
+00:37:11.055 --> 00:37:12.965
+Badge wise, we are calculating the loss.
+
+719
+00:37:13.185 --> 00:37:15.965
+Yes, whatever, whatever is the neural network,
+
+720
+00:37:16.035 --> 00:37:17.525
+suppose this neuron is not there,
+
+721
+00:37:17.595 --> 00:37:19.845
+will not consider whatever is coming from this,
+
+722
+00:37:20.265 --> 00:37:22.165
+but loss would be calculated by output.
+
+723
+00:37:22.405 --> 00:37:25.245
+Ultimately, you got the output, you, you store that output,
+
+724
+00:37:25.425 --> 00:37:26.485
+you store that output.
+
+725
+00:37:26.505 --> 00:37:29.485
+You don't see what happened in the mini batch cases.
+
+726
+00:37:29.955 --> 00:37:31.445
+Suppose you have four mini batch.
+
+727
+00:37:31.545 --> 00:37:34.765
+So for first batch, you calculate the output, you store it,
+
+728
+00:37:35.235 --> 00:37:38.325
+then second batch, you calculate this output is stored it.
+
+729
+00:37:38.325 --> 00:37:41.365
+Then third and fourth, what is the total output?
+
+730
+00:37:41.665 --> 00:37:44.805
+And then with that, you calculate the loss. That is one way.
+
+731
+00:37:45.135 --> 00:37:48.325
+Other way is for every batch, you calculate the loss
+
+732
+00:37:48.385 --> 00:37:50.565
+and calculate the average loss, okay?
+
+733
+00:37:50.565 --> 00:37:52.885
+Okay. But ultimately the loss is being calculated here.
+
+734
+00:37:52.905 --> 00:37:54.365
+It has no effect that, okay?
+
+735
+00:37:54.365 --> 00:37:56.285
+Whether you have dropped somewhere in between or not.
+
+736
+00:37:56.995 --> 00:37:57.995
+Okay? Okay.
+
+737
+00:37:59.095 --> 00:38:00.245
+Thank you, sir. Yes.
+
+738
+00:38:01.265 --> 00:38:03.405
+One, one question. Can you go back to that python?
+
+739
+00:38:04.625 --> 00:38:06.805
+Ask, pull up and yeah.
+
+740
+00:38:07.065 --> 00:38:10.005
+So here, um, you have a, a particular step
+
+741
+00:38:10.005 --> 00:38:12.525
+where you're adding relu and a dropout.
+
+742
+00:38:13.155 --> 00:38:16.885
+Solu in fact is also kind of dropping out, uh, um,
+
+743
+00:38:17.985 --> 00:38:19.725
+uh, is adding non-linearity,
+
+744
+00:38:19.725 --> 00:38:22.605
+but in a way is adding out, is keeping out some,
+
+745
+00:38:23.625 --> 00:38:25.005
+um, weights, right?
+
+746
+00:38:25.065 --> 00:38:27.725
+Or weights, or should I say neurons when they,
+
+747
+00:38:27.725 --> 00:38:28.765
+when they're less than zero?
+
+748
+00:38:29.305 --> 00:38:30.645
+Ah, correct, correct. That is true.
+
+749
+00:38:31.265 --> 00:38:34.165
+But, but something different. Okay?
+
+750
+00:38:35.425 --> 00:38:37.845
+Can, can, can, can be on and off.
+
+751
+00:38:38.085 --> 00:38:39.445
+I, I understand what you said,
+
+752
+00:38:39.865 --> 00:38:42.325
+but you don't know whether it'll be on or not
+
+753
+00:38:42.865 --> 00:38:44.445
+or whether it'll be offered not.
+
+754
+00:38:45.395 --> 00:38:48.085
+Okay? So it may happen that it will,
+
+755
+00:38:48.145 --> 00:38:51.565
+all the relu has the positive value, then all will go
+
+756
+00:38:51.865 --> 00:38:54.525
+as an input for the next layer, isn't it?
+
+757
+00:38:54.865 --> 00:38:57.765
+But by imposing the dropout, you say
+
+758
+00:38:57.765 --> 00:39:01.525
+that no compulsory 30% the neuron you have to drop.
+
+759
+00:39:02.525 --> 00:39:03.545
+So that is a difference.
+
+760
+00:39:04.245 --> 00:39:07.385
+If it may happen that relu also has three different negative
+
+761
+00:39:07.385 --> 00:39:09.905
+three neurons has coming with negative value, it'll also
+
+762
+00:39:10.685 --> 00:39:13.105
+not carry any information for the next layer,
+
+763
+00:39:13.805 --> 00:39:16.585
+but there is no guarantee that, uh, that will be the case.
+
+764
+00:39:16.605 --> 00:39:19.505
+But with the dropout, that will be the case always. Yeah.
+
+765
+00:39:19.685 --> 00:39:22.225
+So that is what it may happen, that okay,
+
+766
+00:39:22.545 --> 00:39:24.065
+relu the three neurons,
+
+767
+00:39:24.065 --> 00:39:26.025
+what you are selecting from the dropout
+
+768
+00:39:26.815 --> 00:39:28.745
+that anyway will drop three neurons,
+
+769
+00:39:28.745 --> 00:39:31.545
+and relu is also giving two neurons
+
+770
+00:39:31.545 --> 00:39:34.345
+where there is zero activation versus going for, in
+
+771
+00:39:34.345 --> 00:39:35.825
+that case, five neurons is not giving
+
+772
+00:39:35.845 --> 00:39:36.865
+any input to the next neuro.
+
+773
+00:39:36.925 --> 00:39:38.945
+All those combinations are possible. Yeah.
+
+774
+00:39:40.545 --> 00:39:42.075
+Okay. Yeah. Thank you.
+
+775
+00:39:43.785 --> 00:39:47.325
+So give an example. Uh, so batch normalization,
+
+776
+00:39:47.595 --> 00:39:49.245
+then we are applying a drop order.
+
+777
+00:39:49.985 --> 00:39:52.645
+So because of the dropout is a randomness, uh,
+
+778
+00:39:52.955 --> 00:39:54.925
+it's causing any noise, uh, in the system.
+
+779
+00:39:56.665 --> 00:40:01.365
+Uh, actually not in fact it is, uh, it, it is it,
+
+780
+00:40:01.585 --> 00:40:04.005
+it might be, it might be creating a noise,
+
+781
+00:40:04.145 --> 00:40:07.725
+but that noise is good for the, for to reduce
+
+782
+00:40:07.725 --> 00:40:09.285
+that over fitting, I would say.
+
+783
+00:40:09.795 --> 00:40:12.165
+Okay? Because ultimately we are trying
+
+784
+00:40:12.165 --> 00:40:15.485
+to solve the over fitting problem by imposing these layers
+
+785
+00:40:15.705 --> 00:40:17.885
+or these techniques, okay?
+
+786
+00:40:18.345 --> 00:40:21.165
+And, uh, by doing that one, what we are trying
+
+787
+00:40:21.165 --> 00:40:23.245
+to do is the main idea is
+
+788
+00:40:23.755 --> 00:40:27.205
+that it should learn the different behavior of them
+
+789
+00:40:27.205 --> 00:40:30.205
+because all the neural network here will get the same set
+
+790
+00:40:30.205 --> 00:40:32.205
+of input, same set of input.
+
+791
+00:40:33.395 --> 00:40:36.965
+Then if the neural network itself is different every time,
+
+792
+00:40:37.235 --> 00:40:39.685
+they will be learning different aspect of the input.
+
+793
+00:40:39.685 --> 00:40:40.885
+And that is what is more important,
+
+794
+00:40:40.945 --> 00:40:44.125
+rather than having only single neural network
+
+795
+00:40:45.225 --> 00:40:48.245
+and, uh, learning the same input again and again, again
+
+796
+00:40:48.245 --> 00:40:49.245
+and again, again and again.
+
+797
+00:40:49.245 --> 00:40:51.245
+Then it'll be a kind of memorizing,
+
+798
+00:40:51.455 --> 00:40:53.125
+memorizing the input, right?
+
+799
+00:40:53.125 --> 00:40:56.045
+That is what we want to, but noise, why?
+
+800
+00:40:56.135 --> 00:40:59.245
+It'll not come because, uh, uh, noise means
+
+801
+00:40:59.315 --> 00:41:02.085
+what in the sense, how will you introduce here the noise?
+
+802
+00:41:02.965 --> 00:41:05.845
+Actually we want to learn that variability, uh,
+
+803
+00:41:05.845 --> 00:41:08.845
+which I guess you have ident you are saying it as a noise
+
+804
+00:41:09.355 --> 00:41:13.445
+that is the different, uh, variety of the input, uh,
+
+805
+00:41:13.445 --> 00:41:15.285
+pattern, which we want to actually turn.
+
+806
+00:41:15.305 --> 00:41:16.485
+So I would say that is better
+
+807
+00:41:16.545 --> 00:41:18.405
+for the over fitting in this particular case,
+
+808
+00:41:18.405 --> 00:41:20.605
+and that is, that is shown in the experiment as well.
+
+809
+00:41:20.795 --> 00:41:21.795
+Yeah.
+
+810
+00:41:24.115 --> 00:41:25.695
+And this report, can we call it
+
+811
+00:41:25.695 --> 00:41:26.735
+as a regularization function?
+
+812
+00:41:27.525 --> 00:41:29.975
+Yeah. It is a kind of regularization, yes,
+
+813
+00:41:29.975 --> 00:41:31.255
+it's a kind of regularization.
+
+814
+00:41:31.825 --> 00:41:34.485
+There are other kind of regularization one L two also,
+
+815
+00:41:34.505 --> 00:41:37.005
+but you can treat this dropout as one of the type
+
+816
+00:41:37.005 --> 00:41:38.525
+of regularization for neural network.
+
+817
+00:41:38.665 --> 00:41:40.985
+Yes. Yes.
+
+818
+00:41:45.595 --> 00:41:47.175
+Any other query from anyone? Sir?
+
+819
+00:41:47.255 --> 00:41:48.895
+I have a question. How does, uh,
+
+820
+00:41:48.925 --> 00:41:51.015
+dropout affect, uh, convergence
+
+821
+00:41:53.365 --> 00:41:54.585
+Affect the convergence?
+
+822
+00:41:55.245 --> 00:41:59.745
+So as I said, uh, it, what it, uh, it, uh,
+
+823
+00:42:00.085 --> 00:42:03.585
+it, it is, I don't know, uh, whether you have, uh, gone
+
+824
+00:42:03.585 --> 00:42:05.065
+through in depth or this random forest
+
+825
+00:42:05.165 --> 00:42:06.985
+or not convergence, why BOC?
+
+826
+00:42:07.235 --> 00:42:11.545
+There are in, uh, 10 different neural networks, which are,
+
+827
+00:42:11.725 --> 00:42:14.585
+uh, instead of having one neural network, okay?
+
+828
+00:42:14.615 --> 00:42:16.225
+That is the main idea in this.
+
+829
+00:42:16.805 --> 00:42:20.265
+So as you can see, that for forces learning
+
+830
+00:42:20.565 --> 00:42:22.585
+of more learning feature, anything else?
+
+831
+00:42:22.905 --> 00:42:26.785
+I have no. So effect of au randomly disables neurons
+
+832
+00:42:26.785 --> 00:42:30.665
+during training prevents core adaption of neurons,
+
+833
+00:42:30.735 --> 00:42:33.585
+acts like training multiple network dropout is active
+
+834
+00:42:33.615 --> 00:42:34.625
+only during the node.
+
+835
+00:42:34.895 --> 00:42:37.865
+Okay? So convergence, we would say that
+
+836
+00:42:37.865 --> 00:42:41.225
+because for every epoch, the loss, what we are getting,
+
+837
+00:42:41.735 --> 00:42:44.505
+okay, and every epoch, we have multiple batches,
+
+838
+00:42:44.825 --> 00:42:47.105
+multiple neurons, they have seen neural network,
+
+839
+00:42:47.135 --> 00:42:50.785
+they have seen, and hence they, uh, uh,
+
+840
+00:42:51.135 --> 00:42:52.265
+what what they do.
+
+841
+00:42:52.805 --> 00:42:55.985
+Uh, uh, I, I believe
+
+842
+00:42:55.985 --> 00:42:59.505
+that the convergence in this particular case is, uh,
+
+843
+00:43:00.045 --> 00:43:03.945
+better than the case where we have not used the dropout
+
+844
+00:43:03.945 --> 00:43:05.705
+and it was having the over fitting problem.
+
+845
+00:43:05.975 --> 00:43:08.145
+Okay? That is what I understand it,
+
+846
+00:43:09.855 --> 00:43:13.315
+but, uh, it, it's convergence is linked
+
+847
+00:43:13.425 --> 00:43:15.075
+with the loss function.
+
+848
+00:43:15.135 --> 00:43:18.675
+You can see that loss function for every epoch.
+
+849
+00:43:18.675 --> 00:43:20.915
+We calculate the loss, and that is what we plot.
+
+850
+00:43:21.095 --> 00:43:23.835
+And you can now visualize again, that curve.
+
+851
+00:43:24.055 --> 00:43:27.555
+The convex curve loss is the one which we are seeing
+
+852
+00:43:27.555 --> 00:43:30.195
+that whether it is going toward the minimum global minimum
+
+853
+00:43:30.295 --> 00:43:34.195
+or not, that we calculates after, after every, every OC
+
+854
+00:43:34.195 --> 00:43:36.595
+or every, uh, mini batch, whatever you say.
+
+855
+00:43:37.255 --> 00:43:39.515
+And, uh, yeah, the convergence in the case of dropout,
+
+856
+00:43:39.595 --> 00:43:41.355
+I guess it is better than the, the case,
+
+857
+00:43:42.695 --> 00:43:46.115
+and it is, it is equivalent at the test time.
+
+858
+00:43:46.115 --> 00:43:48.035
+That is more important. That is what we are doing.
+
+859
+00:43:48.035 --> 00:43:49.435
+If it is not better also,
+
+860
+00:43:49.495 --> 00:43:53.195
+but then it is showing the similar kind of convergence
+
+861
+00:43:53.215 --> 00:43:57.235
+for test data as well on rather than only on the train data.
+
+862
+00:43:57.665 --> 00:43:58.665
+Yeah.
+
+863
+00:43:59.115 --> 00:44:02.205
+Okay. Sir, sir, uh, if you go for dropout,
+
+864
+00:44:02.225 --> 00:44:04.005
+the convergence is not becoming faster.
+
+865
+00:44:04.105 --> 00:44:05.165
+Now saying becomes slower,
+
+866
+00:44:06.315 --> 00:44:09.255
+Uh, see, because You are randomly selecting neurons
+
+867
+00:44:09.255 --> 00:44:11.175
+and you are, uh, discarding from the network.
+
+868
+00:44:11.515 --> 00:44:13.735
+So the entire network model has to adjust.
+
+869
+00:44:13.735 --> 00:44:15.655
+Now, sir, just so the convergence becomes slow.
+
+870
+00:44:16.155 --> 00:44:17.575
+No, I mean, see, I'll tell you, see,
+
+871
+00:44:17.575 --> 00:44:19.775
+once you are disabling this particular source,
+
+872
+00:44:19.775 --> 00:44:23.295
+so neural network doesn't, uh, uh, ut
+
+873
+00:44:24.155 --> 00:44:26.935
+for the neural network, it is good that one,
+
+874
+00:44:27.275 --> 00:44:29.335
+number one parameter is reduced.
+
+875
+00:44:29.875 --> 00:44:32.805
+See, if you talk in terms of the time, what happens just
+
+876
+00:44:32.805 --> 00:44:34.245
+because this neuron is not there,
+
+877
+00:44:34.745 --> 00:44:37.245
+the connection in this direction, this input
+
+878
+00:44:37.245 --> 00:44:39.525
+and output from this neuron, everything is gone.
+
+879
+00:44:39.695 --> 00:44:42.845
+Hence, it doesn't have to calculate the forward propagation
+
+880
+00:44:42.845 --> 00:44:45.245
+with respect to this particular edge as well
+
+881
+00:44:45.245 --> 00:44:46.805
+as at the backward propagation.
+
+882
+00:44:46.805 --> 00:44:49.165
+Also, it doesn't have to update this parameter.
+
+883
+00:44:49.585 --> 00:44:51.445
+Two things it'll not have to do, right?
+
+884
+00:44:51.825 --> 00:44:55.405
+And if not, then obviously time will be less, you think, in
+
+885
+00:44:55.405 --> 00:44:56.605
+that particular sense, right?
+
+886
+00:44:57.225 --> 00:45:00.365
+Uh, obviously I, I understood that what you're saying, that
+
+887
+00:45:00.365 --> 00:45:01.365
+because see,
+
+888
+00:45:01.365 --> 00:45:03.565
+every time different neural network convergence will take
+
+889
+00:45:03.565 --> 00:45:07.405
+more time, but timing also, you have to think in terms of
+
+890
+00:45:07.435 --> 00:45:09.405
+that time is not too much,
+
+891
+00:45:09.545 --> 00:45:12.325
+and parameter is anyway, reducing 30%
+
+892
+00:45:12.325 --> 00:45:14.765
+of the neurons you are dropping that, uh,
+
+893
+00:45:15.085 --> 00:45:17.365
+whatever weights are connected with those neurons,
+
+894
+00:45:17.365 --> 00:45:19.205
+you're not updating in the backward progression.
+
+895
+00:45:19.465 --> 00:45:21.565
+It is saving your time ultimately, I would say
+
+896
+00:45:22.545 --> 00:45:23.545
+Yes. So the number of parameters
+
+897
+00:45:23.545 --> 00:45:24.445
+will come down.
+
+898
+00:45:24.445 --> 00:45:27.045
+That's what, correct, correct. Yes. Yeah.
+
+899
+00:45:27.345 --> 00:45:31.485
+So, but the, um, when you go for this generalization also at
+
+900
+00:45:31.485 --> 00:45:34.085
+that time, so since we are using less number of neurons
+
+901
+00:45:34.665 --> 00:45:36.685
+and taking, um, this thing, so each
+
+902
+00:45:36.685 --> 00:45:38.285
+and everything, it'll have an own aeration.
+
+903
+00:45:38.385 --> 00:45:40.805
+So the generalization phenomenon will not counter effect,
+
+904
+00:45:41.865 --> 00:45:42.885
+No, actually, I tell you, I,
+
+905
+00:45:42.955 --> 00:45:45.485
+here I have shown you only three neurons, so it might be,
+
+906
+00:45:45.505 --> 00:45:48.245
+it looks at, okay, one neuron less, it'll not understand,
+
+907
+00:45:48.265 --> 00:45:51.085
+not generalize, but then when you have a hundred sub neurons
+
+908
+00:45:51.085 --> 00:45:53.845
+in a layer and you have such a hundred sub hidden layer,
+
+909
+00:45:54.345 --> 00:45:57.285
+in such cases, dropping those 30% actually helps
+
+910
+00:45:57.745 --> 00:46:00.405
+and generalize, uh, better than the, uh,
+
+911
+00:46:00.635 --> 00:46:01.965
+than fully connected rule.
+
+912
+00:46:01.995 --> 00:46:04.085
+Yeah. Uh, that is better than,
+
+913
+00:46:04.275 --> 00:46:06.285
+this is a generalization technique itself.
+
+914
+00:46:06.345 --> 00:46:07.605
+The dropout, yeah.
+
+915
+00:46:08.035 --> 00:46:11.015
+Okay, Sir.
+
+916
+00:46:11.045 --> 00:46:13.535
+Here I have a que a query, sir.
+
+917
+00:46:14.445 --> 00:46:16.415
+When we are, uh, dropping out,
+
+918
+00:46:16.675 --> 00:46:18.375
+we don't have a particular mechanism
+
+919
+00:46:18.475 --> 00:46:20.135
+to which neuron have to be dropped out.
+
+920
+00:46:20.315 --> 00:46:23.175
+We are randomly, uh, doing, sir,
+
+921
+00:46:23.995 --> 00:46:27.495
+but randomly when we are doing with 30% of it,
+
+922
+00:46:27.555 --> 00:46:29.215
+we may get some, we end up
+
+923
+00:46:29.215 --> 00:46:31.815
+with some result maybe in the next sequence.
+
+924
+00:46:31.875 --> 00:46:33.575
+Is it like a trial and error methods?
+
+925
+00:46:35.615 --> 00:46:36.705
+It's not trial and error.
+
+926
+00:46:36.925 --> 00:46:39.585
+In fact, we try to build multiple neural networks
+
+927
+00:46:39.585 --> 00:46:40.745
+like ensemble method.
+
+928
+00:46:41.385 --> 00:46:44.945
+Ensemble method is not a trial and error method, okay?
+
+929
+00:46:45.045 --> 00:46:48.345
+So instead of having a single person
+
+930
+00:46:48.605 --> 00:46:50.425
+who is doing the entire work,
+
+931
+00:46:51.215 --> 00:46:53.505
+I'll divide the work into the five persons.
+
+932
+00:46:53.535 --> 00:46:56.545
+I'll say, you also do this part. You, you understand? Okay?
+
+933
+00:46:56.765 --> 00:46:58.825
+So suppose I'll show you this object, you understand?
+
+934
+00:46:58.895 --> 00:47:01.585
+Okay, how does this look like to the other,
+
+935
+00:47:01.675 --> 00:47:02.705
+other, uh, person?
+
+936
+00:47:02.885 --> 00:47:04.865
+I'd say, okay, you understand this particular person
+
+937
+00:47:04.885 --> 00:47:08.505
+of the object, so you don't have to now remember everything.
+
+938
+00:47:09.395 --> 00:47:12.295
+You just have to remember only one aspect of the input,
+
+939
+00:47:12.355 --> 00:47:14.975
+and then collectively, all
+
+940
+00:47:14.975 --> 00:47:16.455
+of you can do a better, just a second.
+
+941
+00:47:18.115 --> 00:47:20.015
+No, what person of, uh,
+
+942
+00:47:20.205 --> 00:47:22.095
+neurons if feed report Just
+
+943
+00:47:22.135 --> 00:47:23.255
+a second, which would be the good?
+
+944
+00:47:23.405 --> 00:47:24.405
+Just,
+
+945
+00:47:44.595 --> 00:47:45.595
+Yeah. Oh, sorry.
+
+946
+00:47:45.595 --> 00:47:48.805
+So yes, you're asking something. Yeah.
+
+947
+00:47:49.835 --> 00:47:53.685
+What percentage of neurons have to be, uh, dropped out?
+
+948
+00:47:53.835 --> 00:47:54.835
+That can be
+
+949
+00:47:55.845 --> 00:47:58.805
+Actually this number vary between 0.2 to 0.5.
+
+950
+00:47:58.805 --> 00:48:02.165
+That is what I have seen most of the places. Okay?
+
+951
+00:48:02.305 --> 00:48:05.405
+Uh, although it's completely under the users
+
+952
+00:48:05.505 --> 00:48:06.725
+or programmers control.
+
+953
+00:48:07.235 --> 00:48:09.045
+Okay? We can control that. Okay?
+
+954
+00:48:09.225 --> 00:48:11.845
+How many you can see here, I have put here 0.3,
+
+955
+00:48:11.865 --> 00:48:13.765
+but this value, you can choose if you want,
+
+956
+00:48:13.765 --> 00:48:16.445
+you can write one, a hundred percent neuron would be
+
+957
+00:48:16.445 --> 00:48:18.405
+dropped, but that doesn't help, right?
+
+958
+00:48:18.745 --> 00:48:23.245
+So, uh, the good idea is that if you have over fitting,
+
+959
+00:48:24.305 --> 00:48:29.245
+uh, then you may be dropping, say that near to the 0.5,
+
+960
+00:48:29.245 --> 00:48:31.245
+0.0 0.4, 0.3.
+
+961
+00:48:31.345 --> 00:48:34.485
+If you have under fitting where the model has not learned,
+
+962
+00:48:34.515 --> 00:48:36.405
+well, then you don't drop much,
+
+963
+00:48:36.405 --> 00:48:38.085
+because if you drop all the network, what it'll learn
+
+964
+00:48:38.085 --> 00:48:39.845
+that it'll also the case, right? Yes,
+
+965
+00:48:39.985 --> 00:48:41.045
+Yes, yes.
+
+966
+00:48:41.335 --> 00:48:42.335
+Thank you.
+
+967
+00:48:49.145 --> 00:48:52.915
+Okay. So I guess then, uh, we have now some clarity
+
+968
+00:48:53.225 --> 00:48:55.035
+that why it is working
+
+969
+00:48:55.415 --> 00:48:59.155
+and, uh, obviously now your task is to go into little deeper
+
+970
+00:48:59.255 --> 00:49:00.475
+of the dropout, okay?
+
+971
+00:49:00.475 --> 00:49:04.475
+And understand more, uh, uh, uh, in depth
+
+972
+00:49:04.815 --> 00:49:06.835
+by some looking into some more resources
+
+973
+00:49:06.835 --> 00:49:08.955
+and batch normalization, right?
+
+974
+00:49:09.095 --> 00:49:12.435
+But at least, uh, through the experiment wise, we have seen
+
+975
+00:49:12.435 --> 00:49:17.005
+that that has made the, uh, uh, difference that my,
+
+976
+00:49:17.505 --> 00:49:20.605
+uh, obviously my training accuracy has not improved.
+
+977
+00:49:20.665 --> 00:49:24.365
+It is still at 88% by adding dropout or batch normalization.
+
+978
+00:49:24.825 --> 00:49:26.725
+But my test, uh, sorry, uh,
+
+979
+00:49:26.955 --> 00:49:28.725
+testing accuracy has not improved,
+
+980
+00:49:28.745 --> 00:49:31.205
+but training accuracy has decreased.
+
+981
+00:49:31.865 --> 00:49:34.125
+So obviously in one sense you can say
+
+982
+00:49:34.125 --> 00:49:35.285
+that training is decreased,
+
+983
+00:49:35.305 --> 00:49:36.325
+but then I, uh,
+
+984
+00:49:36.445 --> 00:49:38.965
+I was more bothering about over fitting rather than
+
+985
+00:49:38.965 --> 00:49:40.245
+improving the accuracy.
+
+986
+00:49:40.985 --> 00:49:44.525
+So now I have reduced the over fitting a little bit. Okay?
+
+987
+00:49:44.635 --> 00:49:48.245
+That is what, uh, that is what I said, that the, these, uh,
+
+988
+00:49:48.245 --> 00:49:50.965
+regularization techniques like dropout, ization
+
+989
+00:49:50.985 --> 00:49:52.965
+and L two regularization, they have helped us
+
+990
+00:49:52.985 --> 00:49:54.165
+to reduce the over fitting.
+
+991
+00:49:54.705 --> 00:49:58.045
+Now we've, we'll see that how to improve the accuracy. Okay?
+
+992
+00:49:58.045 --> 00:50:01.765
+There are two things I think, uh, which we can do from here.
+
+993
+00:50:01.935 --> 00:50:03.805
+First of, first of all, for, first of all,
+
+994
+00:50:03.865 --> 00:50:07.005
+we can think on improving the accuracy, uh, training
+
+995
+00:50:07.025 --> 00:50:11.405
+and testing accuracy, both as well as, uh, further, uh,
+
+996
+00:50:11.595 --> 00:50:14.725
+just, uh, reducing the over fitting, uh, over fitting.
+
+997
+00:50:14.995 --> 00:50:17.685
+That means that this gap is still a 5% or so.
+
+998
+00:50:18.505 --> 00:50:21.325
+Uh, we can still, uh, make it to equivalent.
+
+999
+00:50:21.545 --> 00:50:24.365
+So if both are 93, both are 88,
+
+1000
+00:50:24.365 --> 00:50:25.925
+both are 90, that is also good.
+
+1001
+00:50:26.155 --> 00:50:29.645
+Okay? So these are the two with these two objectives.
+
+1002
+00:50:29.865 --> 00:50:33.565
+So now what we'll do is we'll dive into the next
+
+1003
+00:50:34.505 --> 00:50:35.805
+module, okay?
+
+1004
+00:50:35.865 --> 00:50:38.685
+And that we will see then, uh, with that,
+
+1005
+00:50:38.705 --> 00:50:41.485
+we are now starting the C nnn, okay?
+
+1006
+00:50:41.485 --> 00:50:42.925
+The convolutional neural network.
+
+1007
+00:50:44.105 --> 00:50:47.285
+So the idea is that in this particular class,
+
+1008
+00:50:47.725 --> 00:50:50.765
+I will not explain you the theory of the
+
+1009
+00:50:51.605 --> 00:50:52.925
+CNN, okay?
+
+1010
+00:50:53.705 --> 00:50:55.765
+Uh, I will not explain you the theory,
+
+1011
+00:50:55.895 --> 00:50:57.445
+which will start in the next class.
+
+1012
+00:50:57.495 --> 00:50:58.725
+Maybe sir, start,
+
+1013
+00:50:59.465 --> 00:51:02.525
+I'm available, Okay? Okay. Okay. I'm,
+
+1014
+00:51:02.745 --> 00:51:03.745
+I'm available.
+
+1015
+00:51:04.265 --> 00:51:08.315
+Okay, sir. Then, uh, I'll, I'll project sir that, yeah,
+
+1016
+00:51:08.315 --> 00:51:09.315
+Yeah, please, please, please.
+
+1017
+00:51:09.745 --> 00:51:10.035
+Okay,
+
+1018
+00:51:34.175 --> 00:51:34.465
+yeah.
+
+1019
+00:51:38.235 --> 00:51:41.435
+Good evening. Are you able to hear me? Yes, sir. Yes, sir.
+
+1020
+00:51:41.435 --> 00:51:42.435
+Good evening, sir.
+
+1021
+00:51:43.415 --> 00:51:44.675
+Yes, sir. Good
+
+1022
+00:51:44.675 --> 00:51:45.675
+Evening, sir. Sir, I'm good
+
+1023
+00:51:45.675 --> 00:51:46.795
+evening. I'm outside.
+
+1024
+00:51:46.955 --> 00:51:51.235
+I will not switch on video, so we'll just proceed. Okay?
+
+1025
+00:51:51.375 --> 00:51:54.315
+Uh, thank you Sunil, uh, for no, uh,
+
+1026
+00:51:54.325 --> 00:51:58.515
+clarifying all those important aspects of, uh, training the
+
+1027
+00:51:59.065 --> 00:52:02.075
+deep field for neur networks and different approaches.
+
+1028
+00:52:03.765 --> 00:52:07.465
+So, as Dr. Sunil was uh, mentioning, see,
+
+1029
+00:52:07.525 --> 00:52:10.945
+one thing is if you just quickly see the journey of, uh,
+
+1030
+00:52:11.415 --> 00:52:15.065
+deep learning, we started from the terminology
+
+1031
+00:52:15.445 --> 00:52:17.545
+of neural networks, which are useful
+
+1032
+00:52:18.125 --> 00:52:19.825
+in the deep, uh, learning era.
+
+1033
+00:52:20.815 --> 00:52:24.595
+And then, uh, from multi-layer perceptron, we moved
+
+1034
+00:52:24.695 --> 00:52:26.795
+to deep feed for neural network
+
+1035
+00:52:27.855 --> 00:52:32.755
+and how the transition has happened, um, in terms
+
+1036
+00:52:32.775 --> 00:52:36.195
+of, uh, training ability to train a deeper neural network,
+
+1037
+00:52:37.225 --> 00:52:40.325
+and, uh, the significant performance achieved due to
+
+1038
+00:52:40.325 --> 00:52:41.525
+that was demonstrated.
+
+1039
+00:52:42.745 --> 00:52:46.275
+So then, so once that happened, then,
+
+1040
+00:52:47.925 --> 00:52:51.625
+um, people started, uh, focusing more on, uh,
+
+1041
+00:52:52.395 --> 00:52:53.865
+using deep learning models.
+
+1042
+00:52:56.195 --> 00:52:59.135
+One of the thing they did was, um,
+
+1043
+00:52:59.745 --> 00:53:03.535
+there was one grand challenge, uh, that is being, um,
+
+1044
+00:53:04.325 --> 00:53:07.635
+organized, uh, at international level, uh,
+
+1045
+00:53:07.785 --> 00:53:09.635
+what is called in the image processing,
+
+1046
+00:53:09.635 --> 00:53:11.715
+what is called object classification.
+
+1047
+00:53:14.145 --> 00:53:17.205
+If some of you are maybe working, um,
+
+1048
+00:53:17.705 --> 00:53:20.805
+in the image processing, you may, uh, recall that
+
+1049
+00:53:22.085 --> 00:53:26.525
+there is one publicly available large data sets
+
+1050
+00:53:27.485 --> 00:53:31.925
+of crowdsource images, uh, put up
+
+1051
+00:53:31.925 --> 00:53:34.485
+by public, what is called ImageNet dataset.
+
+1052
+00:53:35.745 --> 00:53:39.455
+And, uh, in the image net data set, uh,
+
+1053
+00:53:39.475 --> 00:53:44.135
+the goal is you can make use of that image net dataset for
+
+1054
+00:53:44.205 --> 00:53:46.135
+what we call object classification.
+
+1055
+00:53:46.355 --> 00:53:47.855
+Can you recognize
+
+1056
+00:53:48.195 --> 00:53:52.215
+or classify the object that is present in a given image?
+
+1057
+00:53:53.515 --> 00:53:55.135
+So this was the global challenge,
+
+1058
+00:53:55.875 --> 00:53:59.615
+and people know across the world, they used to, um,
+
+1059
+00:54:00.325 --> 00:54:01.615
+develop different methods
+
+1060
+00:54:04.035 --> 00:54:06.585
+and submit,
+
+1061
+00:54:07.125 --> 00:54:09.945
+but typically they are non neural network based methods
+
+1062
+00:54:10.045 --> 00:54:11.985
+or non deep learning based methods.
+
+1063
+00:54:13.215 --> 00:54:15.465
+Then, uh, for the first time,
+
+1064
+00:54:16.525 --> 00:54:20.865
+the same Professor Hinton group, uh, developed a method
+
+1065
+00:54:20.885 --> 00:54:24.265
+for object classification using convolution networks,
+
+1066
+00:54:26.515 --> 00:54:29.175
+and showed that the
+
+1067
+00:54:29.765 --> 00:54:32.935
+improvement in the object classification is significantly
+
+1068
+00:54:33.955 --> 00:54:38.165
+higher compared to the non deep learning methods
+
+1069
+00:54:38.195 --> 00:54:41.845
+that were proposed so far in the literature.
+
+1070
+00:54:43.825 --> 00:54:47.605
+And this, the, uh,
+
+1071
+00:54:48.765 --> 00:54:53.725
+demonstrated this, um, uh,
+
+1072
+00:54:54.565 --> 00:54:57.645
+demonstrated the use of this conversion neural network.
+
+1073
+00:54:58.625 --> 00:55:00.005
+Um, so
+
+1074
+00:55:00.005 --> 00:55:03.205
+after that, no, then the whole world, uh,
+
+1075
+00:55:03.635 --> 00:55:05.285
+started looking in that direction.
+
+1076
+00:55:05.785 --> 00:55:09.685
+So how to make use of this commercial neural networks
+
+1077
+00:55:09.785 --> 00:55:11.525
+for object classification.
+
+1078
+00:55:12.395 --> 00:55:14.485
+With that, I think the rest is history.
+
+1079
+00:55:14.485 --> 00:55:15.885
+You know, people, um,
+
+1080
+00:55:16.625 --> 00:55:19.405
+all groups started using this commercial neural networks,
+
+1081
+00:55:19.675 --> 00:55:22.565
+both, uh, the object classification task.
+
+1082
+00:55:23.115 --> 00:55:26.845
+Then after that, uh, the other areas also pick it up.
+
+1083
+00:55:28.235 --> 00:55:30.455
+And in the long run, what happened is
+
+1084
+00:55:31.395 --> 00:55:33.655
+now the networks have become, uh,
+
+1085
+00:55:36.755 --> 00:55:38.855
+models or two aspects.
+
+1086
+00:55:39.275 --> 00:55:41.095
+One is for the feature extraction,
+
+1087
+00:55:41.785 --> 00:55:43.555
+nonlinear feature extraction, not only
+
+1088
+00:55:43.555 --> 00:55:46.075
+for image data, but for other data.
+
+1089
+00:55:46.415 --> 00:55:48.835
+So speech or any other task we are doing.
+
+1090
+00:55:49.375 --> 00:55:51.115
+Now, conventional networks have become
+
+1091
+00:55:51.745 --> 00:55:53.795
+defacto models for feature extraction.
+
+1092
+00:55:54.615 --> 00:55:56.835
+The other one is, uh, we can also use them
+
+1093
+00:55:56.835 --> 00:55:58.075
+for classification tasks.
+
+1094
+00:55:58.825 --> 00:56:01.955
+That is how think one of the just be
+
+1095
+00:56:01.975 --> 00:56:05.955
+before beginning this, uh, the next shift
+
+1096
+00:56:06.815 --> 00:56:10.475
+in the deep learning, uh, for people to adopt came
+
+1097
+00:56:10.475 --> 00:56:14.475
+because of the significantly, uh, improved performance
+
+1098
+00:56:15.485 --> 00:56:17.475
+shown by the commercial networks.
+
+1099
+00:56:17.745 --> 00:56:19.755
+Okay, so that is, what is this one?
+
+1100
+00:56:20.015 --> 00:56:23.405
+So with that input, um, let us see
+
+1101
+00:56:23.945 --> 00:56:25.365
+how this conversion neural network
+
+1102
+00:56:25.525 --> 00:56:27.045
+architecture was developed.
+
+1103
+00:56:27.045 --> 00:56:31.745
+But, uh, of course, uh, the, the net,
+
+1104
+00:56:31.745 --> 00:56:35.345
+the conversion network by itself was not invented
+
+1105
+00:56:35.595 --> 00:56:37.145
+after this deep network.
+
+1106
+00:56:37.825 --> 00:56:41.075
+This architecture was there itself in the SHA neural network
+
+1107
+00:56:41.135 --> 00:56:43.275
+itself as an advanced neur network concept,
+
+1108
+00:56:44.175 --> 00:56:47.035
+but the ability of that was demonstrated, uh,
+
+1109
+00:56:47.135 --> 00:56:48.675
+in the object classification task,
+
+1110
+00:56:49.295 --> 00:56:51.195
+the significant improvement in the performance.
+
+1111
+00:56:51.265 --> 00:56:55.075
+Then later people went to know, um,
+
+1112
+00:56:57.005 --> 00:57:00.035
+later people, uh, uh, started using that.
+
+1113
+00:57:00.545 --> 00:57:03.155
+Okay, next, uh, slide.
+
+1114
+00:57:07.705 --> 00:57:11.725
+Yeah, basically, uh,
+
+1115
+00:57:11.985 --> 00:57:15.085
+the motivation for coming up
+
+1116
+00:57:15.085 --> 00:57:16.885
+with conversion neural network was,
+
+1117
+00:57:18.295 --> 00:57:20.835
+um, is it okay?
+
+1118
+00:57:20.835 --> 00:57:24.385
+Okay. Conversion neur network was, um,
+
+1119
+00:57:25.915 --> 00:57:27.645
+when originally this, uh,
+
+1120
+00:57:28.195 --> 00:57:33.065
+neur network architecture was proposed, uh,
+
+1121
+00:57:33.445 --> 00:57:38.425
+the motivation was suppose if the given data
+
+1122
+00:57:39.655 --> 00:57:44.635
+or data points or features in there in available
+
+1123
+00:57:45.155 --> 00:57:49.505
+two dimensional fashion, okay, just like an image, okay?
+
+1124
+00:57:49.765 --> 00:57:53.225
+Of course, the, the main intention was for image only,
+
+1125
+00:57:53.925 --> 00:57:56.545
+but now later it got extended to any data,
+
+1126
+00:57:56.635 --> 00:57:58.425
+which you can arrange them in a grid manner,
+
+1127
+00:57:58.485 --> 00:57:59.585
+two dimensional grid manner.
+
+1128
+00:57:59.995 --> 00:58:03.145
+There. Also, you can use, uh, conversional networks.
+
+1129
+00:58:04.955 --> 00:58:09.295
+See, the, the, the purpose of thinking like that was,
+
+1130
+00:58:09.965 --> 00:58:13.375
+suppose if I take a, a two dimensional li data, like image,
+
+1131
+00:58:14.625 --> 00:58:19.205
+humans perceive information as a result of looking into X
+
+1132
+00:58:19.205 --> 00:58:23.885
+and Y direction, suppose I'd have a 2 56 crus, 2 56 image,
+
+1133
+00:58:24.705 --> 00:58:29.395
+and I go to a portion called 16 cross 16 image where
+
+1134
+00:58:30.455 --> 00:58:34.755
+I'm, I can make out the information present in the image due
+
+1135
+00:58:34.755 --> 00:58:36.815
+to looking into
+
+1136
+00:58:37.395 --> 00:58:40.535
+the spatial coordinates means in accent y
+
+1137
+00:58:40.555 --> 00:58:42.775
+how the pixel intensities are changing.
+
+1138
+00:58:43.675 --> 00:58:46.655
+So based on that, people will be able to,
+
+1139
+00:58:47.435 --> 00:58:48.935
+uh, derive the information.
+
+1140
+00:58:50.725 --> 00:58:54.025
+So then instead of that,
+
+1141
+00:58:54.085 --> 00:58:56.505
+now suppose you take the image data two dimensional data,
+
+1142
+00:58:57.005 --> 00:58:58.745
+2 56 crus 2 56,
+
+1143
+00:58:58.745 --> 00:59:01.305
+and convert into one large, one dimension vector
+
+1144
+00:59:02.445 --> 00:59:04.825
+and put it into deep feed for our level network,
+
+1145
+00:59:05.035 --> 00:59:09.475
+which we were explaining earlier, you may not be able to
+
+1146
+00:59:10.385 --> 00:59:12.675
+exploit that two dimensional information
+
+1147
+00:59:12.675 --> 00:59:16.075
+that you are looking as a luxury by human perception.
+
+1148
+00:59:17.845 --> 00:59:21.435
+This third process led to two people
+
+1149
+00:59:22.015 --> 00:59:25.715
+coming up with proposing this new arch,
+
+1150
+00:59:26.815 --> 00:59:31.585
+what are called, um, uh, neural networks, which exploit,
+
+1151
+00:59:31.885 --> 00:59:36.345
+uh, uh, the information available in it, like, you know,
+
+1152
+00:59:36.345 --> 00:59:40.605
+like the image that is the first motivation
+
+1153
+00:59:40.705 --> 00:59:42.525
+for coming up with this architecture.
+
+1154
+00:59:44.025 --> 00:59:46.475
+The second one is, uh,
+
+1155
+00:59:47.655 --> 00:59:49.635
+the convolution operation.
+
+1156
+00:59:50.865 --> 00:59:54.125
+See, um, it's so far in the deep feet
+
+1157
+00:59:54.125 --> 00:59:57.565
+for neur neural network, the way from one layer
+
+1158
+00:59:57.585 --> 00:59:59.965
+to the other, layer A signal flow C,
+
+1159
+01:00:01.225 --> 01:00:03.605
+you are taken the output from the neurons
+
+1160
+01:00:04.115 --> 01:00:05.205
+from the current layer.
+
+1161
+01:00:06.605 --> 01:00:09.975
+They're multiplied by respective weight links
+
+1162
+01:00:11.695 --> 01:00:14.235
+and, uh, the modified weight links
+
+1163
+01:00:14.855 --> 01:00:18.515
+or modified in inputs from the respective neurons
+
+1164
+01:00:18.655 --> 01:00:21.715
+by the weight links will we apply as input
+
+1165
+01:00:21.715 --> 01:00:23.115
+to the neurons in the next layer.
+
+1166
+01:00:23.585 --> 01:00:27.555
+Okay? So that is a simple matrix multiplication, if you want
+
+1167
+01:00:27.555 --> 01:00:31.875
+to say it is a simple, if you think for a while, uh,
+
+1168
+01:00:31.895 --> 01:00:35.315
+you are taking a vector, input vector, multiply
+
+1169
+01:00:35.315 --> 01:00:38.955
+by a weight metrics to give the modified input
+
+1170
+01:00:38.955 --> 01:00:40.555
+to the following layer of neurons,
+
+1171
+01:00:40.905 --> 01:00:42.115
+that is the way we can
+
+1172
+01:00:42.115 --> 01:00:46.215
+treat that thing.
+
+1173
+01:00:47.595 --> 01:00:50.925
+That simple matrix multiplication operation in, in
+
+1174
+01:00:50.925 --> 01:00:54.645
+between two layers of neuron is replaced
+
+1175
+01:00:54.745 --> 01:00:56.645
+by an operation called convolution.
+
+1176
+01:00:57.515 --> 01:00:58.925
+Okay? Of course,
+
+1177
+01:00:58.925 --> 01:01:01.285
+this convolution is a very well known term
+
+1178
+01:01:01.285 --> 01:01:02.605
+in electrical engineering.
+
+1179
+01:01:04.775 --> 01:01:08.235
+Uh, they may not do exactly like that,
+
+1180
+01:01:09.215 --> 01:01:11.315
+but they adopt that in principle.
+
+1181
+01:01:12.575 --> 01:01:17.555
+Um, essentially when we go for, um, um,
+
+1182
+01:01:18.585 --> 01:01:23.045
+convolution, how it is different compared to, uh,
+
+1183
+01:01:23.105 --> 01:01:27.205
+simple matrix multiplication that we were doing in deep,
+
+1184
+01:01:27.595 --> 01:01:30.975
+deep, um,
+
+1185
+01:01:32.625 --> 01:01:36.445
+uh, there is, uh, uh, something called a, uh,
+
+1186
+01:01:37.505 --> 01:01:41.525
+filter or a, uh, what we call, um,
+
+1187
+01:01:42.665 --> 01:01:46.875
+um, instead of filter, whether I can use any other term,
+
+1188
+01:01:47.055 --> 01:01:51.155
+I'm thinking a time being letter consider r
+
+1189
+01:01:51.375 --> 01:01:54.835
+or we call it as a kernel, sorry, we call it as a kernel.
+
+1190
+01:01:55.015 --> 01:01:56.035
+In the deep learning,
+
+1191
+01:01:57.975 --> 01:02:00.095
+I have a kernel function.
+
+1192
+01:02:02.075 --> 01:02:06.075
+Then what I do is the input data
+
+1193
+01:02:06.145 --> 01:02:09.755
+that is given to the coming from the input layer
+
+1194
+01:02:11.385 --> 01:02:12.845
+is multiplied by
+
+1195
+01:02:14.175 --> 01:02:17.095
+this kernel, okay?
+
+1196
+01:02:17.965 --> 01:02:22.645
+And then, uh, multiplied by kernel,
+
+1197
+01:02:22.735 --> 01:02:25.085
+point by point, somewhat that value
+
+1198
+01:02:26.955 --> 01:02:28.335
+and then pass it off.
+
+1199
+01:02:29.575 --> 01:02:32.045
+There is a fundamental distinction which we
+
+1200
+01:02:32.045 --> 01:02:33.205
+would appreciate here.
+
+1201
+01:02:34.545 --> 01:02:38.285
+See, what we used to do in, uh, conventional deep feed
+
+1202
+01:02:38.305 --> 01:02:42.935
+for new network is when one particular
+
+1203
+01:02:43.105 --> 01:02:47.225
+input is selected, it is uniquely multiplied
+
+1204
+01:02:47.225 --> 01:02:48.225
+by the link white
+
+1205
+01:02:48.285 --> 01:02:51.145
+and given as input to the neuron in the next layer.
+
+1206
+01:02:52.005 --> 01:02:54.495
+Whereas in the convolution, what we do is
+
+1207
+01:02:56.295 --> 01:02:59.155
+you take a grid of data points, not one point.
+
+1208
+01:02:59.255 --> 01:03:02.945
+You take a grid of data points, multiply with
+
+1209
+01:03:02.945 --> 01:03:07.685
+by another kernel function there and some that all value,
+
+1210
+01:03:08.815 --> 01:03:11.635
+and that is going as input to the next layer.
+
+1211
+01:03:12.015 --> 01:03:14.435
+Let me say not single value multiplied
+
+1212
+01:03:14.435 --> 01:03:16.475
+by one way is going to the next value.
+
+1213
+01:03:17.355 --> 01:03:19.935
+It is first multiplied by a kernel,
+
+1214
+01:03:21.095 --> 01:03:24.155
+and uh, we will see that kernel shape, all those things,
+
+1215
+01:03:24.755 --> 01:03:27.675
+a multiple by kernel and some that value,
+
+1216
+01:03:28.095 --> 01:03:30.035
+and that is called, that is equal into
+
+1217
+01:03:30.035 --> 01:03:31.675
+what is called convolution, operation
+
+1218
+01:03:32.495 --> 01:03:33.865
+theoretical engineering,
+
+1219
+01:03:34.525 --> 01:03:38.265
+and then knows some, um, some additional things they do
+
+1220
+01:03:38.845 --> 01:03:43.385
+to bring out what is called a, uh, no, uh, pulling
+
+1221
+01:03:44.165 --> 01:03:46.105
+one layer just to smooth the operation.
+
+1222
+01:03:46.105 --> 01:03:49.265
+There is an output function we follow that is all just
+
+1223
+01:03:49.265 --> 01:03:51.785
+to mimic, mimic the neuron operation.
+
+1224
+01:03:52.585 --> 01:03:56.215
+But however, the most important thing is, uh,
+
+1225
+01:03:57.605 --> 01:03:58.945
+in a conation layer,
+
+1226
+01:04:00.395 --> 01:04:03.055
+not one data point is uniquely possible.
+
+1227
+01:04:03.655 --> 01:04:07.925
+A grid of data points together are multiplied by kernel,
+
+1228
+01:04:08.955 --> 01:04:10.775
+and that multiplied
+
+1229
+01:04:10.775 --> 01:04:14.455
+and somewhat value is given as our value
+
+1230
+01:04:14.555 --> 01:04:17.255
+to the further inputs, further layers of the goal.
+
+1231
+01:04:17.835 --> 01:04:19.735
+And that is the fundamental distinction.
+
+1232
+01:04:21.455 --> 01:04:25.195
+So the output of this convolution of the input
+
+1233
+01:04:25.265 --> 01:04:28.235
+with the kernel is the feature map that we call it as a
+
+1234
+01:04:29.035 --> 01:04:31.235
+modified version of the data that we call it as a feature.
+
+1235
+01:04:31.665 --> 01:04:35.725
+Okay? Just for example,
+
+1236
+01:04:37.595 --> 01:04:42.375
+assume that I have a, a 2 56 plus 2 56 image,
+
+1237
+01:04:43.635 --> 01:04:46.135
+and I divide into 16 plus 16 images
+
+1238
+01:04:47.125 --> 01:04:50.895
+because my kernel is also 16 plus 16 shape,
+
+1239
+01:04:52.115 --> 01:04:54.135
+and that kernel function is taken
+
+1240
+01:04:55.155 --> 01:04:58.295
+and multiply with that first 16 plus 16 block.
+
+1241
+01:05:00.535 --> 01:05:04.865
+And, uh, that multiplied somewhat value is given
+
+1242
+01:05:04.925 --> 01:05:07.465
+as input a specific node in the output layer.
+
+1243
+01:05:08.255 --> 01:05:11.625
+Similarly, the kernel is shifted to next 16,
+
+1244
+01:05:11.625 --> 01:05:15.605
+cross 16 multiplier by the kernel wait multiplied
+
+1245
+01:05:15.605 --> 01:05:17.925
+and somewhat value will be given
+
+1246
+01:05:17.925 --> 01:05:19.325
+as input to the next new run.
+
+1247
+01:05:19.475 --> 01:05:23.405
+That is how they do it in the con output of the convolution
+
+1248
+01:05:24.215 --> 01:05:26.795
+of input with the kernel is a feature that
+
+1249
+01:05:28.755 --> 01:05:32.895
+since uh, each data point is not passed
+
+1250
+01:05:32.995 --> 01:05:36.175
+to the next layer, I take a grid of data points,
+
+1251
+01:05:36.205 --> 01:05:37.335
+process it further,
+
+1252
+01:05:37.515 --> 01:05:40.655
+and so we some, some sort of feature extraction,
+
+1253
+01:05:40.715 --> 01:05:43.575
+we treat this as some sort of feature extraction.
+
+1254
+01:05:43.885 --> 01:05:46.675
+Okay? Of course, uh,
+
+1255
+01:05:48.265 --> 01:05:52.675
+then I said so many times this kernel, let me,
+
+1256
+01:05:52.935 --> 01:05:55.475
+you know, one way, what do you mean by this?
+
+1257
+01:05:55.635 --> 01:06:00.155
+Kernel means it is a grid of weight values, grid
+
+1258
+01:06:00.155 --> 01:06:03.515
+of weight values, and how do you choose that weight values?
+
+1259
+01:06:05.125 --> 01:06:06.105
+Either you can
+
+1260
+01:06:06.855 --> 01:06:10.895
+prepare five, yes.
+
+1261
+01:06:12.755 --> 01:06:17.155
+So, um, this, uh,
+
+1262
+01:06:17.415 --> 01:06:18.995
+in the convolution operation,
+
+1263
+01:06:19.655 --> 01:06:21.235
+the kernel, how do we use these?
+
+1264
+01:06:21.935 --> 01:06:24.915
+You have a, uh, grid of values
+
+1265
+01:06:25.455 --> 01:06:27.115
+either chosen randomly.
+
+1266
+01:06:27.425 --> 01:06:29.355
+That is one way of people do it.
+
+1267
+01:06:30.645 --> 01:06:34.735
+Other one is, uh, based on the domain knowledge.
+
+1268
+01:06:35.315 --> 01:06:39.135
+For example, I want to extract specific type of features.
+
+1269
+01:06:40.105 --> 01:06:43.265
+I will shape that grid values based on the shape
+
+1270
+01:06:43.265 --> 01:06:44.745
+of the output.
+
+1271
+01:06:44.845 --> 01:06:48.225
+I'm looking for example now in a given input grid data
+
+1272
+01:06:48.225 --> 01:06:52.505
+points, I'm trying to extract the, uh,
+
+1273
+01:06:53.065 --> 01:06:56.545
+orientations, which are at 45 degrees compared
+
+1274
+01:06:56.545 --> 01:06:57.545
+to the horizontal line.
+
+1275
+01:06:58.135 --> 01:07:01.065
+Then my grid value will be designed as
+
+1276
+01:07:02.165 --> 01:07:06.625
+giving maximum value for that, uh, uh, 45 degree lights.
+
+1277
+01:07:07.055 --> 01:07:09.785
+Okay? So that is what, uh, uh,
+
+1278
+01:07:11.135 --> 01:07:15.905
+they do it in the case of uh, uh, other vertical lines.
+
+1279
+01:07:16.605 --> 01:07:20.545
+The third method is you directly learn,
+
+1280
+01:07:22.375 --> 01:07:25.655
+directly learn the data points
+
+1281
+01:07:26.235 --> 01:07:28.815
+or the kernels from the actual input data.
+
+1282
+01:07:29.235 --> 01:07:32.615
+So that is also people learn by, uh, process
+
+1283
+01:07:33.005 --> 01:07:36.295
+that is also there, but we will not worry about that.
+
+1284
+01:07:36.615 --> 01:07:38.135
+Kernel is a grid of weight values.
+
+1285
+01:07:38.245 --> 01:07:40.855
+16 plus 16 weight value metrics will be there
+
+1286
+01:07:41.285 --> 01:07:43.575
+that is multiplied for a given pixel.
+
+1287
+01:07:44.085 --> 01:07:46.135
+Some of that value and send it. Okay?
+
+1288
+01:07:46.955 --> 01:07:50.495
+And only another important point is
+
+1289
+01:07:51.845 --> 01:07:54.495
+suppose if I take a deep feed following the network
+
+1290
+01:07:55.485 --> 01:07:56.815
+between input layer
+
+1291
+01:07:56.995 --> 01:07:59.495
+and the next layer, uh,
+
+1292
+01:08:00.455 --> 01:08:04.215
+I have only one specific weight metrics, whereas here,
+
+1293
+01:08:05.085 --> 01:08:08.615
+depending, you can have different number of kernels,
+
+1294
+01:08:09.495 --> 01:08:13.095
+personal kernel, one far emphasizing horizontal lines,
+
+1295
+01:08:13.855 --> 01:08:18.525
+kernel two far vertical lines, kernel three, four SL lines.
+
+1296
+01:08:18.905 --> 01:08:21.925
+So in this way I can design the end number
+
+1297
+01:08:21.925 --> 01:08:23.965
+of kernels for each case.
+
+1298
+01:08:24.445 --> 01:08:25.565
+I can generate the output.
+
+1299
+01:08:25.945 --> 01:08:29.045
+So that means to say, I can extract what types suppose.
+
+1300
+01:08:29.065 --> 01:08:30.285
+On the other hand, I want
+
+1301
+01:08:30.285 --> 01:08:32.485
+to extract circle like information
+
+1302
+01:08:32.835 --> 01:08:34.325
+objects in the given image.
+
+1303
+01:08:34.435 --> 01:08:38.845
+Then I will have a kernel of shape kernel weight values,
+
+1304
+01:08:38.975 --> 01:08:41.725
+which is, which is mimicking the kernel shape
+
+1305
+01:08:42.075 --> 01:08:43.445
+belonging to circles.
+
+1306
+01:08:46.105 --> 01:08:48.285
+So that is what, uh, uh, we do.
+
+1307
+01:08:50.565 --> 01:08:52.385
+So there can be multiple kernels.
+
+1308
+01:08:52.415 --> 01:08:55.625
+Each kernel will represent a meaningful pattern once the
+
+1309
+01:08:55.745 --> 01:09:00.105
+learning is coming that we can derive from the, uh, uh,
+
+1310
+01:09:01.015 --> 01:09:02.705
+that one simple way know.
+
+1311
+01:09:02.935 --> 01:09:05.985
+Suppose I want to derive a kernel.
+
+1312
+01:09:06.085 --> 01:09:08.825
+One simple way is for a particular machine learning task,
+
+1313
+01:09:09.375 --> 01:09:12.345
+suppose, uh, uh,
+
+1314
+01:09:13.735 --> 01:09:16.505
+suppose I'm doing a face recognition task.
+
+1315
+01:09:17.705 --> 01:09:18.705
+I, uh, I want
+
+1316
+01:09:18.705 --> 01:09:21.985
+to extract a face like objects in a given email.
+
+1317
+01:09:22.545 --> 01:09:24.385
+I take some thousand images
+
+1318
+01:09:25.245 --> 01:09:27.385
+and take average of that thousand images.
+
+1319
+01:09:28.055 --> 01:09:30.945
+That average value itself, I can treat it as a kernel.
+
+1320
+01:09:32.045 --> 01:09:33.185
+So then no, it,
+
+1321
+01:09:33.365 --> 01:09:36.425
+it contains a kernel whose shape his purpose is
+
+1322
+01:09:36.425 --> 01:09:38.825
+to detect the face like shapes.
+
+1323
+01:09:39.615 --> 01:09:42.185
+Okay? So that is what we are do, uh, do it.
+
+1324
+01:09:42.645 --> 01:09:47.385
+Uh, we, of course we will see that in the know later slides.
+
+1325
+01:09:47.925 --> 01:09:51.545
+But just to summarize, I have scroll few points here.
+
+1326
+01:09:53.845 --> 01:09:57.965
+One is, uh, the in case of,
+
+1327
+01:09:59.305 --> 01:10:03.325
+uh, defeat follow network that we discussed so far,
+
+1328
+01:10:04.755 --> 01:10:07.855
+the process of signal flow from one layer to other layer
+
+1329
+01:10:09.795 --> 01:10:12.915
+e ease through a simple weight metrics multiplication.
+
+1330
+01:10:13.945 --> 01:10:17.495
+Whereas in case of con conversional network,
+
+1331
+01:10:18.635 --> 01:10:21.015
+it is through a process called convolution.
+
+1332
+01:10:22.245 --> 01:10:25.055
+Then that's why the name called Convolution neural network.
+
+1333
+01:10:26.185 --> 01:10:27.875
+What is that convolution network.
+
+1334
+01:10:28.855 --> 01:10:33.475
+You multiply grid of data points by kernels,
+
+1335
+01:10:34.495 --> 01:10:37.755
+and those multiplied values are called ed,
+
+1336
+01:10:37.895 --> 01:10:41.155
+and somewhat values are called as con convoluted values.
+
+1337
+01:10:41.895 --> 01:10:43.955
+And those are taken to next layers.
+
+1338
+01:10:45.175 --> 01:10:48.155
+And there can be multiple kernels possible depending on
+
+1339
+01:10:48.155 --> 01:10:50.955
+what I want to extract, uh, process to the further layers.
+
+1340
+01:10:51.755 --> 01:10:55.055
+So for each case, I do separate link kernel one is there.
+
+1341
+01:10:55.215 --> 01:10:56.935
+I do the processing for kernel one
+
+1342
+01:10:56.935 --> 01:10:59.055
+and produce it to the next layer, similar.
+
+1343
+01:10:59.085 --> 01:11:02.535
+Next I check kernel two and process it for all the pixels
+
+1344
+01:11:02.535 --> 01:11:04.135
+and given it to the next layer.
+
+1345
+01:11:07.585 --> 01:11:12.175
+Essentially, the purpose of this kernel is to,
+
+1346
+01:11:13.425 --> 01:11:15.765
+it is expected to represent a meaningful battle
+
+1347
+01:11:16.805 --> 01:11:18.485
+provided we are learning from the
+
+1348
+01:11:19.355 --> 01:11:21.685
+otherwise, you know, you have domain knowledge,
+
+1349
+01:11:21.685 --> 01:11:24.405
+you can directly design synthetically that cardinal sand.
+
+1350
+01:11:26.065 --> 01:11:27.775
+Okay, next slide.
+
+1351
+01:11:30.035 --> 01:11:34.445
+So that's what I,
+
+1352
+01:11:34.565 --> 01:11:38.175
+I told this why the name con conversion network came.
+
+1353
+01:11:38.525 --> 01:11:40.925
+Generally, it is metrics
+
+1354
+01:11:44.885 --> 01:11:47.575
+for new networks, whereas in case
+
+1355
+01:11:47.575 --> 01:11:50.835
+of con conversional network, it employs convolution
+
+1356
+01:11:51.845 --> 01:11:54.265
+as an alterna to metrics multiplication.
+
+1357
+01:11:55.805 --> 01:11:57.305
+And the convolution layer
+
+1358
+01:11:58.435 --> 01:12:01.475
+will have three operations, three stages.
+
+1359
+01:12:01.655 --> 01:12:04.835
+We say one is the convolution of what I explained so far.
+
+1360
+01:12:06.245 --> 01:12:10.615
+There is something called this
+
+1361
+01:12:10.645 --> 01:12:12.895
+detection is essentially, no,
+
+1362
+01:12:13.355 --> 01:12:14.775
+the controlled value is nothing
+
+1363
+01:12:14.795 --> 01:12:18.215
+but the activation value that is possible
+
+1364
+01:12:18.215 --> 01:12:19.575
+through an output function.
+
+1365
+01:12:20.265 --> 01:12:23.615
+That is called a and then polling.
+
+1366
+01:12:24.045 --> 01:12:26.855
+Polling is essentially it's some sort of,
+
+1367
+01:12:26.915 --> 01:12:29.095
+uh, aging like thick.
+
+1368
+01:12:29.685 --> 01:12:31.855
+What happens is in the two dimensional grade
+
+1369
+01:12:32.555 --> 01:12:33.815
+two dimensional space,
+
+1370
+01:12:34.435 --> 01:12:38.575
+the same information may not exactly fit into exact fixer
+
+1371
+01:12:38.815 --> 01:12:41.095
+locations from one two grid values
+
+1372
+01:12:41.155 --> 01:12:42.375
+to the other two grid values,
+
+1373
+01:12:42.375 --> 01:12:44.855
+even though it represents the same class.
+
+1374
+01:12:45.475 --> 01:12:49.095
+So to add some pause variation, all those things,
+
+1375
+01:12:49.485 --> 01:12:51.215
+they initially came up with this polling,
+
+1376
+01:12:51.635 --> 01:12:53.335
+but later people extended that
+
+1377
+01:12:53.555 --> 01:12:58.015
+for any summing like activities that we, so, uh,
+
+1378
+01:12:58.035 --> 01:13:01.215
+as I told no conversion is a mathematical operations, uh,
+
+1379
+01:13:01.395 --> 01:13:04.655
+it is suitable for processing grid-like data,
+
+1380
+01:13:05.305 --> 01:13:07.495
+especially two dimensional, uh, data.
+
+1381
+01:13:07.925 --> 01:13:12.495
+Okay? Uh, even initially what they did is if you have one,
+
+1382
+01:13:12.755 --> 01:13:14.855
+one dimensional time series data,
+
+1383
+01:13:15.485 --> 01:13:17.135
+they map put into two dimensional.
+
+1384
+01:13:18.085 --> 01:13:20.585
+Of course, two dimensional image data naturally comes
+
+1385
+01:13:20.585 --> 01:13:21.745
+as a two dimensional data,
+
+1386
+01:13:22.485 --> 01:13:25.025
+and 3D video data is converted into sequence
+
+1387
+01:13:25.025 --> 01:13:26.065
+of, uh, 2D data.
+
+1388
+01:13:26.495 --> 01:13:30.825
+Okay? So that is how people, um, have worked out that,
+
+1389
+01:13:31.545 --> 01:13:35.445
+um, but um, the take home messages,
+
+1390
+01:13:36.595 --> 01:13:40.775
+uh, you will, you will arrange the data in a two dimensional
+
+1391
+01:13:40.775 --> 01:13:43.495
+manner to exploit the information available in
+
+1392
+01:13:43.495 --> 01:13:45.445
+the next slide.
+
+1393
+01:13:50.545 --> 01:13:54.595
+So the, the,
+
+1394
+01:13:55.415 --> 01:13:58.595
+the engineering motivation for this conventional network is
+
+1395
+01:13:59.345 --> 01:14:03.245
+so, can modify the structure of these neural networks
+
+1396
+01:14:04.305 --> 01:14:07.325
+to mimic the deep learning strategy of human brain.
+
+1397
+01:14:07.665 --> 01:14:10.325
+Of course, uh, there were some, uh,
+
+1398
+01:14:10.475 --> 01:14:14.595
+cognitive science related, uh, um, um,
+
+1399
+01:14:15.715 --> 01:14:19.575
+the cognitive science related, uh, uh, or research findings.
+
+1400
+01:14:19.955 --> 01:14:23.575
+People started know whether to make it
+
+1401
+01:14:23.575 --> 01:14:27.055
+as a two dimensional data, and we take motivation from that.
+
+1402
+01:14:27.165 --> 01:14:30.675
+Also, essentially, uh, when,
+
+1403
+01:14:30.675 --> 01:14:34.555
+when I take any information received to the human brain,
+
+1404
+01:14:35.285 --> 01:14:37.195
+it'll be treated as if you go
+
+1405
+01:14:37.195 --> 01:14:40.435
+to different learning centers in the brain, it'll be treated
+
+1406
+01:14:40.535 --> 01:14:42.715
+as a two dimensional visualization of data.
+
+1407
+01:14:43.345 --> 01:14:45.715
+Okay? So that is where people start.
+
+1408
+01:14:45.775 --> 01:14:47.475
+Can we mimic, mimic this, uh,
+
+1409
+01:14:47.625 --> 01:14:49.635
+deep learning strategy of the human brain?
+
+1410
+01:14:50.455 --> 01:14:52.395
+So, which essentially, uh,
+
+1411
+01:14:52.445 --> 01:14:55.115
+every data is treated in a two dimensional plane
+
+1412
+01:14:55.655 --> 01:14:57.035
+and in a very layered manner
+
+1413
+01:14:57.255 --> 01:14:59.195
+as you move from one layer to the next layer.
+
+1414
+01:14:59.705 --> 01:15:02.435
+That was one of the, uh, motivation
+
+1415
+01:15:02.435 --> 01:15:04.755
+that kept far why they are proposing,
+
+1416
+01:15:04.905 --> 01:15:08.355
+because even though initial proposal was
+
+1417
+01:15:09.135 --> 01:15:10.675
+for image processing, uh,
+
+1418
+01:15:11.025 --> 01:15:12.955
+data comes in two dimensional pattern.
+
+1419
+01:15:13.785 --> 01:15:17.835
+They wanted to give much more, uh, some appealing motivation
+
+1420
+01:15:18.615 --> 01:15:21.035
+to conversional network concept.
+
+1421
+01:15:21.465 --> 01:15:23.955
+They told human brain also processes
+
+1422
+01:15:24.495 --> 01:15:26.035
+in a two dimensional fashion.
+
+1423
+01:15:27.015 --> 01:15:29.875
+So accordingly, no, we can, uh, that is
+
+1424
+01:15:29.875 --> 01:15:32.195
+how we are using this, uh, conation method.
+
+1425
+01:15:32.265 --> 01:15:34.635
+That is what they said it. Okay?
+
+1426
+01:15:34.855 --> 01:15:36.435
+And just for a reference, okay?
+
+1427
+01:15:36.815 --> 01:15:39.795
+Uh, if you see no, this conation network network,
+
+1428
+01:15:39.935 --> 01:15:43.435
+if you want, as I was telling it was first developed in
+
+1429
+01:15:43.875 --> 01:15:46.475
+1980s by Anne Ko.
+
+1430
+01:15:47.105 --> 01:15:50.915
+Okay? And, um, uh, ko, uh,
+
+1431
+01:15:51.375 --> 01:15:54.795
+he also referred to some earlier work, aka
+
+1432
+01:15:56.255 --> 01:15:59.955
+uh, he did not call it as commercial network work,
+
+1433
+01:16:00.575 --> 01:16:04.955
+but, uh, something came cog Neurocog run,
+
+1434
+01:16:05.015 --> 01:16:09.285
+he told Neurocog wrong, uh, so, uh, which is
+
+1435
+01:16:09.825 --> 01:16:13.125
+he told we need a specialized in neuro network architecture
+
+1436
+01:16:13.265 --> 01:16:15.085
+for dealing with images.
+
+1437
+01:16:15.785 --> 01:16:18.005
+And that is what they call it as a neurocog run
+
+1438
+01:16:18.785 --> 01:16:22.045
+was a very basic, uh, image recognition, uh,
+
+1439
+01:16:22.075 --> 01:16:24.445
+neur network concept repository.
+
+1440
+01:16:24.635 --> 01:16:27.965
+Okay? So that is what, uh, uh, one are the other motivations
+
+1441
+01:16:28.025 --> 01:16:32.765
+for the next slide.
+
+1442
+01:16:35.185 --> 01:16:39.965
+So specifically when you take the neuroscientific basis,
+
+1443
+01:16:41.065 --> 01:16:45.895
+there is something called a primary work visual cortex, part
+
+1444
+01:16:45.895 --> 01:16:49.975
+of the line responsible for visual scene processing.
+
+1445
+01:16:50.835 --> 01:16:52.615
+So it performs significantly
+
+1446
+01:16:53.335 --> 01:16:54.855
+advanced processing of visual input.
+
+1447
+01:16:56.145 --> 01:17:00.205
+Uh, no, and what they observed
+
+1448
+01:17:01.545 --> 01:17:02.965
+is this result.
+
+1449
+01:17:02.965 --> 01:17:04.765
+Primary visual partex result was
+
+1450
+01:17:05.975 --> 01:17:10.815
+when we observed some visuals dimensional region
+
+1451
+01:17:10.915 --> 01:17:14.255
+of the brain gets illuminated, okay?
+
+1452
+01:17:15.045 --> 01:17:15.265
+So
+
+1453
+01:17:24.705 --> 01:17:26.085
+in terms of two dimensional data,
+
+1454
+01:17:26.465 --> 01:17:27.565
+and there is a motivation
+
+1455
+01:17:27.665 --> 01:17:30.125
+for proposing this in an architecture.
+
+1456
+01:17:30.515 --> 01:17:31.125
+Next slide.
+
+1457
+01:17:35.025 --> 01:17:35.595
+Next slide.
+
+1458
+01:17:35.695 --> 01:17:40.275
+Uh, this primary visual cortex is arranged in a
+
+1459
+01:17:40.345 --> 01:17:44.925
+spatial map, which has a two dimensional structure
+
+1460
+01:17:46.015 --> 01:17:49.825
+measuring the structure of E Okay?
+
+1461
+01:17:50.895 --> 01:17:55.085
+So the CNA capture this property
+
+1462
+01:17:55.665 --> 01:17:59.845
+by having the features depending the two dimensional manner.
+
+1463
+01:18:00.065 --> 01:18:03.805
+So I think these are all just to, uh,
+
+1464
+01:18:05.395 --> 01:18:09.805
+uh, know some more details about
+
+1465
+01:18:11.105 --> 01:18:13.565
+how people are using the primary visual cortex.
+
+1466
+01:18:20.705 --> 01:18:21.915
+Okay? So
+
+1467
+01:18:27.445 --> 01:18:30.505
+is essentially a process just right,
+
+1468
+01:18:36.385 --> 01:18:41.045
+uh, uh, just, uh, uh, when, when I take this,
+
+1469
+01:18:41.225 --> 01:18:46.195
+uh, in the primary
+
+1470
+01:18:46.615 --> 01:18:49.075
+visual cortex, uh,
+
+1471
+01:18:49.255 --> 01:18:52.075
+it contains many simple cells performing
+
+1472
+01:18:54.955 --> 01:18:58.655
+in a small spatially localized, receptive field.
+
+1473
+01:18:59.595 --> 01:19:01.655
+And, uh, accordingly, you know, they
+
+1474
+01:19:02.295 --> 01:19:05.455
+designed these detector units of FCNN to
+
+1475
+01:19:06.055 --> 01:19:07.375
+emulate these properties.
+
+1476
+01:19:08.355 --> 01:19:12.735
+And similarly, they contain many complex cells, um,
+
+1477
+01:19:13.475 --> 01:19:16.245
+uh, to respond to the feature cells
+
+1478
+01:19:18.185 --> 01:19:19.485
+and which are inva
+
+1479
+01:19:19.785 --> 01:19:21.925
+to small shifts in the positions of the feature.
+
+1480
+01:19:22.465 --> 01:19:26.485
+And that means spite them to, uh, propose
+
+1481
+01:19:26.525 --> 01:19:28.045
+what are called the pooling units.
+
+1482
+01:19:28.635 --> 01:19:31.245
+Okay? So in that way, I see some,
+
+1483
+01:19:31.355 --> 01:19:33.885
+some concepts which they observed in the
+
+1484
+01:19:33.885 --> 01:19:35.005
+new cogniti studies.
+
+1485
+01:19:35.785 --> 01:19:38.405
+So that is what they, uh, tried
+
+1486
+01:19:38.405 --> 01:19:42.205
+to bring some neuroscientific basis for, uh,
+
+1487
+01:19:42.475 --> 01:19:45.365
+proposing this conversion slide text,
+
+1488
+01:19:45.705 --> 01:19:48.805
+and then this, uh, uh, neur network architectures.
+
+1489
+01:19:48.915 --> 01:19:49.485
+Next slide.
+
+1490
+01:19:55.425 --> 01:19:59.285
+Uh, people know generally it is believed that no,
+
+1491
+01:19:59.585 --> 01:20:02.365
+the same principle, basic principles
+
+1492
+01:20:02.365 --> 01:20:07.145
+of the primary visual card text played to other areas
+
+1493
+01:20:07.280 --> 01:20:12.175
+of the visual strategy of detection,
+
+1494
+01:20:12.375 --> 01:20:15.895
+followed by pulling is repeatedly applied to the brain.
+
+1495
+01:20:16.785 --> 01:20:20.845
+So as we pass through multiple automatical layers
+
+1496
+01:20:20.905 --> 01:20:24.685
+of the brain, and eventually you will find cells
+
+1497
+01:20:24.685 --> 01:20:27.525
+that respond to some specific concept now,
+
+1498
+01:20:27.525 --> 01:20:29.805
+in way into many transformation, something.
+
+1499
+01:20:30.505 --> 01:20:35.345
+So the takeaway message from all these things is
+
+1500
+01:20:37.325 --> 01:20:42.025
+the people when the seen recognition methods,
+
+1501
+01:20:43.195 --> 01:20:47.615
+um, are, um, using Google network.
+
+1502
+01:20:52.765 --> 01:20:55.625
+And one of the things they proposed was, uh,
+
+1503
+01:20:55.795 --> 01:20:58.385
+using this two dimensional grid-like data.
+
+1504
+01:20:58.965 --> 01:21:02.785
+Uh, one is from a layman visual observation,
+
+1505
+01:21:03.605 --> 01:21:05.105
+we derive more information
+
+1506
+01:21:05.165 --> 01:21:07.345
+by looking at the two dimensional play
+
+1507
+01:21:08.125 --> 01:21:10.705
+and further, from a neurocognition basis,
+
+1508
+01:21:10.805 --> 01:21:14.425
+neuroscientific neuroscientific basis, uh,
+
+1509
+01:21:14.675 --> 01:21:16.585
+there are publishing results on
+
+1510
+01:21:16.805 --> 01:21:20.585
+how visual scenes are processed in human brain.
+
+1511
+01:21:21.615 --> 01:21:25.545
+Some of those studies are taken as a motivation for,
+
+1512
+01:21:25.925 --> 01:21:27.865
+you know, coming up with this, uh,
+
+1513
+01:21:28.075 --> 01:21:29.785
+conversion layer architecture.
+
+1514
+01:21:30.765 --> 01:21:33.305
+Okay? Of course, these are only just
+
+1515
+01:21:33.305 --> 01:21:35.185
+for an historical importance I'm telling.
+
+1516
+01:21:35.765 --> 01:21:39.665
+But, uh, now once they started producing the result, we, uh,
+
+1517
+01:21:39.665 --> 01:21:43.985
+through, we don't really care about that as a engineer,
+
+1518
+01:21:44.015 --> 01:21:48.305
+just I will see, uh, how much it is, uh, used.
+
+1519
+01:22:01.125 --> 01:22:02.195
+First argument,
+
+1520
+01:22:05.175 --> 01:22:09.155
+we have a 16 plus 16 image
+
+1521
+01:22:10.005 --> 01:22:14.195
+where yen is the index value
+
+1522
+01:22:14.255 --> 01:22:15.355
+of the image,
+
+1523
+01:22:15.695 --> 01:22:18.795
+and m is the what is the cardinal size you have?
+
+1524
+01:22:19.425 --> 01:22:21.755
+Okay? Ah, secondly to, uh,
+
+1525
+01:22:21.945 --> 01:22:24.195
+that is written return as the input.
+
+1526
+01:22:25.135 --> 01:22:28.715
+And then the second argument we have, what is h
+
+1527
+01:22:30.615 --> 01:22:34.075
+you know, uh, a two dimensional NAND m value.
+
+1528
+01:22:34.095 --> 01:22:37.635
+We choose maybe one case is 16 plus 16 like that.
+
+1529
+01:22:39.535 --> 01:22:43.035
+But first the position of the current
+
+1530
+01:22:43.575 --> 01:22:45.235
+in the image, okay?
+
+1531
+01:22:45.755 --> 01:22:49.315
+Ian represent the, all the values one to 16
+
+1532
+01:22:49.315 --> 01:22:50.395
+that runs in the current.
+
+1533
+01:22:52.135 --> 01:22:55.475
+Um, so essentially input is a
+
+1534
+01:22:55.475 --> 01:22:56.875
+multidimensional array of data.
+
+1535
+01:22:57.025 --> 01:22:58.035
+It's an command.
+
+1536
+01:22:58.775 --> 01:23:01.475
+Um, kernel is also a multidi dimensional
+
+1537
+01:23:01.475 --> 01:23:02.555
+array of parameters.
+
+1538
+01:23:03.375 --> 01:23:05.925
+And uh, of course you can, if you go, if you go
+
+1539
+01:23:05.925 --> 01:23:08.965
+beyond two dimensional, you can call it as sensors also,
+
+1540
+01:23:10.985 --> 01:23:15.365
+um, when we are doing the convolution operation,
+
+1541
+01:23:16.505 --> 01:23:17.605
+we assume that no,
+
+1542
+01:23:18.955 --> 01:23:22.445
+even though a given image is 2 56 plus 2 56,
+
+1543
+01:23:23.605 --> 01:23:27.415
+when I'm processing a first block of 16, class 16,
+
+1544
+01:23:28.755 --> 01:23:33.155
+I assume that beyond that considered region of 16, class 16,
+
+1545
+01:23:34.545 --> 01:23:37.045
+all outside values are assumed to be zeros.
+
+1546
+01:23:38.205 --> 01:23:40.225
+So currently these kernel values also,
+
+1547
+01:23:40.845 --> 01:23:44.345
+and then, uh, that's what you mentioned.
+
+1548
+01:23:45.015 --> 01:23:49.705
+This functions xn m hn zoom to be zero everywhere
+
+1549
+01:23:50.475 --> 01:23:52.935
+except for the grid of finance set of points.
+
+1550
+01:23:53.565 --> 01:23:56.815
+Okay? Whatever that grid in the window of observation only,
+
+1551
+01:23:56.875 --> 01:23:57.895
+we consider the values
+
+1552
+01:23:58.035 --> 01:24:00.855
+and we assume all other values outside to be zeros.
+
+1553
+01:24:02.955 --> 01:24:07.815
+And in the, in case of deep learning, the goal is
+
+1554
+01:24:07.835 --> 01:24:09.615
+to learn the appropriate values
+
+1555
+01:24:09.755 --> 01:24:13.015
+for the cardinal using a suitable, what is this?
+
+1556
+01:24:13.175 --> 01:24:16.295
+X is the input data. How do you learn this?
+
+1557
+01:24:16.535 --> 01:24:19.135
+HH that is the kernel.
+
+1558
+01:24:19.875 --> 01:24:23.095
+And that is now, as I told, there are multiple strategies.
+
+1559
+01:24:23.275 --> 01:24:25.155
+One is random. Um,
+
+1560
+01:24:25.615 --> 01:24:28.275
+second one is domain knowledge based approach.
+
+1561
+01:24:29.135 --> 01:24:32.975
+Third one is actually learn from the data. Next slide.
+
+1562
+01:24:34.955 --> 01:24:37.375
+That is, um,
+
+1563
+01:24:40.655 --> 01:24:45.195
+see the other, other, uh, uh, aspect
+
+1564
+01:24:46.495 --> 01:24:51.205
+in case of, uh, conversion network keys, even though,
+
+1565
+01:24:52.145 --> 01:24:54.005
+uh, I have multiple kernels.
+
+1566
+01:24:54.905 --> 01:24:57.965
+So accordingly know your data gets expanded
+
+1567
+01:24:58.505 --> 01:25:01.605
+as I move from one layer to the other layer, whereas
+
+1568
+01:25:03.055 --> 01:25:06.025
+they exploit what is called a sparseness.
+
+1569
+01:25:06.775 --> 01:25:11.225
+Okay? Um, I, if I take a traditional neural network,
+
+1570
+01:25:11.605 --> 01:25:14.875
+it is just metrics multiplication by matrix
+
+1571
+01:25:15.015 --> 01:25:16.395
+of parameter that weight values.
+
+1572
+01:25:17.105 --> 01:25:20.115
+Whereas if I take conversion neural networks,
+
+1573
+01:25:21.285 --> 01:25:23.815
+they typically have sparse interactions.
+
+1574
+01:25:24.125 --> 01:25:29.015
+That means to say if I have 2 56 class, 2 56
+
+1575
+01:25:30.105 --> 01:25:34.695
+image, original image, I can create a sparseness.
+
+1576
+01:25:35.715 --> 01:25:37.405
+Depending on the shift I do.
+
+1577
+01:25:37.755 --> 01:25:42.085
+Suppose I make a grid of 16 across 16,
+
+1578
+01:25:43.105 --> 01:25:47.765
+and I shift that grid every 16 pixels, then
+
+1579
+01:25:48.405 --> 01:25:50.405
+I will have only 16 across 16 values
+
+1580
+01:25:50.405 --> 01:25:51.645
+coming to the next level.
+
+1581
+01:25:52.275 --> 01:25:54.085
+Okay? And that is what is, that is
+
+1582
+01:25:54.085 --> 01:25:56.405
+how I can create the sparse interaction.
+
+1583
+01:25:56.755 --> 01:26:01.725
+Okay? You, uh, so as a result of that,
+
+1584
+01:26:01.745 --> 01:26:05.565
+no, you can, uh, still keep the number of parameters
+
+1585
+01:26:05.565 --> 01:26:07.125
+to a manageable level.
+
+1586
+01:26:08.145 --> 01:26:11.965
+Um, so you can, uh,
+
+1587
+01:26:12.145 --> 01:26:14.205
+you can store accordingly.
+
+1588
+01:26:14.205 --> 01:26:15.885
+You can store only fewer parameters,
+
+1589
+01:26:16.575 --> 01:26:19.125
+which will both reduce the memory requirement of the model
+
+1590
+01:26:19.185 --> 01:26:22.085
+and improves the statistical efficiency.
+
+1591
+01:26:22.425 --> 01:26:25.865
+That's what, uh, big in input is.
+
+1592
+01:26:26.245 --> 01:26:29.865
+Output is K and traditional neur network.
+
+1593
+01:26:30.085 --> 01:26:31.345
+You have M cross N,
+
+1594
+01:26:31.365 --> 01:26:34.625
+and K cross N with, uh,
+
+1595
+01:26:35.165 --> 01:26:38.305
+the later results in a far few parameters
+
+1596
+01:26:39.205 --> 01:26:43.105
+and less competitions in a deep conversion network.
+
+1597
+01:26:44.005 --> 01:26:47.585
+Uh, you need in the deeper layers may interact indirectly,
+
+1598
+01:26:48.405 --> 01:26:50.945
+uh, with the larger portion of the input.
+
+1599
+01:26:51.485 --> 01:26:54.785
+Um, uh, the meaning of this last statement is,
+
+1600
+01:26:56.175 --> 01:27:00.345
+suppose I in the first layer, I will have,
+
+1601
+01:27:01.055 --> 01:27:04.795
+uh, 16, class 16 from the original image,
+
+1602
+01:27:04.895 --> 01:27:08.385
+I'm only looking at 16, class 16, whereas
+
+1603
+01:27:09.605 --> 01:27:14.105
+if I have the same 16 class, 16 in the second layer,
+
+1604
+01:27:15.325 --> 01:27:17.585
+uh, the inputs for that are
+
+1605
+01:27:18.655 --> 01:27:21.145
+16 such blocks from the previous lane.
+
+1606
+01:27:21.455 --> 01:27:25.425
+That means to say it is a bigger window for observation
+
+1607
+01:27:26.345 --> 01:27:28.345
+compared to the previous lane.
+
+1608
+01:27:28.405 --> 01:27:29.905
+That's what in a deep manner,
+
+1609
+01:27:30.045 --> 01:27:33.465
+as you move deeper into the layers, even though
+
+1610
+01:27:34.285 --> 01:27:36.905
+you use the grid size, small value,
+
+1611
+01:27:37.125 --> 01:27:39.305
+but uh, the input for
+
+1612
+01:27:39.305 --> 01:27:42.065
+that is coming from a larger window from the previous layer.
+
+1613
+01:27:42.775 --> 01:27:44.665
+Okay? So accordingly, you know,
+
+1614
+01:27:44.885 --> 01:27:47.585
+as you move deeper into the conventional layer layer,
+
+1615
+01:27:48.445 --> 01:27:50.105
+you will have, uh,
+
+1616
+01:27:50.325 --> 01:27:53.425
+it is combining information from a larger dimension
+
+1617
+01:27:54.245 --> 01:27:56.065
+to convert into a smooth feature.
+
+1618
+01:27:56.325 --> 01:28:00.865
+That's what, so first layer, you put 16 plus 16
+
+1619
+01:28:01.895 --> 01:28:06.405
+grid is used for, uh, feature mapping, smoothing
+
+1620
+01:28:07.065 --> 01:28:08.445
+the same 16 plus 16.
+
+1621
+01:28:08.465 --> 01:28:11.405
+The second layer, maybe it'll be 64, cross 64,
+
+1622
+01:28:11.745 --> 01:28:13.045
+it is used for construction.
+
+1623
+01:28:14.485 --> 01:28:18.965
+Next, next, um,
+
+1624
+01:28:20.545 --> 01:28:22.645
+uh, the important points
+
+1625
+01:28:22.995 --> 01:28:26.045
+that support conventional network is spatial knowledge.
+
+1626
+01:28:27.085 --> 01:28:30.235
+I use class specific information, um,
+
+1627
+01:28:30.775 --> 01:28:34.675
+in spatial domain, uh, as I told for image,
+
+1628
+01:28:36.215 --> 01:28:38.435
+and it'll have APAR interaction.
+
+1629
+01:28:41.825 --> 01:28:45.525
+The information in spatial domain is only among neighborhood
+
+1630
+01:28:45.585 --> 01:28:47.725
+of pixels, our local region,
+
+1631
+01:28:49.935 --> 01:28:53.355
+and we'll store only in few parameters, okay?
+
+1632
+01:28:53.945 --> 01:28:56.875
+Because I can use the same terminal
+
+1633
+01:28:57.655 --> 01:28:59.515
+across all the multiplications.
+
+1634
+01:28:59.855 --> 01:29:02.210
+So I currently know the number, number of weight parameters.
+
+1635
+01:29:02.210 --> 01:29:05.885
+If you treat NEL values as the weight parameters, the number
+
+1636
+01:29:05.885 --> 01:29:08.605
+of weight parameters will also be less sharing cheaper.
+
+1637
+01:29:08.945 --> 01:29:11.045
+See, these are, uh, know,
+
+1638
+01:29:11.045 --> 01:29:15.175
+because generally people find it, uh, when the proposal,
+
+1639
+01:29:15.695 --> 01:29:17.535
+this combination matter of model, oh, you are going
+
+1640
+01:29:17.555 --> 01:29:18.615
+to prove the mission.
+
+1641
+01:29:19.575 --> 01:29:24.515
+Suddenly the ion network
+
+1642
+01:29:24.665 --> 01:29:27.715
+will be more compared to one dimension case.
+
+1643
+01:29:28.335 --> 01:29:30.955
+And there are like that people felt.
+
+1644
+01:29:31.135 --> 01:29:35.185
+No, we have to, there are some advantages of, uh,
+
+1645
+01:29:35.675 --> 01:29:37.025
+using conversion network.
+
+1646
+01:29:37.285 --> 01:29:41.965
+One is the spatial knowledge. The second one, the spots in,
+
+1647
+01:29:58.415 --> 01:29:59.805
+sorry, we lost your voice.
+
+1648
+01:30:02.365 --> 01:30:03.725
+Oh, okay. Yeah.
+
+1649
+01:30:04.025 --> 01:30:07.365
+So, so Neil, maybe, yeah, we'll stop here. We'll,
+
+1650
+01:30:08.245 --> 01:30:09.245
+Hi. Yes, sir.
+
+1651
+01:30:09.245 --> 01:30:11.345
+If we can continue in the next class, uh,
+
+1652
+01:30:11.565 --> 01:30:14.585
+we can stop here if they have any query they can ask. Yes.
+
+1653
+01:30:15.445 --> 01:30:19.215
+Yeah, maybe we'll stop here in the next session. See
+
+1654
+01:30:21.475 --> 01:30:22.475
+Any queries so far?
+
+1655
+01:30:22.995 --> 01:30:23.415
+Anyone?
+
+1656
+01:30:29.465 --> 01:30:32.725
+Uh, we'll again, uh, there was some connection laws in
+
+1657
+01:30:32.725 --> 01:30:36.205
+between, but we'll repeat it again next.
+
+1658
+01:30:36.405 --> 01:30:37.925
+I think we'll do in the next session. Yes.
+
+1659
+01:30:38.035 --> 01:30:42.325
+Yeah, yeah, yeah. Thank you, sir. Thank you, sir.
+
+1660
+01:30:43.255 --> 01:30:45.245
+Thank you, sir. Thank you, sir. Thank you, sir.
+
+1661
+01:30:45.465 --> 01:30:49.615
+Sir, thank you, sir. Thank you, sir. Thank you, sir.
+
+1662
+01:30:52.015 --> 01:30:52.725
+Thank you, sir.
