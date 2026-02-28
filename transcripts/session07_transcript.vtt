@@ -1,0 +1,6790 @@
+WEBVTT
+
+1
+00:02:45.099 --> 00:02:46.459
+... (18 seconds pause)
+
+2
+00:02:48.679 --> 00:02:51.299
+from the level
+
+3
+00:12:14.810 --> 00:12:16.150
+Good evening to all.
+
+4
+00:12:17.770 --> 00:12:20.370
+Good evening, sir. Good evening, sir.
+
+5
+00:12:20.390 --> 00:12:20.939
+Good evening.
+
+6
+00:12:20.950 --> 00:12:23.530
+Good evening, sir.
+
+7
+00:12:23.570 --> 00:12:23.790
+Hello?
+
+8
+00:12:26.990 --> 00:12:29.230
+Good evening, sir.
+
+9
+00:12:29.270 --> 00:12:32.050
+Good evening.
+
+10
+00:12:34.370 --> 00:12:35.450
+Good evening, all. Good
+
+11
+00:12:35.510 --> 00:12:41.460
+evening.
+
+12
+00:12:41.470 --> 00:12:42.340
+That's
+
+13
+00:12:45.490 --> 00:12:47.100
+okay.
+
+14
+00:12:47.100 --> 00:13:23.210
+(silence)
+
+15
+00:13:27.310 --> 00:13:28.590
+Good evening, sir.
+
+16
+00:13:31.610 --> 00:13:33.390
+Hello. Hello.
+
+17
+00:13:33.410 --> 00:13:36.160
+Good evening. Good evening.
+
+18
+00:13:36.170 --> 00:13:39.880
+(waves hand) I think
+
+19
+00:13:39.890 --> 00:13:40.710
+I
+
+20
+00:13:42.430 --> 00:13:46.270
+can share my screen now. We can
+
+21
+00:13:46.370 --> 00:14:04.400
+..........................
+
+22
+00:14:04.400 --> 00:14:05.050
+So, uh,
+
+23
+00:14:06.170 --> 00:14:09.330
+the plan, uh, see, so far we have completed
+
+24
+00:14:10.090 --> 00:14:13.770
+the first level of understanding about this neural network.
+
+25
+00:14:13.830 --> 00:14:14.730
+We have understood
+
+26
+00:14:15.610 --> 00:14:19.490
+starting with a single perceptron, how we have came to the world
+
+27
+00:14:19.550 --> 00:14:23.090
+of this multi-layer perceptron network, as well as
+
+28
+00:14:23.950 --> 00:14:27.790
+then what is the feed forward connections, what we do
+
+29
+00:14:28.050 --> 00:14:31.230
+in the feed forward case, calculating the loss,
+
+30
+00:14:31.950 --> 00:14:34.690
+and then what is the role of back propagation.
+
+31
+00:14:34.710 --> 00:14:36.670
+And we have understood everything by
+
+32
+00:14:37.569 --> 00:14:41.170
+the three aspects in the sense conceptual understanding we have tried to
+
+33
+00:14:41.250 --> 00:14:45.210
+develop. We also have seen the mathematics behind it that
+
+34
+00:14:45.230 --> 00:14:48.350
+what exactly goes inside the network when we do the
+
+35
+00:14:49.030 --> 00:14:51.770
+feed forward and, uh, uh, back
+
+36
+00:14:51.790 --> 00:14:55.350
+propagation. And the third way what we have seen to
+
+37
+00:14:55.390 --> 00:14:59.010
+understand these, these, uh, topics are from the hands-on.
+
+38
+00:14:59.050 --> 00:15:02.829
+So we have also seen everything working in the PyTorch.
+
+39
+00:15:02.890 --> 00:15:06.850
+So only, only, only part is now you have
+
+40
+00:15:06.890 --> 00:15:10.550
+to put your effort and do some, um, uh,
+
+41
+00:15:10.690 --> 00:15:14.510
+hands-on by yourself. And I guess then these concept- concepts will be quite
+
+42
+00:15:14.530 --> 00:15:18.410
+clear to all of you. And you should be coming with the
+
+43
+00:15:18.490 --> 00:15:22.150
+dots if you have any, uh, if you have any in between, anytime you can ask
+
+44
+00:15:22.210 --> 00:15:25.190
+us. Uh, that is, that is absolutely fine.
+
+45
+00:15:25.270 --> 00:15:29.190
+So, uh, uh, be-before we start this, uh, this is
+
+46
+00:15:29.230 --> 00:15:33.190
+the fourth week what we are in right now and, uh, in the initial plan we
+
+47
+00:15:33.230 --> 00:15:37.190
+had said that we will conduct the quiz at the end
+
+48
+00:15:37.250 --> 00:15:38.210
+of the fourth week.
+
+49
+00:15:39.510 --> 00:15:43.170
+So, uh, uh, so we can either conduct on the coming
+
+50
+00:15:43.270 --> 00:15:46.230
+Saturday or we can go for next Monday.
+
+51
+00:15:46.350 --> 00:15:48.459
+Uh, yeah, that is what we can do.
+
+52
+00:15:48.470 --> 00:15:50.290
+Let us, let us listen to them.
+
+53
+00:15:50.350 --> 00:15:50.910
+Yes, yes.
+
+54
+00:15:51.610 --> 00:15:54.510
+The next Monday?
+
+55
+00:15:54.520 --> 00:15:57.700
+(laughs)
+
+56
+00:15:57.700 --> 00:16:00.410
+(laughs) Okay.
+
+57
+00:16:00.510 --> 00:16:02.250
+Uh...
+
+58
+00:16:02.710 --> 00:16:06.390
+So no problem, no problem. We'll do it on next Monday.
+
+59
+00:16:06.430 --> 00:16:07.370
+Fine.
+
+60
+00:16:07.410 --> 00:16:08.170
+Yeah, right.
+
+61
+00:16:08.190 --> 00:16:11.910
+So that was one part. So, uh, I'll also
+
+62
+00:16:11.920 --> 00:16:15.650
+ask my TAs to make this announcement because others may not have
+
+63
+00:16:15.690 --> 00:16:19.520
+joined. They should not come with a surprise next day, sir, when it was announced.
+
+64
+00:16:19.590 --> 00:16:23.179
+No. (laughs) So, .......................... Are you there?
+
+65
+00:16:23.310 --> 00:16:26.970
+I don't know. Uh, some- one of you can please make this announcement in the
+
+66
+00:16:27.069 --> 00:16:27.829
+LMS.
+
+67
+00:16:27.970 --> 00:16:29.090
+Okay, sir.
+
+68
+00:16:29.100 --> 00:16:31.390
+Sir, uh, yes, sir, I am here only.
+
+69
+00:16:31.430 --> 00:16:32.370
+Yeah. Thank you.
+
+70
+00:16:32.470 --> 00:16:33.470
+Yes, sir.
+
+71
+00:16:33.490 --> 00:16:34.029
+Hey.
+
+72
+00:16:34.089 --> 00:16:34.610
+So-
+
+73
+00:16:34.829 --> 00:16:36.610
+Can you make the announcement now itself?
+
+74
+00:16:36.620 --> 00:16:38.670
+(laughs)
+
+75
+00:16:38.790 --> 00:16:41.598
+So what will be the format, sir? Like, um...
+
+76
+00:16:41.610 --> 00:16:44.170
+It will be quiz. Quiz. I mean, in the sense MCQ
+
+77
+00:16:45.390 --> 00:16:48.350
+and coming with the LMS itself. So it will be integrated in the
+
+78
+00:16:48.470 --> 00:16:52.350
+LMS. So around, uh, fif- 30 minutes quiz,
+
+79
+00:16:52.410 --> 00:16:55.630
+that is what it will be, 15 to 20 questions.
+
+80
+00:16:55.670 --> 00:16:58.050
+Yeah. One mark each.
+
+81
+00:17:00.430 --> 00:17:02.310
+Okay.
+
+82
+00:17:02.350 --> 00:17:04.670
+The coming Monday is at 7:45 only,
+
+83
+00:17:04.710 --> 00:17:06.409
+right?
+
+84
+00:17:07.010 --> 00:17:08.230
+Coming Monday?
+
+85
+00:17:08.290 --> 00:17:12.210
+If it is on weekdays, then it is on 7:45 Monday, right?
+
+86
+00:17:12.329 --> 00:17:15.930
+Right, right. Next Monday. Today is Monday, right? Next Monday, 7:45.
+
+87
+00:17:15.940 --> 00:17:15.940
+
+88
+00:17:15.970 --> 00:17:19.869
+So we can start, uh, so that day, yeah, a little later,
+
+89
+00:17:19.930 --> 00:17:23.089
+maybe around 8:00 we'll start. By the time all of you will join and
+
+90
+00:17:23.150 --> 00:17:26.098
+then, uh, we can have...
+
+91
+00:17:26.130 --> 00:17:27.190
+Yes.
+
+92
+00:17:31.659 --> 00:17:31.659
+
+93
+00:17:31.690 --> 00:17:35.630
+So, uh, will it have the mathematical equation type, means, problematic will
+
+94
+00:17:35.670 --> 00:17:36.790
+be there?
+
+95
+00:17:36.830 --> 00:17:40.550
+Yes, yes. It can be anything now whatever we have covered, but it will be MCQ
+
+96
+00:17:40.610 --> 00:17:42.550
+type.
+
+97
+00:17:44.170 --> 00:17:48.030
+Okay. It may have some PyTorch, uh, clu- code
+
+98
+00:17:48.090 --> 00:17:50.570
+snippet also, which you may have to understand and
+
+99
+00:17:51.210 --> 00:17:55.130
+comprehend. May have conceptual questions or it may have a
+
+100
+00:17:55.170 --> 00:17:59.090
+little bit of, uh, numerical based questions also where you
+
+101
+00:17:59.130 --> 00:18:02.850
+may have to calculate the, how the neuron works, what is the output of
+
+102
+00:18:02.970 --> 00:18:06.430
+it or something like that. So, but whatever we have covered, we'll ask
+
+103
+00:18:06.470 --> 00:18:10.030
+only from that. So whatever we will be
+
+104
+00:18:10.070 --> 00:18:12.389
+covering, uh, this week, that will also goes
+
+105
+00:18:12.450 --> 00:18:14.730
+there.
+
+106
+00:18:14.790 --> 00:18:19.550
+Okay?Till
+
+107
+00:18:19.570 --> 00:18:23.129
+today or till Saturday, sir? Till, till Saturday. Okay.
+
+108
+00:18:23.290 --> 00:18:26.230
+Nothing. Yes, yes.
+
+109
+00:18:28.290 --> 00:18:32.090
+Okay. all right. So,
+
+110
+00:18:32.129 --> 00:18:32.480
+uh,
+
+111
+00:18:33.409 --> 00:18:35.510
+that was one, one thing which I wanted to discuss.
+
+112
+00:18:35.550 --> 00:18:37.189
+Sir, one quick check, sir.
+
+113
+00:18:37.209 --> 00:18:37.850
+Hmm. Hmm.
+
+114
+00:18:37.870 --> 00:18:41.679
+Venugopal here. So will it include python snippets also or only...
+
+115
+00:18:41.689 --> 00:18:45.669
+Yes. Yes. It may... It, it may include that also because we
+
+116
+00:18:45.709 --> 00:18:49.010
+are spending, I mean, good time to understand the
+
+117
+00:18:49.050 --> 00:18:52.790
+PyTorch. So some... One or two questions, but in the form of MCQ itself,
+
+118
+00:18:52.810 --> 00:18:54.709
+welcome.
+
+119
+00:18:54.730 --> 00:18:56.120
+Thank you, sir. My request.
+
+120
+00:18:56.149 --> 00:18:58.310
+Yes.
+
+121
+00:18:59.409 --> 00:19:02.949
+Yep. Okay.
+
+122
+00:19:03.470 --> 00:19:07.409
+So, uh, as, as I said that we have understood at least the first level
+
+123
+00:19:07.550 --> 00:19:11.530
+of, of, of this neural network working, uh, that how exactly it
+
+124
+00:19:11.590 --> 00:19:14.790
+works and all. Now we'll try to go little
+
+125
+00:19:14.870 --> 00:19:18.449
+deeper. Okay. Uh, we'll try to understand,
+
+126
+00:19:18.570 --> 00:19:21.490
+uh, uh, means, uh, that how
+
+127
+00:19:21.530 --> 00:19:25.320
+exactly the many other, other,
+
+128
+00:19:25.429 --> 00:19:29.389
+uh, functionality which is associated with this neural networks are, uh, are
+
+129
+00:19:29.490 --> 00:19:33.469
+being computed. What is the concept behind it and where and all they
+
+130
+00:19:33.510 --> 00:19:37.490
+are being used. So maybe few classes from now onwards will go
+
+131
+00:19:37.550 --> 00:19:38.870
+on little advanced concepts
+
+132
+00:19:39.689 --> 00:19:43.570
+and whatever we are learning now for ANN,
+
+133
+00:19:43.710 --> 00:19:47.669
+most of the concept is going to be true, uh, for
+
+134
+00:19:47.710 --> 00:19:51.570
+whatever higher or deeper network we learn in the coming, coming classes
+
+135
+00:19:51.629 --> 00:19:55.530
+like, uh, CNN, RNN, LSTM. Okay? There we
+
+136
+00:19:55.570 --> 00:19:58.689
+may not be able to explain everything in detail, but
+
+137
+00:19:58.990 --> 00:20:01.510
+the, the concept will remain same.
+
+138
+00:20:01.590 --> 00:20:05.550
+And, uh, the cal- uh, the way it, it, it, it happens here, most of the things
+
+139
+00:20:05.590 --> 00:20:09.270
+will remain same. Okay. So from now
+
+140
+00:20:09.330 --> 00:20:12.949
+onwards, we'll try to go into little deeper into the network and understand the
+
+141
+00:20:12.990 --> 00:20:16.770
+different aspects of the artificial neural network.
+
+142
+00:20:16.830 --> 00:20:19.800
+So today what I have planned, uh, that, uh,
+
+143
+00:20:20.250 --> 00:20:22.230
+few, few things, uh,
+
+144
+00:20:23.090 --> 00:20:27.030
+what I will cover will be... I'll quickly recap the back propagation and we'll
+
+145
+00:20:27.050 --> 00:20:30.050
+try to understand why back propagation works,
+
+146
+00:20:30.969 --> 00:20:34.570
+which I have explained at the first level, but I'll
+
+147
+00:20:34.689 --> 00:20:37.830
+quickly, uh, cover that part also.
+
+148
+00:20:37.870 --> 00:20:41.500
+And then we'll cover the stochastic batch and
+
+149
+00:20:41.570 --> 00:20:45.480
+mini-batch gradient descent. Although we have covered this one in
+
+150
+00:20:45.510 --> 00:20:48.730
+the linear regression in the first course
+
+151
+00:20:48.850 --> 00:20:52.750
+MLP, but here also we'll, we'll try to cover because it,
+
+152
+00:20:52.790 --> 00:20:55.610
+it is having the same concept. So you will quickly understand this part as
+
+153
+00:20:55.649 --> 00:20:59.490
+well. Now we'll try to spend some time to understand the vanishing
+
+154
+00:20:59.530 --> 00:21:03.389
+gradient problem of ANN, which is very important to understand,
+
+155
+00:21:03.449 --> 00:21:06.980
+right? And we'll also see the... What are the different ways
+
+156
+00:21:07.590 --> 00:21:11.500
+we have for handling this vanishing gradient problem with some examples and
+
+157
+00:21:11.570 --> 00:21:14.179
+visuals we'll try to understand that part.
+
+158
+00:21:14.889 --> 00:21:16.679
+So this... We are going to cover...
+
+159
+00:21:16.689 --> 00:21:19.770
+We'll see how much we are, uh, able to cover today.
+
+160
+00:21:19.810 --> 00:21:23.639
+And then a few more classes will be required with the...
+
+161
+00:21:23.669 --> 00:21:26.780
+To cover few more things. Like I, I...
+
+162
+00:21:26.810 --> 00:21:30.750
+Although I had planned to cover, uh, the PyTorch, few more modules are
+
+163
+00:21:30.790 --> 00:21:34.689
+left. For example, we have covered so far the autograd, but we are
+
+164
+00:21:34.770 --> 00:21:38.590
+left with this, uh, NN module, neural
+
+165
+00:21:38.610 --> 00:21:42.570
+network module, which will help us to build the neural network
+
+166
+00:21:42.710 --> 00:21:45.179
+layers. Okay? So that we are going...
+
+167
+00:21:45.230 --> 00:21:48.290
+Uh, we have to cover, which we are not covering today, but next class I will try to
+
+168
+00:21:48.310 --> 00:21:52.169
+cover and optimize it. That is another concept very important in neural
+
+169
+00:21:52.189 --> 00:21:54.480
+network training. So that is also...
+
+170
+00:21:54.510 --> 00:21:57.590
+We have one module in the PyTorch also.
+
+171
+00:21:57.600 --> 00:22:01.510
+So, so few things you see that, and it may take another, I think, three to four
+
+172
+00:22:01.610 --> 00:22:05.570
+classes, including the quiz I guess to cover the advanced level,
+
+173
+00:22:05.590 --> 00:22:09.530
+advanced topics in the ANN. Once we'll have complete understanding
+
+174
+00:22:09.570 --> 00:22:12.969
+of these things, then we can proceed with the deeper networks like CNN,
+
+175
+00:22:13.710 --> 00:22:16.949
+RNN or LSTM. So that's the plan what we have.
+
+176
+00:22:18.210 --> 00:22:20.010
+Okay.
+
+177
+00:22:21.689 --> 00:22:23.889
+Fine. So let us start.
+
+178
+00:22:24.090 --> 00:22:27.490
+Will it be as per schedule, Sureel? Or it will exceed?
+
+179
+00:22:28.030 --> 00:22:30.330
+It is exceeding, sir, a little bit.
+
+180
+00:22:30.409 --> 00:22:34.149
+Uh, we said that by fourth week we'll start, uh, CNN.
+
+181
+00:22:34.610 --> 00:22:34.870
+Mm-hmm.
+
+182
+00:22:34.909 --> 00:22:38.489
+So maybe this week we are not starting it. We'll start next week.
+
+183
+00:22:38.498 --> 00:22:42.330
+Okay. Yes. Yeah. Fine, fine. Thank you.
+
+184
+00:22:45.750 --> 00:22:46.270
+Okay.
+
+185
+00:22:47.129 --> 00:22:50.830
+So, uh, quickly, uh, the back propagation,
+
+186
+00:22:50.989 --> 00:22:51.169
+uh,
+
+187
+00:22:51.989 --> 00:22:55.129
+what we have already covered in the previous classes.
+
+188
+00:22:55.210 --> 00:22:58.929
+So we had taken one example of this type of
+
+189
+00:22:59.030 --> 00:23:02.909
+network where we had the two inputs, two hidden neurons and one output
+
+190
+00:23:02.989 --> 00:23:03.570
+neurons,
+
+191
+00:23:04.530 --> 00:23:08.110
+right? Then this slide, uh, we understood how
+
+192
+00:23:08.250 --> 00:23:10.520
+to... How do we do the feed forward...
+
+193
+00:23:10.590 --> 00:23:14.129
+Uh, feed forward propagation where we calculate the
+
+194
+00:23:14.830 --> 00:23:18.750
+prediction at the output layer and with that we also calculate the error or
+
+195
+00:23:18.830 --> 00:23:22.570
+we can say loss. So that, that was the feed forward.
+
+196
+00:23:22.649 --> 00:23:26.610
+So at every neuron we do this weighted sum plus bias that, that
+
+197
+00:23:26.690 --> 00:23:28.429
+part and followed by the activation function.
+
+198
+00:23:28.449 --> 00:23:32.429
+And activation function which we used here was the ReLU activation function, if you
+
+199
+00:23:32.469 --> 00:23:36.310
+can recall. Okay. And then we calculated the prediction as Y
+
+200
+00:23:36.449 --> 00:23:40.149
+hat, and we then calculated the error as
+
+201
+00:23:40.350 --> 00:23:43.770
+Y hat minus Y squared. So a squared error we calculated.
+
+202
+00:23:43.790 --> 00:23:47.449
+So that was the feed f- uh, forward in the neural network.
+
+203
+00:23:47.909 --> 00:23:50.530
+And then the next part was to do the back propagation.
+
+204
+00:23:50.550 --> 00:23:54.190
+And while doing the back propagation, the first thing what we learned was that we
+
+205
+00:23:54.230 --> 00:23:56.830
+need to calculate the gradient, okay?
+
+206
+00:23:56.840 --> 00:24:00.550
+And gradient will be calculated in the chain rule fashion
+
+207
+00:24:00.629 --> 00:24:04.310
+because the loss is only available at the output
+
+208
+00:24:04.350 --> 00:24:08.090
+layer. The loss is not available in the hidden layers.
+
+209
+00:24:08.129 --> 00:24:12.050
+So we need to back propagate the loss and we have used the chain rule for
+
+210
+00:24:12.129 --> 00:24:15.989
+that one to calculate the partial derivative with respect to a particular parameter
+
+211
+00:24:16.190 --> 00:24:19.620
+in the earlier layers. So here we...
+
+212
+00:24:19.669 --> 00:24:23.629
+As you can recall, we calculated the partial derivative of loss with respect to
+
+213
+00:24:23.669 --> 00:24:27.170
+each parameter-Okay. And then finally, we
+
+214
+00:24:27.230 --> 00:24:30.730
+updated these para- nine parameters, if you can see here, we have in this
+
+215
+00:24:30.750 --> 00:24:34.460
+particular network, and we updated all these parameter using this
+
+216
+00:24:34.510 --> 00:24:35.340
+update rule.
+
+217
+00:24:36.570 --> 00:24:40.290
+Okay. So we also, uh, understood the
+
+218
+00:24:40.330 --> 00:24:44.170
+concept of, uh, learning rate there, which we are going to see today as well
+
+219
+00:24:44.230 --> 00:24:46.470
+again. But learning rate was
+
+220
+00:24:47.590 --> 00:24:51.450
+helping us to control this, um, this gradient
+
+221
+00:24:51.710 --> 00:24:55.550
+size, which in this particular example came very big.
+
+222
+00:24:55.570 --> 00:24:59.430
+For example, you see that gradient is like 97, 26, 14
+
+223
+00:24:59.450 --> 00:25:03.000
+point something. It was even 1413.12,
+
+224
+00:25:03.030 --> 00:25:05.390
+right? So the gradients were so big.
+
+225
+00:25:05.430 --> 00:25:09.330
+Now if you'll go ahead with this gradient and update the, uh, update
+
+226
+00:25:09.370 --> 00:25:13.150
+the parameter, there will be a huge change in the parameter because
+
+227
+00:25:13.530 --> 00:25:16.930
+the initial parameter value is, say, 1.2, 0.8 and you're
+
+228
+00:25:16.990 --> 00:25:20.470
+subtracting or adding the value like 1413.
+
+229
+00:25:20.550 --> 00:25:24.410
+So from 1.2 you are going all the way up to 1413.
+
+230
+00:25:24.450 --> 00:25:28.350
+So there is a huge change and we don't want, we don't want such a
+
+231
+00:25:28.410 --> 00:25:32.350
+huge change at the time of training our, uh,
+
+232
+00:25:32.390 --> 00:25:35.590
+neural network, right? And that is why this learning rate has helped us
+
+233
+00:25:36.290 --> 00:25:40.190
+to, uh, control that, uh, uh, this, this, um,
+
+234
+00:25:40.210 --> 00:25:42.420
+um, you can say that very, very high...
+
+235
+00:25:42.450 --> 00:25:46.230
+large value of the gradient and, and that's how we have done a gradual
+
+236
+00:25:46.310 --> 00:25:50.250
+change, right? So, uh, learning rate has a significant
+
+237
+00:25:50.410 --> 00:25:53.250
+role in this particular update rule. That is what we had seen.
+
+238
+00:25:53.270 --> 00:25:56.950
+Now today we will see that, that how the learning rate, uh, impacts and what are
+
+239
+00:25:56.970 --> 00:26:00.010
+the different cases of that l- learning rate once again with the
+
+240
+00:26:00.530 --> 00:26:04.070
+figures. So we... This was the back
+
+241
+00:26:04.110 --> 00:26:06.560
+propagation. We updated all the parameter and that the...
+
+242
+00:26:06.590 --> 00:26:10.540
+then with the updated values of these parameter, again, we did
+
+243
+00:26:10.570 --> 00:26:14.460
+the forward propagation and then what we did, so i- this, this
+
+244
+00:26:14.460 --> 00:26:18.070
+slide was showing the before update of the parameter, the loss was
+
+245
+00:26:18.270 --> 00:26:21.880
+54.1696 and after updating all these
+
+246
+00:26:21.890 --> 00:26:25.270
+parameters, the loss was 4.005890.
+
+247
+00:26:25.310 --> 00:26:29.290
+So there was a significant drop in the loss and hence
+
+248
+00:26:29.330 --> 00:26:32.890
+we can say that by updating these parameters using back
+
+249
+00:26:32.910 --> 00:26:36.770
+propagation has, has, uh, uh, has reduced the
+
+250
+00:26:36.810 --> 00:26:38.430
+loss and our network has learned,
+
+251
+00:26:39.430 --> 00:26:43.390
+uh, the, the relations between the, uh, you can say input/output
+
+252
+00:26:43.430 --> 00:26:47.130
+in a better way. Okay? So this was just one parameter and with one input.
+
+253
+00:26:47.150 --> 00:26:49.070
+This was the change which we had seen
+
+254
+00:26:49.110 --> 00:26:52.790
+earlier. Now the question is,
+
+255
+00:26:52.890 --> 00:26:56.290
+uh, w- we will answer some of the questions now that why this back
+
+256
+00:26:56.330 --> 00:26:59.539
+propagation worked, right? And,
+
+257
+00:26:59.610 --> 00:27:03.490
+uh, uh, what was the... Uh, w- what,
+
+258
+00:27:03.510 --> 00:27:07.370
+what happened such that if we have changed these parameters, th- our loss was
+
+259
+00:27:07.650 --> 00:27:11.450
+decreased and, uh, how do we understood that, okay,
+
+260
+00:27:11.570 --> 00:27:15.410
+uh, whether, uh, uh, network has,
+
+261
+00:27:15.479 --> 00:27:18.170
+uh, d- done it better or not and all those answers.
+
+262
+00:27:18.190 --> 00:27:19.870
+That is what we have to understood.
+
+263
+00:27:19.910 --> 00:27:23.530
+So we have to n- now what we need to discuss is what are the
+
+264
+00:27:23.590 --> 00:27:25.190
+intuition behind this back propagation?
+
+265
+00:27:25.230 --> 00:27:29.050
+We understood that it is working in terms of the numbers, but now let
+
+266
+00:27:29.090 --> 00:27:32.979
+us go into the detail of it and let us see what each part of
+
+267
+00:27:33.030 --> 00:27:36.650
+that back propagation is doing in order to, uh, in order to,
+
+268
+00:27:36.750 --> 00:27:40.610
+um, uh, reduce that loss. Okay? So that is what we are
+
+269
+00:27:40.650 --> 00:27:44.550
+going to see next. And to understand that
+
+270
+00:27:44.570 --> 00:27:48.490
+part, the first thing which I w- I, I am bringing here is that
+
+271
+00:27:48.590 --> 00:27:52.190
+loss as a function of all trainable
+
+272
+00:27:52.210 --> 00:27:56.110
+parameters. Okay? Uh, so far what we have seen that
+
+273
+00:27:56.250 --> 00:28:00.190
+loss is being calculated by this, uh, equation
+
+274
+00:28:00.310 --> 00:28:03.290
+Y s- -Y hat square, which is a squared error
+
+275
+00:28:04.390 --> 00:28:07.730
+and then Y hat is this value, this equation, that
+
+276
+00:28:07.810 --> 00:28:11.050
+V1H1V2S2 and V3, if you can recall here.
+
+277
+00:28:12.110 --> 00:28:16.070
+So Y hat is being calcu- Y hat is depending on five, uh,
+
+278
+00:28:16.170 --> 00:28:19.750
+factors. Out of that, H1S2 is the,
+
+279
+00:28:19.770 --> 00:28:23.750
+um, input from the, um, uh, hidden layer and
+
+280
+00:28:23.790 --> 00:28:27.490
+then V1, V2 and V3 are my parameters, right?
+
+281
+00:28:27.530 --> 00:28:30.870
+So this Y hat is depending on these three parameters.
+
+282
+00:28:30.910 --> 00:28:34.670
+So straightaway you can see that loss depends on Y hat and Y hat is
+
+283
+00:28:34.730 --> 00:28:38.230
+depending on these three. That we have understood earlier also.
+
+284
+00:28:38.250 --> 00:28:41.690
+But what change, what I'm t- trying to bring now is that I say
+
+285
+00:28:42.130 --> 00:28:46.029
+that w- this, this Y hat is a
+
+286
+00:28:46.130 --> 00:28:49.020
+function of all the parameters what we have in the
+
+287
+00:28:49.070 --> 00:28:52.590
+network, all the parameters which we have in the network, and that is
+
+288
+00:28:52.630 --> 00:28:56.330
+why we were, uh, calculating the partial
+
+289
+00:28:56.350 --> 00:29:00.310
+derivative of loss with respect to each of
+
+290
+00:29:00.370 --> 00:29:04.270
+these parameter because w- uh, because my loss
+
+291
+00:29:04.330 --> 00:29:08.290
+is now depending on Y hat and Y hat is depending on each of these
+
+292
+00:29:08.370 --> 00:29:11.110
+parameter, like nine parameters we have in this network.
+
+293
+00:29:11.130 --> 00:29:15.010
+So if I'll change any of these parameters, it will impact
+
+294
+00:29:15.110 --> 00:29:18.810
+on my loss. Now, that was the intuition behind changing each and every
+
+295
+00:29:18.870 --> 00:29:22.670
+parameters. Now to understand that one, first of all, we need to understand
+
+296
+00:29:23.310 --> 00:29:26.970
+how this Y hat is depending on all the parameters, right?
+
+297
+00:29:26.990 --> 00:29:30.750
+Uh, we can see here Y hat is depending on B3 because B3, B3 is
+
+298
+00:29:30.770 --> 00:29:32.970
+directly connected with this Y hat.
+
+299
+00:29:33.050 --> 00:29:36.850
+Y hat is also depending on Y... V1 or V2 because these two are
+
+300
+00:29:36.870 --> 00:29:38.930
+directly connected with this Y hat.
+
+301
+00:29:38.950 --> 00:29:42.790
+But how Y hat is depending on W11 or W12, W21,
+
+302
+00:29:42.930 --> 00:29:46.410
+W22, B1 and B2? Because they are not directly connected with that
+
+303
+00:29:46.430 --> 00:29:50.070
+network. Okay? So this particular slide
+
+304
+00:29:50.430 --> 00:29:53.610
+is about that and you can see this one.
+
+305
+00:29:53.650 --> 00:29:57.050
+If we will... if you will unfold this Y hat,
+
+306
+00:29:57.110 --> 00:30:00.690
+okay? And you will write the Y hat as a nested
+
+307
+00:30:00.790 --> 00:30:01.250
+function,
+
+308
+00:30:02.310 --> 00:30:06.170
+then... Uh, w- it's a, it's a, it's a, uh, nested function obviously, but
+
+309
+00:30:06.180 --> 00:30:10.050
+when you will unfold this Y hat, you will end up with all the parameter
+
+310
+00:30:10.110 --> 00:30:13.110
+which is a part of, which is a part of this Y hat.
+
+311
+00:30:13.130 --> 00:30:14.570
+For example, Y hat
+
+312
+00:30:15.770 --> 00:30:17.990
+is directly w- depending on this equation,
+
+313
+00:30:18.050 --> 00:30:21.889
+V1H1V2S2andV3. Fine? And
+
+314
+00:30:21.930 --> 00:30:25.710
+this H1, H1 we got as a
+
+315
+00:30:25.790 --> 00:30:29.402
+ReLu of Z1.Means from the first neuron in the hidden
+
+316
+00:30:29.482 --> 00:30:33.382
+layer, we got Z1 as a weighted sum plus bias and when we pass
+
+317
+00:30:33.422 --> 00:30:36.742
+that weighted sum plus bias through the activation function ReLu, we got
+
+318
+00:30:36.862 --> 00:30:40.502
+H1. And similarly for H2 also, we calculated
+
+319
+00:30:40.622 --> 00:30:43.782
+Z2, passed it through the activation function ReLu, we got
+
+320
+00:30:43.962 --> 00:30:47.662
+H2. Now if you see how this Z1,
+
+321
+00:30:48.482 --> 00:30:52.202
+uh, eh, have been calculated, it is W11 X1 W12
+
+322
+00:30:52.342 --> 00:30:56.162
+X2 plus V1 and Z2 is being calculated by W21 X1 W22
+
+323
+00:30:56.302 --> 00:31:00.282
+X2 B2. Okay, now these are all the values for,
+
+324
+00:31:00.382 --> 00:31:04.322
+uh, equations for these, these, uh, variables. You can say that.
+
+325
+00:31:04.342 --> 00:31:08.042
+So now what I'm doing is I'm just substituting these value in place of
+
+326
+00:31:08.102 --> 00:31:10.962
+this... In, in this loss or in place of this Y
+
+327
+00:31:10.982 --> 00:31:14.502
+hat. So let me, uh, uh, say that this
+
+328
+00:31:14.602 --> 00:31:16.602
+equation I'm expanding first of all.
+
+329
+00:31:16.622 --> 00:31:20.482
+So here Y hat V1 and in place of H1,
+
+330
+00:31:20.542 --> 00:31:22.062
+I'm first writing this ReLu.
+
+331
+00:31:23.002 --> 00:31:26.862
+So you can see here ReLu, right? And, uh,
+
+332
+00:31:26.962 --> 00:31:29.502
+um, you can see a ReLu and then... One second.
+
+333
+00:31:29.542 --> 00:31:33.062
+Let me take some, uh,
+
+334
+00:31:33.242 --> 00:31:37.042
+pointer. Uh, so let
+
+335
+00:31:37.202 --> 00:31:37.842
+me take
+
+336
+00:31:38.782 --> 00:31:39.032
+this.
+
+337
+00:31:40.002 --> 00:31:43.922
+Uh, true. Okay, so this one. Uh, first of all, I'm
+
+338
+00:31:43.962 --> 00:31:47.662
+taking this ReLu, okay? And then, uh, here
+
+339
+00:31:47.742 --> 00:31:51.162
+after ReLu, inside the ReLu we have this Z1.
+
+340
+00:31:51.172 --> 00:31:54.862
+And what is Z1? Z1 is this W11 X1 W12 X2 and
+
+341
+00:31:54.882 --> 00:31:58.602
+V1. So ins- in place of this, uh, Z1, I'm writing this whole
+
+342
+00:31:58.642 --> 00:32:01.872
+equation. So V1 H1, here we have
+
+343
+00:32:02.102 --> 00:32:05.982
+H1 and this H1 is written completely as ReLu of W11
+
+344
+00:32:06.122 --> 00:32:09.922
+X1 W12 X2 and V1. Now this part, this
+
+345
+00:32:10.002 --> 00:32:13.582
+part in the equation V2 into H2. So V2 is written as it is
+
+346
+00:32:13.622 --> 00:32:17.302
+here and H2 is written as ReLu into W21
+
+347
+00:32:17.522 --> 00:32:19.112
+X1 W22 X2 V2.
+
+348
+00:32:19.942 --> 00:32:23.702
+Okay? And V3 is as it is. Now you can see that, right?
+
+349
+00:32:23.742 --> 00:32:27.422
+My loss, loss is Y minus Y hat, and Y
+
+350
+00:32:27.502 --> 00:32:31.422
+hat is a function of all the parameters what we have in
+
+351
+00:32:31.442 --> 00:32:35.362
+the network. You can see this. And that's why I said loss as a function
+
+352
+00:32:35.462 --> 00:32:37.942
+of all trainable parameters in the network,
+
+353
+00:32:38.762 --> 00:32:42.542
+okay? And that was the reason why we were updating
+
+354
+00:32:42.622 --> 00:32:45.282
+each and every parameter because, uh,
+
+355
+00:32:46.142 --> 00:32:48.622
+uh, i- if you can recall, uh,
+
+356
+00:32:49.902 --> 00:32:52.522
+if you can recall... Uh, one
+
+357
+00:32:52.682 --> 00:32:55.382
+second. Take some
+
+358
+00:32:55.422 --> 00:32:59.351
+other... No, this one. Let
+
+359
+00:32:59.422 --> 00:33:03.322
+me see this. Okay, so if you can recall
+
+360
+00:33:03.642 --> 00:33:07.442
+this particular plot which we had seen earlier also where we
+
+361
+00:33:07.502 --> 00:33:11.482
+had, uh, this, uh, um, eh, on the X axis we
+
+362
+00:33:11.502 --> 00:33:15.242
+were having the parameters. We had a parameter is AW11,
+
+363
+00:33:15.302 --> 00:33:18.322
+W11, okay? And on the Y axis we have a
+
+364
+00:33:18.362 --> 00:33:22.122
+loss. So what we said that if I change one
+
+365
+00:33:22.202 --> 00:33:26.102
+unit in W11, how much change it brings in the loss?
+
+366
+00:33:26.162 --> 00:33:29.642
+That itself is known as partial derivative or gradient,
+
+367
+00:33:29.682 --> 00:33:33.302
+okay? Now my loss is depending on each and every parameters in the
+
+368
+00:33:33.322 --> 00:33:37.222
+network. So what we are trying to do in the back propagation, we are trying
+
+369
+00:33:37.262 --> 00:33:39.302
+to see if I change one unit
+
+370
+00:33:40.182 --> 00:33:43.902
+or... in that particular parameter like W11, W12, B1,
+
+371
+00:33:43.942 --> 00:33:47.882
+B2, whatever is the parameter, how much change it is bringing in
+
+372
+00:33:47.942 --> 00:33:51.592
+the loss. Because as X will change, Y will change
+
+373
+00:33:52.102 --> 00:33:55.952
+and it depends on what is the slope, what is the gradient, and that,
+
+374
+00:33:56.002 --> 00:33:59.052
+that change, that much change we want to bring, okay?
+
+375
+00:33:59.102 --> 00:34:03.042
+In the next iteration when we will feed the next input and to see that, okay,
+
+376
+00:34:03.062 --> 00:34:06.392
+by changing that much, uh, i- in this particular
+
+377
+00:34:06.462 --> 00:34:10.142
+parameter, uh, then whether it is reducing my loss or i- uh,
+
+378
+00:34:10.182 --> 00:34:12.582
+increasing my loss or whatever it is.
+
+379
+00:34:12.642 --> 00:34:15.842
+Okay, so that was the intuition behind it, that why we were
+
+380
+00:34:16.182 --> 00:34:19.982
+changing, why we did not, uh, um, stopped
+
+381
+00:34:20.202 --> 00:34:23.742
+only at the output layer because my, uh, because
+
+382
+00:34:23.782 --> 00:34:27.722
+my... One second.
+
+383
+00:34:27.762 --> 00:34:31.462
+Because my ultimate Y hat was depending on V1, V2, V3.
+
+384
+00:34:31.482 --> 00:34:35.072
+But no, it is not the case, although it looks like, but then W11 and
+
+385
+00:34:35.202 --> 00:34:38.962
+W12 and all other parameters are also connected with the Y
+
+386
+00:34:38.982 --> 00:34:42.932
+hat in the nested fashion. Hence, we decided to change each of
+
+387
+00:34:42.982 --> 00:34:46.582
+these parameters. Okay, I think this, this, this is clear.
+
+388
+00:34:46.642 --> 00:34:49.622
+That, that's why, uh, we, we go ahead and change all those
+
+389
+00:34:49.642 --> 00:34:53.551
+parameters. Okay, now the point is concept of
+
+390
+00:34:53.551 --> 00:34:56.542
+gradient. So once we decide that, okay, each and
+
+391
+00:34:56.622 --> 00:35:00.502
+every parameter we need to update, we have an update
+
+392
+00:35:00.562 --> 00:35:02.712
+rule. And in the update rule, we have seen that, right?
+
+393
+00:35:02.842 --> 00:35:06.422
+Here again, that we have this part which is called a gradient.
+
+394
+00:35:06.482 --> 00:35:10.242
+So this gradient has a significant, uh, you can say,
+
+395
+00:35:10.322 --> 00:35:13.862
+uh, contr- uh, say in this particular equation that
+
+396
+00:35:14.282 --> 00:35:17.962
+whatever is this, uh, gradient, based on that, my
+
+397
+00:35:18.302 --> 00:35:21.402
+update will happen for that particular parameter.
+
+398
+00:35:21.442 --> 00:35:25.022
+So h- so the point is, uh, I have already although told
+
+399
+00:35:25.342 --> 00:35:28.062
+that Y gradient, the concept of gradient, so
+
+400
+00:35:29.602 --> 00:35:33.522
+ultimate goal is that we need to minimize the loss and the gradient says
+
+401
+00:35:33.562 --> 00:35:37.232
+that rate of change of loss with respect to a particular parameter.
+
+402
+00:35:37.382 --> 00:35:41.222
+Now we understood that my loss depends on all the parameters.
+
+403
+00:35:41.262 --> 00:35:45.042
+Whatever is the connection in the fully connected network, your loss depends on all
+
+404
+00:35:45.062 --> 00:35:48.732
+the parameters and hence we decide to, uh, change those
+
+405
+00:35:48.802 --> 00:35:52.382
+parameter, and for that one, we need the gradient because we don't know how much to
+
+406
+00:35:52.402 --> 00:35:56.022
+change. And that's where this gradient will help us in or-
+
+407
+00:35:56.402 --> 00:36:00.262
+until that, okay, in order to go, uh, go to the minima, okay,
+
+408
+00:36:00.362 --> 00:36:04.182
+this much change you, you should bet, uh, you, you should
+
+409
+00:36:04.242 --> 00:36:07.642
+do at this particular iteration. Okay?
+
+410
+00:36:07.682 --> 00:36:10.922
+So that's why, uh, the gradient is required.
+
+411
+00:36:10.962 --> 00:36:14.542
+So the gradient value, if you see that, uh, that
+
+412
+00:36:14.642 --> 00:36:18.282
+gradient, if it is greater than zero gradient, what we don't
+
+413
+00:36:18.382 --> 00:36:21.662
+want for the gradient is that we don't want gradient value to be
+
+414
+00:36:21.742 --> 00:36:25.342
+zero, right? We don't want gradient to be zero. Why?
+
+415
+00:36:25.362 --> 00:36:29.102
+Because if suppose this is zero, in this equation if the del L by del
+
+416
+00:36:29.162 --> 00:36:31.956
+theta is zero, what will happen? This whole term is zero....
+
+417
+00:36:31.986 --> 00:36:34.366
+if this whole term is zero, then theta is theta.
+
+418
+00:36:34.406 --> 00:36:36.746
+That means that my parameter is not changing.
+
+419
+00:36:36.806 --> 00:36:40.645
+If my parameter is not changing, there won't be any change in the loss
+
+420
+00:36:40.746 --> 00:36:44.686
+also, right? But we are, we ultimately, the goal is
+
+421
+00:36:44.726 --> 00:36:47.706
+to reduce the loss, so we need the change in this
+
+422
+00:36:47.746 --> 00:36:51.526
+theta and it depends on the second, the second
+
+423
+00:36:51.606 --> 00:36:53.966
+part of this equation, uh, this, this gradient.
+
+424
+00:36:54.006 --> 00:36:57.886
+So I don't want either my learning rate or
+
+425
+00:36:58.206 --> 00:37:01.926
+my, uh, gradient to be zero. I don't want this part to be zero.
+
+426
+00:37:01.946 --> 00:37:04.366
+So now I'm left with, uh, two choices.
+
+427
+00:37:04.426 --> 00:37:08.386
+Either this, this particular, uh, del L by del theta will be
+
+428
+00:37:08.466 --> 00:37:10.346
+greater than zero or it will be less than zero.
+
+429
+00:37:11.326 --> 00:37:14.916
+So when this del L by del theta, suppose when you are calculating the
+
+430
+00:37:14.966 --> 00:37:18.466
+gradient and it is coming greater than zero, so what will happen?
+
+431
+00:37:18.476 --> 00:37:19.836
+Eh, what does it mean? It means that
+
+432
+00:37:20.726 --> 00:37:23.986
+your increase in theta will increase the loss.
+
+433
+00:37:24.006 --> 00:37:27.506
+Theta represent here any parameter like W, I, J, V, K or
+
+434
+00:37:27.566 --> 00:37:31.246
+BL. So, it is representing that if you will increase that
+
+435
+00:37:31.286 --> 00:37:35.146
+particular parameter value, your loss will ongo- uh, your loss
+
+436
+00:37:35.186 --> 00:37:38.606
+will also increase. Okay?
+
+437
+00:37:38.666 --> 00:37:41.666
+Hence, we don't want to go in that direction.
+
+438
+00:37:41.686 --> 00:37:45.106
+We'll go into the opposite direction of it, opposite direction of
+
+439
+00:37:45.146 --> 00:37:49.126
+my, uh, gradient. Okay? Now the second
+
+440
+00:37:49.206 --> 00:37:53.186
+one is, it may happen that your, this, uh, gradient is less than
+
+441
+00:37:53.246 --> 00:37:56.606
+zero. Okay? That means that if you'll
+
+442
+00:37:56.766 --> 00:37:59.126
+increase this theta, your loss will
+
+443
+00:37:59.186 --> 00:38:02.926
+decrease. If you'll increase the theta or parameter
+
+444
+00:38:02.966 --> 00:38:06.506
+value, your loss will decrease. Fine?
+
+445
+00:38:06.546 --> 00:38:10.326
+So, uh, what happens in both the cases, we are
+
+446
+00:38:10.366 --> 00:38:13.586
+moving downward. Now h- I'll show you how. Okay?
+
+447
+00:38:13.646 --> 00:38:16.686
+I'll show you how. So let us see this particular curve.
+
+448
+00:38:16.726 --> 00:38:19.686
+You have seen it earlier, I know that, in the previous course.
+
+449
+00:38:19.726 --> 00:38:23.216
+We have discussed about it but then still, just to recall all those things.
+
+450
+00:38:23.246 --> 00:38:26.986
+Now we have talked about this, uh, convex curve,
+
+451
+00:38:27.026 --> 00:38:30.706
+right? And this is the curve for a loss, loss
+
+452
+00:38:30.746 --> 00:38:34.586
+function, okay? And I want my loss to be minimum,
+
+453
+00:38:34.646 --> 00:38:38.186
+minimum v- somewhere here, say that this, this is the value where it is minimum
+
+454
+00:38:39.306 --> 00:38:42.906
+in this particular curve. So now what I'm trying to say
+
+455
+00:38:42.966 --> 00:38:46.106
+is, here it is minimum, that means that this point is zero
+
+456
+00:38:46.826 --> 00:38:50.516
+because the loss is zero, uh, loss is minimum at the zero, so this is
+
+457
+00:38:50.546 --> 00:38:54.366
+zero. This side it is less than zero and this side
+
+458
+00:38:54.606 --> 00:38:57.886
+it is more than zero, okay? Uh, one
+
+459
+00:38:57.966 --> 00:38:59.986
+second, let me just
+
+460
+00:39:01.126 --> 00:39:04.386
+take the... Now, so here it is
+
+461
+00:39:04.626 --> 00:39:07.426
+zero, okay? And this side it is increasing
+
+462
+00:39:08.546 --> 00:39:11.366
+greater than zero and this side it is less than zero.
+
+463
+00:39:11.406 --> 00:39:14.926
+Now what I'm trying to say is when you calculate this, this
+
+464
+00:39:15.006 --> 00:39:18.866
+part, del L by del theta, it may happen that this value is
+
+465
+00:39:18.906 --> 00:39:21.126
+positive, this value is positive.
+
+466
+00:39:21.146 --> 00:39:25.026
+That means that, it says that if you increase the theta or
+
+467
+00:39:25.086 --> 00:39:29.035
+wherev- wherever is the theta, so if this is positive, this mean that you are this
+
+468
+00:39:29.066 --> 00:39:32.466
+side, th- this particular slope, okay? What you are seeing here.
+
+469
+00:39:32.526 --> 00:39:35.255
+If this value is negative, that means that you are this side.
+
+470
+00:39:35.286 --> 00:39:39.166
+And what it's, uh, what is the intuition behind it is, that if you will increase
+
+471
+00:39:39.226 --> 00:39:42.035
+the theta, your loss will increase, isn't it?
+
+472
+00:39:42.066 --> 00:39:45.866
+This curve is going up. Fine? So if theta will increase, corresponding
+
+473
+00:39:46.006 --> 00:39:49.946
+Y value will increase. Now if, if, if the slope is
+
+474
+00:39:49.986 --> 00:39:53.806
+like that in this direction, if the theta will increase, loss will
+
+475
+00:39:53.866 --> 00:39:56.866
+decrease because slope is going downward.
+
+476
+00:39:56.886 --> 00:40:00.786
+But whatever is the case, you see this, the beauty of this particular algorithm,
+
+477
+00:40:00.846 --> 00:40:03.626
+whatever is the case, you are going downward.
+
+478
+00:40:03.666 --> 00:40:06.506
+So that is what call we are taking here.
+
+479
+00:40:06.526 --> 00:40:10.356
+Whether, uh, your slope is here this side or your slope is here
+
+480
+00:40:10.386 --> 00:40:13.306
+this side, doesn't matter. You are going towards the global
+
+481
+00:40:13.346 --> 00:40:17.306
+minimum. Okay? And that is what
+
+482
+00:40:17.346 --> 00:40:21.246
+this particular part tells us in this particular loss o- in
+
+483
+00:40:21.306 --> 00:40:23.786
+this particular, uh, update rule.
+
+484
+00:40:23.826 --> 00:40:27.246
+Because this value will, will be m- it may be positive.
+
+485
+00:40:27.286 --> 00:40:29.046
+If it is positive, this what will happen?
+
+486
+00:40:29.106 --> 00:40:33.026
+You will, theta minus something you will do.
+
+487
+00:40:33.066 --> 00:40:35.206
+Okay? Theta minus something you will do. Then what does it mean?
+
+488
+00:40:35.226 --> 00:40:38.866
+Suppose theta is equal to one. Suppose, okay?
+
+489
+00:40:38.906 --> 00:40:42.176
+And this part is positive, say that it, it has come as, uh,
+
+490
+00:40:42.486 --> 00:40:46.446
+0.8, okay? This is 0.8. Say that my,
+
+491
+00:40:46.566 --> 00:40:49.725
+uh, learning rate is equal to one. So what you will do in this case?
+
+492
+00:40:49.926 --> 00:40:53.785
+1 minus 0.8 is equal to zero point- uh, 1 minus
+
+493
+00:40:54.006 --> 00:40:57.906
+0.8 is 0.2. That means that suppose this point was one,
+
+494
+00:40:57.946 --> 00:41:01.576
+you have come to this particular point, means you are going towards this
+
+495
+00:41:01.586 --> 00:41:03.926
+direction, towards this minimum.
+
+496
+00:41:03.946 --> 00:41:07.306
+Now suppose this value is positive, sorry, negative, okay?
+
+497
+00:41:07.326 --> 00:41:11.166
+Del L by del theta is, uh, uh, negative, that means that what
+
+498
+00:41:11.226 --> 00:41:13.886
+will happen? Negative, negative becomes positive.
+
+499
+00:41:13.906 --> 00:41:17.886
+This equation becomes positive and now whatever is the theta, you will
+
+500
+00:41:17.986 --> 00:41:21.646
+add into it. So this t- this side, you are
+
+501
+00:41:21.686 --> 00:41:24.706
+decreasing the theta and this side you will increase the theta.
+
+502
+00:41:24.726 --> 00:41:28.466
+That is how this equation works for both the side of this particular
+
+503
+00:41:28.566 --> 00:41:31.676
+curve. So the takeaway is
+
+504
+00:41:33.146 --> 00:41:36.006
+you have to go into the opposite direction of the gradient.
+
+505
+00:41:36.046 --> 00:41:38.906
+If the gradient is here, means upward,
+
+506
+00:41:38.966 --> 00:41:42.396
+increasing, you have to go downward because
+
+507
+00:41:42.446 --> 00:41:45.666
+here, here you have the lo- uh, global minimum.
+
+508
+00:41:45.735 --> 00:41:49.546
+If your, uh, slope is downward, means decreasing,
+
+509
+00:41:49.606 --> 00:41:52.066
+okay? Uh, then, then also you have to go downward.
+
+510
+00:41:52.086 --> 00:41:53.996
+In both the cases, you have to go downward only.
+
+511
+00:41:54.446 --> 00:41:57.696
+So this side also and this side also we are going downward and hence you are
+
+512
+00:41:57.746 --> 00:42:01.666
+achieving here. And that's why this equation, one equation works in both
+
+513
+00:42:01.706 --> 00:42:05.286
+the cases. So you see that this particular part of the equation is
+
+514
+00:42:05.326 --> 00:42:07.186
+acting like a sign,
+
+515
+00:42:08.226 --> 00:42:11.985
+sign that okay, whether I am going to increase
+
+516
+00:42:12.066 --> 00:42:15.586
+my theta or parameter value or decrease my theta value,
+
+517
+00:42:15.696 --> 00:42:19.646
+positive or negative, that is what this particular part of the
+
+518
+00:42:19.706 --> 00:42:21.846
+equation, this gradient is telling us.
+
+519
+00:42:21.886 --> 00:42:25.556
+So gradient tells the slope of the loss curve at the current parameter
+
+520
+00:42:25.626 --> 00:42:29.506
+value. Gradient says how steeply the loss
+
+521
+00:42:29.566 --> 00:42:33.006
+is increasing or decreasing, that we have already seen, uh, talked.
+
+522
+00:42:33.066 --> 00:42:36.272
+If the gradient is positive like this side here......
+
+523
+00:42:36.272 --> 00:42:40.162
+the curve is sloping upward. If the gradient moves opposite,
+
+524
+00:42:40.202 --> 00:42:44.182
+gradient, uh, descent moves opposite, the slope, uh, the slope is
+
+525
+00:42:44.241 --> 00:42:48.142
+downhill. That is the min- at the minimum, slope is equal to zero, the flat point
+
+526
+00:42:48.182 --> 00:42:51.582
+means here, okay? The slope is fla-flat, uh, flat point.
+
+527
+00:42:51.622 --> 00:42:54.542
+This is what we want to achieve ultimately. Okay?
+
+528
+00:42:54.602 --> 00:42:58.402
+So... Clear. So, I
+
+529
+00:42:58.422 --> 00:43:02.322
+guess it, it, it has given you more clarity that, okay, why this update rule?
+
+530
+00:43:02.362 --> 00:43:06.062
+What is the significance here of the gradient, okay, and how this gradient
+
+531
+00:43:06.162 --> 00:43:09.482
+works for both the side of this curve.
+
+532
+00:43:09.491 --> 00:43:11.602
+And this is called convex curve, right?
+
+533
+00:43:11.622 --> 00:43:15.152
+Which, uh, which, um, we, uh, uh...
+
+534
+00:43:15.152 --> 00:43:18.741
+And in the convex curve, the good part is you have only one minima and that i- that
+
+535
+00:43:18.782 --> 00:43:22.642
+happens to be the global minima and then this equation help us, or this
+
+536
+00:43:22.662 --> 00:43:26.422
+gradient help us to go in the direction of that global
+
+537
+00:43:26.622 --> 00:43:27.962
+minima.
+
+538
+00:43:28.902 --> 00:43:32.022
+Okay, so this is the concept of gradient and, uh, minima.
+
+539
+00:43:32.032 --> 00:43:35.702
+Uh, it is related with the minima. Okay, so
+
+540
+00:43:35.721 --> 00:43:39.702
+now, uh, the, uh, this is for two dimension, how this
+
+541
+00:43:39.782 --> 00:43:42.122
+loss is changing with one parameter, right?
+
+542
+00:43:42.262 --> 00:43:46.192
+Suppose you have just one parameter here, W_11. Okay?
+
+543
+00:43:46.202 --> 00:43:49.962
+But now in our network we have seen we have nine parameters. Okay?
+
+544
+00:43:49.982 --> 00:43:53.882
+We have nine parameters. That means that for every parameter, we are doing this
+
+545
+00:43:53.942 --> 00:43:57.882
+calculation. Means, for every parameter, we are calculating this gradient or
+
+546
+00:43:57.962 --> 00:44:01.712
+slope, and we are deciding that, okay, in which direction we have to
+
+547
+00:44:01.802 --> 00:44:05.642
+go to achieve the global minima. So, here the
+
+548
+00:44:05.682 --> 00:44:09.662
+example of the 3D, okay, because 9D I can't show you.
+
+549
+00:44:09.702 --> 00:44:12.082
+So but in, 'till 3D we can visualize it.
+
+550
+00:44:12.102 --> 00:44:15.122
+For example, here you can see that, that... See this.
+
+551
+00:44:15.142 --> 00:44:17.302
+This is theta_1, say that this is W_11.
+
+552
+00:44:17.322 --> 00:44:20.912
+This is theta_2, so that this is W_12. These two are the parama-...
+
+553
+00:44:20.942 --> 00:44:24.562
+And this is the loss. This is, this, uh, axis is the loss.
+
+554
+00:44:24.602 --> 00:44:28.592
+So, my gradient is minimum here because this
+
+555
+00:44:28.622 --> 00:44:32.372
+is the zero. This is, uh, you can say this is the,
+
+556
+00:44:32.462 --> 00:44:35.772
+uh, loss-loss is zero. Oh, okay? So,
+
+557
+00:44:36.902 --> 00:44:40.122
+maybe this is the point, suppose we have, so what we have to do is,
+
+558
+00:44:40.862 --> 00:44:44.822
+it may happen that your theta value you will initialize somewhere here in this side
+
+559
+00:44:44.902 --> 00:44:48.662
+or this side. Okay? Any, any random value y- you don't want to initialize it with
+
+560
+00:44:48.742 --> 00:44:51.542
+zero, so you will be somewhere this side or this side.
+
+561
+00:44:51.582 --> 00:44:55.502
+Similarly, theta_2 you will initialize this side or this side and any side of the
+
+562
+00:44:55.562 --> 00:44:59.042
+zero. But the ultimate job is to reach, suppose
+
+563
+00:44:59.122 --> 00:45:03.082
+here, then what will happen? You have to, um, y- you have to
+
+564
+00:45:03.122 --> 00:45:06.182
+see that, okay, what is the slope with respect to...
+
+565
+00:45:06.282 --> 00:45:10.182
+Uh, so w-one more thing is, uh, what you have to do is whenever
+
+566
+00:45:10.261 --> 00:45:14.232
+you calculate a gradient, okay, gradient, gradient of that, uh,
+
+567
+00:45:14.282 --> 00:45:17.662
+with respect to theta, you have to equate it with zero.
+
+568
+00:45:17.682 --> 00:45:21.342
+Now, that is the place where you will get the minima for,
+
+569
+00:45:21.362 --> 00:45:24.852
+with, for that particular parameter. So what you will do?
+
+570
+00:45:24.862 --> 00:45:28.682
+Wah-partial derivative of loss with respect to theta_1 is equal to zero you will
+
+571
+00:45:28.742 --> 00:45:32.582
+do. Partial derivative of loss with respect to theta_2 is equal to zero you will do
+
+572
+00:45:33.122 --> 00:45:36.642
+and that's how you will, uh, get the value of theta_1, theta_2 and then you can
+
+573
+00:45:36.702 --> 00:45:40.382
+decide that, okay, what is the point where the global minima and in that direction
+
+574
+00:45:40.422 --> 00:45:44.322
+you will start going. So this is, uh, same thing what
+
+575
+00:45:44.342 --> 00:45:47.471
+we have seen for one para- one, uh, you can say that,
+
+576
+00:45:48.322 --> 00:45:51.632
+uh, parameter. Now this is for the two parameter and
+
+577
+00:45:51.642 --> 00:45:55.282
+similarly we can extend it for nine parameters also and
+
+578
+00:45:55.502 --> 00:45:57.752
+hence it works in the multi dime-...
+
+579
+00:45:57.862 --> 00:46:01.542
+Uh, um-um-uh, for every dimension it calculates the gradient and then it
+
+580
+00:46:01.562 --> 00:46:05.382
+trains all, uh, it calculates all those gradients by equating that value to the
+
+581
+00:46:05.422 --> 00:46:08.782
+zero and then it finds, okay, where is the global
+
+582
+00:46:08.842 --> 00:46:10.642
+minima.
+
+583
+00:46:11.662 --> 00:46:15.471
+Fine? So, uh, this is what is the concept of the
+
+584
+00:46:15.882 --> 00:46:19.682
+gradient. Now there is one more, one more part
+
+585
+00:46:19.822 --> 00:46:22.502
+in this particular equation is about the learning rate, okay?
+
+586
+00:46:23.142 --> 00:46:26.862
+So learning rate as you know, this one also we have
+
+587
+00:46:26.982 --> 00:46:30.882
+talked in the previous, uh, uh, class, previous course,
+
+588
+00:46:30.962 --> 00:46:34.270
+that, uh, how does this learning rate, uh, uh,
+
+589
+00:46:34.382 --> 00:46:38.202
+uh, how-how d- how does it behave? Suppose we take the learning rate
+
+590
+00:46:38.261 --> 00:46:42.132
+very small, then what happens? Suppose we take this learning rate very large,
+
+591
+00:46:42.162 --> 00:46:44.562
+then what will happen and moderate, then what will happen.
+
+592
+00:46:45.442 --> 00:46:48.721
+So you can see here, uh, the, uh, in the first case
+
+593
+00:46:49.221 --> 00:46:53.042
+when you take the learning rate very small, suppose you are at this side of the
+
+594
+00:46:53.382 --> 00:46:57.042
+curve, you can be any side. Here I'm showing for the right side.
+
+595
+00:46:57.062 --> 00:47:00.122
+Then what will happen? Because the learning rate, this value is very small, you
+
+596
+00:47:00.162 --> 00:47:04.112
+will slowly go in the direction of the global minima.
+
+597
+00:47:04.162 --> 00:47:07.922
+If it is very big, like third case right here, then it may
+
+598
+00:47:07.942 --> 00:47:11.622
+happen that you started from here and you jump to the other side
+
+599
+00:47:11.682 --> 00:47:13.582
+because the learning rate was very big.
+
+600
+00:47:13.622 --> 00:47:17.322
+You had to decrease this theta but then you have decreed it with a
+
+601
+00:47:17.402 --> 00:47:20.982
+significant amount. So you see this? This equation you have to always remember.
+
+602
+00:47:21.582 --> 00:47:24.622
+So either this part, this gradient or this learning
+
+603
+00:47:24.682 --> 00:47:28.642
+rate, uh, it-it, uh, if-if these two
+
+604
+00:47:28.662 --> 00:47:32.282
+values are very big or very small, it will impact on this overall
+
+605
+00:47:32.342 --> 00:47:34.682
+equation. That what will be the next value of the theta?
+
+606
+00:47:34.721 --> 00:47:38.362
+It depends on both of these, uh, both of these, uh,
+
+607
+00:47:38.422 --> 00:47:41.342
+uh, q-quantity, right? Learning rates and, uh, g-gradient
+
+608
+00:47:41.442 --> 00:47:45.322
+both. If you r-can recall the, in our earlier
+
+609
+00:47:45.422 --> 00:47:49.242
+case where, uh, we were getting this, uh, gradient as
+
+610
+00:47:49.302 --> 00:47:51.982
+very big. So we take a learning rate very
+
+611
+00:47:52.142 --> 00:47:56.022
+small. Okay? If we would have taken learning rate one also,
+
+612
+00:47:56.082 --> 00:47:59.082
+what would have happened? We would have seen the significant change in my
+
+613
+00:47:59.122 --> 00:48:02.362
+parameter. That is what we discussed, okay? You can see that.
+
+614
+00:48:02.482 --> 00:48:06.362
+1,4, 1,3, 97, 26, such a big gradient we were
+
+615
+00:48:06.402 --> 00:48:10.102
+getting. So if we would have taken say V_1, say that
+
+616
+00:48:10.362 --> 00:48:14.182
+1.2 minus 97.152. It's a huge change
+
+617
+00:48:14.221 --> 00:48:18.102
+around 95. Okay? Forget about the sign but 95 is
+
+618
+00:48:18.142 --> 00:48:21.842
+the change magni- in the magnitude in the V_1 with a hu-huge
+
+619
+00:48:21.902 --> 00:48:25.822
+change and you're, you will see that in such cases where the
+
+620
+00:48:25.842 --> 00:48:29.761
+gradients or you can say that this learning rate, one, one of these is
+
+621
+00:48:29.802 --> 00:48:33.622
+very big, you will see this kind of behavior of,
+
+622
+00:48:33.702 --> 00:48:37.221
+uh, the loss with respect to that particular parameter or even in the higher
+
+623
+00:48:37.261 --> 00:48:40.622
+dimension you can see that. So you are not converging.
+
+624
+00:48:40.682 --> 00:48:44.614
+Instead you are jumping to one another side of this particular curve.And
+
+625
+00:48:44.674 --> 00:48:48.553
+it may happen that you... By, uh, because, uh, you
+
+626
+00:48:48.573 --> 00:48:52.274
+will go here, there and it may happen that you will explode and you will go out of
+
+627
+00:48:52.294 --> 00:48:55.433
+this particular space itself. Okay?
+
+628
+00:48:55.473 --> 00:48:58.553
+That, that is another problem called exploding gradient problem, which I'll talk
+
+629
+00:48:58.594 --> 00:49:00.933
+later. But this is what may happen.
+
+630
+00:49:00.953 --> 00:49:04.243
+This is, this is what may happen with if you will take this learning rate value
+
+631
+00:49:04.294 --> 00:49:07.894
+very big. So, the good practice is to take this as
+
+632
+00:49:08.174 --> 00:49:12.134
+moderate. This, uh, as moderate. U- usually the moderate when I say
+
+633
+00:49:12.174 --> 00:49:16.134
+it is like 0.01, okay? Or 0.1.
+
+634
+00:49:16.194 --> 00:49:20.013
+So, this is what is the range, I have seen that but that moderate
+
+635
+00:49:20.094 --> 00:49:22.323
+has also its own meaning, it d- it's, uh...
+
+636
+00:49:22.354 --> 00:49:25.913
+So, this is a hyper parameter which is not fixed.
+
+637
+00:49:25.953 --> 00:49:29.073
+It is also tunable, it is also learnable along with the
+
+638
+00:49:29.573 --> 00:49:32.894
+weights, biases and what gradient you are getting.
+
+639
+00:49:32.913 --> 00:49:36.894
+This parameter also you learn with the, with the training of the neural network.
+
+640
+00:49:36.933 --> 00:49:40.274
+So, it is not fixed. Fine?
+
+641
+00:49:40.334 --> 00:49:43.674
+So, these are the three cases, learning rate and this also
+
+642
+00:49:43.834 --> 00:49:47.754
+impacts on your, uh, in your, uh, uh, you can say that
+
+643
+00:49:47.794 --> 00:49:50.874
+the back propagation in this update rule. Fine?
+
+644
+00:49:50.913 --> 00:49:54.904
+So, it decide how, how, how you are... How...
+
+645
+00:49:54.913 --> 00:49:58.234
+Whether you're converging, not converging, how fast you're converging
+
+646
+00:49:58.894 --> 00:50:02.614
+and how slow you will converge. This e- uh, this eta learning ra- rate
+
+647
+00:50:02.674 --> 00:50:05.714
+has the significant, uh, uh, say in that
+
+648
+00:50:05.794 --> 00:50:09.394
+one. Fine? So, here you can read this
+
+649
+00:50:09.433 --> 00:50:13.364
+thing. So, the point is, what is convergence? Okay.
+
+650
+00:50:13.513 --> 00:50:17.254
+Uh, because we have been talking about what is, uh, the convergence, convergence
+
+651
+00:50:17.294 --> 00:50:20.473
+and so on in all the cases. But what is the meaning of convergence?
+
+652
+00:50:20.484 --> 00:50:24.044
+So, the convergence refers to a point in training where
+
+653
+00:50:24.094 --> 00:50:27.634
+updates to the parameter become very small. Fine?
+
+654
+00:50:27.654 --> 00:50:30.783
+So the point is, okay, if I will plot, I'll plot...
+
+655
+00:50:30.814 --> 00:50:34.714
+I can understand always but if we plot also how, where do we understand,
+
+656
+00:50:34.754 --> 00:50:38.493
+okay, we are converging? Or if you see our loss values, how do we
+
+657
+00:50:38.513 --> 00:50:42.413
+understand we are converging? So this is the, um, this is the point what
+
+658
+00:50:42.433 --> 00:50:46.254
+we have to observe. It refers to a point in training where
+
+659
+00:50:46.314 --> 00:50:49.573
+updates to, updates to the parameter becomes very small, almost
+
+660
+00:50:49.634 --> 00:50:52.774
+negligible. Then you can say that my
+
+661
+00:50:53.533 --> 00:50:56.993
+algorithm or my network has converged.
+
+662
+00:50:57.033 --> 00:51:00.973
+Okay. Uh, updates to the parameter becomes very small because the loss
+
+663
+00:51:01.053 --> 00:51:04.493
+function is no longer decreasing significantly.
+
+664
+00:51:04.553 --> 00:51:07.814
+If loss will, uh, is not changing, uh, that means that,
+
+665
+00:51:07.874 --> 00:51:11.254
+uh, your parameters are conve- have converged.
+
+666
+00:51:11.294 --> 00:51:15.094
+That is the maximum those parameters can do with the given set of the input
+
+667
+00:51:15.134 --> 00:51:19.013
+and output. Fine? So, this
+
+668
+00:51:19.053 --> 00:51:22.874
+is the, uh, just a, uh, representation of that, that you have a
+
+669
+00:51:22.953 --> 00:51:26.614
+loss on the Y-axis. So, how the loss i- is decreasing?
+
+670
+00:51:26.654 --> 00:51:30.573
+You can say that after certain point if you see that it is almost
+
+671
+00:51:30.614 --> 00:51:34.453
+constant. It is almost constant. That means that your,
+
+672
+00:51:34.513 --> 00:51:37.894
+your network has, uh, converged and then,
+
+673
+00:51:38.013 --> 00:51:40.953
+um, the, there is no further update in the parameter.
+
+674
+00:51:40.993 --> 00:51:44.614
+So, you can stop training. And if you feel that, okay, this is not
+
+675
+00:51:44.654 --> 00:51:48.274
+the, um, uh, you can, eh, still it is very far from
+
+676
+00:51:48.354 --> 00:51:52.194
+zero, or, uh, then you have to see if there's some other ways.
+
+677
+00:51:52.274 --> 00:51:55.953
+Means, the number of iteration will not help in such a case.
+
+678
+00:51:56.654 --> 00:52:00.614
+Fine? So, when the gradients or loss change fall below the threshold,
+
+679
+00:52:00.654 --> 00:52:03.973
+we say that training has converged. That is also another way of understanding that.
+
+680
+00:52:03.993 --> 00:52:07.933
+The zero you will never achieve but suppose you are achieving something near the
+
+681
+00:52:08.094 --> 00:52:10.854
+0.5, 0.4, you can say that it has
+
+682
+00:52:10.913 --> 00:52:12.743
+converged. Okay.
+
+683
+00:52:13.913 --> 00:52:17.734
+So, the meaning is network has learned parameter close to a minimum, further
+
+684
+00:52:17.774 --> 00:52:20.413
+update produced almost no improvement.
+
+685
+00:52:20.453 --> 00:52:24.374
+So, that is the meaning of the convergence.
+
+686
+00:52:24.433 --> 00:52:28.004
+Okay, so, a- a- any queries so far? Then I'll go to the next part for the
+
+687
+00:52:28.053 --> 00:52:30.714
+stochastic batch and mini-batch.
+
+688
+00:52:30.754 --> 00:52:34.573
+Uh, sir, uh, you brought out very clearly about the convex, uh, thing and how we
+
+689
+00:52:34.614 --> 00:52:37.663
+are using this back provocation and we're following the global minimizer.
+
+690
+00:52:38.194 --> 00:52:42.033
+Sir, like, in case if, suppose if I have a data set where I'm getting a con-
+
+691
+00:52:42.134 --> 00:52:46.114
+uh, concave function. So at that time the curve will be i- inverted
+
+692
+00:52:46.513 --> 00:52:50.493
+U kind of thing. So at that point of terms instead of taking a logs,
+
+693
+00:52:50.614 --> 00:52:54.274
+uh, can I go for accuracy and I can evaluate for the maximization of
+
+694
+00:52:54.283 --> 00:52:57.033
+accuracy? Can I use that inference?
+
+695
+00:52:57.053 --> 00:53:00.174
+Because when we're having this global minimum, you're going for loss to minimize.
+
+696
+00:53:00.214 --> 00:53:03.144
+So, if we go for a concave function, then my...
+
+697
+00:53:03.144 --> 00:53:07.073
+It'll be for maximization. So at that time, I can change the in- thing
+
+698
+00:53:07.134 --> 00:53:10.654
+to accuracy, uh, as my goal and I can go for
+
+699
+00:53:10.794 --> 00:53:14.634
+maximization of accuracy. So that can be used or I have to convert this
+
+700
+00:53:14.694 --> 00:53:17.404
+again to convex and go for, uh, this?
+
+701
+00:53:17.413 --> 00:53:20.913
+See, I'll tell you. Uh, see, uh, usually, usually
+
+702
+00:53:21.634 --> 00:53:24.933
+we... Uh, our, our neural networks or any kind of
+
+703
+00:53:24.953 --> 00:53:28.573
+algorithm, uh, we... The loss function is the
+
+704
+00:53:28.613 --> 00:53:32.354
+ultimate objective. We have to always minimize the loss function.
+
+705
+00:53:32.374 --> 00:53:35.374
+Right? And this, this accuracy what you are talking-
+
+706
+00:53:35.554 --> 00:53:36.714
+Sir.
+
+707
+00:53:36.723 --> 00:53:39.054
+... it is d- direct... It is... It depends on the loss.
+
+708
+00:53:39.094 --> 00:53:41.113
+If your loss will decrease, accuracy will increase.
+
+709
+00:53:41.134 --> 00:53:45.113
+So, if you will plot the accuracy plot, it will go into the other way.
+
+710
+00:53:45.154 --> 00:53:45.763
+See, because the loss-
+
+711
+00:53:46.174 --> 00:53:46.243
+Yes,
+
+712
+00:53:46.243 --> 00:53:47.913
+sir. ... is increasing, that means that accuracy has to
+
+713
+00:54:52.582 --> 00:54:56.422
+Yeah. But the good practice is this, what- what- uh, yeah.
+
+714
+00:54:56.431 --> 00:54:59.192
+Yes. So in case if I have a concave, then how to convert into convex,
+
+715
+00:54:59.262 --> 00:55:00.522
+sir?
+
+716
+00:55:00.562 --> 00:55:04.302
+No, I mean, see, the ultimate goal of learning is what we
+
+717
+00:55:04.362 --> 00:55:06.242
+want that we have to minimize this loss.
+
+718
+00:55:06.262 --> 00:55:07.132
+Minimize the loss, yes.
+
+719
+00:55:07.162 --> 00:55:10.402
+Okay? So that is the goal which we have set.
+
+720
+00:55:10.482 --> 00:55:13.782
+If you have set this goal and then you have
+
+721
+00:55:13.802 --> 00:55:17.382
+to... You- you will always fall- fall into this particular
+
+722
+00:55:17.462 --> 00:55:18.522
+situation. Then it-
+
+723
+00:55:18.542 --> 00:55:18.662
+Yes.
+
+724
+00:55:18.672 --> 00:55:22.562
+... will not be a situation we have to convert from that concave to convex
+
+725
+00:55:22.572 --> 00:55:25.602
+and those things will not come into the picture, right?
+
+726
+00:55:25.612 --> 00:55:25.612
+
+727
+00:55:25.642 --> 00:55:29.182
+Suppose you are not choosing the correct loss function, that is a separate case,
+
+728
+00:55:29.242 --> 00:55:33.222
+non-convex function you will get where you may have the multiple, uh, you can
+
+729
+00:55:33.302 --> 00:55:37.262
+say that, uh, uh, minima and you will have one global minima,
+
+730
+00:55:37.302 --> 00:55:41.152
+many local minima, and there is a chance to stuck into the local
+
+731
+00:55:41.242 --> 00:55:45.152
+minima. So there is a separate part for that which we'll see when
+
+732
+00:55:45.182 --> 00:55:49.122
+we'll go further. Okay? There are some other- other ways of
+
+733
+00:55:49.162 --> 00:55:53.142
+coming if you are not, uh, uh, uh, choosing the correct loss
+
+734
+00:55:53.202 --> 00:55:56.802
+function and if there is a multiple minima in your loss function.
+
+735
+00:55:56.862 --> 00:56:00.162
+So we'll see that in the, in the later classes.
+
+736
+00:56:00.562 --> 00:56:01.522
+Okay, sir.
+
+737
+00:56:01.542 --> 00:56:04.382
+Uh, sir, quick clarification for me.
+
+738
+00:56:04.422 --> 00:56:04.742
+Yes.
+
+739
+00:56:05.102 --> 00:56:08.442
+In the 3D graph that you have shown, uh, loss versus
+
+740
+00:56:08.562 --> 00:56:11.822
+parameter. Yeah, this one, this one.
+
+741
+00:56:11.902 --> 00:56:15.882
+Uh, for global minima, all the theta values, I mean, all
+
+742
+00:56:15.902 --> 00:56:17.762
+parameters must be, uh, zero.
+
+743
+00:56:18.002 --> 00:56:18.812
+Correct.
+
+744
+00:56:18.942 --> 00:56:22.902
+I mean to say when theta one is zero, is there a chance that theta
+
+745
+00:56:22.982 --> 00:56:25.202
+two must have other value?
+
+746
+00:56:25.262 --> 00:56:29.162
+No, no, you have to equate it at... Equate it at theta two, so
+
+747
+00:56:29.662 --> 00:56:32.922
+what I say that a minimum occurs when
+
+748
+00:56:32.962 --> 00:56:35.502
+gradient in every dimension is zero.
+
+749
+00:56:35.562 --> 00:56:38.712
+Okay, well, all the parameters must be zero. Okay.
+
+750
+00:56:38.742 --> 00:56:42.562
+So that is what we have to... Once you calculate this, equate it with a zero
+
+751
+00:56:42.742 --> 00:56:46.192
+and then see that what is the theta value you can extract from there and
+
+752
+00:56:46.222 --> 00:56:50.182
+then esti- uh, that is the point where it is going to
+
+753
+00:56:50.202 --> 00:56:53.782
+be minima. Yes, that is the point where it is going to be minima.
+
+754
+00:56:53.822 --> 00:56:56.352
+So it must be zero. That's why this slide comes.
+
+755
+00:56:56.622 --> 00:56:59.621
+Yes. So, sir, another small
+
+756
+00:56:59.762 --> 00:57:03.682
+query. Uh, you said, uh,
+
+757
+00:57:03.742 --> 00:57:06.642
+the gradients affect the learning rate of the model.
+
+758
+00:57:06.682 --> 00:57:07.282
+Yeah.
+
+759
+00:57:07.362 --> 00:57:11.242
+Uh, is always a higher learning rate is preferred
+
+760
+00:57:11.422 --> 00:57:13.132
+or no, it's
+
+761
+00:57:13.132 --> 00:57:16.732
+not? No, I say neither high nor small. None of...
+
+762
+00:57:16.822 --> 00:57:20.382
+Usually the moderate is the one which- which is preferred,
+
+763
+00:57:20.402 --> 00:57:24.302
+but that also comes with the situation in the sense that
+
+764
+00:57:24.482 --> 00:57:26.662
+what set of inputs you have-
+
+765
+00:57:26.982 --> 00:57:27.042
+Okay.
+
+766
+00:57:27.051 --> 00:57:30.782
+... what set of weights you are initialized with, that also depends on the
+
+767
+00:57:30.842 --> 00:57:32.762
+learning rate value.
+
+768
+00:57:32.771 --> 00:57:32.771
+
+769
+00:57:32.782 --> 00:57:34.991
+For example, I have given this example.
+
+770
+00:57:35.022 --> 00:57:37.902
+This learning rate is never preferable, one into 10-
+
+771
+00:57:37.942 --> 00:57:37.972
+Okay.
+
+772
+00:57:37.972 --> 00:57:39.771
+... to the power of minus four. It is very small learning rate.
+
+773
+00:57:39.782 --> 00:57:41.102
+Very small. Okay.
+
+774
+00:57:41.242 --> 00:57:45.202
+But I have chosen it because my gradient was going very
+
+775
+00:57:45.262 --> 00:57:48.182
+high. So why gradient was going high?
+
+776
+00:57:48.202 --> 00:57:50.202
+That also we learned, right? Because my-
+
+777
+00:57:50.222 --> 00:57:50.502
+Yes.
+
+778
+00:57:50.512 --> 00:57:54.382
+... dia- like range for the inputs, x1 is 80 and x2
+
+779
+00:57:54.442 --> 00:57:57.211
+is eight, both range are for 10, the range is
+
+780
+00:57:57.242 --> 00:58:00.452
+different. Okay? So that's why...
+
+781
+00:58:00.482 --> 00:58:04.402
+So the good practice is always normalize your input, first of
+
+782
+00:58:04.422 --> 00:58:04.642
+all-
+
+783
+00:58:04.652 --> 00:58:04.652
+
+784
+00:58:04.652 --> 00:58:06.882
+Okay. ... before passing to the neural network.
+
+785
+00:58:06.902 --> 00:58:06.912
+Neural
+
+786
+00:58:07.042 --> 00:58:09.662
+As well as choose the weights-
+
+787
+00:58:09.722 --> 00:58:10.042
+Weights.
+
+788
+00:58:10.051 --> 00:58:13.662
+... also in a particular, uh, with a particular distribution so that it-
+
+789
+00:58:14.042 --> 00:58:15.962
+it will also will be in a particular range.
+
+790
+00:58:16.022 --> 00:58:19.702
+In such cases, in such case when you are following
+
+791
+00:58:19.782 --> 00:58:23.352
+then learning rate is always moderate value which is- which is
+
+792
+00:58:23.362 --> 00:58:25.342
+This is preferred. Okay.
+
+793
+00:58:25.362 --> 00:58:25.672
+The preferred. Yeah.
+
+794
+00:58:26.022 --> 00:58:28.642
+Sir, I have one question.
+
+795
+00:58:28.682 --> 00:58:29.462
+Yes, please.
+
+796
+00:58:31.902 --> 00:58:32.002
+Yes.
+
+797
+00:58:32.042 --> 00:58:35.822
+So sir, uh, I know it can be a repetition but I just wanted to
+
+798
+00:58:35.842 --> 00:58:39.412
+clarify. Sir, why can't we just only rely on the
+
+799
+00:58:39.462 --> 00:58:43.382
+gradient? Like what, why do we always need a learning rate in
+
+800
+00:58:43.402 --> 00:58:44.782
+our case?
+
+801
+00:58:45.002 --> 00:58:47.942
+I- I think I've given you a very good example just now.
+
+802
+00:58:48.002 --> 00:58:51.622
+Suppose I don't use this learning rate, I can fix it as
+
+803
+00:58:51.722 --> 00:58:54.942
+one. Okay. Learning rate one means I'm not using this learning rate-
+
+804
+00:58:54.982 --> 00:58:55.051
+Yes.
+
+805
+00:58:55.062 --> 00:58:55.702
+... isn't it?
+
+806
+00:58:55.711 --> 00:58:55.711
+
+807
+00:58:55.742 --> 00:58:59.002
+I'm completely relying on my gradient. Then what will happen?
+
+808
+00:58:59.042 --> 00:59:02.902
+This is what you can see. What would have happened that 1.2 this 10 to the
+
+809
+00:59:02.922 --> 00:59:06.912
+power of four will be one instead of this 10 to the minus four and
+
+810
+00:59:06.942 --> 00:59:10.461
+then 1.2 minus 97.152. So
+
+811
+00:59:10.602 --> 00:59:13.062
+V1 next value would be around 95
+
+812
+00:59:14.341 --> 00:59:18.332
+or minus 90 whatever you say. So from 1.2 we are changing it
+
+813
+00:59:18.342 --> 00:59:22.302
+to 95 and then you will see this kind of problem because learning
+
+814
+00:59:22.382 --> 00:59:26.262
+rate is changing... I mean sorry, this uh, uh, the parameter is
+
+815
+00:59:26.302 --> 00:59:29.882
+changing so say that you are somewhere here, uh, the loss
+
+816
+00:59:29.962 --> 00:59:33.762
+function here you can say that my parameter value is 1.2
+
+817
+00:59:33.802 --> 00:59:37.572
+somewhere here, I'm changing into 95 going very...
+
+818
+00:59:37.602 --> 00:59:37.911
+Somewhere
+
+819
+00:59:38.822 --> 00:59:39.622
+in the very right side. So
+
+820
+00:59:40.842 --> 00:59:44.362
+there is a huge change in this theta, there is huge change in this theta
+
+821
+00:59:44.902 --> 00:59:48.402
+either this side or this side doesn't matter but if there is a huge change in this
+
+822
+00:59:48.442 --> 00:59:52.302
+theta my- my gradient is here, min- minima is here
+
+823
+00:59:52.482 --> 00:59:56.411
+I want to just come here that is the ultimate goal I have fixed but I'll...
+
+824
+00:59:56.422 --> 00:59:59.802
+If I'll do huge change what will happen either- either I will go in this direction
+
+825
+00:59:59.812 --> 01:00:03.602
+or this direction if I'm going in this direction also I'll end up somewhere here
+
+826
+01:00:03.662 --> 01:00:07.652
+because 90... Minus 95 is here and which is very far from my,
+
+827
+01:00:07.762 --> 01:00:11.582
+uh, global minima and that is why I don't want
+
+828
+01:00:11.602 --> 01:00:15.362
+this such a big change in the theta because theta is in x axis you
+
+829
+01:00:15.462 --> 01:00:19.182
+imagine the theta is in x axis so you- if you want to
+
+830
+01:00:19.272 --> 01:00:22.102
+come here from here you don't want very huge change
+
+831
+01:00:22.822 --> 01:00:26.702
+okay so this learning rate somehow controls that, that what would be
+
+832
+01:00:26.742 --> 01:00:30.082
+your step size or what will be your step towards
+
+833
+01:00:30.422 --> 01:00:34.282
+achieving this minima. Okay ultimately you have to reach so whether
+
+834
+01:00:34.362 --> 01:00:37.922
+you go with the 60 kilometer per hour or 10 kilometer per hour or
+
+835
+01:00:38.282 --> 01:00:42.122
+200 kilometer per hour now that is what is being controlled by this
+
+836
+01:00:42.162 --> 01:00:45.962
+learning rate and eventually it will help you to converge here yeah
+
+837
+01:00:46.562 --> 01:00:47.712
+so if you don't use that one-
+
+838
+01:00:47.721 --> 01:00:48.362
+Got it sir.
+
+839
+01:00:48.642 --> 01:00:52.602
+... then you know the direction that okay from here I have to go there but then you
+
+840
+01:00:52.622 --> 01:00:56.282
+will not stop because your speed is too high step size is too-
+
+841
+01:00:56.302 --> 01:00:59.950
+too high so you will jump this side...Okay? Yeah.
+
+842
+01:01:00.029 --> 01:01:01.169
+Okay, sir, thank you.
+
+843
+01:01:01.210 --> 01:01:04.700
+So it may even lead to, uh, unstable convergence also.
+
+844
+01:01:04.830 --> 01:01:06.169
+So you will not convergence also-
+
+845
+01:01:06.210 --> 01:01:06.220
+Correct.
+
+846
+01:01:06.450 --> 01:01:08.149
+It may even lead to exploding radiant also-
+
+847
+01:01:08.169 --> 01:01:08.629
+Exactly.
+
+848
+01:01:08.640 --> 01:01:09.710
+... if there's values.
+
+849
+01:01:09.750 --> 01:01:12.430
+Exactly, yes, yes, yes. Yeah.
+
+850
+01:01:13.649 --> 01:01:14.890
+Okay.
+
+851
+01:01:14.970 --> 01:01:16.299
+Sir, one more question. Um-
+
+852
+01:01:16.390 --> 01:01:17.370
+Yes, please.
+
+853
+01:01:17.390 --> 01:01:20.210
+... so when we are calculating loss, we are,
+
+854
+01:01:20.330 --> 01:01:24.109
+um, basically, uh, using a square,
+
+855
+01:01:24.210 --> 01:01:27.930
+uh, square of the loss, right? So that means we are, uh,
+
+856
+01:01:27.990 --> 01:01:31.930
+expressing the loss as a, uh, square of a particular variable
+
+857
+01:01:32.029 --> 01:01:35.799
+which is usually a, um, a parabola in...
+
+858
+01:01:35.850 --> 01:01:38.730
+if you look at... in a geometric way, right?
+
+859
+01:01:38.750 --> 01:01:39.000
+Hmm.
+
+860
+01:01:39.009 --> 01:01:39.919
+So that means, um,
+
+861
+01:01:41.430 --> 01:01:43.109
+loss expressed as
+
+862
+01:01:44.450 --> 01:01:48.350
+lo-... I mean, if we, if we are plotting the loss with respect to
+
+863
+01:01:48.390 --> 01:01:52.189
+any particular parameter, it will be a parabola and,
+
+864
+01:01:53.189 --> 01:01:57.129
+uh, we will be working with, uh, multiple parabolas and trying to
+
+865
+01:01:57.169 --> 01:02:00.910
+get a reasonable minimum across all these.
+
+866
+01:02:01.890 --> 01:02:05.009
+Exactly. Yeah, this is what, what happens, okay?
+
+867
+01:02:05.049 --> 01:02:08.970
+Uh, but, uh, here, in this case, I have chosen that loss
+
+868
+01:02:09.049 --> 01:02:12.730
+function because I had... I was, uh,
+
+869
+01:02:12.790 --> 01:02:15.509
+focusing, uh, from couple of classes on the
+
+870
+01:02:16.330 --> 01:02:20.080
+regression sort of problem where my ultimate output is some, some ve-...
+
+871
+01:02:20.250 --> 01:02:23.460
+uh, numeric value. Okay? But it may...
+
+872
+01:02:23.490 --> 01:02:26.299
+maybe the classification problem, and then you know that...
+
+873
+01:02:26.310 --> 01:02:29.919
+then in that such case, maybe squared error will not be in my ultimate
+
+874
+01:02:29.970 --> 01:02:33.689
+objective function or loss function. Uh, it will, it will change.
+
+875
+01:02:33.850 --> 01:02:36.259
+It may change to cross entropy or something like that.
+
+876
+01:02:36.270 --> 01:02:39.669
+Based on the problem statement, we will decide and then-
+
+877
+01:02:39.689 --> 01:02:39.700
+Okay.
+
+878
+01:02:39.710 --> 01:02:42.950
+... what, what will be our loss function. It will not be fixed for all the cases.
+
+879
+01:02:42.970 --> 01:02:44.450
+Yeah.
+
+880
+01:02:44.549 --> 01:02:45.730
+Okay, thanks.
+
+881
+01:02:45.790 --> 01:02:45.980
+Okay.
+
+882
+01:02:46.009 --> 01:02:47.830
+Excuse me, sir, I have one doubt.
+
+883
+01:02:47.850 --> 01:02:48.290
+Yes, sir.
+
+884
+01:02:48.299 --> 01:02:51.850
+Sir, uh, this, uh, D... dou L by dou theta
+
+885
+01:02:51.970 --> 01:02:55.669
+one, dou theta two, there will be multiple gradient descents,
+
+886
+01:02:55.750 --> 01:02:57.470
+right?
+
+887
+01:02:57.629 --> 01:03:00.310
+Uh, multiple gradient descent in the sense?
+
+888
+01:03:00.330 --> 01:03:00.540
+Like,
+
+889
+01:03:00.549 --> 01:03:03.770
+Gradient descent is an algorithm, yeah, where we are
+
+890
+01:03:04.410 --> 01:03:07.230
+having this update rule inside that.
+
+891
+01:03:07.250 --> 01:03:10.290
+We have multiple such, uh, gradients which we are calculating.
+
+892
+01:03:10.310 --> 01:03:11.870
+Correct, yeah.
+
+893
+01:03:11.950 --> 01:03:15.029
+Yes, sir. So the graph which you showed-
+
+894
+01:03:15.109 --> 01:03:15.189
+Uh-huh.
+
+895
+01:03:15.200 --> 01:03:18.799
+... where, uh, this is the sum-...
+
+896
+01:03:19.069 --> 01:03:22.950
+summation of all the, uh, thetas or
+
+897
+01:03:23.109 --> 01:03:24.730
+just one single theta, sir?
+
+898
+01:03:24.750 --> 01:03:28.629
+Only one single theta. Because we can't show the graph in more than three
+
+899
+01:03:28.669 --> 01:03:29.808
+dimension, right?
+
+900
+01:03:29.890 --> 01:03:30.499
+Yes, sir.
+
+901
+01:03:30.499 --> 01:03:34.310
+Uh, so that only... Oh, so here it is in two dimension and
+
+902
+01:03:34.350 --> 01:03:34.779
+next slide-
+
+903
+01:03:34.810 --> 01:03:34.819
+Hmm.
+
+904
+01:03:34.819 --> 01:03:37.609
+... in three dimension. More than three dimension-
+
+905
+01:03:37.629 --> 01:03:37.640
+Hmm.
+
+906
+01:03:37.640 --> 01:03:41.009
+... we just have to visualize it. It is, it is happening in the same way because my
+
+907
+01:03:41.049 --> 01:03:43.640
+equation is same, but I'm not able to-
+
+908
+01:03:43.640 --> 01:03:43.640
+
+909
+01:03:43.640 --> 01:03:47.490
+Hmm. ... show you that plot because more than that we can't show any of the plotting.
+
+910
+01:03:47.558 --> 01:03:51.189
+Yes, sir, but one question is like dou L by dou theta one can be shown
+
+911
+01:03:51.230 --> 01:03:52.270
+separately?
+
+912
+01:03:52.310 --> 01:03:52.529
+Huh.
+
+913
+01:03:52.549 --> 01:03:54.950
+Dou L by dou theta two can be shown separately?
+
+914
+01:03:54.970 --> 01:03:58.589
+Thank you. So nine plots, it's, uh, like this, you can show nine different plots.
+
+915
+01:03:58.629 --> 01:04:00.189
+Yes, that is true. That is-
+
+916
+01:04:00.270 --> 01:04:00.790
+Okay, sir.
+
+917
+01:04:00.810 --> 01:04:01.080
+That is true.
+
+918
+01:04:01.089 --> 01:04:02.609
+Uh, just for understanding, sir.
+
+919
+01:04:02.629 --> 01:04:02.930
+Yeah, yeah.
+
+920
+01:04:02.950 --> 01:04:03.609
+Thank you, sir.
+
+921
+01:04:03.629 --> 01:04:06.149
+And that is what is happening, if you want one dimension.
+
+922
+01:04:06.160 --> 01:04:06.529
+That is what-
+
+923
+01:04:06.540 --> 01:04:06.540
+
+924
+01:04:06.549 --> 01:04:10.419
+Theta means all the parameters. So whatever W11, W12,
+
+925
+01:04:10.589 --> 01:04:12.169
+uh, it can be anything and for-
+
+926
+01:04:12.210 --> 01:04:12.310
+Uh-
+
+927
+01:04:12.319 --> 01:04:15.558
+... with respect to every parameter, it is happening in the same. Yeah.
+
+928
+01:04:15.629 --> 01:04:18.870
+Got it. Thanks.
+
+929
+01:04:21.410 --> 01:04:24.810
+Okay? Right. Let us move
+
+930
+01:04:24.850 --> 01:04:28.189
+ahead. Uh, I also have
+
+931
+01:04:28.230 --> 01:04:30.939
+some... and so on, I'll show you, maybe I'll...
+
+932
+01:04:30.990 --> 01:04:34.310
+after covering this gradient descent types.
+
+933
+01:04:34.350 --> 01:04:34.430
+So
+
+934
+01:04:35.290 --> 01:04:36.549
+we have three types of,
+
+935
+01:04:37.770 --> 01:04:41.219
+uh, gradient descent: the stochastic gradient descent, batch and
+
+936
+01:04:41.290 --> 01:04:42.970
+mini-batch. So,
+
+937
+01:04:44.169 --> 01:04:48.069
+uh, in the b-... I'll go... Batch gradient descent, what
+
+938
+01:04:48.089 --> 01:04:51.950
+happens, suppose you have... suppose you have, uh,
+
+939
+01:04:52.029 --> 01:04:55.950
+one, two, three, four, five, six data points,
+
+940
+01:04:56.049 --> 01:04:59.730
+okay? It's an entire corpus where you have six data points.
+
+941
+01:04:59.770 --> 01:05:02.549
+So the batch gradient descent, what happen,
+
+942
+01:05:02.710 --> 01:05:03.770
+you,
+
+943
+01:05:04.750 --> 01:05:08.569
+uh, you consider all the data points, so all the data points
+
+944
+01:05:08.669 --> 01:05:12.509
+are like a batch. Okay? So that is your corpus
+
+945
+01:05:12.629 --> 01:05:15.348
+and whole... all samples are creating one
+
+946
+01:05:15.469 --> 01:05:19.430
+batch. You process all the batch, means,
+
+947
+01:05:19.750 --> 01:05:23.370
+all six data points one by one. Okay?
+
+948
+01:05:23.430 --> 01:05:24.529
+Calculate the loss
+
+949
+01:05:25.549 --> 01:05:29.069
+separately for each of those, each of those data points,
+
+950
+01:05:29.970 --> 01:05:32.810
+then calculate the cumulative loss.
+
+951
+01:05:32.910 --> 01:05:36.390
+After calculating the cumulative loss, you call the gradient
+
+952
+01:05:36.430 --> 01:05:39.810
+descent. Okay? Now, let me repeat it.
+
+953
+01:05:39.830 --> 01:05:43.810
+So suppose there are six data point, as you can see here, in case of the batch, you
+
+954
+01:05:43.890 --> 01:05:47.069
+ca-... you process all the... say that there are six rows.
+
+955
+01:05:47.170 --> 01:05:50.390
+Imagine there are six rows. First row I'll send, do the forward
+
+956
+01:05:50.450 --> 01:05:53.770
+propagation, I'll get the prediction as Y hat, I'll calculate the
+
+957
+01:05:53.830 --> 01:05:57.330
+loss, that I'll say as loss one. Okay?
+
+958
+01:05:57.370 --> 01:06:00.390
+For the first data point. Then second data point, I'll pass.
+
+959
+01:06:00.430 --> 01:06:03.689
+I'll get the prediction, calculate the loss, I'll say loss two.
+
+960
+01:06:04.450 --> 01:06:08.100
+Then third data point, I'll pass. I'll get loss three, loss four, loss five, loss
+
+961
+01:06:08.189 --> 01:06:11.830
+six. Now for each data point, each row, I have got one, one
+
+962
+01:06:11.870 --> 01:06:15.370
+loss. Now what I will do is, I'll calculate the cumulative loss
+
+963
+01:06:15.870 --> 01:06:18.479
+or the mean squared error of loss, whatever you...
+
+964
+01:06:18.490 --> 01:06:20.540
+So for all the data point, you will do that one
+
+965
+01:06:21.549 --> 01:06:25.229
+together. So see, once I have done these six loss, I have calculated
+
+966
+01:06:25.330 --> 01:06:26.439
+cumulative loss. I have calculate...
+
+967
+01:06:26.439 --> 01:06:29.810
+I have not yet updated the parameter, that means that I have not done the back
+
+968
+01:06:29.850 --> 01:06:33.770
+propagation so far. Once I have the cumulative
+
+969
+01:06:33.810 --> 01:06:37.609
+loss, then I will start doing the back propagation. Okay?
+
+970
+01:06:37.649 --> 01:06:40.460
+And I'll change all those parameters, abs-...
+
+971
+01:06:40.490 --> 01:06:43.870
+all the parameters, and once... after changing the parameters, again
+
+972
+01:06:43.950 --> 01:06:47.649
+I'll, uh, I'll go for the next iteration where I'll again
+
+973
+01:06:48.129 --> 01:06:52.029
+feed all the six, uh, data, all the six samples, calculate
+
+974
+01:06:52.069 --> 01:06:55.670
+the loss again, cumulative loss, and again change the parameter, and this process
+
+975
+01:06:55.770 --> 01:06:59.589
+goes. So what is happening is, in the case of batch gradient descent,
+
+976
+01:06:59.670 --> 01:07:02.990
+updates happen after processing
+
+977
+01:07:03.069 --> 01:07:06.326
+entire samples from the corpus.Okay.
+
+978
+01:07:06.346 --> 01:07:08.625
+That is called batch gradient descent.
+
+979
+01:07:08.645 --> 01:07:11.466
+In the stochastic gradient descent, it's completely opposite.
+
+980
+01:07:11.506 --> 01:07:14.645
+So in the stochastic gradient descent, you
+
+981
+01:07:15.526 --> 01:07:19.346
+update the parameter, means you call the back propagation for
+
+982
+01:07:19.466 --> 01:07:23.395
+every sample. Suppose there are six sample, as you can see here,
+
+983
+01:07:23.446 --> 01:07:27.066
+okay? So you will take the sample, you will calculate the
+
+984
+01:07:27.086 --> 01:07:30.386
+prediction for it, calculate the loss.
+
+985
+01:07:30.406 --> 01:07:33.566
+Now, this much you are doing in the batch also, but after calculating the
+
+986
+01:07:33.645 --> 01:07:37.506
+loss, you are processing the second data point in the batch.
+
+987
+01:07:37.526 --> 01:07:41.326
+But in the stochastic gradient descent, what you will do, after one, first data
+
+988
+01:07:41.366 --> 01:07:44.516
+points, once we have calculated the loss, we'll, we'll update...
+
+989
+01:07:44.526 --> 01:07:47.886
+We'll call the back propagation, update all the parameters.
+
+990
+01:07:47.946 --> 01:07:51.866
+Okay? So, then we'll do it for second also, third also, fourth, fifth, six
+
+991
+01:07:51.946 --> 01:07:55.306
+also. So, in one iteration, six
+
+992
+01:07:55.346 --> 01:07:55.986
+times
+
+993
+01:07:57.266 --> 01:08:00.906
+update will happen for all the parameters in stochastic gradient
+
+994
+01:08:00.946 --> 01:08:04.786
+descent. But in the batch gradient descent, for one iteration only
+
+995
+01:08:04.906 --> 01:08:08.625
+one time update of the parameter will happen. Okay?
+
+996
+01:08:08.666 --> 01:08:11.946
+Now, this is the change in the batch gradient descent and stochastic gradient
+
+997
+01:08:11.986 --> 01:08:15.806
+descent. Then we have a mini-batch, which is in between batch and,
+
+998
+01:08:15.846 --> 01:08:19.626
+uh, stochastic, and which is proven to be the, uh,
+
+999
+01:08:19.666 --> 01:08:22.366
+trade-off between the faster and stable.
+
+1000
+01:08:22.406 --> 01:08:26.145
+So usually use the mini-batch. So suppose you have, uh, six data
+
+1001
+01:08:26.206 --> 01:08:28.716
+points, I will take the mini-batch of sample to...
+
+1002
+01:08:29.486 --> 01:08:33.185
+So two, two data I will process, calculate the co-cumulative loss, update the
+
+1003
+01:08:33.225 --> 01:08:35.506
+parameter. Again, next two sample, calculate.
+
+1004
+01:08:35.546 --> 01:08:39.366
+So if there are two samples which we are taking together, that mean that for
+
+1005
+01:08:39.426 --> 01:08:43.206
+six data point, for one iteration, three parameter, three times we will
+
+1006
+01:08:43.345 --> 01:08:44.845
+do the parameter update.
+
+1007
+01:08:45.966 --> 01:08:49.906
+So that is the change in this batch, uh, like, when, when, when
+
+1008
+01:08:49.966 --> 01:08:53.845
+we see batch gradient descent, stochastic gradient descent and mini-batch gradient
+
+1009
+01:08:53.885 --> 01:08:57.845
+descent. Okay? Now, the point is, how does it help,
+
+1010
+01:08:57.926 --> 01:09:01.506
+okay, and where it helps? And how to understand that
+
+1011
+01:09:01.586 --> 01:09:05.506
+which type of gradient descent we have to use when,
+
+1012
+01:09:05.526 --> 01:09:07.805
+and how do we even enable that part?
+
+1013
+01:09:07.845 --> 01:09:11.645
+That, okay, now I have to use a stochastic gradient descent, how to enable that
+
+1014
+01:09:11.725 --> 01:09:15.645
+part? Okay. Or if I have to use batch gradient descent, how to enable
+
+1015
+01:09:15.685 --> 01:09:19.385
+that part, right? So that is what we are going to see next and I will show you the
+
+1016
+01:09:19.446 --> 01:09:21.906
+note, uh, what is that, demo also for that.
+
+1017
+01:09:21.926 --> 01:09:25.845
+You will understand it clearly. So, uh, first of all, the batch
+
+1018
+01:09:25.885 --> 01:09:29.786
+gradient descent. As I said, the batch gradient descent, what you do, you calculate
+
+1019
+01:09:29.805 --> 01:09:33.746
+the loss, loss between X-I and Y-I, means one data, first
+
+1020
+01:09:33.826 --> 01:09:34.126
+row.
+
+1021
+01:09:35.026 --> 01:09:39.006
+Uh, so loss you calculate betw- for, uh, for the prediction and
+
+1022
+01:09:39.086 --> 01:09:39.645
+the actual
+
+1023
+01:09:40.626 --> 01:09:42.656
+and you do it for all the N data points.
+
+1024
+01:09:42.656 --> 01:09:45.366
+So you calculate the mean square loss here.
+
+1025
+01:09:45.406 --> 01:09:49.206
+So mean, this loss function is a square root, then it will be mean square loss.
+
+1026
+01:09:49.225 --> 01:09:52.706
+So it's a mean loss what you are calculating here in the case of batch, because
+
+1027
+01:09:53.166 --> 01:09:56.606
+you are first processing all the number of rows,
+
+1028
+01:09:56.686 --> 01:10:00.486
+samples, en-entire data set. And then,
+
+1029
+01:10:00.546 --> 01:10:04.346
+once after doing everything, you update the parameters, so you update this
+
+1030
+01:10:04.366 --> 01:10:04.726
+theta
+
+1031
+01:10:06.346 --> 01:10:10.026
+with respect to the loss. So if you see the points, it's very
+
+1032
+01:10:10.206 --> 01:10:14.186
+stable updates, because you see all the data points
+
+1033
+01:10:14.546 --> 01:10:15.866
+in your entire corpus
+
+1034
+01:10:17.006 --> 01:10:20.266
+and loss coming from that. What is the cumulative loss
+
+1035
+01:10:21.046 --> 01:10:24.586
+for entire data point? So you can have, you have a kind of
+
+1036
+01:10:25.366 --> 01:10:28.026
+the rough knowledge of entire data set,
+
+1037
+01:10:28.906 --> 01:10:31.006
+and then you do the update in the parameter.
+
+1038
+01:10:31.026 --> 01:10:34.986
+So it is stable, it is kind of smooth, because you have seen everything
+
+1039
+01:10:35.006 --> 01:10:38.896
+and then you are changing your parameters' value,
+
+1040
+01:10:39.006 --> 01:10:42.336
+uh, in order to get the global minima.
+
+1041
+01:10:42.346 --> 01:10:45.686
+But, uh, the computation is e-expensive for large data sets.
+
+1042
+01:10:45.726 --> 01:10:48.846
+Suppose you have 100,000 rows in your data set.
+
+1043
+01:10:48.926 --> 01:10:52.286
+So if you want to do one change in all set of
+
+1044
+01:10:52.366 --> 01:10:56.166
+parameter, first of all, you have to process all those 100,000 rows
+
+1045
+01:10:56.746 --> 01:10:57.526
+and then you will do
+
+1046
+01:10:58.466 --> 01:11:01.126
+one change. Then you will go for the second iteration.
+
+1047
+01:11:01.146 --> 01:11:05.086
+Again, you have to process all those 100,000 rows and then you have to do next
+
+1048
+01:11:05.446 --> 01:11:08.106
+set of, uh, update in the parameter.
+
+1049
+01:11:08.126 --> 01:11:11.546
+So it is smooth, but, uh,
+
+1050
+01:11:11.646 --> 01:11:12.126
+uh,
+
+1051
+01:11:13.046 --> 01:11:16.026
+it is smooth, stable, but it is computationally
+
+1052
+01:11:16.086 --> 01:11:20.066
+expensive. It is computationally expensive. Okay?
+
+1053
+01:11:20.126 --> 01:11:23.826
+So this is what happens in the case of the batch gradient descent.
+
+1054
+01:11:23.865 --> 01:11:27.786
+Now, in the case of stochastic gradient descent, for every data sample, you
+
+1055
+01:11:27.826 --> 01:11:31.756
+update, for update. So, uh, what
+
+1056
+01:11:31.766 --> 01:11:34.766
+we say that the stochastic gradient descent is not smooth.
+
+1057
+01:11:34.826 --> 01:11:37.486
+It's zigzag, like you can see here.
+
+1058
+01:11:37.506 --> 01:11:41.406
+You are here and then you went here and then here, here,
+
+1059
+01:11:41.486 --> 01:11:45.206
+here and so on. So you are trying to reach here to the global
+
+1060
+01:11:45.286 --> 01:11:48.986
+minima but then because every... You have seen only one data point,
+
+1061
+01:11:49.046 --> 01:11:51.946
+accordingly, you have changed all the parameters in your network.
+
+1062
+01:11:51.966 --> 01:11:55.425
+And then you are processing second, uh, uh, row in your
+
+1063
+01:11:55.866 --> 01:11:58.866
+corpus, calculate the loss and change all the parameter.
+
+1064
+01:11:58.906 --> 01:12:00.066
+So it may happen for the first
+
+1065
+01:12:01.026 --> 01:12:04.906
+row you are getting the loss this much,
+
+1066
+01:12:04.966 --> 01:12:08.216
+okay? But the, for the second row, your loss will
+
+1067
+01:12:08.626 --> 01:12:10.756
+significantly reduce because you have changed the parameter.
+
+1068
+01:12:10.786 --> 01:12:14.746
+Then, uh, it may increase and may decrease. So it will not be smooth.
+
+1069
+01:12:14.806 --> 01:12:17.976
+It will not be smooth. Okay? That is, that is the...
+
+1070
+01:12:17.986 --> 01:12:21.046
+So SGD, stochastic gradient descent is not
+
+1071
+01:12:21.166 --> 01:12:24.966
+smooth, but what it is saying that it is very fast.
+
+1072
+01:12:24.976 --> 01:12:28.786
+The update is a very fast update it, it does, very fast
+
+1073
+01:12:28.846 --> 01:12:32.386
+update it does. It has high variance, you can see that also, zigzag motion
+
+1074
+01:12:32.826 --> 01:12:36.666
+can escape, uh, shallow minima. Here it is
+
+1075
+01:12:36.706 --> 01:12:39.956
+escaping, it is, it is possible because it is very zigzag, it...
+
+1076
+01:12:40.006 --> 01:12:43.636
+So it may, might happen that there is a minima and I must...
+
+1077
+01:12:43.806 --> 01:12:47.466
+I will simply go to the other side of that one, because now I am
+
+1078
+01:12:47.486 --> 01:12:50.766
+changing radically in my parameters.
+
+1079
+01:12:50.806 --> 01:12:54.386
+So it is possible in this case. But the point is, uh,
+
+1080
+01:12:55.066 --> 01:12:58.846
+it is going to be very fast and you will converge here fast.
+
+1081
+01:12:58.906 --> 01:13:01.286
+You will converge here fast. Okay?
+
+1082
+01:13:01.326 --> 01:13:03.536
+So it might be confusing that although...
+
+1083
+01:13:03.546 --> 01:13:07.425
+Suppose I have 100,000 row. Suppose I have 100,000 row here in SGD
+
+1084
+01:13:07.846 --> 01:13:11.546
+and 100,000, same 100,000 row here in batch gradient descent. Okay?
+
+1085
+01:13:11.586 --> 01:13:15.406
+Now, say thatUh, uh, okay. Forget about one
+
+1086
+01:13:15.465 --> 01:13:18.826
+lag row. It will, it will be difficult to, uh, compute.
+
+1087
+01:13:18.866 --> 01:13:22.776
+So say that I have 100 rows, okay? For the simplicity, 100 rows in
+
+1088
+01:13:22.866 --> 01:13:26.526
+my data set and say that 10 iteration I want to train.
+
+1089
+01:13:26.585 --> 01:13:30.266
+When I say 10 iteration, 100 rows in my data set,
+
+1090
+01:13:31.146 --> 01:13:34.205
+okay? So how many times I will change the
+
+1091
+01:13:34.226 --> 01:13:37.906
+parameters? How many times? 10 times.
+
+1092
+01:13:37.925 --> 01:13:41.806
+Suppose... Uh, whatever setup, um, 10 parameters suppose I have, then all
+
+1093
+01:13:41.846 --> 01:13:45.665
+those 10 parameters I'll change 10 times in the batch gradient because I'm training
+
+1094
+01:13:45.705 --> 01:13:49.646
+it for 10 iteration and parameter gets changed only
+
+1095
+01:13:49.726 --> 01:13:53.606
+after that iteration, okay? Because we are processing entire
+
+1096
+01:13:53.646 --> 01:13:57.165
+data set, all the 100 data ones, okay? And then changing the parameters.
+
+1097
+01:13:57.186 --> 01:14:01.165
+So 10 times we are changing here the parameter. Same case if you take here.
+
+1098
+01:14:01.205 --> 01:14:05.146
+Suppose we have 100 samples, 10 iteration I have to run, it
+
+1099
+01:14:05.186 --> 01:14:05.585
+will go-
+
+1100
+01:14:05.606 --> 01:14:08.625
+Processing an entire large data set all at once can cause memory
+
+1101
+01:14:08.686 --> 01:14:09.726
+errors.
+
+1102
+01:14:09.745 --> 01:14:12.925
+What is this? Sorry. So, uh,
+
+1103
+01:14:14.146 --> 01:14:17.865
+um, so, yeah. So it will, it will do 10
+
+1104
+01:14:17.925 --> 01:14:21.915
+into 100, 1000 times updates it, this will do, this SGD,
+
+1105
+01:14:22.005 --> 01:14:25.745
+Stochastic Gradient Descent, because for every data point it is doing the updates
+
+1106
+01:14:26.165 --> 01:14:29.366
+and then you have 100 data points and you are running f- it for 10
+
+1107
+01:14:29.446 --> 01:14:33.226
+iteration. So in every iteration, 100 updates, 10 iteration,
+
+1108
+01:14:33.266 --> 01:14:34.106
+1000 updates.
+
+1109
+01:14:34.986 --> 01:14:38.076
+So obviously this will r- be running...
+
+1110
+01:14:38.125 --> 01:14:41.625
+Uh, this will take more time obviously as compared to the grade,
+
+1111
+01:14:41.705 --> 01:14:45.606
+uh, uh, Batch Gradient Descent but you, uh, but
+
+1112
+01:14:45.646 --> 01:14:49.536
+the convergence in the case of SGD would be faster. Why?
+
+1113
+01:14:49.545 --> 01:14:52.946
+Because after every sample you are updating the parameter,
+
+1114
+01:14:53.665 --> 01:14:57.526
+after every sample, okay? So the update is happening
+
+1115
+01:14:57.585 --> 01:14:59.245
+faster as compared to the
+
+1116
+01:15:00.566 --> 01:15:03.826
+Batch Gradient Descent. So convergence in the case of SGD would be
+
+1117
+01:15:03.906 --> 01:15:07.486
+faster, but time would be more. Time take, uh, time, uh,
+
+1118
+01:15:07.526 --> 01:15:11.326
+time, uh, it will take more, okay? In terms of the time,
+
+1119
+01:15:11.446 --> 01:15:14.965
+SGD may take more because hun- 1000 times updates it has to do.
+
+1120
+01:15:15.005 --> 01:15:16.446
+Here you, uh, you will
+
+1121
+01:15:17.306 --> 01:15:20.245
+do the updates only say that 10 times.
+
+1122
+01:15:20.306 --> 01:15:24.186
+So that time would be less, but convergence here will be faster,
+
+1123
+01:15:24.226 --> 01:15:27.146
+convergence here will be slower, okay?
+
+1124
+01:15:27.186 --> 01:15:30.786
+So that is, that is how they are, uh, you have to understand this.
+
+1125
+01:15:30.826 --> 01:15:32.766
+Then mini-batch is somewhere in between.
+
+1126
+01:15:32.806 --> 01:15:36.585
+So you don't take whole data set to process or single data set to process
+
+1127
+01:15:37.146 --> 01:15:40.306
+to update the parameter, but you make a batch of it.
+
+1128
+01:15:40.366 --> 01:15:43.906
+So this is the best case you would say that if suppose I have 100
+
+1129
+01:15:43.925 --> 01:15:47.106
+datas, uh, 100 data, uh, samples, I will take the batch of
+
+1130
+01:15:47.226 --> 01:15:51.085
+10. I will take the batch of 10. Instead of taking one or 100, I'll
+
+1131
+01:15:51.165 --> 01:15:54.076
+take now batch of 10. So it will be...
+
+1132
+01:15:54.165 --> 01:15:57.856
+Uh, it is a trade-off between how soon you are converging or how
+
+1133
+01:15:57.885 --> 01:16:01.585
+much, uh, uh, uh, h- uh, how much you can say
+
+1134
+01:16:01.745 --> 01:16:04.306
+smoothness you are getting. Uh, so it's a, it's a, it's a kind of
+
+1135
+01:16:04.326 --> 01:16:07.866
+trade-off. Fine? So if I
+
+1136
+01:16:08.146 --> 01:16:11.965
+summarize, this is what it is. So Batch Gradient Descent, it process
+
+1137
+01:16:12.085 --> 01:16:16.035
+all N data samples. Stochastic Gradient Descent, it sample, uh,
+
+1138
+01:16:16.045 --> 01:16:19.986
+it process only one sample and mini-batch, it process M number
+
+1139
+01:16:20.026 --> 01:16:23.726
+of sample out of N and then they do the update in
+
+1140
+01:16:23.766 --> 01:16:25.726
+the parameters of the neural networks.
+
+1141
+01:16:26.465 --> 01:16:30.375
+So if you take time to compute the Batch Gradient Descent, say 10,
+
+1142
+01:16:30.406 --> 01:16:34.286
+10 epoch, Batch Gradient Descent is, uh, uh, time
+
+1143
+01:16:34.585 --> 01:16:38.566
+per update... Sorry. Time per update is slowest because it has to process all
+
+1144
+01:16:38.585 --> 01:16:42.245
+the N data points, then it has to do the update.
+
+1145
+01:16:42.286 --> 01:16:46.205
+It's the fastest because only one data point, do the update, and then it is the
+
+1146
+01:16:46.245 --> 01:16:50.026
+balanced one. Convergence, if, if you will see, Batch
+
+1147
+01:16:50.045 --> 01:16:53.295
+Gradient Descent is smooth and stable, noisy zigzag but it is
+
+1148
+01:16:53.406 --> 01:16:56.526
+fastest. It may converge fastest, okay?
+
+1149
+01:16:56.585 --> 01:17:00.276
+So fast and stable. Now, one more thing about the
+
+1150
+01:17:00.346 --> 01:17:04.106
+vectorization because now say that I have 100, uh, samples,
+
+1151
+01:17:04.245 --> 01:17:08.085
+okay? So Batch Gradient Descent is highly vectorized in the
+
+1152
+01:17:08.125 --> 01:17:12.016
+sense that you can use the dot product, dot product and, uh,
+
+1153
+01:17:12.385 --> 01:17:16.156
+you can use the, th- uh, GPU, uh, quite well in the case of vectorizations and
+
+1154
+01:17:16.205 --> 01:17:19.925
+doing calculations with that. SGD, very poor,
+
+1155
+01:17:20.005 --> 01:17:23.866
+okay? Because one, one samples you are taking and also, and every time you are
+
+1156
+01:17:23.906 --> 01:17:27.045
+updating that once, so vectorizations, uh, is very poor in the SGD.
+
+1157
+01:17:27.106 --> 01:17:30.955
+Here it is again balanced. Fine? And it is
+
+1158
+01:17:30.986 --> 01:17:33.486
+GPU-fri- friendly also. Why GPU-friendly?
+
+1159
+01:17:33.495 --> 01:17:37.425
+Because your batch size would be equivalent to the RAM size but here because you
+
+1160
+01:17:37.465 --> 01:17:40.656
+are processing entire data set, entire data set you can have millions of data, uh,
+
+1161
+01:17:40.726 --> 01:17:44.156
+ji- millions of rows. That much maybe GPU will not support, so this
+
+1162
+01:17:44.226 --> 01:17:47.766
+is GPU-friendly. Okay. I'll quickly show you the
+
+1163
+01:17:47.806 --> 01:17:51.415
+demo and it will give you more insight about, okay, what is
+
+1164
+01:17:51.446 --> 01:17:54.486
+happening. Okay. Instead of here, I'll go in
+
+1165
+01:17:55.125 --> 01:17:58.946
+this here, here. So
+
+1166
+01:17:59.925 --> 01:18:03.406
+I've already, uh, integrated it. It will be available for you to
+
+1167
+01:18:03.425 --> 01:18:07.045
+practice. So what I am doing here is I'm just importing some of the
+
+1168
+01:18:07.085 --> 01:18:10.965
+packages and here, uh, (clears throat) I'm
+
+1169
+01:18:11.045 --> 01:18:15.005
+taking some random data samples, 500 data samples I'm
+
+1170
+01:18:15.026 --> 01:18:18.826
+taking and it's equal to 500. Seed I'm fixing so that every data
+
+1171
+01:18:18.866 --> 01:18:22.545
+samples I want to reproduce it sh- should not change when I'm
+
+1172
+01:18:22.585 --> 01:18:25.885
+creating those samples manually, oh sorry, randomly.
+
+1173
+01:18:25.906 --> 01:18:29.705
+And then there is a IQ column, CGPA column, okay, which is
+
+1174
+01:18:29.745 --> 01:18:33.146
+there as an X, as an input, and then output will be my
+
+1175
+01:18:33.286 --> 01:18:37.106
+LPA. So my IQ, I'm creating
+
+1176
+01:18:37.146 --> 01:18:40.885
+randomly using rand integer value and those values,
+
+1177
+01:18:40.965 --> 01:18:44.806
+IQ values are between 50 and 130 because that is the IQ
+
+1178
+01:18:44.846 --> 01:18:47.665
+value I want to take. You can change this if you wish.
+
+1179
+01:18:47.705 --> 01:18:51.646
+Okay, and then what is the size? Size is N cross
+
+1180
+01:18:51.745 --> 01:18:55.726
+one, that means N rows, one column, means 500 values of the
+
+1181
+01:18:55.786 --> 01:18:59.226
+IQ I'll generate. Similarly, I will do for CGPA
+
+1182
+01:18:59.326 --> 01:19:02.665
+also. The range is between five and 10.
+
+1183
+01:19:02.766 --> 01:19:06.646
+Okay. Uh, sorry. Uh, range is, uh, bit, uh, uh,
+
+1184
+01:19:06.665 --> 01:19:10.085
+range is th- the empty N comma one, this is the
+
+1185
+01:19:10.146 --> 01:19:14.045
+size, means 500 cross one, and the range will be, will be
+
+1186
+01:19:14.125 --> 01:19:17.992
+between five and 10.So IQ and CGPA column, I'm generating by these two
+
+1187
+01:19:18.022 --> 01:19:21.822
+line, my data I'm creating. And, uh, then I'm just
+
+1188
+01:19:21.862 --> 01:19:25.842
+concatenating IQ and CGPA as X because these two are going
+
+1189
+01:19:25.882 --> 01:19:29.332
+to be my input in my data. Then I am,
+
+1190
+01:19:29.462 --> 01:19:32.842
+uh, creating my Y and Y
+
+1191
+01:19:32.962 --> 01:19:35.412
+is, uh, this one, uh,
+
+1192
+01:19:36.382 --> 01:19:40.182
+0.1 into IQ, 0.5 into CGPA
+
+1193
+01:19:40.222 --> 01:19:43.742
+plus noise. I mean, this is not required, uh, if you want to take
+
+1194
+01:19:43.842 --> 01:19:47.762
+directly as some value, LPA value, that also you can keep it, but here I have
+
+1195
+01:19:47.842 --> 01:19:51.602
+kept in some range, okay? So here what I'm doing is X and Y I'm
+
+1196
+01:19:51.642 --> 01:19:55.202
+creating input and label. X has two column, Y is the output, single
+
+1197
+01:19:55.262 --> 01:19:59.222
+column. Fine? Then once we have done this one, then we are just
+
+1198
+01:19:59.282 --> 01:20:02.952
+initializing some parameters. Same network which I have shown you, uh,
+
+1199
+01:20:03.422 --> 01:20:05.702
+I'm, I'm trying to create this, this particular network.
+
+1200
+01:20:06.222 --> 01:20:10.092
+Network, I'm not changing so that you will understand it, uh,
+
+1201
+01:20:10.442 --> 01:20:14.182
+better. So network with two inputs, two hidden neurons and one
+
+1202
+01:20:14.262 --> 01:20:16.642
+output, okay? Same thing, same setting I'm creating.
+
+1203
+01:20:16.682 --> 01:20:20.182
+So I need all lo- all those nine parameters starting with W11,
+
+1204
+01:20:20.302 --> 01:20:24.202
+W12, W21, W22, b1, b2, b3, v1, v2. All these
+
+1205
+01:20:24.242 --> 01:20:27.922
+parameters are required and here I'm telling requires_grad is equal to
+
+1206
+01:20:27.962 --> 01:20:30.702
+true because I'm going to use the auto grad.
+
+1207
+01:20:30.762 --> 01:20:34.492
+I'm not going to write or calculate the gradient, uh, by our own.
+
+1208
+01:20:34.522 --> 01:20:37.832
+We'll use the back propagate function for that one. Okay?
+
+1209
+01:20:37.842 --> 01:20:40.462
+So that's why it requires_grad for all these parameter is equal to true.
+
+1210
+01:20:40.482 --> 01:20:43.762
+We want to calculate the gradient with respect to each of these parameters.
+
+1211
+01:20:43.782 --> 01:20:46.002
+That is what it meaning of it. Okay?
+
+1212
+01:20:46.722 --> 01:20:50.182
+Now, forward pass, in the forward pass, I need X1,
+
+1213
+01:20:50.402 --> 01:20:54.332
+X2, these two are my input. Fine? All rows and
+
+1214
+01:20:54.382 --> 01:20:58.322
+the columns, uh, so this will select that one, and then I will
+
+1215
+01:20:58.362 --> 01:21:01.502
+calculate first Z1. Z1 is
+
+1216
+01:21:01.662 --> 01:21:04.062
+W1X1, W2X2, V1
+
+1217
+01:21:05.322 --> 01:21:08.362
+and these are all available in my params,
+
+1218
+01:21:08.402 --> 01:21:12.162
+parameters, okay? So, uh, I, I, I am
+
+1219
+01:21:12.222 --> 01:21:16.092
+simply taking that, uh, because I'm receiving, uh, that in
+
+1220
+01:21:16.122 --> 01:21:19.752
+the params, so, uh, I'll, I'll calculate then...
+
+1221
+01:21:19.822 --> 01:21:23.042
+Once I calculate Z1, then I'll calculate the H1.
+
+1222
+01:21:23.102 --> 01:21:26.842
+You can recall here, right? From Z1 to H1, Z2 to H2,
+
+1223
+01:21:26.892 --> 01:21:30.582
+then V, Y. So that is what I'm doing Z1, H1, Z2, H2, Y
+
+1224
+01:21:30.642 --> 01:21:34.612
+hat. You know that well, right? Once I have all these, then what
+
+1225
+01:21:34.682 --> 01:21:38.622
+I will do is I will have to, uh, update the parameters.
+
+1226
+01:21:38.662 --> 01:21:41.272
+That updation of the parameter I am doing ma- manually.
+
+1227
+01:21:41.302 --> 01:21:45.192
+So far I have not shown you how to make it, how to use the auto, uh,
+
+1228
+01:21:45.282 --> 01:21:49.242
+means, uh, uh, PyTorch module for this one, which we'll see later.
+
+1229
+01:21:49.262 --> 01:21:53.202
+So update parameter, every parameter I have to update and learning rate I am
+
+1230
+01:21:53.242 --> 01:21:55.482
+taking. Learning rate how much I have fixed?
+
+1231
+01:21:55.542 --> 01:21:58.542
+Learning rate below, I guess somewhere I'll show you, learning rate is 10 to the
+
+1232
+01:21:58.582 --> 01:22:01.602
+power minus four, same value which I have shown you there.
+
+1233
+01:22:01.622 --> 01:22:04.842
+So that is what I have fixed here. Okay?
+
+1234
+01:22:04.982 --> 01:22:08.842
+Uh, then, um, then, then just one by one I'm taking
+
+1235
+01:22:08.862 --> 01:22:12.702
+every parameter, so parameter is equal to parameter minus
+
+1236
+01:22:13.662 --> 01:22:17.082
+learning rate into gradient. Same thing.
+
+1237
+01:22:17.092 --> 01:22:20.182
+And at last, I'm setting the parame- uh, gradient value to zero.
+
+1238
+01:22:21.482 --> 01:22:23.682
+Okay? Gradient value to zero. Why?
+
+1239
+01:22:23.702 --> 01:22:27.242
+Because every time when I go to the next iteration, I want my gradient to be zero.
+
+1240
+01:22:27.282 --> 01:22:29.291
+Otherwise the gradient will accumulate. The...
+
+1241
+01:22:29.291 --> 01:22:32.142
+Whatever will be the last gradient, it will use that one, which I don't
+
+1242
+01:22:32.182 --> 01:22:35.722
+want. So this is just for the manual parameter update.
+
+1243
+01:22:35.732 --> 01:22:39.222
+I'm using the for loop for that instead of writing one by one each.
+
+1244
+01:22:39.262 --> 01:22:41.942
+Now, this is the training modes. Training.
+
+1245
+01:22:41.982 --> 01:22:45.442
+So training what we have to do, the full batch, and this is for batch gradient
+
+1246
+01:22:45.482 --> 01:22:49.011
+descent. Suppose we have 200 data, I'll use, uh...
+
+1247
+01:22:49.042 --> 01:22:51.902
+How many data we have? We have 500 data samples, right?
+
+1248
+01:22:52.002 --> 01:22:54.682
+And here I'm using it for 200 epochs.
+
+1249
+01:22:54.702 --> 01:22:58.602
+When I say 200 epochs, how many times I'll do the update in these
+
+1250
+01:22:58.622 --> 01:23:01.832
+parameters? 200 times, because after every
+
+1251
+01:23:01.862 --> 01:23:04.542
+epoch, these will, this will update
+
+1252
+01:23:05.982 --> 01:23:09.322
+and in every epoch, we are, uh, we are, uh, first
+
+1253
+01:23:09.522 --> 01:23:13.202
+calculating the loss for entire data samples in the case of batch gradient
+
+1254
+01:23:13.242 --> 01:23:17.162
+descent. So 200 epoch learning rate, okay?
+
+1255
+01:23:17.202 --> 01:23:21.062
+And then we are also storing what is the loss history. Okay?
+
+1256
+01:23:21.122 --> 01:23:25.102
+Now, they are all the simple, simple things you can calculate. What is the...
+
+1257
+01:23:25.122 --> 01:23:28.902
+We are just calling the forward propagation, means this particular function.
+
+1258
+01:23:28.922 --> 01:23:30.842
+It will calculate everything. Uh,
+
+1259
+01:23:32.022 --> 01:23:36.002
+Z1, H1, Z2, H2 and it will return Y hat, Z1, Z2, H1, everything it
+
+1260
+01:23:36.042 --> 01:23:39.642
+will return, uh, this forward function. Okay?
+
+1261
+01:23:39.742 --> 01:23:43.522
+Then with the Y hat I'll calculate the loss, which is the mean squared error
+
+1262
+01:23:43.982 --> 01:23:47.542
+then loss.backpropagate. Now this will calculate all the gradient for all the
+
+1263
+01:23:47.562 --> 01:23:51.322
+parameters what I have, and then I'll call the update params,
+
+1264
+01:23:51.362 --> 01:23:54.252
+means this particular function which will update my parameters.
+
+1265
+01:23:55.162 --> 01:23:59.052
+Okay? All these things we have seen how to do this in the theory, and now this is
+
+1266
+01:23:59.082 --> 01:24:03.062
+the code for that. And now I'm just calculating after each epoch, what is
+
+1267
+01:24:03.102 --> 01:24:06.962
+my loss? What is my loss? So af- after every epoch, whatever is the
+
+1268
+01:24:07.022 --> 01:24:10.362
+loss coming, that I'm appending in this loss history empty
+
+1269
+01:24:10.422 --> 01:24:14.302
+list. That's all. Okay? Now this particular function is
+
+1270
+01:24:14.342 --> 01:24:17.912
+for the batch gradient descent. Similarly, here I am doing
+
+1271
+01:24:17.962 --> 01:24:20.142
+for stochastic gradient descent.
+
+1272
+01:24:20.222 --> 01:24:23.542
+Same thing, same thing but stochastic means here the epochs are
+
+1273
+01:24:23.622 --> 01:24:27.552
+same, these are all same. So epoch I will
+
+1274
+01:24:27.602 --> 01:24:31.102
+run same time, only change would be now I will
+
+1275
+01:24:31.182 --> 01:24:34.852
+only use one data for the update of the
+
+1276
+01:24:34.942 --> 01:24:38.862
+parameter. Every time I will update the parameter but I'll process only one
+
+1277
+01:24:38.942 --> 01:24:42.582
+data. So if suppose 200 epoch, in every epoch
+
+1278
+01:24:43.002 --> 01:24:46.562
+I will do 500 updates. Why? Because my data size is 500.
+
+1279
+01:24:46.602 --> 01:24:50.482
+So every sample I'll cal- do the forward propagation, calculate the loss, update
+
+1280
+01:24:50.522 --> 01:24:54.322
+all the parameters. So 200 into 500, though that much time it will
+
+1281
+01:24:54.402 --> 01:24:57.882
+run, obviously, it will take more time, you will see that. Okay?
+
+1282
+01:24:57.922 --> 01:25:01.602
+It will take more time, SGD. The rest everything is same. Okay?
+
+1283
+01:25:01.662 --> 01:25:05.202
+Rest everything is same, you can just, uh, look into that one.
+
+1284
+01:25:05.242 --> 01:25:08.902
+Finally, we have the mini batch which will take the batch size
+
+1285
+01:25:09.542 --> 01:25:13.382
+neither five, uh, batch size... Uh, here you see this,
+
+1286
+01:25:13.452 --> 01:25:17.412
+there is one batch size is equal to 50 and, uh, here I
+
+1287
+01:25:17.442 --> 01:25:20.982
+did not keep any batch size that means that the batch size by default,
+
+1288
+01:25:21.042 --> 01:25:24.885
+um, i- it is-Okay, so-
+
+1289
+01:25:24.906 --> 01:25:25.806
+Hello?
+
+1290
+01:25:25.826 --> 01:25:29.545
+... one, one and here it is taking the complete, uh,
+
+1291
+01:25:29.566 --> 01:25:31.005
+complete data. So that is the difference.
+
+1292
+01:25:31.026 --> 01:25:34.906
+So here, extra parameter I'm keeping just to, uh, keep the
+
+1293
+01:25:34.925 --> 01:25:38.686
+batch size, which is 50. That is the only change and rest, again, it will
+
+1294
+01:25:38.786 --> 01:25:42.745
+work in th- this much epoch and for every batch,
+
+1295
+01:25:42.885 --> 01:25:46.826
+mini-batch size, it will run the in- uh, inner loop and calculate the loss to
+
+1296
+01:25:46.866 --> 01:25:50.066
+the back propagation and update the parameter and store the loss
+
+1297
+01:25:50.106 --> 01:25:54.005
+history. Okay, now say that this, this also I
+
+1298
+01:25:54.066 --> 01:25:56.366
+have calc- uh, before that,
+
+1299
+01:25:57.266 --> 01:25:59.995
+uh, this one was... This one I have to calcula-...
+
+1300
+01:26:00.026 --> 01:26:03.156
+This one I have to run and this one I have...
+
+1301
+01:26:03.585 --> 01:26:07.505
+Now, what I want to show you that how much time it takes for each
+
+1302
+01:26:07.585 --> 01:26:11.526
+of these cases. And for that one, this is the, uh, time which
+
+1303
+01:26:11.606 --> 01:26:15.346
+I'm importing. This is a function timed for training for each of these
+
+1304
+01:26:15.425 --> 01:26:19.085
+cases so I will calculate the start time, what is the end
+
+1305
+01:26:19.146 --> 01:26:19.486
+time.
+
+1306
+01:26:20.406 --> 01:26:23.976
+Okay? So that is what I'm calculating whenever I'll call this-
+
+1307
+01:26:23.976 --> 01:26:26.045
+(clears throat)
+
+1308
+01:26:26.056 --> 01:26:29.406
+... uh, uh, f- function now and function would be
+
+1309
+01:26:29.465 --> 01:26:32.536
+this, whether a mini-batch, batch, or a stochastic gradient descent.
+
+1310
+01:26:32.585 --> 01:26:36.465
+I'll calculate this time. Total time will be end minus start, so time
+
+1311
+01:26:36.486 --> 01:26:38.576
+per epoch, that is also it- I- we are calculating.
+
+1312
+01:26:38.606 --> 01:26:42.186
+So this cell is only for time calculating and here, we are actually calling the
+
+1313
+01:26:42.226 --> 01:26:45.585
+function for those three: stochastic gradient descent, batch and
+
+1314
+01:26:45.606 --> 01:26:48.705
+mini-batch. So we are just calling the, the
+
+1315
+01:26:48.806 --> 01:26:52.286
+time, uh, uh, training this particular function,
+
+1316
+01:26:52.346 --> 01:26:56.085
+okay, and train_full_batch, train_sgd and
+
+1317
+01:26:56.186 --> 01:26:59.946
+train_minibatch. These are the inside parameter we are passing, and what are
+
+1318
+01:27:00.005 --> 01:27:03.165
+these parameter? These parameters are nothing but the name of these functions.
+
+1319
+01:27:03.205 --> 01:27:06.465
+Actually, we are calling these functions internally. Okay?
+
+1320
+01:27:06.505 --> 01:27:10.116
+So yes, let us now... Uh, I'll show you. So if I... It will run.
+
+1321
+01:27:10.125 --> 01:27:13.366
+So you see that full batch, full batch has taken
+
+1322
+01:27:13.585 --> 01:27:16.885
+0.20 seconds. Time per epoch is
+
+1323
+01:27:17.066 --> 01:27:20.696
+0.00. How many epoch we were running? 200 epoch we are running.
+
+1324
+01:27:20.705 --> 01:27:24.425
+Here also 200 epoch, here also. So 200 epoch we are running,
+
+1325
+01:27:24.465 --> 01:27:28.016
+time per epoch is 0.01 and total time it is taking is
+
+1326
+01:27:28.186 --> 01:27:31.366
+0.20. So obviously, you can see that it is fast, okay?
+
+1327
+01:27:31.385 --> 01:27:35.026
+It is faster. Faster in order to complete the
+
+1328
+01:27:35.066 --> 01:27:38.726
+epoch, okay? Faster in... Not in order
+
+1329
+01:27:38.866 --> 01:27:42.726
+to converge. Convergence means that
+
+1330
+01:27:42.786 --> 01:27:46.286
+your loss is not changing, okay? Or, uh, so that is con-
+
+1331
+01:27:46.326 --> 01:27:50.254
+convergence. So batch gradient descent is good to,
+
+1332
+01:27:50.286 --> 01:27:54.245
+to, to complete the training for whatever number of epochs you have
+
+1333
+01:27:54.346 --> 01:27:58.306
+fixed. Okay? Now, SGD you will see that it will take
+
+1334
+01:27:58.326 --> 01:28:01.566
+the maximum time because after every data point, it is
+
+1335
+01:28:02.106 --> 01:28:04.545
+updating all the parameter. 200 into
+
+1336
+01:28:04.925 --> 01:28:08.594
+500. Those many times back propagation, the update of the
+
+1337
+01:28:08.665 --> 01:28:12.545
+parameter is happening. It will take maximum time,
+
+1338
+01:28:12.625 --> 01:28:16.035
+but see that it has taken 63 seconds.
+
+1339
+01:28:16.066 --> 01:28:19.906
+Time per epoch is 0.31 and obviously mini-batch will be in between
+
+1340
+01:28:19.965 --> 01:28:21.946
+because we have taken some batch size.
+
+1341
+01:28:21.965 --> 01:28:25.526
+So now it is 1.38 seconds, right? So this is the result.
+
+1342
+01:28:25.566 --> 01:28:29.245
+So it clearly says that SGD takes maximum time in order to
+
+1343
+01:28:29.286 --> 01:28:33.245
+complete the training process, okay?
+
+1344
+01:28:33.286 --> 01:28:36.946
+And then, uh, mini-batch and finally the full batch will take the minimum
+
+1345
+01:28:36.986 --> 01:28:39.986
+time. But in order... Uh, if you see the
+
+1346
+01:28:40.026 --> 01:28:43.896
+convergence, if you see the convergence, so this plot will... Th- this...
+
+1347
+01:28:43.906 --> 01:28:47.826
+I just plotting the loss function because loss history we have stored in all
+
+1348
+01:28:47.846 --> 01:28:51.455
+the cases. So this y-axis is a loss and, uh,
+
+1349
+01:28:51.585 --> 01:28:54.366
+x-axis is my epoch and there are three curve.
+
+1350
+01:28:54.446 --> 01:28:58.425
+One green for mini-batch, the SGD has this orange and this
+
+1351
+01:28:58.446 --> 01:29:02.266
+blue is the full batch. Now, you will see
+
+1352
+01:29:02.346 --> 01:29:04.266
+that, uh, the SGD
+
+1353
+01:29:05.085 --> 01:29:09.076
+starts from here. SGD, stochastic gradient descent start from
+
+1354
+01:29:09.165 --> 01:29:12.646
+here and it quickly converge after 25 epoch, means after
+
+1355
+01:29:12.846 --> 01:29:16.245
+25 epoch, you will not see any change in this orange
+
+1356
+01:29:16.266 --> 01:29:20.035
+line. Flat, that means that loss is not changing.
+
+1357
+01:29:20.066 --> 01:29:22.965
+So after 25 epoch itself, it was converged.
+
+1358
+01:29:23.026 --> 01:29:25.215
+If you talk about this full batch gradient des-...
+
+1359
+01:29:25.226 --> 01:29:29.186
+This blue, it is starting here, going down, down, all these things you
+
+1360
+01:29:29.226 --> 01:29:31.486
+will see, uh, but
+
+1361
+01:29:32.385 --> 01:29:35.226
+I see here after around 65 epoch,
+
+1362
+01:29:36.266 --> 01:29:39.906
+it has converged, okay? And if you talk about this
+
+1363
+01:29:39.965 --> 01:29:42.616
+mini-batch, it i- it is still decreasing.
+
+1364
+01:29:42.625 --> 01:29:45.076
+It is still decreasing even after 200 epoch.
+
+1365
+01:29:45.326 --> 01:29:48.606
+It ha- it has not yet converged. I don't see the flat line in this loss, still
+
+1366
+01:29:48.646 --> 01:29:52.266
+decreasing. So this is the chain. In terms of convergence,
+
+1367
+01:29:52.385 --> 01:29:55.085
+SGD is faster. Why? Because it is taking more number of
+
+1368
+01:29:55.165 --> 01:29:58.646
+updates, okay? But in terms of time for the
+
+1369
+01:29:58.665 --> 01:30:02.406
+training, uh, full batch gradient descent is faster.
+
+1370
+01:30:02.425 --> 01:30:05.846
+So this is what is the, uh, difference between this
+
+1371
+01:30:05.906 --> 01:30:09.766
+batch, SGD and mini-batch gradient descent.
+
+1372
+01:30:09.806 --> 01:30:13.465
+One more thing before you can ask me some questions, that usually what we
+
+1373
+01:30:13.486 --> 01:30:16.385
+do, we prefer mini-batch usually, okay?
+
+1374
+01:30:16.425 --> 01:30:20.066
+We don't prefer batch or SGD and, uh, we usually take
+
+1375
+01:30:20.125 --> 01:30:23.885
+the, uh, m- mini-batch size in the power of two,
+
+1376
+01:30:24.786 --> 01:30:27.875
+in the power of two. You, you will see that batch size if...
+
+1377
+01:30:27.925 --> 01:30:31.705
+Suppose you have 100, uh, data points, you will take the batch size as, say
+
+1378
+01:30:31.745 --> 01:30:35.465
+that 8, 16, 32, something like that, okay?
+
+1379
+01:30:35.526 --> 01:30:39.245
+So power of two. Why? Because it, it optimizes your RAM
+
+1380
+01:30:39.286 --> 01:30:43.226
+properly, right? Uh, the, uh... So it
+
+1381
+01:30:43.286 --> 01:30:47.165
+optimizes the RAM properly and then, um, that is, that
+
+1382
+01:30:47.205 --> 01:30:50.726
+is one reason that why mini-batch are, uh, taken in power of two.
+
+1383
+01:30:51.056 --> 01:30:53.735
+But having said that, it is not always, uh, uh...
+
+1384
+01:30:53.735 --> 01:30:56.616
+It is not all, uh, necessary to keep it in the power of two.
+
+1385
+01:30:56.646 --> 01:30:59.406
+You can take the, uh, mini-batch size at 10 also.
+
+1386
+01:30:59.425 --> 01:31:02.175
+So then it will go for 10, 10, 10, 10, 10, like...
+
+1387
+01:31:02.205 --> 01:31:05.266
+Uh, you can take 50 also, you can take 40 also.
+
+1388
+01:31:05.306 --> 01:31:08.366
+So when you take mini-batch size is equal to 40, so first
+
+1389
+01:31:08.465 --> 01:31:12.425
+data set will be of 40 samples, second data set will
+
+1390
+01:31:12.465 --> 01:31:15.686
+be of 40 samples, third data set will be of 20 samples.
+
+1391
+01:31:15.846 --> 01:31:19.705
+40, 40, 20, that is how it will divide the data. Okay?
+
+1392
+01:31:19.726 --> 01:31:23.186
+Now all these are some of the, uh, understanding, if you will have, you will be
+
+1393
+01:31:23.245 --> 01:31:24.715
+able to train your network in a better
+
+1394
+01:31:25.646 --> 01:31:29.226
+way. Okay? So now I'll take your questions first then I'll go move ahead.
+
+1395
+01:31:30.474 --> 01:31:31.894
+Sir, I have a question.
+
+1396
+01:31:31.914 --> 01:31:32.384
+Yeah, please.
+
+1397
+01:31:32.394 --> 01:31:36.234
+So, let's, uh, now if we reduce the mini batch,
+
+1398
+01:31:36.314 --> 01:31:37.914
+uh, size then-
+
+1399
+01:31:38.014 --> 01:31:38.024
+Hmm.
+
+1400
+01:31:38.024 --> 01:31:41.594
+... will the conversion, uh, time be lesser?
+
+1401
+01:31:42.514 --> 01:31:46.454
+Uh, mini batch size, as you will reduce, it is approaching towards this
+
+1402
+01:31:46.614 --> 01:31:47.814
+SGD.
+
+1403
+01:31:47.834 --> 01:31:47.844
+Hmm.
+
+1404
+01:31:47.854 --> 01:31:51.674
+Right? So obviously, maybe the convergence may happen a little
+
+1405
+01:31:51.734 --> 01:31:55.234
+faster. Okay? That is what you went on, but, uh, you have to check that.
+
+1406
+01:31:55.274 --> 01:31:56.234
+Yeah.
+
+1407
+01:31:56.244 --> 01:31:56.244
+
+1408
+01:31:56.254 --> 01:32:00.174
+Yeah, I, I believe that it should happen because it is going towards SGD and SGD
+
+1409
+01:32:00.194 --> 01:32:01.714
+behavior, you can see how it is.
+
+1410
+01:32:01.754 --> 01:32:03.074
+Hmm. Yes.
+
+1411
+01:32:03.114 --> 01:32:03.814
+Yeah.
+
+1412
+01:32:03.894 --> 01:32:06.934
+Okay, sir. Got it. Thank you.
+
+1413
+01:32:07.014 --> 01:32:07.374
+Okay.
+
+1414
+01:32:08.694 --> 01:32:10.434
+Other questions? Is it clear?
+
+1415
+01:32:10.454 --> 01:32:11.204
+Uh, sir.
+
+1416
+01:32:11.204 --> 01:32:11.204
+
+1417
+01:32:11.204 --> 01:32:15.104
+Yeah. Yes, sir. One more question is, like, um, at, you know,
+
+1418
+01:32:15.134 --> 01:32:18.334
+when first trying, we won't get the proper output.
+
+1419
+01:32:18.344 --> 01:32:18.344
+
+1420
+01:32:18.354 --> 01:32:21.534
+So, like, I'm just comparing some practical things.
+
+1421
+01:32:21.554 --> 01:32:21.564
+Yeah.
+
+1422
+01:32:21.564 --> 01:32:25.554
+So, uh, once the model is trained, we get the outputs, we
+
+1423
+01:32:25.594 --> 01:32:28.244
+feel that it, it doesn't comes through properly as we ...
+
+1424
+01:32:28.294 --> 01:32:30.754
+Even in first semester, we s- saw some ANN.
+
+1425
+01:32:30.764 --> 01:32:30.764
+
+1426
+01:32:31.254 --> 01:32:32.934
+Like, how its word is predicting.
+
+1427
+01:32:32.944 --> 01:32:33.043
+Hmm.
+
+1428
+01:32:33.114 --> 01:32:36.954
+So, uh, every time, again, we, uh, we updates our initial
+
+1429
+01:32:37.534 --> 01:32:39.594
+parameters and then, again, we try.
+
+1430
+01:32:39.774 --> 01:32:43.314
+So if we, uh, in that, in there, in thinking of full
+
+1431
+01:32:43.394 --> 01:32:47.354
+aspects, so going with SGD, we'll get the, even the
+
+1432
+01:32:47.374 --> 01:32:51.174
+training time is more, we get the things faster or
+
+1433
+01:32:51.494 --> 01:32:55.294
+still we, uh, we, we can go ahead with mini batch or a full,
+
+1434
+01:32:55.394 --> 01:32:58.194
+uh, full G- uh, GD?
+
+1435
+01:32:58.274 --> 01:33:02.094
+I mean, you can take a call. It is not alwa- always necessary to
+
+1436
+01:33:02.174 --> 01:33:04.434
+go ahead with mini batch. Okay?
+
+1437
+01:33:04.474 --> 01:33:04.504
+Hmm.
+
+1438
+01:33:04.504 --> 01:33:08.354
+Mini batch is, uh, recommended in such a case where dataset is
+
+1439
+01:33:08.454 --> 01:33:12.234
+very big, say that you have millions of samples, which is available in your
+
+1440
+01:33:12.254 --> 01:33:13.814
+dataset. Okay?
+
+1441
+01:33:13.834 --> 01:33:13.994
+Hmm.
+
+1442
+01:33:14.334 --> 01:33:18.174
+So in such cases, mini batch would be preferred,
+
+1443
+01:33:18.294 --> 01:33:21.304
+right? But then, um, if your data sample is
+
+1444
+01:33:21.454 --> 01:33:23.314
+small, you see that SGD-
+
+1445
+01:33:23.334 --> 01:33:23.344
+Mm-hmm.
+
+1446
+01:33:23.344 --> 01:33:27.004
+... is converging very fast, you can take a call to go ahead with the SGD.
+
+1447
+01:33:27.014 --> 01:33:30.494
+It is not, uh, necessary to go ahead with the mini batch also.
+
+1448
+01:33:30.554 --> 01:33:33.914
+Nowadays, like, we are in the LLM and generative models.
+
+1449
+01:33:33.974 --> 01:33:37.744
+So, in this type that the data is huge, here which one is
+
+1450
+01:33:37.814 --> 01:33:41.554
+more preferred, sir, mini batch or we're going with full row?
+
+1451
+01:33:41.634 --> 01:33:43.354
+Um, usually, we... That's what I said.
+
+1452
+01:33:43.394 --> 01:33:44.454
+In such a case-
+
+1453
+01:33:44.494 --> 01:33:44.504
+Mm-hmm.
+
+1454
+01:33:44.534 --> 01:33:48.364
+... where we have, uh, very high, um, dataset is
+
+1455
+01:33:48.554 --> 01:33:48.704
+specific-
+
+1456
+01:33:48.704 --> 01:33:48.704
+
+1457
+01:33:48.704 --> 01:33:50.914
+Okay. ... mini batch is preferred. Yeah.
+
+1458
+01:33:50.974 --> 01:33:53.094
+Yes. Thank you, sir.
+
+1459
+01:33:53.474 --> 01:33:54.614
+Okay.
+
+1460
+01:33:54.634 --> 01:33:55.924
+Uh, yes, sir.
+
+1461
+01:33:56.774 --> 01:34:00.394
+For SGD, as, um, you mentioned, sir, it is taking every data
+
+1462
+01:34:00.514 --> 01:34:01.334
+part-
+
+1463
+01:34:01.344 --> 01:34:01.344
+
+1464
+01:34:01.344 --> 01:34:03.714
+Hmm. ... for each of the iterations.
+
+1465
+01:34:03.734 --> 01:34:03.774
+Mm-hmm.
+
+1466
+01:34:03.914 --> 01:34:06.794
+So, the parameter, how it is updated, sir?
+
+1467
+01:34:06.854 --> 01:34:09.234
+Each time the previous parameter is updated
+
+1468
+01:34:10.114 --> 01:34:10.364
+or-
+
+1469
+01:34:10.364 --> 01:34:10.464
+Uh-huh.
+
+1470
+01:34:10.464 --> 01:34:13.994
+... parameter is stored somewhere and at last, it is
+
+1471
+01:34:14.054 --> 01:34:14.854
+averaged out?
+
+1472
+01:34:14.914 --> 01:34:18.234
+No, no. I suppose you have 500 samples, right?
+
+1473
+01:34:18.394 --> 01:34:18.794
+Yeah.
+
+1474
+01:34:18.854 --> 01:34:22.654
+So one sample, you will do the forward pass, you will calculate the loss
+
+1475
+01:34:23.094 --> 01:34:25.144
+and you will update all the parameters.
+
+1476
+01:34:26.934 --> 01:34:30.814
+So after every sample you have processed as a forward pass,
+
+1477
+01:34:30.914 --> 01:34:32.484
+you will do the backward pass for it.
+
+1478
+01:34:33.114 --> 01:34:33.354
+Okay.
+
+1479
+01:34:33.394 --> 01:34:37.054
+So suppose 500 sample, 500 times you are doing the back
+
+1480
+01:34:37.094 --> 01:34:40.474
+propagation in every iteration.
+
+1481
+01:34:40.494 --> 01:34:41.263
+Yes, sir.
+
+1482
+01:34:41.314 --> 01:34:43.844
+Or in every epoch, whatever you say. Okay?
+
+1483
+01:34:43.874 --> 01:34:47.584
+So that is how it is being updated. So if you see here, when you are
+
+1484
+01:34:47.634 --> 01:34:51.474
+updating the parameter, once I update this parameter by the same
+
+1485
+01:34:51.554 --> 01:34:55.494
+rule, whatever we have there, that theta is equal to theta minus learning
+
+1486
+01:34:55.514 --> 01:34:58.494
+rate into the partial derivative of that.
+
+1487
+01:34:58.514 --> 01:35:02.094
+This is the same, same, uh, thing, only thing is here we are using the
+
+1488
+01:35:02.174 --> 01:35:06.014
+grad or, uh, from the, uh, auto grad,
+
+1489
+01:35:06.054 --> 01:35:09.114
+PyTorch. That's why it looks a little different, but it is the same equation.
+
+1490
+01:35:09.214 --> 01:35:09.994
+After updating
+
+1491
+01:35:10.934 --> 01:35:13.914
+wa- uh, all the parameter for, uh, for a particular
+
+1492
+01:35:14.094 --> 01:35:17.633
+sample, we are making all the parameter value as zero in
+
+1493
+01:35:17.734 --> 01:35:21.554
+place, uh, operation where, because I don't want that parameter
+
+1494
+01:35:22.254 --> 01:35:25.934
+to get accumulated because after every sample, we are updating the parameter.
+
+1495
+01:35:26.014 --> 01:35:27.954
+I don't want to take it as a last
+
+1496
+01:35:28.894 --> 01:35:31.314
+up- uh, updated parameter value. It will go as zero.
+
+1497
+01:35:31.334 --> 01:35:35.154
+In the next sample when you get a loss, again, you update it from,
+
+1498
+01:35:35.274 --> 01:35:37.854
+uh, uh, uh, gradient becomes zero.
+
+1499
+01:35:38.054 --> 01:35:40.874
+Para- not para- uh, parameter, sorry. The gradient becomes zero.
+
+1500
+01:35:40.894 --> 01:35:43.474
+I don't want my gradient to be a- uh, to get accumulated.
+
+1501
+01:35:43.514 --> 01:35:45.394
+Parameters will be intact. Yeah.
+
+1502
+01:35:46.914 --> 01:35:47.514
+Yes, sir.
+
+1503
+01:35:47.534 --> 01:35:47.683
+Yes,
+
+1504
+01:35:47.683 --> 01:35:50.654
+sir. So this happen for every epoch actually?
+
+1505
+01:35:50.673 --> 01:35:53.594
+Uh, uh, every epoch, every data point.
+
+1506
+01:35:53.714 --> 01:35:54.674
+Every data point.
+
+1507
+01:35:54.754 --> 01:35:56.934
+Uh, every da- in SGD.
+
+1508
+01:35:56.954 --> 01:35:57.004
+Yes, I have seen.
+
+1509
+01:35:57.004 --> 01:36:00.874
+Suppose 500 data point, means 500 times update will
+
+1510
+01:36:00.914 --> 01:36:04.394
+happen for every epoch.
+
+1511
+01:36:04.404 --> 01:36:04.404
+
+1512
+01:36:04.434 --> 01:36:04.964
+And suppose-
+
+1513
+01:36:04.974 --> 01:36:04.984
+Mm-hmm.
+
+1514
+01:36:04.994 --> 01:36:08.114
+... you have fixed the 200 epochs, so 200 into 500.
+
+1515
+01:36:08.134 --> 01:36:11.314
+Those many, those many updates will happen in SGD.
+
+1516
+01:36:11.354 --> 01:36:15.243
+But, but in batch, only 500 update will happen and
+
+1517
+01:36:15.274 --> 01:36:15.654
+in mini-
+
+1518
+01:36:15.714 --> 01:36:15.944
+Yes,
+
+1519
+01:36:15.944 --> 01:36:19.594
+sir. ... batch, you divide it or your data points by that, uh, so accordingly, the
+
+1520
+01:36:19.634 --> 01:36:20.894
+update will happen. Yeah.
+
+1521
+01:36:20.954 --> 01:36:23.594
+Yeah. Got it, sir. Thank you, sir.
+
+1522
+01:36:23.614 --> 01:36:25.414
+Okay.
+
+1523
+01:36:27.514 --> 01:36:30.194
+All right?
+
+1524
+01:36:30.254 --> 01:36:31.294
+Yes, sir.
+
+1525
+01:36:31.414 --> 01:36:35.274
+Uh, then, uh, this much we have covered.
+
+1526
+01:36:35.354 --> 01:36:39.013
+Now let me see. Uh, we have few, uh,
+
+1527
+01:36:39.174 --> 01:36:42.554
+uh... I'll just quickly cover this vanishing gradient problem.
+
+1528
+01:36:42.594 --> 01:36:46.034
+You will be able to understand now what is this vanishing gradient problem.
+
+1529
+01:36:46.074 --> 01:36:49.754
+Okay. So, uh, as it- uh, as it
+
+1530
+01:36:49.814 --> 01:36:53.034
+says, gradient. Gradient, all of us understand, right?
+
+1531
+01:36:53.074 --> 01:36:55.674
+In the back propagation, gradient
+
+1532
+01:36:56.154 --> 01:37:00.124
+decides, uh, uh, that, uh, your, uh,
+
+1533
+01:37:00.124 --> 01:37:03.174
+uh, your... in which direction you have to go.
+
+1534
+01:37:03.214 --> 01:37:06.254
+In the sense, whether you have to increase the value of the
+
+1535
+01:37:06.834 --> 01:37:08.794
+parameter or you have to decrease because
+
+1536
+01:37:09.674 --> 01:37:12.834
+theta is equal to theta minus gradient. That is what is.
+
+1537
+01:37:12.894 --> 01:37:16.714
+So if the gradient is positive, you will decrease from the
+
+1538
+01:37:16.734 --> 01:37:20.114
+theta. If gradient is negative then you will increase into theta.
+
+1539
+01:37:20.134 --> 01:37:23.974
+So that gradient decide that what will be the next theta, what will be the
+
+1540
+01:37:24.034 --> 01:37:26.314
+next update in the theta. That is the gradient.
+
+1541
+01:37:27.294 --> 01:37:30.714
+And gradient, uh, uh, says that, okay, if you change that
+
+1542
+01:37:30.734 --> 01:37:33.674
+theta with this amount, what will be the change in the
+
+1543
+01:37:33.714 --> 01:37:37.554
+loss? But the problem with the gradient is that it may
+
+1544
+01:37:37.734 --> 01:37:41.360
+vanish.Okay, it may vanish. Vanish when I
+
+1545
+01:37:41.410 --> 01:37:44.930
+say gradient is, uh, anyway we want to keep the gradient
+
+1546
+01:37:44.970 --> 01:37:48.730
+value, uh, small. Uh, I don't want to keep very high or very
+
+1547
+01:37:48.790 --> 01:37:51.770
+low. So if the gradient is very low
+
+1548
+01:37:53.090 --> 01:37:56.990
+then there is a problem, something called as vanishing gradient problem which may
+
+1549
+01:37:57.050 --> 01:37:58.880
+occur in the artificial neural network.
+
+1550
+01:37:58.910 --> 01:38:01.050
+So what is the vanishing gradient problem?
+
+1551
+01:38:01.090 --> 01:38:04.190
+During the back propagation, gradients are computed layer by layer.
+
+1552
+01:38:04.230 --> 01:38:07.330
+That we have already seen, right? Using the chain rule.
+
+1553
+01:38:07.390 --> 01:38:11.250
+If the multiplicative factors are less than one, that means the
+
+1554
+01:38:11.290 --> 01:38:14.330
+gradient, whatever gradient which is coming is less than
+
+1555
+01:38:14.390 --> 01:38:18.040
+one, that product would be,
+
+1556
+01:38:18.150 --> 01:38:22.130
+uh, their, uh, their product across many layer can shrink exponentially
+
+1557
+01:38:22.150 --> 01:38:22.870
+towards zero
+
+1558
+01:38:23.790 --> 01:38:27.310
+and result would be various small gradients for early layers
+
+1559
+01:38:28.450 --> 01:38:32.390
+and then weights hardly update, training will not
+
+1560
+01:38:32.430 --> 01:38:35.780
+happen. So what is the meaning of all these things?
+
+1561
+01:38:35.830 --> 01:38:38.930
+And for that one, let me just, uh, take one
+
+1562
+01:38:38.970 --> 01:38:40.110
+example.
+
+1563
+01:38:41.170 --> 01:38:45.110
+So we are calculating the gradient, right, and say that the gradient value is
+
+1564
+01:38:45.149 --> 01:38:48.080
+very small like 0.1, just for the example.
+
+1565
+01:38:48.110 --> 01:38:50.800
+Gradient will come something but I am saying that it is very small.
+
+1566
+01:38:50.870 --> 01:38:54.350
+Small when I say, when it is less than one. Okay?
+
+1567
+01:38:54.430 --> 01:38:57.570
+And every time when I calculate the gradient it is very small.
+
+1568
+01:38:57.590 --> 01:39:01.430
+Now you know that the, whenever you are calculating the gradient
+
+1569
+01:39:01.490 --> 01:39:04.070
+with respect to any parameter, you go with the chain rule.
+
+1570
+01:39:04.090 --> 01:39:07.930
+In the chain rule what you do, you multiply multiple gradients like
+
+1571
+01:39:07.970 --> 01:39:11.890
+this. So when you will multiply the multiple gradients
+
+1572
+01:39:11.950 --> 01:39:15.810
+like this and their values are very small like this suppose,
+
+1573
+01:39:15.850 --> 01:39:17.470
+then you will end up with
+
+1574
+01:39:19.170 --> 01:39:22.630
+very small value, like zero point, the val- value which is
+
+1575
+01:39:23.110 --> 01:39:26.950
+0.001, right, 00. You can say that one.
+
+1576
+01:39:26.970 --> 01:39:30.930
+So now see that this gra- uh, the, when you multiply these small value,
+
+1577
+01:39:30.970 --> 01:39:34.150
+you will get even smaller values. Okay?
+
+1578
+01:39:34.190 --> 01:39:37.490
+Now, uh, imagine that you have 10 layers.
+
+1579
+01:39:37.510 --> 01:39:40.830
+10 layer, hidden layer. When you started at the output layer, gradient was
+
+1580
+01:39:41.010 --> 01:39:44.350
+0.1, then the next again 0.1, next 0.1.
+
+1581
+01:39:44.370 --> 01:39:48.030
+You are going back to the input layer, means 10 times you are adding this.
+
+1582
+01:39:48.070 --> 01:39:50.899
+Means that 1 into 10 to the power of minus 10 you have already reached,
+
+1583
+01:39:51.810 --> 01:39:55.270
+which is very small, which is nothing but zero, if you will see that.
+
+1584
+01:39:55.310 --> 01:39:59.090
+Now, when it becomes zero, then what will happen?
+
+1585
+01:39:59.130 --> 01:40:02.830
+That you, uh, that I guess all of you know quite well.
+
+1586
+01:40:02.930 --> 01:40:03.850
+I just want to
+
+1587
+01:40:04.710 --> 01:40:08.070
+show you that, uh, uh, wait
+
+1588
+01:40:08.210 --> 01:40:11.840
+here. Uh, not here. Let me go back a little bit.
+
+1589
+01:40:11.870 --> 01:40:15.710
+Yeah. Say that this, this particular part. Now say that this is my gradient.
+
+1590
+01:40:15.730 --> 01:40:19.470
+Theta is equal to theta minus, um, learning rate into
+
+1591
+01:40:19.490 --> 01:40:21.870
+gradient. Now see that this whole part is
+
+1592
+01:40:22.810 --> 01:40:25.950
+very small or zero. This whole term becomes zero.
+
+1593
+01:40:25.970 --> 01:40:29.290
+If this whole term becomes zero, theta is equal to theta, means there is no change
+
+1594
+01:40:29.310 --> 01:40:32.810
+in the parameters. So from whatever layer onwards
+
+1595
+01:40:33.290 --> 01:40:33.810
+if theta
+
+1596
+01:40:34.910 --> 01:40:38.840
+remains theta, that means that whatever weight you have from that layer
+
+1597
+01:40:38.870 --> 01:40:41.930
+and the previous layer, there is no change in the weights.
+
+1598
+01:40:42.010 --> 01:40:45.860
+Next time when you are feeding the input, there is no change in those weight, those
+
+1599
+01:40:45.910 --> 01:40:49.830
+weights were not updated and hence you will not see the change in the
+
+1600
+01:40:49.870 --> 01:40:53.450
+ultimate loss. Or very, uh, the, the loss is
+
+1601
+01:40:53.459 --> 01:40:57.260
+not reducing because initial layer, initial layer weights are
+
+1602
+01:40:57.290 --> 01:40:59.280
+not being updated because this is the problem.
+
+1603
+01:40:59.310 --> 01:41:02.830
+If this, uh, part becomes zero, this gradient becomes zero,
+
+1604
+01:41:02.870 --> 01:41:05.990
+then your para-parameter will not change. Okay?
+
+1605
+01:41:06.030 --> 01:41:09.910
+That is what we have seen. So vanishing gradient problem is
+
+1606
+01:41:09.950 --> 01:41:13.770
+that itself. It says that what happens in case of the ANN
+
+1607
+01:41:13.810 --> 01:41:17.640
+when you have multiple hidden layers like that and suppose you
+
+1608
+01:41:17.710 --> 01:41:21.250
+have used some activation function like sigmoid.
+
+1609
+01:41:21.310 --> 01:41:23.550
+Now sigmoid you know that how does it behave?
+
+1610
+01:41:24.250 --> 01:41:25.870
+So here, a1,
+
+1611
+01:41:27.230 --> 01:41:31.170
+uh, is a sigmoid of ƒ1. Say that whatever weight is sum plus bias you
+
+1612
+01:41:31.210 --> 01:41:32.950
+will get, you will pass it through the sigmoid.
+
+1613
+01:41:32.970 --> 01:41:36.790
+Now sigmoid has a tendency to squash your value
+
+1614
+01:41:36.930 --> 01:41:40.470
+in the range of zero to one. Now zero to one is like 0.1, 0.2,
+
+1615
+01:41:40.670 --> 01:41:44.270
+0.3, something like that, right? Suppose you have here also 0.1, here also
+
+1616
+01:41:44.470 --> 01:41:48.350
+0.1, 0.1, 0.1 and all these are gradient, so all of
+
+1617
+01:41:48.390 --> 01:41:51.690
+these you are going to multiply in order to calculate the gradient with respect to
+
+1618
+01:41:51.830 --> 01:41:55.550
+w1 and hence here you will feel that gradient is
+
+1619
+01:41:55.590 --> 01:41:58.450
+becoming almost zero and w1 weight is not changing.
+
+1620
+01:41:58.490 --> 01:42:02.250
+If w1 weight is not changing, this, this, this layer is remain
+
+1621
+01:42:02.310 --> 01:42:06.090
+same, you will not see much change here also in the param- Maybe this
+
+1622
+01:42:06.130 --> 01:42:09.650
+layer weight we will change, this will change slightly.
+
+1623
+01:42:09.690 --> 01:42:13.550
+It may not change, it will be almost zero so you will not see much change in
+
+1624
+01:42:13.610 --> 01:42:16.430
+the y hat and as well as the loss also.
+
+1625
+01:42:16.450 --> 01:42:19.650
+That means that that, uh, parameter is not
+
+1626
+01:42:19.710 --> 01:42:23.580
+updated, parameter is not being updated if the vanishing gradient problem will
+
+1627
+01:42:23.610 --> 01:42:27.390
+come into it at all, and that is not good at all, uh, it's not good for the
+
+1628
+01:42:27.430 --> 01:42:30.390
+network. So I have,
+
+1629
+01:42:30.470 --> 01:42:33.870
+uh... Okay, let me stop here maybe because 9:15
+
+1630
+01:42:33.930 --> 01:42:36.330
+already. I don't want to go... I have one example.
+
+1631
+01:42:36.370 --> 01:42:39.210
+I'll upload this slide, you can go ahead and in the next class I will show you this
+
+1632
+01:42:39.260 --> 01:42:42.550
+vanishing gradient problem with this examples, okay?
+
+1633
+01:42:42.610 --> 01:42:46.370
+And, uh, you will understand it better and then I am left with that, okay, how
+
+1634
+01:42:46.490 --> 01:42:48.620
+to address this vanishing gradient problem.
+
+1635
+01:42:48.650 --> 01:42:52.260
+So there are certain ways for addressing this gradient vanishing
+
+1636
+01:42:52.310 --> 01:42:55.670
+problem that also we'll discuss, like reducing the model complexity.
+
+1637
+01:42:55.730 --> 01:42:59.610
+Suppose 10 layers are there, you reduce to two layers but that may not help always
+
+1638
+01:43:00.230 --> 01:43:04.210
+when data is unstructured. You can use the activation function
+
+1639
+01:43:04.250 --> 01:43:08.090
+like ReLU, you can initialize the weight, uh, properly,
+
+1640
+01:43:08.530 --> 01:43:11.770
+you can use batch normalization or res- residual connections.
+
+1641
+01:43:11.790 --> 01:43:14.490
+We'll see, we'll see all these things. Yeah.
+
+1642
+01:43:14.550 --> 01:43:17.470
+Uh, excuse me sir, the code will be available later?
+
+1643
+01:43:17.550 --> 01:43:21.130
+Everything is, everything is integrated in this, uh, slide.
+
+1644
+01:43:21.170 --> 01:43:24.050
+Slide will be available. You can click and you can get the code.
+
+1645
+01:43:24.950 --> 01:43:26.910
+Okay, thank you sir.
+
+1646
+01:43:26.990 --> 01:43:30.910
+Si- just to, last question sir. Uh, in even
+
+1647
+01:43:31.050 --> 01:43:34.670
+the vanishing or in the conversions the graph will come straight line
+
+1648
+01:43:34.750 --> 01:43:35.190
+sir?
+
+1649
+01:43:36.010 --> 01:43:37.000
+Right? If
+
+1650
+01:43:37.070 --> 01:43:40.910
+Uh, the graph, uh, here suppose this is the case,
+
+1651
+01:43:40.970 --> 01:43:41.530
+what will happen-
+
+1652
+01:43:41.550 --> 01:43:41.560
+Yeah.
+
+1653
+01:43:41.560 --> 01:43:45.410
+...vanishing gradients means for a particular parameter, for a particular
+
+1654
+01:43:45.450 --> 01:43:49.318
+parameter your slope will be almost like this-The first
+
+1655
+01:43:49.328 --> 01:43:49.968
+thing that I
+
+1656
+01:43:50.438 --> 01:43:56.478
+would
+
+1657
+01:43:56.518 --> 01:44:00.168
+like to do is to look at
+
+1658
+01:44:00.678 --> 01:44:04.618
+data
+
+1659
+01:44:04.628 --> 01:44:08.878
+and
+
+1660
+01:44:09.178 --> 01:44:13.118
+see if there are
+
+1661
+01:44:13.718 --> 01:44:14.018
+any
+
+1662
+01:44:14.398 --> 01:44:39.448
+problems
+
+1663
+01:44:39.448 --> 01:44:39.467
+with the
+
+1664
+01:44:40.458 --> 01:44:47.978
+data.
+
+1665
+01:44:48.058 --> 01:44:51.508
+The second
+
+1666
+01:44:52.978 --> 01:44:56.598
+thing, which is
+
+1667
+01:44:57.898 --> 01:44:59.038
+very
+
+1668
+01:44:59.058 --> 01:45:02.758
+important for me, is to
+
+1669
+01:45:02.838 --> 01:45:04.008
+make sure that we have
+
+1670
+01:45:04.918 --> 01:45:07.808
+a good understanding
+
+1671
+01:45:07.808 --> 01:45:18.708
+of what's
+
+1672
+01:45:18.758 --> 01:45:19.278
+going
+
+1673
+01:45:19.658 --> 01:45:23.238
+on
+
+1674
+01:45:24.478 --> 01:45:28.348
+in the
+
+1675
+01:45:28.348 --> 01:45:29.028
+data. So it's not
+
+1676
+01:45:29.858 --> 01:45:30.138
+just about the
+
+1677
+01:45:31.618 --> 01:45:37.718
+data
+
+1678
+01:45:38.718 --> 01:45:41.058
+but also how you can use it.
+
+1679
+01:45:41.938 --> 01:45:44.028
+And then
+
+1680
+01:45:44.238 --> 01:45:47.738
+finally, I
+
+1681
+01:45:47.758 --> 01:45:48.378
+think
+
+1682
+01:45:50.018 --> 01:45:51.508
+this is where I'm
+
+1683
+01:45:51.508 --> 01:45:55.428
+most interested
+
+1684
+01:45:55.838 --> 01:45:57.638
+in looking at the data. It's
+
+1685
+01:45:57.717 --> 01:46:02.318
+really
+
+1686
+01:46:02.338 --> 01:46:03.088
+interesting because when you're
+
+1687
+01:46:04.878 --> 01:46:08.248
+dealing with data, you need to be able
+
+1688
+01:46:08.278 --> 01:46:11.978
+understand what's happening within your data.
+
+1689
+01:46:12.678 --> 01:46:12.738
+You
+
+1690
+01:46:15.278 --> 01:46:15.588
+know, as far as
+
+1691
+01:46:16.398 --> 01:46:20.278
+I've been doing this, I don't want to go
+
+1692
+01:46:20.318 --> 01:46:24.278
+back into the past. But I'd love to get some insight from people
+
+1693
+01:46:24.287 --> 01:46:25.998
+who are working with
+
+1694
+01:46:27.318 --> 01:46:30.198
+data.
+
+1695
+01:46:31.478 --> 01:46:43.378
+Because
+
+1696
+01:46:45.718 --> 01:46:54.028
+they'll
+
+1697
+01:46:54.678 --> 01:46:57.188
+tell us things that aren't necessarily true or even
+
+1698
+01:46:57.188 --> 01:47:00.328
+possible. They might say something that seems plausible,
+
+1699
+01:47:00.778 --> 01:47:04.258
+actually isn't. That's why I find it
+
+1700
+01:47:05.838 --> 01:47:32.358
+so
+
+1701
+01:47:42.588 --> 01:51:32.898
+interesting.
