@@ -1,0 +1,9665 @@
+WEBVTT
+
+1
+00:00:06.745 --> 00:00:07.635
+Good evening, sir.
+
+2
+00:00:07.945 --> 00:00:10.435
+Good evening. Good evening, Paul. Good evening.
+
+3
+00:00:10.625 --> 00:00:13.515
+Good evening. Good evening. Good evening, sir.
+
+4
+00:00:16.185 --> 00:00:17.795
+Good evening, sir. Good evening.
+
+5
+00:01:53.815 --> 00:01:56.065
+Okay, so let us start now.
+
+6
+00:01:56.195 --> 00:01:58.825
+Maybe sir has not yet joined
+
+7
+00:02:02.725 --> 00:02:06.625
+anyway, so I guess we can start with our
+
+8
+00:02:08.005 --> 00:02:10.275
+discussion first on the RNN
+
+9
+00:02:10.535 --> 00:02:13.915
+and then we will take you through some demo part.
+
+10
+00:02:13.915 --> 00:02:16.995
+That is what I have planned today for RN. Okay.
+
+11
+00:02:17.055 --> 00:02:20.035
+And then we'll see how to go to the next topic,
+
+12
+00:02:21.015 --> 00:02:24.275
+Sir, how one notes regarding the assignment?
+
+13
+00:02:24.975 --> 00:02:27.635
+Uh, so we are downloaded that, uh, three, uh,
+
+14
+00:02:27.635 --> 00:02:29.595
+2.89 GB of that data.
+
+15
+00:02:30.415 --> 00:02:33.715
+But, uh, when we are unzipping, uh, unzipping that one,
+
+16
+00:02:34.055 --> 00:02:36.075
+it is coming around 1.5 GB only,
+
+17
+00:02:36.375 --> 00:02:37.555
+and further it is not coming.
+
+18
+00:02:38.215 --> 00:02:41.835
+So, uh, while exhibition of the code also it is taking, uh,
+
+19
+00:02:41.835 --> 00:02:45.115
+means I'm not able to adjust that one properly.
+
+20
+00:02:45.855 --> 00:02:48.195
+So can you guide us in that one, sir?
+
+21
+00:02:49.395 --> 00:02:52.365
+Because actually I asked some of the, uh, classmates,
+
+22
+00:02:52.545 --> 00:02:54.685
+but I don't know whether they did it or not.
+
+23
+00:02:54.805 --> 00:02:57.565
+I don't know. So I thought better to ask you only. Mm-hmm.
+
+24
+00:02:59.285 --> 00:03:00.565
+Whatever data means, uh,
+
+25
+00:03:00.835 --> 00:03:02.805
+what is the total sample size you are getting
+
+26
+00:03:02.975 --> 00:03:03.975
+Total? It is coming around
+
+27
+00:03:03.975 --> 00:03:05.525
+2.89 gb. Sir.
+
+28
+00:03:05.625 --> 00:03:08.005
+No, GB is okay, but when you read that data,
+
+29
+00:03:08.865 --> 00:03:10.645
+Uh, when I unzip that one, it is coming
+
+30
+00:03:10.645 --> 00:03:12.045
+around 1.5 gb. Sir,
+
+31
+00:03:12.195 --> 00:03:15.285
+That is also, The information says there are somewhere
+
+32
+00:03:15.285 --> 00:03:16.965
+around 87,000 images.
+
+33
+00:03:17.625 --> 00:03:21.005
+It it's 7,000. Yeah. Oh, okay. Okay,
+
+34
+00:03:21.545 --> 00:03:22.545
+Sir. Uh,
+
+35
+00:03:22.545 --> 00:03:24.925
+we can directly use, uh, Kaggle hub.
+
+36
+00:03:25.145 --> 00:03:27.445
+Uh, we don't need to download any data.
+
+37
+00:03:27.865 --> 00:03:30.605
+Mm-hmm. Yeah. That is also one day
+
+38
+00:03:30.605 --> 00:03:33.725
+That saves in the cache and it is, uh, better also.
+
+39
+00:03:34.245 --> 00:03:35.605
+I will, yeah,
+
+40
+00:03:36.665 --> 00:03:39.205
+The, there's things you have to actually learn, right.
+
+41
+00:03:39.465 --> 00:03:41.445
+And just see that that's why this, uh,
+
+42
+00:03:41.965 --> 00:03:43.845
+timeline is given a little longer.
+
+43
+00:03:45.065 --> 00:03:48.805
+And when it comes to processing the IT seven, uh,
+
+44
+00:03:49.045 --> 00:03:51.605
+whatever is the thousand sub 87,000, you said, I don't know.
+
+45
+00:03:52.385 --> 00:03:54.125
+So that data is too huge.
+
+46
+00:03:54.605 --> 00:03:57.365
+I know that you may find it difficult to process it.
+
+47
+00:03:57.745 --> 00:03:59.765
+You can take sample of the data to build,
+
+48
+00:03:59.835 --> 00:04:01.125
+hold the pipeline and dock.
+
+49
+00:04:01.435 --> 00:04:03.725
+Okay. Just see that how much data you can process it,
+
+50
+00:04:04.035 --> 00:04:07.405
+Because initially I used that Kaggle online, uh, through
+
+51
+00:04:07.405 --> 00:04:09.565
+that one only, but it, it was taking around four
+
+52
+00:04:09.565 --> 00:04:11.445
+to five hours for, uh, this thing later.
+
+53
+00:04:11.605 --> 00:04:14.605
+I stopped that one, uh, later, uh, using, uh, I thought
+
+54
+00:04:14.605 --> 00:04:17.405
+that better to download that one, that option I tried,
+
+55
+00:04:17.785 --> 00:04:19.925
+but today again, I retread that one,
+
+56
+00:04:20.065 --> 00:04:23.365
+but, uh, it was coming around 1.5 gb, so I thought better
+
+57
+00:04:23.365 --> 00:04:25.005
+to ask you for the guidance.
+
+58
+00:04:25.265 --> 00:04:26.265
+That's it.
+
+59
+00:04:28.025 --> 00:04:29.985
+Although you have downloaded, if suppose you can keep it
+
+60
+00:04:29.985 --> 00:04:31.825
+in your drive, you can connect your drive
+
+61
+00:04:32.295 --> 00:04:34.425
+with the Google collab and then you can use it.
+
+62
+00:04:34.765 --> 00:04:38.185
+No need to upload that 1.5 GB all the time.
+
+63
+00:04:39.455 --> 00:04:42.395
+Yes, sir. That I did. Uh, let me recheck once again.
+
+64
+00:04:43.205 --> 00:04:45.595
+Those are the, those are the problems you'll find every
+
+65
+00:04:45.595 --> 00:04:48.235
+time whenever a new data point, new data set will come.
+
+66
+00:04:49.095 --> 00:04:51.835
+Yes, Sir. Okay. So there is no fixed way
+
+67
+00:04:51.835 --> 00:04:54.435
+because every data may have slightly different form.
+
+68
+00:04:54.745 --> 00:04:57.475
+Correct. So struggle in reading the data,
+
+69
+00:04:57.655 --> 00:05:00.795
+making it compatible with the model.
+
+70
+00:05:00.825 --> 00:05:03.995
+What you're trying to use will be there always. Okay. Yes.
+
+71
+00:05:04.215 --> 00:05:06.795
+Is what, uh, you can take help of the journey and all
+
+72
+00:05:06.795 --> 00:05:07.795
+and try to resolve it.
+
+73
+00:05:09.125 --> 00:05:11.255
+Thank you, sir. Thank you.
+
+74
+00:05:12.985 --> 00:05:15.115
+Yeah. But any case, it's taking a lot of time
+
+75
+00:05:15.175 --> 00:05:16.355
+to actually process it.
+
+76
+00:05:16.385 --> 00:05:18.395
+Yeah. A lot to optimize it, like Yeah,
+
+77
+00:05:18.585 --> 00:05:19.585
+That is true. That
+
+78
+00:05:19.585 --> 00:05:20.915
+is true. Just see that one.
+
+79
+00:05:20.915 --> 00:05:23.075
+If suppose you're not able to process complete data,
+
+80
+00:05:23.075 --> 00:05:24.115
+take the sample of data
+
+81
+00:05:24.975 --> 00:05:27.435
+and, uh, submit the assignment, that is also fine.
+
+82
+00:05:27.945 --> 00:05:28.945
+Okay.
+
+83
+00:05:29.755 --> 00:05:33.685
+Yeah. So we can, uh, reduce the number of s also
+
+84
+00:05:35.545 --> 00:05:36.715
+That you can take a call.
+
+85
+00:05:36.745 --> 00:05:39.155
+What exactly that is what we want to see there, that
+
+86
+00:05:39.155 --> 00:05:41.485
+what is the thought process,
+
+87
+00:05:41.705 --> 00:05:43.085
+how you have trained everyone might
+
+88
+00:05:43.085 --> 00:05:44.165
+have slightly different plan.
+
+89
+00:05:44.165 --> 00:05:44.685
+That is okay.
+
+90
+00:05:48.685 --> 00:05:50.335
+Okay. Last
+
+91
+00:05:50.935 --> 00:05:53.935
+You discuss about that L two regularization factor,
+
+92
+00:05:54.755 --> 00:05:56.305
+which was figured out in that,
+
+93
+00:05:56.685 --> 00:05:59.285
+Ah, so L two ization.
+
+94
+00:05:59.865 --> 00:06:03.805
+Uh, can you someone project that, uh, Brenda, what,
+
+95
+00:06:03.805 --> 00:06:06.725
+what the query, can you project it once on the screen?
+
+96
+00:06:07.145 --> 00:06:09.725
+Uh, so can I share it in the chat? Is that fine?
+
+97
+00:06:10.475 --> 00:06:13.095
+Uh, okay. You can share it in the chat. Do you have that?
+
+98
+00:06:13.155 --> 00:06:15.495
+Uh, no. I just wanted to see what is the question
+
+99
+00:06:15.715 --> 00:06:17.935
+and then want to see. Do you have that?
+
+100
+00:06:18.755 --> 00:06:20.655
+Uh, yes, sir. I have the question.
+
+101
+00:06:20.975 --> 00:06:22.895
+I have the screenshot sharing a title there.
+
+102
+00:06:23.045 --> 00:06:27.535
+Yeah, I sent it
+
+103
+00:06:30.355 --> 00:06:31.355
+In the chat.
+
+104
+00:06:31.475 --> 00:06:34.885
+Yes. Yeah.
+
+105
+00:06:35.185 --> 00:06:38.685
+So this one I see with
+
+106
+00:06:39.225 --> 00:06:41.965
+weight dk, is it equal
+
+107
+00:06:41.965 --> 00:06:44.605
+to 10 per minus four in the optimizer?
+
+108
+00:06:44.665 --> 00:06:49.205
+If the weight w is equal to 2.0, what do,
+
+109
+00:06:49.315 --> 00:06:52.645
+what is the L two penalty contribution to the loss?
+
+110
+00:06:53.475 --> 00:06:56.405
+Okay. Uh, uh, uh, so
+
+111
+00:06:56.405 --> 00:06:59.285
+what is the discussion which you want to have?
+
+112
+00:06:59.385 --> 00:07:00.565
+Or can you just repeat?
+
+113
+00:07:01.025 --> 00:07:03.605
+So, uh, there are two ways to answer this question.
+
+114
+00:07:04.185 --> 00:07:06.845
+So firstly, the formula, uh, the two formulas.
+
+115
+00:07:06.905 --> 00:07:10.885
+One is LW square and another one is LW square by two.
+
+116
+00:07:11.345 --> 00:07:14.085
+The second one is that we consider it while differentiation,
+
+117
+00:07:14.665 --> 00:07:17.285
+uh, to cancel the, uh, two,
+
+118
+00:07:17.335 --> 00:07:18.845
+which comes after the transition.
+
+119
+00:07:18.865 --> 00:07:21.205
+We divide by two and then do it.
+
+120
+00:07:21.705 --> 00:07:26.325
+So when we divide by two, the answer is 0.0002.
+
+121
+00:07:26.585 --> 00:07:30.485
+If we don't divide by two, the answer is 0.0004.
+
+122
+00:07:32.165 --> 00:07:36.535
+But the one which we have discussed in the class, uh,
+
+123
+00:07:37.415 --> 00:07:39.895
+remember there was one slide where I was discussing this?
+
+124
+00:07:42.075 --> 00:07:44.735
+Yes, sir. There it, uh, uh,
+
+125
+00:07:44.755 --> 00:07:47.615
+we have discussed one method for the L two regularization,
+
+126
+00:07:48.795 --> 00:07:52.015
+and, uh, if I can, I'm just trying to locate where it is so
+
+127
+00:07:52.015 --> 00:07:55.935
+that I can project, uh, a
+
+128
+00:07:55.955 --> 00:07:58.615
+and n Pause one second.
+
+129
+00:08:00.475 --> 00:08:01.305
+White dodge
+
+130
+00:08:08.485 --> 00:08:09.335
+just a second.
+
+131
+00:08:19.305 --> 00:08:21.835
+Present my screen. Now where it,
+
+132
+00:08:29.865 --> 00:08:34.605
+so, uh, this one I was talking, so this is
+
+133
+00:08:34.605 --> 00:08:36.285
+what we discussed in this course,
+
+134
+00:08:36.775 --> 00:08:40.045
+while explaining this L two regularization concept, we said
+
+135
+00:08:40.045 --> 00:08:42.685
+that the total penalty, this is
+
+136
+00:08:42.685 --> 00:08:44.085
+what you need to calculate, right?
+
+137
+00:08:44.225 --> 00:08:48.165
+So this is where you say it can be w uh, uh, by two also.
+
+138
+00:08:48.555 --> 00:08:50.405
+That is what you're saying, right? Yes.
+
+139
+00:08:50.585 --> 00:08:51.965
+Lambda Lambda
+
+140
+00:08:52.065 --> 00:08:53.565
+Two in summation of white Square.
+
+141
+00:08:53.825 --> 00:08:54.885
+Ah, got it, got it.
+
+142
+00:08:54.885 --> 00:08:59.085
+So Lambda bit two, uh, CI, what I say is
+
+143
+00:08:59.635 --> 00:09:02.645
+that the question was asked with respect to this concept,
+
+144
+00:09:02.795 --> 00:09:03.965
+what is, uh,
+
+145
+00:09:04.195 --> 00:09:06.645
+what is covered in this particular course, at least.
+
+146
+00:09:06.755 --> 00:09:09.685
+Okay? Accordingly, the answer was also fixed
+
+147
+00:09:09.685 --> 00:09:12.165
+that which is going to be, uh, right or wrong.
+
+148
+00:09:12.925 --> 00:09:16.485
+I understand that one by two always you can add, okay?
+
+149
+00:09:16.505 --> 00:09:19.885
+Uh, in, in that, uh, instead of taking Lambda,
+
+150
+00:09:19.905 --> 00:09:21.445
+we take lambda by two just
+
+151
+00:09:21.465 --> 00:09:23.405
+for our mathematical convenience, right?
+
+152
+00:09:23.635 --> 00:09:26.205
+That is what we discussed in the previous course also. Yes.
+
+153
+00:09:26.265 --> 00:09:28.965
+Why write the task function? Why we write one by two?
+
+154
+00:09:29.025 --> 00:09:31.205
+It is just for the mathematical convenience.
+
+155
+00:09:31.205 --> 00:09:33.925
+Because once we take the, what is that, uh,
+
+156
+00:09:33.925 --> 00:09:36.165
+partial derivative two will come, this site two,
+
+157
+00:09:36.165 --> 00:09:39.415
+two will get canceled, and then that will be easy, okay?
+
+158
+00:09:39.475 --> 00:09:42.455
+Uh, for, for the, for the, the rest of the calculation
+
+159
+00:09:42.455 --> 00:09:43.575
+what you're going to do next.
+
+160
+00:09:44.405 --> 00:09:46.695
+Okay? But so I, I think you're correct,
+
+161
+00:09:46.805 --> 00:09:47.855
+both the things are correct,
+
+162
+00:09:48.035 --> 00:09:51.815
+but I will still go ahead with this particular, uh, way
+
+163
+00:09:52.235 --> 00:09:55.015
+or whoever has followed, because at least in this course
+
+164
+00:09:55.115 --> 00:09:59.335
+and this slide we have discussed about this one, okay? So
+
+165
+00:09:59.675 --> 00:10:00.675
+Yes, sir. But, um,
+
+166
+00:10:00.675 --> 00:10:04.695
+I clearly asked ta when er asked ta
+
+167
+00:10:05.185 --> 00:10:08.535
+there was a similar question for the same, uh, thing.
+
+168
+00:10:08.835 --> 00:10:11.855
+Mm-hmm. Then ta clearly mentioned that for this, we have
+
+169
+00:10:11.855 --> 00:10:13.775
+to consider the division by two.
+
+170
+00:10:13.795 --> 00:10:15.855
+And for the other question, there is no need
+
+171
+00:10:15.855 --> 00:10:17.135
+to consider division by two.
+
+172
+00:10:17.135 --> 00:10:18.815
+That's the reason we went with that.
+
+173
+00:10:19.435 --> 00:10:22.655
+Oh, during, uh, exam? Yes, during exam.
+
+174
+00:10:22.975 --> 00:10:25.335
+'cause explicitly told to us that for this you have to go
+
+175
+00:10:25.355 --> 00:10:26.935
+by one by two factor,
+
+176
+00:10:27.115 --> 00:10:28.815
+but other, you don't go by one by two factor.
+
+177
+00:10:29.355 --> 00:10:33.815
+So that's why we had this option of other selections.
+
+178
+00:10:35.105 --> 00:10:36.205
+Oh, that is told. Uh,
+
+179
+00:10:36.925 --> 00:10:38.885
+are you there last time when we did, so I think
+
+180
+00:10:39.905 --> 00:10:41.685
+Was there not, um, snail,
+
+181
+00:10:42.875 --> 00:10:43.965
+Have you, have you discussed this?
+
+182
+00:10:44.585 --> 00:10:46.965
+Yes, sir. They have discussed what happened.
+
+183
+00:10:46.965 --> 00:10:49.685
+Means question number will be changed, sir, when we see
+
+184
+00:10:50.035 --> 00:10:54.325
+that is uploaded by the, Hmm, I have seen that question,
+
+185
+00:10:54.325 --> 00:10:56.165
+which I have seen that is different, sir.
+
+186
+00:10:57.145 --> 00:10:58.645
+No, no screenshot of the question.
+
+187
+00:10:58.645 --> 00:10:59.765
+Just know it was available right
+
+188
+00:10:59.765 --> 00:11:01.125
+number, forget about the number.
+
+189
+00:11:01.225 --> 00:11:03.245
+But the question itself, was it,
+
+190
+00:11:03.585 --> 00:11:05.965
+was it this question for which you discussed? Yes,
+
+191
+00:11:05.965 --> 00:11:06.685
+Sir. Sir divided
+
+192
+00:11:06.705 --> 00:11:07.705
+By two, sir. Yes, sir. They,
+
+193
+00:11:07.705 --> 00:11:08.365
+yes, sir.
+
+194
+00:11:08.365 --> 00:11:10.925
+They have discussed, but they have not displayed the
+
+195
+00:11:11.205 --> 00:11:12.365
+question, sir, on that time.
+
+196
+00:11:13.185 --> 00:11:15.685
+Yes, sir. We read the question out for, uh, ma'am,
+
+197
+00:11:15.835 --> 00:11:17.645
+They have read, sir, but they have not
+
+198
+00:11:17.645 --> 00:11:19.085
+displayed sir on that time.
+
+199
+00:11:21.245 --> 00:11:23.345
+Oh, but you gave the instruction to take divided.
+
+200
+00:11:23.445 --> 00:11:24.985
+Yes, sir. I have given, yes, sir.
+
+201
+00:11:25.205 --> 00:11:26.865
+But I have given the instruction, sir.
+
+202
+00:11:27.205 --> 00:11:30.265
+Mm-hmm. No, that I was, again,
+
+203
+00:11:30.265 --> 00:11:33.505
+this context was still missing for me anyway.
+
+204
+00:11:33.565 --> 00:11:35.825
+So then what we'll do, uh, so
+
+205
+00:11:36.405 --> 00:11:38.745
+we will just not consider this question also then
+
+206
+00:11:38.745 --> 00:11:41.065
+because there was a confusion, okay?
+
+207
+00:11:41.495 --> 00:11:43.625
+What they, what you suggested, right?
+
+208
+00:11:43.625 --> 00:11:44.625
+Accordingly, they have taken,
+
+209
+00:11:44.645 --> 00:11:46.905
+Um, because by reading that question, uh,
+
+210
+00:11:47.065 --> 00:11:48.425
+I have given the answer, sir,
+
+211
+00:11:48.425 --> 00:11:50.585
+because that question paper, I have not said it.
+
+212
+00:11:50.645 --> 00:11:51.645
+No.
+
+213
+00:11:52.035 --> 00:11:53.520
+Then you should not give the answer, right?
+
+214
+00:11:54.175 --> 00:11:56.795
+Yes, sir. Okay. Yes, sir.
+
+215
+00:11:58.085 --> 00:12:00.815
+Okay, Tika, then we'll not consider this also,
+
+216
+00:12:01.245 --> 00:12:06.045
+Okay, sir Tika, But both the things are true, okay?
+
+217
+00:12:06.045 --> 00:12:09.045
+Just said, uh, uh, uh, yeah, obviously
+
+218
+00:12:09.045 --> 00:12:11.325
+what was the instruction given that you have followed?
+
+219
+00:12:11.475 --> 00:12:12.765
+Then you are right at that.
+
+220
+00:12:12.985 --> 00:12:15.365
+So all of you have followed the same instruction.
+
+221
+00:12:15.365 --> 00:12:18.605
+Then we can consider that considering divided by two simple.
+
+222
+00:12:19.225 --> 00:12:21.925
+If you have considered, then we'll make other answer
+
+223
+00:12:21.925 --> 00:12:23.805
+as correct answer, whatever you are saying,
+
+224
+00:12:24.225 --> 00:12:25.725
+and it can still be considered.
+
+225
+00:12:26.145 --> 00:12:28.405
+But then there also should not be any confusion.
+
+226
+00:12:28.425 --> 00:12:32.405
+No, sir, I did not hear that. That very crucial.
+
+227
+00:12:32.995 --> 00:12:36.165
+Otherwise, you can give both, uh, options as correct, sir,
+
+228
+00:12:37.305 --> 00:12:40.445
+Uh, when either we should give both options as correct.
+
+229
+00:12:40.715 --> 00:12:43.365
+Yeah. In that case, those you have not selected these two
+
+230
+00:12:43.365 --> 00:12:47.125
+options, then at least they will be wrong, right? Yes,
+
+231
+00:12:47.265 --> 00:12:48.265
+Yes.
+
+232
+00:12:50.255 --> 00:12:52.235
+We consider that. Bye. Thank you.
+
+233
+00:12:52.725 --> 00:12:55.735
+Thank you, sir. Okay,
+
+234
+00:12:56.675 --> 00:13:00.325
+so now let us come back to our
+
+235
+00:13:00.925 --> 00:13:02.125
+RNN journey.
+
+236
+00:13:03.545 --> 00:13:08.135
+So now, first of all, let me just, uh,
+
+237
+00:13:08.445 --> 00:13:11.575
+hear from you, because in the last class server also asking
+
+238
+00:13:11.595 --> 00:13:14.455
+me whether at this point, have we made it clear to all
+
+239
+00:13:14.455 --> 00:13:17.055
+of you that what are the, uh,
+
+240
+00:13:17.325 --> 00:13:20.895
+architectural change we have done in the RNN as compared
+
+241
+00:13:20.895 --> 00:13:22.495
+to the a NN, right?
+
+242
+00:13:22.495 --> 00:13:24.975
+That is first thing. And are you able
+
+243
+00:13:24.975 --> 00:13:28.015
+to understand why the RNN is favorable, favorable
+
+244
+00:13:28.015 --> 00:13:29.095
+for the sequential data?
+
+245
+00:13:29.615 --> 00:13:34.295
+I mean, if this, this, these two, uh, should be, uh,
+
+246
+00:13:34.295 --> 00:13:35.375
+completely clear,
+
+247
+00:13:35.485 --> 00:13:39.175
+otherwise, uh, it'll be very difficult for going further.
+
+248
+00:13:39.175 --> 00:13:42.455
+Because when we are going for lstm, GRU,
+
+249
+00:13:42.455 --> 00:13:45.695
+little bit more complicated architecture, I mean,
+
+250
+00:13:45.875 --> 00:13:48.535
+if the par uh, the motivation is not clear
+
+251
+00:13:48.535 --> 00:13:51.335
+that why this kind of architecture we have to study
+
+252
+00:13:51.355 --> 00:13:54.975
+for sequential data, I mean, you won, you won't feel, uh,
+
+253
+00:13:55.205 --> 00:13:59.735
+much, uh, uh, you can say that the, uh, the, the effort,
+
+254
+00:13:59.805 --> 00:14:01.615
+what people have put while building
+
+255
+00:14:01.615 --> 00:14:02.855
+those architectures and all.
+
+256
+00:14:02.875 --> 00:14:06.175
+So I just want to spend some more time, maybe five,
+
+257
+00:14:06.175 --> 00:14:08.055
+10 minutes more to answer your questions
+
+258
+00:14:08.645 --> 00:14:12.375
+that whether have you understood the idea of this RNN, that
+
+259
+00:14:12.375 --> 00:14:13.935
+how it is different from a NN,
+
+260
+00:14:14.475 --> 00:14:16.615
+and what are the advantage it brings
+
+261
+00:14:16.835 --> 00:14:17.895
+for the sequential data?
+
+262
+00:14:17.895 --> 00:14:20.375
+Obviously, let us discuss that point first
+
+263
+00:14:20.685 --> 00:14:21.855
+with these figures
+
+264
+00:14:21.875 --> 00:14:23.255
+and all, I'll to explain,
+
+265
+00:14:26.995 --> 00:14:31.365
+anyone has still an query that, uh, no RN
+
+266
+00:14:31.465 --> 00:14:33.765
+and I'm not able to understand what is the difference.
+
+267
+00:14:36.555 --> 00:14:39.495
+So can you explain, uh, from war to oh three
+
+268
+00:14:39.495 --> 00:14:42.935
+or any other combinations, ah, uh, from oh three,
+
+269
+00:14:42.935 --> 00:14:45.015
+we're taking the fully connected, correct.
+
+270
+00:14:45.065 --> 00:14:49.215
+Again, 2 0 3, uh, yeah.
+
+271
+00:14:49.235 --> 00:14:50.815
+So can you explain this
+
+272
+00:14:50.815 --> 00:14:51.815
+Part? So
+
+273
+00:14:51.815 --> 00:14:53.085
+see what happened?
+
+274
+00:14:53.265 --> 00:14:57.885
+In the case of a NN, if you, if you have to process, suppose
+
+275
+00:14:58.485 --> 00:15:02.765
+a sentence where suppose you have three, three word, okay?
+
+276
+00:15:03.465 --> 00:15:07.405
+So what you can do is, uh, a NN looks like this.
+
+277
+00:15:07.545 --> 00:15:09.365
+For every input there is an output.
+
+278
+00:15:09.905 --> 00:15:12.045
+Now here, the input dimension is four,
+
+279
+00:15:12.145 --> 00:15:13.525
+output dimension is three.
+
+280
+00:15:13.545 --> 00:15:16.245
+But for every input x, there is an output.
+
+281
+00:15:16.565 --> 00:15:20.445
+O simple, you have to understand, but X and R not a scaler
+
+282
+00:15:20.985 --> 00:15:23.045
+or not a single, uh, value.
+
+283
+00:15:23.105 --> 00:15:25.725
+It is a, it is a vector set of values.
+
+284
+00:15:25.835 --> 00:15:27.525
+That is the first thing.
+
+285
+00:15:27.525 --> 00:15:29.885
+What you have to understand, you should not treat it
+
+286
+00:15:29.905 --> 00:15:32.365
+as 1, 2, 3, 4 inputs.
+
+287
+00:15:32.425 --> 00:15:35.445
+I'm feeding. That means four words. I'm feeding. Okay?
+
+288
+00:15:35.445 --> 00:15:36.525
+That is not the case here.
+
+289
+00:15:37.155 --> 00:15:40.525
+What I'm saying is this, X is a single word, but
+
+290
+00:15:40.525 --> 00:15:42.565
+because I have to represent the X in the form
+
+291
+00:15:42.565 --> 00:15:44.165
+of one hot vector, C,
+
+292
+00:15:44.295 --> 00:15:47.005
+every word is represented by one hot vector.
+
+293
+00:15:47.785 --> 00:15:50.085
+And while representing it as a one hot vector,
+
+294
+00:15:50.085 --> 00:15:52.605
+what is happening is every word is represented at here,
+
+295
+00:15:52.605 --> 00:15:54.845
+here, at least at five dimensions.
+
+296
+00:15:54.845 --> 00:15:56.685
+Similarly, sometimes maybe four dimension,
+
+297
+00:15:56.985 --> 00:15:59.005
+and essentially it'll be a V dimension.
+
+298
+00:15:59.005 --> 00:16:01.005
+Always. VV means
+
+299
+00:16:01.005 --> 00:16:03.765
+what is the vocabulary size for that corpus?
+
+300
+00:16:04.235 --> 00:16:08.805
+Okay? So, uh, what I'm trying to say, first of all,
+
+301
+00:16:09.115 --> 00:16:12.005
+that X is a single word, single word.
+
+302
+00:16:12.105 --> 00:16:14.925
+So what we do in the a NN, we feed a single word
+
+303
+00:16:15.265 --> 00:16:16.565
+and we get an output.
+
+304
+00:16:16.985 --> 00:16:18.445
+Output can be anything here.
+
+305
+00:16:18.445 --> 00:16:20.765
+The output is represented as three dimensional vector,
+
+306
+00:16:20.765 --> 00:16:22.885
+but it's a single, single output,
+
+307
+00:16:23.065 --> 00:16:25.005
+single input, single output.
+
+308
+00:16:25.185 --> 00:16:28.165
+Now, this is the structure of A and N. Okay?
+
+309
+00:16:29.065 --> 00:16:32.005
+Now, uh, it doesn't matter how many words you have
+
+310
+00:16:32.005 --> 00:16:33.765
+to process, you can, you have
+
+311
+00:16:33.765 --> 00:16:36.085
+to feed a single input and single output.
+
+312
+00:16:36.355 --> 00:16:38.645
+When I say single and put single output in the sense,
+
+313
+00:16:39.065 --> 00:16:41.005
+the X can be in window also,
+
+314
+00:16:41.225 --> 00:16:42.765
+we talked about it earlier, right?
+
+315
+00:16:43.145 --> 00:16:45.565
+So I can decide to feed the X
+
+316
+00:16:45.745 --> 00:16:48.325
+as three words at a time, okay?
+
+317
+00:16:48.555 --> 00:16:51.845
+Then also these three will be a single input single in
+
+318
+00:16:51.945 --> 00:16:53.845
+window where we have three inputs,
+
+319
+00:16:53.945 --> 00:16:56.165
+and then it will be a output for that one, right?
+
+320
+00:16:56.275 --> 00:17:00.245
+Yeah. So this is how the a NN works window,
+
+321
+00:17:00.345 --> 00:17:02.365
+you can decide whether it is a one word window,
+
+322
+00:17:02.545 --> 00:17:05.285
+two word window, 10 word window that you can always decide.
+
+323
+00:17:05.385 --> 00:17:08.365
+But that is how the a NN structure looks like.
+
+324
+00:17:09.495 --> 00:17:12.995
+But when it comes to the R-N-N-R-N-N, when it comes,
+
+325
+00:17:12.995 --> 00:17:14.595
+there is a architectural difference.
+
+326
+00:17:15.215 --> 00:17:19.315
+The difference, first of all, is you cannot process X one
+
+327
+00:17:19.895 --> 00:17:21.835
+unless you have not processed X, no.
+
+328
+00:17:21.895 --> 00:17:23.235
+So X node is also a word.
+
+329
+00:17:23.375 --> 00:17:26.195
+Say, V and x one is also a word, say R.
+
+330
+00:17:26.495 --> 00:17:28.995
+So we are in l, LM class.
+
+331
+00:17:29.975 --> 00:17:33.435
+So X node is a VX one is R.
+
+332
+00:17:33.575 --> 00:17:36.675
+So you cannot process R unless you have not processed V.
+
+333
+00:17:37.735 --> 00:17:40.035
+But if you see these two architecture,
+
+334
+00:17:40.455 --> 00:17:41.835
+it is, it is not the case.
+
+335
+00:17:42.255 --> 00:17:46.075
+We can be processed and then r can also be processed.
+
+336
+00:17:46.155 --> 00:17:47.555
+I mean, it is, it is something like that,
+
+337
+00:17:47.555 --> 00:17:48.955
+that these two are independent.
+
+338
+00:17:49.075 --> 00:17:50.965
+This network, uh, first of all,
+
+339
+00:17:50.985 --> 00:17:53.005
+it doesn't consider any sequence.
+
+340
+00:17:53.065 --> 00:17:56.085
+It can process, uh, either these two words together.
+
+341
+00:17:56.585 --> 00:18:00.325
+If my context window is of two word, or it can process one
+
+342
+00:18:00.325 --> 00:18:04.245
+after other RNN has architectural difference in the sense
+
+343
+00:18:04.835 --> 00:18:08.765
+when I have processed we, and then we are processing R.
+
+344
+00:18:08.905 --> 00:18:12.965
+So at the time of processing r the network has the sense
+
+345
+00:18:12.965 --> 00:18:14.365
+that it has already processed.
+
+346
+00:18:14.505 --> 00:18:16.765
+We, and that's why this, this connection,
+
+347
+00:18:17.235 --> 00:18:19.205
+this connection is coming from the last
+
+348
+00:18:19.205 --> 00:18:20.285
+hidden estate output.
+
+349
+00:18:20.545 --> 00:18:21.765
+But this is the architectural change,
+
+350
+00:18:21.765 --> 00:18:23.885
+which we don't have in the case of the A and n.
+
+351
+00:18:24.155 --> 00:18:25.445
+That is, that is the first thing
+
+352
+00:18:25.445 --> 00:18:26.845
+what we have to understand, okay?
+
+353
+00:18:27.305 --> 00:18:30.325
+So this is from the oh no to oh one timestamp.
+
+354
+00:18:30.385 --> 00:18:32.285
+Say that zero to timestamp one.
+
+355
+00:18:32.395 --> 00:18:34.645
+Similarly, when we go from time stamp one
+
+356
+00:18:34.645 --> 00:18:37.565
+to time stamp number two, time stamp number two,
+
+357
+00:18:37.565 --> 00:18:39.365
+suppose you have to process the third word.
+
+358
+00:18:39.365 --> 00:18:40.685
+You cannot process the third word
+
+359
+00:18:40.905 --> 00:18:43.045
+unless you have not processed the second word.
+
+360
+00:18:43.425 --> 00:18:45.365
+And obviously we cannot process second word
+
+361
+00:18:45.425 --> 00:18:47.245
+unless you have not processed the first word.
+
+362
+00:18:47.425 --> 00:18:51.645
+So this is how they are working in the timestamp ma manner.
+
+363
+00:18:52.105 --> 00:18:54.645
+So only change architectural syn.
+
+364
+00:18:54.645 --> 00:18:56.125
+If you see this connection,
+
+365
+00:18:56.265 --> 00:18:58.925
+the connection which is coming from the previous time stamp
+
+366
+00:18:59.425 --> 00:19:00.765
+as compared to the a n, n
+
+367
+00:19:00.785 --> 00:19:04.245
+and RNN, what is the architectural change in the NN,
+
+368
+00:19:04.245 --> 00:19:07.645
+we don't have this previous timestamp input coming
+
+369
+00:19:07.745 --> 00:19:09.485
+to this, uh, neurons.
+
+370
+00:19:09.505 --> 00:19:12.525
+But here in the case of RNN, we have one more input,
+
+371
+00:19:12.525 --> 00:19:14.405
+which is coming from the previous timestamp.
+
+372
+00:19:14.875 --> 00:19:17.525
+This is how from one to oh two, we go then
+
+373
+00:19:17.525 --> 00:19:18.845
+for oh two to oh three we go.
+
+374
+00:19:18.945 --> 00:19:21.925
+So we cannot process O three unless we have not processed O2
+
+375
+00:19:22.065 --> 00:19:24.645
+and so on for the other, other case as well.
+
+376
+00:19:24.865 --> 00:19:26.925
+So this is what is the architectural change.
+
+377
+00:19:27.985 --> 00:19:30.205
+Now, now let me know, uh, is it clear
+
+378
+00:19:30.265 --> 00:19:32.685
+or still you have any question? Yeah.
+
+379
+00:19:32.685 --> 00:19:35.365
+Yes, sir. I think we are sharing the parameters.
+
+380
+00:19:35.505 --> 00:19:37.365
+Yes, sir. I have one question. Yeah,
+
+381
+00:19:37.365 --> 00:19:38.365
+Please. So, sir,
+
+382
+00:19:38.365 --> 00:19:41.725
+uh, one thing is that, what I can understand is
+
+383
+00:19:41.725 --> 00:19:44.005
+that at every timestamp, we are processing one word.
+
+384
+00:19:44.005 --> 00:19:46.045
+Like at T zero, we are doing one T one.
+
+385
+00:19:46.425 --> 00:19:48.765
+So, sir, like you mentioned about the windowing
+
+386
+00:19:48.785 --> 00:19:51.725
+for the a NN part, can we do, we also have the window
+
+387
+00:19:51.865 --> 00:19:53.765
+for RNN, like multiple.
+
+388
+00:19:54.325 --> 00:19:56.965
+I see, uh, although you can have it,
+
+389
+00:19:57.375 --> 00:19:58.485
+there is no restriction,
+
+390
+00:19:58.505 --> 00:20:01.685
+but there is, that is not required here, okay?
+
+391
+00:20:02.305 --> 00:20:03.565
+We can make, still, uh,
+
+392
+00:20:03.565 --> 00:20:06.845
+we can make the architecture in such a way that at the time
+
+393
+00:20:06.865 --> 00:20:09.605
+of zero, I can process X node, X one together.
+
+394
+00:20:10.545 --> 00:20:13.005
+But suppose we are doing that. Suppose we are doing that.
+
+395
+00:20:13.005 --> 00:20:15.805
+First of all, we are losing the purpose that, okay,
+
+396
+00:20:15.805 --> 00:20:17.965
+we are processing two words at a time.
+
+397
+00:20:18.745 --> 00:20:20.525
+If we are processing two words at a time,
+
+398
+00:20:20.525 --> 00:20:23.925
+network will not network cannot make a difference.
+
+399
+00:20:23.925 --> 00:20:25.965
+Which word has come first, which word has come later?
+
+400
+00:20:26.515 --> 00:20:28.205
+That is the problem. And that is what?
+
+401
+00:20:28.205 --> 00:20:30.405
+That is the problem which we are trying to solve.
+
+402
+00:20:30.465 --> 00:20:33.405
+One of the problem which we are going to solve with R and n.
+
+403
+00:20:33.505 --> 00:20:35.285
+So we don't want to process,
+
+404
+00:20:35.845 --> 00:20:39.485
+although you can, you can process here at each time,
+
+405
+00:20:39.535 --> 00:20:43.365
+stamp the input in a window, but I don't want to do that.
+
+406
+00:20:43.395 --> 00:20:45.245
+That is the whole purpose that I want.
+
+407
+00:20:45.405 --> 00:20:48.335
+I don't want to do that. Okay? But you can do that.
+
+408
+00:20:48.455 --> 00:20:50.695
+I mean, it's just architecture, which we are building.
+
+409
+00:20:50.955 --> 00:20:52.535
+You can create architecture like that,
+
+410
+00:20:52.675 --> 00:20:53.815
+but it'll lose the purpose.
+
+411
+00:20:54.385 --> 00:20:57.175
+It'll lose the purpose of, uh, that order
+
+412
+00:20:57.275 --> 00:20:58.575
+of the word is not preserved.
+
+413
+00:20:58.575 --> 00:21:00.295
+Two words here. You're processing in parallel.
+
+414
+00:21:00.295 --> 00:21:02.215
+Two words here. You're processing in parallel two words,
+
+415
+00:21:02.315 --> 00:21:04.935
+or if you're fixing three word window, three words here,
+
+416
+00:21:04.935 --> 00:21:06.775
+you're processing in parallel three words here.
+
+417
+00:21:07.095 --> 00:21:08.975
+I mean, that will lose the word ordered itself,
+
+418
+00:21:08.975 --> 00:21:10.935
+and then your whole purpose is lost again.
+
+419
+00:21:12.215 --> 00:21:14.425
+Okay, sir? Thank you. Yeah, yeah.
+
+420
+00:21:16.235 --> 00:21:19.935
+Others? Is it clear
+
+421
+00:21:21.835 --> 00:21:23.735
+anyone still have any dot
+
+422
+00:21:25.925 --> 00:21:29.075
+Shall assume that the hedge value we take from the
+
+423
+00:21:29.275 --> 00:21:32.995
+previous times, step uhhuh is really representative of all,
+
+424
+00:21:33.335 --> 00:21:36.035
+all the H values, right through from the beginning till
+
+425
+00:21:36.035 --> 00:21:37.115
+that previous time.
+
+426
+00:21:37.215 --> 00:21:40.675
+So this is, this is the, i i, this is the ideal case.
+
+427
+00:21:40.675 --> 00:21:43.055
+This is the hypothesis, okay?
+
+428
+00:21:43.775 --> 00:21:45.775
+I mean, uh, that is what, uh,
+
+429
+00:21:46.045 --> 00:21:47.375
+that is what is the assumption.
+
+430
+00:21:47.675 --> 00:21:49.895
+Now, whether it is the actual case
+
+431
+00:21:49.915 --> 00:21:52.415
+or not, for that, we have, we have to do the experiments
+
+432
+00:21:52.515 --> 00:21:54.855
+and we have to check that, okay?
+
+433
+00:21:54.995 --> 00:21:56.095
+How long it is true.
+
+434
+00:21:57.275 --> 00:22:00.895
+And, uh, going forward, we'll see that this is the strength
+
+435
+00:22:00.915 --> 00:22:02.855
+of the RNN, that it can remember
+
+436
+00:22:02.855 --> 00:22:05.935
+what has happened in the past as well
+
+437
+00:22:05.935 --> 00:22:08.855
+as if the sequence length becomes very long.
+
+438
+00:22:09.485 --> 00:22:12.415
+Same thing goes as a limitations also, right?
+
+439
+00:22:12.875 --> 00:22:14.815
+So yes, it's just like a human's memory.
+
+440
+00:22:15.495 --> 00:22:17.615
+I can remember that what has happened in the morning,
+
+441
+00:22:18.365 --> 00:22:21.015
+what happened in the afternoon in my office, if you ask me,
+
+442
+00:22:21.015 --> 00:22:25.495
+okay, last year, 20, 25, 18th January, what happened?
+
+443
+00:22:26.295 --> 00:22:28.015
+I mean, it is very difficult to remember,
+
+444
+00:22:28.335 --> 00:22:30.055
+although I have lived that also.
+
+445
+00:22:30.415 --> 00:22:33.135
+I have gone through each and every moment, then also,
+
+446
+00:22:33.635 --> 00:22:34.855
+but then it is very difficult
+
+447
+00:22:34.875 --> 00:22:37.735
+unless something which is very important not happened.
+
+448
+00:22:38.765 --> 00:22:40.255
+Okay? So that is the case.
+
+449
+00:22:40.675 --> 00:22:42.255
+So yeah, the same thing, rn,
+
+450
+00:22:42.255 --> 00:22:44.935
+and it can remember everything from left to right,
+
+451
+00:22:45.275 --> 00:22:48.615
+but how long, okay, so how long, when that,
+
+452
+00:22:48.645 --> 00:22:51.455
+that question will come, then we'll discuss about the LSTM.
+
+453
+00:22:51.455 --> 00:22:53.695
+That why, that's why the LSTM is given. Yeah.
+
+454
+00:22:54.365 --> 00:22:55.295
+Okay, thank you. Yes.
+
+455
+00:22:59.065 --> 00:23:02.985
+Others? Any further question on RNN?
+
+456
+00:23:04.925 --> 00:23:08.945
+Yes. In the diagram? Yeah, the diagram which we had, sir.
+
+457
+00:23:09.485 --> 00:23:12.625
+So if I were, take this o as a hidden layer,
+
+458
+00:23:13.125 --> 00:23:17.945
+not in an output, the RN also, each neuron is connecting
+
+459
+00:23:17.945 --> 00:23:20.025
+with every neuron, correct?
+
+460
+00:23:20.025 --> 00:23:22.905
+Correct, correct. So I suppose you have one more layer
+
+461
+00:23:23.735 --> 00:23:24.785
+because it's a,
+
+462
+00:23:25.525 --> 00:23:27.985
+you see this net network alone, it is an ENN, right?
+
+463
+00:23:28.445 --> 00:23:30.905
+Yes. So an input, this can be first hit layer.
+
+464
+00:23:30.925 --> 00:23:33.665
+You can have one more layer here of the neurons,
+
+465
+00:23:33.875 --> 00:23:35.705
+which can act as an output layer.
+
+466
+00:23:35.705 --> 00:23:38.905
+Then what will happen, you know, all the neurons here will
+
+467
+00:23:38.905 --> 00:23:41.385
+also connect with all the neurons in this layer.
+
+468
+00:23:42.605 --> 00:23:44.465
+Yes, sir. Okay. That is also true.
+
+469
+00:23:44.655 --> 00:23:48.205
+That is that you can just imagine, see in the,
+
+470
+00:23:48.205 --> 00:23:50.485
+in the vertical sense, you can imagine each
+
+471
+00:23:50.485 --> 00:23:51.965
+of these network has an ENN.
+
+472
+00:23:52.025 --> 00:23:53.405
+So the everything which is true
+
+473
+00:23:53.405 --> 00:23:54.885
+for an n will act adhere also,
+
+474
+00:23:55.745 --> 00:23:59.085
+Sir, Only thing is r and n makes us different just
+
+475
+00:23:59.085 --> 00:24:02.045
+because it works at the time due to these connections,
+
+476
+00:24:02.215 --> 00:24:04.045
+which is coming from last year
+
+477
+00:24:04.045 --> 00:24:05.525
+and instead, was this your question
+
+478
+00:24:05.525 --> 00:24:06.645
+or anything else you were asking?
+
+479
+00:24:07.865 --> 00:24:10.725
+Yes, sir. Because this connection is there in a
+
+480
+00:24:10.725 --> 00:24:13.045
+and n also, if I am stacking it vertically,
+
+481
+00:24:13.225 --> 00:24:15.125
+Ah, this connection is there in a and n also
+
+482
+00:24:15.405 --> 00:24:16.405
+E, Yes. This
+
+483
+00:24:16.405 --> 00:24:18.045
+connection is missing. This blue one,
+
+484
+00:24:18.045 --> 00:24:19.885
+what you're seeing, I'm corresponding yet
+
+485
+00:24:19.885 --> 00:24:21.285
+that is not there in the a n
+
+486
+00:24:21.545 --> 00:24:24.605
+In the final layer, final hidden to output layer.
+
+487
+00:24:24.665 --> 00:24:27.285
+It is things that is the blue one, sir.
+
+488
+00:24:27.505 --> 00:24:29.965
+Uh, the blue one is the, the,
+
+489
+00:24:30.105 --> 00:24:32.885
+the whatever hidden layer you have here, okay?
+
+490
+00:24:33.105 --> 00:24:35.565
+Yes, sir. That also gives the connection,
+
+491
+00:24:36.755 --> 00:24:39.005
+that also gives the connection to itself.
+
+492
+00:24:39.065 --> 00:24:41.285
+So see, this is the con, this is the loop.
+
+493
+00:24:41.795 --> 00:24:43.805
+This is this loop, which I'm talking actually,
+
+494
+00:24:44.505 --> 00:24:45.505
+Yes, Sir. Okay. So,
+
+495
+00:24:45.505 --> 00:24:48.005
+uh, i, it is feeding itself.
+
+496
+00:24:48.665 --> 00:24:50.205
+So the hidden layer is connected
+
+497
+00:24:50.205 --> 00:24:51.205
+with the hidden layer itself.
+
+498
+00:24:51.205 --> 00:24:53.005
+Suppose you have one more hidden layer here,
+
+499
+00:24:53.025 --> 00:24:54.125
+one more layer here.
+
+500
+00:24:54.125 --> 00:24:55.925
+That would have also be connected like that here.
+
+501
+00:24:57.075 --> 00:25:00.525
+That would also be, so each layer here will be connected
+
+502
+00:25:00.525 --> 00:25:02.845
+with the other layer in the corresponding network.
+
+503
+00:25:03.345 --> 00:25:08.005
+So you have to imagine every network has an ENN in the RNN,
+
+504
+00:25:08.005 --> 00:25:10.645
+what would happen, every hidden layer output will go
+
+505
+00:25:10.665 --> 00:25:13.605
+to the same hidden layer in the next time stamp.
+
+506
+00:25:13.705 --> 00:25:15.165
+If there are two stack layer here
+
+507
+00:25:15.385 --> 00:25:17.165
+and two stack layer here also.
+
+508
+00:25:17.345 --> 00:25:18.525
+So these stacked,
+
+509
+00:25:18.535 --> 00:25:20.485
+these three neurons are connected with these three.
+
+510
+00:25:20.735 --> 00:25:21.965
+Maybe another three would have
+
+511
+00:25:21.965 --> 00:25:23.245
+connected with another three here.
+
+512
+00:25:24.315 --> 00:25:26.565
+Okay? That is how it is, uh, connected.
+
+513
+00:25:27.145 --> 00:25:29.085
+So hidden is connected with itself.
+
+514
+00:25:29.395 --> 00:25:32.645
+That is what makes the RN different from the single.
+
+515
+00:25:32.705 --> 00:25:35.045
+So suppose there is no loop, then it is an ENN.
+
+516
+00:25:35.045 --> 00:25:37.365
+Suppose there is a loop, then it is an RL, yes,
+
+517
+00:25:37.825 --> 00:25:38.825
+RRN, yes, yes.
+
+518
+00:25:39.985 --> 00:25:41.415
+Thank you. Yeah.
+
+519
+00:25:45.195 --> 00:25:48.585
+Okay. So, uh, couple of things.
+
+520
+00:25:48.675 --> 00:25:52.065
+First of all, that, uh, this is if you will collapse this,
+
+521
+00:25:52.165 --> 00:25:55.145
+uh, uh, this whole, I mean, it's detailed network.
+
+522
+00:25:55.355 --> 00:25:56.625
+It'll look something like that,
+
+523
+00:25:56.625 --> 00:25:59.905
+that you have x not time Stamp number one goes
+
+524
+00:25:59.925 --> 00:26:01.745
+to the hidden, hidden layer.
+
+525
+00:26:01.925 --> 00:26:04.665
+You may have one more, uh, neuron here.
+
+526
+00:26:04.825 --> 00:26:06.585
+I actually, I'm not showing you that one,
+
+527
+00:26:06.645 --> 00:26:08.425
+but that is all, all possibly.
+
+528
+00:26:08.495 --> 00:26:09.825
+Then what will happen, you know, if,
+
+529
+00:26:09.825 --> 00:26:13.985
+suppose you have one more neuron here on top of this, okay?
+
+530
+00:26:14.005 --> 00:26:18.825
+For example, what I'm saying is that, okay,
+
+531
+00:26:18.855 --> 00:26:20.785
+suppose you have one more neuron here.
+
+532
+00:26:21.325 --> 00:26:22.905
+So thi this will be a connection,
+
+533
+00:26:23.245 --> 00:26:24.905
+and this is true for any NN, right?
+
+534
+00:26:25.185 --> 00:26:27.225
+ENN, it is connected like that here also,
+
+535
+00:26:27.225 --> 00:26:28.945
+you'll have one more neuron here also,
+
+536
+00:26:28.945 --> 00:26:30.025
+you'll have one more neuron.
+
+537
+00:26:30.245 --> 00:26:31.425
+Now, how the connection will be.
+
+538
+00:26:31.425 --> 00:26:33.905
+Now this neuron will be connected with this like it is here,
+
+539
+00:26:34.525 --> 00:26:35.985
+and this is connected with this.
+
+540
+00:26:36.725 --> 00:26:39.465
+Now, they will not be connected. This is, this is not valid.
+
+541
+00:26:39.695 --> 00:26:40.785
+This is not valid, okay?
+
+542
+00:26:40.855 --> 00:26:43.685
+This will, this is not valid connection. Okay?
+
+543
+00:26:44.145 --> 00:26:46.485
+So that's what I was trying to say.
+
+544
+00:26:46.705 --> 00:26:51.565
+Uh, in the other case, case also, that, just a second.
+
+545
+00:26:52.185 --> 00:26:54.875
+Uh, yes.
+
+546
+00:26:55.255 --> 00:26:57.675
+So here, this, this, these are the hidden layer,
+
+547
+00:26:57.675 --> 00:26:58.915
+suppose so this hidden layer.
+
+548
+00:26:58.915 --> 00:27:00.915
+So because there is only one hidden layer connected
+
+549
+00:27:00.915 --> 00:27:02.795
+with the first hidden layer, can you first,
+
+550
+00:27:03.015 --> 00:27:04.515
+so suppose there is one more hidden layer.
+
+551
+00:27:04.515 --> 00:27:06.235
+That second hidden layer would have connected
+
+552
+00:27:06.235 --> 00:27:07.555
+with second hidden layer here.
+
+553
+00:27:08.185 --> 00:27:11.235
+They will not connect each other when there this connection.
+
+554
+00:27:11.495 --> 00:27:14.315
+Now, vertical connection will be there from her hidden layer
+
+555
+00:27:14.315 --> 00:27:16.955
+to another hidden layer, but across the time stamp
+
+556
+00:27:16.955 --> 00:27:19.515
+connection will be from the same hidden layer.
+
+557
+00:27:19.615 --> 00:27:21.195
+So this is the same hidden layer here,
+
+558
+00:27:21.415 --> 00:27:23.035
+but across the timestamp.
+
+559
+00:27:23.265 --> 00:27:25.115
+Okay? So that is what you have seen,
+
+560
+00:27:25.115 --> 00:27:26.475
+that this timestamp is connected
+
+561
+00:27:26.475 --> 00:27:27.635
+with this, with the hidden layer,
+
+562
+00:27:29.055 --> 00:27:32.135
+The, this process of, uh, this process
+
+563
+00:27:32.155 --> 00:27:35.415
+of training like this will lead to more number
+
+564
+00:27:35.435 --> 00:27:38.135
+of parameters, right? Compared to A and N,
+
+565
+00:27:38.475 --> 00:27:39.975
+No, that is another contribution.
+
+566
+00:27:39.975 --> 00:27:43.335
+Yeah. So, uh, the contribution, you see this
+
+567
+00:27:43.565 --> 00:27:47.375
+what is written here, UW, uw, uw, doesn't matter
+
+568
+00:27:47.435 --> 00:27:50.495
+how long you will go in this x not to action, you can go,
+
+569
+00:27:51.275 --> 00:27:55.335
+but see these parameters are shared across timestamp.
+
+570
+00:27:56.505 --> 00:27:57.645
+Across timestamp.
+
+571
+00:27:58.305 --> 00:28:01.645
+So suppose you have here 10 parameters and here 12.
+
+572
+00:28:01.905 --> 00:28:03.485
+So in the whole network,
+
+573
+00:28:03.995 --> 00:28:07.925
+whether it is a hundred word network or 50 word network
+
+574
+00:28:08.105 --> 00:28:11.005
+or three word network, you will have only 12 plus
+
+575
+00:28:11.005 --> 00:28:12.205
+10 22 parameters.
+
+576
+00:28:12.465 --> 00:28:13.925
+The parameters doesn't change,
+
+577
+00:28:14.545 --> 00:28:16.045
+and there is a purpose of that, right?
+
+578
+00:28:16.425 --> 00:28:20.285
+If suppose we change these weights, how do we remember that,
+
+579
+00:28:20.285 --> 00:28:21.685
+what we have seen in the previous?
+
+580
+00:28:21.685 --> 00:28:24.725
+Because these waves are the representation of these inputs
+
+581
+00:28:25.525 --> 00:28:30.095
+X nod through, you only represented here X one.
+
+582
+00:28:30.515 --> 00:28:34.175
+So what what we are doing is when we feed, next time we
+
+583
+00:28:34.795 --> 00:28:38.135
+update the last one, what we have used at the timestamp.
+
+584
+00:28:38.715 --> 00:28:41.495
+So at the timestamp number zero, we used the weight U
+
+585
+00:28:42.125 --> 00:28:45.135
+already up U is updated by X, not a little bit.
+
+586
+00:28:46.035 --> 00:28:50.015
+Now, what, uh, update in the sense that this weight, uh,
+
+587
+00:28:50.475 --> 00:28:52.535
+we have used to represent X no,
+
+588
+00:28:52.535 --> 00:28:54.575
+here in this particular neuron, now I'm trying
+
+589
+00:28:54.575 --> 00:28:58.255
+to represent the same so, uh, uh, weight here
+
+590
+00:28:58.715 --> 00:28:59.775
+to represent X one.
+
+591
+00:28:59.805 --> 00:29:01.935
+Also, because I want to preserve the context.
+
+592
+00:29:02.445 --> 00:29:04.895
+Context, the context being preserved in two ways.
+
+593
+00:29:04.895 --> 00:29:06.015
+First of all, the output,
+
+594
+00:29:06.015 --> 00:29:08.015
+what we are getting here in this neuron,
+
+595
+00:29:08.195 --> 00:29:10.975
+and that is we are feeding so that it remember that, okay,
+
+596
+00:29:11.045 --> 00:29:13.975
+last time I processed this, and these, the weights also
+
+597
+00:29:13.975 --> 00:29:16.215
+because we are keeping, uh, uh,
+
+598
+00:29:16.395 --> 00:29:18.775
+and later on we'll do the backward position.
+
+599
+00:29:19.235 --> 00:29:23.895
+So, uh, it, it also gets updated based on ba uh, uh,
+
+600
+00:29:24.975 --> 00:29:26.295
+whatever, uh, the context, what we are
+
+601
+00:29:26.295 --> 00:29:27.655
+feeding in the form of X.
+
+602
+00:29:27.675 --> 00:29:29.175
+No, the next one, the next.
+
+603
+00:29:30.405 --> 00:29:33.745
+That's why, uh, we keep the number of parameters same.
+
+604
+00:29:34.205 --> 00:29:38.425
+So in all these, in, in hidden to, sorry, input
+
+605
+00:29:38.425 --> 00:29:40.785
+to hidden layer and hidden to hidden layer.
+
+606
+00:29:41.105 --> 00:29:42.285
+So this is the connections,
+
+607
+00:29:42.285 --> 00:29:44.005
+which we have only two connections we have, right?
+
+608
+00:29:44.385 --> 00:29:46.285
+So we share those parameters,
+
+609
+00:29:46.305 --> 00:29:49.285
+but in the, uh, a n there is no sharing
+
+610
+00:29:49.285 --> 00:29:50.325
+of the parameter, right?
+
+611
+00:29:50.385 --> 00:29:53.605
+For every input project, snow dial pass, okay,
+
+612
+00:29:53.615 --> 00:29:56.445
+we'll have one, uh, one, one set of weight,
+
+613
+00:29:56.585 --> 00:29:59.325
+and then, uh, it'll go, okay,
+
+614
+00:29:59.425 --> 00:30:01.765
+and then it'll come here, fine.
+
+615
+00:30:01.825 --> 00:30:04.125
+And then, then you may update the weights,
+
+616
+00:30:04.145 --> 00:30:06.645
+and then you will have the X one going,
+
+617
+00:30:06.705 --> 00:30:08.445
+the next two going, right?
+
+618
+00:30:08.825 --> 00:30:12.005
+So, uh, this is, this is how the, you can see that A
+
+619
+00:30:12.005 --> 00:30:15.325
+and N is different from the, uh, RN Yeah,
+
+620
+00:30:15.325 --> 00:30:20.245
+because we are sharing the parameter, okay?
+
+621
+00:30:20.675 --> 00:30:21.675
+Yeah.
+
+622
+00:30:22.305 --> 00:30:25.645
+Uh, sir, in short, we can say that in RNN, both the hidden
+
+623
+00:30:25.825 --> 00:30:28.085
+and the output base are shared across, uh,
+
+624
+00:30:28.085 --> 00:30:29.085
+various timestamps.
+
+625
+00:30:29.585 --> 00:30:31.365
+But what exactly is, uh,
+
+626
+00:30:31.425 --> 00:30:34.485
+the data which is getting propagated, uh, through various
+
+627
+00:30:34.585 --> 00:30:37.565
+and, uh, networks of each timestamp, is that, uh,
+
+628
+00:30:38.025 --> 00:30:39.685
+of the data, which is coming from,
+
+629
+00:30:39.685 --> 00:30:41.165
+from the output of the hidden layer?
+
+630
+00:30:41.435 --> 00:30:43.645
+Exactly, yes. This is what is happening. No, sir.
+
+631
+00:30:43.945 --> 00:30:45.445
+Yes, yes, that is what is, okay.
+
+632
+00:30:45.595 --> 00:30:46.595
+Okay. So thank you, Sir.
+
+633
+00:30:47.145 --> 00:30:51.205
+One question is that sir, UNW will be same across the
+
+634
+00:30:51.205 --> 00:30:54.165
+Whole all the time stamp across all the time stamp, yeah.
+
+635
+00:30:55.075 --> 00:30:56.535
+Okay. Yes.
+
+636
+00:30:59.835 --> 00:31:01.605
+Okay. Okay.
+
+637
+00:31:02.065 --> 00:31:05.685
+So now, uh, uh, I,
+
+638
+00:31:05.765 --> 00:31:07.605
+I don't know sir has connected or not.
+
+639
+00:31:08.025 --> 00:31:11.035
+Uh, okay,
+
+640
+00:31:15.615 --> 00:31:19.845
+Where, uh, so here, here, okay,
+
+641
+00:31:21.945 --> 00:31:25.605
+so if I will formally define the RNNA recurrent neural
+
+642
+00:31:25.605 --> 00:31:27.325
+network, the neural network designed
+
+643
+00:31:27.345 --> 00:31:29.565
+to process the, you called me.
+
+644
+00:31:29.715 --> 00:31:33.565
+Yeah, sir. So, uh, I can just, uh, making sure, uh,
+
+645
+00:31:33.595 --> 00:31:35.845
+that everyone has understood
+
+646
+00:31:35.845 --> 00:31:38.685
+what is the sequential nature, uh, the data mm-hmm.
+
+647
+00:31:38.765 --> 00:31:43.005
+And why the RNN uh, network is preferable for that.
+
+648
+00:31:43.745 --> 00:31:45.325
+Mm-hmm. So, because that, that's
+
+649
+00:31:45.325 --> 00:31:49.285
+what we were discussing in the last, uh, got all of them is,
+
+650
+00:31:49.305 --> 00:31:52.125
+uh, so just having that, that discussion.
+
+651
+00:31:52.945 --> 00:31:55.845
+So now, sir, uh, what I have planned is that I will just,
+
+652
+00:31:55.905 --> 00:31:58.245
+uh, take them through one demo
+
+653
+00:31:59.985 --> 00:32:02.925
+and I'll show them that how to build this iron architecture
+
+654
+00:32:02.945 --> 00:32:05.165
+for one, for one, uh, data set,
+
+655
+00:32:05.305 --> 00:32:07.765
+and, uh, maybe then if the time permits will go
+
+656
+00:32:07.765 --> 00:32:10.165
+to the next parts implementations and all.
+
+657
+00:32:10.935 --> 00:32:14.635
+Is it fine, sir or planned anything to Perfect.
+
+658
+00:32:14.745 --> 00:32:16.275
+Okay, thank you.
+
+659
+00:32:17.325 --> 00:32:20.885
+Thank, Okay.
+
+660
+00:32:21.385 --> 00:32:25.725
+So, uh, this is one, uh, miss, with, with one,
+
+661
+00:32:26.385 --> 00:32:27.765
+one, uh, you can say equation,
+
+662
+00:32:27.825 --> 00:32:29.485
+we can represent the whole RNN,
+
+663
+00:32:29.485 --> 00:32:32.965
+where it r this every output at a particular times.
+
+664
+00:32:33.405 --> 00:32:36.485
+T is a function of, suppose XT is an input.
+
+665
+00:32:37.075 --> 00:32:40.365
+Then U is in weight, so XT into U plus.
+
+666
+00:32:40.865 --> 00:32:43.925
+The last output is OT minus one into W,
+
+667
+00:32:44.585 --> 00:32:47.245
+and whatever is the bias which is connected here.
+
+668
+00:32:47.425 --> 00:32:49.965
+So this is one function, uh, with
+
+669
+00:32:49.965 --> 00:32:52.325
+through which you can represent the output,
+
+670
+00:32:52.325 --> 00:32:55.085
+what you're getting at, at the RN cell, right?
+
+671
+00:32:55.765 --> 00:32:57.245
+I think you have understood this.
+
+672
+00:32:57.905 --> 00:33:00.575
+So this is how we process it.
+
+673
+00:33:00.875 --> 00:33:02.735
+Uh, you can feed first time,
+
+674
+00:33:02.735 --> 00:33:05.695
+first word from the given sentence, second time,
+
+675
+00:33:05.695 --> 00:33:07.415
+second word, then third, fourth.
+
+676
+00:33:07.435 --> 00:33:09.335
+So what we say at the last time,
+
+677
+00:33:09.345 --> 00:33:11.135
+stamp whatever you are getting the vector,
+
+678
+00:33:12.005 --> 00:33:15.535
+that vector has the complete context understanding.
+
+679
+00:33:15.755 --> 00:33:19.495
+Say that of the sentence. I love deep learning. Okay?
+
+680
+00:33:19.875 --> 00:33:22.015
+So I, we get the output here.
+
+681
+00:33:22.125 --> 00:33:24.535
+Also here, also here, also here also.
+
+682
+00:33:25.035 --> 00:33:29.135
+But every time, uh, uh, we'll talk about the different types
+
+683
+00:33:29.135 --> 00:33:31.495
+of the and architecture in which you can use it.
+
+684
+00:33:31.495 --> 00:33:33.615
+But here, what I'm doing is, for me,
+
+685
+00:33:33.845 --> 00:33:37.175
+getting the output at the final timestamp is more important
+
+686
+00:33:37.175 --> 00:33:40.255
+because here I get all the words processed,
+
+687
+00:33:40.315 --> 00:33:42.495
+and here, whatever output I'll get,
+
+688
+00:33:42.495 --> 00:33:45.375
+that is the representation of complete sentence.
+
+689
+00:33:45.475 --> 00:33:48.935
+You can say that, right? So this is how we process it.
+
+690
+00:33:49.515 --> 00:33:50.735
+So final state
+
+691
+00:33:50.915 --> 00:33:53.935
+or three in quotes, the context of the entire sentence,
+
+692
+00:33:54.235 --> 00:33:56.255
+and this is how you can process, right?
+
+693
+00:33:56.955 --> 00:34:01.615
+So, uh, parameter I have talked about, uh, in, in the,
+
+694
+00:34:01.615 --> 00:34:05.935
+in the case of, uh, RNN, it is, uh, shared parameter.
+
+695
+00:34:05.955 --> 00:34:08.335
+So you have whatever is the parameter
+
+696
+00:34:08.335 --> 00:34:09.655
+between input and hidden.
+
+697
+00:34:09.875 --> 00:34:12.335
+Hidden layer means input and hidden layer
+
+698
+00:34:12.875 --> 00:34:16.375
+and last output to the current output neuron.
+
+699
+00:34:16.445 --> 00:34:17.495
+What there is some weight.
+
+700
+00:34:17.515 --> 00:34:20.295
+So these are the, uh, parameters along
+
+701
+00:34:20.295 --> 00:34:22.615
+with the biases you have in the entire network.
+
+702
+00:34:22.755 --> 00:34:24.415
+And that is true for, uh,
+
+703
+00:34:24.415 --> 00:34:27.935
+that is shared across all the time step, okay?
+
+704
+00:34:27.935 --> 00:34:30.975
+So now what I will do is I will just take you
+
+705
+00:34:30.975 --> 00:34:32.135
+through one, uh, demo.
+
+706
+00:34:33.205 --> 00:34:37.905
+So maybe that, uh, you will understand, uh, where it was
+
+707
+00:34:38.925 --> 00:34:40.425
+second, just give me,
+
+708
+00:34:46.905 --> 00:34:47.905
+Okay?
+
+709
+00:34:52.805 --> 00:34:53.805
+Yeah.
+
+710
+00:34:54.515 --> 00:34:59.285
+Okay. So I'll just take you through this demo, uh, uh,
+
+711
+00:34:59.305 --> 00:35:02.045
+let us see how much you will be able to understand from it.
+
+712
+00:35:02.285 --> 00:35:03.725
+I will take you through the internal,
+
+713
+00:35:04.245 --> 00:35:06.525
+internal architectures, a, uh, that, how
+
+714
+00:35:06.525 --> 00:35:08.005
+to build the RN in itself.
+
+715
+00:35:08.505 --> 00:35:09.885
+We will, we'll see that a little bit.
+
+716
+00:35:11.105 --> 00:35:12.685
+So first of all, uh,
+
+717
+00:35:13.985 --> 00:35:16.705
+I will run completely once again.
+
+718
+00:35:17.405 --> 00:35:19.025
+So what I'm doing is, uh,
+
+719
+00:35:21.605 --> 00:35:23.225
+I'm using one data set from Kaggle.
+
+720
+00:35:23.225 --> 00:35:25.745
+Someone was telling, right? Was telling, right?
+
+721
+00:35:25.745 --> 00:35:28.505
+We need not to download the data and then upload.
+
+722
+00:35:28.725 --> 00:35:30.385
+You can use the Kaggle hub.
+
+723
+00:35:31.015 --> 00:35:33.065
+This is the package, and if support,
+
+724
+00:35:33.065 --> 00:35:34.745
+the data is available in the Kaggle,
+
+725
+00:35:34.825 --> 00:35:38.125
+you can directly use in the Google, right?
+
+726
+00:35:38.625 --> 00:35:40.445
+So this is how you can do it.
+
+727
+00:35:40.465 --> 00:35:42.885
+You can try for the assignment, what it is given to you.
+
+728
+00:35:43.475 --> 00:35:46.365
+What I'm doing here is I'm just importing some
+
+729
+00:35:46.365 --> 00:35:49.405
+of the packages, which is required to build design network.
+
+730
+00:35:50.185 --> 00:35:52.365
+And because the data set is very big,
+
+731
+00:35:53.225 --> 00:35:55.285
+I'm also using the GPU, okay?
+
+732
+00:35:55.875 --> 00:35:58.165
+This we have already seen in the previous notebooks also,
+
+733
+00:35:58.305 --> 00:36:00.885
+but this line of code is about
+
+734
+00:36:02.675 --> 00:36:04.195
+downloading the data, okay?
+
+735
+00:36:04.195 --> 00:36:07.115
+And data from the Kaggle.
+
+736
+00:36:07.175 --> 00:36:09.795
+And this data is the IMDB dataset,
+
+737
+00:36:09.975 --> 00:36:12.355
+the sentiment analysis IMDB dataset.
+
+738
+00:36:12.355 --> 00:36:16.475
+So if you go to the Kaggle, IM DB
+
+739
+00:36:17.145 --> 00:36:18.515
+dataset, you will find it.
+
+740
+00:36:18.815 --> 00:36:22.705
+Uh, so this is the data
+
+741
+00:36:22.855 --> 00:36:24.305
+what we have, okay?
+
+742
+00:36:25.005 --> 00:36:29.145
+And if you go down here, you have, uh,
+
+743
+00:36:29.755 --> 00:36:31.505
+these are, this is how the dataset is.
+
+744
+00:36:31.505 --> 00:36:33.505
+It has, uh, I guess two columns.
+
+745
+00:36:33.515 --> 00:36:36.425
+First column is about the review, okay?
+
+746
+00:36:36.525 --> 00:36:39.225
+And second column is about the sentiment.
+
+747
+00:36:39.245 --> 00:36:41.745
+The sentiment is only two binary classification problem.
+
+748
+00:36:41.805 --> 00:36:44.585
+It is either positive or negative. That's all. Okay?
+
+749
+00:36:44.605 --> 00:36:45.985
+And it's a movie review.
+
+750
+00:36:45.985 --> 00:36:49.185
+So usually these reviews are very long, the paragraph wise,
+
+751
+00:36:49.185 --> 00:36:53.945
+like pipelines, maybe 50 words or so, okay?
+
+752
+00:36:53.945 --> 00:36:56.225
+It's not a four word or five word.
+
+753
+00:36:56.365 --> 00:36:58.145
+So that is the case in this particular data.
+
+754
+00:36:58.885 --> 00:37:02.905
+So you can also use it, uh, if you wish, uh, just
+
+755
+00:37:03.005 --> 00:37:04.705
+by using this import gaggle
+
+756
+00:37:04.925 --> 00:37:08.985
+and using the, this, this, this one, you have to give, okay?
+
+757
+00:37:10.045 --> 00:37:13.585
+So, and you will find it here itself.
+
+758
+00:37:13.865 --> 00:37:15.065
+Whenever you go to the Kaggle
+
+759
+00:37:15.205 --> 00:37:17.625
+and you try to download the data at that time,
+
+760
+00:37:17.685 --> 00:37:20.025
+it gives you the suggestion whether you really want
+
+761
+00:37:20.025 --> 00:37:23.545
+to download or you want to use it just in, in your, uh,
+
+762
+00:37:23.565 --> 00:37:25.185
+collab or wherever you're writing it.
+
+763
+00:37:25.185 --> 00:37:29.685
+So you can just use it like that. Okay? So yes.
+
+764
+00:37:31.205 --> 00:37:33.025
+Um, sorry.
+
+765
+00:37:33.445 --> 00:37:36.425
+So what I'm doing is I am getting the, uh,
+
+766
+00:37:38.635 --> 00:37:40.765
+path means for, from, from, from this.
+
+767
+00:37:41.065 --> 00:37:44.445
+I'm getting the path directly from, uh, on the AL hub.
+
+768
+00:37:44.665 --> 00:37:47.245
+And then what I'm doing is I'm making use of the pandas
+
+769
+00:37:47.305 --> 00:37:50.165
+to read the actual data, just to get,
+
+770
+00:37:50.165 --> 00:37:52.125
+getting the path from this line, whatever.
+
+771
+00:37:52.225 --> 00:37:54.045
+I'm, so this line path, it is written,
+
+772
+00:37:54.075 --> 00:37:56.355
+this is the path, okay?
+
+773
+00:37:56.355 --> 00:38:00.355
+Which I'm using here using the os uh,
+
+774
+00:38:00.355 --> 00:38:01.835
+package and package.
+
+775
+00:38:01.905 --> 00:38:03.435
+Then I'm able to read this data.
+
+776
+00:38:03.535 --> 00:38:04.795
+So now the data is available.
+
+777
+00:38:04.855 --> 00:38:08.395
+You can see that data is like, this is how many,
+
+778
+00:38:08.565 --> 00:38:11.115
+50,000 rows and two columns.
+
+779
+00:38:11.115 --> 00:38:12.515
+First column is for the review.
+
+780
+00:38:12.515 --> 00:38:15.185
+Second column is for the sentiment, okay?
+
+781
+00:38:15.185 --> 00:38:18.465
+This is the data set we have data set is too huge.
+
+782
+00:38:18.565 --> 00:38:19.745
+So I'll show you that,
+
+783
+00:38:20.175 --> 00:38:22.865
+that I will not be using the complete data set
+
+784
+00:38:22.865 --> 00:38:26.185
+for the training, otherwise it'll take more time, right?
+
+785
+00:38:26.365 --> 00:38:30.985
+So I'll use a sample of the dataset for the demo, okay?
+
+786
+00:38:31.285 --> 00:38:33.785
+Uh, and uh, there are two reasons for this.
+
+787
+00:38:33.785 --> 00:38:36.525
+First of all, here you see that, uh,
+
+788
+00:38:37.725 --> 00:38:39.325
+I think it is still training, right?
+
+789
+00:38:39.875 --> 00:38:43.245
+Okay, it's still training. So here, if you see that, uh,
+
+790
+00:38:44.365 --> 00:38:46.485
+I have tried to print one data point.
+
+791
+00:38:46.485 --> 00:38:48.045
+The first data point, this one, one
+
+792
+00:38:48.045 --> 00:38:50.125
+of the other reviewers has mentioned,
+
+793
+00:38:50.185 --> 00:38:51.205
+you can read this, right?
+
+794
+00:38:51.585 --> 00:38:52.965
+One of the other reviewers I mentioned,
+
+795
+00:38:53.425 --> 00:38:57.845
+and it is still, uh, uh, uh, it is still going after this.
+
+796
+00:38:57.915 --> 00:38:59.885
+Also, this is not the complete sentence,
+
+797
+00:38:59.885 --> 00:39:01.485
+what it has here, okay?
+
+798
+00:39:01.705 --> 00:39:03.285
+So the reviews are a little longer.
+
+799
+00:39:03.385 --> 00:39:05.885
+You can see that more than 50, 60 words, uh,
+
+800
+00:39:05.905 --> 00:39:07.565
+it might be happening around a hundred words
+
+801
+00:39:07.595 --> 00:39:08.725
+also in a single review.
+
+802
+00:39:08.995 --> 00:39:13.845
+Okay? So it's a, uh, paragraph wise, uh, uh, data wise,
+
+803
+00:39:13.845 --> 00:39:17.805
+what I have, so, uh, this is just a, a sample that
+
+804
+00:39:17.805 --> 00:39:20.005
+what we have read 50,000 reviews,
+
+805
+00:39:20.225 --> 00:39:22.445
+and it is labeled with positive and negative.
+
+806
+00:39:22.445 --> 00:39:23.965
+This is one of the sample. And
+
+807
+00:39:23.965 --> 00:39:26.205
+what we are doing here is from this data frame,
+
+808
+00:39:27.085 --> 00:39:29.565
+a review called a data frame label column.
+
+809
+00:39:29.905 --> 00:39:34.365
+I'm just trying to, uh, uh, extract those review,
+
+810
+00:39:34.365 --> 00:39:35.965
+which is in the column of sentiment.
+
+811
+00:39:35.985 --> 00:39:37.765
+You can see here, right? Positive, negative,
+
+812
+00:39:38.265 --> 00:39:40.245
+and mapping that one as zero one,
+
+813
+00:39:40.245 --> 00:39:42.405
+because sentiment is either positive or negative.
+
+814
+00:39:42.745 --> 00:39:45.645
+So we have to convert it as zero or one in order to process
+
+815
+00:39:45.785 --> 00:39:47.485
+and, uh, for the training for the right.
+
+816
+00:39:47.665 --> 00:39:49.165
+And that is what this line is doing.
+
+817
+00:39:49.165 --> 00:39:52.325
+Simply mapping the positive as one
+
+818
+00:39:52.425 --> 00:39:54.245
+and negative as zero, that's all.
+
+819
+00:39:54.785 --> 00:39:56.245
+And then after this line,
+
+820
+00:39:56.245 --> 00:39:57.845
+if you see the dataset looks like this.
+
+821
+00:39:57.865 --> 00:40:01.245
+So review column is still same 50,000 rows
+
+822
+00:40:01.785 --> 00:40:05.085
+and uh, label where it was positive or negative.
+
+823
+00:40:05.385 --> 00:40:06.605
+Now it is showing as one
+
+824
+00:40:06.605 --> 00:40:09.125
+or zero just by this map function, okay?
+
+825
+00:40:09.125 --> 00:40:11.595
+And given that index, that's all.
+
+826
+00:40:12.095 --> 00:40:13.835
+So this is the first level
+
+827
+00:40:13.935 --> 00:40:16.635
+of pre-processing we have done converted the labels,
+
+828
+00:40:16.635 --> 00:40:19.915
+which were in the text into the index zero one.
+
+829
+00:40:20.615 --> 00:40:23.355
+Now here, you can see that we are just sampling, okay?
+
+830
+00:40:23.355 --> 00:40:27.115
+Some dataset. Uh, so out of the 50,000,
+
+831
+00:40:27.335 --> 00:40:29.715
+I'm just taking 5,000, okay?
+
+832
+00:40:30.215 --> 00:40:34.075
+And, uh, these 5,000 dataset is
+
+833
+00:40:34.075 --> 00:40:35.635
+taking randomly, okay?
+
+834
+00:40:35.635 --> 00:40:39.635
+5,000, uh, uh, and, uh, random statistical to 42.
+
+835
+00:40:39.775 --> 00:40:42.515
+We talked about it earlier also, that in order
+
+836
+00:40:42.515 --> 00:40:45.915
+to reproduce your result, uh, we usually keep,
+
+837
+00:40:45.935 --> 00:40:49.835
+the random estate means the seed value, seed value in which
+
+838
+00:40:50.375 --> 00:40:53.715
+the randomly 5,000 data would be selected would be same
+
+839
+00:40:53.735 --> 00:40:56.195
+for every time when you will run this particular case.
+
+840
+00:40:56.195 --> 00:40:59.395
+Otherwise, because you're randomly selecting 5,000 data
+
+841
+00:40:59.395 --> 00:41:03.075
+points out of the 50,000, those 5,000 row can be
+
+842
+00:41:03.655 --> 00:41:05.075
+any 5,000 rows, right?
+
+843
+00:41:05.415 --> 00:41:07.715
+But the seed value ensure that the 5,000,
+
+844
+00:41:07.745 --> 00:41:10.795
+what you're selecting randomly will be same,
+
+845
+00:41:11.675 --> 00:41:14.365
+obviously it'll be random, it may be zero rows,
+
+846
+00:41:14.365 --> 00:41:18.205
+or it may be 10 rows, or it may be 50,000 rows or,
+
+847
+00:41:18.745 --> 00:41:21.805
+but whatever it will be, it'll be same every time if,
+
+848
+00:41:21.905 --> 00:41:23.605
+if this see the seed value, okay?
+
+849
+00:41:23.605 --> 00:41:26.925
+That is the purpose of this, this, uh, whole, uh,
+
+850
+00:41:27.155 --> 00:41:29.765
+this particular line and this line is simply
+
+851
+00:41:29.815 --> 00:41:31.165
+doing the train test split.
+
+852
+00:41:31.165 --> 00:41:32.805
+We have seen it multiple times also,
+
+853
+00:41:33.665 --> 00:41:34.985
+although I'm not, uh, using it,
+
+854
+00:41:35.085 --> 00:41:37.225
+but you can use it if you wish.
+
+855
+00:41:38.085 --> 00:41:42.585
+Now, because, uh, I guess, uh, at least in this course,
+
+856
+00:41:42.685 --> 00:41:45.345
+we are, uh, working with the text data.
+
+857
+00:41:45.945 --> 00:41:48.585
+I think for the first time, I thought I'll show you a little
+
+858
+00:41:48.585 --> 00:41:50.185
+bit of tokenization part as well,
+
+859
+00:41:50.185 --> 00:41:52.185
+because those things are very important.
+
+860
+00:41:52.245 --> 00:41:54.825
+In the case of the text data, like in the case
+
+861
+00:41:54.825 --> 00:41:57.785
+of image data, there was slight pre-processing
+
+862
+00:41:57.785 --> 00:42:01.305
+for the image was required in case of to be compatible
+
+863
+00:42:01.415 --> 00:42:03.105
+with whatever model CNN model
+
+864
+00:42:03.205 --> 00:42:06.425
+or V 16 model, what you have, what we have used.
+
+865
+00:42:06.935 --> 00:42:08.105
+Similarly get the text.
+
+866
+00:42:08.255 --> 00:42:11.705
+Also, you have to do some kind of pre-processing right here.
+
+867
+00:42:12.365 --> 00:42:15.705
+Uh, once we have any text, text, I am saying
+
+868
+00:42:15.885 --> 00:42:18.585
+as every review will be the text, okay?
+
+869
+00:42:18.845 --> 00:42:20.545
+Now, every review, whatever we'll have,
+
+870
+00:42:20.615 --> 00:42:23.305
+will apply some pre-processing on that.
+
+871
+00:42:23.805 --> 00:42:26.625
+The first one, uh, is once this review will come here,
+
+872
+00:42:26.895 --> 00:42:28.945
+I'll convert them into the lower case,
+
+873
+00:42:28.945 --> 00:42:32.945
+because some, uh, some you can see that here it is,
+
+874
+00:42:33.295 --> 00:42:34.505
+it's, I is capital.
+
+875
+00:42:34.615 --> 00:42:35.745
+Here it is, security.
+
+876
+00:42:36.145 --> 00:42:40.105
+S is capital, maximum M is capital and state as is capital.
+
+877
+00:42:41.085 --> 00:42:44.185
+Uh, but you can see that here, uh, uh,
+
+878
+00:42:44.955 --> 00:42:47.745
+maybe some other words, which is starting with the, uh,
+
+879
+00:42:47.755 --> 00:42:50.825
+small, small case, some word which are starting with the,
+
+880
+00:42:51.405 --> 00:42:54.225
+uh, capital, capital letter or small letter.
+
+881
+00:42:54.365 --> 00:42:57.665
+So it is possible the same word is somewhere starting
+
+882
+00:42:57.775 --> 00:42:59.745
+with the small letter somewhere.
+
+883
+00:42:59.745 --> 00:43:00.825
+It is starting with the capital
+
+884
+00:43:00.825 --> 00:43:01.865
+letter, the same word, right?
+
+885
+00:43:02.485 --> 00:43:06.785
+So tokenize should not read the similar word
+
+886
+00:43:07.765 --> 00:43:11.455
+just because the, the first letter is capital or the small
+
+887
+00:43:11.455 --> 00:43:13.775
+or any, they're represented as a capital letter
+
+888
+00:43:13.795 --> 00:43:15.815
+or small letter, okay?
+
+889
+00:43:15.815 --> 00:43:17.815
+Because this is a review which someone else has written
+
+890
+00:43:18.115 --> 00:43:20.575
+and they might not have, uh, followed.
+
+891
+00:43:20.795 --> 00:43:21.935
+Uh, they might have written it
+
+892
+00:43:22.195 --> 00:43:23.415
+how they want to write it, right?
+
+893
+00:43:24.115 --> 00:43:28.265
+So what we ensure that I convert everything
+
+894
+00:43:28.285 --> 00:43:29.825
+as a lower case just
+
+895
+00:43:30.695 --> 00:43:34.025
+because, just, just to remove any kind of a tendency, right?
+
+896
+00:43:34.145 --> 00:43:35.625
+A similar word should not be treated
+
+897
+00:43:35.695 --> 00:43:38.025
+with two different indices.
+
+898
+00:43:38.245 --> 00:43:41.265
+So that is first things, what we do in the pre-processing.
+
+899
+00:43:41.265 --> 00:43:45.145
+Then we are also replacing some of the, uh, like, uh,
+
+900
+00:43:45.145 --> 00:43:46.465
+things like you can see that, right?
+
+901
+00:43:46.685 --> 00:43:49.505
+We are, and then these are some of the, uh,
+
+902
+00:43:50.245 --> 00:43:55.145
+things which is available in our, uh, uh, uh, uh,
+
+903
+00:43:55.245 --> 00:43:56.905
+in the text, which is not required here.
+
+904
+00:43:56.905 --> 00:43:58.185
+While data collection,
+
+905
+00:43:58.185 --> 00:44:01.305
+these things might have come from the STML and all tag,
+
+906
+00:44:01.325 --> 00:44:02.745
+and also that is not required.
+
+907
+00:44:02.765 --> 00:44:05.505
+So what I have decided, I will resu remove that also.
+
+908
+00:44:05.505 --> 00:44:07.585
+So this is also will be removed.
+
+909
+00:44:08.295 --> 00:44:11.985
+Then if the po there is any atrophy sample, right?
+
+910
+00:44:12.125 --> 00:44:13.745
+Uh, that also will, will removed
+
+911
+00:44:13.885 --> 00:44:16.705
+by nothing means it'll be just simply removed.
+
+912
+00:44:17.205 --> 00:44:20.385
+And then finally, after doing these three pre-processing
+
+913
+00:44:20.475 --> 00:44:22.905
+final thing, what we are doing is we are doing the split.
+
+914
+00:44:23.165 --> 00:44:24.825
+We are doing the split. Okay?
+
+915
+00:44:25.205 --> 00:44:26.665
+Now I can show you that, that
+
+916
+00:44:26.665 --> 00:44:27.785
+what are the things we are doing.
+
+917
+00:44:27.785 --> 00:44:29.585
+Suppose I will take this just
+
+918
+00:44:29.585 --> 00:44:32.805
+because I want to show you that I will take this also.
+
+919
+00:44:33.505 --> 00:44:36.805
+So, uh, I will put it somewhere in between. Okay?
+
+920
+00:44:37.105 --> 00:44:40.845
+So here I have put, now I'm just calling this particular
+
+921
+00:44:41.085 --> 00:44:44.195
+function tokenize, and it'll do all these four things
+
+922
+00:44:44.215 --> 00:44:47.035
+and return the final tokenize text for us.
+
+923
+00:44:47.265 --> 00:44:50.995
+Okay? So I think the it is done. Yeah, it is done.
+
+924
+00:44:51.735 --> 00:44:54.755
+So now I can run this once again. So let me just see.
+
+925
+00:44:55.375 --> 00:44:59.845
+So when, once I'm running this one, what is happening is,
+
+926
+00:44:59.845 --> 00:45:02.605
+you know, now inside this particular sentence,
+
+927
+00:45:02.755 --> 00:45:03.845
+this is a text here,
+
+928
+00:45:04.465 --> 00:45:07.445
+it will convert if suppose we have something in capital,
+
+929
+00:45:07.745 --> 00:45:09.805
+say O one O was capital,
+
+930
+00:45:09.905 --> 00:45:12.165
+but now you can see O one O, it's small.
+
+931
+00:45:12.165 --> 00:45:13.965
+That is first thing what we are doing in the first line.
+
+932
+00:45:14.265 --> 00:45:17.045
+If somewhere we have these tags, it is removing that.
+
+933
+00:45:17.115 --> 00:45:19.605
+Also, there is no tag, which is coming as a token.
+
+934
+00:45:20.425 --> 00:45:24.725
+If somewhere we will put any epitopes that you will, right?
+
+935
+00:45:24.905 --> 00:45:28.765
+So you can see that how it is now ULL, it has come,
+
+936
+00:45:28.765 --> 00:45:31.365
+obviously it is wrong, but it is, it'll do like that,
+
+937
+00:45:31.425 --> 00:45:32.645
+the pre-processing and all.
+
+938
+00:45:33.425 --> 00:45:36.285
+So likewise, you can plan that. What are the pre-processing?
+
+939
+00:45:36.705 --> 00:45:38.325
+Uh, it is required for the data
+
+940
+00:45:38.325 --> 00:45:40.565
+because every, every data, what you will collect may have
+
+941
+00:45:40.765 --> 00:45:42.925
+slightly different kind of pre-processing,
+
+942
+00:45:42.925 --> 00:45:44.605
+which is required, right?
+
+943
+00:45:44.605 --> 00:45:45.925
+Some data might be very clean,
+
+944
+00:45:45.925 --> 00:45:47.845
+some data might have these kind of tags.
+
+945
+00:45:47.985 --> 00:45:50.925
+It depends, right? So that you can take a call.
+
+946
+00:45:50.925 --> 00:45:52.885
+This is not fixed that these are the only
+
+947
+00:45:52.885 --> 00:45:54.125
+pre-processing you have to do.
+
+948
+00:45:54.545 --> 00:45:57.045
+But likewise, you have to do some pre-processing
+
+949
+00:45:57.045 --> 00:45:59.205
+and you can take a call, which pre-processing I have
+
+950
+00:45:59.205 --> 00:46:00.595
+to do, okay?
+
+951
+00:46:00.825 --> 00:46:03.595
+This is just one sample, uh, text.
+
+952
+00:46:03.895 --> 00:46:06.595
+And it, uh, this, this function will call
+
+953
+00:46:06.935 --> 00:46:10.505
+for all the 5,000 sample, which we are going to use, okay?
+
+954
+00:46:10.505 --> 00:46:13.505
+And these pre-processing will be applied on that. Okay?
+
+955
+00:46:13.885 --> 00:46:16.865
+Now, once we do that one tokenization,
+
+956
+00:46:16.925 --> 00:46:19.225
+so once we tokenize why we are tokenizing,
+
+957
+00:46:19.365 --> 00:46:22.825
+as I said you earlier, also, we have to build our vocabulary
+
+958
+00:46:22.845 --> 00:46:25.905
+for the corpus, whatever we are using 5,000 rows,
+
+959
+00:46:26.565 --> 00:46:27.785
+uh, randomly sampled.
+
+960
+00:46:28.125 --> 00:46:31.105
+So we are going to build the vocabulary for
+
+961
+00:46:31.105 --> 00:46:33.265
+that vocabulary means unique token.
+
+962
+00:46:33.365 --> 00:46:35.985
+So it may happen that the is coming here also,
+
+963
+00:46:36.085 --> 00:46:38.705
+the might be coming in some other world also, I don't want
+
+964
+00:46:38.705 --> 00:46:39.905
+to count the two times.
+
+965
+00:46:40.205 --> 00:46:43.745
+So for the, I will consider unique, uh,
+
+966
+00:46:43.745 --> 00:46:45.745
+unique entry in my vocabulary.
+
+967
+00:46:46.005 --> 00:46:49.785
+So like likewise. So I will now build my vocabulary.
+
+968
+00:46:50.205 --> 00:46:53.785
+Now, when I'm building the vocabulary, what I'm doing is
+
+969
+00:46:54.685 --> 00:46:56.545
+I'm starting my dictionary like this,
+
+970
+00:46:56.695 --> 00:46:58.925
+this is a dictionary, okay?
+
+971
+00:46:59.165 --> 00:47:02.405
+D dictionary. And there are two predefined
+
+972
+00:47:02.405 --> 00:47:03.765
+elements in the dictionary.
+
+973
+00:47:03.775 --> 00:47:06.325
+First one is the pad,
+
+974
+00:47:07.335 --> 00:47:09.795
+and second one is unknown.
+
+975
+00:47:10.415 --> 00:47:11.795
+Second one is unknown.
+
+976
+00:47:13.855 --> 00:47:17.115
+Uh, we'll see the pad, uh, is required here,
+
+977
+00:47:17.175 --> 00:47:18.515
+or not any, anywhere.
+
+978
+00:47:18.765 --> 00:47:21.995
+We'll see that one. But unknown token will be using very
+
+979
+00:47:22.315 --> 00:47:23.635
+frequently wherever.
+
+980
+00:47:23.635 --> 00:47:27.075
+Suppose at the test time, a new sentence will come,
+
+981
+00:47:27.375 --> 00:47:31.285
+and that sentence, when we tokenize, a new token comes,
+
+982
+00:47:31.285 --> 00:47:32.765
+which is not there in my vocabulary,
+
+983
+00:47:32.855 --> 00:47:34.485
+we'll assign it unknown.
+
+984
+00:47:34.865 --> 00:47:36.605
+That's the purpose of unknown token
+
+985
+00:47:37.385 --> 00:47:39.165
+pad usually requires when you have
+
+986
+00:47:39.165 --> 00:47:41.125
+to do any kind of padding, right?
+
+987
+00:47:41.625 --> 00:47:45.445
+So, uh, uh, uh, padding, uh,
+
+988
+00:47:47.345 --> 00:47:48.885
+we will do here,
+
+989
+00:47:48.885 --> 00:47:50.525
+or we'll see that one whether I
+
+990
+00:47:50.525 --> 00:47:51.605
+have any text like that or not.
+
+991
+00:47:51.605 --> 00:47:53.205
+But padding is required. Suppose you want,
+
+992
+00:47:53.425 --> 00:47:55.125
+you have some sequence of length
+
+993
+00:47:55.185 --> 00:47:57.125
+and you want to make it, uh,
+
+994
+00:47:57.125 --> 00:47:59.725
+usually padding is used when you process
+
+995
+00:47:59.905 --> 00:48:01.125
+the data in batches.
+
+996
+00:48:01.465 --> 00:48:03.925
+So when you process the data in batch, every sentence
+
+997
+00:48:04.185 --> 00:48:06.405
+or every paragraph has a different length, right?
+
+998
+00:48:06.515 --> 00:48:10.325
+Suppose you plan to pro, uh, plan, plan to, uh, process
+
+999
+00:48:11.075 --> 00:48:14.355
+five, uh, uh, five rows together.
+
+1000
+00:48:14.485 --> 00:48:16.075
+Every row will have different length.
+
+1001
+00:48:16.615 --> 00:48:18.395
+Now, in that case, pattern will be required
+
+1002
+00:48:18.395 --> 00:48:19.755
+that you can fix that, okay?
+
+1003
+00:48:19.755 --> 00:48:22.955
+Every row, I will, I, uh, I will process this many
+
+1004
+00:48:22.955 --> 00:48:25.955
+because every row may have that right different length,
+
+1005
+00:48:25.955 --> 00:48:27.795
+and you want to process it that in the badge.
+
+1006
+00:48:27.795 --> 00:48:30.435
+Yeah. So that is one case use case of the pad,
+
+1007
+00:48:30.455 --> 00:48:32.755
+but I don't see that I'm using any,
+
+1008
+00:48:32.855 --> 00:48:34.635
+any such case in this particular core.
+
+1009
+00:48:34.895 --> 00:48:37.355
+But you can always have these two predefined tokens.
+
+1010
+00:48:37.895 --> 00:48:41.875
+And now whatever unique token will come in my corpus
+
+1011
+00:48:41.875 --> 00:48:42.955
+that will be assigned,
+
+1012
+00:48:43.865 --> 00:48:47.365
+and an index number starting from two zero,
+
+1013
+00:48:47.385 --> 00:48:48.725
+and one is already occupied.
+
+1014
+00:48:48.895 --> 00:48:51.525
+These two are the tokens in my vocabulary
+
+1015
+00:48:52.105 --> 00:48:53.885
+and whatever new token will come,
+
+1016
+00:48:53.955 --> 00:48:55.965
+they will be assigned the token number two,
+
+1017
+00:48:55.965 --> 00:48:58.045
+token number three, sorry, uh, index number two,
+
+1018
+00:48:58.045 --> 00:48:59.565
+index number three, index number four.
+
+1019
+00:48:59.585 --> 00:49:04.165
+And it can go as, as long as unique tokens you are getting.
+
+1020
+00:49:04.665 --> 00:49:06.765
+So that is what this particular function is telling.
+
+1021
+00:49:07.185 --> 00:49:09.445
+So you can build your vocabulary, receive the text,
+
+1022
+00:49:09.445 --> 00:49:11.865
+text in nothing but text in nothing.
+
+1023
+00:49:11.885 --> 00:49:13.265
+But these, these, these things.
+
+1024
+00:49:13.265 --> 00:49:14.985
+What you're going to get means reviews.
+
+1025
+00:49:15.215 --> 00:49:18.745
+Like you can take this as first text means first row, then
+
+1026
+00:49:18.745 --> 00:49:20.545
+likewise, 5,000 you have.
+
+1027
+00:49:21.005 --> 00:49:23.905
+So one by one you will get those 5,000 rows.
+
+1028
+00:49:24.325 --> 00:49:25.745
+And every time what you will do,
+
+1029
+00:49:25.765 --> 00:49:27.385
+you will call the tokenized function.
+
+1030
+00:49:27.405 --> 00:49:28.985
+So tokenized function, when you're calling,
+
+1031
+00:49:29.125 --> 00:49:30.945
+all these operation will happen, okay?
+
+1032
+00:49:31.685 --> 00:49:34.425
+And after tokenization, what will happen, you will get,
+
+1033
+00:49:34.445 --> 00:49:36.425
+for every, every sentence
+
+1034
+00:49:36.485 --> 00:49:38.705
+or every paragraph, you will get the tokens like this.
+
+1035
+00:49:39.285 --> 00:49:42.545
+Now, every token would be checked whether it is available in
+
+1036
+00:49:42.545 --> 00:49:43.625
+my vocabulary or not.
+
+1037
+00:49:43.685 --> 00:49:46.465
+So that is what for every token, what we are getting,
+
+1038
+00:49:47.195 --> 00:49:51.025
+we'll check if that token is there in the vocabulary or not.
+
+1039
+00:49:51.565 --> 00:49:55.225
+If token is not in the vocabulary, suppose I will start
+
+1040
+00:49:55.225 --> 00:49:56.345
+with the first token one.
+
+1041
+00:49:56.805 --> 00:49:59.185
+No one is not available in my vocabulary currently.
+
+1042
+00:49:59.285 --> 00:50:02.025
+So then what will happen if suppose I'm processing one
+
+1043
+00:50:02.025 --> 00:50:05.025
+for the first time, one is not available, then
+
+1044
+00:50:05.545 --> 00:50:07.785
+I will create a new entry here like this.
+
+1045
+00:50:07.805 --> 00:50:09.585
+So I will create like this, this,
+
+1046
+00:50:09.585 --> 00:50:13.385
+it'll create automatically, it'll create a new entry for
+
+1047
+00:50:14.005 --> 00:50:17.615
+one, and it'll assign the index number to, this is
+
+1048
+00:50:17.615 --> 00:50:19.855
+what it'll do here in this particular case.
+
+1049
+00:50:20.795 --> 00:50:23.095
+So why, why vocab token?
+
+1050
+00:50:23.195 --> 00:50:25.415
+So vocab is the name of my vocabulary,
+
+1051
+00:50:25.515 --> 00:50:27.765
+and token is the name of this token.
+
+1052
+00:50:27.905 --> 00:50:32.405
+One eco it assigned by what length
+
+1053
+00:50:32.405 --> 00:50:34.965
+of the vocabulary, what is length of the vocabulary?
+
+1054
+00:50:35.235 --> 00:50:37.365
+Initially, the length of vocabulary is two,
+
+1055
+00:50:37.505 --> 00:50:39.485
+and that's why, uh, next time
+
+1056
+00:50:39.725 --> 00:50:42.445
+whenever to new token will come, will be assigned with two,
+
+1057
+00:50:42.745 --> 00:50:43.885
+and that is a unit token.
+
+1058
+00:50:43.885 --> 00:50:45.805
+Next time what will happen, now the length
+
+1059
+00:50:45.805 --> 00:50:47.005
+of the vocabulary is three,
+
+1060
+00:50:47.305 --> 00:50:50.925
+and next token is coming as of, so what will happen again,
+
+1061
+00:50:51.385 --> 00:50:53.645
+new token will be created with the name of
+
+1062
+00:50:54.375 --> 00:50:55.725
+index will be three.
+
+1063
+00:50:56.145 --> 00:50:57.725
+Now, now the vocabulary, so it,
+
+1064
+00:50:57.825 --> 00:51:00.685
+it is depending on the length of the vocabulary
+
+1065
+00:51:01.185 --> 00:51:04.525
+and length of the vocabulary is always one lesser than
+
+1066
+00:51:05.085 --> 00:51:06.325
+whatever number of token you have,
+
+1067
+00:51:06.325 --> 00:51:07.685
+because you start with a zero.
+
+1068
+00:51:07.865 --> 00:51:10.605
+That's why. So you can always give that length
+
+1069
+00:51:10.605 --> 00:51:13.285
+of the vocabulary as a new index number
+
+1070
+00:51:13.385 --> 00:51:14.765
+for the unique token.
+
+1071
+00:51:14.965 --> 00:51:17.795
+Whatever you're getting now, this is what will happen, okay?
+
+1072
+00:51:18.015 --> 00:51:20.075
+Now, this is what this particular function will do,
+
+1073
+00:51:20.815 --> 00:51:23.195
+and uh, this is the function.
+
+1074
+00:51:23.535 --> 00:51:26.635
+And now here, uh, this, in this part line,
+
+1075
+00:51:26.875 --> 00:51:28.555
+actually we are executing that function.
+
+1076
+00:51:29.095 --> 00:51:31.515
+So we are calling this build vocabulary.
+
+1077
+00:51:31.665 --> 00:51:33.635
+This is the function name, right? This is the function name.
+
+1078
+00:51:33.655 --> 00:51:36.715
+We are calling this one and applying this function on my
+
+1079
+00:51:36.935 --> 00:51:38.795
+review column of my dataset.
+
+1080
+00:51:38.795 --> 00:51:40.875
+See that this is the review column of my dataset.
+
+1081
+00:51:40.935 --> 00:51:43.595
+So one by one, each row 5,000 row,
+
+1082
+00:51:43.595 --> 00:51:45.475
+what we have decided will go here
+
+1083
+00:51:45.855 --> 00:51:48.915
+and it'll keep on growing our vocabulary
+
+1084
+00:51:48.945 --> 00:51:50.075
+with this particular line.
+
+1085
+00:51:50.505 --> 00:51:54.315
+Okay? And finally, I can simply count this vocab length,
+
+1086
+00:51:54.495 --> 00:51:56.795
+so length of my dictionary vocab,
+
+1087
+00:51:57.455 --> 00:52:00.435
+and then I will get to know that what is the total number
+
+1088
+00:52:00.435 --> 00:52:02.515
+of unique tokens which we are getting in our vocabulary.
+
+1089
+00:52:02.515 --> 00:52:07.235
+In this particular case, it is coming as 75,509. Okay?
+
+1090
+00:52:07.465 --> 00:52:08.795
+Four for how many?
+
+1091
+00:52:09.055 --> 00:52:12.875
+For 5,000 rows only if you will use 50,000 rows,
+
+1092
+00:52:12.875 --> 00:52:14.235
+which is the actual data size, right?
+
+1093
+00:52:14.685 --> 00:52:16.595
+It'll be in lax, I guess.
+
+1094
+00:52:16.975 --> 00:52:19.275
+Uh, uh, it may be, I don't know,
+
+1095
+00:52:19.455 --> 00:52:21.835
+but you just check that one, it, it'll be too huge.
+
+1096
+00:52:21.855 --> 00:52:24.355
+At least here it is, 75,509.
+
+1097
+00:52:24.535 --> 00:52:27.395
+So must be more than one lag, I guess, right?
+
+1098
+00:52:28.375 --> 00:52:31.355
+So yeah, this is the next step that building the vocabulary.
+
+1099
+00:52:31.355 --> 00:52:33.315
+Now, once you will build the vocabulary, you have
+
+1100
+00:52:33.315 --> 00:52:37.555
+to convert the sequence of word as a sequence of
+
+1101
+00:52:38.145 --> 00:52:39.395
+indices, right?
+
+1102
+00:52:39.395 --> 00:52:41.955
+That is very important. We talked about it earlier also,
+
+1103
+00:52:42.585 --> 00:52:45.795
+that your, you don't want to lose the sequence information.
+
+1104
+00:52:46.135 --> 00:52:48.755
+So this whole effort, what you're doing is now you will
+
+1105
+00:52:49.555 --> 00:52:52.635
+represent your sequence as a sequence of indices.
+
+1106
+00:52:52.655 --> 00:52:54.755
+Now, this fourth step is doing the same thing.
+
+1107
+00:52:54.755 --> 00:52:56.475
+Convert text two indices.
+
+1108
+00:52:56.785 --> 00:52:58.035
+Text two indices is the name
+
+1109
+00:52:58.035 --> 00:52:59.275
+of the function, which we're defining.
+
+1110
+00:52:59.525 --> 00:53:01.275
+It'll accept two parameter text.
+
+1111
+00:53:01.575 --> 00:53:03.635
+And what is your vocabulary, which you have just built,
+
+1112
+00:53:03.825 --> 00:53:08.035
+because in the text, what you will do, you will apply
+
+1113
+00:53:08.575 --> 00:53:10.195
+the, the, uh, what is that?
+
+1114
+00:53:10.255 --> 00:53:12.035
+Uh, the tokenize to token.
+
+1115
+00:53:12.675 --> 00:53:14.795
+Whatever text means each row, you will pass it
+
+1116
+00:53:14.795 --> 00:53:16.435
+through this particular function from your data.
+
+1117
+00:53:16.685 --> 00:53:18.515
+First of all, it'll apply the token izer
+
+1118
+00:53:18.695 --> 00:53:19.955
+for each unique token.
+
+1119
+00:53:19.965 --> 00:53:21.115
+It'll see in the vocabulary
+
+1120
+00:53:21.115 --> 00:53:22.915
+what is the index number it is already given,
+
+1121
+00:53:23.095 --> 00:53:24.515
+and that is what it'll assign.
+
+1122
+00:53:25.235 --> 00:53:28.325
+Okay? Now this whole thing is doing that part.
+
+1123
+00:53:28.665 --> 00:53:30.965
+So first of all, it'll do the tokenize,
+
+1124
+00:53:31.475 --> 00:53:32.525
+what is written here.
+
+1125
+00:53:33.335 --> 00:53:37.305
+Once it'll do the tokenize, then it'll check if
+
+1126
+00:53:37.915 --> 00:53:41.505
+token is in the vocabulary token in the vocabulary, then
+
+1127
+00:53:42.385 --> 00:53:45.945
+whatever is index number, this returns the index number of
+
+1128
+00:53:45.945 --> 00:53:49.105
+that particular token v vocab token, if you will put,
+
+1129
+00:53:49.355 --> 00:53:51.705
+it'll return the index of that particular token.
+
+1130
+00:53:52.365 --> 00:53:57.195
+Uh, right? So if token is in the vocabulary,
+
+1131
+00:53:57.295 --> 00:53:58.315
+return it index.
+
+1132
+00:53:58.855 --> 00:54:02.475
+If not, then re, uh, whatever is the, uh, index number
+
+1133
+00:54:02.735 --> 00:54:04.315
+for unknown token to assign it.
+
+1134
+00:54:04.455 --> 00:54:07.595
+So for every new word, if it is not that in my vocabulary,
+
+1135
+00:54:07.645 --> 00:54:10.675
+it'll be assigned the unknown unknown token index number.
+
+1136
+00:54:10.675 --> 00:54:14.035
+That is one. Otherwise, it'll assign that index number.
+
+1137
+00:54:14.215 --> 00:54:17.035
+Now, that is what it is doing here in this particular code.
+
+1138
+00:54:17.335 --> 00:54:19.955
+So just to test, I'm calling this text to indices
+
+1139
+00:54:19.955 --> 00:54:22.475
+and passing this particular one sentence.
+
+1140
+00:54:23.655 --> 00:54:26.865
+This is one sentence, and this is my vocabulary, VOCA.
+
+1141
+00:54:26.925 --> 00:54:29.145
+You can see here vocabulary. Okay?
+
+1142
+00:54:29.405 --> 00:54:31.945
+Now, once you'll pass this, uh, sentence,
+
+1143
+00:54:32.005 --> 00:54:36.385
+the text info vocab, then for one, the index must be 1 62.
+
+1144
+00:54:36.845 --> 00:54:39.105
+That's why it is assigning for 1, 1 62.
+
+1145
+00:54:39.385 --> 00:54:40.785
+Actually, you can check that also.
+
+1146
+00:54:41.285 --> 00:54:42.705
+Uh, what you can do is
+
+1147
+00:54:43.275 --> 00:54:46.145
+after this, if I will write
+
+1148
+00:54:47.115 --> 00:54:50.065
+vocab, then what will happen?
+
+1149
+00:54:50.205 --> 00:54:51.265
+You can see that, right?
+
+1150
+00:54:51.725 --> 00:54:53.785
+So, uh, for every word
+
+1151
+00:54:53.925 --> 00:54:56.465
+and total number of such thing, that 75,000,
+
+1152
+00:54:56.505 --> 00:54:57.985
+I just can't explore.
+
+1153
+00:54:58.485 --> 00:55:02.145
+Now, what I will do is I will simply write the token
+
+1154
+00:55:02.145 --> 00:55:03.185
+name, okay?
+
+1155
+00:55:03.355 --> 00:55:07.385
+Vocab token token name is, uh, one second.
+
+1156
+00:55:10.285 --> 00:55:12.545
+Sure. Token name is
+
+1157
+00:55:13.605 --> 00:55:16.015
+say one.
+
+1158
+00:55:17.745 --> 00:55:20.235
+Okay? Now see for 1, 1 26,
+
+1159
+00:55:20.255 --> 00:55:22.555
+and that's why here it is assigned as 1 26.
+
+1160
+00:55:22.555 --> 00:55:23.555
+You can check for off.
+
+1161
+00:55:23.665 --> 00:55:26.475
+Also, you can check, okay, for off in my vocabulary,
+
+1162
+00:55:26.475 --> 00:55:28.035
+what is the index given 12.
+
+1163
+00:55:28.055 --> 00:55:30.035
+That's why it is 12 here. Okay?
+
+1164
+00:55:30.375 --> 00:55:31.835
+You can check for the also,
+
+1165
+00:55:33.855 --> 00:55:37.435
+and it is, it is, uh, the, for the, it is 16.
+
+1166
+00:55:37.665 --> 00:55:41.195
+16. Now, you can also check for something, which is,
+
+1167
+00:55:41.285 --> 00:55:45.275
+which might not be there in your vocab support, for example,
+
+1168
+00:55:46.055 --> 00:55:48.675
+uh, I will simply write my name, okay?
+
+1169
+00:55:48.675 --> 00:55:52.075
+Just to check, show you that what will happen soon, okay?
+
+1170
+00:55:52.675 --> 00:55:54.035
+I will run it once again.
+
+1171
+00:55:54.885 --> 00:55:58.305
+Now say that personnel, it is showing one. Okay?
+
+1172
+00:55:58.805 --> 00:56:00.665
+Now, you can actually check that what
+
+1173
+00:56:00.665 --> 00:56:03.065
+what it is written, unknown, unknown.
+
+1174
+00:56:03.065 --> 00:56:05.465
+Yeah, because we have already declared that
+
+1175
+00:56:05.525 --> 00:56:06.745
+for all the unknown token,
+
+1176
+00:56:06.745 --> 00:56:09.025
+what can come will be assigned by the index number.
+
+1177
+00:56:09.125 --> 00:56:11.705
+But yeah, and that is what has happened here.
+
+1178
+00:56:12.165 --> 00:56:14.825
+So you can, uh, in fact, uh, make sure
+
+1179
+00:56:14.825 --> 00:56:16.425
+that this is the same case.
+
+1180
+00:56:17.755 --> 00:56:21.625
+Sorry. You can see that, right? Uh, so that's why it is one.
+
+1181
+00:56:22.215 --> 00:56:24.195
+Okay? Likewise. So now you understood.
+
+1182
+00:56:24.195 --> 00:56:27.555
+So whatever sequence of words you have as a sentence
+
+1183
+00:56:27.555 --> 00:56:29.755
+or as a paragraph in the same way,
+
+1184
+00:56:29.755 --> 00:56:31.715
+it'll return your sequence of indices.
+
+1185
+00:56:32.785 --> 00:56:36.795
+This is called text two indices. Okay? Alright.
+
+1186
+00:56:36.935 --> 00:56:39.835
+Now, once it is done, then you have done the pre-processing,
+
+1187
+00:56:40.035 --> 00:56:43.835
+whatever, now you are ready to apply the sequence of indices
+
+1188
+00:56:44.655 --> 00:56:47.195
+to the model, and model will learn something on of it
+
+1189
+00:56:47.865 --> 00:56:49.075
+till this particular part.
+
+1190
+00:56:49.215 --> 00:56:51.995
+It is just a pre-processing what you are doing in your data,
+
+1191
+00:56:51.995 --> 00:56:54.595
+which is very much required in the case of the text data.
+
+1192
+00:56:55.055 --> 00:56:56.675
+And every text data will have slightly
+
+1193
+00:56:56.675 --> 00:56:57.795
+different pre-processing.
+
+1194
+00:56:57.795 --> 00:57:01.505
+Also, it is not always fixed, like in the case
+
+1195
+00:57:01.505 --> 00:57:02.625
+of image, what happened.
+
+1196
+00:57:03.245 --> 00:57:07.345
+Uh, but, uh, uh, you have certain types of image.
+
+1197
+00:57:07.445 --> 00:57:10.465
+Uh, there also you do some pre set up pre-processing, okay?
+
+1198
+00:57:10.475 --> 00:57:12.705
+Based on what type of image, how is,
+
+1199
+00:57:12.705 --> 00:57:14.265
+what is the size of the image and all.
+
+1200
+00:57:15.685 --> 00:57:18.065
+And, uh, I would say it is in the similar way in
+
+1201
+00:57:18.065 --> 00:57:19.145
+the case of textile.
+
+1202
+00:57:19.145 --> 00:57:22.345
+So, uh, you have to do, um, some, some,
+
+1203
+00:57:22.345 --> 00:57:23.585
+some pre-processing and all.
+
+1204
+00:57:23.585 --> 00:57:25.505
+And this is what is preparing your data,
+
+1205
+00:57:26.095 --> 00:57:27.585
+preparing your data for the model.
+
+1206
+00:57:28.325 --> 00:57:31.025
+Now, is there any query so far? Let me know,
+
+1207
+00:57:32.495 --> 00:57:33.495
+Sir. I have one.
+
+1208
+00:57:33.495 --> 00:57:35.615
+Uh, so, so
+
+1209
+00:57:36.205 --> 00:57:39.895
+this unknown is used in case of, uh, while testing, right?
+
+1210
+00:57:40.515 --> 00:57:41.935
+Uh, yes. Not while training, correct?
+
+1211
+00:57:41.955 --> 00:57:44.245
+Yes, you're correct. Uh, okay.
+
+1212
+00:57:44.625 --> 00:57:49.325
+And also the padding, sir, uh, we usually use it in ff
+
+1213
+00:57:49.345 --> 00:57:50.885
+and then not here. Ah, right.
+
+1214
+00:57:51.465 --> 00:57:54.365
+Uh, you got it very right. Okay. You got it very rightly.
+
+1215
+00:57:54.425 --> 00:57:55.925
+But, uh, I, I,
+
+1216
+00:57:55.925 --> 00:57:58.165
+that's why I said I think I've not used anywhere,
+
+1217
+00:57:58.225 --> 00:58:01.805
+but I have, uh, why then, why I included this token.
+
+1218
+00:58:01.985 --> 00:58:05.645
+So what happens, uh, even in the case of r
+
+1219
+00:58:05.645 --> 00:58:07.845
+and n padding is, uh, can be used
+
+1220
+00:58:07.945 --> 00:58:09.565
+and in fact, people use it how
+
+1221
+00:58:10.285 --> 00:58:12.085
+I was talking about the batch, right?
+
+1222
+00:58:12.195 --> 00:58:13.605
+When you create the batch,
+
+1223
+00:58:13.705 --> 00:58:17.525
+and if the bad badge, when I say it can start with the one,
+
+1224
+00:58:17.585 --> 00:58:22.165
+uh, it will have more than one row and more than one row.
+
+1225
+00:58:22.235 --> 00:58:25.605
+When I say every row may have the different length, no.
+
+1226
+00:58:25.605 --> 00:58:30.285
+When I decided that I will feed five sentence together first
+
+1227
+00:58:30.805 --> 00:58:33.285
+together, when I say first I'll feed the first sentence,
+
+1228
+00:58:33.445 --> 00:58:36.925
+I will get the output, store the loss, then second store,
+
+1229
+00:58:36.925 --> 00:58:40.165
+the loss, third store, the loss means update will happen.
+
+1230
+00:58:40.275 --> 00:58:43.565
+Once I have fed this batch, collective loss,
+
+1231
+00:58:43.685 --> 00:58:45.565
+I have calculated, okay?
+
+1232
+00:58:45.585 --> 00:58:48.725
+And then I can do the back propagation, batch wise, right?
+
+1233
+00:58:49.105 --> 00:58:51.765
+So, but when I'm pro feeding that one,
+
+1234
+00:58:52.095 --> 00:58:54.285
+every sentence in the five sentence,
+
+1235
+00:58:54.435 --> 00:58:56.765
+five rows may have slightly different length
+
+1236
+00:58:56.765 --> 00:58:57.805
+because it text data.
+
+1237
+00:58:58.345 --> 00:59:00.645
+In that case, padding is required.
+
+1238
+00:59:00.775 --> 00:59:02.525
+First sentence has only three words.
+
+1239
+00:59:02.665 --> 00:59:04.285
+Second sentence has five words.
+
+1240
+00:59:04.455 --> 00:59:06.125
+Third sentence has only two words.
+
+1241
+00:59:06.275 --> 00:59:07.645
+Four sentence has four words.
+
+1242
+00:59:08.065 --> 00:59:09.325
+Now, I have decided
+
+1243
+00:59:09.325 --> 00:59:12.605
+that I will put everything in a batch, right?
+
+1244
+00:59:12.745 --> 00:59:17.405
+So in in, in such cases, the padding might be required,
+
+1245
+00:59:18.375 --> 00:59:20.125
+might for that badge itself.
+
+1246
+00:59:20.505 --> 00:59:23.965
+For that badge, I can decide that, okay, I will, I will, uh,
+
+1247
+00:59:24.225 --> 00:59:26.645
+go up to five timestamp every time or,
+
+1248
+00:59:26.945 --> 00:59:28.725
+or something like that, right?
+
+1249
+00:59:28.875 --> 00:59:30.285
+I'll show you that maybe later,
+
+1250
+00:59:30.825 --> 00:59:34.125
+but here, I have not used, here I have not used, yeah.
+
+1251
+00:59:34.465 --> 00:59:37.525
+Search, uh, test for an example, let's say in a badge,
+
+1252
+00:59:37.615 --> 00:59:38.765
+there are five words.
+
+1253
+00:59:38.835 --> 00:59:42.645
+Correct. And then, uh, all the four words have like two
+
+1254
+00:59:42.665 --> 00:59:44.085
+to two to three letters,
+
+1255
+00:59:44.345 --> 00:59:47.245
+and other words have like 10 or 15 letters.
+
+1256
+00:59:47.385 --> 00:59:50.925
+10, correct? Correct. Then if padding is done, uh,
+
+1257
+00:59:51.705 --> 00:59:53.765
+we lose most of the information due
+
+1258
+00:59:53.765 --> 00:59:55.205
+to the zeros, right? Yeah.
+
+1259
+00:59:55.505 --> 00:59:57.485
+The padding always comes with the cost.
+
+1260
+00:59:58.205 --> 01:00:00.485
+I understand that one, it always comes with the cost.
+
+1261
+01:00:00.585 --> 01:00:04.165
+So with the RNA, it is not preferable. Uh Right.
+
+1262
+01:00:04.305 --> 01:00:08.165
+But then if you have very high number of data points,
+
+1263
+01:00:08.165 --> 01:00:12.125
+like 50,000 and of every paragraph is very long,
+
+1264
+01:00:12.745 --> 01:00:15.405
+and if you have the certain resource limit,
+
+1265
+01:00:15.425 --> 01:00:18.165
+and all we do that when, although it is not preferable.
+
+1266
+01:00:18.495 --> 01:00:20.125
+Right. Okay. In the case of the context.
+
+1267
+01:00:21.835 --> 01:00:24.765
+Okay, sir? Uh, do we have any optimization, uh,
+
+1268
+01:00:25.135 --> 01:00:26.165
+cases there, sir?
+
+1269
+01:00:27.025 --> 01:00:28.965
+Uh, optimization in the sense
+
+1270
+01:00:28.965 --> 01:00:31.245
+that the best case is you don't use any padding.
+
+1271
+01:00:31.245 --> 01:00:33.045
+You process each and every text separately.
+
+1272
+01:00:33.155 --> 01:00:35.365
+That is what I have done here in this
+
+1273
+01:00:35.365 --> 01:00:36.645
+particular notebook at least.
+
+1274
+01:00:37.155 --> 01:00:40.885
+Okay. Okay. But then if you want to compromise
+
+1275
+01:00:40.885 --> 01:00:42.525
+with the performance,
+
+1276
+01:00:42.525 --> 01:00:44.605
+because performance will go down as soon,
+
+1277
+01:00:44.605 --> 01:00:46.765
+you'll start using the padding and all. Yeah,
+
+1278
+01:00:47.215 --> 01:00:48.215
+Understood, sir? Yeah.
+
+1279
+01:00:48.215 --> 01:00:49.195
+Thank you.
+
+1280
+01:00:51.265 --> 01:00:55.685
+Excuse Me, sir. Uh, the one, one hot vector,
+
+1281
+01:00:56.695 --> 01:00:57.765
+where can I find this?
+
+1282
+01:00:58.005 --> 01:00:59.405
+I, I'll, I'll, I'll, I'll explain.
+
+1283
+01:00:59.755 --> 01:01:02.605
+Once I'll go to the model part. I'll explain you that. Okay.
+
+1284
+01:01:02.875 --> 01:01:04.445
+Okay. I'm still preparing the data.
+
+1285
+01:01:04.625 --> 01:01:07.925
+So what will happen, these indices, what I, when I have
+
+1286
+01:01:07.925 --> 01:01:09.645
+to suppose in this sentence,
+
+1287
+01:01:09.745 --> 01:01:12.925
+how many times stamp will be created, whatever is the length
+
+1288
+01:01:12.945 --> 01:01:13.365
+of this
+
+1289
+01:01:13.365 --> 01:01:18.365
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 19.
+
+1290
+01:01:19.385 --> 01:01:24.165
+So 19 timestamp. So every, these are all the words, right?
+
+1291
+01:01:24.305 --> 01:01:26.165
+All these are, the word will will be fed
+
+1292
+01:01:26.165 --> 01:01:27.805
+to the RNN one by one.
+
+1293
+01:01:28.275 --> 01:01:31.125
+Once I'll process one, then I'll process 1 26,
+
+1294
+01:01:31.275 --> 01:01:33.605
+then I'll process 12, then I'll process 16
+
+1295
+01:01:33.605 --> 01:01:36.205
+and so on how the one will be represented.
+
+1296
+01:01:36.625 --> 01:01:39.525
+One will be first represented as a vector,
+
+1297
+01:01:39.525 --> 01:01:42.925
+which is one hot vector, which is a length vocabulary size.
+
+1298
+01:01:43.585 --> 01:01:45.725
+And that will, will pass it to the embedding layer
+
+1299
+01:01:46.385 --> 01:01:50.445
+to further, uh, make it, uh, like dense vector.
+
+1300
+01:01:50.915 --> 01:01:53.005
+Okay? And then we will feed it to the recurrent.
+
+1301
+01:01:53.245 --> 01:01:56.605
+I, I'll explain you that when I'll go to the model part.
+
+1302
+01:01:56.755 --> 01:01:57.755
+Yeah.
+
+1303
+01:01:58.935 --> 01:02:02.585
+Okay. Yeah. Uh, you have taken, um, token
+
+1304
+01:02:02.805 --> 01:02:04.025
+as as words, right?
+
+1305
+01:02:04.325 --> 01:02:07.705
+So I'm just wondering how the Symantec, uh, Symantec aspect
+
+1306
+01:02:07.705 --> 01:02:11.915
+of all these words will come into picture, like the meaning
+
+1307
+01:02:11.915 --> 01:02:13.315
+of one of the other reviewers.
+
+1308
+01:02:13.535 --> 01:02:14.955
+How would the machine would know?
+
+1309
+01:02:15.145 --> 01:02:17.435
+What is the semantic of this sentence?
+
+1310
+01:02:17.975 --> 01:02:20.805
+Uh, so there are two ways in which you can, uh, first
+
+1311
+01:02:20.805 --> 01:02:23.325
+of all, RNN network, what we are going to build,
+
+1312
+01:02:24.335 --> 01:02:26.125
+it'll make the context
+
+1313
+01:02:26.155 --> 01:02:27.845
+because we are going to feed each
+
+1314
+01:02:27.865 --> 01:02:30.085
+of these word one after other.
+
+1315
+01:02:30.755 --> 01:02:32.405
+They will not be processed parallelly
+
+1316
+01:02:32.405 --> 01:02:34.245
+as it happens in the a NN, okay?
+
+1317
+01:02:34.785 --> 01:02:38.245
+So because the RNN is meant
+
+1318
+01:02:38.305 --> 01:02:40.765
+to understand the context, it'll understand.
+
+1319
+01:02:40.885 --> 01:02:44.285
+Secondly, we'll have the embedding layer, embedding layer.
+
+1320
+01:02:44.385 --> 01:02:48.445
+Before giving these word to the RNN,
+
+1321
+01:02:48.605 --> 01:02:50.245
+I will pass it through the embedding layer.
+
+1322
+01:02:50.705 --> 01:02:53.845
+And if you're embedding weights are coming from those word
+
+1323
+01:02:53.865 --> 01:02:55.005
+to way or globe
+
+1324
+01:02:55.225 --> 01:02:57.805
+or fast text, which is already a pre-trained word
+
+1325
+01:02:57.805 --> 01:03:01.285
+embeddings, then maybe these words will have a vector,
+
+1326
+01:03:01.335 --> 01:03:04.205
+which has some semantic meaning in itself also.
+
+1327
+01:03:05.005 --> 01:03:08.735
+Okay? So these are the ways in which you can actually, uh,
+
+1328
+01:03:09.215 --> 01:03:12.175
+preserve the semantics of individual words by its own.
+
+1329
+01:03:12.515 --> 01:03:14.255
+And any way you are going to process one
+
+1330
+01:03:14.255 --> 01:03:16.655
+after another, each word, so they'll have some context of,
+
+1331
+01:03:16.655 --> 01:03:19.055
+so that is how we preserve the context overall.
+
+1332
+01:03:21.485 --> 01:03:22.485
+Make sense?
+
+1333
+01:03:23.125 --> 01:03:27.815
+Yeah. Yeah. One more thing, uh, just to outta curiosity.
+
+1334
+01:03:28.075 --> 01:03:31.215
+Yes. So let's say that sir, one of the practical application
+
+1335
+01:03:31.435 --> 01:03:36.135
+of this, uh, uh, kind of program or this kind of RA network.
+
+1336
+01:03:36.505 --> 01:03:38.615
+Let's assume that we have a PF of, uh,
+
+1337
+01:03:38.705 --> 01:03:39.935
+maybe a hundred pages.
+
+1338
+01:03:40.515 --> 01:03:43.295
+And it would have, each page would have maybe 25
+
+1339
+01:03:43.315 --> 01:03:44.455
+or 30 words.
+
+1340
+01:03:44.835 --> 01:03:46.775
+So can we create an application just
+
+1341
+01:03:46.775 --> 01:03:48.415
+to read all the contents?
+
+1342
+01:03:48.415 --> 01:03:49.735
+And maybe we can ask question
+
+1343
+01:03:49.735 --> 01:03:51.935
+and will the model will be able to answer that?
+
+1344
+01:03:53.595 --> 01:03:54.855
+Can we think of that perspective?
+
+1345
+01:03:56.355 --> 01:03:57.535
+You can. Okay.
+
+1346
+01:03:57.535 --> 01:04:01.135
+First of all, you have to convert the PDF in the form
+
+1347
+01:04:01.135 --> 01:04:02.615
+of the data, what we have.
+
+1348
+01:04:02.805 --> 01:04:06.135
+Okay? You can, you may decide that, suppose you have a book
+
+1349
+01:04:06.145 --> 01:04:08.295
+where you have a hundred pages, right?
+
+1350
+01:04:08.755 --> 01:04:13.175
+You can divide the book as a chapters, as a, as a data
+
+1351
+01:04:13.755 --> 01:04:15.335
+or inside the chapter.
+
+1352
+01:04:15.645 --> 01:04:17.575
+Also, you may have the paragraphs.
+
+1353
+01:04:17.635 --> 01:04:19.815
+So you can treat each paragraph as a rule,
+
+1354
+01:04:20.595 --> 01:04:22.375
+and then you can build the such things
+
+1355
+01:04:22.375 --> 01:04:23.775
+what you have asked, right?
+
+1356
+01:04:24.435 --> 01:04:26.175
+But, uh, with the RNs,
+
+1357
+01:04:26.175 --> 01:04:27.775
+those things would be little bit difficult.
+
+1358
+01:04:27.875 --> 01:04:29.295
+And for RNN,
+
+1359
+01:04:29.295 --> 01:04:33.255
+understanding those huge long context is difficult, okay?
+
+1360
+01:04:33.875 --> 01:04:35.295
+But you can build, having said that,
+
+1361
+01:04:35.755 --> 01:04:39.335
+you can always build such models with RNN as well, okay?
+
+1362
+01:04:39.355 --> 01:04:41.655
+But, uh, current technologies like rag
+
+1363
+01:04:41.655 --> 01:04:43.255
+and doll do those things a little better.
+
+1364
+01:04:43.795 --> 01:04:45.015
+That's the difference.
+
+1365
+01:04:46.195 --> 01:04:50.455
+So when it comes to, um, the, uh, text
+
+1366
+01:04:50.635 --> 01:04:54.295
+of the token overall, um mm-hmm.
+
+1367
+01:04:54.465 --> 01:04:58.015
+Input size, right? So for RNN it can be different, right?
+
+1368
+01:04:58.635 --> 01:05:00.095
+So, ah, correct.
+
+1369
+01:05:00.155 --> 01:05:03.015
+We, and we are not going to use padding to make
+
+1370
+01:05:03.015 --> 01:05:05.095
+It, we are not using that is what is the, uh,
+
+1371
+01:05:05.485 --> 01:05:08.255
+recommended in the RN padding is not required
+
+1372
+01:05:08.435 --> 01:05:10.415
+and you should not use it, okay?
+
+1373
+01:05:10.475 --> 01:05:11.535
+Uh uh. Right?
+
+1374
+01:05:12.055 --> 01:05:13.655
+Although you can always tweak your code,
+
+1375
+01:05:13.675 --> 01:05:15.535
+but then you should not use it otherwise.
+
+1376
+01:05:15.655 --> 01:05:17.405
+RNN, whatever it, it is meant
+
+1377
+01:05:17.545 --> 01:05:22.065
+for handling the variable length inputs. Yeah.
+
+1378
+01:05:22.415 --> 01:05:27.315
+Okay. So, um, even if your network size is going
+
+1379
+01:05:27.315 --> 01:05:31.875
+to be the size of the last, uh, the biggest sentence mm-hmm.
+
+1380
+01:05:32.905 --> 01:05:35.275
+That doesn't matter with the RNN doesn't matter
+
+1381
+01:05:35.275 --> 01:05:39.155
+because IRN works with the time it say that.
+
+1382
+01:05:39.155 --> 01:05:40.795
+Okay? I will simply see that how,
+
+1383
+01:05:40.825 --> 01:05:41.995
+because I'm not going
+
+1384
+01:05:41.995 --> 01:05:43.955
+to process all these words together anyway.
+
+1385
+01:05:44.225 --> 01:05:46.595
+I'll first process one, then I'll process off,
+
+1386
+01:05:46.985 --> 01:05:48.075
+then I'll process though.
+
+1387
+01:05:48.535 --> 01:05:51.795
+So I will go as long as the last token is not coming.
+
+1388
+01:05:52.615 --> 01:05:54.115
+So in, sometimes it may come
+
+1389
+01:05:54.115 --> 01:05:56.395
+after only five times stamp it sometime it may come
+
+1390
+01:05:56.395 --> 01:05:57.435
+after a hundred times stamp.
+
+1391
+01:05:57.435 --> 01:06:00.115
+Doesn't matter for, it'll process everything one by one.
+
+1392
+01:06:01.025 --> 01:06:03.565
+And anyway, the, uh, parameters are going
+
+1393
+01:06:03.565 --> 01:06:05.285
+to be shared across all the times stamp.
+
+1394
+01:06:05.305 --> 01:06:08.525
+So para parameter wise, also, it is not going to be explored
+
+1395
+01:06:08.635 --> 01:06:11.005
+because a hundred times stamps, if there doesn't mean
+
+1396
+01:06:11.005 --> 01:06:13.245
+that a hundred times more parameter will be there.
+
+1397
+01:06:13.865 --> 01:06:16.005
+So that is also not the case, right?
+
+1398
+01:06:16.275 --> 01:06:19.325
+Only problem would be if the sentence length would be very
+
+1399
+01:06:19.395 --> 01:06:20.845
+long, we'll see that later.
+
+1400
+01:06:20.935 --> 01:06:25.325
+First of all, it may lose, uh, uh, the context.
+
+1401
+01:06:25.405 --> 01:06:28.045
+Secondly, it'll be slow in process
+
+1402
+01:06:28.045 --> 01:06:29.525
+because it has to process a hundred
+
+1403
+01:06:29.525 --> 01:06:31.565
+words compared to 500 words.
+
+1404
+01:06:31.725 --> 01:06:34.685
+Obviously, one by one, five times more.
+
+1405
+01:06:34.735 --> 01:06:38.285
+It'll take time if it is a 500 words as compared
+
+1406
+01:06:38.285 --> 01:06:39.365
+to a hundred words like that.
+
+1407
+01:06:39.865 --> 01:06:43.365
+So it is a slow process as compared to the ENN. Yeah.
+
+1408
+01:06:45.845 --> 01:06:47.745
+So in a NN for example, if, if, uh,
+
+1409
+01:06:47.745 --> 01:06:49.905
+there are different sentences with different links,
+
+1410
+01:06:49.905 --> 01:06:51.145
+we pad them Yeah.
+
+1411
+01:06:51.285 --> 01:06:53.745
+And take the maximum and the, uh,
+
+1412
+01:06:54.095 --> 01:06:55.705
+that will be the size of our input.
+
+1413
+01:06:56.135 --> 01:06:58.545
+That will, the size of the Input we feed there.
+
+1414
+01:06:58.545 --> 01:07:00.305
+Also, we feed sentence by sentence.
+
+1415
+01:07:00.885 --> 01:07:04.225
+But here, uh, even if you feed sentence,
+
+1416
+01:07:04.275 --> 01:07:06.145
+it'll be processing word by word.
+
+1417
+01:07:06.215 --> 01:07:08.265
+Word by word, correct? Correct.
+
+1418
+01:07:08.925 --> 01:07:11.145
+So that there their bits, it's gonna be slower.
+
+1419
+01:07:11.685 --> 01:07:13.225
+Yes. Yes. Okay.
+
+1420
+01:07:14.525 --> 01:07:19.425
+Sir. Sir, these indic from X, can we treat these as X,
+
+1421
+01:07:19.445 --> 01:07:21.385
+not X one, X two, or as per E?
+
+1422
+01:07:21.605 --> 01:07:23.265
+Oh, exactly. Yes, yes, yes.
+
+1423
+01:07:23.455 --> 01:07:26.465
+This is the X, no, X one, X two in the architecture,
+
+1424
+01:07:26.465 --> 01:07:28.225
+which we are visual utilizing. Yes. Yes.
+
+1425
+01:07:29.015 --> 01:07:31.745
+What would be u and uh, W server?
+
+1426
+01:07:32.165 --> 01:07:34.425
+Uh, UNW is a connection. Weights.
+
+1427
+01:07:34.565 --> 01:07:37.665
+So suppose now each of these x, no,
+
+1428
+01:07:37.785 --> 01:07:39.185
+X one will be represented
+
+1429
+01:07:39.245 --> 01:07:41.185
+as a vector, one hot vector, right? Okay.
+
+1430
+01:07:41.375 --> 01:07:45.025
+Okay, then. So one hot vector size, suppose it is 1000.
+
+1431
+01:07:45.085 --> 01:07:48.545
+So 1000 into whatever neurons it is connecting.
+
+1432
+01:07:48.685 --> 01:07:50.805
+So that is you. That is you.
+
+1433
+01:07:50.945 --> 01:07:53.685
+And similarly, those neurons are connected
+
+1434
+01:07:53.685 --> 01:07:55.205
+with the next hidden layer neurons.
+
+1435
+01:07:55.205 --> 01:07:57.485
+So suppose there are three neurons in the hidden layer,
+
+1436
+01:07:57.785 --> 01:07:59.285
+the three into three, nine connections.
+
+1437
+01:07:59.625 --> 01:08:02.085
+So those connections, UNW depends on your
+
+1438
+01:08:02.265 --> 01:08:04.365
+how many neurons you are keeping in the hidden layer.
+
+1439
+01:08:05.585 --> 01:08:08.215
+Yes. Okay.
+
+1440
+01:08:08.915 --> 01:08:11.695
+So one question here. Yeah. Uh, can you go a little up?
+
+1441
+01:08:11.695 --> 01:08:15.205
+Yeah. Here, uh, you'll with the apostrophes there,
+
+1442
+01:08:15.345 --> 01:08:17.285
+but then it should come as unknown, right?
+
+1443
+01:08:17.545 --> 01:08:20.125
+But we have it as one 90 index.
+
+1444
+01:08:21.385 --> 01:08:24.415
+Uh, uh, you,
+
+1445
+01:08:25.335 --> 01:08:27.615
+'cause we tokenized it before to remove it,
+
+1446
+01:08:27.615 --> 01:08:28.615
+Right? So you can, you can
+
+1447
+01:08:28.615 --> 01:08:29.095
+actually check,
+
+1448
+01:08:29.535 --> 01:08:30.695
+actually you can check here.
+
+1449
+01:08:31.155 --> 01:08:35.975
+So I will put why, oh, you, U, l, L.
+
+1450
+01:08:36.285 --> 01:08:39.655
+Okay. You can see that it is one 90 there in my vocab.
+
+1451
+01:08:41.905 --> 01:08:43.165
+Uh, why? Because
+
+1452
+01:08:43.645 --> 01:08:45.845
+I have first applied the tokenization
+
+1453
+01:08:46.705 --> 01:08:50.285
+and tokenization itself might have removed this, uh,
+
+1454
+01:08:50.935 --> 01:08:52.525
+apostrophe, okay?
+
+1455
+01:08:52.995 --> 01:08:55.125
+This particular, uh, symbol.
+
+1456
+01:08:55.825 --> 01:08:57.485
+And then it might have become like this.
+
+1457
+01:08:57.485 --> 01:08:59.965
+This is what has happened here. We have seen it right here.
+
+1458
+01:09:00.185 --> 01:09:01.445
+Oh, yeah, yeah. Understood, sir.
+
+1459
+01:09:01.565 --> 01:09:03.605
+I didn't, uh, see that you have used the
+
+1460
+01:09:04.205 --> 01:09:06.085
+function over there in the, here, here.
+
+1461
+01:09:06.085 --> 01:09:07.165
+Context. Yeah.
+
+1462
+01:09:07.635 --> 01:09:09.605
+Here, token. Nice. Yeah, understood, sir.
+
+1463
+01:09:10.035 --> 01:09:11.035
+Yeah, thank you.
+
+1464
+01:09:13.785 --> 01:09:16.475
+Okay. Now, so far, only it,
+
+1465
+01:09:16.535 --> 01:09:18.315
+it was only about the pre-processing.
+
+1466
+01:09:18.455 --> 01:09:21.235
+Now we will go with our pythons usual things.
+
+1467
+01:09:21.235 --> 01:09:22.555
+What we do, first of all,
+
+1468
+01:09:23.255 --> 01:09:25.875
+we always build our custom dataset class,
+
+1469
+01:09:25.935 --> 01:09:27.395
+if you can recall now, right?
+
+1470
+01:09:27.395 --> 01:09:31.955
+Which is inheriting the dataset class, our dataset, uh,
+
+1471
+01:09:32.245 --> 01:09:35.515
+right, uh, class from the PyTorch built in.
+
+1472
+01:09:35.695 --> 01:09:37.395
+And then here we have a constructor.
+
+1473
+01:09:37.695 --> 01:09:39.035
+We have the length function.
+
+1474
+01:09:39.135 --> 01:09:41.635
+We have, so in the data, uh, custom dataset class,
+
+1475
+01:09:41.635 --> 01:09:43.275
+we always define these three function.
+
+1476
+01:09:43.345 --> 01:09:45.595
+Constructor will automatically get executed
+
+1477
+01:09:46.035 --> 01:09:48.875
+whenever we'll create the object of this particular class.
+
+1478
+01:09:48.875 --> 01:09:50.035
+Custom data set class,
+
+1479
+01:09:50.695 --> 01:09:54.315
+and while execution, what I wanted to understand,
+
+1480
+01:09:54.505 --> 01:09:58.955
+what is the input, uh, and MR data frame,
+
+1481
+01:09:59.535 --> 01:10:01.755
+and what is the vocabulary size?
+
+1482
+01:10:02.065 --> 01:10:04.235
+What is the vocab, which I'm going to use, right?
+
+1483
+01:10:05.175 --> 01:10:07.115
+Uh, only thing is here you will see one more.
+
+1484
+01:10:07.375 --> 01:10:09.275
+So DF is my data frame, right?
+
+1485
+01:10:09.325 --> 01:10:11.355
+Where I have the two columns, input
+
+1486
+01:10:11.415 --> 01:10:13.275
+as review, as, and the label.
+
+1487
+01:10:13.575 --> 01:10:17.155
+So that is the df vocab is my vocabulary only thing.
+
+1488
+01:10:17.155 --> 01:10:19.235
+This is different dot reset index. Why?
+
+1489
+01:10:19.235 --> 01:10:23.875
+I am saying, because df, when I selected here, uh, df,
+
+1490
+01:10:23.875 --> 01:10:25.275
+when I selected here,
+
+1491
+01:10:25.785 --> 01:10:28.835
+that was selected randomly 5,000 sample.
+
+1492
+01:10:29.655 --> 01:10:32.235
+So if you will see the df, how does it look like?
+
+1493
+01:10:32.575 --> 01:10:34.555
+It is something like this.
+
+1494
+01:10:35.095 --> 01:10:38.555
+You see, the indices, indices are not 0, 1, 2, 3, 4,
+
+1495
+01:10:38.555 --> 01:10:41.035
+because randomly I have selected 5,000 data,
+
+1496
+01:10:41.295 --> 01:10:44.115
+and these are the rows which it had picked randomly.
+
+1497
+01:10:44.975 --> 01:10:45.995
+So what I'm doing,
+
+1498
+01:10:46.185 --> 01:10:48.155
+because I need to process it later,
+
+1499
+01:10:48.305 --> 01:10:50.675
+what I'm doing here is I'm just think
+
+1500
+01:10:51.245 --> 01:10:54.065
+reset the index, okay?
+
+1501
+01:10:54.285 --> 01:10:56.585
+And drop is equal to true. What does it mean?
+
+1502
+01:10:56.615 --> 01:10:57.745
+Drop is equal to true.
+
+1503
+01:10:58.135 --> 01:10:59.705
+That here, right now, you can see
+
+1504
+01:10:59.705 --> 01:11:02.625
+that the first column is the index column, which is not part
+
+1505
+01:11:02.625 --> 01:11:06.705
+of my data, but if you don't, uh, uh,
+
+1506
+01:11:07.185 --> 01:11:08.545
+I just want to drop this one.
+
+1507
+01:11:08.905 --> 01:11:10.705
+I am creating anywhere the new index.
+
+1508
+01:11:10.775 --> 01:11:12.345
+This is the 0 1 2,
+
+1509
+01:11:12.805 --> 01:11:15.165
+and these are the actual reference
+
+1510
+01:11:15.225 --> 01:11:16.965
+to my data, which I don't want.
+
+1511
+01:11:16.985 --> 01:11:18.725
+So I'm just dropping this column.
+
+1512
+01:11:18.925 --> 01:11:21.845
+I don't want, otherwise what will happen, this will also act
+
+1513
+01:11:21.845 --> 01:11:24.765
+as one of the column in my data, which I don't want,
+
+1514
+01:11:24.765 --> 01:11:26.005
+because this is just an index number.
+
+1515
+01:11:26.465 --> 01:11:28.805
+And that is what it is happening in this particular line.
+
+1516
+01:11:28.915 --> 01:11:31.845
+When I say reset, uh, index.
+
+1517
+01:11:32.345 --> 01:11:35.925
+So in fact, what you can do is if you really want
+
+1518
+01:11:35.925 --> 01:11:38.765
+to check once again, so you can
+
+1519
+01:11:39.345 --> 01:11:40.925
+do these things, right, one by one.
+
+1520
+01:11:41.305 --> 01:11:45.565
+So I can do this one, I can simply write this one.
+
+1521
+01:11:45.565 --> 01:11:46.645
+You see this what has happened?
+
+1522
+01:11:46.715 --> 01:11:50.245
+Same data, but this column index, original index,
+
+1523
+01:11:50.455 --> 01:11:53.405
+where it is dropped, new index is created starting with zero
+
+1524
+01:11:53.425 --> 01:11:54.525
+to 4,900.
+
+1525
+01:11:54.525 --> 01:11:58.955
+This is what I'm doing in that particular line, okay?
+
+1526
+01:11:59.975 --> 01:12:03.345
+Now, once it is done, so I'm telling that
+
+1527
+01:12:03.705 --> 01:12:07.725
+whenever the, uh, object will be created, just do this,
+
+1528
+01:12:08.045 --> 01:12:09.565
+construc execution will be executed.
+
+1529
+01:12:09.635 --> 01:12:11.485
+Then count that, okay?
+
+1530
+01:12:11.485 --> 01:12:13.405
+How many data points we have with the length function.
+
+1531
+01:12:13.405 --> 01:12:15.405
+This is the same what we have discussed earlier also.
+
+1532
+01:12:15.865 --> 01:12:19.405
+Now, finally, I just have to select the items
+
+1533
+01:12:20.185 --> 01:12:21.925
+for the train and test, right?
+
+1534
+01:12:22.305 --> 01:12:23.365
+Uh, not train and test.
+
+1535
+01:12:23.385 --> 01:12:26.125
+In fact, uh, the, the, in the data loader class,
+
+1536
+01:12:26.445 --> 01:12:28.525
+whenever it will ask that, okay, give me these data.
+
+1537
+01:12:28.835 --> 01:12:31.045
+Then this get item function will be called
+
+1538
+01:12:31.755 --> 01:12:33.405
+what this get item function will do.
+
+1539
+01:12:33.495 --> 01:12:38.085
+It'll convert text two indices, this one every row,
+
+1540
+01:12:38.085 --> 01:12:40.725
+which is going for the trained data, trained data
+
+1541
+01:12:40.725 --> 01:12:42.485
+and test data, right?
+
+1542
+01:12:42.695 --> 01:12:44.725
+It'll, it'll get the sentence like this.
+
+1543
+01:12:45.215 --> 01:12:47.805
+It'll convert it into this particular list,
+
+1544
+01:12:47.805 --> 01:12:49.205
+which is a list of indices.
+
+1545
+01:12:49.205 --> 01:12:52.925
+So you can see here, review will be, uh, if we are calling
+
+1546
+01:12:52.925 --> 01:12:54.405
+that function, text two indices.
+
+1547
+01:12:55.025 --> 01:12:58.725
+And what we are doing from the data frame, these locations,
+
+1548
+01:12:58.935 --> 01:13:01.645
+index number will, will be given by the data loader class.
+
+1549
+01:13:02.465 --> 01:13:04.405
+I'm just stretching the review.
+
+1550
+01:13:04.625 --> 01:13:06.285
+I'm switching those, those rows.
+
+1551
+01:13:06.465 --> 01:13:09.325
+Uh, and then the vocabulary, corresponding vocabulary.
+
+1552
+01:13:09.325 --> 01:13:11.565
+So that text two indicis function can be worked
+
+1553
+01:13:11.565 --> 01:13:14.365
+because text two indicis function works two parameter.
+
+1554
+01:13:14.365 --> 01:13:17.165
+First one is the, uh, review.
+
+1555
+01:13:17.165 --> 01:13:20.205
+Second one is the vocab, and that is both I'm giving here.
+
+1556
+01:13:20.665 --> 01:13:23.845
+And similarly, the corresponding labels are also being faced
+
+1557
+01:13:23.865 --> 01:13:25.005
+for that particular index.
+
+1558
+01:13:25.265 --> 01:13:29.245
+So that is what happens. It is just a get item function,
+
+1559
+01:13:29.245 --> 01:13:30.285
+which we have discussed earlier.
+
+1560
+01:13:30.505 --> 01:13:32.405
+So finally, whatever review
+
+1561
+01:13:32.405 --> 01:13:35.765
+and labels will be fetched returning in the form of tensors,
+
+1562
+01:13:35.765 --> 01:13:39.445
+because the PyTorch models will always accept the tens
+
+1563
+01:13:39.445 --> 01:13:40.885
+tensor type data.
+
+1564
+01:13:41.985 --> 01:13:46.205
+That's all. Then I'm just creating one, uh, uh, object
+
+1565
+01:13:46.205 --> 01:13:48.845
+of this particular class, custom class IMDB dataset
+
+1566
+01:13:48.845 --> 01:13:51.685
+by passing my train under DF and vocab.
+
+1567
+01:13:52.115 --> 01:13:57.045
+What is train under DF here? I had done strain test split.
+
+1568
+01:13:57.065 --> 01:13:59.685
+I'm using the strain under df, okay?
+
+1569
+01:14:00.225 --> 01:14:04.165
+And corresponding, uh, uh, corresponding vocab.
+
+1570
+01:14:04.275 --> 01:14:05.325
+I'll feed to that.
+
+1571
+01:14:05.325 --> 01:14:07.005
+That is what, because, uh,
+
+1572
+01:14:07.185 --> 01:14:08.965
+my constructor requires only these two
+
+1573
+01:14:08.965 --> 01:14:10.245
+parameters other than self.
+
+1574
+01:14:10.555 --> 01:14:13.625
+Okay? So that is what I'm feeding here also. Okay?
+
+1575
+01:14:13.625 --> 01:14:16.545
+That is done. And then you can see that once I will, uh,
+
+1576
+01:14:16.795 --> 01:14:18.745
+print the train and the train, uh,
+
+1577
+01:14:19.055 --> 01:14:21.105
+dataset, the first dataset.
+
+1578
+01:14:21.295 --> 01:14:23.985
+Then it looks something like that. So it has two things.
+
+1579
+01:14:24.965 --> 01:14:28.145
+Uh, it has, it has the review, which is this one,
+
+1580
+01:14:28.885 --> 01:14:30.865
+and it has a label, which is this one.
+
+1581
+01:14:31.455 --> 01:14:33.825
+Okay? So this is how it'll be.
+
+1582
+01:14:34.165 --> 01:14:39.045
+And, uh, you can also, I guess, uh,
+
+1583
+01:14:39.045 --> 01:14:40.605
+shape function doesn't work here.
+
+1584
+01:14:40.665 --> 01:14:42.685
+So you can simply print this, okay?
+
+1585
+01:14:42.685 --> 01:14:45.645
+This is just an object, so you can change this
+
+1586
+01:14:45.745 --> 01:14:47.725
+and see for every case it'll different.
+
+1587
+01:14:47.725 --> 01:14:50.245
+This is the review length, okay?
+
+1588
+01:14:50.825 --> 01:14:53.645
+And, uh, this is the, uh, label.
+
+1589
+01:14:53.655 --> 01:14:56.255
+Label is either zero or one. Okay?
+
+1590
+01:14:56.255 --> 01:14:57.535
+So my trained data set is ready.
+
+1591
+01:14:58.975 --> 01:15:02.035
+Now I'm creating the data loader class, trained data set.
+
+1592
+01:15:02.065 --> 01:15:04.875
+I'll feed, okay, batch size.
+
+1593
+01:15:04.935 --> 01:15:07.835
+As I said, I will feed one by one. I want two.
+
+1594
+01:15:08.455 --> 01:15:10.955
+Uh, I don't want to feed in the batch, uh,
+
+1595
+01:15:11.565 --> 01:15:12.675
+which I'll show you later.
+
+1596
+01:15:12.745 --> 01:15:14.515
+Then I will have to use the paddock,
+
+1597
+01:15:14.515 --> 01:15:15.755
+which I'll show you later, but
+
+1598
+01:15:15.755 --> 01:15:17.595
+that will have its own limitations.
+
+1599
+01:15:18.335 --> 01:15:20.555
+So then I'm just creating the data loader class.
+
+1600
+01:15:20.575 --> 01:15:22.035
+By feeding the trained data set
+
+1601
+01:15:22.415 --> 01:15:27.115
+and batch, it'll fetch all the data from the, from the, uh,
+
+1602
+01:15:27.865 --> 01:15:30.515
+data frame, and it'll create the data loaded.
+
+1603
+01:15:30.985 --> 01:15:33.955
+Okay? That's all. Once it is, it, it's done that,
+
+1604
+01:15:33.955 --> 01:15:36.715
+then you can actually see that how my data set has come.
+
+1605
+01:15:37.295 --> 01:15:40.995
+Uh, here, the best size is one, so you can actually, sorry.
+
+1606
+01:15:42.155 --> 01:15:44.495
+Oh, you can actually see the data here.
+
+1607
+01:15:44.755 --> 01:15:49.335
+Uh, uh, here what I'm doing is creating 1 1 4 loop.
+
+1608
+01:15:49.875 --> 01:15:53.335
+And for each batch here anyway, in each batch,
+
+1609
+01:15:53.335 --> 01:15:54.495
+only one data, it is there
+
+1610
+01:15:54.495 --> 01:15:56.415
+that I have defined here, badge is equal to one.
+
+1611
+01:15:57.115 --> 01:16:00.415
+But what it is showing, what is the review?
+
+1612
+01:16:01.045 --> 01:16:04.615
+This is the review tensor and what is its label, okay?
+
+1613
+01:16:04.725 --> 01:16:06.095
+What, what is its review
+
+1614
+01:16:06.095 --> 01:16:08.975
+and what is, uh, it's, it's, uh, shape also.
+
+1615
+01:16:09.595 --> 01:16:12.615
+So review shape, it is printing that.
+
+1616
+01:16:12.725 --> 01:16:17.455
+This particular review has 61 words. 61 words.
+
+1617
+01:16:17.455 --> 01:16:20.615
+So what will the time stamp in which it'll go 61 times X
+
+1618
+01:16:20.615 --> 01:16:23.015
+amount, X one, the next two, the next three,
+
+1619
+01:16:23.035 --> 01:16:24.735
+the next four goes up to 61.
+
+1620
+01:16:25.155 --> 01:16:27.535
+So that is how it'll go. The times stamp is this one.
+
+1621
+01:16:27.595 --> 01:16:31.855
+So it's size is one cross, one cross, 61.
+
+1622
+01:16:32.195 --> 01:16:34.815
+One is the batch size one.
+
+1623
+01:16:35.315 --> 01:16:39.415
+It, uh, uh, one cross 61 that it is a single, single
+
+1624
+01:16:39.975 --> 01:16:43.595
+sentence having the 61 timestamp, okay?
+
+1625
+01:16:43.615 --> 01:16:46.115
+One cross 61. It is this, this one is showing
+
+1626
+01:16:46.185 --> 01:16:47.355
+that what is its label.
+
+1627
+01:16:47.425 --> 01:16:49.435
+Similarly, you can see the second batch.
+
+1628
+01:16:49.545 --> 01:16:54.115
+Here it is even bigger. 3 91 words. It has 3 91 words.
+
+1629
+01:16:54.115 --> 01:16:56.395
+It has label is zero, which is, uh, I guess negative.
+
+1630
+01:16:57.015 --> 01:17:00.275
+So here, 1 73 words.
+
+1631
+01:17:00.295 --> 01:17:03.275
+It has, likewise, you will have every, uh, review
+
+1632
+01:17:03.295 --> 01:17:04.915
+of vari variable length.
+
+1633
+01:17:05.225 --> 01:17:08.555
+Okay? This is how my data looks like after dataset
+
+1634
+01:17:08.655 --> 01:17:11.045
+and dataset loader class, what we have created.
+
+1635
+01:17:11.625 --> 01:17:13.685
+Now, it's time for the model itself.
+
+1636
+01:17:14.075 --> 01:17:16.725
+This is the model, simple RNN model, what
+
+1637
+01:17:16.725 --> 01:17:19.885
+that is the name which we are giving for our custom model,
+
+1638
+01:17:19.935 --> 01:17:23.765
+which will inherit from our NN dot module, uh, class,
+
+1639
+01:17:23.855 --> 01:17:25.925
+which we have already imported up, okay?
+
+1640
+01:17:26.345 --> 01:17:28.165
+And then we have the constructor here,
+
+1641
+01:17:28.225 --> 01:17:29.565
+and we have the forward pass.
+
+1642
+01:17:29.855 --> 01:17:32.205
+These two are the things which we usually do here.
+
+1643
+01:17:32.395 --> 01:17:35.245
+Someone asked, okay, where we represent it
+
+1644
+01:17:35.245 --> 01:17:36.245
+as one hot vector.
+
+1645
+01:17:36.905 --> 01:17:40.925
+So this particular, uh, line, so you see
+
+1646
+01:17:40.925 --> 01:17:43.325
+that this is a constructor, and here this line is calling
+
+1647
+01:17:43.345 --> 01:17:47.725
+the parent class constructor to inherit all the properties
+
+1648
+01:17:47.725 --> 01:17:49.565
+of the parent class neural network.
+
+1649
+01:17:49.575 --> 01:17:53.285
+Right? Now, here we have the actual code, these three lines.
+
+1650
+01:17:53.285 --> 01:17:57.085
+First line is an embedding layer, second line is an layer,
+
+1651
+01:17:58.035 --> 01:18:00.735
+and third line is my linear layer, fully connected layer.
+
+1652
+01:18:01.465 --> 01:18:04.515
+Okay? Third, there are three layers you can imagine.
+
+1653
+01:18:05.215 --> 01:18:08.595
+You can imagine here. So embedding layer, if you see
+
+1654
+01:18:09.225 --> 01:18:12.075
+what is the input dimension, vocab size.
+
+1655
+01:18:12.535 --> 01:18:13.915
+Now, what is the meaning of it?
+
+1656
+01:18:14.055 --> 01:18:16.555
+It means that every token here,
+
+1657
+01:18:16.555 --> 01:18:19.675
+these are all the first token in this second x, no, X one,
+
+1658
+01:18:19.795 --> 01:18:24.355
+X two, like 4, 2, 5, 3 will be represented in the vocab size
+
+1659
+01:18:24.495 --> 01:18:26.635
+vector as one heart vector.
+
+1660
+01:18:27.255 --> 01:18:29.715
+Now, that is by default, the embedding layer, if you will go
+
+1661
+01:18:29.715 --> 01:18:34.435
+and explore and, uh, in pies, uh, it, it works like
+
+1662
+01:18:34.435 --> 01:18:35.435
+that only, right?
+
+1663
+01:18:35.895 --> 01:18:37.635
+So it'll take every token
+
+1664
+01:18:38.385 --> 01:18:41.725
+and it'll represent it in the vocab size dimension.
+
+1665
+01:18:41.935 --> 01:18:45.805
+Vocab size dimension is equivalent to, I guess 75,000
+
+1666
+01:18:45.805 --> 01:18:47.365
+what we have seen up, okay?
+
+1667
+01:18:47.365 --> 01:18:50.005
+Here, cap size, we have already defined somewhere,
+
+1668
+01:18:50.725 --> 01:18:53.765
+I guess vab size was 75,509.
+
+1669
+01:18:54.275 --> 01:18:56.845
+When every index will be represented by the,
+
+1670
+01:18:56.845 --> 01:18:57.965
+this index will be high risk.
+
+1671
+01:18:58.025 --> 01:19:00.845
+All index will be zero. That is what the meaning of it.
+
+1672
+01:19:01.755 --> 01:19:05.125
+Okay? And then this, this input dimension,
+
+1673
+01:19:05.655 --> 01:19:09.085
+it'll convert it into the hundred dimension output.
+
+1674
+01:19:09.105 --> 01:19:10.805
+That's all that in the embedding layer,
+
+1675
+01:19:10.865 --> 01:19:12.685
+you will have a hundred neurons.
+
+1676
+01:19:12.835 --> 01:19:13.645
+It's a neural network.
+
+1677
+01:19:13.645 --> 01:19:15.125
+Embedding layer is also neural network.
+
+1678
+01:19:15.715 --> 01:19:18.685
+Your a hundred neurons, so 75,000 dimensional,
+
+1679
+01:19:18.745 --> 01:19:20.565
+one hot vector will be converted
+
+1680
+01:19:20.665 --> 01:19:22.445
+as a hundred dimensional dense vector.
+
+1681
+01:19:23.115 --> 01:19:26.625
+That is the work of this embedding layer. Okay?
+
+1682
+01:19:26.625 --> 01:19:29.465
+That is the work. So it automatically converts your each
+
+1683
+01:19:29.555 --> 01:19:33.185
+token as that vab size dimension, okay?
+
+1684
+01:19:33.185 --> 01:19:34.865
+That is written in this particular function,
+
+1685
+01:19:34.865 --> 01:19:37.065
+which we are inheriting from an Indo module.
+
+1686
+01:19:37.965 --> 01:19:42.615
+Okay? And then my input becomes a hundred dimension output
+
+1687
+01:19:42.615 --> 01:19:44.295
+of this embedding layer is a hundred dimension,
+
+1688
+01:19:44.295 --> 01:19:45.895
+which is the input of the RNN,
+
+1689
+01:19:46.305 --> 01:19:47.975
+which is the input of the RNN.
+
+1690
+01:19:48.675 --> 01:19:51.055
+Now, this is the RNN layer, okay?
+
+1691
+01:19:51.495 --> 01:19:53.055
+RNN layer a hundred dimension.
+
+1692
+01:19:53.555 --> 01:19:57.295
+So a hundred is an input that each token is represented
+
+1693
+01:19:57.435 --> 01:19:59.535
+as a hundred dimension input.
+
+1694
+01:20:00.065 --> 01:20:03.575
+It'll go to the, uh, hidden layer. In the hidden layer.
+
+1695
+01:20:03.595 --> 01:20:05.815
+How many neurons? We have 64 neurons.
+
+1696
+01:20:06.235 --> 01:20:07.685
+So now you can imagine, right?
+
+1697
+01:20:07.795 --> 01:20:10.605
+I'll just go back and show you what I'm trying to see here.
+
+1698
+01:20:13.035 --> 01:20:14.405
+Here you just see this.
+
+1699
+01:20:14.655 --> 01:20:17.165
+Maybe it'll give you a little more clarity.
+
+1700
+01:20:18.385 --> 01:20:21.765
+So what I'm trying to say is here, uh,
+
+1701
+01:20:21.835 --> 01:20:24.765
+here we have a hundred, like x node is represented here
+
+1702
+01:20:24.865 --> 01:20:27.405
+by four in this particular network.
+
+1703
+01:20:27.645 --> 01:20:29.845
+I have here a hundred. How we have got a
+
+1704
+01:20:29.845 --> 01:20:30.925
+hundred from the embedding layer.
+
+1705
+01:20:31.185 --> 01:20:33.845
+Before embedding layer, it was a VAB size dimension,
+
+1706
+01:20:33.845 --> 01:20:35.205
+but we have reduced it to hundred.
+
+1707
+01:20:35.745 --> 01:20:39.805
+And now in this network, I have a hundred inputs here,
+
+1708
+01:20:39.925 --> 01:20:41.165
+X no is represented a hundred.
+
+1709
+01:20:41.165 --> 01:20:43.485
+Dimension x one will be also represented a hundred,
+
+1710
+01:20:43.545 --> 01:20:45.885
+and all the tokens will be represented a hundred.
+
+1711
+01:20:46.465 --> 01:20:49.365
+How many times it'll go, it depends on the length here,
+
+1712
+01:20:49.375 --> 01:20:50.725
+it'll go 1 73 times.
+
+1713
+01:20:50.785 --> 01:20:53.445
+In this review here, it'll go 3 91 times the time is
+
+1714
+01:20:53.445 --> 01:20:54.845
+stamped, okay?
+
+1715
+01:20:55.305 --> 01:20:58.125
+And we have, it is converting it to 64.
+
+1716
+01:20:58.125 --> 01:21:01.325
+What is the 64 means? This outputs instead of three.
+
+1717
+01:21:01.385 --> 01:21:03.165
+It is 64 neurons are there.
+
+1718
+01:21:03.195 --> 01:21:06.445
+Here also 64 neurons here, also 64 neuron.
+
+1719
+01:21:06.505 --> 01:21:09.165
+How many connection which will between these 2 64,
+
+1720
+01:21:09.165 --> 01:21:11.685
+across 64, these many weights will be used here,
+
+1721
+01:21:12.485 --> 01:21:14.005
+a hundred across 64.
+
+1722
+01:21:14.185 --> 01:21:17.565
+So 6,400 weights will be used in this input
+
+1723
+01:21:17.565 --> 01:21:19.005
+to hidden layer 64.
+
+1724
+01:21:19.005 --> 01:21:22.365
+Across 64 weights will be used between output
+
+1725
+01:21:22.365 --> 01:21:23.485
+to output connection,
+
+1726
+01:21:23.905 --> 01:21:25.805
+and this is the total number of parameter,
+
+1727
+01:21:25.805 --> 01:21:28.765
+and you can add few more neurons, 64 neurons here, that,
+
+1728
+01:21:28.765 --> 01:21:29.765
+that also you can add.
+
+1729
+01:21:30.955 --> 01:21:33.125
+Okay? So these are the parameter which is
+
+1730
+01:21:33.325 --> 01:21:34.485
+constant for the entire network.
+
+1731
+01:21:34.485 --> 01:21:36.605
+Doesn't matter what is the length of the input,
+
+1732
+01:21:37.155 --> 01:21:38.485
+because that is what you're going
+
+1733
+01:21:38.485 --> 01:21:40.045
+to share across all the time stamp.
+
+1734
+01:21:40.925 --> 01:21:44.535
+Okay? So this is a hundred and this is 64. Okay?
+
+1735
+01:21:44.995 --> 01:21:46.855
+Now, that is badge first. True.
+
+1736
+01:21:47.115 --> 01:21:50.775
+It means that usually what happen that, uh, uh,
+
+1737
+01:21:53.465 --> 01:21:57.805
+uh, it is represented as, uh, the badge is at the second,
+
+1738
+01:21:58.025 --> 01:21:59.325
+second position, okay?
+
+1739
+01:21:59.945 --> 01:22:04.525
+Uh, first you have, okay, here it is, it is showing badge,
+
+1740
+01:22:04.795 --> 01:22:07.845
+then timestamp, then it's dimension, right?
+
+1741
+01:22:08.345 --> 01:22:10.805
+So if I'll not do badge first, digital call
+
+1742
+01:22:10.805 --> 01:22:12.805
+to two badge will be here,
+
+1743
+01:22:13.345 --> 01:22:16.455
+and this is the timestamp, something like that.
+
+1744
+01:22:16.455 --> 01:22:18.575
+Or I guess badge will be at the last, something like that.
+
+1745
+01:22:18.985 --> 01:22:21.015
+Badge will be at the last, otherwise.
+
+1746
+01:22:21.795 --> 01:22:25.775
+So, but, uh, the RN accept in this particular way, first,
+
+1747
+01:22:25.865 --> 01:22:28.335
+there should be a batch that what is the batch size,
+
+1748
+01:22:28.795 --> 01:22:31.615
+and then how many timestamp you are going to accept
+
+1749
+01:22:31.635 --> 01:22:32.695
+for that particular batch.
+
+1750
+01:22:32.775 --> 01:22:34.495
+I said, right, for every batch,
+
+1751
+01:22:34.495 --> 01:22:35.735
+your timestamp should be fixed.
+
+1752
+01:22:35.915 --> 01:22:38.895
+Now, because we are fixing here, batch size is equal to one.
+
+1753
+01:22:40.035 --> 01:22:41.895
+You see this by batch side is called two one.
+
+1754
+01:22:41.895 --> 01:22:43.535
+Then you don't have to do any padding.
+
+1755
+01:22:43.825 --> 01:22:48.585
+Every, every input is, uh, in itself is a batch, so
+
+1756
+01:22:48.585 --> 01:22:50.865
+that you can process separately.
+
+1757
+01:22:50.865 --> 01:22:52.865
+Otherwise, for every time stamp,
+
+1758
+01:22:52.865 --> 01:22:54.345
+there should be a fixed batch site.
+
+1759
+01:22:54.685 --> 01:22:57.905
+And in, if you want to, uh, for every batch, you should be,
+
+1760
+01:22:57.915 --> 01:23:00.465
+there should a fixed time stamp, which you want
+
+1761
+01:23:00.465 --> 01:23:01.665
+to process, right?
+
+1762
+01:23:01.725 --> 01:23:03.345
+And then in that case, padding would be required,
+
+1763
+01:23:03.345 --> 01:23:05.810
+which I'm not showing you here, but this is how it's done.
+
+1764
+01:23:06.345 --> 01:23:07.885
+So here, batch first, that is
+
+1765
+01:23:07.885 --> 01:23:09.205
+what you have to do in this format.
+
+1766
+01:23:09.265 --> 01:23:10.405
+You have to create the data.
+
+1767
+01:23:11.305 --> 01:23:14.685
+And, uh, finally, uh, after the RNN,
+
+1768
+01:23:15.015 --> 01:23:16.445
+after the RN means what?
+
+1769
+01:23:16.495 --> 01:23:20.085
+After this layer, you have one more layer.
+
+1770
+01:23:20.305 --> 01:23:21.845
+You have one more layer here,
+
+1771
+01:23:22.625 --> 01:23:25.045
+and this is a fully connected layer, which,
+
+1772
+01:23:25.045 --> 01:23:26.405
+which is a fully connected layer,
+
+1773
+01:23:26.735 --> 01:23:28.205
+fully connected layer in the sense,
+
+1774
+01:23:28.315 --> 01:23:31.125
+suppose I have two more neurons, if I'll keep it here.
+
+1775
+01:23:31.195 --> 01:23:34.645
+Just imagine that two more neurons I'm keeping now
+
+1776
+01:23:35.505 --> 01:23:36.725
+say fully connected layer, right?
+
+1777
+01:23:36.905 --> 01:23:39.445
+So I'm keeping here one neuron and one neuron.
+
+1778
+01:23:39.445 --> 01:23:40.605
+What does it mean? Fully connected.
+
+1779
+01:23:40.755 --> 01:23:42.165
+This will connected with this.
+
+1780
+01:23:42.275 --> 01:23:45.485
+This will be connected with this. All the connection, right?
+
+1781
+01:23:45.665 --> 01:23:48.785
+All the connection, okay?
+
+1782
+01:23:48.935 --> 01:23:50.545
+Here, also, two neurons will come
+
+1783
+01:23:50.545 --> 01:23:52.145
+because each time stamp,
+
+1784
+01:23:52.255 --> 01:23:53.865
+same network, we are going to use, right?
+
+1785
+01:23:54.175 --> 01:23:57.645
+This, this, this, okay?
+
+1786
+01:23:57.705 --> 01:23:59.365
+And, uh, this will also connect it with this.
+
+1787
+01:23:59.945 --> 01:24:03.005
+You can understand right now, the only difference is
+
+1788
+01:24:03.005 --> 01:24:04.405
+because it is a fully connected layer.
+
+1789
+01:24:04.405 --> 01:24:06.685
+This is not the RNN layer, but this is the RNN layer.
+
+1790
+01:24:07.435 --> 01:24:09.965
+This connection, what you're seeing, this connection,
+
+1791
+01:24:10.075 --> 01:24:12.765
+this connection will not be applicable on these two.
+
+1792
+01:24:13.185 --> 01:24:16.245
+In this layer. This connection is true only for this layer,
+
+1793
+01:24:16.275 --> 01:24:18.285
+because this is an RNN layer,
+
+1794
+01:24:18.545 --> 01:24:22.625
+but this is a fully connected layer, okay?
+
+1795
+01:24:22.625 --> 01:24:25.345
+That is the difference. And the fully connector output is
+
+1796
+01:24:25.345 --> 01:24:26.825
+not connected with output here.
+
+1797
+01:24:26.895 --> 01:24:29.385
+This, these two outputs is not connected with these output.
+
+1798
+01:24:29.385 --> 01:24:31.345
+But in RN, these three outputs are connected
+
+1799
+01:24:31.345 --> 01:24:34.025
+with these three, uh, these three output.
+
+1800
+01:24:34.085 --> 01:24:35.105
+Now, that is the difference.
+
+1801
+01:24:35.175 --> 01:24:39.645
+That is the difference, what you will see, okay?
+
+1802
+01:24:39.645 --> 01:24:42.965
+So that is the meaning of this line. Okay?
+
+1803
+01:24:42.985 --> 01:24:47.655
+So 64 will be connected with one final output,
+
+1804
+01:24:47.715 --> 01:24:48.735
+one final output.
+
+1805
+01:24:49.515 --> 01:24:53.495
+Now, uh, uh, this is the classification, which I want to do,
+
+1806
+01:24:54.035 --> 01:24:57.755
+uh, and usually what happen, you know, uh,
+
+1807
+01:24:57.825 --> 01:25:01.435
+this fully connected layer, how you want to build the, uh,
+
+1808
+01:25:01.435 --> 01:25:03.515
+architecture, that also defines, so
+
+1809
+01:25:03.515 --> 01:25:06.275
+what I want while building the architecture, I want
+
+1810
+01:25:06.275 --> 01:25:08.475
+to build the architecture like this that I want
+
+1811
+01:25:08.475 --> 01:25:10.595
+to process x note the next one, the next two,
+
+1812
+01:25:10.615 --> 01:25:13.555
+and here I will put the fully connected layer instead
+
+1813
+01:25:13.555 --> 01:25:14.875
+of putting the fully connected layer here.
+
+1814
+01:25:14.905 --> 01:25:16.395
+Also here, also here also,
+
+1815
+01:25:16.465 --> 01:25:20.955
+does it mean I just want the final sentiment classification
+
+1816
+01:25:21.415 --> 01:25:22.995
+for final sentiment classification.
+
+1817
+01:25:22.995 --> 01:25:24.835
+I'll process the entire sentence,
+
+1818
+01:25:24.895 --> 01:25:26.915
+and then I'll put a fully connected layer here,
+
+1819
+01:25:27.495 --> 01:25:32.075
+and then it'll, it'll, uh, uh, uh,
+
+1820
+01:25:32.925 --> 01:25:35.275
+it'll, it'll say whether it is a positive or negative.
+
+1821
+01:25:35.375 --> 01:25:37.235
+So instead of what I have explained to you,
+
+1822
+01:25:37.235 --> 01:25:41.075
+that fully connected layer here, here, here, uh, uh,
+
+1823
+01:25:41.105 --> 01:25:43.435
+that is not the case in which I'm building this network.
+
+1824
+01:25:43.695 --> 01:25:46.435
+So once all the words are processed,
+
+1825
+01:25:47.315 --> 01:25:49.715
+whatever is the time tamp, then I'm putting one final fully
+
+1826
+01:25:49.715 --> 01:25:53.355
+connected layer, and that is, that will give me one output,
+
+1827
+01:25:54.175 --> 01:25:55.355
+uh, that will tell me
+
+1828
+01:25:55.355 --> 01:25:57.915
+what is the bind binding, positive or negative.
+
+1829
+01:25:58.575 --> 01:26:01.315
+So this is the, uh, this is the architecture
+
+1830
+01:26:01.335 --> 01:26:03.035
+of my simple RNN, and
+
+1831
+01:26:03.085 --> 01:26:05.405
+after that, I'm just using the forward pass.
+
+1832
+01:26:05.405 --> 01:26:07.805
+This is just a blueprint, right, of my network.
+
+1833
+01:26:07.955 --> 01:26:08.965
+This is a forward pass
+
+1834
+01:26:09.215 --> 01:26:12.725
+where first time calling this embedding, passing the X
+
+1835
+01:26:12.945 --> 01:26:16.075
+as a whole review, getting the embedded review,
+
+1836
+01:26:16.635 --> 01:26:17.835
+embedded review will be passed to the
+
+1837
+01:26:17.875 --> 01:26:20.195
+R-N-N-R-N-N embedded review.
+
+1838
+01:26:20.565 --> 01:26:24.915
+It'll give two things. It'll give, uh, this embedded review.
+
+1839
+01:26:24.915 --> 01:26:27.195
+When you'll pass to the RNN, it'll give two output.
+
+1840
+01:26:27.195 --> 01:26:29.715
+First output is for every timestamp,
+
+1841
+01:26:29.715 --> 01:26:30.795
+there is some output, right?
+
+1842
+01:26:30.825 --> 01:26:33.875
+This is the output output coming from this neuron,
+
+1843
+01:26:33.875 --> 01:26:34.875
+this neuron, this neuron,
+
+1844
+01:26:34.875 --> 01:26:38.835
+this is the output from this particular timestamp, right?
+
+1845
+01:26:39.175 --> 01:26:41.835
+So how many, such, uh, output you will get,
+
+1846
+01:26:41.835 --> 01:26:44.275
+suppose in this case, 1, 2, 3, 4.
+
+1847
+01:26:44.295 --> 01:26:46.155
+If there are four timestamp, four output,
+
+1848
+01:26:46.155 --> 01:26:47.555
+individual outputs, you'll get,
+
+1849
+01:26:47.735 --> 01:26:49.635
+and then you'll get one final output.
+
+1850
+01:26:49.895 --> 01:26:52.955
+One final output. I'm interested in one final output.
+
+1851
+01:26:53.695 --> 01:26:56.035
+The fourth output is also the one final output.
+
+1852
+01:26:57.075 --> 01:26:58.085
+I'll show you that. Okay?
+
+1853
+01:26:58.825 --> 01:27:00.405
+Um, I think it's time,
+
+1854
+01:27:00.705 --> 01:27:02.845
+but I will just try to explain you this part,
+
+1855
+01:27:02.845 --> 01:27:05.005
+maybe a few more minutes, and then we'll summarize it.
+
+1856
+01:27:05.505 --> 01:27:09.805
+So what I, I was doing here is, uh, I then I'll,
+
+1857
+01:27:09.845 --> 01:27:13.165
+I call the RNN, and whatever final output will come at,
+
+1858
+01:27:13.755 --> 01:27:14.845
+I'll say under score,
+
+1859
+01:27:14.845 --> 01:27:18.365
+and as final output, that I'll pass it through the, uh,
+
+1860
+01:27:18.535 --> 01:27:20.885
+fully connected layer, fully connected layer,
+
+1861
+01:27:21.385 --> 01:27:22.845
+and then it'll gimme the sentiment.
+
+1862
+01:27:22.845 --> 01:27:25.885
+So this is just a forward pass, which we have created out
+
+1863
+01:27:25.885 --> 01:27:28.005
+of this blueprint of the RNN network.
+
+1864
+01:27:28.345 --> 01:27:30.395
+That's all. Okay?
+
+1865
+01:27:30.975 --> 01:27:33.155
+Now, here, actually, I have showed everything.
+
+1866
+01:27:33.155 --> 01:27:34.475
+What I have told you. First of all,
+
+1867
+01:27:34.575 --> 01:27:37.115
+I'm calling the embedding, okay?
+
+1868
+01:27:37.535 --> 01:27:41.235
+Uh, vocab size is the input dimension, C seven five.
+
+1869
+01:27:41.235 --> 01:27:43.035
+5 0 9 is the input dimension.
+
+1870
+01:27:43.215 --> 01:27:46.155
+Output dimension will be a hundred, okay?
+
+1871
+01:27:46.775 --> 01:27:48.915
+And, uh, actually, I have passed.
+
+1872
+01:27:49.415 --> 01:27:53.755
+So I'm taking my trained data set, uh, trained data set, uh,
+
+1873
+01:27:54.015 --> 01:27:55.715
+and I'm passing it through this X.
+
+1874
+01:27:55.715 --> 01:27:58.195
+What is x? X is representing my embedding layer.
+
+1875
+01:27:58.545 --> 01:28:02.155
+When I'm to this X I'm passing my trained data set of,
+
+1876
+01:28:02.535 --> 01:28:03.915
+uh, this one.
+
+1877
+01:28:03.975 --> 01:28:07.625
+So trained data set looks like this, okay?
+
+1878
+01:28:07.625 --> 01:28:12.425
+It's a, it's a object. So you can say this.
+
+1879
+01:28:12.555 --> 01:28:15.025
+First of all, let me show you this one. What is this?
+
+1880
+01:28:15.215 --> 01:28:18.265
+This is my individual data,
+
+1881
+01:28:18.445 --> 01:28:20.465
+and it's label now,
+
+1882
+01:28:20.465 --> 01:28:23.745
+because I just wanted the review, not its label.
+
+1883
+01:28:24.245 --> 01:28:26.945
+That's why I have put here one more zero this,
+
+1884
+01:28:26.945 --> 01:28:28.465
+because this is what is available as a review.
+
+1885
+01:28:28.535 --> 01:28:29.905
+Then, now, there is no label.
+
+1886
+01:28:30.325 --> 01:28:33.105
+Now, this is my review in the form of tensor,
+
+1887
+01:28:33.275 --> 01:28:35.385
+which I'm passing to the embedding layer x,
+
+1888
+01:28:36.065 --> 01:28:37.505
+X is nothing but my embedding layer.
+
+1889
+01:28:37.805 --> 01:28:38.865
+So once you'll pass it,
+
+1890
+01:28:38.865 --> 01:28:41.265
+process the embedding layer A is giving the output.
+
+1891
+01:28:41.885 --> 01:28:44.225
+Now a, if you see what it is, giving
+
+1892
+01:28:45.685 --> 01:28:48.165
+a is a hundred dimensional output.
+
+1893
+01:28:48.265 --> 01:28:50.445
+So, and a has everything,
+
+1894
+01:28:50.825 --> 01:28:53.645
+but, uh, uh, it's a, it's a,
+
+1895
+01:28:54.075 --> 01:28:55.965
+it's a hundred dimensional output.
+
+1896
+01:28:56.705 --> 01:28:59.405
+So a dot, uh,
+
+1897
+01:28:59.605 --> 01:29:01.905
+I don't know, shape.
+
+1898
+01:29:02.405 --> 01:29:05.505
+So a hundred dime, uh, uh, it's a, it has a, uh,
+
+1899
+01:29:06.265 --> 01:29:08.105
+102 hundred.
+
+1900
+01:29:08.295 --> 01:29:13.105
+That is how it is coming cap, uh, 102 hundred, uh, maybe,
+
+1901
+01:29:13.465 --> 01:29:15.865
+I guess for each of these word,
+
+1902
+01:29:16.185 --> 01:29:17.945
+I think this size is also a hundred.
+
+1903
+01:29:18.265 --> 01:29:20.465
+I don't know. What is this size? Let me see a hundred.
+
+1904
+01:29:21.165 --> 01:29:24.745
+So there are a hundred words, a hundred times stamp, okay?
+
+1905
+01:29:24.785 --> 01:29:28.265
+A hundred, a hundred words is there in my whole data, in my,
+
+1906
+01:29:28.265 --> 01:29:30.905
+in my one, one paragraph, we have a hundred words,
+
+1907
+01:29:31.365 --> 01:29:32.945
+and each of these a hundred words,
+
+1908
+01:29:33.315 --> 01:29:37.465
+which is represented initially as 7,505 50, whatever,
+
+1909
+01:29:37.465 --> 01:29:39.305
+in the vab size, one dimensional vector
+
+1910
+01:29:39.655 --> 01:29:41.225
+converted as a hundred dimensional.
+
+1911
+01:29:41.225 --> 01:29:42.345
+That's why you see
+
+1912
+01:29:42.345 --> 01:29:44.785
+that the output from the embedding layer is
+
+1913
+01:29:45.355 --> 01:29:48.945
+every word like two is represented as a hundred dimension.
+
+1914
+01:29:49.215 --> 01:29:51.905
+Then three is represented as a hundred dimensional.
+
+1915
+01:29:51.905 --> 01:29:53.345
+So this is the representation of two
+
+1916
+01:29:53.605 --> 01:29:54.785
+in the a hundred dimension.
+
+1917
+01:29:55.215 --> 01:29:57.665
+This is the representation of three in the a hundred
+
+1918
+01:29:57.665 --> 01:29:59.705
+dimension, 82.
+
+1919
+01:29:59.845 --> 01:30:00.905
+Now, this is the representation
+
+1920
+01:30:01.005 --> 01:30:02.865
+of 82 in a hundred dimension.
+
+1921
+01:30:03.615 --> 01:30:06.265
+This is what this, this embedding layer does,
+
+1922
+01:30:06.905 --> 01:30:10.445
+takes the one hot vector as an input,
+
+1923
+01:30:10.445 --> 01:30:13.125
+give the embedding dimension vector as an output.
+
+1924
+01:30:13.895 --> 01:30:16.505
+Okay, let me, uh, I will stop here.
+
+1925
+01:30:16.975 --> 01:30:19.785
+I'll leave you, I'll just give you the link of this.
+
+1926
+01:30:20.275 --> 01:30:24.265
+Maybe a few more things are there. Uh, it's nine 15.
+
+1927
+01:30:24.325 --> 01:30:25.825
+Uh, shall I continue for five more minutes?
+
+1928
+01:30:26.205 --> 01:30:28.425
+If it is, okay, then I'll finish it. Yes,
+
+1929
+01:30:28.425 --> 01:30:29.425
+Sir. Yes, sir. Yes,
+
+1930
+01:30:29.425 --> 01:30:29.765
+sir.
+
+1931
+01:30:30.875 --> 01:30:35.215
+Thank you. Thank you. So, uh, yeah,
+
+1932
+01:30:35.555 --> 01:30:37.455
+so embedding will give you the output like that,
+
+1933
+01:30:37.455 --> 01:30:39.655
+and I've shown you its shape is like a hundred across
+
+1934
+01:30:39.655 --> 01:30:43.375
+hundreds because, uh, in this, in this, uh, uh,
+
+1935
+01:30:44.165 --> 01:30:45.615
+zero comma zero, you have a hundred,
+
+1936
+01:30:45.675 --> 01:30:47.495
+but I can change it, right?
+
+1937
+01:30:47.575 --> 01:30:48.575
+I can show you that something else.
+
+1938
+01:30:48.755 --> 01:30:52.775
+So I will do the next, uh, 10th data, 10th data.
+
+1939
+01:30:53.615 --> 01:30:56.335
+I will, I'll just foresee, what is the shape of this data?
+
+1940
+01:30:57.115 --> 01:31:01.805
+So you have 1 98, uh, uh, words in this paragraph.
+
+1941
+01:31:02.185 --> 01:31:04.565
+So for each paragraph, initially it'll be represented
+
+1942
+01:31:04.565 --> 01:31:06.325
+as one hot vector, and then it'll give a hundred.
+
+1943
+01:31:06.345 --> 01:31:08.405
+So 1 98 cross a hundred.
+
+1944
+01:31:08.555 --> 01:31:11.285
+That should be the dimension of my,
+
+1945
+01:31:11.635 --> 01:31:14.205
+that should be the dimension of my embedded vector.
+
+1946
+01:31:14.345 --> 01:31:17.245
+So I will pass hundred 10th, and you see that,
+
+1947
+01:31:17.665 --> 01:31:22.415
+and if you see the shape of this 1, 98, cross hundred,
+
+1948
+01:31:22.555 --> 01:31:24.415
+1 98 are my tokens.
+
+1949
+01:31:24.675 --> 01:31:27.695
+Or you can say words in the whole paragraph, one
+
+1950
+01:31:27.715 --> 01:31:29.175
+by one sequence of words, right?
+
+1951
+01:31:29.235 --> 01:31:31.815
+And then each are represented a hundred dimension.
+
+1952
+01:31:31.815 --> 01:31:33.375
+This is the work of the embedding layer.
+
+1953
+01:31:33.755 --> 01:31:38.655
+Now, when it embedded layer a hundred dimension, so this,
+
+1954
+01:31:38.755 --> 01:31:40.815
+decide how many times stamp it is going to be,
+
+1955
+01:31:40.815 --> 01:31:44.095
+if it's 1 98, 1 98 will be the time stamp for the rrn.
+
+1956
+01:31:44.095 --> 01:31:45.935
+If it's a hundred, a hundred will be the time stamp.
+
+1957
+01:31:45.955 --> 01:31:49.695
+So you can see that RNN can handle variable length input.
+
+1958
+01:31:49.805 --> 01:31:51.575
+That is the, that is what I wanted to show.
+
+1959
+01:31:52.155 --> 01:31:53.535
+Now, you can see here RNN.
+
+1960
+01:31:53.915 --> 01:31:56.375
+Now say that RNN, the same layer I have compete, just
+
+1961
+01:31:56.375 --> 01:31:57.495
+to show you what will be done.
+
+1962
+01:31:57.495 --> 01:32:00.525
+This one I have compete RNN hundred.
+
+1963
+01:32:00.695 --> 01:32:04.005
+It'll be the input, whatever each, each time stamp,
+
+1964
+01:32:04.615 --> 01:32:07.445
+every word or index will be represented at a hundred
+
+1965
+01:32:07.445 --> 01:32:09.245
+dimension that I have made sure
+
+1966
+01:32:09.265 --> 01:32:11.285
+by this embedded dimension, keeping a hundred.
+
+1967
+01:32:11.625 --> 01:32:14.245
+So a hundred will be the dimension, input dimension.
+
+1968
+01:32:14.705 --> 01:32:18.325
+And in this layer, in this layer, I'm using 64 neurons.
+
+1969
+01:32:18.705 --> 01:32:21.645
+So 64 outputs, it'll give, that's why it is 64.
+
+1970
+01:32:22.215 --> 01:32:23.445
+Batch first is called true.
+
+1971
+01:32:23.445 --> 01:32:25.565
+I've already explained without batch first true,
+
+1972
+01:32:25.825 --> 01:32:28.445
+you'll have sequence length, then batch size,
+
+1973
+01:32:28.745 --> 01:32:29.845
+and then input size.
+
+1974
+01:32:30.825 --> 01:32:32.685
+But batch first means first you'll have the batch
+
+1975
+01:32:32.795 --> 01:32:34.205
+size, which is one.
+
+1976
+01:32:34.205 --> 01:32:35.805
+In this particular case, I have fixed it.
+
+1977
+01:32:36.125 --> 01:32:39.725
+Sequence length is 1 98, and input size is this a hundred.
+
+1978
+01:32:40.625 --> 01:32:43.885
+So batch first, just change this sequence, okay?
+
+1979
+01:32:44.105 --> 01:32:45.805
+So that's why this particular parameter,
+
+1980
+01:32:45.805 --> 01:32:48.365
+because RNN accept that in this particular sequence.
+
+1981
+01:32:49.275 --> 01:32:52.005
+Okay? So let us see that what RNN does.
+
+1982
+01:32:52.185 --> 01:32:54.325
+So to the RNN, I'm just passing.
+
+1983
+01:32:54.705 --> 01:32:59.445
+Now my a, a is this, uh, embedded, uh, uh,
+
+1984
+01:32:59.765 --> 01:33:01.125
+a particular input, okay?
+
+1985
+01:33:01.265 --> 01:33:02.765
+And it's embedded representation.
+
+1986
+01:33:03.065 --> 01:33:06.135
+I'm passing it, I'm passing it to this one.
+
+1987
+01:33:06.515 --> 01:33:10.285
+Now, C what I said that in the RNN,
+
+1988
+01:33:10.285 --> 01:33:13.285
+what happened when you process this at the time, stent,
+
+1989
+01:33:13.295 --> 01:33:15.045
+every time a stamp has an output,
+
+1990
+01:33:15.465 --> 01:33:19.445
+so suppose it is 1 98 timestamp, you will get 1 98 output,
+
+1991
+01:33:19.905 --> 01:33:22.165
+and then you will get, so there is one tensor,
+
+1992
+01:33:22.165 --> 01:33:24.205
+which will give 1 98 outputs,
+
+1993
+01:33:24.945 --> 01:33:26.485
+and there is a one more tensor,
+
+1994
+01:33:26.485 --> 01:33:28.565
+which will give the final timestamp output.
+
+1995
+01:33:28.825 --> 01:33:32.765
+You will see here. So why is representing my RNL layer?
+
+1996
+01:33:33.345 --> 01:33:34.925
+And when I'm print passing it,
+
+1997
+01:33:34.925 --> 01:33:37.405
+the A is the output from the embedding layer.
+
+1998
+01:33:37.405 --> 01:33:40.485
+Right here I've shown you a is the output
+
+1999
+01:33:40.485 --> 01:33:41.645
+from the embedding layer.
+
+2000
+01:33:42.235 --> 01:33:45.765
+Okay? So if you see that what it is giving the output,
+
+2001
+01:33:45.785 --> 01:33:47.005
+it is giving two tensor.
+
+2002
+01:33:47.005 --> 01:33:49.805
+One is this sensor, and another one is this
+
+2003
+01:33:49.805 --> 01:33:51.605
+sensor two tensor.
+
+2004
+01:33:51.605 --> 01:33:54.285
+It is given the output, if you observe carefully,
+
+2005
+01:33:55.225 --> 01:33:59.725
+the last one, this particular output, this vector,
+
+2006
+01:34:00.185 --> 01:34:01.965
+is equivalent to this particular vector.
+
+2007
+01:34:03.175 --> 01:34:06.155
+Why? You know, the last timestamp output
+
+2008
+01:34:06.695 --> 01:34:09.395
+is also the representation of whole sentence
+
+2009
+01:34:09.495 --> 01:34:12.245
+or whole paragraph, isn't it?
+
+2010
+01:34:12.305 --> 01:34:15.005
+Is last time done. So whatever it'll give the output.
+
+2011
+01:34:15.235 --> 01:34:17.725
+This is also the representation of whole paragraph.
+
+2012
+01:34:17.945 --> 01:34:21.845
+That's why the last zero point, you can see that 0.6,
+
+2013
+01:34:21.845 --> 01:34:25.845
+0 7, 0, 0 0.5 5, 9 5, uh, same number
+
+2014
+01:34:25.905 --> 01:34:29.325
+and last, then three numbers also are the same.
+
+2015
+01:34:30.035 --> 01:34:31.805
+Okay? So there are two tensors,
+
+2016
+01:34:31.805 --> 01:34:34.805
+which is giving the output from the R-N-N-R-N-N give two
+
+2017
+01:34:35.275 --> 01:34:37.565
+outputs, individual timestamp output.
+
+2018
+01:34:37.565 --> 01:34:38.805
+Also support you required.
+
+2019
+01:34:38.805 --> 01:34:41.285
+Sometimes you require, we'll see that some cases later
+
+2020
+01:34:41.785 --> 01:34:44.125
+or else the last time stamp output, which is in the case
+
+2021
+01:34:44.125 --> 01:34:45.565
+of classification, it is required.
+
+2022
+01:34:46.675 --> 01:34:48.885
+Okay? So I have shown you here also,
+
+2023
+01:34:49.225 --> 01:34:52.725
+so if you will print YA zero part,
+
+2024
+01:34:52.995 --> 01:34:55.485
+then it'll give you the first tenor, which will have
+
+2025
+01:34:55.825 --> 01:34:58.445
+how many outputs equivalent to your timestamp.
+
+2026
+01:34:58.445 --> 01:35:02.445
+Timestamp is 1 98, and you will see that it is 1 98.
+
+2027
+01:35:03.505 --> 01:35:06.205
+And each output is represented at 64 dimension.
+
+2028
+01:35:06.345 --> 01:35:11.285
+So it'll go at 1 98 timestamp, 1 98 times output.
+
+2029
+01:35:11.285 --> 01:35:14.045
+Also, it'll give, and each output shape will be
+
+2030
+01:35:14.095 --> 01:35:15.765
+64 instead of three neurons.
+
+2031
+01:35:15.925 --> 01:35:18.005
+Here we have 64, which we have kept in the RNN.
+
+2032
+01:35:18.145 --> 01:35:21.245
+So 64 dimensional output. That is what it is keeping here.
+
+2033
+01:35:21.635 --> 01:35:25.605
+That is the first output. First tensor, second tensor.
+
+2034
+01:35:25.665 --> 01:35:27.805
+If you see second tensor,
+
+2035
+01:35:27.805 --> 01:35:31.215
+likewise, you can second tensor.
+
+2036
+01:35:31.215 --> 01:35:35.505
+You can see here, it is a single output.
+
+2037
+01:35:35.965 --> 01:35:39.025
+See this on single, how many a single one,
+
+2038
+01:35:39.085 --> 01:35:40.665
+one array with how many?
+
+2039
+01:35:41.565 --> 01:35:42.705
+Uh, one, how many value?
+
+2040
+01:35:42.705 --> 01:35:45.185
+64, because it is only capturing
+
+2041
+01:35:45.185 --> 01:35:47.425
+what is the final timestamp output,
+
+2042
+01:35:47.425 --> 01:35:50.185
+because that is the final representation of whole context,
+
+2043
+01:35:50.595 --> 01:35:52.425
+which is equivalent to the last output.
+
+2044
+01:35:52.425 --> 01:35:56.305
+What is here? This is the output from the RNN, okay?
+
+2045
+01:35:56.305 --> 01:35:58.425
+This is output from now. And then finally
+
+2046
+01:35:58.475 --> 01:36:01.185
+after RN, we are just keeping this, uh, you see that
+
+2047
+01:36:01.185 --> 01:36:03.825
+after, we are just keeping the linear layer.
+
+2048
+01:36:03.825 --> 01:36:06.745
+Linear layer is here at the top, not on these
+
+2049
+01:36:07.355 --> 01:36:10.425
+after processing all these time stamp manner.
+
+2050
+01:36:10.725 --> 01:36:13.385
+And once we get 64 dimensional final vector,
+
+2051
+01:36:13.385 --> 01:36:15.185
+which is a representation of my input,
+
+2052
+01:36:15.405 --> 01:36:18.385
+I'm putting here the linear layer, how many neurons?
+
+2053
+01:36:19.085 --> 01:36:20.465
+One neuron only because I want
+
+2054
+01:36:20.465 --> 01:36:22.545
+to do the binary classification, right?
+
+2055
+01:36:22.805 --> 01:36:24.745
+So here you can see that similarly,
+
+2056
+01:36:25.255 --> 01:36:29.945
+that whatever I'm getting as a, as a B, uh, from, from this,
+
+2057
+01:36:30.245 --> 01:36:34.705
+uh, uh, RNN, I'm passing it to the JJ is nothing
+
+2058
+01:36:34.805 --> 01:36:37.505
+but my, uh, there is nothing
+
+2059
+01:36:37.605 --> 01:36:41.665
+but my, uh, linear layer output layer where I get one,
+
+2060
+01:36:41.845 --> 01:36:45.145
+one tenor as an output, which is the representation of my,
+
+2061
+01:36:45.685 --> 01:36:47.265
+uh, you can say that this, uh,
+
+2062
+01:36:48.235 --> 01:36:50.465
+class is a representation of my class.
+
+2063
+01:36:50.485 --> 01:36:51.945
+Simple. Okay?
+
+2064
+01:36:52.245 --> 01:36:55.905
+So this is just, just to explain you how this, this,
+
+2065
+01:36:55.955 --> 01:36:57.425
+these three lines are working
+
+2066
+01:36:57.645 --> 01:37:00.025
+and how this forward propagation is going to work.
+
+2067
+01:37:00.405 --> 01:37:02.585
+That's why I have explained you all these things internally.
+
+2068
+01:37:02.925 --> 01:37:04.625
+Now, that's all. Once we do that one,
+
+2069
+01:37:04.625 --> 01:37:07.425
+then first I do the model initialization, move it
+
+2070
+01:37:07.425 --> 01:37:11.065
+to this device, which is A GPU, set up the training, uh,
+
+2071
+01:37:11.215 --> 01:37:14.145
+parameter, like what loss I'll use, what optimizer I'll use,
+
+2072
+01:37:14.145 --> 01:37:15.305
+how many ocs I'm using,
+
+2073
+01:37:15.365 --> 01:37:18.545
+and finally the training loop, which, uh, where I'm just,
+
+2074
+01:37:18.755 --> 01:37:19.825
+everything is same.
+
+2075
+01:37:19.825 --> 01:37:22.945
+Here, I'm just fetching review and label from train loader.
+
+2076
+01:37:22.995 --> 01:37:26.665
+It'll go to the custom dataset class, give the index
+
+2077
+01:37:26.925 --> 01:37:28.185
+and face the review
+
+2078
+01:37:28.185 --> 01:37:30.745
+and label, which I'll move, which I'm moving to the GPU.
+
+2079
+01:37:30.745 --> 01:37:31.985
+This thing I've explained to you earlier.
+
+2080
+01:37:32.795 --> 01:37:36.265
+First of all, I'm making all the weights, uh, optimizer,
+
+2081
+01:37:36.295 --> 01:37:37.585
+zero grad, okay?
+
+2082
+01:37:37.925 --> 01:37:41.185
+And then I do the prediction in this line model
+
+2083
+01:37:41.365 --> 01:37:43.145
+and, uh, inside that review, passing
+
+2084
+01:37:43.285 --> 01:37:47.775
+and then converting, uh, the label, uh,
+
+2085
+01:37:48.195 --> 01:37:49.895
+the actual labels, okay?
+
+2086
+01:37:49.895 --> 01:37:51.775
+Because this output is the predicted label.
+
+2087
+01:37:51.805 --> 01:37:54.095
+This label is the actual label, right?
+
+2088
+01:37:54.515 --> 01:37:57.925
+To have the similar size, uh, batch size and cross one.
+
+2089
+01:37:57.995 --> 01:38:00.405
+This is what I'm doing on, on a squeezing operation.
+
+2090
+01:38:00.405 --> 01:38:03.405
+You can see that. Then calculating the loss between output
+
+2091
+01:38:03.405 --> 01:38:06.165
+and the label and doing the backward propagation.
+
+2092
+01:38:06.615 --> 01:38:08.725
+Optimizing means updating all the weights
+
+2093
+01:38:08.825 --> 01:38:10.205
+and finding, calculating the loss.
+
+2094
+01:38:10.355 --> 01:38:14.205
+Once I have run that for the 10 box, you see that how the,
+
+2095
+01:38:14.385 --> 01:38:16.165
+the it, it is running, okay?
+
+2096
+01:38:16.165 --> 01:38:18.365
+Then I can test it for the new sentence also,
+
+2097
+01:38:18.365 --> 01:38:20.165
+which I have not shown, which we'll see that
+
+2098
+01:38:20.165 --> 01:38:21.645
+that late, but you can practice.
+
+2099
+01:38:22.235 --> 01:38:23.285
+Okay, lemme stop here.
+
+2100
+01:38:23.605 --> 01:38:24.845
+I tried to cover that,
+
+2101
+01:38:24.845 --> 01:38:27.365
+how this internal things are are happening.
+
+2102
+01:38:27.365 --> 01:38:28.485
+In the case of these three,
+
+2103
+01:38:28.825 --> 01:38:30.285
+let me know if you have any quick questions
+
+2104
+01:38:31.265 --> 01:38:32.925
+and you can do the practice by your own.
+
+2105
+01:38:33.655 --> 01:38:35.995
+Sir, I have one question. Please tell.
+
+2106
+01:38:36.415 --> 01:38:38.875
+So sir, I did not understand the last part,
+
+2107
+01:38:38.935 --> 01:38:41.435
+the linear 64 comma one part,
+
+2108
+01:38:41.895 --> 01:38:42.955
+And it's good, good, good.
+
+2109
+01:38:43.375 --> 01:38:44.915
+Uh, that you have asked this question.
+
+2110
+01:38:45.015 --> 01:38:47.515
+So it means that, now suppose I have a sentence.
+
+2111
+01:38:47.875 --> 01:38:50.875
+Sentence is RNN viewed as a field forward
+
+2112
+01:38:51.385 --> 01:38:53.395
+network unrolled what?
+
+2113
+01:38:53.455 --> 01:38:54.915
+See, this is a sentence I have
+
+2114
+01:38:55.495 --> 01:38:57.475
+and I have to classify it as a positive
+
+2115
+01:38:57.475 --> 01:38:58.755
+or negative or neutral.
+
+2116
+01:38:59.215 --> 01:39:01.035
+It looks like it's a neutral, right?
+
+2117
+01:39:01.135 --> 01:39:04.035
+So what I want, see,
+
+2118
+01:39:04.405 --> 01:39:06.515
+there are two things in the RNN what I said.
+
+2119
+01:39:06.515 --> 01:39:09.595
+First of all, for every time stamp,
+
+2120
+01:39:09.655 --> 01:39:11.955
+you can get the output I told already, right?
+
+2121
+01:39:12.415 --> 01:39:14.595
+For every time stamp, there is an individual output,
+
+2122
+01:39:14.595 --> 01:39:15.795
+these lines, what you're seeing,
+
+2123
+01:39:15.825 --> 01:39:17.435
+it's an output which you can store,
+
+2124
+01:39:18.095 --> 01:39:20.795
+and I have shown you it is coming and you can store it.
+
+2125
+01:39:21.295 --> 01:39:24.475
+But I'm interested here, I'm interested here
+
+2126
+01:39:24.545 --> 01:39:27.355
+because I want to do the sentiment analysis
+
+2127
+01:39:27.355 --> 01:39:30.715
+of this whole sentence rather than doing the
+
+2128
+01:39:30.915 --> 01:39:32.355
+sentiment analysis of RNN.
+
+2129
+01:39:33.295 --> 01:39:37.035
+So in this X node, X node is my RNN, okay?
+
+2130
+01:39:37.055 --> 01:39:38.915
+In this particular case, what is happening is
+
+2131
+01:39:39.435 --> 01:39:40.675
+X node is my RNN.
+
+2132
+01:39:41.985 --> 01:39:43.995
+Okay? So let me just, uh, do this.
+
+2133
+01:39:44.415 --> 01:39:47.875
+So X node is this, so when I'm processing,
+
+2134
+01:39:48.475 --> 01:39:49.675
+RNN will be processed here
+
+2135
+01:39:49.695 --> 01:39:54.285
+and it'll give some output X one is this, okay?
+
+2136
+01:39:54.285 --> 01:39:55.805
+And likewise, this is my accent,
+
+2137
+01:39:56.105 --> 01:39:58.045
+the last time stem, whatever it'll be.
+
+2138
+01:39:58.825 --> 01:40:02.965
+So what I'm interested is I'm not interested in doing the
+
+2139
+01:40:03.285 --> 01:40:04.645
+sentiment analysis of the individual.
+
+2140
+01:40:04.765 --> 01:40:05.805
+Suppose I'm interested,
+
+2141
+01:40:05.995 --> 01:40:08.205
+then I would have put here also the linear layer,
+
+2142
+01:40:09.645 --> 01:40:10.945
+but actually I'm not interested
+
+2143
+01:40:11.445 --> 01:40:12.625
+any way I'm getting the output.
+
+2144
+01:40:12.705 --> 01:40:15.305
+I could have put it here it is, it is up to me what I want
+
+2145
+01:40:15.305 --> 01:40:18.105
+or not, but I'm not interested in putting the linear layer.
+
+2146
+01:40:18.105 --> 01:40:20.665
+Here I am doing all these processing
+
+2147
+01:40:21.085 --> 01:40:22.825
+for all the time stamp, which is possible.
+
+2148
+01:40:23.125 --> 01:40:28.105
+And then, then putting the, uh, what is that?
+
+2149
+01:40:28.335 --> 01:40:32.105
+Then putting the linear layer here. Linear.
+
+2150
+01:40:32.445 --> 01:40:33.905
+So this is the final timestamp.
+
+2151
+01:40:34.265 --> 01:40:35.945
+I say that final timestamp vector.
+
+2152
+01:40:36.015 --> 01:40:39.545
+What I'm getting here, which is a 64 dimensional output,
+
+2153
+01:40:39.715 --> 01:40:42.065
+it'll have all the understanding about this whole
+
+2154
+01:40:42.625 --> 01:40:43.905
+sentence, whatever I have processed.
+
+2155
+01:40:44.455 --> 01:40:49.065
+Then this vector will be connected with this, uh, uh,
+
+2156
+01:40:49.155 --> 01:40:50.945
+fully connected layer here.
+
+2157
+01:40:50.945 --> 01:40:52.785
+You can keep either two neurons or one neuron.
+
+2158
+01:40:52.785 --> 01:40:54.365
+Both will work. Uh,
+
+2159
+01:40:54.425 --> 01:40:56.525
+and it'll give you the sentiment analysis,
+
+2160
+01:40:56.525 --> 01:40:57.765
+either positive or negative.
+
+2161
+01:40:57.785 --> 01:40:59.325
+Now, this is what is this layer
+
+2162
+01:40:59.615 --> 01:41:02.765
+where 64 dimensional output I'm getting here,
+
+2163
+01:41:03.065 --> 01:41:05.125
+and it is connected with one output,
+
+2164
+01:41:05.125 --> 01:41:06.885
+which is a fully connected, which says
+
+2165
+01:41:06.885 --> 01:41:09.045
+that whether this is a positive or negative plus.
+
+2166
+01:41:10.855 --> 01:41:13.785
+Okay? Makes sense? Got it. Thank you. Yeah, yeah.
+
+2167
+01:41:15.795 --> 01:41:17.815
+Yes, me, sir. Uh, one more question, sir.
+
+2168
+01:41:18.155 --> 01:41:20.255
+So sir, based on this timestamp,
+
+2169
+01:41:20.935 --> 01:41:23.575
+whatever output we are getting, is it correlating
+
+2170
+01:41:23.595 --> 01:41:25.735
+to the formula of it called ht?
+
+2171
+01:41:26.075 --> 01:41:28.655
+Yes. Something times, uh, xt? Yeah.
+
+2172
+01:41:28.655 --> 01:41:30.655
+Here, here, here, uh, here. This one, right?
+
+2173
+01:41:31.515 --> 01:41:33.615
+Yes. Yes. It has to.
+
+2174
+01:41:33.685 --> 01:41:35.895
+Otherwise, how will you calculate this one?
+
+2175
+01:41:36.475 --> 01:41:39.335
+You have to, because every timestamp you do this,
+
+2176
+01:41:39.605 --> 01:41:40.695
+this calculation
+
+2177
+01:41:40.995 --> 01:41:44.515
+for every timestamp you do this calculation, it's nothing
+
+2178
+01:41:44.515 --> 01:41:47.115
+but linear calculation on top of that, some nonlinearity
+
+2179
+01:41:47.115 --> 01:41:50.355
+of your, it's a calculation.
+
+2180
+01:41:50.355 --> 01:41:51.355
+Nothing else.
+
+2181
+01:41:52.205 --> 01:41:55.425
+Yes, sir. Uh, one more question is why do we go
+
+2182
+01:41:55.445 --> 01:41:57.025
+for linear layers here?
+
+2183
+01:41:57.415 --> 01:41:59.785
+Like we can go for logistic, uh
+
+2184
+01:41:59.965 --> 01:42:01.265
+Oh, it's a no, no, no.
+
+2185
+01:42:01.505 --> 01:42:03.985
+I think you have, I, if you have seen my CNN classes,
+
+2186
+01:42:04.095 --> 01:42:06.865
+I've already told actually, it is not a linear layer.
+
+2187
+01:42:07.885 --> 01:42:11.465
+We have, after this layer, we have some activation function.
+
+2188
+01:42:11.525 --> 01:42:15.465
+If it is a binding classification problem, then it, it, uh,
+
+2189
+01:42:15.485 --> 01:42:17.865
+if I'm using only one neuron, then it is a sigmoid.
+
+2190
+01:42:17.865 --> 01:42:20.065
+If it is a two neuron, then it is a softmax,
+
+2191
+01:42:20.365 --> 01:42:21.585
+but that is not shown.
+
+2192
+01:42:22.175 --> 01:42:23.985
+That is already implemented.
+
+2193
+01:42:24.195 --> 01:42:25.745
+Where in the loss function,
+
+2194
+01:42:26.705 --> 01:42:27.905
+actually, I explained that earlier.
+
+2195
+01:42:28.445 --> 01:42:32.225
+So whenever you have b, c, e binary cross entropy with
+
+2196
+01:42:32.945 --> 01:42:36.305
+logistic loss, actually it is applying that, uh,
+
+2197
+01:42:36.395 --> 01:42:38.505
+logic function, whatever it's required,
+
+2198
+01:42:38.925 --> 01:42:40.265
+it is doing that non-linearity.
+
+2199
+01:42:40.335 --> 01:42:43.155
+Yeah. Okay.
+
+2200
+01:42:43.745 --> 01:42:46.155
+It's not a linear, it's linear calculation followed
+
+2201
+01:42:46.175 --> 01:42:48.275
+by the non-linearity logic function. Yeah.
+
+2202
+01:42:48.705 --> 01:42:52.485
+Okay. Excellent. Thanks. Others. So,
+
+2203
+01:42:53.025 --> 01:42:56.685
+So one year question here, sir, for each
+
+2204
+01:42:56.705 --> 01:42:59.365
+of the word embedding is are getting created,
+
+2205
+01:42:59.395 --> 01:43:01.045
+they're creating under embed,
+
+2206
+01:43:01.275 --> 01:43:02.045
+Correct? Correct,
+
+2207
+01:43:02.505 --> 01:43:03.505
+Sir. In the sentence
+
+2208
+01:43:03.505 --> 01:43:06.565
+and sentence for example, is having 15 word,
+
+2209
+01:43:07.075 --> 01:43:08.725
+then it'll be 15 in 200.
+
+2210
+01:43:09.505 --> 01:43:11.965
+So while they are converting into hundred, sir,
+
+2211
+01:43:11.965 --> 01:43:14.765
+and how they are processed in, uh, the networks.
+
+2212
+01:43:15.795 --> 01:43:17.925
+Okay? So again, we'll go back here.
+
+2213
+01:43:18.105 --> 01:43:21.925
+So what happens when your, your sentences are like that,
+
+2214
+01:43:22.115 --> 01:43:23.845
+your initial sentences are like that,
+
+2215
+01:43:23.985 --> 01:43:25.765
+and first you convert them into
+
+2216
+01:43:25.765 --> 01:43:26.885
+one hot vector representation.
+
+2217
+01:43:27.225 --> 01:43:29.565
+Yes, sir. Now, this one hot vector, which is,
+
+2218
+01:43:29.825 --> 01:43:31.405
+it is showing here five values.
+
+2219
+01:43:32.385 --> 01:43:35.965
+In this case, it is 75,000 values I've shown already.
+
+2220
+01:43:37.035 --> 01:43:41.175
+Yes, sir. Yeah. Here, see vocab sizes 75,509.
+
+2221
+01:43:41.485 --> 01:43:45.135
+That means that this vector, which is showing here five,
+
+2222
+01:43:45.595 --> 01:43:48.215
+the v size, V size is here, 75,000.
+
+2223
+01:43:48.235 --> 01:43:51.565
+So now say that there is a word VV is represented
+
+2224
+01:43:51.625 --> 01:43:54.245
+as 75,000 dimensional one heart factor,
+
+2225
+01:43:56.025 --> 01:43:59.935
+where only one value is one and rest all value will be zero.
+
+2226
+01:44:00.955 --> 01:44:02.615
+Yes, sir. So that is the problem.
+
+2227
+01:44:02.795 --> 01:44:06.695
+Now, what I want is I don't want to feed this kind
+
+2228
+01:44:06.695 --> 01:44:08.015
+of input to my RNN.
+
+2229
+01:44:08.655 --> 01:44:10.205
+There are multiple benefit of it.
+
+2230
+01:44:10.325 --> 01:44:13.285
+First of all, if I can feed it, no doubt, I,
+
+2231
+01:44:13.405 --> 01:44:14.805
+I will not use embedding layer.
+
+2232
+01:44:14.805 --> 01:44:16.685
+I'll directly feed it. But what will happen,
+
+2233
+01:44:17.705 --> 01:44:19.245
+how many connection we require here,
+
+2234
+01:44:19.425 --> 01:44:23.125
+how many connection it requires on whatever is the dimension
+
+2235
+01:44:23.145 --> 01:44:26.285
+of your, each word, which is 75,000 into you
+
+2236
+01:44:28.095 --> 01:44:31.915
+and you is 175,000 in 200.
+
+2237
+01:44:33.645 --> 01:44:34.735
+Just imagine. No,
+
+2238
+01:44:34.735 --> 01:44:36.935
+those many connection would be required if you'll directly
+
+2239
+01:44:36.935 --> 01:44:37.935
+process one hot vector.
+
+2240
+01:44:38.615 --> 01:44:42.175
+I have taken a call. I will not process 75,000.
+
+2241
+01:44:42.375 --> 01:44:46.495
+I will first convert the 75,000 into where it was one second
+
+2242
+01:44:47.245 --> 01:44:48.455
+into 100 rate.
+
+2243
+01:44:50.155 --> 01:44:51.455
+So it'll solve two problems.
+
+2244
+01:44:51.455 --> 01:44:54.455
+First of all, it'll reduce a hundred times parameter.
+
+2245
+01:44:54.945 --> 01:44:59.225
+It'll reduce parameter by a hundred times, uh, uh,
+
+2246
+01:44:59.225 --> 01:45:02.265
+75 into one 100 that we were doing.
+
+2247
+01:45:02.765 --> 01:45:05.625
+Uh, now we will only do a hundred into 64.
+
+2248
+01:45:05.705 --> 01:45:07.585
+I think it'll reduce a huge parameter,
+
+2249
+01:45:07.585 --> 01:45:09.185
+not a hundred times, but huge parameter.
+
+2250
+01:45:09.525 --> 01:45:13.905
+Yes, Yes. Secondly, I don't have to process this vector
+
+2251
+01:45:14.635 --> 01:45:16.185
+where all the values are zero.
+
+2252
+01:45:16.765 --> 01:45:20.665
+Rather, I will process this vector, uh, this vector
+
+2253
+01:45:20.715 --> 01:45:22.225
+where some values are negative.
+
+2254
+01:45:22.305 --> 01:45:23.825
+I understand this somewhere, uh,
+
+2255
+01:45:23.965 --> 01:45:25.705
+not this one I've shown, right?
+
+2256
+01:45:25.815 --> 01:45:28.545
+Embedding vector is here.
+
+2257
+01:45:28.665 --> 01:45:31.565
+I can, I have shown you a,
+
+2258
+01:45:33.145 --> 01:45:37.605
+so this vector, this is a hundred dimensional vector, okay?
+
+2259
+01:45:37.835 --> 01:45:40.645
+This is, this is the, another representation of
+
+2260
+01:45:40.645 --> 01:45:42.925
+that one hot dimensional vector through the embedding layer.
+
+2261
+01:45:43.145 --> 01:45:46.485
+So two problem, you know, my huge complexity has reduced
+
+2262
+01:45:46.485 --> 01:45:48.365
+because number of parameter has reduced.
+
+2263
+01:45:48.365 --> 01:45:50.605
+Secondly, the input is also reasonable.
+
+2264
+01:45:50.785 --> 01:45:52.525
+Having zeros is never good.
+
+2265
+01:45:52.835 --> 01:45:54.165
+It's better to have negative
+
+2266
+01:45:54.825 --> 01:45:57.285
+or positive value rather than having zero.
+
+2267
+01:45:57.385 --> 01:46:00.165
+So there are two purpose why I do that. Makes sense?
+
+2268
+01:46:00.305 --> 01:46:01.405
+Yes. Yeah.
+
+2269
+01:46:01.655 --> 01:46:04.005
+Thank you sir. Sir, what is the format, sir?
+
+2270
+01:46:04.085 --> 01:46:09.045
+I mean, how is that 75,000 converted to these uh, numbers?
+
+2271
+01:46:09.865 --> 01:46:11.405
+It, it is just a neural network.
+
+2272
+01:46:11.645 --> 01:46:15.605
+I mean, see, uh, you can imagine that suppose, uh,
+
+2273
+01:46:16.305 --> 01:46:18.645
+No sir, there you were showing those two tens.
+
+2274
+01:46:18.665 --> 01:46:21.685
+No, I mean earlier one vector would be one and all zeros.
+
+2275
+01:46:21.745 --> 01:46:25.485
+Ah, okay. But then you showed that, um, uh,
+
+2276
+01:46:25.805 --> 01:46:27.885
+decimals just now you showed
+
+2277
+01:46:28.205 --> 01:46:29.205
+'cause it's a neuron, right?
+
+2278
+01:46:29.525 --> 01:46:32.845
+I mean, see, you can imagine that this is the neurons, uh,
+
+2279
+01:46:32.845 --> 01:46:34.925
+because neurons can give you any output.
+
+2280
+01:46:35.235 --> 01:46:38.365
+Yeah. So it can be decimal, it can be negative
+
+2281
+01:46:38.365 --> 01:46:41.125
+and can be positive because you're doing what the neuron,
+
+2282
+01:46:41.775 --> 01:46:44.085
+it'll take the weighted sum plus bias
+
+2283
+01:46:44.625 --> 01:46:46.165
+and there is no activation function here.
+
+2284
+01:46:46.165 --> 01:46:47.685
+It's a linear activation function. Yeah,
+
+2285
+01:46:47.685 --> 01:46:49.245
+Linear operations.
+
+2286
+01:46:49.545 --> 01:46:50.645
+Yes. Linear operations.
+
+2287
+01:46:50.665 --> 01:46:52.485
+So it'll give you some decimal value only,
+
+2288
+01:46:53.385 --> 01:46:54.385
+Sir. Um,
+
+2289
+01:46:54.385 --> 01:46:58.005
+so the question is that, uh, the input, the X layer
+
+2290
+01:46:58.865 --> 01:47:00.045
+was, uh, the size
+
+2291
+01:47:00.065 --> 01:47:02.605
+of the X layer was 75,000 something, correct?
+
+2292
+01:47:02.605 --> 01:47:05.045
+Correct. Now with some function, which you showed us,
+
+2293
+01:47:05.145 --> 01:47:07.765
+you have converted that 75,000 into 100.
+
+2294
+01:47:08.035 --> 01:47:10.165
+Correct? So what is that function?
+
+2295
+01:47:10.225 --> 01:47:11.885
+Was what, what I was asking linear
+
+2296
+01:47:12.205 --> 01:47:13.205
+Function. That's what I'm saying. Okay. It's
+
+2297
+01:47:13.205 --> 01:47:14.125
+a linear function.
+
+2298
+01:47:14.635 --> 01:47:18.685
+Like i, I just draw then you will understand maybe I will
+
+2299
+01:47:18.685 --> 01:47:19.685
+take this pen.
+
+2300
+01:47:20.025 --> 01:47:21.725
+So suppose I have here
+
+2301
+01:47:22.675 --> 01:47:25.885
+75,000 diamonds, one hot vector.
+
+2302
+01:47:26.355 --> 01:47:29.775
+Yeah. Okay. So this is the dimension.
+
+2303
+01:47:29.795 --> 01:47:31.455
+You can say 70 5K,
+
+2304
+01:47:31.865 --> 01:47:32.865
+Right? Okay.
+
+2305
+01:47:32.865 --> 01:47:36.415
+70 5K, I'm sorry. Yeah, that's okay. Drawing.
+
+2306
+01:47:36.635 --> 01:47:39.735
+And then here I have a hundred new hundred.
+
+2307
+01:47:41.235 --> 01:47:43.405
+Okay, this is a hundred. What will happen?
+
+2308
+01:47:43.405 --> 01:47:45.285
+It's the fully connected layer actually. Mm-hmm.
+
+2309
+01:47:45.585 --> 01:47:47.525
+Mm-hmm. It's a fully connected layer simply
+
+2310
+01:47:47.665 --> 01:47:48.845
+so it's a one out vector.
+
+2311
+01:47:48.945 --> 01:47:52.645
+Mm-hmm. So all the values are zero anyway except one value
+
+2312
+01:47:52.645 --> 01:47:53.805
+where index is high.
+
+2313
+01:47:53.865 --> 01:47:55.085
+Mm. So that index
+
+2314
+01:47:55.225 --> 01:47:57.645
+and corresponding weight will make these neurons,
+
+2315
+01:47:57.645 --> 01:48:00.845
+so give some decimal output, correct?
+
+2316
+01:48:00.915 --> 01:48:02.365
+It's a neuron. Neuron will work. Mm-hmm.
+
+2317
+01:48:02.425 --> 01:48:05.245
+As a neuron, nothing different but neuron,
+
+2318
+01:48:05.325 --> 01:48:07.165
+because it is a neuron, it'll not give you zero
+
+2319
+01:48:07.225 --> 01:48:09.405
+and there is no activation function I'm using it
+
+2320
+01:48:09.405 --> 01:48:10.485
+depends on this weights.
+
+2321
+01:48:10.905 --> 01:48:13.005
+Mm. It depends on this weight.
+
+2322
+01:48:13.005 --> 01:48:15.445
+Suppose this weight is minus 0.28 mm
+
+2323
+01:48:15.585 --> 01:48:18.925
+and this particular whatever, it'll be like 0.2.
+
+2324
+01:48:18.925 --> 01:48:21.125
+That's why it is negative, positive sometimes use. Mm-hmm.
+
+2325
+01:48:22.025 --> 01:48:23.285
+But this is also a neural network.
+
+2326
+01:48:23.905 --> 01:48:26.325
+So instead of the, I mean there's this
+
+2327
+01:48:27.295 --> 01:48:28.405
+fully connected layer
+
+2328
+01:48:28.465 --> 01:48:31.405
+before the actual structure starts. Ah-huh.
+
+2329
+01:48:31.545 --> 01:48:33.605
+Yes, yes, yes. Embedding is nothing
+
+2330
+01:48:33.665 --> 01:48:34.925
+but fully connected layer
+
+2331
+01:48:35.185 --> 01:48:37.445
+before the actual things start. Yes, Uhhuh.
+
+2332
+01:48:37.755 --> 01:48:39.605
+Okay, sir. Thank you sir. Yeah,
+
+2333
+01:48:43.645 --> 01:48:47.145
+So basically we use embeddings to make our input more, uh,
+
+2334
+01:48:47.775 --> 01:48:50.265
+compact and meaningful rather than going for a pass,
+
+2335
+01:48:50.575 --> 01:48:52.425
+pass vector kind of thing, right, sir?
+
+2336
+01:48:52.655 --> 01:48:54.625
+That is one advantage. Second advantage.
+
+2337
+01:48:54.775 --> 01:48:56.665
+It's also reduce your huge parameter,
+
+2338
+01:48:56.665 --> 01:48:57.705
+huge number of parameters.
+
+2339
+01:48:57.705 --> 01:48:59.265
+Yes. The number of parameters get reduced.
+
+2340
+01:48:59.375 --> 01:49:01.945
+Yeah. And uh, yes, that is why it's
+
+2341
+01:49:02.045 --> 01:49:04.825
+So, why it's called weights actually it's just the output
+
+2342
+01:49:04.845 --> 01:49:06.105
+of a neural network, right?
+
+2343
+01:49:06.365 --> 01:49:08.545
+Uh, or what you call it weights.
+
+2344
+01:49:09.125 --> 01:49:12.905
+You said, uh, the embedding values of weights, right? Uh,
+
+2345
+01:49:13.085 --> 01:49:15.705
+Uh, because see when I was explaining this part
+
+2346
+01:49:15.775 --> 01:49:19.265
+that when you have 75,000 dimensional vector
+
+2347
+01:49:19.395 --> 01:49:23.705
+where only one value is one, whatever, they are connected
+
+2348
+01:49:23.705 --> 01:49:25.625
+with these neuron via some weights only, right?
+
+2349
+01:49:25.845 --> 01:49:28.065
+Mm-hmm. Okay. So you just return those
+
+2350
+01:49:28.065 --> 01:49:29.305
+weights as it is in the output.
+
+2351
+01:49:29.305 --> 01:49:30.425
+Is it okay? Yes. Yes.
+
+2352
+01:49:30.565 --> 01:49:32.065
+Except the first value, first value
+
+2353
+01:49:32.065 --> 01:49:33.185
+would be a little different.
+
+2354
+01:49:33.185 --> 01:49:35.145
+It's not really weight assets, right? Or
+
+2355
+01:49:35.525 --> 01:49:37.505
+No, all values because every, uh,
+
+2356
+01:49:37.645 --> 01:49:40.425
+inputs are connected via weights only and this is the neuron
+
+2357
+01:49:40.445 --> 01:49:41.585
+or X is a neuron.
+
+2358
+01:49:41.935 --> 01:49:43.825
+Okay, got it. It's an embedded representation
+
+2359
+01:49:43.965 --> 01:49:45.345
+of your representation.
+
+2360
+01:49:46.425 --> 01:49:49.265
+Okay, Got it. Yeah. So yeah, inputs, yeah,
+
+2361
+01:49:49.265 --> 01:49:50.465
+they're connected with the weights.
+
+2362
+01:49:50.485 --> 01:49:51.485
+Yes.
+
+2363
+01:49:53.465 --> 01:49:55.885
+Uh, sir, uh, last question sir.
+
+2364
+01:49:55.985 --> 01:49:58.325
+Uh, by doing this embeddings,
+
+2365
+01:49:58.825 --> 01:50:02.125
+are we reducing the computation time or the Yes,
+
+2366
+01:50:02.125 --> 01:50:05.645
+because of the decimals, we will have still have trouble.
+
+2367
+01:50:06.185 --> 01:50:07.325
+Oh, no, no, no, no different.
+
+2368
+01:50:07.435 --> 01:50:10.245
+That is a different complexity which you're talking about
+
+2369
+01:50:10.635 --> 01:50:13.965
+that whether a decimal representation is better than the
+
+2370
+01:50:13.965 --> 01:50:16.445
+inte, obviously decimal will take more space.
+
+2371
+01:50:16.735 --> 01:50:19.845
+Float float has the, uh, the,
+
+2372
+01:50:19.845 --> 01:50:21.645
+that more space than the integer.
+
+2373
+01:50:21.915 --> 01:50:24.445
+That is a separate kind of complexity, which you're talking
+
+2374
+01:50:25.105 --> 01:50:27.685
+the complexity which I was talking was in terms
+
+2375
+01:50:27.705 --> 01:50:29.165
+of the number of parameters.
+
+2376
+01:50:29.995 --> 01:50:31.165
+Okay. Okay.
+
+2377
+01:50:31.555 --> 01:50:34.365
+Obviously, uh, if you wish to represent everything
+
+2378
+01:50:34.365 --> 01:50:36.965
+as an in teaser, you can do one more level of wrapping
+
+2379
+01:50:36.965 --> 01:50:38.325
+that everything should be coming
+
+2380
+01:50:38.345 --> 01:50:40.245
+as an in teaser going as an in teaser.
+
+2381
+01:50:40.245 --> 01:50:41.725
+But that will not, that will simply,
+
+2382
+01:50:42.425 --> 01:50:44.445
+you'll simply lose the information if
+
+2383
+01:50:44.445 --> 01:50:45.485
+you will convert every time.
+
+2384
+01:50:45.585 --> 01:50:47.445
+And that is what happened in the quantization.
+
+2385
+01:50:47.785 --> 01:50:50.045
+You must have heard about it in the LLM quantization,
+
+2386
+01:50:50.105 --> 01:50:52.085
+one bit quantization, eight bit quantization.
+
+2387
+01:50:52.355 --> 01:50:54.405
+That is what they do. But you lose the
+
+2388
+01:50:54.405 --> 01:50:55.525
+information also in that case.
+
+2389
+01:50:55.635 --> 01:50:58.805
+Yeah. Okay. But there is separate, uh, complexity here.
+
+2390
+01:50:58.805 --> 01:51:01.005
+We are more majorly focusing on the number
+
+2391
+01:51:01.005 --> 01:51:02.725
+of parameters, how we are decreasing.
+
+2392
+01:51:02.755 --> 01:51:05.485
+Yeah. Okay.
+
+2393
+01:51:08.925 --> 01:51:13.895
+Alright. So I think, uh, now it is more clear
+
+2394
+01:51:13.895 --> 01:51:16.695
+that what is RNN, how it accepts input layer wise,
+
+2395
+01:51:16.695 --> 01:51:19.175
+what is happening inside, why write it timestamp?
+
+2396
+01:51:19.475 --> 01:51:21.535
+And so you just have to do the practice.
+
+2397
+01:51:21.585 --> 01:51:25.135
+Every line you can print and see what is happening.
+
+2398
+01:51:25.255 --> 01:51:27.535
+I have tried to do something you can do even
+
+2399
+01:51:27.845 --> 01:51:28.855
+more than these and all.
+
+2400
+01:51:29.395 --> 01:51:30.655
+So do the practice again.
+
+2401
+01:51:30.655 --> 01:51:32.615
+We'll connect on Saturday, we'll continue,
+
+2402
+01:51:32.985 --> 01:51:34.575
+right? Uh, and uh,
+
+2403
+01:51:35.125 --> 01:51:36.655
+Yeah, sure. Can you share this file?
+
+2404
+01:51:37.245 --> 01:51:40.175
+Yeah, yeah. I'll share, I'll share maybe same file, uh,
+
+2405
+01:51:40.415 --> 01:51:41.735
+RNNI file.
+
+2406
+01:51:42.075 --> 01:51:45.295
+But I will now integrate, uh, the link of this,
+
+2407
+01:51:45.755 --> 01:51:47.055
+uh, this notebook.
+
+2408
+01:51:47.405 --> 01:51:51.495
+Okay. In the same last file, PyTorch, I guess it's, the name
+
+2409
+01:51:51.495 --> 01:51:55.335
+of the file will be PyTorch, D-L-R-N-N-I guess,
+
+2410
+01:51:55.395 --> 01:51:58.775
+but then it'll have the integrated code at the last slide.
+
+2411
+01:51:59.125 --> 01:52:00.655
+I'll share that. Okay?
+
+2412
+01:52:02.085 --> 01:52:06.655
+Yeah, sure, sir. Bye. Thank you sir. Sir,
+
+2413
+01:52:07.225 --> 01:52:08.695
+Thank you so much. Thank you much sir. Thank
+
+2414
+01:52:08.835 --> 01:52:09.835
+Sir.
+
+2415
+01:52:11.545 --> 01:52:12.545
+Thank you, sir.
+
+2416
+01:52:13.315 --> 01:52:13.535
+Sir.
