@@ -1,0 +1,3217 @@
+WEBVTT
+NOTE Vimeo URL: https://vimeo.com/1144087638
+
+1
+00:13:05.220 --> 00:13:07.140
+Good morning, everyone.
+
+2
+00:13:08.500 --> 00:13:09.010
+Good morning,
+
+3
+00:13:09.010 --> 00:13:11.330
+sir. Good morning, sir. Morning,
+
+4
+00:13:11.330 --> 00:13:14.210
+sir. Morning,
+
+5
+00:13:14.220 --> 00:13:15.780
+sir.
+
+6
+00:13:15.880 --> 00:13:19.420
+Everything is fine with all of you?
+
+7
+00:13:19.480 --> 00:13:23.110
+Should be. Yeah, all
+
+8
+00:13:23.160 --> 00:13:23.620
+good.
+
+9
+00:13:23.630 --> 00:13:23.630
+
+10
+00:13:23.640 --> 00:13:26.390
+Thank you. Yes, sir. Uh, yes.
+
+11
+00:13:26.420 --> 00:13:30.120
+Sivakumar is very happy today. I guess, um, when something is good happen-
+
+12
+00:13:30.520 --> 00:13:32.960
+is happening with him.
+
+13
+00:13:33.080 --> 00:13:34.420
+So you're telling me?
+
+14
+00:13:34.480 --> 00:13:35.400
+Yeah.
+
+15
+00:13:35.440 --> 00:13:39.020
+Yeah. Saturday, after a long time, I'm free this Saturday, sir.
+
+16
+00:13:39.060 --> 00:13:42.820
+So otherwise it's so tightly packed all last three weeks.
+
+17
+00:13:42.880 --> 00:13:43.180
+Okay.
+
+18
+00:13:43.200 --> 00:13:44.860
+Back to back work.
+
+19
+00:13:44.920 --> 00:13:45.789
+Oh, that's it.
+
+20
+00:13:45.800 --> 00:13:49.660
+It looks- looks totally different Saturday for me.
+
+21
+00:13:50.240 --> 00:13:50.250
+(laughs)
+
+22
+00:13:50.360 --> 00:13:54.300
+Uh, it's, um, like a new way of, you know, uh, like perceiving the world
+
+23
+00:13:54.320 --> 00:13:56.020
+and li- learning things and all.
+
+24
+00:13:56.160 --> 00:13:56.550
+Exactly.
+
+25
+00:13:56.640 --> 00:13:59.969
+Like a whole new experience, you can say. Okay, and, uh, how is the class...
+
+26
+00:14:00.020 --> 00:14:02.380
+other classes are going? Everything fine?
+
+27
+00:14:02.390 --> 00:14:05.200
+Any problems you guys are facing?
+
+28
+00:14:06.760 --> 00:14:10.280
+I guess not, right? Because we have already dealt with it like a first-semester
+
+29
+00:14:10.290 --> 00:14:13.880
+would. So, uh, yeah. So
+
+30
+00:14:13.940 --> 00:14:17.100
+today we are having a few topics. Uh,
+
+31
+00:14:18.240 --> 00:14:20.250
+let's share my screen.
+
+32
+00:14:20.760 --> 00:14:27.260
+Okay.
+
+33
+00:14:28.600 --> 00:14:28.880
+Mm.
+
+34
+00:14:31.660 --> 00:14:35.540
+So in the previous class, we, uh, dealt with the things that was the,
+
+35
+00:14:35.580 --> 00:14:36.740
+uh, you know,
+
+36
+00:14:38.500 --> 00:14:41.340
+search with informed and uninformed search techniques.
+
+37
+00:14:41.400 --> 00:14:45.280
+Also, we, uh, like, uh, had a, like, brush up on the BFS,
+
+38
+00:14:45.340 --> 00:14:48.300
+DFS, breadth-first search, depth-first search.
+
+39
+00:14:48.420 --> 00:14:52.280
+Uh, then we learned into like a few of the heuristic-based search
+
+40
+00:14:52.360 --> 00:14:56.200
+algorithms, such as A-star. Then other algorithms are also there,
+
+41
+00:14:56.260 --> 00:15:00.040
+but we didn't actually jump into those, uh, such as, uh, like alpha-beta pruning,
+
+42
+00:15:00.120 --> 00:15:03.960
+uh, min-max, or, uh, others, uh, hill climbing algorithms.
+
+43
+00:15:03.980 --> 00:15:06.980
+Multiple other- other algorithms are there. Okay.
+
+44
+00:15:07.020 --> 00:15:10.840
+The basic idea is, if we are having some kind of problems which can
+
+45
+00:15:10.900 --> 00:15:14.840
+be dealt with searching techniques, uh, that, uh, solves some
+
+46
+00:15:14.920 --> 00:15:18.600
+kind of, uh, problems for the AI-related search, uh,
+
+47
+00:15:19.540 --> 00:15:23.040
+we can directly go for the like, uh, you know, the basic
+
+48
+00:15:23.100 --> 00:15:26.980
+understandings of the, uh, depth-first search or breadth-first search, or we can go
+
+49
+00:15:27.040 --> 00:15:29.200
+for the informed data search techniques.
+
+50
+00:15:29.220 --> 00:15:32.980
+Along with that one, like, on the, uh, like, uh, basis of
+
+51
+00:15:33.020 --> 00:15:37.000
+this BFS, DFS and, and informed search, we'll be diving into
+
+52
+00:15:37.140 --> 00:15:40.840
+a little bit deeper, that is the con- constraint satisfaction
+
+53
+00:15:40.920 --> 00:15:44.520
+problem. Fine? So CSP is a thing
+
+54
+00:15:44.800 --> 00:15:48.780
+where mostly we are actually having this problem, but we don't know
+
+55
+00:15:48.840 --> 00:15:52.080
+how to solve this problem. I'll give you a few examples.
+
+56
+00:15:52.120 --> 00:15:56.080
+Suppose, uh...
+
+57
+00:16:02.420 --> 00:16:02.560
+So
+
+58
+00:16:03.520 --> 00:16:06.930
+this, this, this is a game. Uh, sorry. One of the example.
+
+59
+00:16:07.160 --> 00:16:10.920
+This is a game, Sudoku. You might have played, uh, like, uh, while growing
+
+60
+00:16:11.020 --> 00:16:14.780
+up, or maybe till this date we actually also
+
+61
+00:16:14.820 --> 00:16:16.820
+play this one, right?
+
+62
+00:16:19.000 --> 00:16:21.120
+Are you familiar with this one?
+
+63
+00:16:21.240 --> 00:16:22.260
+Yes, sir.
+
+64
+00:16:22.280 --> 00:16:22.740
+Yeah.
+
+65
+00:16:22.780 --> 00:16:22.960
+Yes.
+
+66
+00:16:22.969 --> 00:16:26.740
+So this is a game where 81 squares are there,
+
+67
+00:16:26.780 --> 00:16:29.830
+and each of the squares will be having some values in...
+
+68
+00:16:29.920 --> 00:16:33.820
+Has to have like assigned. Each of the row and, uh, the columns will
+
+69
+00:16:33.940 --> 00:16:36.240
+have, you know, distinct numbers.
+
+70
+00:16:36.260 --> 00:16:39.210
+So, uh, no numbers can be repeated from the...
+
+71
+00:16:39.240 --> 00:16:42.400
+Suppose this row I'm filling. So nine is already filled.
+
+72
+00:16:42.420 --> 00:16:45.500
+So in this row, I cannot fill nine again. Okay?
+
+73
+00:16:45.520 --> 00:16:49.460
+Uh, in this column, okay, nine is there, I cannot fill nine again.
+
+74
+00:16:49.760 --> 00:16:53.560
+And even- within the boxes also, three across three, I cannot put like a
+
+75
+00:16:53.640 --> 00:16:57.500
+ma- uh, like repeated numbers. So the- there are multiple, you know, restrictions
+
+76
+00:16:57.540 --> 00:17:01.400
+are there. So this is a, these are the actually
+
+77
+00:17:01.460 --> 00:17:03.380
+problem of the constraint satisfaction problem.
+
+78
+00:17:03.400 --> 00:17:06.860
+This is one example, I'll show you more examples.
+
+79
+00:17:06.940 --> 00:17:08.100
+Uh, suppose India map.
+
+80
+00:17:12.320 --> 00:17:15.920
+Okay. This is a good image of India.
+
+81
+00:17:15.960 --> 00:17:17.560
+Yes.
+
+82
+00:17:19.860 --> 00:17:23.500
+Okay. So in this image, you can see the multiple
+
+83
+00:17:23.599 --> 00:17:26.200
+states are having different, different color.
+
+84
+00:17:26.260 --> 00:17:30.160
+Either, like when, as a, like a person, we are doing these
+
+85
+00:17:30.220 --> 00:17:33.940
+things, we are having the intellectual mind, so these are the like
+
+86
+00:17:34.020 --> 00:17:36.780
+constraints or the restriction we are having.
+
+87
+00:17:36.840 --> 00:17:40.680
+If you are painting, you know, uh, this, uh, suppose one state we are
+
+88
+00:17:40.700 --> 00:17:43.260
+taking, suppose Maharashtra has pink color.
+
+89
+00:17:43.300 --> 00:17:47.160
+We cannot, uh, colorize pink color the neighboring
+
+90
+00:17:47.200 --> 00:17:50.480
+states, such as Gujarat, such as Maharashtra, such as Karnataka, such
+
+91
+00:17:50.540 --> 00:17:54.280
+as, uh, you know, uh, Telangana. These states we cannot
+
+92
+00:17:54.340 --> 00:17:58.050
+paint as a pink color. So when we are actually
+
+93
+00:17:58.260 --> 00:18:01.340
+trying to do these kind of problems as a human, we are having the
+
+94
+00:18:01.400 --> 00:18:04.280
+intellect, we are able to fix this problem.
+
+95
+00:18:04.300 --> 00:18:08.180
+But computers are having these problems, where they,
+
+96
+00:18:08.380 --> 00:18:12.040
+uh, like are teaching them what are the rules, you cannot like, uh, you know,
+
+97
+00:18:12.200 --> 00:18:12.460
+uh,
+
+98
+00:18:13.500 --> 00:18:17.440
+escape by it. Or like, uh, so- suppose you're training some models and
+
+99
+00:18:17.520 --> 00:18:21.340
+all, so they should stick to some kind of rules and regulations, and
+
+100
+00:18:21.420 --> 00:18:24.120
+then they solve the problems and all.
+
+101
+00:18:24.160 --> 00:18:28.002
+So these are actually problems of...Constrained satisfaction problem.
+
+102
+00:18:28.032 --> 00:18:31.992
+So I'll show you, I, uh, actually, uh, show you this, uh, puzzles
+
+103
+00:18:32.072 --> 00:18:34.772
+also, like, uh, this is a map coloring problem.
+
+104
+00:18:35.312 --> 00:18:39.272
+Then come in the N-queen problem. Those who are,
+
+105
+00:18:39.292 --> 00:18:41.072
+uh, actually background from CSC,
+
+106
+00:18:42.072 --> 00:18:45.892
+uh, might be familiar with this one, nine queen problem, eight
+
+107
+00:18:45.952 --> 00:18:48.942
+queen problem. So this is also another
+
+108
+00:18:49.052 --> 00:18:52.972
+problem, where multiple queens you have to set up in a row
+
+109
+00:18:53.012 --> 00:18:56.952
+and column. You cannot assign, uh, within single row
+
+110
+00:18:56.972 --> 00:18:59.812
+and single column, multiple queens and all.
+
+111
+00:18:59.852 --> 00:19:03.361
+So, you know, hundreds of, and these problems are big.
+
+112
+00:19:03.392 --> 00:19:06.452
+Like, I'll give you o-one example for, like, w- you say.
+
+113
+00:19:06.492 --> 00:19:10.412
+Suppose timetables and all you are actually trying to create, uh, for your own
+
+114
+00:19:10.452 --> 00:19:12.672
+self. You're creating agenda for the day.
+
+115
+00:19:12.712 --> 00:19:14.652
+You cannot have two meetings at one time.
+
+116
+00:19:15.352 --> 00:19:18.732
+So that will be actually some kind of confliction with your restrictions should be
+
+117
+00:19:18.792 --> 00:19:21.262
+there. So how do we manage these things?
+
+118
+00:19:21.272 --> 00:19:24.932
+So we, for those things, we do this CSP,
+
+119
+00:19:24.972 --> 00:19:26.472
+constraint satisfaction problem.
+
+120
+00:19:26.492 --> 00:19:30.352
+To understand the CSP, okay, uh, what are the,
+
+121
+00:19:30.372 --> 00:19:33.892
+like, different parameters involved in the CSP?
+
+122
+00:19:35.312 --> 00:19:38.772
+And how do we solve this one? Okay. Then later on, some hands-on
+
+123
+00:19:38.812 --> 00:19:42.132
+experiences how to actually deal with the CSP problems or not.
+
+124
+00:19:42.152 --> 00:19:46.092
+Right? Okay.
+
+125
+00:19:53.412 --> 00:19:53.592
+Mm.
+
+126
+00:19:54.492 --> 00:19:58.432
+So CSP or constraint satisfaction problem was a, like, uh,
+
+127
+00:19:58.452 --> 00:19:59.712
+you know, uh,
+
+128
+00:20:00.992 --> 00:20:04.792
+set of rules we follow, set of, uh, you know, uh, constraint we
+
+129
+00:20:04.812 --> 00:20:08.782
+provide, set of variable we're having, set of variables having, set of, uh,
+
+130
+00:20:08.792 --> 00:20:12.352
+like, uh, domains we are having. So multiple factors, parameters are there.
+
+131
+00:20:12.412 --> 00:20:16.192
+Based on that, we'll solve the problems. Let's understand what are the things.
+
+132
+00:20:16.252 --> 00:20:20.152
+Uh, CSP is a mathematical problem defined by a set of
+
+133
+00:20:20.212 --> 00:20:24.172
+objects whose state must satisfy a number of
+
+134
+00:20:24.232 --> 00:20:25.912
+constraints or limitations.
+
+135
+00:20:26.832 --> 00:20:30.472
+I'll repeat. A constraint satisfaction problem is a mathematical problem
+
+136
+00:20:30.572 --> 00:20:34.372
+defined by a set of objects, okay, whose state must
+
+137
+00:20:34.412 --> 00:20:37.512
+satisfy a number of constraints or limitations.
+
+138
+00:20:37.532 --> 00:20:41.412
+Just like in map coloring problem, no neighboring states should share
+
+139
+00:20:41.472 --> 00:20:45.252
+the same color. In, uh, N-queen problem, no
+
+140
+00:20:45.372 --> 00:20:49.292
+queen should actually share the same row, same column with other queens.
+
+141
+00:20:49.332 --> 00:20:52.962
+In a, uh, Sudoku problem, no rows or columns or, uh,
+
+142
+00:20:53.112 --> 00:20:56.272
+boxes should share the same repeated numbers and all.
+
+143
+00:20:56.292 --> 00:20:59.122
+So we are having multiple states should be there.
+
+144
+00:20:59.172 --> 00:21:02.832
+In multiple states, these constraints should be matched. Okay.
+
+145
+00:21:02.852 --> 00:21:06.312
+So, uh, what are the things we have to keep in mind?
+
+146
+00:21:06.332 --> 00:21:08.912
+Uh, we have to keep in mind these things.
+
+147
+00:21:08.952 --> 00:21:12.792
+A set of variables, suppose X is a set of variable we are taking,
+
+148
+00:21:12.852 --> 00:21:15.972
+D is the domains of each e- each of the variables.
+
+149
+00:21:15.982 --> 00:21:19.892
+Suppose X is the, you know, uh, set of variables
+
+150
+00:21:19.972 --> 00:21:23.912
+we are saying, uh, suppose, uh, 80, or
+
+151
+00:21:24.032 --> 00:21:25.152
+like, suppose, uh,
+
+152
+00:21:26.052 --> 00:21:29.492
+let's just take a simple example. Map coloring problem, we are taking. Okay.
+
+153
+00:21:29.552 --> 00:21:33.072
+So we are having currently, uh, 29 states, I
+
+154
+00:21:33.152 --> 00:21:36.812
+guess. So we are having set of 29 variables in the state
+
+155
+00:21:36.972 --> 00:21:40.852
+of India. So X is collection of,
+
+156
+00:21:40.872 --> 00:21:44.232
+uh, Indian states, which are having multiple states there.
+
+157
+00:21:44.292 --> 00:21:47.952
+D will be the domains. So each of this variable will be
+
+158
+00:21:47.992 --> 00:21:51.772
+represent with a D1, D2, D3, up to D29 for
+
+159
+00:21:51.872 --> 00:21:55.732
+each of the states. And each view will represent what is the, uh, what are
+
+160
+00:21:55.752 --> 00:21:58.352
+the actually, uh, variables they can store.
+
+161
+00:21:58.372 --> 00:22:00.292
+Each of the variables, what are the domains?
+
+162
+00:22:00.312 --> 00:22:04.172
+So red, green, blue, what are the colors you are providing in the option. Okay.
+
+163
+00:22:04.192 --> 00:22:07.532
+Now, C is the constraint, where we are providing the information, what are the
+
+164
+00:22:07.592 --> 00:22:09.952
+restriction, uh, are to be followed.
+
+165
+00:22:09.992 --> 00:22:13.712
+So no neighboring state are to be having the same colors.
+
+166
+00:22:13.752 --> 00:22:17.552
+Let's just take another example as well, show you.
+
+167
+00:22:19.272 --> 00:22:21.292
+Okay.
+
+168
+00:22:21.302 --> 00:22:29.712
+(laughs)
+
+169
+00:22:31.692 --> 00:22:34.652
+So X will be the domain, sorry, variable.
+
+170
+00:22:34.692 --> 00:22:38.632
+In this one, we'll be having multiple states. Okay.
+
+171
+00:22:38.652 --> 00:22:42.092
+Karnataka, uh,
+
+172
+00:22:42.132 --> 00:22:43.052
+suppose,
+
+173
+00:22:44.232 --> 00:22:50.852
+right,
+
+174
+00:22:51.232 --> 00:22:53.592
+N. Right? And suppose
+
+175
+00:22:55.392 --> 00:22:57.712
+X1 is representing
+
+176
+00:22:57.732 --> 00:23:00.092
+Karnataka.
+
+177
+00:23:02.632 --> 00:23:05.512
+X2 is representing Maharashtra.
+
+178
+00:23:10.172 --> 00:23:11.192
+X3 is
+
+179
+00:23:12.592 --> 00:23:15.252
+India, okay?
+
+180
+00:23:16.492 --> 00:23:17.392
+X4 is
+
+181
+00:23:22.992 --> 00:23:24.792
+UP. X5 is, suppose
+
+182
+00:23:25.672 --> 00:23:27.272
+Telangana.
+
+183
+00:23:28.292 --> 00:23:32.232
+Right. So multiple variables are there for
+
+184
+00:23:32.332 --> 00:23:35.192
+each of the Xs, okay? These are the
+
+185
+00:23:35.232 --> 00:23:36.752
+variables.
+
+186
+00:23:38.612 --> 00:23:40.872
+What we are solving? We are trying to solve the map coloring
+
+187
+00:23:40.892 --> 00:23:44.992
+problem.
+
+188
+00:23:47.692 --> 00:23:56.692
+Right.
+
+189
+00:23:56.832 --> 00:24:00.812
+Now, secondary thing, that will be the domains.
+
+190
+00:24:04.442 --> 00:24:06.572
+D.
+
+191
+00:24:17.552 --> 00:24:21.192
+So for each of the Xs, there will be one D.
+
+192
+00:24:21.232 --> 00:24:25.172
+So X1 will be covered for the D1, X2 will be having D2, X3
+
+193
+00:24:25.192 --> 00:24:28.691
+will be having D3, and these are actually representative what are the
+
+194
+00:24:28.832 --> 00:24:31.372
+colors each of them are representing.
+
+195
+00:24:31.412 --> 00:24:35.252
+So D1 will be having-... except of what are
+
+196
+00:24:35.312 --> 00:24:38.672
+the, you know, domains of each of the variable can contain.
+
+197
+00:24:38.732 --> 00:24:42.111
+So suppose red, green,
+
+198
+00:24:42.172 --> 00:24:44.732
+blue, yellow.
+
+199
+00:24:44.752 --> 00:24:48.732
+Right? So for D2,
+
+200
+00:24:48.812 --> 00:24:50.871
+that will be the same as
+
+201
+00:24:51.032 --> 00:24:54.032
+D1.
+
+202
+00:25:03.412 --> 00:25:06.912
+D3. So each of the
+
+203
+00:25:06.972 --> 00:25:10.692
+variables X1, X2, X3, what will be the, you know,
+
+204
+00:25:10.792 --> 00:25:14.682
+uh, variables we can insert? Like what are, what are the ranges they can
+
+205
+00:25:14.812 --> 00:25:17.322
+have? So up to DN, those will be the
+
+206
+00:25:17.432 --> 00:25:19.032
+same.
+
+207
+00:25:20.492 --> 00:25:23.131
+Okay. Then we'll be having constraints.
+
+208
+00:25:23.152 --> 00:25:26.412
+So here constraint as C. So C will be
+
+209
+00:25:27.591 --> 00:25:29.972
+set of rules where we'll be providing.
+
+210
+00:25:31.712 --> 00:25:33.072
+So each X1,
+
+211
+00:25:34.331 --> 00:25:36.772
+okay, cannot be equals to
+
+212
+00:25:36.952 --> 00:25:40.512
+X2.
+
+213
+00:26:47.132 --> 00:26:47.552
+Okay.
+
+214
+00:26:48.492 --> 00:26:52.152
+Fine. So these are the the- three things we have to keep in mind.
+
+215
+00:26:52.172 --> 00:26:55.812
+The first, what are the, like, variables that we are
+
+216
+00:26:55.851 --> 00:26:59.411
+actually having in the map coloring, the states we are having. Okay.
+
+217
+00:26:59.492 --> 00:27:03.472
+Secondary thing, each of this, uh, variable have some domain,
+
+218
+00:27:03.672 --> 00:27:06.532
+D1, D2, D3, and each domain will have some ranges.
+
+219
+00:27:06.572 --> 00:27:10.402
+So what are the, you know, particular, uh, in each of the
+
+220
+00:27:10.432 --> 00:27:13.512
+variables, what are the elements you can provide?
+
+221
+00:27:13.532 --> 00:27:17.252
+So we are having multiple colors for that one, red, green, blue, yellow, these kind
+
+222
+00:27:17.272 --> 00:27:20.212
+of things. And then we are having the constraints.
+
+223
+00:27:20.232 --> 00:27:24.172
+In this one, constraints, we are providing for each of
+
+224
+00:27:24.252 --> 00:27:26.851
+them...
+
+225
+00:27:29.312 --> 00:27:33.111
+For each of the, you know, X1, X2, X3, multiple constraints will be given.
+
+226
+00:27:33.472 --> 00:27:37.252
+X1 cannot be equal to X2. The neighboring states cannot be having the
+
+227
+00:27:37.532 --> 00:27:39.252
+same colors. That is the idea, okay?
+
+228
+00:27:39.871 --> 00:27:42.891
+This is how actually we formulate the
+
+229
+00:27:42.952 --> 00:27:46.841
+problem. Later we can do the, you know, apply some of
+
+230
+00:27:46.911 --> 00:27:50.632
+the searching techniques for the states, and then we can solve the
+
+231
+00:27:50.652 --> 00:27:53.831
+problem. This is one example. Let me give you another
+
+232
+00:27:53.871 --> 00:27:56.391
+example. Okay. So suppose
+
+233
+00:27:56.432 --> 00:28:09.851
+Sudoku.
+
+234
+00:28:12.012 --> 00:28:14.672
+Uh, okay. So in this one,
+
+235
+00:28:15.712 --> 00:28:18.792
+X1, it will be collection of X1,
+
+236
+00:28:19.052 --> 00:28:21.742
+X2, X3, dot, dot,
+
+237
+00:28:22.312 --> 00:28:25.911
+X81. Up to 81 boxes are there,
+
+238
+00:28:25.972 --> 00:28:29.792
+okay? Then domains will be your, for each
+
+239
+00:28:29.851 --> 00:28:30.492
+of the, you know,
+
+240
+00:28:32.371 --> 00:28:36.192
+Xs will be having one, two, three, four,
+
+241
+00:28:36.232 --> 00:28:39.562
+five, six, seven, eight, nine.
+
+242
+00:28:40.472 --> 00:28:43.972
+This will be the domain, okay, for each of the D1, D2, D3,
+
+243
+00:28:44.772 --> 00:28:47.831
+all those things, and constraints should be
+
+244
+00:28:49.512 --> 00:28:52.172
+rows,
+
+245
+00:28:54.212 --> 00:28:55.812
+columns,
+
+246
+00:28:58.072 --> 00:28:58.432
+and
+
+247
+00:28:59.712 --> 00:29:01.132
+3X3 boxes
+
+248
+00:29:03.492 --> 00:29:05.172
+cannot repeat
+
+249
+00:29:10.992 --> 00:29:12.562
+any, uh,
+
+250
+00:29:14.072 --> 00:29:17.831
+numbers. Okay? So, this is like a
+
+251
+00:29:17.871 --> 00:29:20.822
+short version I have written for each of the limits I have predicted.
+
+252
+00:29:21.292 --> 00:29:25.111
+So for each of the row, for each of the column, each of the bounding boxes, okay,
+
+253
+00:29:25.192 --> 00:29:29.012
+uh, we are not supposed to repeat the numbers.
+
+254
+00:29:29.052 --> 00:29:32.861
+So this is how we formulate the, you know, CSP, the constraint
+
+255
+00:29:32.911 --> 00:29:34.472
+satisfaction problem.
+
+256
+00:29:36.032 --> 00:29:39.692
+The core fundamental three, uh, parameters you understood, I hope.
+
+257
+00:29:39.732 --> 00:29:43.692
+Okay? Now from these parameters, the variable, domains
+
+258
+00:29:43.732 --> 00:29:47.522
+and constraint, we set up the, you know, like go and
+
+259
+00:29:47.611 --> 00:29:49.732
+solve the problems. How do we solve this problem?
+
+260
+00:29:49.741 --> 00:29:52.192
+Like suppose let's just go into this one.
+
+261
+00:29:52.292 --> 00:29:55.432
+We are having a problem that is a map coloring problem here.
+
+262
+00:29:55.591 --> 00:29:58.351
+We have like multiple states of like a, you know,
+
+263
+00:29:59.532 --> 00:30:03.432
+a, a map is given, so we are having, uh, Western, uh,
+
+264
+00:30:03.452 --> 00:30:06.831
+Australia, then Northern Territory, Queensland, then Southern
+
+265
+00:30:06.972 --> 00:30:10.952
+Australia, then New South Wales. So multiple, uh,
+
+266
+00:30:10.992 --> 00:30:11.351
+you know,
+
+267
+00:30:12.411 --> 00:30:16.302
+states have been given. So we are having the variables for each of the state that
+
+268
+00:30:16.331 --> 00:30:18.692
+is represents them. We are having six.
+
+269
+00:30:18.851 --> 00:30:22.052
+Domains are having three colors we are using for this one.
+
+270
+00:30:22.132 --> 00:30:23.911
+If needed, more colors you can use.
+
+271
+00:30:23.952 --> 00:30:27.932
+So we always try to now optimize to use less number
+
+272
+00:30:27.972 --> 00:30:31.741
+of colors to actually optimize the problem.
+
+273
+00:30:32.371 --> 00:30:35.648
+So three colors we are using in this one.Okay?
+
+274
+00:30:35.658 --> 00:30:38.268
+And adjacent region must have different colors.
+
+275
+00:30:38.288 --> 00:30:41.068
+So, that is the, uh, problem rules that is there.
+
+276
+00:30:41.088 --> 00:30:44.608
+So, I'll try to solve this one in later stages.
+
+277
+00:30:44.687 --> 00:30:46.687
+And how do you visualize this problem?
+
+278
+00:30:46.707 --> 00:30:50.128
+The CSPE can be visualized in constraint graphs. Okay.
+
+279
+00:30:50.168 --> 00:30:53.487
+So each of the, you know, uh, these nodes which will be
+
+280
+00:30:53.508 --> 00:30:56.368
+representing the variable and their domains.
+
+281
+00:30:56.388 --> 00:30:59.528
+So A, B, C, D, what are the variables that they are
+
+282
+00:30:59.588 --> 00:31:03.538
+having? And we'll be starting with the one of the things that is, uh,
+
+283
+00:31:03.648 --> 00:31:07.308
+suppose A can have the variable one, two, three, four.
+
+284
+00:31:07.328 --> 00:31:11.268
+The neighboring state, suppose B cannot have the
+
+285
+00:31:11.328 --> 00:31:14.987
+variable, you know, uh, the A cannot be
+
+286
+00:31:15.068 --> 00:31:18.588
+equals to B. Okay. So B, we are having another variable.
+
+287
+00:31:18.628 --> 00:31:22.388
+Suppose in the initial stage you have set up the A
+
+288
+00:31:22.467 --> 00:31:25.828
+value as three. So instead of B,
+
+289
+00:31:25.868 --> 00:31:29.608
+so three is reacted will be only having option one, two, and four.
+
+290
+00:31:30.068 --> 00:31:33.487
+Right? Similarly, B and C cannot be equals.
+
+291
+00:31:33.548 --> 00:31:37.088
+What are the domains of C? Suppose one, two, three, four.
+
+292
+00:31:37.148 --> 00:31:37.558
+So,
+
+293
+00:31:38.868 --> 00:31:42.828
+if we are setting up, uh, suppose any variable two for
+
+294
+00:31:42.928 --> 00:31:46.227
+B. Okay. So one by one, we actually,
+
+295
+00:31:46.248 --> 00:31:49.977
+uh, provide some numbers and we check if the, the
+
+296
+00:31:50.808 --> 00:31:53.628
+state is, you know, satisfiable or not.
+
+297
+00:31:53.687 --> 00:31:56.848
+If that is satisfiable, we explore more states.
+
+298
+00:31:56.908 --> 00:32:00.568
+If it is not satisfiable, we will go back, which will change, like do the
+
+299
+00:32:00.608 --> 00:32:04.187
+modification and changes, then try again and explore other
+
+300
+00:32:04.268 --> 00:32:08.007
+states. Okay? So it's a problem of this, uh, you know, DFS,
+
+301
+00:32:08.028 --> 00:32:11.768
+BFS or the like searching algorithms where multiple
+
+302
+00:32:11.848 --> 00:32:14.687
+states are there. Okay?
+
+303
+00:32:16.727 --> 00:32:19.888
+Show you one other example.
+
+304
+00:32:22.068 --> 00:32:25.148
+Uh, see here, how A and D is having all the four states, sir?
+
+305
+00:32:25.168 --> 00:32:28.348
+Because when we have the constraint where we are told that A takes a value of
+
+306
+00:32:28.388 --> 00:32:32.088
+three. So B also should not take the three, and D should not take, because they're
+
+307
+00:32:32.168 --> 00:32:33.628
+all adjacent too.
+
+308
+00:32:33.707 --> 00:32:36.908
+No. No. Th- this is actually not related to map learning problem.
+
+309
+00:32:36.947 --> 00:32:39.268
+This is a, like a, the constraint is given.
+
+310
+00:32:39.288 --> 00:32:42.528
+So this is for actually providing you the h- how do we visualize the
+
+311
+00:32:42.568 --> 00:32:46.187
+problem. So here it is showing that A and
+
+312
+00:32:46.227 --> 00:32:49.528
+D can be same, or used to be
+
+313
+00:32:49.568 --> 00:32:51.808
+same.
+
+314
+00:32:52.848 --> 00:32:53.028
+Okay?
+
+315
+00:32:53.068 --> 00:32:54.028
+Okay, sir. Okay.
+
+316
+00:32:54.068 --> 00:32:57.947
+So, so A and D can share the same number, or should share the
+
+317
+00:32:58.007 --> 00:33:01.768
+same number, something like that. A and B cannot share the same number.
+
+318
+00:33:01.788 --> 00:33:05.378
+So that is how we visualize. Each of the edges, we provide the
+
+319
+00:33:05.408 --> 00:33:08.778
+constraints, and each of the nodes we provide the variables and
+
+320
+00:33:08.828 --> 00:33:12.507
+their, uh, you know, the domains, whatever the, is
+
+321
+00:33:12.727 --> 00:33:16.187
+left after the edges has been connected, the constraints have been
+
+322
+00:33:16.227 --> 00:33:19.727
+applied, and then whatever is left and we
+
+323
+00:33:19.768 --> 00:33:22.628
+apply, uh, like based on that, we provide some kind of
+
+324
+00:33:22.687 --> 00:33:25.028
+values.
+
+325
+00:33:25.808 --> 00:33:27.388
+Okay?
+
+326
+00:33:30.707 --> 00:33:34.507
+Just do one problem solution, then we'll be able to understand, I think,
+
+327
+00:33:34.548 --> 00:33:37.588
+like how this problem solution is to be
+
+328
+00:33:37.648 --> 00:33:42.368
+...
+
+329
+00:33:50.207 --> 00:33:53.487
+Oh, okay. Okay.
+
+330
+00:33:54.967 --> 00:34:00.348
+So,
+
+331
+00:34:00.928 --> 00:36:07.788
+so
+
+332
+00:36:08.048 --> 00:36:11.758
+once we are having these four, you know, states, A, B, C,
+
+333
+00:36:11.848 --> 00:36:15.788
+D, and suppose these are actually edges are showing the what are the,
+
+334
+00:36:15.828 --> 00:36:19.288
+like each of the maps are connected with each of the states. Right?
+
+335
+00:36:19.328 --> 00:36:23.288
+You understand? Now, this A and B cannot share
+
+336
+00:36:23.328 --> 00:36:26.288
+the same color. A and C cannot share the same color. Okay.
+
+337
+00:36:26.308 --> 00:36:28.868
+A and D cannot share the same color, okay?
+
+338
+00:36:28.888 --> 00:36:32.668
+But C and E can save the same color, because they are not directly
+
+339
+00:36:32.708 --> 00:36:36.468
+connected. So, like, for solving this one-
+
+340
+00:36:47.758 --> 00:36:50.078
+N.
+
+341
+00:36:50.198 --> 00:36:54.078
+So, R, G, B, E, D.
+
+342
+00:36:59.198 --> 00:37:02.638
+Okay. So how do you solve this? Each of the element, what are the
+
+343
+00:37:02.958 --> 00:37:06.678
+colors we get? R, G, B.
+
+344
+00:37:26.678 --> 00:37:29.328
+Now, for in the initial stage...
+
+345
+00:37:29.328 --> 00:37:31.338
+Yes.
+
+346
+00:37:34.998 --> 00:37:36.938
+Okay.
+
+347
+00:37:39.218 --> 00:37:43.038
+In the initial state, suppose we are starting from A,
+
+348
+00:37:43.098 --> 00:37:45.958
+right? In the A,
+
+349
+00:37:48.058 --> 00:37:51.918
+we'll be directly assigning in each of the, like R- instead of R, G,
+
+350
+00:37:52.118 --> 00:37:55.518
+B, we will be selecting the first value, whatever that is
+
+351
+00:37:55.558 --> 00:37:59.238
+occurring. Okay? Now here, let's just put the
+
+352
+00:37:59.458 --> 00:38:02.538
+R here. Okay? In the
+
+353
+00:38:02.658 --> 00:38:04.478
+B,
+
+354
+00:38:05.398 --> 00:38:08.238
+what are the domains R, G, B were having?
+
+355
+00:38:08.298 --> 00:38:08.518
+So
+
+356
+00:38:09.438 --> 00:38:13.038
+can B and A share the same color? It is stating
+
+357
+00:38:13.078 --> 00:38:16.858
+no. R is already selected, so for in the initial
+
+358
+00:38:16.898 --> 00:38:19.678
+state, let's just, like, uh, write the same thing because
+
+359
+00:38:20.518 --> 00:38:23.058
+it's being repeated.
+
+360
+00:38:29.638 --> 00:38:33.318
+We'll explore one state by other, one of the other
+
+361
+00:38:33.378 --> 00:38:37.178
+state. Okay. So this is the first initial state.
+
+362
+00:38:37.218 --> 00:38:40.678
+We have only explored up to this point in the initial
+
+363
+00:38:40.718 --> 00:38:44.658
+state. Okay? We are traversing, just like searching
+
+364
+00:38:44.718 --> 00:38:47.988
+algorithm. Suppose up to this point we have explored.
+
+365
+00:38:48.018 --> 00:38:50.818
+Okay? In the next element, the second
+
+366
+00:38:50.958 --> 00:38:52.358
+state.
+
+367
+00:38:54.058 --> 00:38:57.478
+We're going for another state. R is already fixed here for
+
+368
+00:38:57.558 --> 00:39:01.198
+now. Okay? Then in the B, if you are
+
+369
+00:39:01.218 --> 00:39:04.718
+traversing, if you are setting it, this R, A as the
+
+370
+00:39:04.838 --> 00:39:06.058
+colors, suppose
+
+371
+00:39:07.278 --> 00:39:09.498
+R, red we are taking.
+
+372
+00:39:09.518 --> 00:39:11.848
+Right? ???
+
+373
+00:39:11.898 --> 00:39:15.338
+red.
+
+374
+00:39:16.278 --> 00:39:20.218
+Suppose this, we are taking or marking as red.
+
+375
+00:39:20.258 --> 00:39:24.178
+Now the, in this one, instead of R, we can have G or B.
+
+376
+00:39:24.218 --> 00:39:27.998
+Let's go with the G. There is a, like, in a
+
+377
+00:39:28.038 --> 00:39:30.498
+subsequent statistical manner. Okay?
+
+378
+00:39:30.558 --> 00:39:34.338
+So up to this state, are we satisfying the condition?
+
+379
+00:39:34.398 --> 00:39:38.258
+These two states are not sharing any colors, okay?
+
+380
+00:39:38.318 --> 00:39:42.198
+So, I think up to this point, fine. Then again, we'll be repeating
+
+381
+00:39:42.258 --> 00:39:43.058
+the same thing,
+
+382
+00:39:44.798 --> 00:39:48.318
+the second state. So up to the second state, the conditions are
+
+383
+00:39:48.358 --> 00:39:52.138
+satisfied. Two states already have been explored.
+
+384
+00:39:52.148 --> 00:39:55.378
+We'll mark it and move on to the next state.
+
+385
+00:39:55.438 --> 00:39:58.278
+So third state,
+
+386
+00:39:59.938 --> 00:40:02.658
+we are having R,
+
+387
+00:40:07.098 --> 00:40:10.938
+G. Now, the C we are
+
+388
+00:40:10.978 --> 00:40:14.898
+exploring, suppose. In this C, if you are actually exploring, C
+
+389
+00:40:14.978 --> 00:40:18.858
+cannot be equals to A, but C can be equals to B.
+
+390
+00:40:18.898 --> 00:40:21.118
+There is no direct connection. So
+
+391
+00:40:22.778 --> 00:40:25.878
+A will be the having domain value of either
+
+392
+00:40:26.838 --> 00:40:27.158
+R
+
+393
+00:40:28.398 --> 00:40:32.058
+or... Sorry, not R. R it cannot have.
+
+394
+00:40:32.078 --> 00:40:36.058
+G or B. Fine? Because C
+
+395
+00:40:37.118 --> 00:40:40.358
+and A are neighbors, so C and A cannot share the same
+
+396
+00:40:40.398 --> 00:40:44.338
+numbers. But in the domains of R, G, B, only C
+
+397
+00:40:44.358 --> 00:40:48.338
+is having this constraint, so R we cannot assign, but instead of G and B, we
+
+398
+00:40:48.398 --> 00:40:51.278
+can assign. So suppose we are going with the...
+
+399
+00:40:51.298 --> 00:40:54.438
+Or let's just make it a twist, then we will understand.
+
+400
+00:40:54.558 --> 00:40:58.027
+Uh, suppose in this one I am using this
+
+401
+00:40:58.078 --> 00:40:59.858
+B.
+
+402
+00:41:01.057 --> 00:41:18.478
+Okay.
+
+403
+00:41:20.478 --> 00:41:23.488
+In the second state, up to this point, I, we have
+
+404
+00:41:23.518 --> 00:41:25.478
+cleared.
+
+405
+00:41:30.998 --> 00:41:34.338
+Sir, in second stage, how, uh, C can take R, G, B?
+
+406
+00:41:34.378 --> 00:41:35.478
+There also the constraints
+
+407
+00:41:36.498 --> 00:41:36.768
+happen.
+
+408
+00:41:36.768 --> 00:41:37.618
+Huh?
+
+409
+00:41:37.678 --> 00:41:41.638
+In the second state, C you have put R, G, B now, so A
+
+410
+00:41:41.678 --> 00:41:45.058
+as, if A as R, C cannot become R, right?
+
+411
+00:41:46.058 --> 00:41:46.858
+I- I just have a doubt.
+
+412
+00:41:46.958 --> 00:41:50.108
+Uh-huh. C cannot be become R, so C can be either G or
+
+413
+00:41:50.218 --> 00:41:51.498
+B.
+
+414
+00:41:51.558 --> 00:41:55.378
+Ha. But how did you, why did you write in second state R, G, B, sir, for
+
+415
+00:41:55.478 --> 00:41:56.958
+C?
+
+416
+00:41:57.038 --> 00:42:00.038
+Uh, ni- like, I'll show you why, why I have written this
+
+417
+00:42:00.098 --> 00:42:03.738
+one. Like, let me go for two more states,
+
+418
+00:42:03.758 --> 00:42:04.538
+okay?
+
+419
+00:42:04.558 --> 00:42:05.158
+Yes, okay.
+
+420
+00:42:05.178 --> 00:42:08.758
+Then you will, you will understand what is the game that has been going on
+
+421
+00:42:08.798 --> 00:42:12.238
+here. So up to this state, that is fine.
+
+422
+00:42:12.298 --> 00:42:15.418
+Suppose we are going to the, like, next state.
+
+423
+00:42:15.438 --> 00:42:19.158
+So let's just color this one. Uh, we are having
+
+424
+00:42:19.278 --> 00:42:22.758
+G, green. Uh, G is B,
+
+425
+00:42:23.738 --> 00:42:25.018
+so this one is G,
+
+426
+00:42:25.898 --> 00:42:28.138
+and again, C is having
+
+427
+00:42:29.578 --> 00:42:30.558
+blue.
+
+428
+00:42:32.458 --> 00:42:35.648
+Now, we are trying to explore the D, fourth
+
+429
+00:42:35.738 --> 00:42:38.158
+state.
+
+430
+00:42:40.558 --> 00:42:44.418
+Up to this point, first iteration is fine, G iteration is fine, B
+
+431
+00:42:44.438 --> 00:42:48.378
+iteration is also fine for R. Now, this
+
+432
+00:42:48.458 --> 00:42:51.998
+D, D cannot have the value of
+
+433
+00:42:52.118 --> 00:42:55.538
+A-So R is already canceled,
+
+434
+00:42:55.598 --> 00:42:58.938
+okay? So R we cannot, R we cannot take.
+
+435
+00:43:00.718 --> 00:43:04.198
+This one is canceled. D is also connected with
+
+436
+00:43:04.278 --> 00:43:07.918
+B, okay? So B is having green. Green is
+
+437
+00:43:07.998 --> 00:43:11.918
+also canceled, okay? And D is also connected with
+
+438
+00:43:12.018 --> 00:43:15.638
+C, okay? So it is also
+
+439
+00:43:15.678 --> 00:43:16.558
+canceled.
+
+440
+00:43:18.138 --> 00:43:22.038
+So RGP we cannot have. So we are not having any solutions for this
+
+441
+00:43:22.058 --> 00:43:25.398
+point, okay? No solutions. So in this
+
+442
+00:43:25.618 --> 00:43:28.918
+state, what we do, we traverse back to one state
+
+443
+00:43:28.958 --> 00:43:32.378
+earlier, okay? No solutions.
+
+444
+00:43:32.398 --> 00:43:35.238
+(techno music plays) So dead end kind of thing.
+
+445
+00:43:35.278 --> 00:43:37.578
+So we go to fifth state.
+
+446
+00:43:38.878 --> 00:43:42.478
+Now, up to this point, fine. Instead of B,
+
+447
+00:43:42.538 --> 00:43:45.278
+okay, we had what other domains? We had G and B
+
+448
+00:43:45.378 --> 00:43:49.178
+both. Okay? We'll assign G here.
+
+449
+00:43:49.218 --> 00:43:52.458
+Is i- is it satisfying? B and C sc- can share the same, uh,
+
+450
+00:43:52.518 --> 00:43:55.658
+color? Yes, they can share the same color. Okay?
+
+451
+00:43:55.698 --> 00:43:58.598
+This blue is shared, uh, this green and green.
+
+452
+00:43:58.636 --> 00:44:01.158
+So instead of this one, I'll wipe
+
+453
+00:44:01.238 --> 00:44:03.138
+it.
+
+454
+00:44:12.837 --> 00:44:16.378
+Uh-huh. So I'm coloring again, the C
+
+455
+00:44:16.738 --> 00:44:20.078
+as green color.
+
+456
+00:44:21.918 --> 00:44:25.638
+Okay? So we are traversing back to one state, okay?
+
+457
+00:44:25.658 --> 00:44:29.498
+Then again, mo- mo- doing, exploring the other states, again
+
+458
+00:44:29.578 --> 00:44:33.018
+assigning from C, B, uh, blue to green. Okay?
+
+459
+00:44:33.058 --> 00:44:35.958
+Now, this will be, I mean, the open
+
+460
+00:44:36.018 --> 00:44:39.837
+state, RGB. We're not exploring up to this
+
+461
+00:44:39.878 --> 00:44:42.018
+point.
+
+462
+00:44:43.698 --> 00:44:47.298
+We had explored up to this point, but solutions wasn't found.
+
+463
+00:44:47.337 --> 00:44:49.348
+We weren't able to find a solution.
+
+464
+00:44:49.418 --> 00:44:53.298
+Again, in the sixth state, this direction you can say, R is
+
+465
+00:44:53.337 --> 00:44:56.958
+fine, G is fine. Again, G is,
+
+466
+00:44:58.817 --> 00:44:59.548
+G is fine.
+
+467
+00:45:00.738 --> 00:45:04.558
+And again, G is fine. Then here, you
+
+468
+00:45:04.638 --> 00:45:08.478
+see, if I insert the B here, okay, then we get
+
+469
+00:45:08.498 --> 00:45:12.238
+the full solution here.
+
+470
+00:45:14.758 --> 00:45:15.298
+Okay?
+
+471
+00:45:16.478 --> 00:45:17.198
+So,
+
+472
+00:45:18.038 --> 00:45:20.858
+this is how we solve each of the elements, you know.
+
+473
+00:45:20.898 --> 00:45:24.858
+You can, like, think as a tree, like in the searching element, what we used
+
+474
+00:45:24.877 --> 00:45:28.817
+to do. Each of the iteration we fix some variables, whatever the first
+
+475
+00:45:28.858 --> 00:45:32.738
+variable that is coming, or if you're having heuristics, that too
+
+476
+00:45:32.837 --> 00:45:36.337
+also work. We fix the variables, then explore the next state.
+
+477
+00:45:36.377 --> 00:45:40.358
+So in the seventh state, we are having the state A suppose.
+
+478
+00:45:40.398 --> 00:45:44.218
+We are assigning the first variables, whatever is domain and w-
+
+479
+00:45:44.317 --> 00:45:48.298
+whatever is coming, R. Okay? Now, rest of the state are
+
+480
+00:45:48.317 --> 00:45:51.558
+having similar domains, RGB, RGB, RGB.
+
+481
+00:45:51.598 --> 00:45:54.198
+Now we go into the second state, suppose we are exploring the
+
+482
+00:45:54.317 --> 00:45:57.837
+B. A is already explored, now we are moving to
+
+483
+00:45:57.898 --> 00:46:01.418
+B. Now, B is already directly connected with
+
+484
+00:46:01.498 --> 00:46:04.808
+A, so and A is already having the value
+
+485
+00:46:05.078 --> 00:46:05.658
+R, so
+
+486
+00:46:08.058 --> 00:46:11.278
+this domain, R won't be there in the second state.
+
+487
+00:46:11.337 --> 00:46:13.298
+Okay?
+
+488
+00:46:14.978 --> 00:46:18.618
+In this one, we will be having either option G or
+
+489
+00:46:18.658 --> 00:46:20.598
+B. Okay? So
+
+490
+00:46:21.778 --> 00:46:25.308
+R is already taken, so instead of G and B, one value we have to
+
+491
+00:46:25.438 --> 00:46:29.238
+insert. In the second iteration, second state, okay, second
+
+492
+00:46:29.358 --> 00:46:32.738
+graph of the tree, we are exploring B and we are assigning some
+
+493
+00:46:32.778 --> 00:46:36.298
+value. Once it is done, okay, we are moving to third
+
+494
+00:46:36.358 --> 00:46:40.178
+state, and we are trying to explore C, and we are seeing what other domain, domains
+
+495
+00:46:40.317 --> 00:46:43.918
+RGB, and due to the constraints, okay, we are
+
+496
+00:46:43.998 --> 00:46:47.858
+seeing, if suppose we are assigning B here, okay, D
+
+497
+00:46:47.918 --> 00:46:51.418
+is free, also G is free, but we are assigning B here.
+
+498
+00:46:51.478 --> 00:46:52.078
+Okay, fine.
+
+499
+00:46:53.218 --> 00:46:55.998
+There is no confliction till now. That is fine.
+
+500
+00:46:56.038 --> 00:46:59.978
+Now we're moving to the fourth state, RGB, and when we
+
+501
+00:47:00.018 --> 00:47:03.518
+are going to the D, we are having no solutions because
+
+502
+00:47:04.938 --> 00:47:08.918
+B, G and R, these, like blue, green, red, all of the
+
+503
+00:47:08.998 --> 00:47:12.697
+connecting, like neighboring state D is having, so it is not having any
+
+504
+00:47:12.837 --> 00:47:16.058
+colors that it can, like, uh, repeat.
+
+505
+00:47:16.078 --> 00:47:18.738
+Right? Then we are traversing back.
+
+506
+00:47:18.758 --> 00:47:22.678
+So you are doing the backtrack just like, uh, you know, DFS algorithm, where
+
+507
+00:47:22.738 --> 00:47:24.938
+solutions we are not able to find, okay?
+
+508
+00:47:24.998 --> 00:47:28.938
+Then we go to the back. So we are exploring currently D
+
+509
+00:47:29.038 --> 00:47:31.998
+state. So from D to previous state will be C.
+
+510
+00:47:32.058 --> 00:47:34.898
+In the next state we are going to the, you know, again, B
+
+511
+00:47:34.918 --> 00:47:38.718
+state. Sorry, uh, C state. From D to back taking us to
+
+512
+00:47:38.778 --> 00:47:42.458
+C state. In the C, the previous value was B,
+
+513
+00:47:42.538 --> 00:47:46.317
+we explored the another valuable which we are having, that is the G, we
+
+514
+00:47:46.337 --> 00:47:49.377
+assigned this one. Then again, we are trying to explore the
+
+515
+00:47:49.817 --> 00:47:53.798
+downward. After G, going to the D, then again we are able to
+
+516
+00:47:54.018 --> 00:47:57.998
+find a proper solution. So this is how the whole algorithm works
+
+517
+00:47:58.058 --> 00:47:59.658
+in a way.
+
+518
+00:48:01.518 --> 00:48:05.418
+So this is the CSP. Each of the nodes will be having some kind of domains
+
+519
+00:48:05.458 --> 00:48:07.478
+and there will be some constraints.
+
+520
+00:48:07.538 --> 00:48:11.098
+And based on the DFS algorithm or mostly
+
+521
+00:48:11.138 --> 00:48:13.618
+DFS, okay, and heuristic also you can insert,
+
+522
+00:48:14.758 --> 00:48:18.698
+one after another states we are actually exploring, and we are checking
+
+523
+00:48:19.078 --> 00:48:21.538
+if the condition is satisfactory or not.
+
+524
+00:48:21.598 --> 00:48:24.418
+If the state is satisfactory, then we will explore the further
+
+525
+00:48:24.438 --> 00:48:28.258
+nodes. And in case any confliction constraint is
+
+526
+00:48:28.298 --> 00:48:31.998
+coming, then we go back to previous state and do the modification
+
+527
+00:48:32.098 --> 00:48:35.998
+change alteration. Then again, like, uh, do again exploration
+
+528
+00:48:36.038 --> 00:48:39.558
+of the other states and all, till we are finding a
+
+529
+00:48:39.618 --> 00:48:42.968
+satisfiable state. If no satisfiable state is found, then,
+
+530
+00:48:43.998 --> 00:48:46.377
+uh, the constraints cannot be actually solved.
+
+531
+00:48:46.418 --> 00:48:50.178
+Suppose we are trying to, you know, solve this coloring mapping problem with
+
+532
+00:48:50.218 --> 00:48:51.108
+only two colors.
+
+533
+00:48:52.258 --> 00:48:55.518
+You cannot do that, because two colors you...
+
+534
+00:48:55.558 --> 00:48:59.478
+Because D and A are connected with three nodes, at least three colors you
+
+535
+00:48:59.558 --> 00:49:03.426
+need to actually solve this problem.So, that
+
+536
+00:49:03.486 --> 00:49:07.205
+is also, uh, like a certain... Can be some state,
+
+537
+00:49:07.225 --> 00:49:10.346
+uh, no, uh, solutions can be found.
+
+538
+00:49:10.366 --> 00:49:13.946
+Then you have to rethink, okay, these are the constraint that is not actually
+
+539
+00:49:13.986 --> 00:49:16.906
+satisfying. We have to modify the, you know, constraints.
+
+540
+00:49:16.926 --> 00:49:19.786
+So this is how we solve the problems. Okay.
+
+541
+00:49:19.826 --> 00:49:23.506
+So, we discussed about these things. Okay. Now, in the how do we improve?
+
+542
+00:49:23.546 --> 00:49:27.486
+So, as we said, basic idea is the DFS
+
+543
+00:49:27.566 --> 00:49:31.366
+algorithm's back tracking here coming into play for solving these kind of
+
+544
+00:49:31.386 --> 00:49:35.375
+problems. Right? Each of the states you can, uh,
+
+545
+00:49:35.446 --> 00:49:39.026
+like a structure in a tree order. Now, to improve the
+
+546
+00:49:39.086 --> 00:49:42.766
+algorithms, uh, you know, efficiency, you can use the me- uh, minimum
+
+547
+00:49:42.826 --> 00:49:46.736
+remaining values, uh, degree heuristic or least constraint
+
+548
+00:49:46.806 --> 00:49:50.185
+strength values. Uh, these kind of, you know, uh,
+
+549
+00:49:51.486 --> 00:49:54.486
+add on with the, like, heuristic aspect of the searching.
+
+550
+00:49:54.506 --> 00:49:57.125
+This actually solves a lot of time and, like,
+
+551
+00:49:57.225 --> 00:50:01.125
+space. Okay. This is the, like, challenging one of
+
+552
+00:50:01.165 --> 00:50:03.366
+the things we discussed.
+
+553
+00:50:04.586 --> 00:50:08.256
+Okay. Another 2 p.m. I'm having, that is like,
+
+554
+00:50:08.966 --> 00:50:10.466
+the, of, this little bit of the coding
+
+555
+00:50:10.486 --> 00:50:13.086
+aspect.
+
+556
+00:50:14.966 --> 00:50:18.625
+Okay. Uh, till now, I ha- I hope you have understood the problem, the
+
+557
+00:50:18.665 --> 00:50:20.586
+CSP?
+
+558
+00:50:21.926 --> 00:50:22.986
+Yes, sir.
+
+559
+00:50:23.046 --> 00:50:23.566
+Okay.
+
+560
+00:50:23.606 --> 00:50:24.546
+Yeah.
+
+561
+00:50:24.586 --> 00:50:28.395
+Huh. So it's, uh, like CSP, we are breaking into, you know, tree-like
+
+562
+00:50:28.526 --> 00:50:32.406
+problems. In a DFS, each of the state is repren- uh, uh, just
+
+563
+00:50:32.466 --> 00:50:36.046
+like your tic-tac-toe, representing some kind of states
+
+564
+00:50:36.466 --> 00:50:40.165
+and you're trying to find out each of the states where the constrai- constraints
+
+565
+00:50:40.205 --> 00:50:44.185
+are satisfied. Okay. If the constraints are satisfied, you are finally going
+
+566
+00:50:44.225 --> 00:50:47.745
+into, oh, one solution or multiple solutions can be there.
+
+567
+00:50:47.766 --> 00:50:48.946
+So, that is the idea.
+
+568
+00:50:50.625 --> 00:50:54.406
+Okay. And this one, also, uh, for Python,
+
+569
+00:50:54.466 --> 00:50:57.466
+what we can do, we can have multiple, you know,
+
+570
+00:50:57.546 --> 00:51:01.526
+uh, this, uh, cryptarithmetic problem, then we are
+
+571
+00:51:01.566 --> 00:51:04.786
+having this map coloring problem, we are having N queen problem, we're having
+
+572
+00:51:04.846 --> 00:51:08.415
+Sudoku, we're having this. These are all CSP-based
+
+573
+00:51:08.506 --> 00:51:12.426
+problems, okay? Uh, in these problems, what we do, we are
+
+574
+00:51:12.526 --> 00:51:15.205
+having few of the things. We model,
+
+575
+00:51:15.225 --> 00:51:19.096
+pre-process whatever the, like, uh, constraints are there and
+
+576
+00:51:19.185 --> 00:51:22.966
+all. We do the searching, like we apply the searching techniques,
+
+577
+00:51:23.026 --> 00:51:27.015
+okay? We do the backtracking and the forward moving based on
+
+578
+00:51:27.046 --> 00:51:30.946
+this, uh, constraints and all is, that is satisfied or not, and
+
+579
+00:51:30.986 --> 00:51:34.346
+then we try to find the solutions or not.
+
+580
+00:51:34.366 --> 00:51:38.115
+Okay. So, the basic idea is depth-first search.
+
+581
+00:51:38.145 --> 00:51:40.685
+Okay. Take an unassigned variable.
+
+582
+00:51:40.725 --> 00:51:44.665
+So, whatever the initial state, unassigned variable, whatever
+
+583
+00:51:44.705 --> 00:51:48.406
+is there, okay, from the domain range, you take one, like,
+
+584
+00:51:48.665 --> 00:51:51.946
+variable and assign to the, uh, current state.
+
+585
+00:51:51.986 --> 00:51:55.586
+Okay. Then try a value from the domain that is there and check
+
+586
+00:51:56.205 --> 00:51:58.625
+consistency with the current constraints.
+
+587
+00:51:58.665 --> 00:52:02.356
+So, if, is there any constraint which is already, you know,
+
+588
+00:52:02.426 --> 00:52:06.286
+applied to the, that state, in the initial state, that is not there,
+
+589
+00:52:06.356 --> 00:52:09.106
+mm, that is fine. Then we do the recurs.
+
+590
+00:52:09.165 --> 00:52:12.975
+If it is valid, no constraint, like, uh, uh, in the case of, like, uh, I,
+
+591
+00:52:13.026 --> 00:52:16.645
+example we saw. If no problems or no constraint is
+
+592
+00:52:16.705 --> 00:52:20.185
+broken, then we do the, like, uh, exploring the
+
+593
+00:52:20.426 --> 00:52:22.926
+downward nodes by going into the depth.
+
+594
+00:52:23.586 --> 00:52:27.466
+If we are having some kind of constraints and problems, then we go to the previous
+
+595
+00:52:27.506 --> 00:52:30.395
+node and then we explore the other childs.
+
+596
+00:52:30.446 --> 00:52:34.145
+That is the idea of this algorithm.
+
+597
+00:52:34.566 --> 00:52:35.225
+Okay.
+
+598
+00:52:36.526 --> 00:52:40.346
+Now, um, this is, uh, for many standard problems.
+
+599
+00:52:40.446 --> 00:52:43.645
+Uh, the robust library. In this one, we are having this library,
+
+600
+00:52:43.685 --> 00:52:47.366
+python-constraint. Okay. Uh, this is a, like a CSP-related,
+
+601
+00:52:47.526 --> 00:52:51.406
+uh, solution problems. Uh, multiple functions
+
+602
+00:52:51.466 --> 00:52:55.306
+which are already provided. On the base of this, you know, you can install
+
+603
+00:52:55.326 --> 00:52:58.886
+this library and explore multifold, uh, you know, problems which are
+
+604
+00:52:58.926 --> 00:53:02.915
+related to CSP events, all those things, uh, mm, that is
+
+605
+00:53:02.946 --> 00:53:06.846
+there. Okay. So, you can import this one
+
+606
+00:53:07.526 --> 00:53:10.586
+and also assign multiple... Okay. Huh.
+
+607
+00:53:10.606 --> 00:53:13.966
+This is like a solve a custom thing, is that graph problem.
+
+608
+00:53:14.006 --> 00:53:17.346
+So, here, pro- we can provide the variables, the colors, okay, the
+
+609
+00:53:17.426 --> 00:53:20.964
+domains, uh, assignments and, uh, the
+
+610
+00:53:21.246 --> 00:53:24.645
+node idx, so whatever the constraints that is there.
+
+611
+00:53:24.705 --> 00:53:28.606
+If you provide everything on a, like a structured manner, then it will be
+
+612
+00:53:28.625 --> 00:53:32.606
+able to solve it and give you the, like, solutions and everything.
+
+613
+00:53:32.625 --> 00:53:32.886
+Okay.
+
+614
+00:53:34.386 --> 00:53:36.806
+I think today we'll be having up to this point
+
+615
+00:53:36.846 --> 00:53:40.786
+only. Okay. In next
+
+616
+00:53:40.806 --> 00:53:44.265
+class, I have actually, uh, thing to ask from you
+
+617
+00:53:44.366 --> 00:53:46.346
+guys.
+
+618
+00:53:47.406 --> 00:53:49.526
+Okay. No, not this
+
+619
+00:53:49.685 --> 00:53:55.066
+one.
+
+620
+00:54:04.665 --> 00:54:08.486
+Okay. For, uh, first, from, uh, first, next week we'll be having, uh, uh,
+
+621
+00:54:08.506 --> 00:54:09.846
+uh, this one, grade
+
+622
+00:54:09.886 --> 00:54:12.645
+lab.
+
+623
+00:54:15.046 --> 00:54:16.446
+Okay?
+
+624
+00:54:17.886 --> 00:54:19.145
+Okay, sir.
+
+625
+00:54:19.165 --> 00:54:22.765
+Uh, so three labs are done. Based on these three labs, one, two
+
+626
+00:54:22.866 --> 00:54:26.685
+problems will be given and, uh, you'll be asked to actually,
+
+627
+00:54:26.786 --> 00:54:30.586
+uh, do the experiment and something and submit the... no.
+
+628
+00:54:30.625 --> 00:54:33.006
+So, first session from, uh, 10:45 to
+
+629
+00:54:33.406 --> 00:54:37.225
+11:45. That is, uh, you known need to actually
+
+630
+00:54:37.265 --> 00:54:40.846
+join that one. And aft- before the afternoon session, the problems will be
+
+631
+00:54:40.886 --> 00:54:45.966
+shared.
+
+632
+00:54:51.786 --> 00:54:53.426
+Oh, um. The i-
+
+633
+00:54:53.506 --> 00:54:56.665
+Except for this... Uh, sorry, sir.
+
+634
+00:54:56.705 --> 00:54:57.426
+Yeah. Yeah. Please.
+
+635
+00:54:57.486 --> 00:54:57.906
+This, for the-
+
+636
+00:54:57.915 --> 00:54:58.286
+That-
+
+637
+00:54:58.346 --> 00:54:59.946
+lab, sir, or this is for the
+
+638
+00:55:01.145 --> 00:55:01.906
+third lab?
+
+639
+00:55:03.705 --> 00:55:06.926
+For third lab, there will be some assignment-related problem in the second half.
+
+640
+00:55:06.966 --> 00:55:08.386
+I'm talking about the next lab.
+
+641
+00:55:09.846 --> 00:55:10.526
+Okay.
+
+642
+00:55:10.586 --> 00:55:13.406
+In the next week, we'll be having one grade lab.
+
+643
+00:55:13.426 --> 00:55:15.126
+Oh, the next week is the grade lab? Okay.
+
+644
+00:55:15.186 --> 00:55:18.956
+Yeah. So in the grade labs, uh, like, uh, first half you don't need, uh,
+
+645
+00:55:18.966 --> 00:55:22.066
+require to join because there won't be any actually subsequent
+
+646
+00:55:22.426 --> 00:55:26.346
+theoretical aspects. In the afternoon, before the afternoon session,
+
+647
+00:55:26.386 --> 00:55:27.366
+problems will be shared
+
+648
+00:55:28.186 --> 00:55:30.306
+related to the grade lab.
+
+649
+00:55:31.086 --> 00:55:34.805
+Okay. So that is will be... That will be based on the first module, lab one, lab
+
+650
+00:55:34.866 --> 00:55:35.726
+two, lab three?
+
+651
+00:55:35.766 --> 00:55:37.806
+Huh. Lab one, lab two, lab three. Yes.
+
+652
+00:55:37.846 --> 00:55:41.686
+Then also one-week time, correct? Yeah. Okay.
+
+653
+00:55:41.706 --> 00:55:43.966
+That will be there. Right.
+
+654
+00:55:44.006 --> 00:55:47.766
+So, sir, next week there, there won't be the first class, and in the second class
+
+655
+00:55:47.806 --> 00:55:50.786
+these, uh, problems will be shared is what you're saying, right?
+
+656
+00:55:50.806 --> 00:55:52.786
+There will be no first class?
+
+657
+00:55:53.886 --> 00:55:53.896
+Uh,
+
+658
+00:55:53.946 --> 00:55:57.906
+In the grade lab season, there won't be any of, uh, like, one-hour season in the
+
+659
+00:55:57.986 --> 00:56:01.706
+morning. That won't happen. Directly you will be jumped into the second
+
+660
+00:56:01.946 --> 00:56:05.816
+half season and we'll be solving the problems for the grade lab.
+
+661
+00:56:06.666 --> 00:56:10.486
+For grade lab, it has to be solved then and there?
+
+662
+00:56:10.526 --> 00:56:13.736
+Uh, no, no, not required but, uh, we'll discuss about this.
+
+663
+00:56:13.766 --> 00:56:16.926
+We'll have, uh, uh, uh, seven days time, just like the assignments.
+
+664
+00:56:16.946 --> 00:56:19.346
+Just like lab assignments. Okay. Thank you.
+
+665
+00:56:19.386 --> 00:56:23.356
+So, sir, for grade lab, we'll be getting the problem next week only or...
+
+666
+00:56:24.346 --> 00:56:25.526
+Next week only.
+
+667
+00:56:25.586 --> 00:56:26.666
+Okay, sir.
+
+668
+00:56:26.726 --> 00:56:26.856
+Uh,
+
+669
+00:56:26.856 --> 00:56:30.766
+yeah. Uh, just before the season, uh, before, uh, 2:00 PM we'll be sharing the,
+
+670
+00:56:30.806 --> 00:56:34.206
+uh, you know, whatever the relevant questions are there.
+
+671
+00:56:34.286 --> 00:56:37.966
+So today's lab is already updated, sir. What, what is to be done?
+
+672
+00:56:38.086 --> 00:56:41.786
+Uh, uh, uh, Anil who said this there, he'll... He is actually...
+
+673
+00:56:41.796 --> 00:56:44.986
+He'll be uploading the problems related to this task.
+
+674
+00:56:44.996 --> 00:56:47.106
+Okay. Sure, sir. Thank you.
+
+675
+00:56:47.176 --> 00:56:47.176
+
+676
+00:56:47.206 --> 00:56:50.906
+So I'll also actually send him these two copies of this, uh, you
+
+677
+00:56:50.946 --> 00:56:54.856
+know, uh, this, uh, PPDs so he can also upload into
+
+678
+00:56:54.886 --> 00:56:56.286
+the LMS.
+
+679
+00:56:58.306 --> 00:56:59.446
+Sure, sir.
+
+680
+00:57:00.466 --> 00:57:01.926
+Sir, one question.
+
+681
+00:57:01.946 --> 00:57:02.306
+Yeah, please.
+
+682
+00:57:02.366 --> 00:57:05.586
+Last, last week, I mean, the second
+
+683
+00:57:05.666 --> 00:57:09.486
+lab, uh, assignment, we saw the date as
+
+684
+00:57:09.726 --> 00:57:13.446
+6th December, which was today but it was 0:0, so it was like
+
+685
+00:57:13.506 --> 00:57:16.706
+midnight of 5th. So, sir, we've missed
+
+686
+00:57:16.766 --> 00:57:20.306
+that. So, and we had... One of us has written to the TA
+
+687
+00:57:20.385 --> 00:57:21.336
+also-
+
+688
+00:57:21.406 --> 00:57:21.446
+Okay.
+
+689
+00:57:21.455 --> 00:57:25.056
+... yesterday, uh, so if we could do something about that because it's showing as
+
+690
+00:57:25.106 --> 00:57:28.926
+overdue. We thought it was today but then, uh, you know, on a minute
+
+691
+00:57:28.966 --> 00:57:32.846
+check, we found that it was 0:0. So many of us
+
+692
+00:57:32.886 --> 00:57:33.406
+have missed it, sir.
+
+693
+00:57:33.416 --> 00:57:37.086
+Mm-hmm. Uh, I'll actually ask him to like, uh, modify the date so you can
+
+694
+00:57:37.146 --> 00:57:38.046
+submit it.
+
+695
+00:57:38.106 --> 00:57:40.346
+Yeah, and, and... Yeah, sir, that was one thing.
+
+696
+00:57:40.386 --> 00:57:43.366
+Second thing is, sir, I had some questions on the lab one.
+
+697
+00:57:43.406 --> 00:57:43.646
+Okay.
+
+698
+00:57:43.706 --> 00:57:46.486
+So whom can I ask?
+
+699
+00:57:46.546 --> 00:57:47.666
+You can ask me.
+
+700
+00:57:47.726 --> 00:57:51.366
+Okay. So, sir, for example, there was this, uh, first dataset I had
+
+701
+00:57:51.406 --> 00:57:55.046
+chosen and that had missed, missing values of state.
+
+702
+00:57:55.086 --> 00:57:55.866
+Okay?
+
+703
+00:57:55.876 --> 00:57:55.876
+
+704
+00:57:55.906 --> 00:57:59.426
+So what I did is I developed, um... I made a lookup
+
+705
+00:57:59.466 --> 00:58:02.166
+table from the existing data that if this is...
+
+706
+00:58:02.175 --> 00:58:05.795
+I mean, if say the city is, um,
+
+707
+00:58:05.946 --> 00:58:09.206
+whatever, um... Maybe I'll take an Indian example to be easy.
+
+708
+00:58:09.226 --> 00:58:13.126
+If the city was Bangalore and then you check with the city what
+
+709
+00:58:13.286 --> 00:58:17.186
+state comes and the me- majority of the state you say that,
+
+710
+00:58:17.246 --> 00:58:20.926
+uh, majority you will get as Karnataka, so you will map the
+
+711
+00:58:20.966 --> 00:58:22.416
+Bangalore to Karnataka.
+
+712
+00:58:22.766 --> 00:58:22.816
+Mm-hmm.
+
+713
+00:58:22.816 --> 00:58:25.746
+So like that with the available city and state pairs-
+
+714
+00:58:25.926 --> 00:58:25.936
+Mm-hmm.
+
+715
+00:58:25.936 --> 00:58:27.646
+... uh, I made a dictionary.
+
+716
+00:58:27.666 --> 00:58:28.066
+Hmm.
+
+717
+00:58:28.086 --> 00:58:31.906
+But what happened is that, uh, the, s- the data
+
+718
+00:58:31.986 --> 00:58:35.766
+points for which the state was missing was not available in the dictionary.
+
+719
+00:58:35.786 --> 00:58:39.626
+So those were some other things. So in this situation,
+
+720
+00:58:39.706 --> 00:58:43.506
+how do we populate, um, the state
+
+721
+00:58:43.626 --> 00:58:47.086
+for, uh, unknown... Because we don't know in a real life
+
+722
+00:58:47.126 --> 00:58:50.876
+scenario, we don't even know like maybe there are like thousands of cities in the
+
+723
+00:58:50.946 --> 00:58:53.466
+world, um, so which states do they lie?
+
+724
+00:58:53.506 --> 00:58:57.166
+How would we do, go such, about such problems in real
+
+725
+00:58:57.186 --> 00:58:58.366
+life?
+
+726
+00:58:58.406 --> 00:58:58.866
+See, uh-
+
+727
+00:58:59.426 --> 00:59:00.946
+I hope it's clear what I'm asking.
+
+728
+00:59:00.966 --> 00:59:04.666
+Yeah. Like, uh, suppose, uh, if we are having like, uh, these kind of
+
+729
+00:59:04.726 --> 00:59:05.626
+problems.
+
+730
+00:59:05.646 --> 00:59:06.756
+Uh-huh.
+
+731
+00:59:06.806 --> 00:59:09.976
+Okay. And the, the main idea for the...
+
+732
+00:59:09.976 --> 00:59:11.976
+as a data science, if the dataset is
+
+733
+00:59:12.826 --> 00:59:13.946
+huge, okay?
+
+734
+00:59:13.955 --> 00:59:13.955
+
+735
+00:59:13.986 --> 00:59:16.916
+So if you're not losing like a... if you're...
+
+736
+00:59:16.946 --> 00:59:20.166
+even if you're losing 20, 30% of the data-
+
+737
+00:59:20.186 --> 00:59:20.196
+Right.
+
+738
+00:59:20.196 --> 00:59:24.046
+... but still the number of rows remains like, um, in, like, thousands and
+
+739
+00:59:24.126 --> 00:59:27.246
+all, then you can directly drop, drop those rows. That is fine.
+
+740
+00:59:27.726 --> 00:59:27.835
+Mm-hmm.
+
+741
+00:59:27.866 --> 00:59:31.145
+Suppose you are having only thousand rows of, you know,
+
+742
+00:59:31.205 --> 00:59:32.086
+dataset.
+
+743
+00:59:32.106 --> 00:59:32.116
+Hmm.
+
+744
+00:59:32.126 --> 00:59:35.946
+And if, uh, even 30% of the data, so that is huge amount of data, you
+
+745
+00:59:35.966 --> 00:59:38.986
+won't be able to have, like, sufficient data for training and testing.
+
+746
+00:59:39.046 --> 00:59:42.566
+In those cases, based on the dataset, you have to
+
+747
+00:59:42.626 --> 00:59:45.666
+actually think about a, like, a solution.
+
+748
+00:59:45.766 --> 00:59:49.036
+Either you can, uh, do one thing that actually,
+
+749
+00:59:49.346 --> 00:59:53.246
+uh, basically we try to do, find out the, like, related
+
+750
+00:59:53.266 --> 00:59:56.446
+columns which are having less number of, you know, missing values.
+
+751
+00:59:57.686 --> 01:00:01.466
+Okay? Based on that and whatever in the column you're
+
+752
+01:00:01.506 --> 01:00:05.466
+trying to find out the solution, okay, the missing values you're
+
+753
+01:00:05.486 --> 01:00:09.206
+trying to solution, you do a regression or classification for that one.
+
+754
+01:00:09.266 --> 01:00:12.966
+Suppose on the base on like suppose, uh, 10, you
+
+755
+01:00:13.006 --> 01:00:16.946
+know, parameters are there, 10 columns are there and you are,
+
+756
+01:00:17.006 --> 01:00:20.886
+uh, out of this 10 columns, the state column has missing
+
+757
+01:00:20.926 --> 01:00:24.806
+data. So in the nine, from the nine state, you do a classification thing
+
+758
+01:00:25.286 --> 01:00:29.155
+and try to actually predict what is the outcome of that, you know,
+
+759
+01:00:29.366 --> 01:00:29.766
+state
+
+760
+01:00:31.046 --> 01:00:33.166
+and you try to fill that one data.
+
+761
+01:00:33.176 --> 01:00:33.176
+
+762
+01:00:33.206 --> 01:00:36.366
+So that is like a way of doing actually extracting or
+
+763
+01:00:36.886 --> 01:00:38.586
+salvaging some kind of, like, data.
+
+764
+01:00:38.646 --> 01:00:41.746
+If the data, uh, like, you cannot drop and
+
+765
+01:00:42.246 --> 01:00:46.206
+like, uh, you have to have, like, use that data for some kind
+
+766
+01:00:46.246 --> 01:00:50.216
+of analytical purposes, then we do this backtracking, uh, and,
+
+767
+01:00:50.266 --> 01:00:53.846
+uh, like, uh, applying some kind of classification or regression problem to predict
+
+768
+01:00:53.886 --> 01:00:56.866
+the missing values and we insert those values.
+
+769
+01:00:58.226 --> 01:00:59.326
+Right, sir.
+
+770
+01:00:59.346 --> 01:01:01.286
+Mm-hmm.
+
+771
+01:01:01.346 --> 01:01:02.736
+Okay, sir. Thank you, sir.
+
+772
+01:01:02.766 --> 01:01:06.666
+Yeah. Any other doubts and questions?
+
+773
+01:01:06.746 --> 01:01:10.586
+Sir, for the, this... Uh, for the graded, uh,
+
+774
+01:01:10.726 --> 01:01:14.366
+uh, the, uh, for the upcoming week, we'll also have
+
+775
+01:01:14.406 --> 01:01:17.336
+this entire week time or we have to do it in the classics-
+
+776
+01:01:17.366 --> 01:01:20.726
+The entire week time. Initially I thought of like we're doing the grade lab in the,
+
+777
+01:01:20.746 --> 01:01:24.736
+like, uh, uh, stipulated times, but the problem is multiple people
+
+778
+01:01:24.746 --> 01:01:26.146
+will be having multiple problems.
+
+779
+01:01:26.206 --> 01:01:29.926
+Might be office work, might be, might be homework, might be family-related work,
+
+780
+01:01:29.966 --> 01:01:31.686
+might be health, uh, related things.
+
+781
+01:01:31.706 --> 01:01:35.606
+So if we are strictly avoiding because of th- these classes are
+
+782
+01:01:35.646 --> 01:01:39.206
+happening in online basis for the portion of, uh, people, uh, we
+
+783
+01:01:39.346 --> 01:01:43.086
+cannot put this restrictions, so we are having this, uh, like
+
+784
+01:01:43.166 --> 01:01:47.006
+open kind of thing, so seven days time will be there after submitting this
+
+785
+01:01:47.066 --> 01:01:50.166
+grade lab as well as the... just like the assignments.
+
+786
+01:01:50.246 --> 01:01:51.466
+Okay. Clear,
+
+787
+01:01:53.406 --> 01:01:53.656
+sir.
+
+788
+01:01:55.626 --> 01:01:59.186
+Okay. I guess, uh, I'll, uh, close the session, uh, for today and,
+
+789
+01:01:59.246 --> 01:02:03.026
+uh, uh, before 2:00 PM we'll be sharing the assignment-related
+
+790
+01:02:03.086 --> 01:02:06.906
+details. Uh, that will be shared by Anil, sir, the
+
+791
+01:02:06.986 --> 01:02:08.656
+TA of this one. Okay?
+
+792
+01:02:08.656 --> 01:02:10.356
+Uh-huh. Thank you, sir. Sure,
+
+793
+01:02:10.406 --> 01:02:10.686
+Thank you.
+
+794
+01:02:11.166 --> 01:02:11.716
+Thank you,
+
+795
+01:02:11.766 --> 01:02:12.716
+Thank you, sir.
+
+796
+01:02:12.746 --> 01:02:14.426
+Yeah, yeah, please. Somebody is having some
+
+797
+01:02:14.486 --> 01:02:17.466
+question.
+
+798
+01:02:19.766 --> 01:02:22.556
+Okay, I guess not. Okay, fine. Then have a good day,
+
+799
+01:02:22.606 --> 01:02:23.826
+guess.
+
+800
+01:02:23.846 --> 01:02:24.226
+Thank you.
+
+801
+01:02:24.266 --> 01:02:26.506
+Thank you, sir.
+
+802
+01:02:26.526 --> 01:02:26.636
+Thank you,
+
+803
+01:02:26.646 --> 01:02:29.845
+Thank you. Thank you, sir. Thank
+
+804
+01:02:29.866 --> 01:02:36.066
+you,
+
+805
+01:02:36.116 --> 01:02:36.146
+sir.
