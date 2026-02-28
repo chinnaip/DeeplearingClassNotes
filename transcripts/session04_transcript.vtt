@@ -1,0 +1,7437 @@
+WEBVTT
+
+1
+00:20:26.520 --> 00:20:27.010
+Good morning.
+
+2
+00:20:27.115 --> 00:20:30.565
+Good morning to, good morning, sir. Sorry for morning, sir.
+
+3
+00:20:30.875 --> 00:20:35.085
+Good morning, sir. Sir, in joining this good morning, sir.
+
+4
+00:20:35.235 --> 00:20:38.665
+Good morning. Good morning, sir. Good morning. Morning, sir.
+
+5
+00:20:39.405 --> 00:20:43.735
+Good morning, sir. Sir, I may have problem in joining, sir.
+
+6
+00:20:44.285 --> 00:20:45.285
+Yeah,
+
+7
+00:20:47.865 --> 00:20:48.865
+You answer.
+
+8
+00:20:49.085 --> 00:20:50.085
+I,
+
+9
+00:20:50.705 --> 00:20:53.985
+I was, I was not able to join from my phone.
+
+10
+00:20:54.105 --> 00:20:57.825
+I have to transfer my tab laptop everywhere.
+
+11
+00:20:58.535 --> 00:21:01.025
+Correct, correct. So, no,
+
+12
+00:21:01.025 --> 00:21:03.825
+it's struggling somehow Chatta helped me to join.
+
+13
+00:21:05.415 --> 00:21:08.825
+Yeah. Director is also joining in a while.
+
+14
+00:21:09.015 --> 00:21:10.185
+Meanwhile, I'll start.
+
+15
+00:21:11.015 --> 00:21:11.235
+Yes.
+
+16
+00:21:17.195 --> 00:21:21.975
+Okay. So we were, last time,
+
+17
+00:21:23.975 --> 00:21:26.035
+we were almost at this.
+
+18
+00:21:26.135 --> 00:21:28.915
+Yes. Let me go back a little bit here.
+
+19
+00:21:31.895 --> 00:21:35.615
+Okay, so last time we were talking about this, uh,
+
+20
+00:21:35.865 --> 00:21:38.015
+perceptron and, uh,
+
+21
+00:21:39.815 --> 00:21:41.025
+this would, okay.
+
+22
+00:21:44.625 --> 00:21:47.155
+Okay. So last time we were talking about this perceptron,
+
+23
+00:21:47.935 --> 00:21:50.435
+we got, this is the building block of neural network.
+
+24
+00:21:51.335 --> 00:21:53.675
+The story started with a single perceptron.
+
+25
+00:21:54.335 --> 00:21:55.515
+So it is very important
+
+26
+00:21:55.575 --> 00:21:58.315
+to understand the way perceptron works,
+
+27
+00:21:59.335 --> 00:22:02.395
+and we understood it, I guess, uh, for all of you.
+
+28
+00:22:02.395 --> 00:22:06.555
+Also, it was quite easy that perceptron, uh, this, this,
+
+29
+00:22:06.865 --> 00:22:09.035
+this is this processing unit here.
+
+30
+00:22:09.295 --> 00:22:12.395
+It accept the input along with the weight,
+
+31
+00:22:12.495 --> 00:22:14.115
+so it accept the weighted input.
+
+32
+00:22:14.135 --> 00:22:17.715
+You can say that. So we do hear the weighted sum, WIXI,
+
+33
+00:22:18.375 --> 00:22:19.955
+and when, then we add the bias
+
+34
+00:22:20.735 --> 00:22:23.435
+and we, uh, once we add this weighted sum plus bias,
+
+35
+00:22:23.455 --> 00:22:25.315
+we pass it through the activation function.
+
+36
+00:22:26.205 --> 00:22:29.475
+Activation function will decide what will, with the output,
+
+37
+00:22:29.475 --> 00:22:31.475
+which is coming from this particular perceptron.
+
+38
+00:22:32.575 --> 00:22:33.715
+So we had seen the demo,
+
+39
+00:22:34.655 --> 00:22:39.595
+and uh, there we also talked about what happened if,
+
+40
+00:22:39.735 --> 00:22:42.275
+if we have the bias, which is being added to this,
+
+41
+00:22:42.335 --> 00:22:43.355
+uh, weighted sum.
+
+42
+00:22:43.665 --> 00:22:46.435
+Okay? And, uh, how, how, here in this,
+
+43
+00:22:46.435 --> 00:22:48.035
+these two slide, we have seen that one.
+
+44
+00:22:48.905 --> 00:22:50.555
+What is the importance of the bias?
+
+45
+00:22:51.145 --> 00:22:55.355
+That, that also we have, um, uh, understood, uh,
+
+46
+00:22:55.385 --> 00:22:56.555
+with this particular slide.
+
+47
+00:22:56.625 --> 00:23:00.475
+Okay? And we said that bias brings the flexibility for,
+
+48
+00:23:00.535 --> 00:23:01.715
+for the perception,
+
+49
+00:23:01.825 --> 00:23:05.315
+because sometimes suppose given the set of input
+
+50
+00:23:05.315 --> 00:23:08.395
+and set of weights, we are not getting our desired input.
+
+51
+00:23:08.395 --> 00:23:11.075
+Then there will be one more parameter, which can be,
+
+52
+00:23:11.165 --> 00:23:14.435
+which can help us, uh, to, to get the,
+
+53
+00:23:14.735 --> 00:23:16.035
+the desired output, right?
+
+54
+00:23:16.095 --> 00:23:19.275
+So bias also is also a parameter, which we learn, uh,
+
+55
+00:23:19.415 --> 00:23:21.955
+during the training of this perceptron.
+
+56
+00:23:23.585 --> 00:23:26.765
+And, and then we were talking, um, I guess we were talking
+
+57
+00:23:27.285 --> 00:23:29.925
+a little about this, uh, decision boundary.
+
+58
+00:23:30.595 --> 00:23:34.085
+Fine. So first of all, how do we write the equation
+
+59
+00:23:34.225 --> 00:23:35.365
+for this perceptron?
+
+60
+00:23:35.385 --> 00:23:38.285
+It was like, suppose we have three inputs, X node X one,
+
+61
+00:23:38.365 --> 00:23:41.045
+X two, where X node, it represents the bias which we have
+
+62
+00:23:41.045 --> 00:23:42.925
+fixed as one for the simplicity.
+
+63
+00:23:43.665 --> 00:23:46.325
+We are giving the similar kind of notation so that
+
+64
+00:23:46.905 --> 00:23:51.285
+we will not treat bias separately from this weighted sum.
+
+65
+00:23:51.945 --> 00:23:55.365
+So from now on, what we'll do is this submission,
+
+66
+00:23:55.525 --> 00:23:59.005
+WIXI includes the bias term also,
+
+67
+00:23:59.195 --> 00:24:02.245
+only thing is x no will represent the bias,
+
+68
+00:24:02.495 --> 00:24:04.085
+which will be always one.
+
+69
+00:24:04.675 --> 00:24:08.125
+Okay? And, uh, this, this weight anyway, we have
+
+70
+00:24:08.125 --> 00:24:09.885
+to learn, okay, where we are.
+
+71
+00:24:09.905 --> 00:24:12.725
+So just to, uh, for the simplicity,
+
+72
+00:24:12.785 --> 00:24:16.165
+we have added this X node in terms of the B, right?
+
+73
+00:24:16.185 --> 00:24:19.005
+So my equation becomes then W node x node W one,
+
+74
+00:24:19.005 --> 00:24:20.005
+X one WX two.
+
+75
+00:24:20.465 --> 00:24:23.965
+And because X node is known, uh,
+
+76
+00:24:24.025 --> 00:24:27.085
+we can substitute the value here, one W node,
+
+77
+00:24:28.005 --> 00:24:29.725
+whatever is the value we can substitute here
+
+78
+00:24:30.185 --> 00:24:32.285
+and then rest of the equation, we can solve it
+
+79
+00:24:32.305 --> 00:24:33.645
+for either X one or X two.
+
+80
+00:24:33.745 --> 00:24:37.725
+We will get the, uh, we will get the, uh, equation in terms
+
+81
+00:24:37.725 --> 00:24:40.525
+of the X two or in terms of the X one, fine.
+
+82
+00:24:40.525 --> 00:24:42.085
+Then you can easily plot a line.
+
+83
+00:24:42.625 --> 00:24:44.765
+For example, here we have solve it for X two.
+
+84
+00:24:45.475 --> 00:24:48.045
+Then for every X one we can get what is the X two.
+
+85
+00:24:48.045 --> 00:24:51.205
+And hence you have the, um, uh, decision boundary,
+
+86
+00:24:51.215 --> 00:24:53.325
+which is plotted as you can see that.
+
+87
+00:24:54.105 --> 00:24:55.885
+So this we have done, so we understood
+
+88
+00:24:56.025 --> 00:24:58.165
+how this perception trick algorithm works.
+
+89
+00:24:58.465 --> 00:25:02.205
+So the main idea was, so you pick any random set
+
+90
+00:25:02.205 --> 00:25:05.685
+of the weights for WNW one, W2,
+
+91
+00:25:06.625 --> 00:25:10.205
+and as you will, uh, as you will choose any random set
+
+92
+00:25:10.205 --> 00:25:12.045
+of weight, you will get a decision boundary for that.
+
+93
+00:25:12.985 --> 00:25:14.885
+Now, with respect to the decision boundary,
+
+94
+00:25:14.885 --> 00:25:18.365
+you pick any random point, you will have multiple points.
+
+95
+00:25:18.505 --> 00:25:21.485
+For example, I have here this 1, 2, 3 points.
+
+96
+00:25:21.545 --> 00:25:22.565
+It is being shown here.
+
+97
+00:25:23.045 --> 00:25:25.165
+I can either pick this green point
+
+98
+00:25:25.225 --> 00:25:27.205
+or this blue point, or this green point.
+
+99
+00:25:27.525 --> 00:25:29.725
+I mean, it's random. So we don't have any control.
+
+100
+00:25:29.985 --> 00:25:32.085
+So randomly we are going to pick one point
+
+101
+00:25:32.625 --> 00:25:36.595
+and we'll see that side
+
+102
+00:25:36.595 --> 00:25:37.875
+of the line or not.
+
+103
+00:25:38.465 --> 00:25:41.435
+Okay? So if it is at the correct side, we are not going
+
+104
+00:25:41.435 --> 00:25:42.795
+to do any change in the line.
+
+105
+00:25:43.795 --> 00:25:47.095
+If it is not at the correct side, then we have
+
+106
+00:25:47.095 --> 00:25:50.495
+to update these parameters, W north, W one, W2.
+
+107
+00:25:51.135 --> 00:25:53.065
+Okay. Once we update this parameter,
+
+108
+00:25:53.065 --> 00:25:54.865
+we'll get a new line, right?
+
+109
+00:25:54.865 --> 00:25:56.665
+And then for, again, for the new line,
+
+110
+00:25:57.315 --> 00:25:59.865
+we'll pick next one more random points.
+
+111
+00:26:00.125 --> 00:26:02.505
+And we are going to continue this process as long
+
+112
+00:26:02.505 --> 00:26:05.705
+as you are not going to get the complete, uh, the,
+
+113
+00:26:05.845 --> 00:26:07.745
+either your number of aps are reached
+
+114
+00:26:07.925 --> 00:26:11.735
+or you, you have separated the data into two class clearly.
+
+115
+00:26:11.955 --> 00:26:15.615
+So that, that is the, that is this algorithm, right?
+
+116
+00:26:15.715 --> 00:26:19.015
+So this update parameter works only in the case
+
+117
+00:26:19.075 --> 00:26:22.935
+of the misclassification, not in the class of, uh, uh,
+
+118
+00:26:23.155 --> 00:26:25.575
+not in the case of, uh, correct classification.
+
+119
+00:26:26.195 --> 00:26:28.575
+And hence, uh, after that we have seen, uh, some,
+
+120
+00:26:28.575 --> 00:26:29.815
+some visualization as well
+
+121
+00:26:29.815 --> 00:26:31.735
+as the percept drawn trick demo as well.
+
+122
+00:26:32.755 --> 00:26:35.015
+So this much we had covered in the previous class.
+
+123
+00:26:35.195 --> 00:26:37.455
+So if you have any queries so far, uh, uh,
+
+124
+00:26:37.655 --> 00:26:38.775
+I mean you can ask us
+
+125
+00:26:38.835 --> 00:26:41.295
+and then we'll go little more detail for the,
+
+126
+00:26:42.165 --> 00:26:44.995
+what is the problem with this percept on trick algorithm?
+
+127
+00:26:46.545 --> 00:26:47.545
+Any queries so far,
+
+128
+00:26:50.325 --> 00:26:53.575
+What is the, uh, activation function called in case
+
+129
+00:26:53.575 --> 00:26:54.695
+of a percept transfer?
+
+130
+00:26:54.955 --> 00:26:56.655
+Is, is there a specific name to it?
+
+131
+00:26:57.765 --> 00:27:02.025
+By default? It is, uh, step function, right? By default.
+
+132
+00:27:02.765 --> 00:27:05.985
+Uh, this f what you're seeing is, uh,
+
+133
+00:27:06.045 --> 00:27:08.225
+but as I said, it's quite flexible.
+
+134
+00:27:08.225 --> 00:27:09.705
+Everything is flexible in the neural network.
+
+135
+00:27:09.845 --> 00:27:12.505
+You can change this f also, it i going for forward,
+
+136
+00:27:12.615 --> 00:27:13.905
+I'll show you that.
+
+137
+00:27:13.905 --> 00:27:16.985
+If I want my output to be in terms of the probability,
+
+138
+00:27:17.735 --> 00:27:19.265
+then a step function will not help,
+
+139
+00:27:19.265 --> 00:27:21.385
+because step function will give either zero
+
+140
+00:27:21.405 --> 00:27:22.465
+or one as an output,
+
+141
+00:27:22.525 --> 00:27:24.545
+but I want the probability as an output,
+
+142
+00:27:24.845 --> 00:27:26.705
+so I can change this function as sigmoid,
+
+143
+00:27:26.755 --> 00:27:29.145
+which gives the output between zero and one.
+
+144
+00:27:29.565 --> 00:27:30.705
+So it's quite flexible,
+
+145
+00:27:30.965 --> 00:27:33.705
+but, uh, so far we have seen this f
+
+146
+00:27:33.725 --> 00:27:34.825
+as a stiff function only.
+
+147
+00:27:34.935 --> 00:27:35.225
+Yeah.
+
+148
+00:27:40.465 --> 00:27:41.125
+Any other query?
+
+149
+00:27:46.865 --> 00:27:49.835
+Okay. So now, um,
+
+150
+00:27:51.905 --> 00:27:55.615
+now let, let us talk a little bit about the problem
+
+151
+00:27:55.795 --> 00:27:56.815
+of the perceptron.
+
+152
+00:27:56.915 --> 00:27:58.655
+So per perceptron, uh,
+
+153
+00:27:59.355 --> 00:28:00.615
+Uh, Sunil, I'm here.
+
+154
+00:28:01.035 --> 00:28:03.495
+Yes, it's, Uh, I can, uh,
+
+155
+00:28:03.515 --> 00:28:05.135
+handle this, uh, process. Yes, sir.
+
+156
+00:28:05.275 --> 00:28:09.695
+Yes, sir. Yeah. So, uh, I just,
+
+157
+00:28:09.815 --> 00:28:12.655
+I will take few minutes and uh, just go to the next slide.
+
+158
+00:28:13.325 --> 00:28:16.295
+This one second. Uh, no, I think you can, uh,
+
+159
+00:28:16.325 --> 00:28:18.655
+just now I compiled a new set of slides.
+
+160
+00:28:18.715 --> 00:28:22.575
+You can upload them. There are some error here and
+
+161
+00:28:23.675 --> 00:28:24.675
+Oh, okay. Okay. Yes,
+
+162
+00:28:24.675 --> 00:28:25.125
+sir.
+
+163
+00:28:26.255 --> 00:28:27.745
+Because this is linearly.
+
+164
+00:28:28.285 --> 00:28:31.705
+Ah, right. That last time you had talked, uh, that, uh,
+
+165
+00:28:32.745 --> 00:28:33.945
+sequence of the slide, I guess,
+
+166
+00:28:36.385 --> 00:28:37.385
+Hold on slightly.
+
+167
+00:28:39.715 --> 00:28:41.735
+Ah, yes, yes. No, this is the correct slide.
+
+168
+00:28:41.955 --> 00:28:43.175
+Now I just modified,
+
+169
+00:28:44.525 --> 00:28:45.615
+I'll present now. Yes.
+
+170
+00:28:46.045 --> 00:28:49.655
+Yeah. So go to the first, uh, previously,
+
+171
+00:28:49.895 --> 00:28:51.375
+previously, previously, please.
+
+172
+00:28:51.555 --> 00:28:54.535
+Yes. Ah, see, uh, good morning all.
+
+173
+00:28:54.595 --> 00:28:58.495
+Uh, see, I just briefly started this point in the last
+
+174
+00:28:58.495 --> 00:29:01.495
+session that, uh, I think, uh,
+
+175
+00:29:02.225 --> 00:29:03.615
+there was an important question.
+
+176
+00:29:03.915 --> 00:29:08.175
+Uh, um, they know what will be the possible
+
+177
+00:29:08.915 --> 00:29:12.095
+output function that we can use in the neural network
+
+178
+00:29:12.515 --> 00:29:13.655
+by default, as Dr.
+
+179
+00:29:13.705 --> 00:29:15.655
+Sunil mentioned, it is a step function,
+
+180
+00:29:16.315 --> 00:29:19.055
+but later we will see, based on, on certain requirements,
+
+181
+00:29:19.115 --> 00:29:21.055
+we can change those output functions.
+
+182
+00:29:21.875 --> 00:29:23.775
+But what is most important is up
+
+183
+00:29:23.775 --> 00:29:28.215
+to this point when we were explaining that, uh,
+
+184
+00:29:29.045 --> 00:29:31.575
+with the help of a perceptron neural model,
+
+185
+00:29:32.435 --> 00:29:36.855
+we have incorporated the, um, learning into the,
+
+186
+00:29:37.275 --> 00:29:41.095
+uh, neural neuron since we have incorporated, uh,
+
+187
+00:29:41.435 --> 00:29:43.765
+then it automatically learns the weight
+
+188
+00:29:43.775 --> 00:29:45.205
+parameters from the data.
+
+189
+00:29:46.905 --> 00:29:51.675
+But when they saw that it works, for some cases,
+
+190
+00:29:51.815 --> 00:29:55.315
+it doesn't work for the other cases, then they saw that
+
+191
+00:29:56.415 --> 00:30:00.795
+the possible broad categorization that is,
+
+192
+00:30:01.775 --> 00:30:06.675
+if the classes are linearly separable, the data points
+
+193
+00:30:06.775 --> 00:30:08.835
+of the, suppose there are two classes.
+
+194
+00:30:09.935 --> 00:30:11.715
+If the, the data points
+
+195
+00:30:11.735 --> 00:30:14.675
+of the two classes are linearly separable, linearly,
+
+196
+00:30:14.675 --> 00:30:18.555
+separable means, suppose if I take a two dimension thing,
+
+197
+00:30:18.595 --> 00:30:22.355
+which is the most common one we do, uh, if the data points
+
+198
+00:30:22.415 --> 00:30:25.035
+of the two classes are separated by a straight line,
+
+199
+00:30:26.025 --> 00:30:28.075
+then they're called as a linearly separable.
+
+200
+00:30:28.075 --> 00:30:30.795
+If I go for two dimension, three dimension,
+
+201
+00:30:31.105 --> 00:30:32.475
+that line becomes a plane.
+
+202
+00:30:32.735 --> 00:30:35.235
+If it can be separated by a plane data point,
+
+203
+00:30:35.265 --> 00:30:37.395
+then they're linearly separable.
+
+204
+00:30:38.335 --> 00:30:42.525
+If, if the, uh, data points
+
+205
+00:30:42.625 --> 00:30:46.445
+of different classes are linearly separable, then the,
+
+206
+00:30:46.905 --> 00:30:49.325
+the perceptron learning, whatever we explained
+
+207
+00:30:49.385 --> 00:30:51.005
+so far, uh, works.
+
+208
+00:30:52.265 --> 00:30:56.405
+Um, however, there are a significant number
+
+209
+00:30:56.425 --> 00:30:58.005
+of machine learning tasks
+
+210
+00:30:58.105 --> 00:31:01.285
+or pattern aggression tasks where the classes
+
+211
+00:31:02.305 --> 00:31:03.885
+may not be linearly sufferable.
+
+212
+00:31:05.025 --> 00:31:07.445
+And the easiest example is our logic gates
+
+213
+00:31:07.445 --> 00:31:10.525
+that we have studied XR gate and XR gate.
+
+214
+00:31:11.195 --> 00:31:12.885
+They're not linearly supportable.
+
+215
+00:31:13.085 --> 00:31:16.565
+I will show in the next, uh, following slide,
+
+216
+00:31:16.995 --> 00:31:21.125
+suppose if I take a, uh, a truth table of r,
+
+217
+00:31:21.125 --> 00:31:23.045
+simple R gate or ungate.
+
+218
+00:31:23.545 --> 00:31:28.205
+So 0, 0, 0, 1, 1, 0 1, 1 for R gate except zero, zero,
+
+219
+00:31:28.265 --> 00:31:29.805
+all others are output is one.
+
+220
+00:31:30.385 --> 00:31:33.805
+So now it forms two class zero and one another two classes.
+
+221
+00:31:34.585 --> 00:31:37.005
+Now, if you plot it in a two dimensional plane
+
+222
+00:31:37.025 --> 00:31:39.925
+and C, you can easily group them middle into two classes.
+
+223
+00:31:40.235 --> 00:31:42.525
+Same is true with and r and nine.
+
+224
+00:31:42.875 --> 00:31:44.525
+Whereas when I go to XR
+
+225
+00:31:44.545 --> 00:31:48.805
+or XR gate, suppose if I take XR gate 1, 0 0
+
+226
+00:31:49.025 --> 00:31:53.565
+or one, those cases, it'll be 1 0 0 1 1, it'll be
+
+227
+00:31:54.715 --> 00:31:58.575
+zero in that case, if you try to encircle them
+
+228
+00:31:58.595 --> 00:32:01.095
+to make a two different clusters, it is not possible.
+
+229
+00:32:01.595 --> 00:32:04.215
+And those are called as, they're not linearly separable
+
+230
+00:32:04.355 --> 00:32:05.695
+or linearly inseparable.
+
+231
+00:32:05.715 --> 00:32:08.855
+We say again, linearly inseparable also.
+
+232
+00:32:09.595 --> 00:32:12.695
+So this inseparable class, uh,
+
+233
+00:32:12.875 --> 00:32:15.215
+the perceptron will not be able to learn.
+
+234
+00:32:15.265 --> 00:32:18.135
+Learn means you don't find an optimal set
+
+235
+00:32:18.135 --> 00:32:19.135
+of weight parameters.
+
+236
+00:32:19.755 --> 00:32:23.295
+Uh, which forums which represent that linear hyperplane
+
+237
+00:32:23.355 --> 00:32:25.535
+to separate the data points of the two classes,
+
+238
+00:32:26.275 --> 00:32:28.135
+always the line will be wandering year,
+
+239
+00:32:28.135 --> 00:32:30.135
+and there it never read convergence.
+
+240
+00:32:30.845 --> 00:32:33.935
+Okay? So then, uh,
+
+241
+00:32:34.275 --> 00:32:38.295
+in the linearly inseparable classes, they saw no okay with,
+
+242
+00:32:39.225 --> 00:32:42.605
+um, one perceptron is not possible.
+
+243
+00:32:43.435 --> 00:32:47.805
+Then they went for, uh, um,
+
+244
+00:32:48.715 --> 00:32:53.005
+another layer of perceptron prior to the perceptron that,
+
+245
+00:32:53.065 --> 00:32:54.725
+uh, we are using in the output layer.
+
+246
+00:32:55.745 --> 00:32:59.125
+And with the help of those previous layer perceptron,
+
+247
+00:32:59.185 --> 00:33:01.405
+we can construct the hyper surfaces.
+
+248
+00:33:02.395 --> 00:33:05.565
+They're not anymore sight lines or, uh, hyper planes.
+
+249
+00:33:05.785 --> 00:33:10.325
+Um, they will be, uh, curve surfaces lightning, which can,
+
+250
+00:33:11.105 --> 00:33:14.725
+uh, bend like thread to separate the two classes.
+
+251
+00:33:15.715 --> 00:33:17.045
+That is what, uh,
+
+252
+00:33:17.385 --> 00:33:18.925
+and that is where the complexity
+
+253
+00:33:18.925 --> 00:33:20.445
+of the neural network increases.
+
+254
+00:33:20.865 --> 00:33:25.005
+But we start, uh, getting into a, where we can also deal
+
+255
+00:33:25.005 --> 00:33:26.765
+with the linearly inseparable classes.
+
+256
+00:33:27.625 --> 00:33:29.125
+And that is where the, you know,
+
+257
+00:33:29.155 --> 00:33:31.085
+multi-layer perception journey starts.
+
+258
+00:33:31.085 --> 00:33:34.045
+That is what I'm going to explain as a part of this.
+
+259
+00:33:34.985 --> 00:33:39.605
+And if the data points are not linearly separable,
+
+260
+00:33:41.425 --> 00:33:44.085
+um, then they're called as
+
+261
+00:33:45.035 --> 00:33:48.485
+hard problems from a simple perception point of view.
+
+262
+00:33:48.835 --> 00:33:51.085
+That is the standard name given in the neural network.
+
+263
+00:33:51.325 --> 00:33:52.845
+Rere, they're called as hard problems
+
+264
+00:33:53.425 --> 00:33:54.885
+or representation problems.
+
+265
+00:33:55.625 --> 00:33:57.845
+So that is what we are going to discuss. Next slide.
+
+266
+00:34:00.925 --> 00:34:02.585
+So here what I was explaining,
+
+267
+00:34:02.885 --> 00:34:06.545
+let us consider a simple two class classification problem
+
+268
+00:34:07.085 --> 00:34:09.025
+or binary linearly separable classes.
+
+269
+00:34:09.845 --> 00:34:11.945
+And I'm taking a simple perceptron
+
+270
+00:34:12.605 --> 00:34:14.145
+now in a two dimensional plane,
+
+271
+00:34:14.165 --> 00:34:16.145
+we are showing the distribution of the data point.
+
+272
+00:34:16.655 --> 00:34:18.985
+This xx all belong to one class,
+
+273
+00:34:19.445 --> 00:34:21.665
+and the circles belong to other class,
+
+274
+00:34:22.365 --> 00:34:23.505
+and they're represented
+
+275
+00:34:23.525 --> 00:34:25.425
+by a two dimensional vector X one equal
+
+276
+00:34:25.425 --> 00:34:26.825
+to E one, X two equal to eight.
+
+277
+00:34:27.055 --> 00:34:30.345
+This is a two dimensional vector as the data point.
+
+278
+00:34:30.925 --> 00:34:35.265
+All these X classes are having the corresponding X one,
+
+279
+00:34:35.385 --> 00:34:40.065
+X two in this range, whereas, uh, for, uh, the,
+
+280
+00:34:40.445 --> 00:34:43.705
+the circle classes, uh, X one and X two are in this range.
+
+281
+00:34:43.705 --> 00:34:45.505
+That is how they're different classes.
+
+282
+00:34:46.445 --> 00:34:50.985
+Now, suppose I want to, what is expected is if I am given,
+
+283
+00:34:50.995 --> 00:34:52.065
+these are letters, assume
+
+284
+00:34:52.065 --> 00:34:53.505
+that these are training data points.
+
+285
+00:34:54.165 --> 00:34:56.425
+Now, when these data points are given, I have
+
+286
+00:34:56.425 --> 00:34:59.665
+to learn the characteristics of data points such that no,
+
+287
+00:34:59.705 --> 00:35:04.105
+I in future, if I get a data point to either X class,
+
+288
+00:35:04.945 --> 00:35:08.145
+I should be able to separate this from this circle class.
+
+289
+00:35:08.145 --> 00:35:10.465
+That means to say I should say this belongs to the Class X.
+
+290
+00:35:11.325 --> 00:35:13.265
+Or if a data point you get
+
+291
+00:35:13.265 --> 00:35:15.225
+during testing from year circle class,
+
+292
+00:35:15.385 --> 00:35:16.665
+I should say this belongs to class.
+
+293
+00:35:17.205 --> 00:35:19.545
+Oh, okay. So for that, I have
+
+294
+00:35:19.545 --> 00:35:22.265
+to learn this operation boundary between the two class,
+
+295
+00:35:23.605 --> 00:35:26.825
+for example, initially em equal to zero,
+
+296
+00:35:26.975 --> 00:35:30.065
+that is the initial, uh, iteration
+
+297
+00:35:30.595 --> 00:35:35.105
+where I will have a random weights fixed for W one equal
+
+298
+00:35:35.105 --> 00:35:36.385
+to em for the neuron
+
+299
+00:35:37.105 --> 00:35:41.605
+and with the random weights, if I compute the, uh, equation
+
+300
+00:35:42.115 --> 00:35:43.405
+that is I equal
+
+301
+00:35:43.465 --> 00:35:47.725
+to one two M-W-I-X-I minus theta equal to zero.
+
+302
+00:35:48.235 --> 00:35:51.965
+That equation, if I compute, this is the equation
+
+303
+00:35:51.965 --> 00:35:53.045
+of the strike line.
+
+304
+00:35:53.045 --> 00:35:54.765
+That is how it comes. Okay?
+
+305
+00:35:55.065 --> 00:35:56.845
+You can see that with emmic equal to zero.
+
+306
+00:35:56.865 --> 00:35:58.405
+We talked before starting the training.
+
+307
+00:35:59.925 --> 00:36:02.225
+Now what is happening is some
+
+308
+00:36:02.225 --> 00:36:06.105
+of the O samples are also misclassified as excess samples
+
+309
+00:36:06.375 --> 00:36:09.505
+because have both this are treated as one class.
+
+310
+00:36:09.835 --> 00:36:11.665
+Below this are treated as another class.
+
+311
+00:36:12.605 --> 00:36:15.625
+Now you start the training process equal to one m, equal
+
+312
+00:36:15.625 --> 00:36:17.025
+to two, like that M equal to 10.
+
+313
+00:36:17.025 --> 00:36:19.705
+If I see this is the strike line still there is a
+
+314
+00:36:19.705 --> 00:36:21.265
+misclassification M equal to 20.
+
+315
+00:36:22.105 --> 00:36:23.185
+Randomly this line is coming.
+
+316
+00:36:23.595 --> 00:36:26.345
+There is nothing like, no, uh, like a cant lever.
+
+317
+00:36:26.405 --> 00:36:28.065
+It slowly grows down or something.
+
+318
+00:36:28.595 --> 00:36:31.345
+Every iteration, the weights, uh, changes.
+
+319
+00:36:31.565 --> 00:36:33.785
+So accordingly, uh, means
+
+320
+00:36:33.855 --> 00:36:35.505
+because depending on the weight value,
+
+321
+00:36:35.565 --> 00:36:38.025
+the line can wander in the surface.
+
+322
+00:36:39.705 --> 00:36:42.785
+Emmic equal to 30 is you can see emmic equal to four T.
+
+323
+00:36:43.255 --> 00:36:44.265
+This line is coming.
+
+324
+00:36:44.875 --> 00:36:49.305
+There is no unique line, uh, present
+
+325
+00:36:49.845 --> 00:36:51.265
+to separate the data points.
+
+326
+00:36:51.565 --> 00:36:52.905
+You can see now in this place,
+
+327
+00:36:53.395 --> 00:36:56.865
+there are infinite lines possible to separate these two.
+
+328
+00:36:57.315 --> 00:36:59.785
+We'll start the training to stop the training process
+
+329
+00:37:00.005 --> 00:37:01.905
+as soon as we receive the reach.
+
+330
+00:37:01.935 --> 00:37:04.225
+This point, there is a call to t like this.
+
+331
+00:37:05.005 --> 00:37:07.465
+Any, I arrive at a solution where
+
+332
+00:37:08.295 --> 00:37:09.665
+there's no unique solution,
+
+333
+00:37:10.145 --> 00:37:11.745
+multiple solutions possible in
+
+334
+00:37:11.745 --> 00:37:12.865
+the training it ready process.
+
+335
+00:37:13.005 --> 00:37:15.905
+As soon as I reach a place where ideally, you know,
+
+336
+00:37:15.985 --> 00:37:18.105
+I separate all the training samples like
+
+337
+00:37:18.105 --> 00:37:19.145
+this, it's a wishlist.
+
+338
+00:37:19.775 --> 00:37:23.145
+I'll stop the training process in practice if it is
+
+339
+00:37:23.145 --> 00:37:24.545
+not possible, and that is the case.
+
+340
+00:37:25.295 --> 00:37:28.305
+Most of the cases, because the samples are not nicely
+
+341
+00:37:28.495 --> 00:37:32.215
+separated like this, at that point, we are going
+
+342
+00:37:32.215 --> 00:37:34.615
+to stop at a place where I reached the minimum
+
+343
+00:37:34.705 --> 00:37:35.975
+point, minimum point.
+
+344
+00:37:36.035 --> 00:37:39.055
+And then beyond that, uh, there is no further decrement.
+
+345
+00:37:39.055 --> 00:37:40.655
+That's what I do. Okay?
+
+346
+00:37:41.195 --> 00:37:44.995
+So a two class problem,
+
+347
+00:37:45.085 --> 00:37:49.355
+which are linearly separable with a simple perception that,
+
+348
+00:37:49.415 --> 00:37:53.115
+uh, we discussed so far, using that through a it process
+
+349
+00:37:53.215 --> 00:37:54.595
+of learning the weights,
+
+350
+00:37:55.055 --> 00:37:58.195
+we can finally arrive at a place like just for example,
+
+351
+00:37:58.475 --> 00:38:01.675
+m equal to 40, where I am able
+
+352
+00:38:01.675 --> 00:38:03.595
+to separate the data points of that.
+
+353
+00:38:04.175 --> 00:38:07.235
+Uh, the two classes, when we arrive at that,
+
+354
+00:38:07.615 --> 00:38:11.155
+we say we have actual convergence of the perception lab.
+
+355
+00:38:11.935 --> 00:38:16.025
+Okay? This is a no simple case, which is, uh, linearly
+
+356
+00:38:16.545 --> 00:38:18.665
+cases, any doubt here to any
+
+357
+00:38:18.665 --> 00:38:22.855
+of you, any of you,
+
+358
+00:38:24.555 --> 00:38:25.555
+Yes, sir. Uh, have
+
+359
+00:38:25.555 --> 00:38:27.855
+it. Yeah, sir.
+
+360
+00:38:27.955 --> 00:38:30.415
+Uh, what is the convergence criteria
+
+361
+00:38:30.485 --> 00:38:32.215
+that we need to, uh, set
+
+362
+00:38:33.525 --> 00:38:36.205
+Look convergence criteria means ideally, you know,
+
+363
+00:38:36.385 --> 00:38:37.525
+in the training samples,
+
+364
+00:38:38.485 --> 00:38:41.365
+I know in the classification problem of pre each
+
+365
+00:38:41.365 --> 00:38:43.285
+of the data points are given that these are the,
+
+366
+00:38:43.285 --> 00:38:45.605
+this belongs to class four, and this belongs to class X.
+
+367
+00:38:46.275 --> 00:38:49.485
+Okay? Now, suppose I apply all the training samples
+
+368
+00:38:49.665 --> 00:38:52.765
+and try to check from the learned, uh, hyper surface,
+
+369
+00:38:52.765 --> 00:38:55.805
+whether it is correctly classifying or not, okay?
+
+370
+00:38:56.625 --> 00:38:58.765
+If it's correctly classifying, then it is fine.
+
+371
+00:38:58.765 --> 00:39:01.045
+You calculate the performance a hundred percent ideally
+
+372
+00:39:01.045 --> 00:39:02.085
+should get classified.
+
+373
+00:39:02.345 --> 00:39:05.125
+But of course there are practical challenges with that.
+
+374
+00:39:05.305 --> 00:39:08.045
+No, the neural network may over fit for
+
+375
+00:39:08.155 --> 00:39:09.165
+that training samples.
+
+376
+00:39:09.785 --> 00:39:12.525
+That's why no people convert this
+
+377
+00:39:12.685 --> 00:39:13.885
+training set into two portion.
+
+378
+00:39:14.105 --> 00:39:16.725
+One is the training set, maybe 80% under 10
+
+379
+00:39:16.725 --> 00:39:18.765
+to 20% value validation set.
+
+380
+00:39:18.765 --> 00:39:21.205
+We see that validation data points are taken
+
+381
+00:39:21.785 --> 00:39:25.405
+and, uh, check with their class labels nominated
+
+382
+00:39:25.545 --> 00:39:26.925
+by the learned perception.
+
+383
+00:39:27.145 --> 00:39:29.485
+If it correctly nominates labels,
+
+384
+00:39:30.035 --> 00:39:33.525
+then we say we have convergences achieved or
+
+385
+00:39:33.525 --> 00:39:35.485
+otherwise, no, it's below certain
+
+386
+00:39:36.665 --> 00:39:39.485
+in practical cases may be 2% error or something.
+
+387
+00:39:39.485 --> 00:39:40.485
+Then we stop.
+
+388
+00:39:41.505 --> 00:39:43.975
+Thank you, sir. Okay, next slide.
+
+389
+00:39:45.875 --> 00:39:48.015
+Uh, can the percept be used
+
+390
+00:39:48.015 --> 00:39:49.695
+to solve a multi-class problem?
+
+391
+00:39:50.115 --> 00:39:51.295
+We are only dealing here
+
+392
+00:39:51.295 --> 00:39:53.455
+With, uh, thi this, this is the next slide.
+
+393
+00:39:53.555 --> 00:39:54.735
+I'm going for that multi-class.
+
+394
+00:39:54.895 --> 00:39:56.095
+I put it, I'll explain that
+
+395
+00:39:56.995 --> 00:39:59.455
+before that, uh, one more hand was rise,
+
+396
+00:40:00.765 --> 00:40:01.765
+Sir. Um,
+
+397
+00:40:01.765 --> 00:40:02.945
+so what the bias there?
+
+398
+00:40:03.005 --> 00:40:07.995
+So, uh, so choosing the bias will influence the,
+
+399
+00:40:08.255 --> 00:40:13.045
+um, where, where you convert, right?
+
+400
+00:40:13.145 --> 00:40:17.525
+Ah, ah, so, um, so are we gonna start with the, let's say
+
+401
+00:40:18.105 --> 00:40:20.765
+in this specific case, in the previous slide,
+
+402
+00:40:20.765 --> 00:40:22.725
+in this specific case, can we start with the wire of zero
+
+403
+00:40:22.785 --> 00:40:23.925
+and, uh,
+
+404
+00:40:26.705 --> 00:40:28.205
+the origin, right? So, uh,
+
+405
+00:40:28.865 --> 00:40:29.865
+Yes. So ideally
+
+406
+00:40:29.865 --> 00:40:33.325
+you see even the biases also learned from the
+
+407
+00:40:33.325 --> 00:40:35.205
+data points, okay?
+
+408
+00:40:35.475 --> 00:40:39.005
+That is why. Suppose if you require, you know,
+
+409
+00:40:39.225 --> 00:40:42.885
+recall the equation for the perception i one, um,
+
+410
+00:40:43.925 --> 00:40:48.165
+I equal to one two MWXI minus theta equal to zero
+
+411
+00:40:49.465 --> 00:40:50.525
+or equal to theta.
+
+412
+00:40:50.555 --> 00:40:53.645
+That is the inequality or minus theta equal to zero.
+
+413
+00:40:54.105 --> 00:40:59.085
+Now, the theta can be expressed as W zero into X zero,
+
+414
+00:40:59.895 --> 00:41:03.365
+where X zero is not the actual data point just to have no.
+
+415
+00:41:03.365 --> 00:41:07.245
+Now I have a, uh, equality equation w equal to I equal
+
+416
+00:41:07.245 --> 00:41:11.515
+to zero to M where W zero x zero represents your theta.
+
+417
+00:41:13.195 --> 00:41:15.935
+And, uh, in that, uh, this W zero X
+
+418
+00:41:16.275 --> 00:41:21.255
+and always the, the x zero is kept as, uh, minus one
+
+419
+00:41:21.365 --> 00:41:22.775
+because that is minus theta.
+
+420
+00:41:22.775 --> 00:41:24.015
+Is there threshold?
+
+421
+00:41:24.605 --> 00:41:27.455
+I'll keep it as minus one, always that input X zero equal
+
+422
+00:41:27.455 --> 00:41:29.055
+to minus one, because this is not coming
+
+423
+00:41:29.055 --> 00:41:30.175
+from external data point.
+
+424
+00:41:30.915 --> 00:41:34.805
+Now the, the learning equation is, uh,
+
+425
+00:41:36.405 --> 00:41:38.365
+WXI minus the equal to zero.
+
+426
+00:41:39.355 --> 00:41:42.135
+Now minus is set as x, not equal to minus one.
+
+427
+00:41:42.395 --> 00:41:44.935
+Now I have to learn that, uh, theta part, which is nothing
+
+428
+00:41:44.935 --> 00:41:47.495
+but w not, uh, that learned as a process
+
+429
+00:41:47.555 --> 00:41:49.175
+of equation, that equation.
+
+430
+00:41:51.375 --> 00:41:54.785
+Okay? Okay, Soman, thank you. Yeah, thank you sir.
+
+431
+00:41:54.965 --> 00:41:56.065
+So now I have a
+
+432
+00:41:56.145 --> 00:41:57.145
+Question. Yeah,
+
+433
+00:41:57.145 --> 00:41:58.425
+Sir?
+
+434
+00:41:58.565 --> 00:42:02.625
+Uh, in support vector machine, um, so we select a hyperplane
+
+435
+00:42:02.625 --> 00:42:04.145
+that maximizes the margin, right?
+
+436
+00:42:04.145 --> 00:42:07.745
+Using the closest, uh, support, uh, vectors. Yes.
+
+437
+00:42:07.745 --> 00:42:10.585
+So here also, does it maximize the margin
+
+438
+00:42:10.845 --> 00:42:15.265
+or it just, uh, separates both of the classes, sir?
+
+439
+00:42:15.335 --> 00:42:16.665
+Wonderful, wonderful question.
+
+440
+00:42:16.765 --> 00:42:21.025
+Uh, there, here it is not a maximum margin classifi, that's
+
+441
+00:42:21.025 --> 00:42:23.265
+where I told no, there are infinite solutions possible.
+
+442
+00:42:23.265 --> 00:42:25.585
+For example, sun, we'll go back to the previous slide.
+
+443
+00:42:26.605 --> 00:42:29.985
+If there have been a maximum, uh, suppression classified,
+
+444
+00:42:29.985 --> 00:42:31.625
+this a equal to 40 line, no,
+
+445
+00:42:31.805 --> 00:42:33.625
+should I come exactly in the center?
+
+446
+00:42:34.605 --> 00:42:37.505
+Yes. So that, no, all the samples are equally distanced from
+
+447
+00:42:37.825 --> 00:42:40.985
+positive or negative example, but here in the neural
+
+448
+00:42:40.985 --> 00:42:42.705
+network, there's no maximum margin classifi.
+
+449
+00:42:43.245 --> 00:42:46.025
+So it can, as for all the given training data point,
+
+450
+00:42:46.925 --> 00:42:48.745
+it is able to achieve a separation.
+
+451
+00:42:48.765 --> 00:42:49.765
+We stop it there.
+
+452
+00:42:51.015 --> 00:42:55.895
+Okay, sir. Got it, Thank you. Okay, next, next.
+
+453
+00:42:56.315 --> 00:42:59.615
+So as long as they're linearly supportable,
+
+454
+00:42:59.765 --> 00:43:03.855
+even if there are multiple classes, we can, uh, no
+
+455
+00:43:04.385 --> 00:43:07.495
+build a perception classifier.
+
+456
+00:43:08.165 --> 00:43:09.535
+What happens, for example, here
+
+457
+00:43:10.395 --> 00:43:12.855
+you have this input layer, input layer.
+
+458
+00:43:13.505 --> 00:43:16.495
+These are linear units. The output functions are linear.
+
+459
+00:43:17.045 --> 00:43:20.215
+That means to say they don't really perform the, uh,
+
+460
+00:43:20.945 --> 00:43:23.415
+perception function are neuron function.
+
+461
+00:43:23.725 --> 00:43:25.775
+They're only fan out terminals.
+
+462
+00:43:25.775 --> 00:43:27.815
+Like, you know, if we are from electronics
+
+463
+00:43:27.815 --> 00:43:29.655
+or something, no, you have one terminal.
+
+464
+00:43:29.805 --> 00:43:32.175
+From there I can draw wise to other
+
+465
+00:43:32.175 --> 00:43:34.495
+because the, the faster dimension has
+
+466
+00:43:34.495 --> 00:43:37.015
+to be fed into all the neurons in the perception layer.
+
+467
+00:43:37.045 --> 00:43:40.335
+Similarly, second dimension also needs to be fed into
+
+468
+00:43:40.955 --> 00:43:42.175
+all the neurons in the pa.
+
+469
+00:43:42.175 --> 00:43:45.135
+That is where that the input layer is non-existent from a
+
+470
+00:43:45.135 --> 00:43:46.295
+neuron function point of view
+
+471
+00:43:46.295 --> 00:43:48.015
+or a machine learning task point of view,
+
+472
+00:43:48.015 --> 00:43:49.215
+they're only feeding units.
+
+473
+00:43:50.675 --> 00:43:53.855
+See, now, you can see now in the output layer, the number
+
+474
+00:43:53.875 --> 00:43:55.535
+of neurons in the output layer.
+
+475
+00:43:55.565 --> 00:43:57.495
+That is the perceptron layer.
+
+476
+00:43:57.605 --> 00:44:00.015
+Hard limiting unit means you have a step function
+
+477
+00:44:00.015 --> 00:44:01.055
+as the output function.
+
+478
+00:44:01.765 --> 00:44:05.855
+When I do this one, perceptron is there for one class.
+
+479
+00:44:06.515 --> 00:44:09.695
+Now, in the example, if you see there are three classes, x,
+
+480
+00:44:10.255 --> 00:44:11.335
+O, and dots.
+
+481
+00:44:11.865 --> 00:44:13.335
+These are three different classes.
+
+482
+00:44:14.435 --> 00:44:16.535
+Now, one perceptron say letters.
+
+483
+00:44:16.535 --> 00:44:18.095
+First perceptron is for x,
+
+484
+00:44:18.475 --> 00:44:21.015
+second person is the perceptron is for O,
+
+485
+00:44:21.315 --> 00:44:24.335
+and the third percent perception is for dot.
+
+486
+00:44:25.075 --> 00:44:28.495
+Now, while training the neuron for the excess sample,
+
+487
+00:44:29.675 --> 00:44:33.245
+my goal is the excess samples data points becomes the
+
+488
+00:44:33.445 --> 00:44:35.565
+positive examples and the data points
+
+489
+00:44:35.585 --> 00:44:37.445
+of all other remaining classes becomes
+
+490
+00:44:37.445 --> 00:44:38.565
+the negative examples.
+
+491
+00:44:39.105 --> 00:44:43.045
+Now, my goal is I have to identify an hyper surface,
+
+492
+00:44:43.655 --> 00:44:45.125
+which separate these excess samples
+
+493
+00:44:45.155 --> 00:44:46.485
+with all other rest points.
+
+494
+00:44:46.545 --> 00:44:50.445
+You can see this right line next to the x, that slant line.
+
+495
+00:44:50.955 --> 00:44:55.485
+That will be the, um, the, uh,
+
+496
+00:44:55.485 --> 00:44:58.965
+hyper surface, which is separate the data points of X
+
+497
+00:44:59.035 --> 00:45:01.245
+with the both O and dots.
+
+498
+00:45:02.155 --> 00:45:04.485
+That is what when I'm training the perception
+
+499
+00:45:04.625 --> 00:45:08.805
+of the X class, I use that equation
+
+500
+00:45:09.365 --> 00:45:13.485
+representing the hyperplane for this si uh, uh, perceptron,
+
+501
+00:45:13.485 --> 00:45:17.285
+which is this slant vertical, uh, slant line.
+
+502
+00:45:18.275 --> 00:45:22.085
+That equation will satisfy this inequality condition, okay?
+
+503
+00:45:22.085 --> 00:45:23.445
+Separating this with the rest.
+
+504
+00:45:23.915 --> 00:45:24.925
+Similarly, when I go
+
+505
+00:45:24.925 --> 00:45:28.365
+to the second neuron circle versus the other two point,
+
+506
+00:45:28.505 --> 00:45:32.165
+the other opposite X line will be useful that,
+
+507
+00:45:32.545 --> 00:45:34.885
+and the third neuron is the horizontal line will be
+
+508
+00:45:34.885 --> 00:45:36.605
+useful in that way.
+
+509
+00:45:37.875 --> 00:45:40.525
+This you can extend to the end number of classes as long
+
+510
+00:45:40.525 --> 00:45:42.165
+as the classes are linearly supportable.
+
+511
+00:45:42.705 --> 00:45:46.085
+You can put that many perceptrons in the output layer,
+
+512
+00:45:46.745 --> 00:45:49.525
+and each perceptron represent one class,
+
+513
+00:45:50.265 --> 00:45:52.965
+and the rest sample acts as the negative examples.
+
+514
+00:45:53.035 --> 00:45:56.325
+Then by ative process, you can arrive at convergence
+
+515
+00:45:56.665 --> 00:45:58.245
+and it is assured
+
+516
+00:45:58.245 --> 00:45:59.685
+that convergence we achieve in the
+
+517
+00:45:59.685 --> 00:46:00.765
+linearly supportable classes.
+
+518
+00:46:04.625 --> 00:46:06.555
+They is Does it answer your question?
+
+519
+00:46:10.695 --> 00:46:13.835
+Uh, yes sir. Yeah, Goro? Yeah. Thank you.
+
+520
+00:46:14.535 --> 00:46:17.555
+So the, this we are shown for three classes you can extend
+
+521
+00:46:17.555 --> 00:46:18.955
+to any number of classes as long
+
+522
+00:46:18.955 --> 00:46:20.035
+as they're linearly supportive.
+
+523
+00:46:20.645 --> 00:46:22.655
+Okay? Next one, subject
+
+524
+00:46:23.195 --> 00:46:24.195
+For one perception. It
+
+525
+00:46:24.195 --> 00:46:26.215
+can classify only two, right? It cannot
+
+526
+00:46:26.615 --> 00:46:28.335
+Classify yes, it basically taxes a, uh,
+
+527
+00:46:28.535 --> 00:46:31.865
+binary classifier. Okay? Then we
+
+528
+00:46:31.865 --> 00:46:34.505
+Are breaking down this multi-class problem into a binary
+
+529
+00:46:34.555 --> 00:46:35.625
+class classification.
+
+530
+00:46:36.005 --> 00:46:39.945
+Uh, by means, uh, see, it means of this rajesh,
+
+531
+00:46:39.945 --> 00:46:43.665
+when you say, when I'm breaking down into a binary class,
+
+532
+00:46:45.005 --> 00:46:46.145
+in case of binary class,
+
+533
+00:46:46.385 --> 00:46:49.425
+I am not seeing a conventional support vector machine.
+
+534
+00:46:49.485 --> 00:46:51.465
+If I go to support vector machine, yes,
+
+535
+00:46:51.535 --> 00:46:52.785
+basically it is designed
+
+536
+00:46:52.805 --> 00:46:55.465
+as a binary classifier for every class.
+
+537
+00:46:55.745 --> 00:46:58.425
+I separately trying a binary classifier.
+
+538
+00:46:58.425 --> 00:46:59.465
+Then I have an ensemble
+
+539
+00:46:59.465 --> 00:47:01.545
+of binary classifiers to deal multi-class.
+
+540
+00:47:01.655 --> 00:47:04.705
+Whereas in the multi perception we don't do in perception,
+
+541
+00:47:04.705 --> 00:47:08.265
+we don't do that even though we designate one perception
+
+542
+00:47:08.265 --> 00:47:09.265
+for each binary class,
+
+543
+00:47:09.445 --> 00:47:13.105
+but they're simultaneously fed into all the layers and kind.
+
+544
+00:47:14.045 --> 00:47:16.855
+Okay? That is how in one go, I try
+
+545
+00:47:16.955 --> 00:47:20.055
+and assemble of binary classifier in the percept.
+
+546
+00:47:22.245 --> 00:47:24.085
+Okay, fine.
+
+547
+00:47:24.315 --> 00:47:28.565
+Next, Ah, now we are moving into the case of,
+
+548
+00:47:29.185 --> 00:47:31.685
+uh, linearly inseparable classes.
+
+549
+00:47:31.995 --> 00:47:33.845
+Same you can see now, um,
+
+550
+00:47:35.125 --> 00:47:37.485
+actually it is binary linearly inseparable classes.
+
+551
+00:47:37.665 --> 00:47:39.205
+Not multi-class, sorry for
+
+552
+00:47:39.205 --> 00:47:41.565
+that binary linearly inseparable class.
+
+553
+00:47:42.225 --> 00:47:45.165
+You see the production process of the data points at
+
+554
+00:47:45.165 --> 00:47:46.685
+that same xx are there,
+
+555
+00:47:47.305 --> 00:47:49.285
+but they're distributed in two direction.
+
+556
+00:47:49.795 --> 00:47:52.805
+Similarly, uh, these circles are there,
+
+557
+00:47:52.805 --> 00:47:54.805
+they're distributed in two different points.
+
+558
+00:47:55.435 --> 00:47:57.325
+They're only binary class, not multi-class.
+
+559
+00:47:57.325 --> 00:47:59.685
+Sorry, I will change the title. Okay?
+
+560
+00:48:00.265 --> 00:48:03.965
+You, you see now, uh, even though the spaces are available
+
+561
+00:48:04.015 --> 00:48:07.245
+among them, you try to see, suppose if I take em equal
+
+562
+00:48:07.245 --> 00:48:10.885
+to zero line, only one portion of the circles are put
+
+563
+00:48:10.885 --> 00:48:12.245
+as one class, whereas the other portion
+
+564
+00:48:12.265 --> 00:48:14.565
+of circles are included as a negative exam.
+
+565
+00:48:14.995 --> 00:48:19.445
+Similarly, when I go to say I go to iCal to 20 line,
+
+566
+00:48:20.235 --> 00:48:21.885
+half of these samples from X
+
+567
+00:48:21.885 --> 00:48:24.165
+and half of the samples from circles are given as one class,
+
+568
+00:48:24.225 --> 00:48:25.325
+the others are given another.
+
+569
+00:48:25.425 --> 00:48:28.365
+So you can go on putting this, any number
+
+570
+00:48:28.385 --> 00:48:31.325
+of iterations you do, the hyper surfaces
+
+571
+00:48:31.325 --> 00:48:32.365
+that are getting generated,
+
+572
+00:48:32.465 --> 00:48:34.205
+the slight trains which are getting generated
+
+573
+00:48:34.795 --> 00:48:36.845
+will never be able to classify all the samples
+
+574
+00:48:38.065 --> 00:48:40.805
+and such things are term as, uh,
+
+575
+00:48:41.925 --> 00:48:43.765
+linearly inseparable classes.
+
+576
+00:48:44.435 --> 00:48:48.405
+Okay? One way of doing that is just to give an as one
+
+577
+00:48:49.355 --> 00:48:53.765
+imagine aro surface available straight line is not possible
+
+578
+00:48:54.425 --> 00:48:57.725
+cur surface available, which can, uh, put a contour
+
+579
+00:48:57.725 --> 00:48:59.245
+around this excess separately
+
+580
+00:48:59.625 --> 00:49:02.685
+and the circles, uh, in a separate, for example, some
+
+581
+00:49:02.685 --> 00:49:05.845
+of you have done CARNA math in the digital, uh,
+
+582
+00:49:05.915 --> 00:49:08.125
+combination logic circuit simplification.
+
+583
+00:49:08.465 --> 00:49:10.365
+We used to put the, you know, curves
+
+584
+00:49:10.425 --> 00:49:11.685
+to separate two classes.
+
+585
+00:49:12.265 --> 00:49:15.365
+The same nature should evolve here, okay?
+
+586
+00:49:15.585 --> 00:49:17.445
+To simple hyper planes.
+
+587
+00:49:17.505 --> 00:49:20.085
+Linear hyper planes doesn't help in separate.
+
+588
+00:49:21.605 --> 00:49:23.645
+I think you should get this idea to your mind.
+
+589
+00:49:23.745 --> 00:49:27.045
+No, you try in any way, you'll not be able
+
+590
+00:49:27.045 --> 00:49:29.125
+to put a limited hyperplane.
+
+591
+00:49:29.245 --> 00:49:32.605
+I need an nonlinear, uh, hyperplane two, uh,
+
+592
+00:49:32.605 --> 00:49:34.605
+cover the samples for each class separate.
+
+593
+00:49:35.585 --> 00:49:36.595
+Okay? Next slide.
+
+594
+00:49:38.465 --> 00:49:41.055
+First of all, you see I was telling in the opening remark
+
+595
+00:49:41.125 --> 00:49:44.775
+that uh, this is, um, um, um,
+
+596
+00:49:45.565 --> 00:49:46.935
+logical under gate
+
+597
+00:49:47.665 --> 00:49:51.815
+where 0 1 0 0 1 0, the output is zero
+
+598
+00:49:51.925 --> 00:49:53.855
+that I'm showing it as x,
+
+599
+00:49:54.715 --> 00:49:58.135
+and uh, for one, one the output is one
+
+600
+00:49:58.215 --> 00:49:59.655
+that I'm throwing it as a circle.
+
+601
+00:50:00.435 --> 00:50:04.175
+Now, I can put a straight line between one and O
+
+602
+00:50:04.175 --> 00:50:06.855
+and X two, separate that these are linearly supportable.
+
+603
+00:50:07.035 --> 00:50:10.575
+You come to, uh, this is XR gate
+
+604
+00:50:11.235 --> 00:50:12.255
+or 0 1 1 0.
+
+605
+00:50:12.275 --> 00:50:14.775
+It is 1 0 0 1 1. It is zero.
+
+606
+00:50:15.195 --> 00:50:17.575
+Now you see, if you put a straight line anywhere,
+
+607
+00:50:17.715 --> 00:50:19.095
+you'll not be able to support it.
+
+608
+00:50:19.095 --> 00:50:20.935
+These are linearly inseparable classes.
+
+609
+00:50:21.315 --> 00:50:23.935
+So for that, I need to have a, you know,
+
+610
+00:50:24.135 --> 00:50:27.685
+a ellipsoid like thing which will cover 0 1, 1 0 line
+
+611
+00:50:28.145 --> 00:50:29.925
+and, uh, half el lymph side, this side
+
+612
+00:50:29.925 --> 00:50:31.325
+and ole side, this side so
+
+613
+00:50:31.325 --> 00:50:32.685
+that they belong to another class.
+
+614
+00:50:32.995 --> 00:50:35.525
+That is how we need to create surfaces
+
+615
+00:50:35.585 --> 00:50:37.805
+for covering the data point software given
+
+616
+00:50:37.885 --> 00:50:39.725
+linearly inseparable classes.
+
+617
+00:50:40.505 --> 00:50:44.325
+So, so for that purpose, a single layer perception,
+
+618
+00:50:44.325 --> 00:50:48.045
+which was there, which is creating linear hyper planes,
+
+619
+00:50:48.075 --> 00:50:49.685
+will not be possible to deal
+
+620
+00:50:49.685 --> 00:50:51.405
+with the linearly inseparable classes.
+
+621
+00:50:52.155 --> 00:50:53.965
+That is where the next two will go.
+
+622
+00:50:55.765 --> 00:50:57.865
+Ah, now this figure is very important.
+
+623
+00:50:59.115 --> 00:51:01.405
+This is a two layer, uh, network.
+
+624
+00:51:01.625 --> 00:51:05.325
+Two layer network means one layer, input layer is there.
+
+625
+00:51:05.435 --> 00:51:08.205
+That means you say there is only a single layer perceptron,
+
+626
+00:51:08.885 --> 00:51:10.525
+a single layer perceptron is there.
+
+627
+00:51:11.295 --> 00:51:15.235
+Now, if I take an exclusive r ga, no,
+
+628
+00:51:15.235 --> 00:51:18.155
+this is the linear hyperplane that separates, okay?
+
+629
+00:51:18.335 --> 00:51:22.115
+Now you see a portion of the class, same class A
+
+630
+00:51:22.855 --> 00:51:27.555
+or class zero is left out and put as a part of B only.
+
+631
+00:51:27.665 --> 00:51:29.675
+That is not, uh, uh, possible.
+
+632
+00:51:29.975 --> 00:51:32.315
+No, you cannot do any convergence.
+
+633
+00:51:33.135 --> 00:51:35.875
+On the other hand, you see slightly next row.
+
+634
+00:51:36.635 --> 00:51:40.235
+I am inserting one more perceptron layer prior
+
+635
+00:51:40.255 --> 00:51:42.915
+to the earlier perceptron layer that we are discussing.
+
+636
+00:51:43.295 --> 00:51:45.835
+It is a three layer network input layer
+
+637
+00:51:45.975 --> 00:51:47.795
+and output layer was there earlier in
+
+638
+00:51:47.795 --> 00:51:49.035
+between the input and output layer.
+
+639
+00:51:49.065 --> 00:51:50.835
+I'll insert one more perceptron layer,
+
+640
+00:51:51.965 --> 00:51:54.785
+and now if you consider each perceptron,
+
+641
+00:51:54.785 --> 00:51:57.025
+they create only linear hyper planes.
+
+642
+00:51:57.685 --> 00:52:00.785
+But if I combine the outputs of two
+
+643
+00:52:01.005 --> 00:52:03.305
+or more, um, uh,
+
+644
+00:52:03.655 --> 00:52:06.065
+perceptrons in the next perceptron layer,
+
+645
+00:52:06.725 --> 00:52:08.745
+you get a modified hyper surface.
+
+646
+00:52:08.855 --> 00:52:12.425
+That is what supposedly in this case, what happens if I take
+
+647
+00:52:13.185 --> 00:52:15.185
+previous two layers of perceptron.
+
+648
+00:52:15.185 --> 00:52:18.785
+If I pull, if I see the hyper surface at the output
+
+649
+00:52:18.785 --> 00:52:21.625
+of the output layer, their convex surfaces
+
+650
+00:52:21.625 --> 00:52:22.745
+will be created like this.
+
+651
+00:52:23.285 --> 00:52:25.425
+Now, you can see now just like car map I was showing
+
+652
+00:52:26.085 --> 00:52:29.065
+the data point belong to classier are all in within one
+
+653
+00:52:29.065 --> 00:52:32.025
+surface, and BB are getting separated.
+
+654
+00:52:32.125 --> 00:52:36.225
+Let me just say, um, this is a convex, convex surface means
+
+655
+00:52:37.855 --> 00:52:40.795
+if I take two data points within that convex surface,
+
+656
+00:52:40.975 --> 00:52:44.635
+you connect a line, the line connecting the two data points
+
+657
+00:52:44.635 --> 00:52:46.915
+will lie within that convex surface, within
+
+658
+00:52:46.915 --> 00:52:49.995
+that surface itself, such as called as a convex surface.
+
+659
+00:52:50.665 --> 00:52:54.155
+Okay? Alternatively, you come to the next example, uh,
+
+660
+00:52:54.155 --> 00:52:55.675
+classes with measured region.
+
+661
+00:52:55.675 --> 00:52:56.995
+This a car-like region.
+
+662
+00:52:57.495 --> 00:53:01.275
+Now suppose if I take a a two layer network, I try
+
+663
+00:53:01.275 --> 00:53:04.835
+to build a surface, but still here in this case,
+
+664
+00:53:05.365 --> 00:53:07.275
+these are non convex surfaces.
+
+665
+00:53:07.375 --> 00:53:09.835
+The data are distributed in a non convex manner.
+
+666
+00:53:10.215 --> 00:53:12.355
+If I take two data points within that, b,
+
+667
+00:53:12.995 --> 00:53:14.075
+I can connect the lines,
+
+668
+00:53:14.215 --> 00:53:15.755
+the line will be outside that surface.
+
+669
+00:53:16.185 --> 00:53:17.635
+That is a non convex case.
+
+670
+00:53:18.295 --> 00:53:22.645
+So if I take a three layer network in which one is input
+
+671
+00:53:22.645 --> 00:53:25.085
+layer, which is not participating in the classification
+
+672
+00:53:25.195 --> 00:53:27.125
+task, there are two perceptron layers.
+
+673
+00:53:27.835 --> 00:53:31.005
+With the help of the middle perceptron layer, I will be able
+
+674
+00:53:31.005 --> 00:53:34.525
+to achieve a modified hyper surface, non convex hyper,
+
+675
+00:53:34.615 --> 00:53:38.045
+sorry, um, non-linear hyper surface at
+
+676
+00:53:38.045 --> 00:53:39.085
+the output perceptron.
+
+677
+00:53:39.785 --> 00:53:42.405
+One cases I can do, a convex surfaces can be created.
+
+678
+00:53:43.105 --> 00:53:45.365
+Now, they're not linearly separable,
+
+679
+00:53:45.825 --> 00:53:48.885
+but the data points of each class form a convex surface.
+
+680
+00:53:50.025 --> 00:53:52.645
+At that point of time, I will be able
+
+681
+00:53:52.705 --> 00:53:54.885
+to still construct hyper surfaces,
+
+682
+00:53:54.885 --> 00:53:57.205
+which can separate the data points of each of the class.
+
+683
+00:53:57.425 --> 00:53:59.885
+So typical construction of the surfaces can be
+
+684
+00:53:59.905 --> 00:54:02.605
+as simple like this, or it can be like this
+
+685
+00:54:02.865 --> 00:54:04.325
+or the last vertical region,
+
+686
+00:54:04.395 --> 00:54:06.045
+most gentle region shape it can.
+
+687
+00:54:06.425 --> 00:54:09.045
+So the shape that is taken constructed like this
+
+688
+00:54:09.225 --> 00:54:13.125
+for the last column, if you see there is one, uh, strike,
+
+689
+00:54:13.175 --> 00:54:15.245
+small straight line, another straight line portion,
+
+690
+00:54:15.255 --> 00:54:18.005
+other straight line portion like this rapid is like thing it
+
+691
+00:54:18.005 --> 00:54:20.485
+is happening and that
+
+692
+00:54:21.355 --> 00:54:23.605
+this is one slight line from one new,
+
+693
+00:54:23.785 --> 00:54:25.405
+one perceptron in the previous layer.
+
+694
+00:54:25.785 --> 00:54:27.685
+The other portion is from other, uh,
+
+695
+00:54:27.935 --> 00:54:29.765
+perceptron in the second layer,
+
+696
+00:54:30.095 --> 00:54:32.525
+other perceptron there under the output layer.
+
+697
+00:54:32.645 --> 00:54:34.725
+I combine all of them depending on the number
+
+698
+00:54:34.745 --> 00:54:36.885
+of neurons output you're combining this one,
+
+699
+00:54:36.905 --> 00:54:38.485
+the surface nature changes,
+
+700
+00:54:39.345 --> 00:54:41.885
+but in a two layer perceptron network
+
+701
+00:54:41.985 --> 00:54:43.005
+or a three layer network,
+
+702
+00:54:43.705 --> 00:54:46.445
+always you create convex hyper surfaces
+
+703
+00:54:47.385 --> 00:54:51.125
+and those cla linearly inseparable machine learning tasks
+
+704
+00:54:51.175 --> 00:54:54.165
+where the data points of each class are lying in the
+
+705
+00:54:56.225 --> 00:55:00.525
+convex manner, then you can deal with them with the help
+
+706
+00:55:00.525 --> 00:55:01.525
+of two layer network.
+
+707
+00:55:02.705 --> 00:55:05.445
+But we are shown in the classes with measured region
+
+708
+00:55:05.585 --> 00:55:06.765
+or more general region,
+
+709
+00:55:07.665 --> 00:55:11.405
+it is the two layer network can only handle this convex
+
+710
+00:55:11.405 --> 00:55:13.325
+surfaces column where third
+
+711
+00:55:13.345 --> 00:55:16.285
+and fourth column no are whatever, uh, fourth
+
+712
+00:55:16.365 --> 00:55:18.885
+or fifth column, which are non-con services.
+
+713
+00:55:18.905 --> 00:55:20.565
+It cannot be handled by two layer
+
+714
+00:55:20.565 --> 00:55:22.005
+network or three layer network.
+
+715
+00:55:22.145 --> 00:55:23.885
+That's why you go to the four layer network,
+
+716
+00:55:24.385 --> 00:55:27.085
+and I'm telling four layer, sorry for that confusion.
+
+717
+00:55:27.085 --> 00:55:28.725
+That is input layer you have to neglect.
+
+718
+00:55:29.465 --> 00:55:31.325
+So three perception layers are there
+
+719
+00:55:31.985 --> 00:55:33.875
+when three perception layers are there.
+
+720
+00:55:34.575 --> 00:55:36.675
+Now the first perception layer
+
+721
+00:55:37.265 --> 00:55:39.235
+will feed into the second perception layer.
+
+722
+00:55:39.295 --> 00:55:42.155
+The hyper surfaces are convex surfaces,
+
+723
+00:55:42.535 --> 00:55:46.035
+and those convex surfaces are fed into the output perception
+
+724
+00:55:46.035 --> 00:55:48.155
+layer, combination of the convex surfaces.
+
+725
+00:55:48.155 --> 00:55:49.835
+We can create non convex surfaces.
+
+726
+00:55:49.905 --> 00:55:52.475
+Also, with that, you can see the most general cases
+
+727
+00:55:52.625 --> 00:55:53.835
+also can be handled.
+
+728
+00:55:54.735 --> 00:55:56.835
+So that is how the concept
+
+729
+00:55:56.975 --> 00:55:59.115
+of multi-layer perceptron was evolved
+
+730
+00:55:59.665 --> 00:56:02.915
+from a single layer perceptron, which was suitable only
+
+731
+00:56:03.095 --> 00:56:05.075
+for linearly sufferable classes.
+
+732
+00:56:06.025 --> 00:56:10.545
+Okay? So that is how the thing, any, any doubt
+
+733
+00:56:10.565 --> 00:56:12.345
+or clarifications here.
+
+734
+00:56:17.465 --> 00:56:20.635
+Okay, we'll go to the next. Uh, so
+
+735
+00:56:22.855 --> 00:56:25.325
+The difference between the, the answerable three based
+
+736
+00:56:25.885 --> 00:56:27.245
+approach versus this is, uh,
+
+737
+00:56:27.825 --> 00:56:29.125
+Can you please repeat, can we louder?
+
+738
+00:56:30.905 --> 00:56:33.045
+So, uh, for multi-class scenarios, right?
+
+739
+00:56:33.065 --> 00:56:34.365
+We have Ansible, uh,
+
+740
+00:56:34.365 --> 00:56:36.485
+three based models as well as this, right?
+
+741
+00:56:36.545 --> 00:56:39.325
+So the difference is in terms of the weightage learning,
+
+742
+00:56:39.345 --> 00:56:40.765
+is it, uh, uh, or,
+
+743
+00:56:41.345 --> 00:56:42.345
+Or anything? Yeah, yeah, yeah.
+
+744
+00:56:42.345 --> 00:56:45.525
+See, you have my the three basic approach.
+
+745
+00:56:45.545 --> 00:56:49.085
+No, you are putting certain, uh, uh, no,
+
+746
+00:56:49.195 --> 00:56:52.005
+like a discretization you are doing right,
+
+747
+00:56:52.105 --> 00:56:54.005
+and some node I take a decision.
+
+748
+00:56:54.185 --> 00:56:57.605
+So based on that, no, I exclude a possibility of other set
+
+749
+00:56:57.605 --> 00:56:59.045
+of weight parameters, which can come
+
+750
+00:57:00.025 --> 00:57:01.285
+in a quantization manner.
+
+751
+00:57:01.385 --> 00:57:03.525
+I'm going in the decision phase, whereas the neural network,
+
+752
+00:57:03.675 --> 00:57:06.085
+it's a, a continuous way of exploration.
+
+753
+00:57:07.055 --> 00:57:09.875
+So, uh, so that's the reason why the other Ansible team
+
+754
+00:57:09.875 --> 00:57:13.435
+based model doesn't learn these kind of, uh, nonlinear, uh,
+
+755
+00:57:13.495 --> 00:57:17.515
+non, uh, linearly nonlinear approachable dataset.
+
+756
+00:57:18.475 --> 00:57:20.165
+Hmm, correct, correct.
+
+757
+00:57:20.345 --> 00:57:24.285
+So that's where, no, this is a more, uh, realistic way of,
+
+758
+00:57:24.345 --> 00:57:26.965
+uh, or more complex way of trying to learn
+
+759
+00:57:27.545 --> 00:57:28.565
+and it'll help better.
+
+760
+00:57:30.815 --> 00:57:32.945
+Okay, thanks. Okay, perfect. Next slide.
+
+761
+00:57:34.165 --> 00:57:38.985
+So this I have told already, I just, uh, a two layer feed
+
+762
+00:57:39.005 --> 00:57:41.905
+for neural network with hard limiting threshold units.
+
+763
+00:57:42.015 --> 00:57:43.905
+That is a step function in the output.
+
+764
+00:57:44.085 --> 00:57:48.385
+Uh, this one there can only solve the linearly pattern.
+
+765
+00:57:48.745 --> 00:57:50.745
+Classification problems or machine learning problems
+
+766
+00:57:51.925 --> 00:57:54.465
+in a two layer feed for a network is also called
+
+767
+00:57:54.465 --> 00:57:55.985
+as a single layer perception,
+
+768
+00:57:55.985 --> 00:57:57.105
+because input layer,
+
+769
+00:57:58.105 --> 00:58:01.355
+only since the output layer is only non-linear units,
+
+770
+00:58:01.355 --> 00:58:03.635
+whereas input layer is linearly inputs.
+
+771
+00:58:04.415 --> 00:58:05.675
+So as I was mentioning,
+
+772
+00:58:05.675 --> 00:58:08.195
+there are many problems which are not linearly acceptable,
+
+773
+00:58:08.615 --> 00:58:10.355
+and hence they're not representable
+
+774
+00:58:10.495 --> 00:58:13.915
+by a single layer perceptron, not representable means
+
+775
+00:58:14.535 --> 00:58:18.515
+I'm not able to find a hyper surface, linear hyper surfaces,
+
+776
+00:58:18.515 --> 00:58:22.235
+which can separate the, uh, examples of, uh, the classes.
+
+777
+00:58:23.535 --> 00:58:26.035
+And these representable problems are called
+
+778
+00:58:26.035 --> 00:58:29.275
+as hard problems, uh, the name given as hard problems.
+
+779
+00:58:29.935 --> 00:58:32.715
+So if the output of the second layer
+
+780
+00:58:34.205 --> 00:58:36.845
+combined forming another layer, that's what the,
+
+781
+00:58:36.965 --> 00:58:40.365
+I put the two layers from the input side.
+
+782
+00:58:40.545 --> 00:58:42.245
+The first perception layer I'm getting
+
+783
+00:58:42.315 --> 00:58:43.685
+that is called as a second layer.
+
+784
+00:58:44.305 --> 00:58:46.365
+If it is combined forming another layer,
+
+785
+00:58:46.755 --> 00:58:49.085
+then any convex region can be formed
+
+786
+00:58:49.145 --> 00:58:52.325
+by this operating surfaces in the output little perception
+
+787
+00:58:52.445 --> 00:58:54.605
+layer, I can form any convex surface.
+
+788
+00:58:55.265 --> 00:58:58.525
+So a convex region is one in which a line joining any two
+
+789
+00:58:58.525 --> 00:59:00.805
+points is entirely confined to the region itself.
+
+790
+00:59:01.435 --> 00:59:05.165
+That XR gate is a convex, uh, region problem case.
+
+791
+00:59:05.715 --> 00:59:10.495
+Okay, next. So the number
+
+792
+00:59:10.515 --> 00:59:12.655
+of units in the second layer, that is
+
+793
+00:59:12.655 --> 00:59:15.015
+that middle perception layer we are thinking no,
+
+794
+00:59:15.815 --> 00:59:17.855
+determines the shape of the dividing surface.
+
+795
+00:59:18.675 --> 00:59:20.815
+And number of units in the third layer will
+
+796
+00:59:20.985 --> 00:59:22.205
+decide the number of classes.
+
+797
+00:59:22.715 --> 00:59:24.805
+That is like a linear support number of classes,
+
+798
+00:59:24.835 --> 00:59:26.965
+depends on the number of units in the output layer.
+
+799
+00:59:27.585 --> 00:59:31.245
+And the three layer network is still not general enough
+
+800
+00:59:31.985 --> 00:59:34.085
+as it doesn't guarantee that
+
+801
+00:59:34.705 --> 00:59:37.245
+the class regions in the patterns of space form
+
+802
+00:59:37.835 --> 00:59:40.605
+ConX region in all cases as shown that, uh,
+
+803
+00:59:40.915 --> 00:59:43.245
+that current is a cashew like structure, no,
+
+804
+00:59:43.245 --> 00:59:44.725
+which is a non convex also.
+
+805
+00:59:45.195 --> 00:59:46.205
+Okay? Uh,
+
+806
+00:59:46.545 --> 00:59:49.885
+and it can have a complicated non convex region also.
+
+807
+00:59:50.505 --> 00:59:53.845
+So that is where, uh, intersection
+
+808
+00:59:53.865 --> 00:59:56.805
+of linear hyper planes in the three layer network can only
+
+809
+00:59:56.805 --> 00:59:58.485
+produce convex surfaces.
+
+810
+00:59:58.995 --> 01:00:02.685
+However, however, you have one more layer of perception.
+
+811
+01:00:03.065 --> 01:00:05.925
+The intersection of convex regions may produce any non
+
+812
+01:00:05.945 --> 01:00:07.045
+convex region also.
+
+813
+01:00:07.595 --> 01:00:12.085
+Okay? Uh, so this is nothing
+
+814
+01:00:12.085 --> 01:00:13.205
+to do with the neural networks.
+
+815
+01:00:13.205 --> 01:00:16.965
+People from the mathematics, they brought this concept
+
+816
+01:00:17.115 --> 01:00:20.965
+that no, what happens if I try to interconnect
+
+817
+01:00:21.665 --> 01:00:24.085
+the two linear hyper planes?
+
+818
+01:00:24.085 --> 01:00:26.405
+What it'll, what surfaces it creates?
+
+819
+01:00:27.265 --> 01:00:30.285
+And from there, if I combine such surfaces,
+
+820
+01:00:30.475 --> 01:00:33.405
+what it'll create that concept they brought
+
+821
+01:00:33.945 --> 01:00:38.365
+and they showed that if I go on putting this layered, uh,
+
+822
+01:00:39.495 --> 01:00:44.205
+perceptron, then I may be able to achieve the, uh,
+
+823
+01:00:44.205 --> 01:00:47.365
+dealing with the machine learning tasks where
+
+824
+01:00:47.905 --> 01:00:49.805
+the classes are not linearly supportable.
+
+825
+01:00:50.225 --> 01:00:53.085
+So that is where they told adding one more layer of units
+
+826
+01:00:53.425 --> 01:00:56.965
+to combine the outputs of the third layer canele surfaces,
+
+827
+01:00:56.965 --> 01:00:59.685
+which can separate even non convex regions also.
+
+828
+01:01:00.025 --> 01:01:04.405
+So that is where, uh, the, uh, if you go back to the table,
+
+829
+01:01:04.825 --> 01:01:09.025
+uh, Sunil, just, uh, here, see this is a four layer network.
+
+830
+01:01:09.225 --> 01:01:12.905
+I have three perceptron layers at the first layer output,
+
+831
+01:01:12.945 --> 01:01:14.345
+I get linear hyper plates.
+
+832
+01:01:14.805 --> 01:01:16.745
+At the second layer of the perception,
+
+833
+01:01:16.865 --> 01:01:19.185
+I get the convex surfaces as the hyper surface.
+
+834
+01:01:20.125 --> 01:01:22.625
+If I combine convex surfaces at the output layer,
+
+835
+01:01:22.745 --> 01:01:26.265
+I can perform, uh, non convex regions also can be created
+
+836
+01:01:26.985 --> 01:01:28.665
+a both three layer network at the output
+
+837
+01:01:28.665 --> 01:01:30.265
+of the first perception layer.
+
+838
+01:01:30.485 --> 01:01:34.225
+You get the, uh, linear hyper planes combining them,
+
+839
+01:01:34.225 --> 01:01:35.265
+you get the convex surface.
+
+840
+01:01:35.265 --> 01:01:36.905
+Whereas I have only two layer network,
+
+841
+01:01:36.975 --> 01:01:39.865
+only one perception layer, only linear hyper planes.
+
+842
+01:01:40.605 --> 01:01:42.265
+So this is from the, uh,
+
+843
+01:01:42.265 --> 01:01:44.665
+mathematical theory people have observed without
+
+844
+01:01:45.185 --> 01:01:47.985
+worrying about the neural networks from the, it's not from
+
+845
+01:01:48.505 --> 01:01:51.225
+derived from the network interaction of the surfaces,
+
+846
+01:01:51.325 --> 01:01:54.385
+how we can from simple linear hyper planes,
+
+847
+01:01:54.405 --> 01:01:58.945
+how I can construct, uh, complex hyper planes, non, non, uh,
+
+848
+01:01:58.945 --> 01:02:01.225
+linear hyper planes that based on
+
+849
+01:02:01.225 --> 01:02:02.545
+that they have all this structure.
+
+850
+01:02:02.975 --> 01:02:05.305
+Okay, next, next.
+
+851
+01:02:06.875 --> 01:02:10.375
+So then all these
+
+852
+01:02:11.185 --> 01:02:13.495
+which are not linearly supportable, they're called as,
+
+853
+01:02:13.495 --> 01:02:16.335
+they cannot be represented by a single layer perceptron.
+
+854
+01:02:16.885 --> 01:02:18.855
+Accordingly, they're called as hard problems.
+
+855
+01:02:20.255 --> 01:02:22.475
+So to take care of these hard problems.
+
+856
+01:02:22.745 --> 01:02:26.555
+Finally, the structure proposal was a four layer network
+
+857
+01:02:26.745 --> 01:02:29.075
+with input layer consistent linear units.
+
+858
+01:02:29.215 --> 01:02:30.915
+And the other three layer consisting
+
+859
+01:02:30.915 --> 01:02:32.675
+of hard limiting non-linear units
+
+860
+01:02:33.415 --> 01:02:36.275
+can perform any complex pattern classification task
+
+861
+01:02:36.335 --> 01:02:37.595
+as machine learning task.
+
+862
+01:02:38.655 --> 01:02:41.665
+Thus, all the hard problems mentioned earlier can be handled
+
+863
+01:02:41.885 --> 01:02:45.145
+by such a multi-layer feed forward neural network
+
+864
+01:02:45.695 --> 01:02:46.905
+with non-linear units.
+
+865
+01:02:47.455 --> 01:02:51.225
+Such a network is called as a multi-layer perception, where
+
+866
+01:02:51.845 --> 01:02:54.985
+the except input layer in the three layers,
+
+867
+01:02:55.165 --> 01:02:58.025
+we have multi-layer perseverant aligned as layers.
+
+868
+01:02:59.045 --> 01:03:03.985
+Um, so then similar behavior is expected from a
+
+869
+01:03:03.985 --> 01:03:05.865
+multi-layer field when the output functions
+
+870
+01:03:05.865 --> 01:03:07.825
+of the units are continuous, non-linear function,
+
+871
+01:03:07.825 --> 01:03:08.905
+such as sigmoid function.
+
+872
+01:03:08.975 --> 01:03:11.905
+Also, you can get that saved so that, uh,
+
+873
+01:03:11.905 --> 01:03:13.545
+that illustrations have shown.
+
+874
+01:03:14.175 --> 01:03:19.065
+Next slide. Uh, okay, uh, previous slide, uh, just
+
+875
+01:03:19.125 --> 01:03:22.105
+to summarize, starting from a single layer,
+
+876
+01:03:22.785 --> 01:03:26.225
+which we discussed in the previous session, which was able
+
+877
+01:03:26.245 --> 01:03:29.265
+to deal with the, uh, linearly classes.
+
+878
+01:03:29.605 --> 01:03:34.425
+Now conceptually we have come up with a framework, uh,
+
+879
+01:03:34.515 --> 01:03:38.865
+where I have a a three multi-layer perceptron network
+
+880
+01:03:40.165 --> 01:03:41.905
+or a four layer feed for a network
+
+881
+01:03:41.905 --> 01:03:45.975
+where input layer is a linear, you can deal
+
+882
+01:03:45.975 --> 01:03:47.455
+with hard problems also,
+
+883
+01:03:47.995 --> 01:03:50.255
+and that is called as a multi-layer perceptron.
+
+884
+01:03:50.605 --> 01:03:54.375
+Multi-layer perceptron means you have more than two layers,
+
+885
+01:03:55.065 --> 01:03:58.535
+three multi three layer layers of perceptance out there.
+
+886
+01:03:58.535 --> 01:03:59.775
+Then it is called a multilayer.
+
+887
+01:03:59.775 --> 01:04:02.055
+Three are more, it is called a multilayer.
+
+888
+01:04:04.155 --> 01:04:06.375
+So that is the conceptual framework.
+
+889
+01:04:06.375 --> 01:04:08.775
+We will see it has its own challenges. We will see it.
+
+890
+01:04:09.085 --> 01:04:12.805
+Okay, next, uh, Sunil kindly take,
+
+891
+01:04:15.555 --> 01:04:16.655
+Yes, sir, thank you.
+
+892
+01:04:19.495 --> 01:04:22.505
+Alright, so, uh, now, uh, we have understood
+
+893
+01:04:22.505 --> 01:04:25.345
+what is the problem with the perceptron, that what happens,
+
+894
+01:04:25.885 --> 01:04:27.545
+uh, if there is a non
+
+895
+01:04:28.225 --> 01:04:30.785
+linearly separable data set will come into the picture.
+
+896
+01:04:32.165 --> 01:04:34.985
+So that time, a single preceptor network
+
+897
+01:04:35.095 --> 01:04:40.065
+that has clearly explained the one more problem, uh, uh,
+
+898
+01:04:40.455 --> 01:04:44.825
+what we can see in, in this case with this figure that
+
+899
+01:04:45.065 --> 01:04:48.065
+although for the linearly separable data, you may have the
+
+900
+01:04:48.625 --> 01:04:51.745
+A hyperplane like hyperplane A, hyperplane B,
+
+901
+01:04:51.745 --> 01:04:53.985
+which is clearly separating the two class of data,
+
+902
+01:04:55.005 --> 01:04:57.625
+it is very difficult to say that whether hyperplane A
+
+903
+01:04:58.505 --> 01:05:01.645
+is the best one or hyperplane B, B is the best one.
+
+904
+01:05:01.645 --> 01:05:03.285
+That is, that is another problem, right?
+
+905
+01:05:03.985 --> 01:05:07.365
+And that's where, uh, when Brenda was asking this question
+
+906
+01:05:07.555 --> 01:05:11.485
+that, okay, uh, that, uh, a maximum margin,
+
+907
+01:05:11.955 --> 01:05:13.245
+whether it considers
+
+908
+01:05:13.245 --> 01:05:14.525
+or not, sir, has told no, it,
+
+909
+01:05:14.585 --> 01:05:16.245
+it doesn't consider the maximum margin.
+
+910
+01:05:16.865 --> 01:05:18.085
+So, which happens in the case
+
+911
+01:05:18.085 --> 01:05:20.085
+of support vector machine, right?
+
+912
+01:05:20.625 --> 01:05:24.045
+So yes, you may get a hyperplane, which will be able
+
+913
+01:05:24.045 --> 01:05:25.565
+to separate the two class of data,
+
+914
+01:05:25.665 --> 01:05:28.405
+but whether this hyperplane is the best hyperplane
+
+915
+01:05:28.405 --> 01:05:30.885
+or not, that perception cannot tell you, okay?
+
+916
+01:05:30.885 --> 01:05:33.445
+That, that, uh, what, what you must have seen in the
+
+917
+01:05:33.445 --> 01:05:34.605
+support vector machine.
+
+918
+01:05:34.625 --> 01:05:36.565
+So that is another problem with the perception.
+
+919
+01:05:38.665 --> 01:05:41.565
+So, but, uh, we, we can always calculate the loss.
+
+920
+01:05:41.905 --> 01:05:45.045
+So someone, uh, uh, asked that, okay,
+
+921
+01:05:45.045 --> 01:05:47.165
+how do we, uh, converge?
+
+922
+01:05:47.345 --> 01:05:50.285
+Uh, so, uh, sir had said that, okay,
+
+923
+01:05:50.445 --> 01:05:52.805
+whenever you have the a hundred plus, uh, a hundred percent,
+
+924
+01:05:52.945 --> 01:05:55.965
+uh, uh, uh, correct classification
+
+925
+01:05:56.865 --> 01:05:59.085
+for a particular hyperplane, you can say that, okay,
+
+926
+01:05:59.085 --> 01:06:01.565
+that type, that hyperplane is doing a good job,
+
+927
+01:06:01.715 --> 01:06:03.525
+whether it is the best hyperplane
+
+928
+01:06:03.525 --> 01:06:07.445
+or not, that we can cannot answer, uh uh, right?
+
+929
+01:06:07.465 --> 01:06:09.565
+But then yeah, it is able to separate the two class
+
+930
+01:06:09.565 --> 01:06:11.125
+of data completely, and
+
+931
+01:06:11.125 --> 01:06:14.405
+that we can always estimate using the loss function, right?
+
+932
+01:06:14.905 --> 01:06:18.765
+So, uh, we can always calculate for a given hyperplane
+
+933
+01:06:19.035 --> 01:06:21.125
+what is the total loss, right?
+
+934
+01:06:21.625 --> 01:06:25.125
+And, uh, uh, based on that, we can estimate that, okay,
+
+935
+01:06:25.125 --> 01:06:26.685
+whether that hyperplane is good or not.
+
+936
+01:06:26.685 --> 01:06:29.325
+For example, maybe this dotted hyperplane,
+
+937
+01:06:29.325 --> 01:06:32.245
+what you can see here, hyperplane, DC,
+
+938
+01:06:33.025 --> 01:06:35.885
+and you can calculate the loss for this also total loss,
+
+939
+01:06:36.105 --> 01:06:40.325
+and for this also, but obviously the loss for hyper being B
+
+940
+01:06:40.345 --> 01:06:43.085
+and a would be zero, because these two are the hyperplane,
+
+941
+01:06:43.085 --> 01:06:46.005
+which are able to separate the two class of data completely.
+
+942
+01:06:46.025 --> 01:06:48.765
+So yes, loss function, uh, that's
+
+943
+01:06:48.765 --> 01:06:51.605
+where it comes into the picture to tell that, okay,
+
+944
+01:06:51.605 --> 01:06:54.845
+which line is good and how much it is good, right?
+
+945
+01:06:55.425 --> 01:06:57.765
+And the loss function, what we use
+
+946
+01:06:57.765 --> 01:07:00.925
+with the perceptron is a hinge style loss function, which,
+
+947
+01:07:00.925 --> 01:07:04.045
+which, which we also use with the support vector machines.
+
+948
+01:07:04.925 --> 01:07:07.865
+So it's very simple loss function, say
+
+949
+01:07:07.865 --> 01:07:10.425
+that the loss value will be zero if
+
+950
+01:07:10.965 --> 01:07:14.385
+the prediction is a correct, correct prediction.
+
+951
+01:07:14.445 --> 01:07:16.625
+So if, uh, y uh,
+
+952
+01:07:17.245 --> 01:07:22.115
+dot w transpose TW transpose t is a prediction, okay?
+
+953
+01:07:22.615 --> 01:07:24.155
+Uh, whether it is a plus one
+
+954
+01:07:24.155 --> 01:07:25.835
+or minus one, these two class of data,
+
+955
+01:07:25.855 --> 01:07:27.395
+and y is the actual class.
+
+956
+01:07:28.055 --> 01:07:32.315
+So suppose you are, uh, trying to predict the actual class
+
+957
+01:07:32.375 --> 01:07:35.115
+as plus one and w transpose th plus one,
+
+958
+01:07:35.145 --> 01:07:37.275
+then this whole quantity will be positive.
+
+959
+01:07:37.975 --> 01:07:40.395
+So that means that you're at the right side,
+
+960
+01:07:40.615 --> 01:07:42.075
+so the loss will be zero in that case.
+
+961
+01:07:43.015 --> 01:07:44.995
+Now, suppose the wise equal to minus one
+
+962
+01:07:44.995 --> 01:07:48.155
+and w transpose TX is also minus one.
+
+963
+01:07:48.155 --> 01:07:49.315
+Then also it is positive.
+
+964
+01:07:49.805 --> 01:07:52.435
+Hence, you're again, still in the, um, um,
+
+965
+01:07:52.705 --> 01:07:54.355
+correct side for the negative class.
+
+966
+01:07:55.015 --> 01:07:57.755
+So in such cases, when you are doing the correct, uh,
+
+967
+01:07:58.075 --> 01:07:59.155
+classification loss is zero.
+
+968
+01:08:00.055 --> 01:08:02.515
+In such cases where you're not doing the correct
+
+969
+01:08:02.875 --> 01:08:05.275
+classification, this is the penalty, this is the loss.
+
+970
+01:08:05.385 --> 01:08:07.915
+What we say that, okay, this is the loss,
+
+971
+01:08:08.345 --> 01:08:09.395
+what we are getting.
+
+972
+01:08:10.695 --> 01:08:14.835
+So, but then if you see the update rule, we do not, uh, in,
+
+973
+01:08:15.025 --> 01:08:17.085
+uh, we are not using the loss function
+
+974
+01:08:17.085 --> 01:08:18.485
+to update the parameter.
+
+975
+01:08:18.485 --> 01:08:20.965
+Because once you are getting one line, for example,
+
+976
+01:08:21.225 --> 01:08:24.925
+you got this line, say that hyperplane d, now you have to,
+
+977
+01:08:25.155 --> 01:08:27.525
+next line, you have to change the parameters, right?
+
+978
+01:08:28.025 --> 01:08:30.005
+And suppose you get the hyperplane A.
+
+979
+01:08:30.225 --> 01:08:33.245
+So in order to get from hyperplane D to the next line
+
+980
+01:08:33.265 --> 01:08:37.205
+as hyperplane, a next plan as hyperplane a, uh,
+
+981
+01:08:37.465 --> 01:08:41.325
+we don't use the laws into, into the consideration, okay?
+
+982
+01:08:42.185 --> 01:08:44.005
+We, uh, update the parameter,
+
+983
+01:08:44.005 --> 01:08:47.085
+but we don't use the laws, uh, this, uh,
+
+984
+01:08:47.355 --> 01:08:49.685
+this hinge style loss into the consideration.
+
+985
+01:08:50.025 --> 01:08:54.325
+It is just for the, uh, finding whether the, uh, line,
+
+986
+01:08:54.325 --> 01:08:58.005
+what we have got is good, bad, how much bad, how much good
+
+987
+01:08:58.025 --> 01:08:59.325
+for that purpose, okay?
+
+988
+01:09:00.635 --> 01:09:02.935
+So that is one thing. Uh, same thing.
+
+989
+01:09:03.015 --> 01:09:05.255
+I, I've explained that what will happen when you're in the
+
+990
+01:09:05.255 --> 01:09:08.135
+correct region or you are in the, uh, other region.
+
+991
+01:09:08.315 --> 01:09:10.935
+So how this particular loss function will work.
+
+992
+01:09:10.975 --> 01:09:14.055
+This is just a geometric, uh, understanding for that.
+
+993
+01:09:15.165 --> 01:09:18.695
+Alright? So, uh, what I will do now
+
+994
+01:09:18.805 --> 01:09:22.055
+that whatever problem we have seen with the, uh,
+
+995
+01:09:22.295 --> 01:09:25.495
+non-linearly separable data with the single perceptron,
+
+996
+01:09:25.495 --> 01:09:26.895
+that we are going to visualize it
+
+997
+01:09:27.155 --> 01:09:29.135
+and we are going to code it, okay?
+
+998
+01:09:29.135 --> 01:09:30.135
+In PyTorch. So
+
+999
+01:09:30.135 --> 01:09:32.055
+that's the next thing what we are going to do.
+
+1000
+01:09:32.475 --> 01:09:34.735
+But before that, I was also talking, uh,
+
+1001
+01:09:34.925 --> 01:09:36.295
+that upper perceptron,
+
+1002
+01:09:36.695 --> 01:09:40.295
+although initially it was used with the step function
+
+1003
+01:09:40.705 --> 01:09:42.455
+where the output was zero
+
+1004
+01:09:42.715 --> 01:09:47.535
+or one later, uh, if, suppose you want to change it
+
+1005
+01:09:47.555 --> 01:09:49.735
+for some other kind of problem statement,
+
+1006
+01:09:49.735 --> 01:09:51.535
+where the output is, say between zero
+
+1007
+01:09:51.595 --> 01:09:53.375
+and one, okay, you can use it.
+
+1008
+01:09:53.795 --> 01:09:56.695
+The only change, what we have to do is this part will work
+
+1009
+01:09:56.715 --> 01:09:58.455
+as it is the weighted sum,
+
+1010
+01:09:58.455 --> 01:10:00.735
+which also includes the bias, okay?
+
+1011
+01:10:00.735 --> 01:10:01.735
+Which is here plus one.
+
+1012
+01:10:02.195 --> 01:10:04.175
+So this is weighted sum will work as it is.
+
+1013
+01:10:04.595 --> 01:10:06.215
+Now, after doing the weighted sum,
+
+1014
+01:10:06.275 --> 01:10:08.415
+you will get the value ZZ you have to pass
+
+1015
+01:10:08.415 --> 01:10:09.535
+to the activation function.
+
+1016
+01:10:09.915 --> 01:10:13.415
+So instead of using activation function as step function,
+
+1017
+01:10:13.755 --> 01:10:15.335
+now you will use the activation function
+
+1018
+01:10:15.335 --> 01:10:18.735
+as sigmoid one divided by one plus E to the power minus Z.
+
+1019
+01:10:19.035 --> 01:10:21.015
+And then obviously it'll give the value between zero
+
+1020
+01:10:21.015 --> 01:10:22.535
+and one, enhance your output.
+
+1021
+01:10:22.675 --> 01:10:24.175
+The y will be between zero
+
+1022
+01:10:24.275 --> 01:10:26.975
+and one, like, like a probability, okay?
+
+1023
+01:10:27.355 --> 01:10:29.895
+So you can change it. That is what I want to say.
+
+1024
+01:10:29.895 --> 01:10:31.495
+And this is just a representation of that.
+
+1025
+01:10:31.515 --> 01:10:36.095
+You can see that the, this is the, uh, uh, s shape curve,
+
+1026
+01:10:36.095 --> 01:10:38.375
+what you will give get for the sig mite,
+
+1027
+01:10:38.395 --> 01:10:40.855
+and the output is between zero and one on the y axis.
+
+1028
+01:10:41.895 --> 01:10:43.135
+Whatever is the Z doesn't matter.
+
+1029
+01:10:43.895 --> 01:10:45.795
+So that is one way you can, uh,
+
+1030
+01:10:46.105 --> 01:10:47.715
+make this perceptron flexible
+
+1031
+01:10:47.895 --> 01:10:49.915
+for the output of what you want.
+
+1032
+01:10:50.895 --> 01:10:53.435
+So there are many other activation function for that matter.
+
+1033
+01:10:53.495 --> 01:10:55.755
+For example, instead of using the activation function
+
+1034
+01:10:55.755 --> 01:10:57.755
+as sigmoid, you can also use it at 10 H
+
+1035
+01:10:58.255 --> 01:11:00.515
+and we'll be using the standard for some cases.
+
+1036
+01:11:01.375 --> 01:11:03.435
+Uh, for example, suppose when we,
+
+1037
+01:11:03.505 --> 01:11:06.755
+when we'll talk about the recurrent neural network there,
+
+1038
+01:11:06.855 --> 01:11:09.435
+the people have used the, for the hidden layer,
+
+1039
+01:11:09.825 --> 01:11:12.195
+they have used the 10 agent activation function
+
+1040
+01:11:12.695 --> 01:11:15.005
+and how the 10 h uh, works.
+
+1041
+01:11:15.385 --> 01:11:18.365
+So it takes Z What is z? Z is again the weighted sum.
+
+1042
+01:11:18.365 --> 01:11:20.885
+What we are getting from the input side plus bias,
+
+1043
+01:11:21.465 --> 01:11:23.645
+and that we are passing to this activation function.
+
+1044
+01:11:23.865 --> 01:11:28.765
+It also gives, uh, uh, sorry, it, it gives, uh, the output
+
+1045
+01:11:28.765 --> 01:11:30.445
+between minus one, two plus one.
+
+1046
+01:11:30.545 --> 01:11:32.165
+You can see that the y xxi here,
+
+1047
+01:11:32.505 --> 01:11:35.365
+it is ranging from minus one to plus one, whatever is the z,
+
+1048
+01:11:35.485 --> 01:11:37.285
+Z can be positive, Z can be negative,
+
+1049
+01:11:37.585 --> 01:11:40.805
+but the output will be square minus one to plus one.
+
+1050
+01:11:40.865 --> 01:11:42.165
+It may be helpful in some cases.
+
+1051
+01:11:42.255 --> 01:11:45.165
+We'll see that one when we use the recurrent neural network.
+
+1052
+01:11:45.595 --> 01:11:48.485
+Similarly, we have another activation function called relu.
+
+1053
+01:11:49.105 --> 01:11:52.285
+Now, relu, uh, is again, it takes Z
+
+1054
+01:11:52.285 --> 01:11:53.805
+as an input, which is a weight sum.
+
+1055
+01:11:54.265 --> 01:11:58.565
+And how, how does it work? It is a max Z zero.
+
+1056
+01:11:59.145 --> 01:12:01.285
+So if the Z value is positive, say
+
+1057
+01:12:01.285 --> 01:12:03.165
+that xxi, you concentrate here.
+
+1058
+01:12:03.265 --> 01:12:07.445
+If the Z value is positive, the Y is
+
+1059
+01:12:07.465 --> 01:12:11.045
+or the relu of Z, the that Z is that value itself.
+
+1060
+01:12:11.145 --> 01:12:13.045
+So the Y is also that value itself.
+
+1061
+01:12:13.065 --> 01:12:17.205
+So Z here, suppose it is 10, then Y also will be 10.
+
+1062
+01:12:17.625 --> 01:12:19.245
+So that is, that is how it is.
+
+1063
+01:12:19.305 --> 01:12:21.605
+Now, suppose, uh, Z is negative.
+
+1064
+01:12:22.215 --> 01:12:23.385
+Suppose that is negative
+
+1065
+01:12:23.385 --> 01:12:24.785
+because we don't have any control, right?
+
+1066
+01:12:24.785 --> 01:12:27.465
+What will be the Z, Z depends on the input
+
+1067
+01:12:27.485 --> 01:12:28.945
+and the weight, what you have defined.
+
+1068
+01:12:29.055 --> 01:12:30.185
+It's a weighted sum of that.
+
+1069
+01:12:31.025 --> 01:12:34.565
+So if suppose that is negative, in such cases it is, it is,
+
+1070
+01:12:34.625 --> 01:12:36.325
+uh, it, its output will be zero.
+
+1071
+01:12:36.385 --> 01:12:39.125
+So output will be on the, in this excess itself.
+
+1072
+01:12:39.145 --> 01:12:41.325
+So that is how the relu activation function works.
+
+1073
+01:12:41.425 --> 01:12:44.005
+And this relu activation function will see that,
+
+1074
+01:12:44.565 --> 01:12:45.605
+although the relu has, uh,
+
+1075
+01:12:45.605 --> 01:12:47.725
+people have used it in various networks,
+
+1076
+01:12:47.945 --> 01:12:50.925
+but we'll see that in CNN with a convolution neur network,
+
+1077
+01:12:50.925 --> 01:12:53.725
+people have, uh, used the radio activation function.
+
+1078
+01:12:54.985 --> 01:12:57.125
+So, uh, that is, that is
+
+1079
+01:12:57.125 --> 01:12:59.725
+how you can make this single perception flexible for
+
+1080
+01:12:59.725 --> 01:13:01.085
+what kind of output you want.
+
+1081
+01:13:01.595 --> 01:13:04.045
+Okay? Now, uh, with that,
+
+1082
+01:13:04.225 --> 01:13:07.485
+let me now show you some visualization for the perceptron,
+
+1083
+01:13:08.025 --> 01:13:12.725
+uh, which a single perceptron, uh, where it works for the
+
+1084
+01:13:12.745 --> 01:13:16.165
+and and orate, but doesn't work for the ex orate, okay?
+
+1085
+01:13:16.165 --> 01:13:18.125
+This we have already, uh, seen,
+
+1086
+01:13:18.505 --> 01:13:21.005
+but now I'll show you the demo as well as the visualization.
+
+1087
+01:13:21.955 --> 01:13:25.205
+Okay? So the first, first plot is for the,
+
+1088
+01:13:25.205 --> 01:13:26.725
+and second plot is for the odd,
+
+1089
+01:13:26.725 --> 01:13:28.205
+and third plot is for the xor.
+
+1090
+01:13:28.225 --> 01:13:31.485
+You can see that the blue points represents the cla, uh,
+
+1091
+01:13:31.485 --> 01:13:33.085
+the output one and the
+
+1092
+01:13:33.735 --> 01:13:37.525
+white circles are representing the output zero.
+
+1093
+01:13:38.025 --> 01:13:41.325
+So here you can have one, one line,
+
+1094
+01:13:41.325 --> 01:13:43.165
+which is separating the blue and white.
+
+1095
+01:13:43.675 --> 01:13:46.605
+Here you have one distorted red line
+
+1096
+01:13:46.605 --> 01:13:47.805
+separating blue and white.
+
+1097
+01:13:47.905 --> 01:13:49.365
+But here, you cannot have, that is
+
+1098
+01:13:49.365 --> 01:13:50.645
+what sir was explaining sometime.
+
+1099
+01:13:51.625 --> 01:13:53.925
+So I'll first show you the visualization of this.
+
+1100
+01:13:54.425 --> 01:13:57.525
+So this is one, uh, website, uh,
+
+1101
+01:13:58.015 --> 01:13:59.645
+which we can use to see this.
+
+1102
+01:13:59.825 --> 01:14:04.165
+So what I'll do is I'll use the, uh, exor like data.
+
+1103
+01:14:04.225 --> 01:14:05.725
+So this is exor like data, right?
+
+1104
+01:14:05.785 --> 01:14:08.045
+So blue, you can see that blue, blue, uh,
+
+1105
+01:14:08.045 --> 01:14:09.085
+and this orange, orange.
+
+1106
+01:14:09.145 --> 01:14:12.165
+So you can treat it as like a, uh, it is like,
+
+1107
+01:14:12.185 --> 01:14:13.845
+uh, uh, zero zero.
+
+1108
+01:14:13.985 --> 01:14:15.725
+And this is one, one input.
+
+1109
+01:14:15.745 --> 01:14:18.125
+And this is like, uh, uh, one zero,
+
+1110
+01:14:18.225 --> 01:14:19.765
+and this is, uh, zero one.
+
+1111
+01:14:19.995 --> 01:14:23.845
+Okay? So that is how it is that exhort like input. It is.
+
+1112
+01:14:24.225 --> 01:14:25.565
+So now what we'll do is we want
+
+1113
+01:14:25.565 --> 01:14:27.845
+to use the single perception.
+
+1114
+01:14:28.105 --> 01:14:30.005
+So for single perceptron, first of all,
+
+1115
+01:14:30.035 --> 01:14:31.365
+I'll remove all the hidden layer.
+
+1116
+01:14:31.365 --> 01:14:33.005
+So you know, we have zero hidden layer.
+
+1117
+01:14:33.025 --> 01:14:34.645
+You can see these two are my inputs,
+
+1118
+01:14:34.685 --> 01:14:35.965
+X one, X two are my inputs.
+
+1119
+01:14:36.405 --> 01:14:39.285
+I have zero hidden layer, and I, I have one output there.
+
+1120
+01:14:39.285 --> 01:14:42.895
+This is the output layer, okay? Okay.
+
+1121
+01:14:42.955 --> 01:14:45.495
+Now before this one, uh, let me use this data, set.
+
+1122
+01:14:45.725 --> 01:14:48.775
+This data, this data set is linearly separable, right?
+
+1123
+01:14:48.955 --> 01:14:51.855
+All blue are here, and all, all orange are here.
+
+1124
+01:14:51.875 --> 01:14:54.895
+You then, uh, a single perceptron.
+
+1125
+01:14:54.895 --> 01:14:57.135
+So you can treat this layer as a single perceptron,
+
+1126
+01:14:57.135 --> 01:14:58.815
+where we have a single perceptron,
+
+1127
+01:14:58.815 --> 01:15:01.055
+which does the weighted sum, uh, followed
+
+1128
+01:15:01.075 --> 01:15:02.215
+by the activation function.
+
+1129
+01:15:02.935 --> 01:15:06.585
+Okay? So now if, suppose we have this as a data,
+
+1130
+01:15:06.715 --> 01:15:08.385
+which is a linearly separable data.
+
+1131
+01:15:08.485 --> 01:15:11.145
+If I play this one, you can quickly see
+
+1132
+01:15:11.145 --> 01:15:14.065
+that there is one thick white line which is able
+
+1133
+01:15:14.085 --> 01:15:16.385
+to separate the two class of data clearly,
+
+1134
+01:15:16.385 --> 01:15:18.785
+because it is a linearly separable data,
+
+1135
+01:15:18.945 --> 01:15:21.705
+a single perceptron works for that, okay?
+
+1136
+01:15:22.205 --> 01:15:25.665
+It may take some number of EPOCs epox number of hydration,
+
+1137
+01:15:25.675 --> 01:15:27.625
+every iteration, it is changing the line
+
+1138
+01:15:27.735 --> 01:15:29.505
+that we have already seen that how it does.
+
+1139
+01:15:30.245 --> 01:15:33.545
+But then finally it'll con converge so that it'll be able
+
+1140
+01:15:33.545 --> 01:15:35.105
+to separate the two class of the data.
+
+1141
+01:15:35.805 --> 01:15:38.025
+But if I'll take this exor like structure,
+
+1142
+01:15:38.325 --> 01:15:42.745
+and I will just play this, uh, and see the och it is going.
+
+1143
+01:15:42.845 --> 01:15:46.545
+And every epoch, we are trying to do some change in the,
+
+1144
+01:15:47.085 --> 01:15:51.705
+in the, uh, uh, uh, the, the line, what we want
+
+1145
+01:15:51.705 --> 01:15:53.945
+to get from the single perceptron.
+
+1146
+01:15:54.165 --> 01:15:57.505
+But you see that after running it for 900, so going
+
+1147
+01:15:57.505 --> 01:15:58.665
+around thousand epochs.
+
+1148
+01:15:58.665 --> 01:16:03.225
+Also, we are not able to separate the, um, uh,
+
+1149
+01:16:03.475 --> 01:16:05.305
+these two classes clearly, right?
+
+1150
+01:16:05.365 --> 01:16:06.865
+In fact, there is no such separation.
+
+1151
+01:16:06.865 --> 01:16:08.665
+Also, we are not able to see, uh,
+
+1152
+01:16:09.875 --> 01:16:11.865
+clear separation anywhere, anywhere.
+
+1153
+01:16:12.245 --> 01:16:15.905
+So what we, I can do is just for the change, I will try
+
+1154
+01:16:15.905 --> 01:16:17.505
+to change some other activation function
+
+1155
+01:16:17.525 --> 01:16:19.865
+and we'll see if it, that will be able to help us.
+
+1156
+01:16:20.445 --> 01:16:23.265
+So now I'm using the sigmoid, still
+
+1157
+01:16:23.265 --> 01:16:24.545
+with the single perceptron
+
+1158
+01:16:24.545 --> 01:16:26.025
+and see that there is no cell, no,
+
+1159
+01:16:26.165 --> 01:16:27.505
+no change, which is happening.
+
+1160
+01:16:28.325 --> 01:16:31.745
+So what I will do is, uh, uh, what that is,
+
+1161
+01:16:31.745 --> 01:16:34.145
+what servers telling that single perception cannot, uh,
+
+1162
+01:16:34.465 --> 01:16:36.625
+separate the nonlinearly separable data.
+
+1163
+01:16:36.655 --> 01:16:39.305
+It's a heart problem. So then what we'll do is we'll try
+
+1164
+01:16:39.305 --> 01:16:41.305
+to introduce one more layer, okay?
+
+1165
+01:16:41.305 --> 01:16:44.105
+With more, we will try to introduce one more layer of the,
+
+1166
+01:16:44.285 --> 01:16:46.065
+uh, um, hidden.
+
+1167
+01:16:46.445 --> 01:16:48.865
+So this was the output layer, which was a single perceptron.
+
+1168
+01:16:48.925 --> 01:16:51.025
+Now I have the one more hidden layer,
+
+1169
+01:16:51.245 --> 01:16:54.145
+and there I have two neurons, and here I have one neuron,
+
+1170
+01:16:54.145 --> 01:16:55.385
+and these two are the inputs.
+
+1171
+01:16:55.725 --> 01:16:58.585
+Now, with this, I will, I'll just run this one.
+
+1172
+01:16:58.785 --> 01:16:59.985
+I'll see that whether it is able
+
+1173
+01:16:59.985 --> 01:17:03.025
+to separate these two glass of data or not.
+
+1174
+01:17:03.025 --> 01:17:04.145
+Now you see that there's some
+
+1175
+01:17:04.145 --> 01:17:05.385
+change which is happening, right?
+
+1176
+01:17:05.965 --> 01:17:10.005
+So this, this region is, uh, we are able to get,
+
+1177
+01:17:10.265 --> 01:17:13.725
+and this region also, uh, uh, it is,
+
+1178
+01:17:13.725 --> 01:17:15.685
+it is creating one region over here, right?
+
+1179
+01:17:15.685 --> 01:17:19.045
+Because we have once perceptron here, which is able
+
+1180
+01:17:19.105 --> 01:17:21.205
+to separate, uh, get the line.
+
+1181
+01:17:21.705 --> 01:17:25.285
+You can see this right? Once I, I will, uh, put here,
+
+1182
+01:17:25.305 --> 01:17:29.725
+you see the mother some, some, some separation here, right?
+
+1183
+01:17:30.065 --> 01:17:31.365
+Now, this particular, uh,
+
+1184
+01:17:31.735 --> 01:17:34.925
+perceptron is doing some separation over this region
+
+1185
+01:17:34.985 --> 01:17:37.125
+of this, uh, of this data set.
+
+1186
+01:17:37.785 --> 01:17:39.285
+And this is what, what is coming,
+
+1187
+01:17:39.305 --> 01:17:41.165
+but still this is not working well.
+
+1188
+01:17:41.665 --> 01:17:45.445
+So what I will do is I will just try to change it to say,
+
+1189
+01:17:46.025 --> 01:17:49.125
+uh, I'll send to, just to check that whether it is working
+
+1190
+01:17:49.195 --> 01:17:50.485
+that in that case or not.
+
+1191
+01:17:50.625 --> 01:17:53.805
+Now you see what is happening, almost similar kind of, uh,
+
+1192
+01:17:54.225 --> 01:17:59.125
+uh, almost similar kind of, you see this, uh,
+
+1193
+01:18:00.545 --> 01:18:02.805
+we are getting, um, so
+
+1194
+01:18:02.805 --> 01:18:04.885
+after this, it won't change much, right?
+
+1195
+01:18:05.945 --> 01:18:09.525
+Uh, what, what, we'll, what we'll do is, uh, let us see
+
+1196
+01:18:09.525 --> 01:18:12.485
+that if, if 10 inch, if it can help us.
+
+1197
+01:18:14.025 --> 01:18:15.205
+So you see that, right?
+
+1198
+01:18:15.265 --> 01:18:19.645
+So it is able to make two different, uh, you can say this,
+
+1199
+01:18:19.645 --> 01:18:21.045
+this kind of, um, reason,
+
+1200
+01:18:21.105 --> 01:18:23.285
+but then complete separation, it is not able
+
+1201
+01:18:23.285 --> 01:18:26.205
+to do completely, uh, it is not able to do, right?
+
+1202
+01:18:26.985 --> 01:18:30.605
+So what, what what we can do is I will add one more layer
+
+1203
+01:18:30.755 --> 01:18:33.325
+just for the, try that what happens, uh,
+
+1204
+01:18:33.325 --> 01:18:35.085
+when we add layers by layer.
+
+1205
+01:18:35.105 --> 01:18:36.485
+So that is what I was explaining.
+
+1206
+01:18:37.065 --> 01:18:39.645
+So I'll add one more layer just to check that, okay?
+
+1207
+01:18:39.645 --> 01:18:40.765
+Whether it is working, and then you can
+
+1208
+01:18:40.765 --> 01:18:41.845
+play around this also.
+
+1209
+01:18:42.105 --> 01:18:44.325
+In fact, instead of having one more layer,
+
+1210
+01:18:44.395 --> 01:18:46.845
+I'll add one more neuron, oh, sorry, uh,
+
+1211
+01:18:47.035 --> 01:18:48.445
+here one more neuron
+
+1212
+01:18:49.365 --> 01:18:51.665
+and then I'll check whether what it is able to do.
+
+1213
+01:18:51.765 --> 01:18:53.865
+Now you see that two inputs
+
+1214
+01:18:54.215 --> 01:18:56.385
+with the three neurons at the hidden layer,
+
+1215
+01:18:56.415 --> 01:18:58.585
+only one hidden layer, and then we have one output layer.
+
+1216
+01:18:58.645 --> 01:19:02.305
+Now, this is the, this is the, uh, the,
+
+1217
+01:19:02.535 --> 01:19:05.225
+like a hyperplane, uh, sort of a structure,
+
+1218
+01:19:05.285 --> 01:19:06.665
+but obviously it is a curve.
+
+1219
+01:19:07.045 --> 01:19:08.105
+Uh, it is, it is giving,
+
+1220
+01:19:08.125 --> 01:19:11.105
+but it is able to do a better job just by adding one more,
+
+1221
+01:19:11.485 --> 01:19:13.585
+one more neuron in the same hidden layer.
+
+1222
+01:19:13.975 --> 01:19:18.265
+Okay? If I'll add one more, then you can see that this is,
+
+1223
+01:19:18.565 --> 01:19:21.705
+uh, this is how, how, this is how it is given the,
+
+1224
+01:19:21.965 --> 01:19:23.145
+um, separation.
+
+1225
+01:19:23.285 --> 01:19:27.025
+So you see that e every neuron has some importance
+
+1226
+01:19:27.085 --> 01:19:29.465
+and okay, every neuron you can see that it is trying
+
+1227
+01:19:29.465 --> 01:19:32.185
+to capture, uh, some pattern in the data.
+
+1228
+01:19:32.205 --> 01:19:34.385
+For example, this neuron has this, this, this is
+
+1229
+01:19:34.385 --> 01:19:35.385
+what it is able to understand.
+
+1230
+01:19:35.385 --> 01:19:37.665
+This is, uh, this neuron ha,
+
+1231
+01:19:37.665 --> 01:19:39.385
+this perception has this understanding,
+
+1232
+01:19:39.495 --> 01:19:40.825
+this understanding and all.
+
+1233
+01:19:40.925 --> 01:19:43.145
+So together, when we are feeding their understand
+
+1234
+01:19:43.145 --> 01:19:44.785
+to the next layer, this is what we are getting.
+
+1235
+01:19:44.925 --> 01:19:47.305
+See now, see now this is how it has separated,
+
+1236
+01:19:47.645 --> 01:19:49.905
+and it, it looks, it looks good also, right?
+
+1237
+01:19:49.925 --> 01:19:52.665
+As compared to the layer. So this is the visualization.
+
+1238
+01:19:53.165 --> 01:19:56.465
+So single perception was able, not able to do this job,
+
+1239
+01:19:56.605 --> 01:20:00.425
+but then, uh, when we are having one, one head layer
+
+1240
+01:20:00.455 --> 01:20:02.345
+with a few neurons are able
+
+1241
+01:20:02.345 --> 01:20:05.305
+to separate this non-linearity separable data as well.
+
+1242
+01:20:05.645 --> 01:20:10.485
+So now for then you can take any, any such, uh, you can say
+
+1243
+01:20:10.485 --> 01:20:13.125
+that the arbitrary shape of the data like this,
+
+1244
+01:20:13.125 --> 01:20:15.765
+where the blue are in the blue circle is different from the
+
+1245
+01:20:15.765 --> 01:20:17.285
+author circle, right?
+
+1246
+01:20:17.425 --> 01:20:18.885
+So it is able to do that
+
+1247
+01:20:19.265 --> 01:20:23.365
+and you can check that, okay, how many, uh, neurons are
+
+1248
+01:20:23.665 --> 01:20:25.725
+and how many layers are required for that.
+
+1249
+01:20:25.955 --> 01:20:30.245
+Okay? So you see this here, maybe two neurons
+
+1250
+01:20:31.525 --> 01:20:34.625
+end up with this, but then as soon we add one more, uh,
+
+1251
+01:20:34.625 --> 01:20:37.865
+sorry, one more neuron in this first same hidden layer,
+
+1252
+01:20:38.085 --> 01:20:40.865
+it is able to get that inner circle nicely.
+
+1253
+01:20:41.335 --> 01:20:43.265
+Okay? So this is what visualization,
+
+1254
+01:20:43.555 --> 01:20:46.305
+which I thought will give you some clear understanding that
+
+1255
+01:20:46.305 --> 01:20:48.105
+what happen if we add one neuron
+
+1256
+01:20:48.105 --> 01:20:49.625
+or we delete one neuron from it.
+
+1257
+01:20:50.685 --> 01:20:55.325
+Now the, I will explain, uh, the exor, uh, problem,
+
+1258
+01:20:55.465 --> 01:21:00.365
+the demo part, that what exactly, uh, happens, uh, how
+
+1259
+01:21:00.365 --> 01:21:04.165
+to, how to, uh, write the code to see that, okay, the,
+
+1260
+01:21:06.605 --> 01:21:11.225
+um, uh, single perceptron cannot solve the xor problem.
+
+1261
+01:21:11.965 --> 01:21:14.545
+So here, there is a code I will connect.
+
+1262
+01:21:14.925 --> 01:21:18.865
+So here we are importing all the packages from the
+
+1263
+01:21:19.595 --> 01:21:21.105
+torch, right?
+
+1264
+01:21:21.285 --> 01:21:22.345
+And back plot lift
+
+1265
+01:21:22.345 --> 01:21:24.025
+because I want to plot some things
+
+1266
+01:21:24.645 --> 01:21:29.065
+in this particular cell I am just defining my data for.
+
+1267
+01:21:29.205 --> 01:21:33.065
+And so 0, 0, 0 1, 1, 0 1, 1, these are the tens.
+
+1268
+01:21:33.125 --> 01:21:36.665
+Uh, this is the tensor for the, and x
+
+1269
+01:21:36.685 --> 01:21:39.505
+and corresponding labels are like 0, 0, 0 1.
+
+1270
+01:21:39.575 --> 01:21:41.545
+Similarly for, or similarly for xor.
+
+1271
+01:21:41.545 --> 01:21:44.985
+So this line is for data creation.
+
+1272
+01:21:45.485 --> 01:21:48.905
+And here we are just trying to plot, plot what plot.
+
+1273
+01:21:49.045 --> 01:21:52.025
+And so this is the, and you can see that, right?
+
+1274
+01:21:52.085 --> 01:21:54.185
+So zero, zero, this is one zero,
+
+1275
+01:21:54.455 --> 01:21:56.225
+this is zero one, and this is one, one.
+
+1276
+01:21:56.565 --> 01:21:59.105
+So this one, one is one rest all the blue.
+
+1277
+01:21:59.205 --> 01:22:00.825
+You can see it is a class zero.
+
+1278
+01:22:01.015 --> 01:22:03.875
+Similarly for, or, uh, you can see
+
+1279
+01:22:03.875 --> 01:22:05.435
+that all The three are class one,
+
+1280
+01:22:05.435 --> 01:22:06.795
+this blue point is Class zero.
+
+1281
+01:22:06.895 --> 01:22:09.995
+And for xor, this is what we have the visualization.
+
+1282
+01:22:09.995 --> 01:22:13.115
+Right now, what we have to do, we have to try
+
+1283
+01:22:13.115 --> 01:22:15.355
+with a single perceptron, whether it is able to
+
+1284
+01:22:16.035 --> 01:22:18.275
+separate the two class, class one, class, zero
+
+1285
+01:22:18.295 --> 01:22:19.555
+or not, for all the three cases.
+
+1286
+01:22:20.135 --> 01:22:22.595
+So what we have to do, first of all, I'm adding a bias
+
+1287
+01:22:23.255 --> 01:22:25.555
+and bias, uh, as we mentioned earlier,
+
+1288
+01:22:25.785 --> 01:22:29.805
+bias value x note is taken as one, okay?
+
+1289
+01:22:29.975 --> 01:22:32.165
+Taken as one, uh, in all the cases.
+
+1290
+01:22:32.705 --> 01:22:36.205
+So here, the, the bias, which I'm going to add
+
+1291
+01:22:37.025 --> 01:22:39.165
+in each row one, so one column I have added.
+
+1292
+01:22:39.265 --> 01:22:40.485
+So what I'm doing is for,
+
+1293
+01:22:40.625 --> 01:22:44.855
+and which is initially at 0, 0, 0 1, 1, 0 1, 1.
+
+1294
+01:22:44.865 --> 01:22:46.695
+First column is added as a bias.
+
+1295
+01:22:47.155 --> 01:22:49.175
+So now my, in the, in the input,
+
+1296
+01:22:49.255 --> 01:22:51.495
+I have 3, 3, 3 inputs for each row.
+
+1297
+01:22:51.535 --> 01:22:54.255
+I have three inputs. One, which is represents the bias.
+
+1298
+01:22:54.285 --> 01:22:56.695
+Zero, zero represents the actual inputs of the end
+
+1299
+01:22:57.115 --> 01:22:58.295
+for the two inputs, right?
+
+1300
+01:22:58.955 --> 01:23:00.695
+So this, this, this is my end.
+
+1301
+01:23:00.835 --> 01:23:02.295
+Uh, similarly for rx,
+
+1302
+01:23:02.555 --> 01:23:04.775
+I'm adding bias up, uh, in the first column.
+
+1303
+01:23:04.875 --> 01:23:07.485
+And for xor also, I'm adding bias for the first column.
+
+1304
+01:23:08.425 --> 01:23:12.165
+Now, this particular, uh, this particular code is for the,
+
+1305
+01:23:12.585 --> 01:23:14.445
+uh, uh, dot product,
+
+1306
+01:23:14.445 --> 01:23:17.205
+because we have to do weighted sum W into X.
+
+1307
+01:23:17.705 --> 01:23:19.765
+So this is the function predict which we are defining.
+
+1308
+01:23:19.945 --> 01:23:23.045
+And what we are doing, we are just, uh, uh,
+
+1309
+01:23:23.045 --> 01:23:26.005
+doing the dot product between W and two x.
+
+1310
+01:23:26.465 --> 01:23:28.205
+And that will give, give us the J
+
+1311
+01:23:28.385 --> 01:23:29.845
+and this will pass it through the active,
+
+1312
+01:23:29.905 --> 01:23:31.085
+uh, sorry, step function.
+
+1313
+01:23:31.455 --> 01:23:33.445
+Activation function is a step function here.
+
+1314
+01:23:33.825 --> 01:23:35.125
+So step function, the way it works,
+
+1315
+01:23:35.155 --> 01:23:38.245
+that is greater than zero, then it'll return one other way.
+
+1316
+01:23:38.245 --> 01:23:41.285
+It'll return zero. So this whole, uh, this will
+
+1317
+01:23:42.045 --> 01:23:45.125
+complete my weighted sum plus, uh, by, uh, bias
+
+1318
+01:23:45.185 --> 01:23:46.845
+or weighted sum includes the bias here.
+
+1319
+01:23:47.145 --> 01:23:49.285
+So weighted sum, followed by the activation function.
+
+1320
+01:23:49.355 --> 01:23:51.645
+This, this, uh, this is the function for that.
+
+1321
+01:23:52.395 --> 01:23:54.245
+This is the function for my perceptron. Okay?
+
+1322
+01:23:54.245 --> 01:23:56.005
+So this is the perceptron representation.
+
+1323
+01:23:56.465 --> 01:23:58.005
+Now, we need to train this perceptron.
+
+1324
+01:23:58.005 --> 01:24:02.605
+So we'll call this perceptron. So train perceptron function.
+
+1325
+01:24:03.105 --> 01:24:07.445
+And what we are doing here is, uh, we will first, uh,
+
+1326
+01:24:07.905 --> 01:24:10.245
+we, we can decide how many APOC we want to run.
+
+1327
+01:24:10.245 --> 01:24:12.525
+Here. It is set as 50 apoc.
+
+1328
+01:24:12.985 --> 01:24:15.805
+And every time when we get a line, we will change.
+
+1329
+01:24:15.855 --> 01:24:17.125
+We'll update our weights
+
+1330
+01:24:17.125 --> 01:24:18.685
+for the misclassification cases, right?
+
+1331
+01:24:18.685 --> 01:24:22.645
+So that's why learning rate is set as zero and 0.1 x
+
+1332
+01:24:22.645 --> 01:24:26.805
+and Y is my input and output for whatever X or, and, or,
+
+1333
+01:24:26.805 --> 01:24:28.245
+or whatever for everything, it'll work.
+
+1334
+01:24:28.305 --> 01:24:30.005
+So X and Y is my input and output.
+
+1335
+01:24:30.945 --> 01:24:34.245
+Now, what we are doing is every time we take one, one row
+
+1336
+01:24:34.305 --> 01:24:35.885
+as an input, because we have four row
+
+1337
+01:24:35.885 --> 01:24:37.565
+0, 0, 0, 1, 1, 0, 1, 1.
+
+1338
+01:24:37.785 --> 01:24:40.445
+So this particular line, uh, this for loop will work
+
+1339
+01:24:40.465 --> 01:24:41.525
+for row by row.
+
+1340
+01:24:41.825 --> 01:24:43.765
+And we'll take the first row, first row,
+
+1341
+01:24:43.775 --> 01:24:45.605
+it'll feed it, uh, three inputs.
+
+1342
+01:24:45.735 --> 01:24:48.365
+First one is the bias. Next two are the actual inputs.
+
+1343
+01:24:48.365 --> 01:24:49.645
+So that will be, that will come in,
+
+1344
+01:24:49.725 --> 01:24:51.885
+X si corresponding target will come in.
+
+1345
+01:24:51.965 --> 01:24:54.945
+Y we'll do the, we'll call the predict function,
+
+1346
+01:24:54.945 --> 01:24:56.145
+which we have defined here.
+
+1347
+01:24:56.555 --> 01:24:58.505
+It'll give either one or zero as an output.
+
+1348
+01:24:59.045 --> 01:25:01.065
+And that we are going to calculate the error.
+
+1349
+01:25:01.525 --> 01:25:05.065
+So if the Y hat is exactly at YI error will be zero.
+
+1350
+01:25:05.065 --> 01:25:07.265
+Otherwise, we'll get some error, uh,
+
+1351
+01:25:07.375 --> 01:25:08.705
+like minus one or plus one.
+
+1352
+01:25:08.705 --> 01:25:09.985
+That will be your error. And
+
+1353
+01:25:09.985 --> 01:25:11.345
+accordingly, what you will do is you will
+
+1354
+01:25:11.345 --> 01:25:12.625
+change the weights.
+
+1355
+01:25:13.245 --> 01:25:15.305
+And every time, after every iteration,
+
+1356
+01:25:15.705 --> 01:25:17.745
+whatever weight changes is happening
+
+1357
+01:25:17.745 --> 01:25:19.625
+that I'm storing in this weight history,
+
+1358
+01:25:19.995 --> 01:25:22.865
+which initially we defined empty list,
+
+1359
+01:25:23.365 --> 01:25:25.745
+and every time we are appending, okay?
+
+1360
+01:25:26.045 --> 01:25:27.385
+Uh, the new weights into it.
+
+1361
+01:25:27.765 --> 01:25:29.345
+So new weights are coming as w
+
+1362
+01:25:29.645 --> 01:25:32.905
+and that I'm impending, uh, with a clone, fine.
+
+1363
+01:25:32.925 --> 01:25:35.665
+So it is creating a copy of it, that's all.
+
+1364
+01:25:35.805 --> 01:25:37.585
+So this is my, uh, training.
+
+1365
+01:25:37.645 --> 01:25:40.105
+And now we are plotting the decision boundary,
+
+1366
+01:25:40.465 --> 01:25:41.865
+plotting the decision boundary.
+
+1367
+01:25:41.885 --> 01:25:43.345
+So here it'll look like.
+
+1368
+01:25:43.565 --> 01:25:48.045
+So, uh, here you see, once we have, uh,
+
+1369
+01:25:48.045 --> 01:25:49.365
+done this, this is the end gate.
+
+1370
+01:25:49.725 --> 01:25:52.405
+A line clearly separates the blue and red line.
+
+1371
+01:25:52.715 --> 01:25:56.205
+This is the, or a line clearly separates the blue
+
+1372
+01:25:56.205 --> 01:25:58.565
+and orange, uh, sorry, uh, blue and red line.
+
+1373
+01:25:58.825 --> 01:26:00.165
+And finally, this is exor.
+
+1374
+01:26:00.265 --> 01:26:01.605
+You can see that there is a line,
+
+1375
+01:26:01.905 --> 01:26:04.405
+but it is not able to separate, it is not able
+
+1376
+01:26:04.405 --> 01:26:05.885
+to separate the blue, uh,
+
+1377
+01:26:05.885 --> 01:26:08.085
+because it's a non-linearly separable data.
+
+1378
+01:26:08.425 --> 01:26:10.965
+So whatever straight line, wherever you want to put
+
+1379
+01:26:10.965 --> 01:26:13.405
+with a single perception, you cannot solve this problem.
+
+1380
+01:26:13.475 --> 01:26:14.525
+This is what we were talking,
+
+1381
+01:26:15.065 --> 01:26:17.645
+and we have seen, uh, with the, the visualization also,
+
+1382
+01:26:17.645 --> 01:26:19.005
+and we have seen with the demo also.
+
+1383
+01:26:19.865 --> 01:26:23.125
+So the point is, what is the solution for this? Okay?
+
+1384
+01:26:23.185 --> 01:26:24.245
+And now we have seen the problem.
+
+1385
+01:26:24.275 --> 01:26:25.725
+What is the solution for this solution?
+
+1386
+01:26:25.725 --> 01:26:28.805
+We have already seen single perceptron cannot do that job,
+
+1387
+01:26:28.905 --> 01:26:31.325
+but multi-layer perceptron can do that job, right?
+
+1388
+01:26:31.345 --> 01:26:33.885
+And this is, this slide shows the exactly same thing
+
+1389
+01:26:34.425 --> 01:26:35.885
+for exor X one, X two.
+
+1390
+01:26:36.065 --> 01:26:37.845
+Uh, we have, we are feeding the input
+
+1391
+01:26:38.505 --> 01:26:40.605
+and we are adding one hidden layer in between
+
+1392
+01:26:40.635 --> 01:26:42.165
+with two neurons, okay?
+
+1393
+01:26:42.165 --> 01:26:45.005
+Which is known, which is shown here as H one and S two.
+
+1394
+01:26:45.585 --> 01:26:48.125
+And, uh, the output from H one S two will go
+
+1395
+01:26:48.145 --> 01:26:50.045
+for the final layer perceptron.
+
+1396
+01:26:50.105 --> 01:26:52.165
+And this perceptron will give us the output.
+
+1397
+01:26:52.705 --> 01:26:55.965
+So when you have the network, uh, like this,
+
+1398
+01:26:55.965 --> 01:27:00.605
+then it'll be able to, uh, it'll be able to separate, uh,
+
+1399
+01:27:00.745 --> 01:27:04.325
+the, the class one or class zero, even in the case of xor.
+
+1400
+01:27:05.185 --> 01:27:09.445
+And so just this particular slide, uh, I wanted to show, to
+
+1401
+01:27:10.115 --> 01:27:12.285
+show you what exactly happens when, uh,
+
+1402
+01:27:12.285 --> 01:27:13.805
+we have seen the visualization that it's okay,
+
+1403
+01:27:14.225 --> 01:27:15.405
+but what happens here?
+
+1404
+01:27:16.225 --> 01:27:19.605
+So, uh, what happens when you add one hidden layer in
+
+1405
+01:27:19.605 --> 01:27:24.005
+between the raw inputs are represented in some other form.
+
+1406
+01:27:24.065 --> 01:27:26.365
+So we are doing the representation pro,
+
+1407
+01:27:26.385 --> 01:27:28.125
+we are changing the input representation.
+
+1408
+01:27:28.905 --> 01:27:30.285
+So initial input was like,
+
+1409
+01:27:30.285 --> 01:27:32.765
+say 0, 0, 0, 1, 1, 0, and one, one.
+
+1410
+01:27:32.905 --> 01:27:35.205
+We are not able to separate with the straight line, right?
+
+1411
+01:27:35.825 --> 01:27:36.925
+So this zero, zero
+
+1412
+01:27:37.345 --> 01:27:41.725
+or XX one, X two later on is being converted as H one S two.
+
+1413
+01:27:42.565 --> 01:27:47.205
+Okay? So this, when, when you will do this calculation,
+
+1414
+01:27:47.265 --> 01:27:48.885
+all the weights and inputs are given to you.
+
+1415
+01:27:49.115 --> 01:27:53.085
+This zero zero will be converted as at zero zero itself.
+
+1416
+01:27:53.085 --> 01:27:57.085
+So if you'll pass this zero into 1 0, 0 into one zero,
+
+1417
+01:27:57.345 --> 01:28:00.525
+and this, uh, bias is also plus one into zero zero.
+
+1418
+01:28:01.065 --> 01:28:02.205
+So it'll come zero, right?
+
+1419
+01:28:02.205 --> 01:28:04.485
+Similarly, for X, the S two will also come zero.
+
+1420
+01:28:04.945 --> 01:28:08.245
+So for zero, zero H one S two will be also zero, zero.
+
+1421
+01:28:08.865 --> 01:28:10.725
+But for zero one, you will,
+
+1422
+01:28:10.785 --> 01:28:12.165
+if you will calculate all these things,
+
+1423
+01:28:12.965 --> 01:28:15.205
+H one s two will give the output as one zero.
+
+1424
+01:28:15.665 --> 01:28:17.365
+You substitute all these value, you will get
+
+1425
+01:28:17.365 --> 01:28:18.645
+that for one zero.
+
+1426
+01:28:18.875 --> 01:28:21.885
+Also, the output would be one zero itself.
+
+1427
+01:28:22.185 --> 01:28:24.205
+So see that what is the change for zero,
+
+1428
+01:28:24.235 --> 01:28:27.005
+zero H one S two is zero, zero for zero.
+
+1429
+01:28:27.105 --> 01:28:29.085
+One, H one S two is one zero for one,
+
+1430
+01:28:29.085 --> 01:28:30.525
+zero H one s two is one zero.
+
+1431
+01:28:30.865 --> 01:28:33.245
+And for one, one, the H one has two H, two one.
+
+1432
+01:28:34.245 --> 01:28:35.785
+Now this is the transformed input.
+
+1433
+01:28:36.085 --> 01:28:37.625
+You can, uh, uh, think like that.
+
+1434
+01:28:38.005 --> 01:28:39.545
+So I have transformed my input.
+
+1435
+01:28:39.925 --> 01:28:41.585
+So what change it has brought.
+
+1436
+01:28:41.925 --> 01:28:44.865
+So earlier my data points were like this, zero, zero,
+
+1437
+01:28:45.285 --> 01:28:47.145
+and this is 1 0, 0 1, and one one.
+
+1438
+01:28:47.285 --> 01:28:50.465
+But now transformed input is being represented like that.
+
+1439
+01:28:50.465 --> 01:28:53.385
+This is zero, zero, right? This is one zero.
+
+1440
+01:28:53.805 --> 01:28:56.145
+And here you have two times one zero, like one zero.
+
+1441
+01:28:56.275 --> 01:28:58.505
+There are two points. So they're overlapped on each other.
+
+1442
+01:28:58.645 --> 01:29:00.065
+So this is the same point which are
+
+1443
+01:29:00.265 --> 01:29:01.525
+representing these 2, 1 0, 1 0.
+
+1444
+01:29:01.945 --> 01:29:04.525
+And this particular point is representing two comm one.
+
+1445
+01:29:05.225 --> 01:29:08.445
+And now you can see that you can easily place a, a,
+
+1446
+01:29:08.765 --> 01:29:11.565
+a line like this, which can, which is able
+
+1447
+01:29:11.565 --> 01:29:13.005
+to separate the two class of data.
+
+1448
+01:29:13.635 --> 01:29:15.965
+Okay? Now, this is, this is, uh, another way
+
+1449
+01:29:15.965 --> 01:29:19.845
+of understanding that how we are, uh, representing
+
+1450
+01:29:20.385 --> 01:29:21.885
+our non-linear data,
+
+1451
+01:29:22.135 --> 01:29:24.885
+non-linear de separable data into the linear space.
+
+1452
+01:29:24.945 --> 01:29:26.365
+And then we are putting a line
+
+1453
+01:29:26.365 --> 01:29:28.245
+to separate the two class, okay?
+
+1454
+01:29:28.245 --> 01:29:31.285
+This is another way, and same thing is being shown here in
+
+1455
+01:29:31.285 --> 01:29:32.405
+the form of demo as well.
+
+1456
+01:29:32.755 --> 01:29:35.405
+I'll quickly show you that we'll quickly, oh,
+
+1457
+01:29:35.545 --> 01:29:38.565
+uh, show you this one.
+
+1458
+01:29:38.745 --> 01:29:41.445
+So here we are represent, uh, importing all the, uh,
+
+1459
+01:29:41.445 --> 01:29:43.765
+importing all the, uh, packages.
+
+1460
+01:29:43.905 --> 01:29:48.525
+And this, uh, let me just, uh, run this.
+
+1461
+01:29:49.225 --> 01:29:51.685
+So here, what we are doing is creating our tensors.
+
+1462
+01:29:51.685 --> 01:29:55.125
+So 0, 0, 0, 1, 1, 0 1, 1. Same thing, X and Y for the xr.
+
+1463
+01:29:55.905 --> 01:29:58.445
+And I'm trying to plot it just to see
+
+1464
+01:29:58.445 --> 01:29:59.805
+that initially, how does it look?
+
+1465
+01:29:59.805 --> 01:30:01.645
+So initially it'll look something like that, right?
+
+1466
+01:30:01.865 --> 01:30:03.845
+So non-linearly separable data point,
+
+1467
+01:30:03.845 --> 01:30:05.085
+you can clearly see that, right?
+
+1468
+01:30:05.965 --> 01:30:08.975
+Okay. So what we have to do is we have to design a network
+
+1469
+01:30:09.115 --> 01:30:11.135
+to convert this non-linearity separable data
+
+1470
+01:30:11.155 --> 01:30:12.655
+and represent it in some other form.
+
+1471
+01:30:12.795 --> 01:30:13.815
+And that is what you will see.
+
+1472
+01:30:13.835 --> 01:30:17.095
+Now, before that, we are adding a bias upfront.
+
+1473
+01:30:18.075 --> 01:30:22.215
+And then see there are two layers in the secal layer.
+
+1474
+01:30:22.215 --> 01:30:24.215
+We are going to use the radio activation function,
+
+1475
+01:30:24.385 --> 01:30:27.335
+which introduce the nonlinearity in into your network.
+
+1476
+01:30:27.435 --> 01:30:28.735
+And then the output layer, we are
+
+1477
+01:30:28.735 --> 01:30:29.855
+still using the step function.
+
+1478
+01:30:29.875 --> 01:30:33.455
+So this is the, uh, this is the functions for that.
+
+1479
+01:30:34.475 --> 01:30:38.815
+Now, uh, we are initializing our weights minus one,
+
+1480
+01:30:38.815 --> 01:30:41.415
+same weights, which we have, which we have seen here,
+
+1481
+01:30:41.475 --> 01:30:46.275
+the same, same, uh, weights is taken here.
+
+1482
+01:30:46.585 --> 01:30:50.195
+Okay? So W one is the weights between input and hidden,
+
+1483
+01:30:50.495 --> 01:30:53.955
+and W2 is a set of weights between hidden and output layer.
+
+1484
+01:30:54.265 --> 01:30:57.235
+Okay? So that is what it is being initialized here.
+
+1485
+01:30:57.695 --> 01:31:01.675
+And then we are creating the forward, uh, uh, propagation,
+
+1486
+01:31:01.815 --> 01:31:04.915
+uh, for this, this network that, first of all,
+
+1487
+01:31:05.015 --> 01:31:09.955
+we do the dot product between W and two X store into ZJ one
+
+1488
+01:31:09.975 --> 01:31:11.195
+and J one is buying passed
+
+1489
+01:31:11.195 --> 01:31:13.795
+through the relu activation function as edge.
+
+1490
+01:31:14.415 --> 01:31:16.635
+Now, this edge will have H one S two, remember?
+
+1491
+01:31:16.895 --> 01:31:18.755
+So it's, uh, for H one S two, both,
+
+1492
+01:31:18.755 --> 01:31:20.985
+we are calculating this one, okay?
+
+1493
+01:31:20.985 --> 01:31:22.065
+And these are all the vectors.
+
+1494
+01:31:22.065 --> 01:31:26.945
+These W is a vectors X, uh, uh, so it, this Z one,
+
+1495
+01:31:27.645 --> 01:31:30.225
+uh, will give you Z one and uh, Z two,
+
+1496
+01:31:30.605 --> 01:31:32.385
+and then H will give you H one and S two.
+
+1497
+01:31:32.385 --> 01:31:34.345
+This will give you two, two values, okay?
+
+1498
+01:31:34.845 --> 01:31:36.905
+And then what we are doing is whatever we are getting,
+
+1499
+01:31:37.025 --> 01:31:39.185
+H one S two, we are adding a bias again,
+
+1500
+01:31:39.185 --> 01:31:41.145
+because for the second layer, also, we have a bias.
+
+1501
+01:31:41.205 --> 01:31:43.625
+You see that this is a bias, which is connecting
+
+1502
+01:31:43.625 --> 01:31:45.825
+to the second layer also here for Y one.
+
+1503
+01:31:46.125 --> 01:31:47.785
+So that bias is being added here
+
+1504
+01:31:48.485 --> 01:31:49.865
+in this slide add bias term.
+
+1505
+01:31:50.565 --> 01:31:52.065
+And then what we are doing is, again,
+
+1506
+01:31:52.065 --> 01:31:54.985
+we are creating the dot product, dot product between the W2.
+
+1507
+01:31:55.005 --> 01:31:56.985
+So this layer weight, I'm seeing a W2
+
+1508
+01:31:57.245 --> 01:31:58.705
+and dot product between W2
+
+1509
+01:31:58.705 --> 01:32:01.125
+and HH represents H one and H two.
+
+1510
+01:32:01.475 --> 01:32:02.765
+That is what is written here.
+
+1511
+01:32:02.845 --> 01:32:06.645
+W2 into H with bias will give you J two, pass it through
+
+1512
+01:32:06.645 --> 01:32:09.485
+that step function, you will get the final prediction Y hat.
+
+1513
+01:32:10.065 --> 01:32:11.845
+So this is what is the forward pass.
+
+1514
+01:32:12.425 --> 01:32:15.095
+And now this line is source that,
+
+1515
+01:32:15.125 --> 01:32:16.175
+okay, what exactly happens?
+
+1516
+01:32:16.205 --> 01:32:18.015
+Zero, zero. Now it is giving the output
+
+1517
+01:32:18.035 --> 01:32:20.415
+as 1, 1, 1, 1 and rest.
+
+1518
+01:32:20.415 --> 01:32:23.655
+Two between, uh, input 0 1, 1 0 going the output as zero,
+
+1519
+01:32:23.655 --> 01:32:25.215
+which is the correct output for exor.
+
+1520
+01:32:25.795 --> 01:32:28.055
+Now, when I tried plotting that, that, okay,
+
+1521
+01:32:28.085 --> 01:32:29.335
+what exactly happened?
+
+1522
+01:32:29.995 --> 01:32:32.375
+So this is how it looks like. Yeah.
+
+1523
+01:32:32.435 --> 01:32:35.735
+Now see that, so my, this is one data point.
+
+1524
+01:32:36.035 --> 01:32:38.455
+So my data points look like that.
+
+1525
+01:32:38.875 --> 01:32:42.575
+My initial input, which was 0 0, 0 1, 1, 0 1 1
+
+1526
+01:32:43.155 --> 01:32:46.815
+is not transformed as zero 1.50, 0.50,
+
+1527
+01:32:46.815 --> 01:32:48.375
+0.5, and one zero.
+
+1528
+01:32:48.565 --> 01:32:50.215
+This is what happened with H one S two,
+
+1529
+01:32:50.715 --> 01:32:52.375
+and I have explained here also, this is
+
+1530
+01:32:52.375 --> 01:32:53.695
+what happened here in between.
+
+1531
+01:32:55.035 --> 01:32:57.295
+So this one, when you will plot,
+
+1532
+01:32:57.515 --> 01:32:58.975
+you will have now only three points.
+
+1533
+01:32:59.085 --> 01:33:01.535
+This is, this represents zero and 0.5.
+
+1534
+01:33:01.805 --> 01:33:04.495
+This re this blue represent zero and 1.5
+
+1535
+01:33:04.515 --> 01:33:07.095
+and two data points are representing zero and 1.5,
+
+1536
+01:33:07.475 --> 01:33:09.415
+and this represent one and zero.
+
+1537
+01:33:10.245 --> 01:33:12.785
+And now you can easily place, uh,
+
+1538
+01:33:13.125 --> 01:33:15.345
+now you can easily place a decision boundary, which,
+
+1539
+01:33:15.345 --> 01:33:18.465
+which can separate these two, uh, class of data.
+
+1540
+01:33:18.535 --> 01:33:21.465
+This is the same plot as, uh, which you're seeing here.
+
+1541
+01:33:21.495 --> 01:33:23.265
+Only thing is the H one
+
+1542
+01:33:23.265 --> 01:33:25.785
+and S two, the X axis yxi range has changed.
+
+1543
+01:33:25.785 --> 01:33:29.065
+Here it is between 0, 1 0 and 1.5.
+
+1544
+01:33:29.245 --> 01:33:31.105
+And here it is little different minus one
+
+1545
+01:33:31.105 --> 01:33:35.025
+and two minus 1.510, but it is the same data point, okay?
+
+1546
+01:33:35.285 --> 01:33:37.505
+But we can see that now we have got that line.
+
+1547
+01:33:37.565 --> 01:33:39.745
+So we have solved that, uh, hard problem
+
+1548
+01:33:40.245 --> 01:33:42.385
+by introducing one more layer in between.
+
+1549
+01:33:43.135 --> 01:33:45.345
+Okay? Uh, uh,
+
+1550
+01:33:45.805 --> 01:33:48.945
+before I will, uh, stop for the, uh, questions,
+
+1551
+01:33:49.135 --> 01:33:51.105
+because this much you must have known.
+
+1552
+01:33:51.375 --> 01:33:53.745
+I'll quickly show you the different, uh, uh,
+
+1553
+01:33:53.745 --> 01:33:55.385
+because we have another 10 minutes.
+
+1554
+01:33:56.285 --> 01:33:57.625
+Uh, I'll show you a few more.
+
+1555
+01:33:57.625 --> 01:34:00.305
+Slide three, four more slide where I'll show you, okay?
+
+1556
+01:34:00.325 --> 01:34:03.905
+How can then this multi-layer perception idea
+
+1557
+01:34:04.165 --> 01:34:06.745
+or, uh, two layer or three layer perception can be used
+
+1558
+01:34:06.745 --> 01:34:08.825
+for the different, different problems
+
+1559
+01:34:09.245 --> 01:34:11.345
+or for different, different types of the outputs.
+
+1560
+01:34:11.925 --> 01:34:13.265
+So this is one such network.
+
+1561
+01:34:13.335 --> 01:34:15.785
+What you can create where you have n number of inputs,
+
+1562
+01:34:16.245 --> 01:34:19.145
+you have one hidden layer, one output layer,
+
+1563
+01:34:19.365 --> 01:34:21.785
+and the output layer, you have n number of neurons.
+
+1564
+01:34:21.975 --> 01:34:23.225
+That means that you can use it
+
+1565
+01:34:23.225 --> 01:34:25.825
+for the multi-class classification, uh,
+
+1566
+01:34:26.725 --> 01:34:28.265
+uh, problem.
+
+1567
+01:34:28.775 --> 01:34:31.665
+Okay? The only thing is what we are, uh,
+
+1568
+01:34:31.665 --> 01:34:33.185
+doing here is everything is same.
+
+1569
+01:34:33.325 --> 01:34:36.105
+See that H how do we calculate by weighted sum?
+
+1570
+01:34:36.225 --> 01:34:40.825
+W into X, okay? Plus B, B is this particular part, okay?
+
+1571
+01:34:41.045 --> 01:34:42.105
+The WX plus B,
+
+1572
+01:34:42.125 --> 01:34:44.945
+we are putting one activation function here at this
+
+1573
+01:34:44.945 --> 01:34:45.985
+particular, uh, layer.
+
+1574
+01:34:46.125 --> 01:34:49.625
+So that activation function can be anything sigmoid, uh,
+
+1575
+01:34:49.625 --> 01:34:51.225
+here represented, but can be anything.
+
+1576
+01:34:51.485 --> 01:34:52.625
+Now that will give us, h,
+
+1577
+01:34:52.785 --> 01:34:54.785
+h represents everything H one, H two, H three.
+
+1578
+01:34:54.845 --> 01:34:56.785
+So it's a vector.
+
+1579
+01:34:57.265 --> 01:34:59.565
+And now this edge is being multiplied with this set
+
+1580
+01:34:59.565 --> 01:35:02.885
+of weight U and then it gives us Z
+
+1581
+01:35:02.905 --> 01:35:04.685
+and z We are passing through the softmax.
+
+1582
+01:35:04.745 --> 01:35:07.485
+Why is softmax here? Because it's a multi-layer classi, uh,
+
+1583
+01:35:07.575 --> 01:35:09.805
+multi, uh, multi-class classification problem.
+
+1584
+01:35:10.225 --> 01:35:12.725
+And then softmax physical give us the probability
+
+1585
+01:35:13.005 --> 01:35:14.845
+distribution across these outputs,
+
+1586
+01:35:15.105 --> 01:35:17.005
+and we, it it'll be easy for us
+
+1587
+01:35:17.025 --> 01:35:19.605
+to choose one output which has the highest probability.
+
+1588
+01:35:20.145 --> 01:35:22.885
+So that's the part, uh, you can, so this is
+
+1589
+01:35:22.885 --> 01:35:25.045
+how you can use this, uh, two layer
+
+1590
+01:35:25.465 --> 01:35:26.725
+or multi-layer perception
+
+1591
+01:35:27.025 --> 01:35:28.565
+or multi-class classification problem.
+
+1592
+01:35:29.145 --> 01:35:30.805
+Now, this slide is same. Here.
+
+1593
+01:35:30.805 --> 01:35:33.485
+We are simply replacing the bias with the X node
+
+1594
+01:35:33.545 --> 01:35:37.005
+to make our, uh, representation a little bit easier.
+
+1595
+01:35:37.385 --> 01:35:40.045
+So WX plus B is now represented at wx,
+
+1596
+01:35:40.045 --> 01:35:41.325
+which also includes the bias.
+
+1597
+01:35:41.325 --> 01:35:42.725
+Nothing different.
+
+1598
+01:35:43.625 --> 01:35:46.925
+Now, uh, what, what are the different purposes you can use?
+
+1599
+01:35:46.925 --> 01:35:49.405
+You can use the single perceptron as a binary
+
+1600
+01:35:49.925 --> 01:35:51.405
+logistic regression problem, right?
+
+1601
+01:35:51.435 --> 01:35:53.605
+Because it'll give, give us the probability,
+
+1602
+01:35:53.705 --> 01:35:55.125
+you can decide which class it's,
+
+1603
+01:35:55.125 --> 01:35:57.045
+and you have the set of inputs, okay?
+
+1604
+01:35:57.585 --> 01:36:01.085
+You can also use this, uh, this type of network
+
+1605
+01:36:01.425 --> 01:36:04.885
+for multinomial logistic regression problem only changes.
+
+1606
+01:36:04.985 --> 01:36:06.765
+Now you have multiple outputs,
+
+1607
+01:36:07.005 --> 01:36:09.045
+multiple neurons at the output layer, soft max,
+
+1608
+01:36:09.045 --> 01:36:10.765
+you can put just now we have seen,
+
+1609
+01:36:11.105 --> 01:36:14.165
+and we can get the multi-class classification problem easily
+
+1610
+01:36:14.165 --> 01:36:16.325
+done here using the soft max activation function.
+
+1611
+01:36:17.075 --> 01:36:20.205
+Okay? Now, you can also have the two layer, uh, network
+
+1612
+01:36:20.755 --> 01:36:22.645
+with the scaler output, okay?
+
+1613
+01:36:22.745 --> 01:36:24.965
+Say the two layer, but you want the single say,
+
+1614
+01:36:25.085 --> 01:36:27.365
+binary classification problem, or you can have the two
+
+1615
+01:36:27.365 --> 01:36:30.165
+layers neural network with the,
+
+1616
+01:36:30.745 --> 01:36:32.485
+say the multi-class classification problem.
+
+1617
+01:36:32.905 --> 01:36:35.525
+You can also do this kind of network, use this kind
+
+1618
+01:36:35.525 --> 01:36:38.165
+of network for the regression problem only thing is at the
+
+1619
+01:36:38.165 --> 01:36:39.885
+output layer, instead of using sigmoid,
+
+1620
+01:36:39.885 --> 01:36:41.605
+you can use the linear activation.
+
+1621
+01:36:41.985 --> 01:36:43.725
+So then you can use it for the regression problem.
+
+1622
+01:36:44.145 --> 01:36:45.525
+So likewise, you can see that, right?
+
+1623
+01:36:45.715 --> 01:36:47.005
+It's a lot of flexibility.
+
+1624
+01:36:47.905 --> 01:36:49.725
+You have fixed set of inputs
+
+1625
+01:36:50.065 --> 01:36:51.765
+and you know what output you want,
+
+1626
+01:36:52.505 --> 01:36:54.605
+but then in between everything is flexible.
+
+1627
+01:36:54.785 --> 01:36:57.445
+You may keep as many hidden layers as you want.
+
+1628
+01:36:57.625 --> 01:36:59.885
+You may keep as many neurons in the hidden layer
+
+1629
+01:36:59.905 --> 01:37:01.165
+as you want, right?
+
+1630
+01:37:01.185 --> 01:37:02.245
+So everything is flexible.
+
+1631
+01:37:02.355 --> 01:37:04.165
+Then based on the output, what you want,
+
+1632
+01:37:04.185 --> 01:37:05.805
+you can design the output layer.
+
+1633
+01:37:05.905 --> 01:37:08.285
+You can place number of neurons in the output layer.
+
+1634
+01:37:08.375 --> 01:37:09.925
+Everything is quite flexible.
+
+1635
+01:37:10.265 --> 01:37:11.805
+And for that one, we have different,
+
+1636
+01:37:11.805 --> 01:37:13.885
+different activation functions available for,
+
+1637
+01:37:14.145 --> 01:37:16.365
+for a particular, uh, type of output and all.
+
+1638
+01:37:16.745 --> 01:37:19.205
+So with the practice, you will get to know that when to use
+
+1639
+01:37:19.355 --> 01:37:21.765
+what activation function in which layer and all,
+
+1640
+01:37:22.385 --> 01:37:25.285
+and how to design this network, how to place, uh,
+
+1641
+01:37:25.425 --> 01:37:28.005
+the neurons in a, a layer, how many neurons.
+
+1642
+01:37:28.005 --> 01:37:29.925
+And although there is no fixed rule to, for,
+
+1643
+01:37:29.985 --> 01:37:32.205
+for keeping number of neurons in a layer,
+
+1644
+01:37:32.305 --> 01:37:34.685
+how many neurons we can keep, how many layers we can keep.
+
+1645
+01:37:34.705 --> 01:37:37.365
+But with the practice, you will get some, uh, idea
+
+1646
+01:37:37.785 --> 01:37:40.765
+and then on you can be able to construct the different,
+
+1647
+01:37:40.765 --> 01:37:41.765
+different neuron.
+
+1648
+01:37:43.065 --> 01:37:45.995
+Okay? So I, I guess I'll stop here today.
+
+1649
+01:37:46.375 --> 01:37:48.075
+Uh, you can ask the questions.
+
+1650
+01:37:48.455 --> 01:37:51.595
+In the next class, we will go with the back propagation, uh,
+
+1651
+01:37:51.605 --> 01:37:54.075
+right, and we'll see how the back propagation works.
+
+1652
+01:37:54.415 --> 01:37:57.365
+Yes, sir. So here each, uh,
+
+1653
+01:37:57.585 --> 01:38:01.005
+as in multi-class classification, each neuron
+
+1654
+01:38:01.925 --> 01:38:03.125
+represent one class, sir.
+
+1655
+01:38:03.625 --> 01:38:06.645
+For example, in binary we have multiple neuron.
+
+1656
+01:38:07.035 --> 01:38:10.805
+Then how the class will be distributed within the neurons.
+
+1657
+01:38:11.345 --> 01:38:12.725
+No, uh, I suppose you have binary
+
+1658
+01:38:12.725 --> 01:38:14.125
+class classification problem.
+
+1659
+01:38:14.865 --> 01:38:17.445
+Yes. That you use this kind of network architecture
+
+1660
+01:38:17.445 --> 01:38:20.085
+where you have a single neuron, uh, stating
+
+1661
+01:38:20.155 --> 01:38:21.885
+that based on the probability,
+
+1662
+01:38:22.385 --> 01:38:23.965
+you can decide whether it is class one.
+
+1663
+01:38:23.965 --> 01:38:25.925
+What what we do in the case of logistic regression.
+
+1664
+01:38:27.385 --> 01:38:30.605
+So you don't use multiple neurons at the output layer.
+
+1665
+01:38:30.605 --> 01:38:32.605
+Suppose you have binary classification problem,
+
+1666
+01:38:32.985 --> 01:38:35.285
+but if you have multi-class classification problem,
+
+1667
+01:38:35.795 --> 01:38:38.965
+then you can add 2, 3, 4, whatever number of,
+
+1668
+01:38:38.965 --> 01:38:40.485
+uh, uh, class you have.
+
+1669
+01:38:40.555 --> 01:38:41.555
+Yeah,
+
+1670
+01:38:42.655 --> 01:38:45.135
+Thank you, Sir.
+
+1671
+01:38:45.395 --> 01:38:47.895
+Um, like this hidden layer, uh,
+
+1672
+01:38:48.005 --> 01:38:51.215
+what happens when we keep on increase, uh, number
+
+1673
+01:38:51.215 --> 01:38:52.255
+of neurons in this?
+
+1674
+01:38:53.635 --> 01:38:56.375
+Uh, I, I have shown you one visualization right here.
+
+1675
+01:38:56.565 --> 01:39:00.335
+Yeah. Uh, I guess the, that will give you, you try, uh,
+
+1676
+01:39:00.365 --> 01:39:01.775
+what, what I'll suggest to you,
+
+1677
+01:39:02.205 --> 01:39:03.775
+this visualization is really good.
+
+1678
+01:39:04.355 --> 01:39:07.015
+You keep on adding, uh, the neurons in this.
+
+1679
+01:39:07.195 --> 01:39:10.815
+You see that what happens, so with the,
+
+1680
+01:39:10.815 --> 01:39:14.335
+with the D six neuron, this is what is happening, okay?
+
+1681
+01:39:14.635 --> 01:39:16.415
+And then say that I'll stop here,
+
+1682
+01:39:16.415 --> 01:39:18.215
+I'll add one more neuron, okay?
+
+1683
+01:39:18.215 --> 01:39:21.655
+What will happen? And you may, uh, okay,
+
+1684
+01:39:22.035 --> 01:39:24.895
+you may see in variations in, in terms of the acal,
+
+1685
+01:39:24.895 --> 01:39:28.295
+so maybe one more neuron may take less number of hippo to
+
+1686
+01:39:28.355 --> 01:39:29.735
+for this convergence.
+
+1687
+01:39:29.735 --> 01:39:33.375
+And all right, uh, you may add one more neuron,
+
+1688
+01:39:33.375 --> 01:39:35.375
+you may add tender, so you can keep on adding
+
+1689
+01:39:35.475 --> 01:39:36.935
+and then checking that what is happening.
+
+1690
+01:39:36.935 --> 01:39:37.815
+This will give you better
+
+1691
+01:39:37.815 --> 01:39:39.375
+understanding that what is happening.
+
+1692
+01:39:39.795 --> 01:39:43.135
+So, uh, you, you see this one more layer I have added,
+
+1693
+01:39:43.135 --> 01:39:45.175
+and this is what has happened only with the
+
+1694
+01:39:45.765 --> 01:39:48.055
+less than 50 ocs, it was converged.
+
+1695
+01:39:48.055 --> 01:39:51.335
+That was, that was not the case when I was having, uh, this,
+
+1696
+01:39:51.335 --> 01:39:54.735
+this only one hidden layer, it, there, it had taken, uh,
+
+1697
+01:39:54.735 --> 01:39:55.855
+some number of ocs.
+
+1698
+01:39:56.275 --> 01:39:58.975
+So this is what you have to observe what is happening,
+
+1699
+01:39:59.575 --> 01:40:00.755
+see at the initial levels and
+
+1700
+01:40:00.755 --> 01:40:01.835
+had given you some clue, right?
+
+1701
+01:40:02.025 --> 01:40:06.795
+That what is happening when we add layers, uh, two layer,
+
+1702
+01:40:06.795 --> 01:40:10.035
+three layer and, and, and, uh, two neurons in the layer
+
+1703
+01:40:10.055 --> 01:40:12.195
+and three neuro, uh, neurons in the layer.
+
+1704
+01:40:12.775 --> 01:40:16.075
+But when it goes to the multi multiple head layers
+
+1705
+01:40:16.415 --> 01:40:19.555
+and a hundred neurons in the, uh, in a particular layer,
+
+1706
+01:40:19.555 --> 01:40:21.355
+it is very difficult to answer that question,
+
+1707
+01:40:21.355 --> 01:40:23.715
+what you have said, but you can always observe that
+
+1708
+01:40:23.715 --> 01:40:27.165
+with this kind of visualization, okay?
+
+1709
+01:40:29.955 --> 01:40:30.955
+Yes.
+
+1710
+01:40:32.505 --> 01:40:35.845
+Uh, after seeing this visualization, uh, I mean I got, uh,
+
+1711
+01:40:36.195 --> 01:40:38.445
+have a, had a clarity that I thought
+
+1712
+01:40:38.445 --> 01:40:40.085
+that initially adding a hidden, um,
+
+1713
+01:40:40.085 --> 01:40:42.325
+adding a neutrons in the hidden layer might, uh,
+
+1714
+01:40:42.325 --> 01:40:43.685
+caused the performance.
+
+1715
+01:40:44.025 --> 01:40:47.485
+But after seeing here the visualization, I got a clarity
+
+1716
+01:40:47.555 --> 01:40:50.525
+that, uh, adding a hidden, uh, sorry, new, uh,
+
+1717
+01:40:50.795 --> 01:40:53.205
+neutron in this, uh, hidden lens will, uh,
+
+1718
+01:40:53.205 --> 01:40:55.645
+give the solution very quickly,
+
+1719
+01:40:55.915 --> 01:40:56.915
+Correct? Correct.
+
+1720
+01:40:56.915 --> 01:41:00.325
+But later on you will see
+
+1721
+01:41:00.325 --> 01:41:03.925
+that if you'll have, say that you, the three neurons,
+
+1722
+01:41:03.925 --> 01:41:05.605
+four neurons are able to solve the problem
+
+1723
+01:41:05.865 --> 01:41:08.645
+and you have added 15 neurons just for the reason, just say
+
+1724
+01:41:08.645 --> 01:41:11.085
+that first of all, it'll increase the complexity.
+
+1725
+01:41:11.085 --> 01:41:12.725
+You have to do any calculation
+
+1726
+01:41:12.725 --> 01:41:14.965
+because weights, wire are connected and all.
+
+1727
+01:41:15.605 --> 01:41:16.805
+Secondly, you will see
+
+1728
+01:41:16.805 --> 01:41:20.205
+that many neurons are doing almost similar job,
+
+1729
+01:41:21.445 --> 01:41:23.895
+many neurons, because you see this here,
+
+1730
+01:41:23.985 --> 01:41:25.575
+every neuron is trying
+
+1731
+01:41:25.575 --> 01:41:28.375
+to capture one part in some pattern in the data,
+
+1732
+01:41:28.445 --> 01:41:30.975
+this pattern, this pattern, this, this.
+
+1733
+01:41:31.835 --> 01:41:35.095
+And, but if you'll keep on adding this, keep on adding this,
+
+1734
+01:41:35.125 --> 01:41:37.295
+what will happen, you'll see that, okay,
+
+1735
+01:41:37.295 --> 01:41:39.735
+there are several neurons which is trying to, which,
+
+1736
+01:41:39.745 --> 01:41:42.255
+which has the same information, trying
+
+1737
+01:41:42.255 --> 01:41:44.135
+to have the same information in the dataset.
+
+1738
+01:41:44.355 --> 01:41:47.975
+And that's where this over fitting problems again,
+
+1739
+01:41:47.975 --> 01:41:50.055
+comes into the picture and we need some kind
+
+1740
+01:41:50.055 --> 01:41:51.375
+of regularization technique.
+
+1741
+01:41:51.395 --> 01:41:55.815
+So, uh, it's fine that, uh, uh, you can add as many neurons
+
+1742
+01:41:55.815 --> 01:41:57.535
+as you want in the head and layer and all,
+
+1743
+01:41:58.035 --> 01:42:01.775
+but, uh, yeah, it may lead us to the complexity.
+
+1744
+01:42:01.875 --> 01:42:04.295
+See how many complexities now, how many connections,
+
+1745
+01:42:04.295 --> 01:42:06.015
+you can see all these other weights and biases
+
+1746
+01:42:06.875 --> 01:42:10.455
+and uh, secondly, it may also lead it to the over fitting
+
+1747
+01:42:10.875 --> 01:42:12.455
+or, uh, uh, yeah.
+
+1748
+01:42:12.555 --> 01:42:13.935
+So those prob kind of problems
+
+1749
+01:42:13.935 --> 01:42:15.095
+may also come into the picture.
+
+1750
+01:42:15.915 --> 01:42:19.495
+One more, doctor, sir, uh, while, um, calculating here,
+
+1751
+01:42:19.495 --> 01:42:22.375
+hidden player, uh, can we have any technique
+
+1752
+01:42:22.375 --> 01:42:25.735
+or logic so that for example, let's say hidden, uh,
+
+1753
+01:42:25.805 --> 01:42:28.895
+this perception 1, 2, 3 in hidden layers, whatever their,
+
+1754
+01:42:28.955 --> 01:42:31.375
+uh, workload that can be stored
+
+1755
+01:42:31.395 --> 01:42:33.975
+and that can be passed on the information that, uh, these,
+
+1756
+01:42:33.995 --> 01:42:36.815
+uh, for these uh, points, I have workload like that.
+
+1757
+01:42:37.035 --> 01:42:38.495
+So it can reduce the time. And
+
+1758
+01:42:40.165 --> 01:42:43.945
+Uh, I see that there are, uh, some, some you can store
+
+1759
+01:42:43.945 --> 01:42:46.585
+that whatever is the output from the hidden layer,
+
+1760
+01:42:46.645 --> 01:42:49.025
+you can definitely store that.
+
+1761
+01:42:49.025 --> 01:42:51.425
+That is what I'll show you in the next class also.
+
+1762
+01:42:51.805 --> 01:42:53.265
+But here also I have done that.
+
+1763
+01:42:53.845 --> 01:42:57.105
+So I, when I showed you this one that what is the,
+
+1764
+01:42:57.105 --> 01:42:59.745
+what is the au output from this, this particular,
+
+1765
+01:42:59.845 --> 01:43:01.345
+uh, uh, hidden points?
+
+1766
+01:43:01.545 --> 01:43:03.945
+I store that one actually. So you can do that.
+
+1767
+01:43:03.945 --> 01:43:05.745
+Even the weights, you can store that. Yeah.
+
+1768
+01:43:06.415 --> 01:43:08.625
+Okay. Thank you Sir. Everything is possible. Yeah,
+
+1769
+01:43:11.635 --> 01:43:12.635
+Yeah. Uh, Sunil
+
+1770
+01:43:12.635 --> 01:43:15.445
+just wanted to mention one point, yes.
+
+1771
+01:43:16.105 --> 01:43:20.485
+Um, um, since, uh, I think Deepak asked, no,
+
+1772
+01:43:20.755 --> 01:43:22.685
+what happens when you go on increase number,
+
+1773
+01:43:23.065 --> 01:43:24.445
+you answered all the points.
+
+1774
+01:43:25.225 --> 01:43:27.525
+So just to connect what you answered with
+
+1775
+01:43:27.555 --> 01:43:28.645
+what I explained earlier.
+
+1776
+01:43:29.745 --> 01:43:33.325
+See, as you increase the number of neurons, you'll be able
+
+1777
+01:43:33.385 --> 01:43:38.125
+to, uh, know construct a more complicated hyper surface,
+
+1778
+01:43:39.175 --> 01:43:42.175
+which will help you in, uh, dealing
+
+1779
+01:43:42.285 --> 01:43:45.695
+with classes which have a very complicated hyper surf need
+
+1780
+01:43:45.695 --> 01:43:47.335
+of complicated hyper to separate
+
+1781
+01:43:47.335 --> 01:43:48.415
+the examples of the classes.
+
+1782
+01:43:49.555 --> 01:43:50.735
+But as Dr.
+
+1783
+01:43:50.985 --> 01:43:54.365
+Uh, Sunil mentioned, you were, you were class
+
+1784
+01:43:54.585 --> 01:43:57.365
+or by machine learning task is a very straightforward task,
+
+1785
+01:43:57.395 --> 01:44:00.445
+very simple, hyper can, can separate.
+
+1786
+01:44:00.945 --> 01:44:03.805
+You go on adding the neurons, you are overkill the problem.
+
+1787
+01:44:03.985 --> 01:44:06.045
+So as a result, no overfeeding, everything will happen.
+
+1788
+01:44:07.065 --> 01:44:11.885
+So that is why there is no, there is no standard, uh,
+
+1789
+01:44:12.265 --> 01:44:13.725
+um, algorithm
+
+1790
+01:44:14.145 --> 01:44:16.205
+or equation, which says it has
+
+1791
+01:44:16.205 --> 01:44:17.885
+to have only this much neurons.
+
+1792
+01:44:18.705 --> 01:44:22.725
+So depending on the, you know, complexity of the problem,
+
+1793
+01:44:22.825 --> 01:44:25.485
+we can try to play around with the neurons in each.
+
+1794
+01:44:25.485 --> 01:44:26.765
+That is the way people do it.
+
+1795
+01:44:27.265 --> 01:44:31.365
+But only, uh, the, the conation is,
+
+1796
+01:44:32.305 --> 01:44:35.885
+um, the neural networks show a graceful
+
+1797
+01:44:35.885 --> 01:44:37.765
+degradation in the performance.
+
+1798
+01:44:38.475 --> 01:44:40.565
+That means to say, suppose assume that
+
+1799
+01:44:40.565 --> 01:44:42.925
+for any purpose you need 15 neurons in a layer,
+
+1800
+01:44:43.555 --> 01:44:44.725
+even if you make it 40
+
+1801
+01:44:44.945 --> 01:44:49.125
+or make it 60, performance doesn't change so drastically.
+
+1802
+01:44:49.825 --> 01:44:52.525
+Of course you need 15 neurons, you'll use only five neurons.
+
+1803
+01:44:52.525 --> 01:44:54.045
+Naturally it'll degrade.
+
+1804
+01:44:54.105 --> 01:44:57.605
+But uh, see in a mathematical equation point of view,
+
+1805
+01:44:57.705 --> 01:44:59.085
+if you know the exact equation,
+
+1806
+01:44:59.475 --> 01:45:01.485
+that equation gives you output as 50.
+
+1807
+01:45:01.825 --> 01:45:03.925
+You're expected to put only 15 neurons.
+
+1808
+01:45:03.925 --> 01:45:07.765
+But this, see here it is by more
+
+1809
+01:45:07.785 --> 01:45:08.925
+by heuristic approach.
+
+1810
+01:45:09.225 --> 01:45:12.965
+So that's where, uh, there are no single answer for that,
+
+1811
+01:45:12.965 --> 01:45:15.165
+which you can get it from mathematical question,
+
+1812
+01:45:15.705 --> 01:45:19.565
+but for a simple task, you are overdoing with more neurons,
+
+1813
+01:45:19.755 --> 01:45:21.685
+more computations, less data.
+
+1814
+01:45:21.685 --> 01:45:23.645
+Maybe there over fitting happens.
+
+1815
+01:45:24.545 --> 01:45:27.125
+And if you require more neurons
+
+1816
+01:45:27.125 --> 01:45:28.885
+but you have very less number of neurons,
+
+1817
+01:45:29.075 --> 01:45:32.165
+then it is not learning the discrimative ability
+
+1818
+01:45:32.165 --> 01:45:34.085
+because the hyper surface is not getting
+
+1819
+01:45:34.085 --> 01:45:35.725
+constructed in the required way.
+
+1820
+01:45:36.385 --> 01:45:37.925
+So this is the trade off we have to do.
+
+1821
+01:45:40.585 --> 01:45:44.515
+Yeah, uh, sir, we can also even see that when we have a,
+
+1822
+01:45:44.555 --> 01:45:48.275
+a, a model, uh, using set of neurons, so we can see for
+
+1823
+01:45:48.275 --> 01:45:49.395
+that validation laws
+
+1824
+01:45:49.395 --> 01:45:51.355
+and training laws, so they will come to know
+
+1825
+01:45:51.355 --> 01:45:54.755
+how much neurons we are under, under added or over added.
+
+1826
+01:45:55.095 --> 01:45:57.395
+So based on the loss pattern, also we can able
+
+1827
+01:45:57.395 --> 01:46:00.835
+to take on inference whether we are added less number
+
+1828
+01:46:00.835 --> 01:46:03.435
+of neurons or more accordingly we can correct the model.
+
+1829
+01:46:03.665 --> 01:46:06.315
+Yeah, that is an indirect way of seeing suppose, you know,
+
+1830
+01:46:06.665 --> 01:46:10.635
+what we want is uh, the validation data.
+
+1831
+01:46:10.905 --> 01:46:14.955
+Also, we need very high performance and the training data.
+
+1832
+01:46:14.985 --> 01:46:16.355
+Also, we need high performance.
+
+1833
+01:46:16.355 --> 01:46:18.835
+We make a trade off between the two cases.
+
+1834
+01:46:19.975 --> 01:46:22.675
+Unseen data, seen data from seen data
+
+1835
+01:46:22.685 --> 01:46:23.915
+gives me a hundred percent.
+
+1836
+01:46:24.695 --> 01:46:27.955
+I'm quite happy it has learned. Then it is a over fit K.
+
+1837
+01:46:28.015 --> 01:46:31.395
+And whereas the validation set gives 50%, that means
+
+1838
+01:46:31.395 --> 01:46:34.355
+to say it has over fit for the, uh, given data.
+
+1839
+01:46:34.355 --> 01:46:36.595
+That means to say there are some neurons which are
+
+1840
+01:46:36.595 --> 01:46:39.195
+duplicating, then we might have to reduce the neurons,
+
+1841
+01:46:39.395 --> 01:46:42.595
+and then I run the program, then validation start increase.
+
+1842
+01:46:42.735 --> 01:46:45.675
+So this is no like a crossover line between the
+
+1843
+01:46:46.195 --> 01:46:47.515
+training loss and validation loss
+
+1844
+01:46:47.525 --> 01:46:48.835
+based around that people do it.
+
+1845
+01:46:48.855 --> 01:46:51.885
+But otherwise, beyond that, I don't, uh,
+
+1846
+01:46:51.955 --> 01:46:54.205
+have any exact relationship.
+
+1847
+01:46:54.345 --> 01:46:58.485
+No. Okay, this loss is there 50%, can I make, uh, neurons,
+
+1848
+01:46:58.485 --> 01:47:01.925
+even neurons, uh, 50%, that type of relation is not there.
+
+1849
+01:47:05.165 --> 01:47:06.425
+Yes. Okay.
+
+1850
+01:47:08.435 --> 01:47:10.545
+Thank you. Okay.
+
+1851
+01:47:10.895 --> 01:47:12.585
+Then all the slides are uploaded.
+
+1852
+01:47:13.125 --> 01:47:14.825
+Kindly go through it, do the practice.
+
+1853
+01:47:14.885 --> 01:47:16.465
+All the notebooks are also uploaded.
+
+1854
+01:47:16.935 --> 01:47:18.865
+Keep on doing the practice, please. Yeah.
+
+1855
+01:47:19.155 --> 01:47:23.105
+Thank you. Thank you. Thank you, sir. Sir, thank you sir.
+
+1856
+01:47:23.105 --> 01:47:26.745
+Thank you. Sir. Can you call me back? Thank you, sir.
+
+1857
+01:47:27.295 --> 01:47:29.465
+Sure, sir. You have my mobile number.
+
+1858
+01:47:30.285 --> 01:47:34.665
+Uh, I don't type it here in the Sure, sure.
+
+1859
+01:47:37.825 --> 01:47:42.075
+It's my WhatsApp number also. Please call me back. That's.
