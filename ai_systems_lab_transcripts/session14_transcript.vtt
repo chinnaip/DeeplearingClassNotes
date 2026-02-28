@@ -1,0 +1,4441 @@
+WEBVTT
+
+1
+00:12:06.925 --> 00:12:07.845
+Good morning everyone.
+
+2
+00:12:10.145 --> 00:12:12.355
+Good morning, sir. Good morning, sir. Good morning, sir.
+
+3
+00:12:14.215 --> 00:12:16.185
+Morning, sir. Okay. Good morning, sir.
+
+4
+00:12:17.445 --> 00:12:20.265
+I'm sorry to actually, you know, uh,
+
+5
+00:12:21.365 --> 00:12:23.505
+taking your long weekend vacations,
+
+6
+00:12:24.085 --> 00:12:26.705
+but I'll be taking like maybe one and two hours.
+
+7
+00:12:29.965 --> 00:12:30.255
+Okay.
+
+8
+00:12:30.945 --> 00:12:35.545
+Share one.
+
+9
+00:12:35.675 --> 00:12:36.025
+Share.
+
+10
+00:12:44.485 --> 00:12:45.175
+Okay, so
+
+11
+00:12:45.965 --> 00:12:48.295
+When I was going through actually the, you know,
+
+12
+00:12:48.435 --> 00:12:51.295
+the topics and all and previous classes, we also discussed
+
+13
+00:12:51.295 --> 00:12:55.215
+that, uh, can we like fast pace few of the like, uh, classes
+
+14
+00:12:55.395 --> 00:12:57.175
+and combine the classes merge together
+
+15
+00:12:57.555 --> 00:13:00.015
+so we can advance in the domain of the deep learning.
+
+16
+00:13:00.155 --> 00:13:03.295
+So we can, like suppose we can, uh, dive into like a
+
+17
+00:13:03.825 --> 00:13:07.095
+small details of the, like a deep neutral network aspects,
+
+18
+00:13:07.155 --> 00:13:10.455
+or maybe we dive into like a, you know, uh, the,
+
+19
+00:13:10.805 --> 00:13:14.055
+like a committed of the resonate kind of things
+
+20
+00:13:14.115 --> 00:13:16.375
+or maybe CNN, all those kind of things.
+
+21
+00:13:16.795 --> 00:13:19.935
+So I, I, initially we had the discussion
+
+22
+00:13:19.935 --> 00:13:24.255
+and all, so today's class I saw that we are supposed
+
+23
+00:13:24.275 --> 00:13:26.135
+to dive into the one aspect
+
+24
+00:13:26.135 --> 00:13:28.255
+that was the Kenya neighbor, right?
+
+25
+00:13:28.595 --> 00:13:31.655
+In previous class, SVM was already done, and
+
+26
+00:13:31.655 --> 00:13:33.055
+because of the DT and all those
+
+27
+00:13:33.055 --> 00:13:34.215
+things we have already covered.
+
+28
+00:13:34.635 --> 00:13:38.215
+So the is basically very, uh, like when
+
+29
+00:13:38.855 --> 00:13:40.175
+I was making the materials
+
+30
+00:13:40.175 --> 00:13:42.015
+and everything, I found that within, uh, 10,
+
+31
+00:13:42.015 --> 00:13:43.175
+15 minutes it'll be over.
+
+32
+00:13:43.235 --> 00:13:44.855
+So what to do with the other times and all.
+
+33
+00:13:44.915 --> 00:13:46.495
+So we'll be having a lot of time.
+
+34
+00:13:47.155 --> 00:13:48.655
+So I thought of like, you know,
+
+35
+00:13:48.885 --> 00:13:51.415
+combining the next class with this class.
+
+36
+00:13:51.515 --> 00:13:54.375
+So, uh, next class we are supposed to do the NA base.
+
+37
+00:13:55.445 --> 00:13:58.905
+So today I'll be actually combining the na base along
+
+38
+00:13:58.905 --> 00:14:01.625
+with the, uh, can nearest naval algorithm.
+
+39
+00:14:01.685 --> 00:14:03.105
+So two algorithms will be learning today.
+
+40
+00:14:03.805 --> 00:14:07.625
+Uh, the canine is very simple. It's very easy to understand.
+
+41
+00:14:07.685 --> 00:14:10.625
+Uh, like, uh, you know, I think, uh, like class seven,
+
+42
+00:14:10.625 --> 00:14:12.785
+eight students will be also able to like, uh, you know,
+
+43
+00:14:12.785 --> 00:14:14.025
+understand the logic on,
+
+44
+00:14:14.045 --> 00:14:16.825
+on the thing name is a little bit a trickier thing.
+
+45
+00:14:16.925 --> 00:14:19.865
+So we'll understand, uh, uh, these things
+
+46
+00:14:20.565 --> 00:14:23.585
+and we'll be, uh, applying those quotes and everything.
+
+47
+00:14:23.605 --> 00:14:25.825
+And we'll be understanding the mathematical aspects
+
+48
+00:14:25.845 --> 00:14:29.025
+or all in the next class, we are having the k, uh,
+
+49
+00:14:29.025 --> 00:14:32.345
+mean clustering, uh, PCA, these kind of,
+
+50
+00:14:32.515 --> 00:14:34.785
+these are unsupervised, uh, methods we are having.
+
+51
+00:14:34.845 --> 00:14:37.905
+So I'm, uh, thinking to like combine, uh, the scan
+
+52
+00:14:38.435 --> 00:14:40.625
+means clustering along with the PC and Disney.
+
+53
+00:14:42.495 --> 00:14:45.355
+So, uh, by next lab, this lab eight, uh,
+
+54
+00:14:45.385 --> 00:14:46.955
+will be having these things covered.
+
+55
+00:14:47.425 --> 00:14:49.395
+Then we can dive into the neural network,
+
+56
+00:14:49.465 --> 00:14:52.565
+deep neural network, the aspect of the la gradient descend,
+
+57
+00:14:52.625 --> 00:14:54.845
+the, you know, uh, the optimizers.
+
+58
+00:14:54.845 --> 00:14:56.685
+Those things I, I do think, like, uh,
+
+59
+00:14:56.745 --> 00:14:59.685
+are very much important in current days if you want
+
+60
+00:14:59.685 --> 00:15:00.725
+to have the knowledge and all.
+
+61
+00:15:00.945 --> 00:15:02.485
+So later classes will be diving
+
+62
+00:15:02.705 --> 00:15:04.725
+and focusing more time into the neural network.
+
+63
+00:15:04.795 --> 00:15:07.805
+That is the idea. Uh, if you're having any session
+
+64
+00:15:08.435 --> 00:15:11.085
+into this thing, please, uh, also, uh, like, uh,
+
+65
+00:15:11.375 --> 00:15:14.325
+gimme your ideas as well so we can like, uh, both like, uh,
+
+66
+00:15:14.325 --> 00:15:15.605
+you know, communicate both ways
+
+67
+00:15:15.745 --> 00:15:18.325
+and have a mutual understanding mutualization we can take
+
+68
+00:15:18.425 --> 00:15:20.725
+to forward this class from now and on.
+
+69
+00:15:24.815 --> 00:15:26.915
+Is This agreeable? The idea which I'm having like
+
+70
+00:15:26.915 --> 00:15:28.755
+combining like multiple smaller things
+
+71
+00:15:28.905 --> 00:15:30.115
+into one class and all?
+
+72
+00:15:31.055 --> 00:15:33.035
+Yes, sir. Yes, that is, yes.
+
+73
+00:15:34.275 --> 00:15:36.055
+So like, instead of like, you know,
+
+74
+00:15:36.055 --> 00:15:37.895
+you're focusing on the basic a NA
+
+75
+00:15:37.895 --> 00:15:40.015
+and architecture in the last lab session.
+
+76
+00:15:40.555 --> 00:15:43.255
+So we'll be diving a little bit more deeper into the deep
+
+77
+00:15:43.455 --> 00:15:44.455
+ral networks and like,
+
+78
+00:15:44.475 --> 00:15:47.455
+not do I know deep learning will be a subject for you.
+
+79
+00:15:48.115 --> 00:15:51.015
+So I'll be focusing on the, like, hands-on kind of thing
+
+80
+00:15:51.015 --> 00:15:52.415
+where like multiple things,
+
+81
+00:15:52.435 --> 00:15:54.695
+the optimizers activation functions.
+
+82
+00:15:54.695 --> 00:15:56.655
+So those things are not usually taught.
+
+83
+00:15:57.155 --> 00:15:58.935
+So I'll be actually, uh, going
+
+84
+00:15:58.935 --> 00:16:01.855
+and giving you instructions on those, like what to use
+
+85
+00:16:01.855 --> 00:16:03.255
+and which scenarios and all those things.
+
+86
+00:16:03.895 --> 00:16:06.055
+I, I do think that will be like beneficial for you.
+
+87
+00:16:08.495 --> 00:16:10.945
+Okay, so I'll be starting
+
+88
+00:16:10.975 --> 00:16:12.745
+with the key nearest neighbor.
+
+89
+00:16:29.495 --> 00:16:32.075
+Oh, this, okay.
+
+90
+00:16:33.345 --> 00:16:34.755
+Yeah. Okay.
+
+91
+00:16:34.895 --> 00:16:38.475
+Key nearest neighbor. So, Uh,
+
+92
+00:16:38.905 --> 00:16:43.195
+This is, uh, like, uh, one of the algorithms where
+
+93
+00:16:43.935 --> 00:16:45.755
+we do few of the stuff very well.
+
+94
+00:16:45.865 --> 00:16:48.795
+Like, let me tell you like few of the, you know,
+
+95
+00:16:48.865 --> 00:16:50.395
+premise devices of this algorithm.
+
+96
+00:16:50.665 --> 00:16:51.665
+Then you will have
+
+97
+00:16:52.925 --> 00:16:53.975
+More In depth idea.
+
+98
+00:16:56.875 --> 00:17:01.045
+So the basic first idea is there is
+
+99
+00:17:01.705 --> 00:17:06.125
+no training time for this algorithm.
+
+100
+00:17:07.265 --> 00:17:08.565
+We are having no training time.
+
+101
+00:17:09.535 --> 00:17:11.325
+So if
+
+102
+00:17:11.325 --> 00:17:14.525
+You are something like, uh, doing some modeling and all,
+
+103
+00:17:14.585 --> 00:17:17.485
+and there, uh, the completions we are having like hardware
+
+104
+00:17:17.485 --> 00:17:18.485
+issues, something like that.
+
+105
+00:17:18.945 --> 00:17:22.125
+And I want to create some model, uh, with, from some dataset
+
+106
+00:17:22.125 --> 00:17:24.285
+and all, uh, you need to train the model.
+
+107
+00:17:24.345 --> 00:17:26.165
+And also that takes huge amount of time.
+
+108
+00:17:26.305 --> 00:17:28.605
+So in case of the scale near this neighbor,
+
+109
+00:17:28.665 --> 00:17:30.005
+we are having no training.
+
+110
+00:17:30.715 --> 00:17:32.965
+Okay? So basically the model is
+
+111
+00:17:32.965 --> 00:17:35.005
+what model works in such a way they,
+
+112
+00:17:35.945 --> 00:17:38.165
+Uh, Store the dataset.
+
+113
+00:17:38.165 --> 00:17:40.445
+Okay? Whatever the dataset you are giving, uh,
+
+114
+00:17:40.465 --> 00:17:42.565
+for like a machine learning model,
+
+115
+00:17:42.565 --> 00:17:45.925
+algorithm development purpose, it stores the like dataset.
+
+116
+00:17:46.425 --> 00:17:49.365
+And later when you give the, you know, uh,
+
+117
+00:17:49.865 --> 00:17:53.085
+for like use the models for prediction and analysis
+
+118
+00:17:53.545 --> 00:17:56.285
+and the inputs you provide that time, it calculates
+
+119
+00:17:56.285 --> 00:17:58.205
+and gives you results and all.
+
+120
+00:17:58.385 --> 00:18:00.605
+So what kinda like prediction as a classifier?
+
+121
+00:18:00.865 --> 00:18:03.965
+So this is a, like we are both having both the classifier
+
+122
+00:18:05.295 --> 00:18:09.275
+and regress classifier.
+
+123
+00:18:12.135 --> 00:18:13.355
+We are having both of the things
+
+124
+00:18:13.715 --> 00:18:14.915
+classify regressor, both are present.
+
+125
+00:18:15.415 --> 00:18:19.675
+Uh, this works better for the, you know, mostly classifier,
+
+126
+00:18:19.675 --> 00:18:21.835
+but also works wonderfully for the regressor.
+
+127
+00:18:22.535 --> 00:18:27.035
+Now this algorithm also is very useful when you are having
+
+128
+00:18:27.185 --> 00:18:28.675
+data set small
+
+129
+00:18:29.455 --> 00:18:32.555
+and your, you know, uh, the dimensions.
+
+130
+00:18:32.855 --> 00:18:35.115
+The number of features are also so small.
+
+131
+00:18:39.245 --> 00:18:41.985
+So these are the aspects when these are matching, okay?
+
+132
+00:18:42.205 --> 00:18:43.585
+You don't need to train the data.
+
+133
+00:18:43.605 --> 00:18:45.465
+You are having small amount of dataset,
+
+134
+00:18:45.685 --> 00:18:47.105
+you are having small, like, uh,
+
+135
+00:18:47.205 --> 00:18:48.545
+number of features are small.
+
+136
+00:18:50.285 --> 00:18:52.255
+Then you actually go
+
+137
+00:18:52.595 --> 00:18:55.855
+and try to implement this k nearest neighbor algorithm.
+
+138
+00:18:56.605 --> 00:18:59.975
+Okay? Now let's see what are the things here?
+
+139
+00:19:00.195 --> 00:19:03.415
+So it is a supervised machine learning algorithm.
+
+140
+00:19:03.475 --> 00:19:07.175
+So basically you are mapping the input or to output
+
+141
+00:19:07.355 --> 00:19:11.625
+or independent variable to, uh, dependent variable, fine.
+
+142
+00:19:12.125 --> 00:19:15.425
+Now, this is also called as a lazy learner.
+
+143
+00:19:15.535 --> 00:19:18.225
+Lazy learner, as in it doesn't actually do
+
+144
+00:19:18.245 --> 00:19:19.545
+the training purpose at all.
+
+145
+00:19:20.085 --> 00:19:22.185
+Unlike, you know, different algorithms.
+
+146
+00:19:22.185 --> 00:19:24.745
+It trains then like saves us, uh, snap encrypt,
+
+147
+00:19:24.745 --> 00:19:25.745
+whichever the curves
+
+148
+00:19:25.745 --> 00:19:28.305
+and fitting everything they have understood from the data
+
+149
+00:19:28.325 --> 00:19:29.385
+and patterns and all.
+
+150
+00:19:29.815 --> 00:19:33.185
+Usually it doesn't train, it saves the, you know,
+
+151
+00:19:33.215 --> 00:19:35.105
+data set down all within the model
+
+152
+00:19:35.805 --> 00:19:38.345
+and do the prediction based on the calculations.
+
+153
+00:19:38.855 --> 00:19:40.385
+Okay, so how does it do that?
+
+154
+00:19:40.675 --> 00:19:43.145
+First we need to have a number
+
+155
+00:19:43.145 --> 00:19:44.865
+that is the K value we need to choose.
+
+156
+00:19:45.455 --> 00:19:49.345
+Okay? So K value can be very small, very high, okay?
+
+157
+00:19:49.495 --> 00:19:51.865
+Depending upon your data set, you'll choose
+
+158
+00:19:52.005 --> 00:19:55.985
+or you can like put on a, you know, uh, uh,
+
+159
+00:19:56.895 --> 00:19:59.185
+fall loop based on that you can also extract
+
+160
+00:19:59.645 --> 00:20:02.865
+or like a in which K number you are getting a
+
+161
+00:20:03.135 --> 00:20:04.385
+good value or something like that.
+
+162
+00:20:04.835 --> 00:20:07.465
+Let's just draw something that I'll be able
+
+163
+00:20:07.465 --> 00:20:08.905
+to explain better, I guess.
+
+164
+00:20:15.245 --> 00:20:15.535
+Okay?
+
+165
+00:20:21.325 --> 00:20:21.545
+So
+
+166
+00:20:31.605 --> 00:20:35.295
+suppose we are having, you know, in a dataset,
+
+167
+00:20:35.295 --> 00:20:38.535
+if you're plotting, suppose it two dimension, uh,
+
+168
+00:20:38.635 --> 00:20:41.935
+the other two sets of data, one is red, okay?
+
+169
+00:20:42.715 --> 00:20:46.175
+And another is, uh, let, let,
+
+170
+00:20:46.425 --> 00:20:47.965
+lemme draw you some, right?
+
+171
+00:21:12.785 --> 00:21:15.635
+Okay. Now suppose there are two classes you are having,
+
+172
+00:21:15.975 --> 00:21:17.035
+uh, hypothetically.
+
+173
+00:21:17.495 --> 00:21:19.915
+So one is red, okay? Another is green.
+
+174
+00:21:20.735 --> 00:21:23.995
+Now, when you train the model
+
+175
+00:21:24.095 --> 00:21:27.195
+and all, usually it is not training it save the data.
+
+176
+00:21:27.295 --> 00:21:30.435
+So as it is now you are giving another set of data
+
+177
+00:21:30.535 --> 00:21:34.915
+and trying to predict whether that data is, you know,
+
+178
+00:21:35.695 --> 00:21:40.175
+uh, that is red or blue, it's a red
+
+179
+00:21:40.195 --> 00:21:41.455
+or green, that is idea.
+
+180
+00:21:41.715 --> 00:21:43.695
+So this is a new data set, that pink color,
+
+181
+00:21:43.755 --> 00:21:45.135
+one new data set you are giving
+
+182
+00:21:45.515 --> 00:21:48.655
+and tries to predict which class it belongs to,
+
+183
+00:21:48.655 --> 00:21:50.775
+whether it belongs to green, whether it belongs
+
+184
+00:21:50.775 --> 00:21:51.975
+to red, something like that.
+
+185
+00:21:52.595 --> 00:21:54.735
+So the idea is, you know,
+
+186
+00:21:55.075 --> 00:21:58.135
+it calculates the distance from this data point
+
+187
+00:21:58.135 --> 00:22:00.295
+to nearest neighbors, okay?
+
+188
+00:22:00.715 --> 00:22:04.175
+You are assigning a value of neighbor suppose k, value
+
+189
+00:22:04.175 --> 00:22:07.535
+of assigning that is suppose, um, assigning three.
+
+190
+00:22:07.925 --> 00:22:11.215
+Okay? So it'll basically measure the distance from
+
+191
+00:22:11.215 --> 00:22:13.255
+here, whatever the neighbor, sir.
+
+192
+00:22:13.685 --> 00:22:16.455
+Okay? Suppose this is another neighbor. Okay?
+
+193
+00:22:16.555 --> 00:22:20.885
+So these are three closest value it got, okay?
+
+194
+00:22:21.465 --> 00:22:25.765
+So based on that you'll see, okay, I have three, you know,
+
+195
+00:22:26.645 --> 00:22:29.805
+neighbors for this, you know, data set for this data.
+
+196
+00:22:30.385 --> 00:22:33.885
+So out of these three, how many are having more classes?
+
+197
+00:22:34.265 --> 00:22:35.765
+So based on that, we are having two classes.
+
+198
+00:22:35.905 --> 00:22:39.765
+So I can identify this pink as, uh, you know, belongs
+
+199
+00:22:39.765 --> 00:22:41.285
+to the red classification.
+
+200
+00:22:41.395 --> 00:22:42.445
+I'll give you another example.
+
+201
+00:22:42.515 --> 00:22:44.685
+Suppose I'm having another dataset.
+
+202
+00:22:44.955 --> 00:22:47.485
+That dataset, you're trying to build it,
+
+203
+00:22:47.485 --> 00:22:48.485
+that dataset is here
+
+204
+00:22:49.265 --> 00:22:52.325
+and based on the cave hall three, that is the cave hall,
+
+205
+00:22:58.005 --> 00:23:01.615
+Cave hall three, it'll also, uh, like measure what are the,
+
+206
+00:23:01.955 --> 00:23:04.135
+you know, nearest neighbor here it is having,
+
+207
+00:23:04.275 --> 00:23:07.015
+so it'll calculate these three, okay?
+
+208
+00:23:07.105 --> 00:23:08.895
+It'll create a circle kind of thing.
+
+209
+00:23:08.895 --> 00:23:12.735
+And based on that, these three neighbors came. Okay?
+
+210
+00:23:13.065 --> 00:23:16.415
+These three are belong from the, like, majority of the
+
+211
+00:23:17.385 --> 00:23:19.735
+cloud, like neighbors are belong from read.
+
+212
+00:23:19.955 --> 00:23:23.215
+So basically I'll identify this class as a red class,
+
+213
+00:23:23.725 --> 00:23:25.815
+this new dataset, that is the idea.
+
+214
+00:23:26.105 --> 00:23:28.415
+First you select the key, what will,
+
+215
+00:23:28.475 --> 00:23:30.455
+how many neighbors you are actually costing
+
+216
+00:23:30.485 --> 00:23:31.655
+with the minimum distance.
+
+217
+00:23:32.085 --> 00:23:34.975
+Okay? You calculate the distance with the,
+
+218
+00:23:34.975 --> 00:23:36.735
+like you based on the Euclid
+
+219
+00:23:36.835 --> 00:23:38.975
+or Manhattan that we discuss, okay?
+
+220
+00:23:39.515 --> 00:23:41.135
+And you find out the neighbors, what,
+
+221
+00:23:41.245 --> 00:23:44.015
+what are the nearest neighbors based on the key value,
+
+222
+00:23:44.195 --> 00:23:45.525
+the number of neighbors you find,
+
+223
+00:23:46.145 --> 00:23:47.645
+and you find out the average
+
+224
+00:23:47.825 --> 00:23:51.285
+or even the majority, which classes it is more closer
+
+225
+00:23:51.345 --> 00:23:52.445
+to that is the algorithm.
+
+226
+00:23:52.445 --> 00:23:55.285
+That is the simplest way you draw, like,
+
+227
+00:23:55.385 --> 00:23:57.125
+you like having multiple classes,
+
+228
+00:23:57.125 --> 00:23:59.125
+which are already segregated, okay?
+
+229
+00:23:59.625 --> 00:24:03.805
+And your like, you know, giving more dataset data points
+
+230
+00:24:04.225 --> 00:24:06.565
+and trying to predict which is like a,
+
+231
+00:24:06.735 --> 00:24:09.645
+which class it belongs to, which is more closer to whether
+
+232
+00:24:09.645 --> 00:24:11.445
+that's a like closer rate, closer
+
+233
+00:24:11.465 --> 00:24:12.485
+to green, something like that.
+
+234
+00:24:12.555 --> 00:24:14.005
+That is the idea, okay?
+
+235
+00:24:29.705 --> 00:24:34.235
+Okay. So this is how the thing is known Now, uh,
+
+236
+00:24:34.825 --> 00:24:38.595
+basically whenever we are actually trying
+
+237
+00:24:38.595 --> 00:24:40.995
+to visualize in a spect of like two dimension,
+
+238
+00:24:40.995 --> 00:24:44.035
+three dimension, we can visualize the dataset what like, uh,
+
+239
+00:24:44.095 --> 00:24:45.835
+the dimension is along more than three
+
+240
+00:24:45.855 --> 00:24:49.035
+and four visually, we as a human we cannot imagine,
+
+241
+00:24:49.135 --> 00:24:52.315
+but in case of, uh, that is the like mathematical side
+
+242
+00:24:52.865 --> 00:24:55.315
+that is like, uh, easily doable.
+
+243
+00:24:55.535 --> 00:24:58.195
+So that distance between like multiple points,
+
+244
+00:24:58.195 --> 00:25:01.555
+having multiple data sets that can be calculated,
+
+245
+00:25:01.585 --> 00:25:02.755
+that is not an issue.
+
+246
+00:25:03.185 --> 00:25:05.705
+That is the idea. Okay?
+
+247
+00:25:05.845 --> 00:25:08.425
+So these are the three, you know, uh, types
+
+248
+00:25:08.425 --> 00:25:13.065
+of distances we actually, uh, calculate for them on, uh,
+
+249
+00:25:13.065 --> 00:25:14.265
+finding out the neighbors.
+
+250
+00:25:14.885 --> 00:25:19.185
+So basically two, um, uh, uh, let's discuss that one.
+
+251
+00:25:19.485 --> 00:25:21.545
+So we are having nuclear distance, okay?
+
+252
+00:25:21.715 --> 00:25:26.025
+Based on the, you know, uh, the, uh, straight line
+
+253
+00:25:26.865 --> 00:25:29.505
+distances of two points that we actually calculate.
+
+254
+00:25:29.885 --> 00:25:34.545
+So XI minus YI squared, that is the, at that one.
+
+255
+00:25:34.765 --> 00:25:37.865
+So basically whenever you are having, uh,
+
+256
+00:25:39.815 --> 00:25:41.105
+huge amount of dataset
+
+257
+00:25:41.105 --> 00:25:43.025
+and all, not huge amount of data, huge amount,
+
+258
+00:25:43.025 --> 00:25:45.825
+like a larger number of, uh, your, uh,
+
+259
+00:25:46.145 --> 00:25:48.825
+features in those cases you use, uh, Euclid.
+
+260
+00:25:49.765 --> 00:25:52.185
+Uh, and in case of like a, you know, number
+
+261
+00:25:52.205 --> 00:25:54.825
+of features a little bit on the lesser side, we go
+
+262
+00:25:54.825 --> 00:25:56.385
+for the Manhattan, that is the idea
+
+263
+00:25:57.485 --> 00:25:59.865
+and, uh, sorry, uh, good for high dimension.
+
+264
+00:25:59.865 --> 00:26:02.145
+If you're having high dimension, then Manhattan distance,
+
+265
+00:26:02.205 --> 00:26:04.705
+and if you're having lower, uh, amount of, you know,
+
+266
+00:26:04.855 --> 00:26:07.065
+dimension, they are going for Euclidean.
+
+267
+00:26:07.525 --> 00:26:10.385
+Now, the minow key thing is something where, uh,
+
+268
+00:26:10.725 --> 00:26:12.225
+you are having a parameter p
+
+269
+00:26:12.925 --> 00:26:15.745
+if you're setting the p value is one, it is taking the,
+
+270
+00:26:16.565 --> 00:26:19.345
+you know, distance metrics for calculating neighbors,
+
+271
+00:26:19.725 --> 00:26:21.545
+and if you're as assigning, P value is two,
+
+272
+00:26:21.725 --> 00:26:24.665
+it is taking the Manhattan distance basically.
+
+273
+00:26:24.885 --> 00:26:27.225
+Uh, instead of choosing
+
+274
+00:26:27.845 --> 00:26:30.025
+or Manhattan, if you're choosing, uh, minow ski
+
+275
+00:26:30.025 --> 00:26:32.385
+or P value, you're changing one or two.
+
+276
+00:26:32.765 --> 00:26:35.585
+So you're basically switching between the CLE and Manhattan
+
+277
+00:26:35.645 --> 00:26:38.065
+and trying to check which is giving you more,
+
+278
+00:26:38.405 --> 00:26:39.665
+you know, better output.
+
+279
+00:26:39.665 --> 00:26:42.145
+And now that is the idea of having the minow ski,
+
+280
+00:26:42.765 --> 00:26:44.245
+uh, distant metrics.
+
+281
+00:26:45.635 --> 00:26:47.885
+Okay? Now
+
+282
+00:26:48.505 --> 00:26:50.925
+For, you know, classification regression, we are having,
+
+283
+00:26:51.665 --> 00:26:53.365
+um, similar, uh, approaches.
+
+284
+00:26:53.505 --> 00:26:56.445
+So we are taking the class assigned by majority votes,
+
+285
+00:26:56.505 --> 00:26:59.405
+so whichever neighbors are having majority of the classes
+
+286
+00:26:59.675 --> 00:27:01.325
+that will be having that one.
+
+287
+00:27:01.465 --> 00:27:05.525
+So we are actually counting the values of like a neighbors
+
+288
+00:27:05.595 --> 00:27:07.485
+that belongs to which class that is there.
+
+289
+00:27:07.825 --> 00:27:10.405
+And for regression, uh, we take
+
+290
+00:27:10.665 --> 00:27:12.565
+or try to take the mean average value
+
+291
+00:27:12.585 --> 00:27:14.085
+of the nearest neighbors
+
+292
+00:27:14.385 --> 00:27:18.125
+and try to actually map out what is the probable value of
+
+293
+00:27:18.125 --> 00:27:20.405
+that particular point at that particular point.
+
+294
+00:27:20.745 --> 00:27:22.605
+So that is the idea of the classification.
+
+295
+00:27:22.955 --> 00:27:26.285
+Both can be done because, uh, like things are happening, uh,
+
+296
+00:27:26.345 --> 00:27:29.805
+in a, in dimensional space, the space, you know,
+
+297
+00:27:29.825 --> 00:27:32.485
+the value on that space can be calculated for the regression
+
+298
+00:27:32.485 --> 00:27:35.925
+and for the classification where just counting what are the,
+
+299
+00:27:35.925 --> 00:27:38.165
+like, you know, nearest neighbors are having, uh,
+
+300
+00:27:38.165 --> 00:27:39.365
+like belong to which class.
+
+301
+00:27:40.715 --> 00:27:43.565
+Okay? Uh, so, uh,
+
+302
+00:27:43.965 --> 00:27:45.685
+optimal value in this one we are having,
+
+303
+00:27:45.705 --> 00:27:48.205
+if you're having low optimal value that, uh,
+
+304
+00:27:49.345 --> 00:27:50.885
+may cause the over fitting, okay?
+
+305
+00:27:51.225 --> 00:27:53.725
+If you're having under fitting, okay, uh,
+
+306
+00:27:53.725 --> 00:27:55.325
+like a cable is very higher, then
+
+307
+00:27:55.435 --> 00:27:56.845
+that will be under fitting issue.
+
+308
+00:27:56.845 --> 00:27:57.845
+That is the whole thing.
+
+309
+00:27:58.225 --> 00:28:00.605
+So how do we actually take in everything?
+
+310
+00:28:00.935 --> 00:28:05.325
+Let's we be diving into that one. Uh, okay then.
+
+311
+00:28:06.825 --> 00:28:10.285
+And, uh, more of the things that is in this algorithm,
+
+312
+00:28:10.465 --> 00:28:11.525
+if you're having, uh,
+
+313
+00:28:11.755 --> 00:28:15.085
+something like a data is having like a noise
+
+314
+00:28:15.265 --> 00:28:17.445
+or the outliers then will try
+
+315
+00:28:17.445 --> 00:28:19.685
+to avoid using this kind of data set.
+
+316
+00:28:19.685 --> 00:28:22.685
+That is another, uh, aspect that you need to follow.
+
+317
+00:28:23.185 --> 00:28:26.685
+And, uh, if the data set are having like categorical values,
+
+318
+00:28:26.685 --> 00:28:28.845
+mostly you try to also avoid this algorithm.
+
+319
+00:28:28.945 --> 00:28:31.885
+So if you're having numeric data set, uh, smaller amount
+
+320
+00:28:31.905 --> 00:28:35.405
+of data, then this algorithm works, uh, very well.
+
+321
+00:28:35.475 --> 00:28:39.845
+Okay? Let's just go to like, uh, the coding aspect, okay?
+
+322
+00:28:45.515 --> 00:28:48.175
+So, uh, start from that one.
+
+323
+00:28:48.195 --> 00:28:52.465
+So we are basically using that it dataset just like, uh,
+
+324
+00:28:52.465 --> 00:28:53.465
+or in your previous classes,
+
+325
+00:28:53.725 --> 00:28:56.545
+and we'll try to actually do the prediction within
+
+326
+00:28:56.685 --> 00:28:58.385
+the key nearest neighbor.
+
+327
+00:28:58.925 --> 00:29:01.825
+The Y value
+
+328
+00:29:01.885 --> 00:29:03.985
+or the dependent variable will be able survive.
+
+329
+00:29:04.045 --> 00:29:07.985
+And, uh, x value multiple, uh, features will be taking
+
+330
+00:29:08.205 --> 00:29:09.625
+for the independent variables.
+
+331
+00:29:10.695 --> 00:29:11.705
+This is read the data.
+
+332
+00:29:11.945 --> 00:29:16.685
+D, physical two, PD read, C, s, B, that's the one, okay?
+
+333
+00:29:17.345 --> 00:29:18.965
+Now the data head,
+
+334
+00:29:20.105 --> 00:29:23.215
+after checking the data head, we already know, okay?
+
+335
+00:29:23.315 --> 00:29:27.175
+Few of the data points, which we need first, uh, uh, we need
+
+336
+00:29:27.175 --> 00:29:29.055
+to actually segregate the data points and all.
+
+337
+00:29:29.055 --> 00:29:30.655
+Then we'll be going for the other things.
+
+338
+00:29:31.035 --> 00:29:34.895
+So, uh, first we are doing in the X and y,
+
+339
+00:29:35.635 --> 00:29:38.915
+Uh, okay,
+
+340
+00:29:40.745 --> 00:29:41.815
+This is different.
+
+341
+00:29:46.335 --> 00:29:47.335
+Uh,
+
+342
+00:29:53.365 --> 00:29:57.505
+Yeah, In the Y we are choosing the survive dataset fine
+
+343
+00:29:58.325 --> 00:30:01.465
+and the X we are choosing except the survive, all
+
+344
+00:30:01.465 --> 00:30:02.585
+of the other data points.
+
+345
+00:30:04.995 --> 00:30:08.815
+Now, once it is done, uh, we are going, uh, for this,
+
+346
+00:30:10.365 --> 00:30:11.655
+okay, draw.
+
+347
+00:30:18.525 --> 00:30:20.345
+So once the drop drain is done,
+
+348
+00:30:20.345 --> 00:30:22.065
+then we are doing the segregation.
+
+349
+00:30:22.615 --> 00:30:25.865
+Okay, let's just go to this one, huh?
+
+350
+00:30:51.045 --> 00:30:55.775
+Just apply the level M quarter in this parameter, okay?
+
+351
+00:30:58.755 --> 00:31:02.875
+X will drop name tickets given embarkment. Okay?
+
+352
+00:31:02.975 --> 00:31:04.795
+So finally we're, uh, like done
+
+353
+00:31:04.795 --> 00:31:06.555
+with the dataset, uh, pre-processing.
+
+354
+00:31:06.555 --> 00:31:10.715
+Okay? In this one we have, uh, taken the dataset for,
+
+355
+00:31:12.365 --> 00:31:14.895
+okay, use another one,
+
+356
+00:31:15.125 --> 00:31:17.465
+okay, head.
+
+357
+00:31:18.885 --> 00:31:21.935
+Okay. So we are having as a, like a, in, uh,
+
+358
+00:31:22.085 --> 00:31:25.055
+independent variable, we are taking passenger ID P class,
+
+359
+00:31:25.235 --> 00:31:27.815
+uh, six, which is already labeled ENC coded age,
+
+360
+00:31:29.215 --> 00:31:30.615
+S-I-V-S-P parts sphere.
+
+361
+00:31:30.715 --> 00:31:34.015
+So multiple, uh, things we have taken into consideration.
+
+362
+00:31:34.675 --> 00:31:37.695
+Now we'll do one thing that is, uh, like fear and age
+
+363
+00:31:38.235 --> 00:31:40.735
+and the passenger no id, passenger id.
+
+364
+00:31:40.735 --> 00:31:44.415
+We can also, I think draw, uh, that is the thing we can do.
+
+365
+00:31:45.915 --> 00:31:47.255
+So X equal two,
+
+366
+00:31:59.095 --> 00:32:02.755
+uh, passenger idea, so we can drop this one as well.
+
+367
+00:32:03.415 --> 00:32:05.515
+So these are the remaining ideas we are having.
+
+368
+00:32:06.135 --> 00:32:10.155
+Now, we'll apply the scaling function of this two, so
+
+369
+00:32:10.155 --> 00:32:12.475
+that we'll go and like, uh, fit and everything.
+
+370
+00:32:13.465 --> 00:32:15.275
+Suppose X scaled
+
+371
+00:32:17.045 --> 00:32:20.705
+transform X, Okay, this one.
+
+372
+00:32:22.335 --> 00:32:25.115
+So once it is done, we will go extra y train
+
+373
+00:32:29.855 --> 00:32:30.975
+x, y scaled,
+
+374
+00:32:32.675 --> 00:32:37.345
+X scaled Xray
+
+375
+00:32:37.655 --> 00:32:39.605
+extract, Y train, white test,
+
+376
+00:33:01.585 --> 00:33:04.885
+No, uh, for actually doing your like, uh,
+
+377
+00:33:04.905 --> 00:33:06.805
+you know, key nearest neighbor.
+
+378
+00:33:07.185 --> 00:33:10.085
+So we are basically choosing, uh, from neighbors.
+
+379
+00:33:10.265 --> 00:33:14.005
+We are importing the key near neighbor, uh, classifier.
+
+380
+00:33:14.425 --> 00:33:18.365
+So once it is done, we are also here in the k, uh,
+
+381
+00:33:19.305 --> 00:33:21.405
+and M class, we are creating an object from that.
+
+382
+00:33:21.465 --> 00:33:23.725
+We will be calling the, you know, function
+
+383
+00:33:24.025 --> 00:33:25.365
+to model training and all.
+
+384
+00:33:25.505 --> 00:33:26.605
+So we're calling that function,
+
+385
+00:33:26.705 --> 00:33:29.205
+and within that in neighbors, you can choose how many,
+
+386
+00:33:29.585 --> 00:33:32.285
+you know, uh, neighbors you want for your algorithm.
+
+387
+00:33:32.385 --> 00:33:35.285
+So we can change this four to 5, 6, 3, 2,
+
+388
+00:33:35.285 --> 00:33:37.605
+depending upon your, you know, hit and trial methods.
+
+389
+00:33:37.625 --> 00:33:40.845
+So how much I produce you are getting this is do this one
+
+390
+00:33:41.345 --> 00:33:42.345
+Screen.
+
+391
+00:33:45.235 --> 00:33:46.235
+Yeah.
+
+392
+00:33:48.335 --> 00:33:51.875
+So now the model is already trained and we'll go
+
+393
+00:33:52.415 --> 00:33:53.675
+and check the
+
+394
+00:33:56.055 --> 00:33:58.375
+Test, test.
+
+395
+00:34:01.395 --> 00:34:02.565
+What is accuracy you're getting?
+
+396
+00:34:02.625 --> 00:34:05.565
+So we are roughly getting the accuracy of 64%.
+
+397
+00:34:05.705 --> 00:34:07.845
+So it is not that good,
+
+398
+00:34:08.585 --> 00:34:10.005
+but, uh, like, you know,
+
+399
+00:34:10.405 --> 00:34:13.285
+multiple factorization we are having into this one,
+
+400
+00:34:13.485 --> 00:34:17.685
+I think like, uh, you know, uh, this is not working.
+
+401
+00:34:17.945 --> 00:34:20.845
+So what can we do? We can like change the, you know, uh,
+
+402
+00:34:20.915 --> 00:34:23.005
+this, uh, number of neighbors.
+
+403
+00:34:23.085 --> 00:34:24.245
+I gonna hit trial method
+
+404
+00:34:24.385 --> 00:34:27.845
+and see like how, uh, this is actually turning out for us.
+
+405
+00:34:31.675 --> 00:34:35.375
+Now, if we return the model repetitive, uh, manner,
+
+406
+00:34:35.805 --> 00:34:39.055
+like from ranging one to 40, so we are changing the,
+
+407
+00:34:39.475 --> 00:34:42.575
+you know, this I value, uh, based upon this,
+
+408
+00:34:42.635 --> 00:34:44.055
+you know, neighbors we are choosing.
+
+409
+00:34:44.715 --> 00:34:47.535
+So we are continuously creating the classifier, okay?
+
+410
+00:34:47.775 --> 00:34:48.975
+Neighbors, neighbor, classifier,
+
+411
+00:34:48.975 --> 00:34:50.655
+and continuously doing the iteration
+
+412
+00:34:50.675 --> 00:34:53.775
+and checking the, uh, you know, what is the score.
+
+413
+00:34:53.995 --> 00:34:57.775
+So basically we're going print for i for this, I
+
+414
+00:34:57.965 --> 00:34:59.015
+what will be the score.
+
+415
+00:34:59.635 --> 00:35:04.255
+So the score is uh, k, uh, K in class.
+
+416
+00:35:04.395 --> 00:35:07.615
+Do score for this one, you can use to check the score
+
+417
+00:35:07.615 --> 00:35:09.095
+of any, uh, classifiers.
+
+418
+00:35:09.595 --> 00:35:13.575
+So white test, uh, this will be stress, comma,
+
+419
+00:35:15.065 --> 00:35:19.675
+Whitest, ah, Just fine.
+
+420
+00:35:20.015 --> 00:35:22.275
+So if I like, do run this one.
+
+421
+00:35:22.335 --> 00:35:25.395
+So it'll be going in iteration of loop from one to 40
+
+422
+00:35:25.615 --> 00:35:27.035
+and it'll show us the, like
+
+423
+00:35:27.035 --> 00:35:29.075
+what others are probable results we are getting.
+
+424
+00:35:29.775 --> 00:35:34.075
+So based on that, you were saying from one to 3, 4, 5, 6,
+
+425
+00:35:34.075 --> 00:35:35.515
+continuously, it is going
+
+426
+00:35:36.255 --> 00:35:38.365
+and we're definitely getting the same result.
+
+427
+00:35:38.365 --> 00:35:41.325
+That is a 0.65 percentage of accuracy.
+
+428
+00:35:41.325 --> 00:35:45.085
+That is the like, uh, you know, uh, so if you increase it,
+
+429
+00:35:45.285 --> 00:35:48.005
+decrease it, it is not having like a huge amount
+
+430
+00:35:48.005 --> 00:35:49.085
+of impact in this one.
+
+431
+00:35:49.585 --> 00:35:52.605
+So that is the idea of the key algorithm.
+
+432
+00:35:52.825 --> 00:35:55.365
+If you're like in this one, we are having the dataset
+
+433
+00:35:55.525 --> 00:35:56.885
+that is the size.
+
+434
+00:35:57.225 --> 00:35:58.225
+If you check
+
+435
+00:35:59.395 --> 00:36:02.515
+Info, Roughly we're having thousand dataset, I guess,
+
+436
+00:36:03.255 --> 00:36:04.995
+uh, 8 89, okay.
+
+437
+00:36:05.315 --> 00:36:08.275
+Thousand samples. So if your dataset is something like
+
+438
+00:36:08.275 --> 00:36:11.155
+5,000, 200, something like in the lesser amount
+
+439
+00:36:11.155 --> 00:36:12.915
+of number, uh, this is useful.
+
+440
+00:36:13.375 --> 00:36:18.035
+Now, one thing is like a problematic in this, uh, um,
+
+441
+00:36:18.185 --> 00:36:21.995
+that is, uh, like if your data set is, uh, you know, uh,
+
+442
+00:36:22.165 --> 00:36:26.275
+large in that case, Whenever you are trying
+
+443
+00:36:26.275 --> 00:36:29.435
+to actually predict any value, it'll basically go
+
+444
+00:36:29.495 --> 00:36:33.035
+and, uh, like, uh, try to calculate the distance value
+
+445
+00:36:33.035 --> 00:36:35.995
+with multi, like all of the remaining data points and all.
+
+446
+00:36:36.015 --> 00:36:39.915
+So the calculus in time is huge in those cases, so try
+
+447
+00:36:39.915 --> 00:36:41.675
+to avoid it for the larger dataset.
+
+448
+00:36:41.675 --> 00:36:45.515
+For the, uh, secondary point, I would say,
+
+449
+00:36:45.545 --> 00:36:47.915
+when you are having the dimension is huge
+
+450
+00:36:47.975 --> 00:36:50.635
+and all in those cases also you try to avoid.
+
+451
+00:36:51.095 --> 00:36:52.195
+Now we'll, uh, try
+
+452
+00:36:52.195 --> 00:36:54.035
+to actually use the Manhattan distance
+
+453
+00:36:54.035 --> 00:36:55.195
+along with this one on.
+
+454
+00:36:55.265 --> 00:36:58.355
+Also, uh, this, uh, you know, uh, Euclid, let's see
+
+455
+00:36:58.415 --> 00:37:00.555
+how much like a difference we are getting.
+
+456
+00:37:01.135 --> 00:37:04.675
+So, uh, in this one, suppose we are saying, uh,
+
+457
+00:37:04.775 --> 00:37:06.675
+the distance vector, I guess, uh,
+
+458
+00:37:08.285 --> 00:37:08.945
+The one,
+
+459
+00:37:28.625 --> 00:37:29.415
+let's just check.
+
+460
+00:37:32.575 --> 00:37:33.575
+Okay,
+
+461
+00:39:14.495 --> 00:39:16.735
+I think metric equal to something like that.
+
+462
+00:39:17.115 --> 00:39:17.775
+Me? Yeah,
+
+463
+00:39:23.815 --> 00:39:25.465
+just see
+
+464
+00:39:29.295 --> 00:39:32.075
+and enable, was metric minow equal to one or two?
+
+465
+00:39:32.105 --> 00:39:33.105
+Five?
+
+466
+00:39:34.325 --> 00:39:34.615
+Yeah.
+
+467
+00:39:39.475 --> 00:39:40.565
+Yeah. Okay.
+
+468
+00:39:43.715 --> 00:39:46.255
+So suppose this is a thing weird doing. Okay?
+
+469
+00:39:46.435 --> 00:39:50.895
+Uh, okay, nurse classifier. Okay.
+
+470
+00:39:51.995 --> 00:39:52.215
+In,
+
+471
+00:39:56.035 --> 00:39:57.925
+okay, S is good.
+
+472
+00:39:58.105 --> 00:40:00.485
+Uh, that was also not initialized, I guess.
+
+473
+00:40:01.195 --> 00:40:02.685
+Okay, now let's just do it.
+
+474
+00:40:06.515 --> 00:40:10.215
+So we're roughly having the same one for the value two.
+
+475
+00:40:10.215 --> 00:40:12.495
+That is the let's go to Manhattan.
+
+476
+00:40:14.565 --> 00:40:15.625
+Uh, same
+
+477
+00:40:20.975 --> 00:40:21.325
+there.
+
+478
+00:40:21.425 --> 00:40:23.045
+Why no changes? Is there?
+
+479
+00:40:32.355 --> 00:40:33.415
+See in this one,
+
+480
+00:40:37.165 --> 00:40:37.455
+Okay,
+
+481
+00:40:46.185 --> 00:40:50.525
+2.679, if we are drinking two,
+
+482
+00:40:54.045 --> 00:40:58.545
+2.64 for one, if we're going for the Euclid distance,
+
+483
+00:40:59.445 --> 00:41:01.105
+we are having higher accuracy,
+
+484
+00:41:01.525 --> 00:41:04.815
+but here does not swing.
+
+485
+00:41:05.615 --> 00:41:10.495
+I think class classify again, and I, ok, ok, okay. Okay.
+
+486
+00:41:12.625 --> 00:41:13.465
+K and I
+
+487
+00:41:18.015 --> 00:41:18.305
+Okay.
+
+488
+00:41:18.485 --> 00:41:22.105
+For, you know, different depression, if you see, uh, like
+
+489
+00:41:22.325 --> 00:41:25.105
+for one obviously there is too low, too low
+
+490
+00:41:25.205 --> 00:41:27.345
+or like what fitting issues can be there.
+
+491
+00:41:27.485 --> 00:41:31.825
+Uh, sorry. Uh, for like, for optimal solution,
+
+492
+00:41:32.085 --> 00:41:34.285
+we do think in the middle we have
+
+493
+00:41:34.285 --> 00:41:35.925
+to find whatever the value we are having.
+
+494
+00:41:36.305 --> 00:41:39.165
+So like 73%, we are able
+
+495
+00:41:39.165 --> 00:41:41.045
+to get the highest accuracy in this case.
+
+496
+00:41:41.305 --> 00:41:44.405
+And that is the idea. If you're taking the occlude in
+
+497
+00:41:44.565 --> 00:41:46.485
+distance, let's go for the like minute in distance.
+
+498
+00:41:46.485 --> 00:41:50.585
+In this case, if you're seeing, uh, in the middle, uh,
+
+499
+00:41:50.605 --> 00:41:54.025
+we are having roughly 70% value, that is the like,
+
+500
+00:41:54.025 --> 00:41:55.145
+highest accuracy we're getting
+
+501
+00:41:55.165 --> 00:41:57.265
+for the Manhattan, uh, distance.
+
+502
+00:41:57.445 --> 00:41:59.545
+So this is how we can, uh, combine
+
+503
+00:41:59.545 --> 00:42:01.425
+and test, uh, different scenarios
+
+504
+00:42:01.425 --> 00:42:03.465
+for the key algorithms and all.
+
+505
+00:42:03.885 --> 00:42:06.705
+So I'll also share the like, uh, this, uh, you know, uh,
+
+506
+00:42:07.345 --> 00:42:09.505
+IPNB file, that is a Google call file.
+
+507
+00:42:09.605 --> 00:42:12.795
+You can like, uh, uh, check
+
+508
+00:42:12.795 --> 00:42:14.795
+and like, uh, you know, modify this code
+
+509
+00:42:14.795 --> 00:42:17.235
+and according to your needs for like learning purposes,
+
+510
+00:42:17.255 --> 00:42:21.945
+not fine.
+
+511
+00:42:22.005 --> 00:42:24.585
+So, uh, the next algorithm which we'll be discussing
+
+512
+00:42:24.585 --> 00:42:27.905
+that is the, uh, uh, n base, okay?
+
+513
+00:42:28.295 --> 00:42:30.585
+Name base is a theory where, uh,
+
+514
+00:42:31.065 --> 00:42:34.305
+actually it is coming from a idea that is the, uh,
+
+515
+00:42:34.305 --> 00:42:36.065
+probability simple as
+
+516
+00:42:36.065 --> 00:42:38.945
+that we are basically jumping into the probability
+
+517
+00:42:38.945 --> 00:42:41.015
+factor, uh, notes.
+
+518
+00:42:41.125 --> 00:42:43.075
+Yeah. So,
+
+519
+00:42:46.035 --> 00:42:49.055
+So we can rightly say like if, uh,
+
+520
+00:42:49.955 --> 00:42:52.175
+the simple probability there like, uh, you know,
+
+521
+00:42:52.475 --> 00:42:55.735
+if any event is occurring, what would be the, you know,
+
+522
+00:42:56.085 --> 00:42:58.775
+chances that one, uh, event occurred, uh,
+
+523
+00:42:59.105 --> 00:43:00.255
+among the rest of the things.
+
+524
+00:43:00.715 --> 00:43:03.455
+So let's just, so, uh, take an example.
+
+525
+00:43:03.645 --> 00:43:07.615
+Suppose we are having one, uh, you know, uh, that is the
+
+526
+00:43:08.365 --> 00:43:11.665
+suppose, okay?
+
+527
+00:43:12.205 --> 00:43:16.985
+So, uh, for an example, suppose we are taking, uh, uh, uh
+
+528
+00:43:19.355 --> 00:43:20.655
+hmm, mm-hmm.
+
+529
+00:43:21.675 --> 00:43:24.055
+So you suppose you are taking a, like, uh,
+
+530
+00:43:24.055 --> 00:43:25.295
+drawing a card, okay?
+
+531
+00:43:25.395 --> 00:43:30.055
+You are drawing a card form,
+
+532
+00:43:35.235 --> 00:43:35.525
+okay?
+
+533
+00:43:36.505 --> 00:43:40.975
+And you are trying to find out whether the card is
+
+534
+00:43:41.695 --> 00:43:44.955
+a queen, okay?
+
+535
+00:43:45.025 --> 00:43:47.895
+That is the idea. So what is happening
+
+536
+00:43:48.555 --> 00:43:50.375
+now you directly know.
+
+537
+00:43:50.395 --> 00:43:52.175
+So number of queens of four, okay?
+
+538
+00:43:53.395 --> 00:43:56.095
+Now what is the, like total number of cards we are having?
+
+539
+00:43:56.095 --> 00:43:59.295
+52 so that you can calculate the probability like this one.
+
+540
+00:43:59.875 --> 00:44:04.215
+Now what happens? Like suppose, uh, you're saying
+
+541
+00:44:04.215 --> 00:44:06.655
+that you have already drawn the card.
+
+542
+00:44:06.805 --> 00:44:11.415
+Okay, now what is the probability that card being a diamond
+
+543
+00:44:12.195 --> 00:44:15.175
+or like suppose that, uh, like, uh, uh,
+
+544
+00:44:15.545 --> 00:44:16.975
+let's just give another example.
+
+545
+00:44:17.135 --> 00:44:20.305
+I think that will be better, okay?
+
+546
+00:44:22.205 --> 00:44:24.575
+Okay. Suppose I have one bag,
+
+547
+00:44:27.725 --> 00:44:30.475
+which is containing two red balls
+
+548
+00:44:31.185 --> 00:44:33.485
+And Three black blue balls,
+
+549
+00:44:33.795 --> 00:44:34.795
+Okay?
+
+550
+00:44:34.865 --> 00:44:36.645
+And we are having another bag.
+
+551
+00:44:43.305 --> 00:44:48.085
+So Two bags are there. In this one we are having
+
+552
+00:44:48.735 --> 00:44:49.845
+Three Red balls
+
+553
+00:44:50.465 --> 00:44:53.335
+And two blue balls.
+
+554
+00:44:54.645 --> 00:44:56.225
+Now, what is the probability that
+
+555
+00:44:57.065 --> 00:44:59.305
+randomly you are choosing like, uh, you know, blindly
+
+556
+00:44:59.725 --> 00:45:01.425
+or you are picking out one volume?
+
+557
+00:45:01.645 --> 00:45:04.225
+You, you don't even know which bag is it from?
+
+558
+00:45:04.295 --> 00:45:06.265
+Fine, and what is the probability
+
+559
+00:45:06.265 --> 00:45:07.665
+that you'll get a red ball?
+
+560
+00:45:07.855 --> 00:45:10.305
+Okay, so what is the probability,
+
+561
+00:45:16.175 --> 00:45:20.065
+Uh, picking, uh, red ball? That
+
+562
+00:45:20.065 --> 00:45:21.065
+Is the idea.
+
+563
+00:45:21.255 --> 00:45:23.265
+Okay? Now how do we actually, uh,
+
+564
+00:45:23.265 --> 00:45:24.665
+calculate these kind of problems?
+
+565
+00:45:25.285 --> 00:45:27.145
+We actually solve these things
+
+566
+00:45:27.175 --> 00:45:28.825
+with a conditional probability.
+
+567
+00:45:33.015 --> 00:45:34.505
+That Is the idea we are having.
+
+568
+00:45:34.885 --> 00:45:36.785
+So how does conditional probability works?
+
+569
+00:45:37.005 --> 00:45:39.145
+So we are having a formula that we'll discuss,
+
+570
+00:45:39.245 --> 00:45:42.145
+and now how that is calculated each
+
+571
+00:45:42.145 --> 00:45:43.225
+and everything we'll discuss.
+
+572
+00:45:43.525 --> 00:45:46.825
+So, uh, like one probability is like choosing one red ball
+
+573
+00:45:46.825 --> 00:45:47.865
+from this one first bag.
+
+574
+00:45:47.865 --> 00:45:50.065
+That is the probability two divided by five.
+
+575
+00:45:50.525 --> 00:45:51.745
+So you're having the probability
+
+576
+00:45:51.805 --> 00:45:56.575
+of R in this case is two by five.
+
+577
+00:45:56.675 --> 00:45:59.255
+So total number samples a five, uh, red balls a three,
+
+578
+00:45:59.755 --> 00:46:02.455
+and this case for the second bag,
+
+579
+00:46:02.555 --> 00:46:03.735
+we are having the probability
+
+580
+00:46:03.755 --> 00:46:06.775
+of picking red wall is three divided five, five.
+
+581
+00:46:07.475 --> 00:46:09.815
+Now choosing bag one is also half.
+
+582
+00:46:11.275 --> 00:46:14.045
+In this case For bag one,
+
+583
+00:46:14.625 --> 00:46:19.155
+the probability is half, and for bag
+
+584
+00:46:19.255 --> 00:46:24.045
+Two, The probability is also half.
+
+585
+00:46:26.915 --> 00:46:28.855
+Now Combine all of them together
+
+586
+00:46:29.355 --> 00:46:32.215
+to find out like total probability of picking up a red ball.
+
+587
+00:46:32.215 --> 00:46:34.735
+That is the question. Now, how do you solve this one?
+
+588
+00:46:34.735 --> 00:46:36.135
+Does you solve in this way?
+
+589
+00:46:36.875 --> 00:46:39.495
+So for this one, uh, uh,
+
+590
+00:46:39.765 --> 00:46:41.615
+from like you are choosing the ball,
+
+591
+00:46:41.835 --> 00:46:44.215
+the ba like ball is from, uh, like a red
+
+592
+00:46:44.275 --> 00:46:46.175
+and it is from like back one.
+
+593
+00:46:46.515 --> 00:46:49.415
+So that is one by two multiplied by
+
+594
+00:46:50.625 --> 00:46:52.325
+Two Y five. Okay?
+
+595
+00:46:52.585 --> 00:46:54.485
+So basically you're having, uh, two by
+
+596
+00:46:54.665 --> 00:46:58.885
+10, that is the from back one probability,
+
+597
+00:47:00.565 --> 00:47:03.785
+And for the second one, you are having half in two, three
+
+598
+00:47:03.945 --> 00:47:06.325
+Y five. So
+
+599
+00:47:06.405 --> 00:47:10.165
+Basically, uh, that is, uh, Three by 10.
+
+600
+00:47:10.895 --> 00:47:13.785
+Okay? Now, total probability will be these
+
+601
+00:47:13.805 --> 00:47:15.065
+two added, okay?
+
+602
+00:47:15.325 --> 00:47:17.785
+The probability of RR as a whole total,
+
+603
+00:47:17.855 --> 00:47:19.705
+that will be two by 10
+
+604
+00:47:20.095 --> 00:47:23.105
+Plus three by 10. Okay?
+
+605
+00:47:23.405 --> 00:47:24.985
+So basically that will mm-hmm.
+
+606
+00:47:25.905 --> 00:47:28.025
+Probably that is half. So that is
+
+607
+00:47:28.025 --> 00:47:30.125
+how we calculate the conditional probability and all.
+
+608
+00:47:30.125 --> 00:47:32.765
+Let's just like, uh, go a little bit deeper, okay?
+
+609
+00:47:32.785 --> 00:47:35.005
+How we can use this one, uh,
+
+610
+00:47:35.025 --> 00:47:36.685
+for machine learning algorithms and all.
+
+611
+00:47:37.105 --> 00:47:40.285
+So, uh, the basic idea of why to like use this, you know,
+
+612
+00:47:40.285 --> 00:47:42.245
+name based algorithm and like we are
+
+613
+00:47:42.245 --> 00:47:43.525
+having multiple other algorithms.
+
+614
+00:47:44.005 --> 00:47:48.885
+C why why are we learning the first, uh, thing that is,
+
+615
+00:47:48.985 --> 00:47:52.525
+uh, like if again, you are having, you know, uh,
+
+616
+00:47:53.785 --> 00:47:56.805
+uh, that is the small amount of data, just like, you know,
+
+617
+00:47:56.805 --> 00:47:59.285
+key nearest neighbor, you are having small amount of data,
+
+618
+00:48:00.035 --> 00:48:01.885
+this algorithm is very much effective.
+
+619
+00:48:02.105 --> 00:48:03.845
+Now, where it is more effective,
+
+620
+00:48:04.065 --> 00:48:07.485
+it is a like staple algorithm for NLP,
+
+621
+00:48:07.715 --> 00:48:09.245
+natural language processing,
+
+622
+00:48:09.295 --> 00:48:12.205
+where you are involving the text words
+
+623
+00:48:12.225 --> 00:48:13.885
+and all this algorithm works.
+
+624
+00:48:13.955 --> 00:48:16.325
+Wonderful. That is the idea of the n base.
+
+625
+00:48:16.505 --> 00:48:17.845
+So you're having multiple algorithm,
+
+626
+00:48:17.985 --> 00:48:20.525
+but n base works the best, uh, for the like, you know,
+
+627
+00:48:20.945 --> 00:48:22.725
+the text and the prediction.
+
+628
+00:48:22.725 --> 00:48:25.405
+Suppose you are writing something in the calcula, uh, like,
+
+629
+00:48:25.505 --> 00:48:26.525
+you know, web browser
+
+630
+00:48:26.665 --> 00:48:30.485
+or in a chat application, the predicted word what is coming.
+
+631
+00:48:30.585 --> 00:48:33.925
+So I am going to suppose the next word,
+
+632
+00:48:33.925 --> 00:48:36.085
+where you are going the prediction from your history
+
+633
+00:48:36.085 --> 00:48:38.565
+or something like that, that, you know,
+
+634
+00:48:38.815 --> 00:48:39.885
+words or something like that.
+
+635
+00:48:40.095 --> 00:48:43.365
+Those are coming from this mostly this name based algorithm
+
+636
+00:48:43.425 --> 00:48:45.805
+and all like, compared to like other algorithms,
+
+637
+00:48:45.805 --> 00:48:49.045
+you can see the complexity is, uh, very less compared
+
+638
+00:48:49.045 --> 00:48:51.005
+to the, like a neural network or decent.
+
+639
+00:48:51.475 --> 00:48:53.485
+Also, uh, little bit complex.
+
+640
+00:48:53.485 --> 00:48:56.245
+The decent gets a very large based on the like, uh,
+
+641
+00:48:56.245 --> 00:48:57.925
+you know, number of features, uh,
+
+642
+00:48:58.765 --> 00:49:01.165
+training speed in this one, uh, it is extremely fast,
+
+643
+00:49:01.225 --> 00:49:05.085
+but compared to KNN, it is obviously, uh, you know, slower.
+
+644
+00:49:05.285 --> 00:49:06.885
+KNN takes no time for the training.
+
+645
+00:49:07.275 --> 00:49:10.725
+Neur network is slow, uh, decent is moderate in this one.
+
+646
+00:49:11.105 --> 00:49:14.285
+And also dataset just like, uh, uh, k near sniper,
+
+647
+00:49:14.285 --> 00:49:16.165
+it needs a smaller amount of data, okay?
+
+648
+00:49:16.905 --> 00:49:18.285
+And for the other algorithms,
+
+649
+00:49:18.285 --> 00:49:20.245
+it needs larger amount of data.
+
+650
+00:49:20.745 --> 00:49:23.725
+So the, the, those are the like normal practical side
+
+651
+00:49:23.725 --> 00:49:26.485
+of things, which we are associated with the nbe.
+
+652
+00:49:26.785 --> 00:49:29.165
+And then NBE is the speed and efficiency is higher.
+
+653
+00:49:29.705 --> 00:49:31.445
+And secondary thing you need to remember
+
+654
+00:49:31.845 --> 00:49:34.445
+whenever you are coming for a textbook, uh, kind of things
+
+655
+00:49:34.445 --> 00:49:36.365
+or istic algorithm you need to use,
+
+656
+00:49:37.265 --> 00:49:39.845
+you are having outliers in your data, okay?
+
+657
+00:49:39.945 --> 00:49:41.845
+The data is having very much outliers
+
+658
+00:49:41.845 --> 00:49:46.165
+and all those things, uh, like nbu works very well.
+
+659
+00:49:46.275 --> 00:49:50.165
+That is the idea. Now,
+
+660
+00:49:50.795 --> 00:49:53.725
+like the formula for this conditional probability that is,
+
+661
+00:49:53.745 --> 00:49:58.125
+uh, like, uh, the thing is suppose, uh,
+
+662
+00:49:58.265 --> 00:50:03.045
+we want to find out the probability of a, uh, so
+
+663
+00:50:03.075 --> 00:50:04.965
+that B has already occurred.
+
+664
+00:50:05.115 --> 00:50:08.475
+That is the idea. Now, I'll give you the scenario.
+
+665
+00:50:09.095 --> 00:50:11.595
+We have calculated the total probability of r
+
+666
+00:50:11.665 --> 00:50:13.155
+that is, that is there.
+
+667
+00:50:13.895 --> 00:50:18.145
+Now, if I ask you the question like, suppose
+
+668
+00:50:21.395 --> 00:50:26.175
+you have picked the
+
+669
+00:50:26.985 --> 00:50:29.425
+picked one red ball,
+
+670
+00:50:30.045 --> 00:50:32.345
+so you have already got the result
+
+671
+00:50:32.345 --> 00:50:36.065
+that you have already drawn a ball that is in red in color.
+
+672
+00:50:36.925 --> 00:50:40.805
+Now the question is, what is the chance
+
+673
+00:50:42.025 --> 00:50:45.785
+that the ball came
+
+674
+00:50:46.735 --> 00:50:48.625
+from bag one?
+
+675
+00:50:48.935 --> 00:50:53.025
+That is a question. Now, the e event has already occurred.
+
+676
+00:50:53.025 --> 00:50:55.785
+That is the ball you have chosen that is reading colored,
+
+677
+00:50:55.785 --> 00:50:56.905
+but what is the priority
+
+678
+00:50:56.935 --> 00:50:59.865
+that the ball is coming from the first bag?
+
+679
+00:50:59.865 --> 00:51:03.825
+That is a question. Now in mathematical term that is written
+
+680
+00:51:03.925 --> 00:51:08.625
+as such as P of condition B, uh, like probability of B one,
+
+681
+00:51:08.645 --> 00:51:13.265
+we are trying to find out given net A has already occurred,
+
+682
+00:51:13.445 --> 00:51:15.145
+uh, sorry, R has already occurred.
+
+683
+00:51:15.405 --> 00:51:17.225
+So red ball you have already got.
+
+684
+00:51:17.605 --> 00:51:19.545
+Now you're trying to find out what is the probability
+
+685
+00:51:19.615 --> 00:51:21.465
+that is the, you know, uh,
+
+686
+00:51:21.535 --> 00:51:24.025
+that red ball is from B one, okay?
+
+687
+00:51:24.365 --> 00:51:28.345
+But that one we can formulate a, like, you know, this kind
+
+688
+00:51:28.345 --> 00:51:32.345
+of situations where we can write the formula, uh, P
+
+689
+00:51:32.345 --> 00:51:35.425
+of a intersection, B divided by P of B.
+
+690
+00:51:36.085 --> 00:51:39.625
+So like, let's see, like how it is done and all. Okay?
+
+691
+00:51:39.845 --> 00:51:42.665
+Now here another example given what is the probability
+
+692
+00:51:42.765 --> 00:51:45.865
+of rain, given that it is a cloudy, uh, the,
+
+693
+00:51:45.865 --> 00:51:47.625
+even the like weather, it's cloudy.
+
+694
+00:51:47.925 --> 00:51:49.545
+So if it is cloudy, the chances
+
+695
+00:51:49.545 --> 00:51:51.065
+of rain is high, much, much higher.
+
+696
+00:51:51.125 --> 00:51:54.145
+If it is sunny, the chances of rain will be much fuller.
+
+697
+00:51:54.175 --> 00:51:56.145
+This is kind of probability we're talking about. Okay?
+
+698
+00:51:56.565 --> 00:51:58.545
+Now here from the condition probability,
+
+699
+00:51:58.565 --> 00:52:00.145
+the base serum came into play.
+
+700
+00:52:00.245 --> 00:52:01.545
+Now how do we solve this one?
+
+701
+00:52:02.285 --> 00:52:04.985
+Uh, like PA given B or so,
+
+702
+00:52:05.405 --> 00:52:08.145
+or we are saying PR
+
+703
+00:52:08.205 --> 00:52:11.945
+and the ball red ball already you have, you know, uh,
+
+704
+00:52:12.295 --> 00:52:13.425
+already taken out.
+
+705
+00:52:13.885 --> 00:52:15.945
+Now you try, are trying to find out the priority.
+
+706
+00:52:16.265 --> 00:52:19.905
+A that is the ball is from bag one, that is probability.
+
+707
+00:52:21.205 --> 00:52:23.505
+Now, how do we calculate find out like this?
+
+708
+00:52:24.065 --> 00:52:28.545
+P of the uh, bag is, you know, there given
+
+709
+00:52:28.615 --> 00:52:30.385
+that a already occurred.
+
+710
+00:52:30.615 --> 00:52:33.585
+That is the reverse, the probability of rate, uh,
+
+711
+00:52:33.585 --> 00:52:34.705
+from the bag B one
+
+712
+00:52:35.645 --> 00:52:39.425
+and probability of A, that is the, uh, probability
+
+713
+00:52:39.445 --> 00:52:42.305
+of in this case we are having the bag that is the half.
+
+714
+00:52:42.805 --> 00:52:45.945
+And why divided divide probability of B, so probably B
+
+715
+00:52:46.005 --> 00:52:47.625
+or isn't probability of it.
+
+716
+00:52:47.675 --> 00:52:50.145
+Let's just like, you know, solve this one.
+
+717
+00:52:50.185 --> 00:52:53.215
+I think that will be better for you to understand.
+
+718
+00:52:54.835 --> 00:52:59.695
+Now this, we can write a such electric P of R
+
+719
+00:53:00.745 --> 00:53:05.545
+given B one into probability of,
+
+720
+00:53:06.615 --> 00:53:09.405
+and that is B one.
+
+721
+00:53:11.115 --> 00:53:12.175
+Uh, divide
+
+722
+00:53:21.875 --> 00:53:24.415
+Probability of R.
+
+723
+00:53:24.685 --> 00:53:25.795
+Okay? So this is the formula.
+
+724
+00:53:26.095 --> 00:53:29.555
+Now, like put every data into this one from our
+
+725
+00:53:29.635 --> 00:53:32.355
+findings, okay?
+
+726
+00:53:33.095 --> 00:53:34.835
+So P of R
+
+727
+00:53:35.175 --> 00:53:38.275
+or B one, so red from the B one.
+
+728
+00:53:38.695 --> 00:53:41.555
+So we are trying to find out the red from B one.
+
+729
+00:53:41.615 --> 00:53:43.875
+How many reds are like balls at there?
+
+730
+00:53:43.945 --> 00:53:47.275
+Like, uh, three out of five ball, two red are there.
+
+731
+00:53:47.695 --> 00:53:51.835
+So we know the r you know, probability R from the bag one
+
+732
+00:53:51.835 --> 00:53:54.755
+that is two wifi five, so we can replace this is Y
+
+733
+00:53:55.455 --> 00:54:00.155
+two upon five, okay, multiplied by probability of B one,
+
+734
+00:54:00.385 --> 00:54:02.275
+what is the probability of choosing a bag
+
+735
+00:54:02.425 --> 00:54:04.955
+that is the half we have already calculated.
+
+736
+00:54:06.615 --> 00:54:08.035
+You can multiply this one half,
+
+737
+00:54:10.185 --> 00:54:11.185
+Okay?
+
+738
+00:54:11.635 --> 00:54:15.065
+And the probability of, oh, that is
+
+739
+00:54:16.315 --> 00:54:18.795
+r we have already calculated raw probability
+
+740
+00:54:18.815 --> 00:54:20.915
+of red ball picking up from any basket
+
+741
+00:54:21.785 --> 00:54:24.075
+that we will insert as a half year.
+
+742
+00:54:24.455 --> 00:54:26.195
+So whatever the value it is there.
+
+743
+00:54:26.615 --> 00:54:27.995
+So that basically is saying
+
+744
+00:54:28.465 --> 00:54:31.035
+that you have already drawn out the ball,
+
+745
+00:54:31.105 --> 00:54:32.515
+that ball color is red.
+
+746
+00:54:32.665 --> 00:54:34.155
+What is the quality of that?
+
+747
+00:54:34.655 --> 00:54:37.155
+You know, ball came out from the basket one.
+
+748
+00:54:37.155 --> 00:54:40.275
+So this is how we solve with the based here, fine.
+
+749
+00:54:40.535 --> 00:54:42.195
+So this is also, we are applying
+
+750
+00:54:42.295 --> 00:54:46.855
+for this machine learning algorithm and all, Okay?
+
+751
+00:54:47.235 --> 00:54:50.735
+And like basically, uh, we are saying this, um, name
+
+752
+00:54:50.805 --> 00:54:52.055
+because like each
+
+753
+00:54:52.055 --> 00:54:54.695
+of the individual like features whatever it is there,
+
+754
+00:54:54.835 --> 00:54:58.135
+and we are, uh, pitching it, uh, against the, you know,
+
+755
+00:54:58.415 --> 00:55:01.335
+dependent variable and we are saying each of the
+
+756
+00:55:01.935 --> 00:55:02.975
+variables are independent.
+
+757
+00:55:02.975 --> 00:55:04.615
+That is the like assumption we are taking
+
+758
+00:55:04.675 --> 00:55:06.055
+in for calculations.
+
+759
+00:55:06.515 --> 00:55:10.655
+Now the idea is like, it may be dependent
+
+760
+00:55:10.655 --> 00:55:12.055
+and may not be dependent,
+
+761
+00:55:12.275 --> 00:55:15.695
+but uh, in case of, you know, uh, name base,
+
+762
+00:55:15.715 --> 00:55:19.815
+it works wonderfully suppose, uh, the like, uh,
+
+763
+00:55:20.295 --> 00:55:21.815
+features are there like, uh, you know, uh,
+
+764
+00:55:22.125 --> 00:55:24.015
+spam categorization of your emails
+
+765
+00:55:24.115 --> 00:55:25.695
+and all those things, uh,
+
+766
+00:55:25.835 --> 00:55:27.535
+for those also neighbors works wonder.
+
+767
+00:55:28.115 --> 00:55:30.535
+Uh, suppose you are having a like email
+
+768
+00:55:30.555 --> 00:55:32.615
+or SMS game that is a free money.
+
+769
+00:55:33.235 --> 00:55:37.175
+You click on the link. So in the our like past expense,
+
+770
+00:55:37.235 --> 00:55:41.695
+we know those are mostly scam fine, but the fee word alone
+
+771
+00:55:41.995 --> 00:55:44.215
+or money word alone is not a like,
+
+772
+00:55:44.235 --> 00:55:45.495
+you know, scam kind of thing.
+
+773
+00:55:45.495 --> 00:55:46.855
+Like that cannot be swm.
+
+774
+00:55:47.195 --> 00:55:50.175
+So how these are like a combined actually coming
+
+775
+00:55:50.395 --> 00:55:51.535
+and giving you the results.
+
+776
+00:55:51.535 --> 00:55:54.615
+That is the like wonder of the snap based algorithm. I,
+
+777
+00:55:55.305 --> 00:55:55.595
+Okay,
+
+778
+00:56:06.035 --> 00:56:09.655
+So, uh, the same, you know, pattern that is
+
+779
+00:56:09.655 --> 00:56:12.655
+that we do the training, we do the, uh, computation of this,
+
+780
+00:56:12.655 --> 00:56:13.935
+uh, PE classes and all,
+
+781
+00:56:14.475 --> 00:56:17.735
+and based upon that we can do the prediction based on the
+
+782
+00:56:17.735 --> 00:56:20.135
+prediction, uh, the classification come into play.
+
+783
+00:56:20.955 --> 00:56:23.285
+Now how, how these are coming into play.
+
+784
+00:56:23.305 --> 00:56:28.005
+So such as, uh, if two, you know, uh,
+
+785
+00:56:28.345 --> 00:56:29.565
+you are giving an input
+
+786
+00:56:29.585 --> 00:56:31.045
+and you're trying to find out like
+
+787
+00:56:31.045 --> 00:56:34.005
+what are the classes it belongs to for each of the classes,
+
+788
+00:56:34.825 --> 00:56:38.765
+uh, this nip base will actually calculates it's, uh,
+
+789
+00:56:38.865 --> 00:56:40.245
+you know, probabilistic value.
+
+790
+00:56:41.185 --> 00:56:44.125
+So, uh, suppose you are giving a mail
+
+791
+00:56:44.185 --> 00:56:47.725
+and asking the n based algorithm to calculate, uh,
+
+792
+00:56:47.755 --> 00:56:51.365
+what is it that this, uh, mail is a spam or not.
+
+793
+00:56:51.785 --> 00:56:53.165
+So based on the spam
+
+794
+00:56:53.305 --> 00:56:54.925
+and based on the north spam,
+
+795
+00:56:55.015 --> 00:56:58.165
+it'll calculate the holistic value based upon the, you know,
+
+796
+00:56:58.165 --> 00:56:59.485
+pass data sets and all,
+
+797
+00:57:00.145 --> 00:57:02.565
+and it'll calculate some kind of istic value.
+
+798
+00:57:02.635 --> 00:57:06.285
+Suppose for the spam, the score count 0.06,
+
+799
+00:57:06.705 --> 00:57:11.405
+and for ham, that is a not spam that came out 0.0003
+
+800
+00:57:11.985 --> 00:57:13.405
+in this case, whichever is higher.
+
+801
+00:57:14.585 --> 00:57:18.125
+The n base algorithm says this is the category
+
+802
+00:57:18.265 --> 00:57:20.365
+or classification I'm putting the mail into.
+
+803
+00:57:20.475 --> 00:57:24.045
+That is the idea. Whichever is higher that class, this,
+
+804
+00:57:24.185 --> 00:57:26.925
+you know, dataset or data point is belonging.
+
+805
+00:57:27.075 --> 00:57:29.685
+That is the idea for this name base.
+
+806
+00:57:32.025 --> 00:57:35.005
+Now, the baseline standard we already discussed for the NLP,
+
+807
+00:57:35.265 --> 00:57:37.725
+uh, whenever the words of like a prediction
+
+808
+00:57:37.725 --> 00:57:40.245
+for the next ward or doing a spam ation
+
+809
+00:57:40.265 --> 00:57:42.605
+or like, uh, putting, you know, different categories
+
+810
+00:57:42.605 --> 00:57:45.565
+of mail, uh, for those things in lp, uh, like, uh,
+
+811
+00:57:45.675 --> 00:57:47.045
+this nip base works wonder.
+
+812
+00:57:47.235 --> 00:57:50.925
+That is the idea. Uh, now different type of nip base.
+
+813
+00:57:50.925 --> 00:57:53.285
+We are also having, just like in your previous algorithm,
+
+814
+00:57:53.785 --> 00:57:56.925
+uh, we are having, uh, uh, multinomial,
+
+815
+00:57:57.145 --> 00:57:58.725
+uh, les, these kind of things.
+
+816
+00:57:59.225 --> 00:58:02.765
+Now, in case of, you know, uh, this, uh, psychic learn,
+
+817
+00:58:02.785 --> 00:58:03.925
+we are having these options.
+
+818
+00:58:04.465 --> 00:58:09.365
+So Sian, uh, name base, multinomial, uh, name base lyase,
+
+819
+00:58:09.745 --> 00:58:10.965
+uh, complement name base
+
+820
+00:58:10.985 --> 00:58:13.805
+and category name base based upon your dataset, you need
+
+821
+00:58:13.885 --> 00:58:15.565
+to identify, okay, these kind
+
+822
+00:58:15.565 --> 00:58:16.925
+of dataset we are dealing with.
+
+823
+00:58:17.225 --> 00:58:19.525
+So I'll be applying these kind of algorithms.
+
+824
+00:58:19.865 --> 00:58:23.845
+So for, you know, Titan dataset, uh, this Sian
+
+825
+00:58:24.435 --> 00:58:25.925
+nase is like better
+
+826
+00:58:25.925 --> 00:58:27.805
+because we are having continuous variable
+
+827
+00:58:27.805 --> 00:58:29.165
+as the age is there, here is there,
+
+828
+00:58:29.625 --> 00:58:32.565
+so continuous values are involved in those can sian
+
+829
+00:58:33.275 --> 00:58:34.765
+nase works better.
+
+830
+00:58:35.185 --> 00:58:37.485
+So suppose you are having like, you know, uh,
+
+831
+00:58:38.205 --> 00:58:40.285
+multiple output that that was there.
+
+832
+00:58:41.425 --> 00:58:44.965
+Uh, like instead in this one we are having only two
+
+833
+00:58:44.965 --> 00:58:45.965
+categorical output.
+
+834
+00:58:46.395 --> 00:58:48.485
+Okay? Zero to one survives not survived,
+
+835
+00:58:48.825 --> 00:58:51.325
+but in case we are having more classifications
+
+836
+00:58:51.425 --> 00:58:54.605
+and all, then we would've chosen this multinomial NAEP base.
+
+837
+00:58:55.265 --> 00:58:58.445
+Now, another thing, uh, in the, like a text classifier,
+
+838
+00:58:58.885 --> 00:59:01.925
+actually, if you're going for, uh, this multinomial
+
+839
+00:59:01.925 --> 00:59:04.205
+and bundle is works in such a way, uh,
+
+840
+00:59:04.305 --> 00:59:07.525
+you are having multiple, uh, uh, like, uh, large centers
+
+841
+00:59:07.655 --> 00:59:09.725
+where the repetition words are coming.
+
+842
+00:59:10.425 --> 00:59:13.205
+So either you can like, uh, choose a like zero one
+
+843
+00:59:13.425 --> 00:59:15.125
+as in like a words as a vector,
+
+844
+00:59:15.215 --> 00:59:16.845
+which are coming or not, uh, coming.
+
+845
+00:59:17.425 --> 00:59:20.285
+And the multinomial you would be counting each of the words
+
+846
+00:59:20.465 --> 00:59:22.285
+how many times it is occurring.
+
+847
+00:59:22.425 --> 00:59:23.565
+So that is another thing.
+
+848
+00:59:25.055 --> 00:59:28.475
+Now we are having more two things that is the complement of,
+
+849
+00:59:28.815 --> 00:59:33.595
+uh, nb, uh, discrete counts just like Nmb.
+
+850
+00:59:33.945 --> 00:59:38.235
+Okay? Uh, this one and this one are combinary and also
+
+851
+00:59:38.635 --> 00:59:40.355
+whenever imbalance data set is there
+
+852
+00:59:40.815 --> 00:59:43.355
+or, uh, for this one also EU can use.
+
+853
+00:59:43.695 --> 00:59:46.035
+Now another thing, we are having categorical nase.
+
+854
+00:59:46.095 --> 00:59:48.035
+In this one we are having some, all
+
+855
+00:59:48.035 --> 00:59:49.795
+of the independent features,
+
+856
+00:59:50.645 --> 00:59:52.195
+those are in categorical manner.
+
+857
+00:59:52.225 --> 00:59:54.275
+Then we can also choose the categorical name base.
+
+858
+00:59:54.535 --> 00:59:56.235
+So that is the idea of the name base.
+
+859
+00:59:56.235 --> 00:59:58.755
+So you are having a different, different data set.
+
+860
+00:59:58.975 --> 01:00:00.075
+You can apply different,
+
+861
+01:00:00.075 --> 01:00:02.275
+different n based algorithm based upon your needs
+
+862
+01:00:02.335 --> 01:00:03.915
+and based upon the data sets.
+
+863
+01:00:05.015 --> 01:00:08.275
+So for the same, you know, uh, application that is, uh,
+
+864
+01:00:08.275 --> 01:00:12.115
+like Titanic data set, I have also done this one.
+
+865
+01:00:12.495 --> 01:00:13.495
+Uh, so
+
+866
+01:00:14.935 --> 01:00:16.175
+N based algorithm, yeah.
+
+867
+01:00:17.375 --> 01:00:19.395
+Uh, for the N base, we are going
+
+868
+01:00:19.395 --> 01:00:21.435
+for the Sian N base in this one
+
+869
+01:00:21.435 --> 01:00:23.715
+because we are dealing with a data set
+
+870
+01:00:23.715 --> 01:00:27.435
+where we are having the continuous value as a age and fit.
+
+871
+01:00:27.705 --> 01:00:30.555
+Okay? That is there. So we are choosing that one.
+
+872
+01:00:31.855 --> 01:00:33.005
+Let's Just go on it,
+
+873
+01:00:38.305 --> 01:00:39.305
+Okay?
+
+874
+01:00:39.415 --> 01:00:40.675
+Now we'll do the Training
+
+875
+01:00:42.495 --> 01:00:45.055
+train train.
+
+876
+01:00:48.005 --> 01:00:50.385
+Now if you do, and check the accuracy all,
+
+877
+01:00:51.215 --> 01:00:55.875
+Okay? Hmm.
+
+878
+01:00:56.255 --> 01:00:59.315
+So we're having roughly accuracy of 67% in this case.
+
+879
+01:00:59.695 --> 01:01:02.875
+So we are having these kind, you know, algorithms
+
+880
+01:01:02.875 --> 01:01:05.235
+where you can use for different,
+
+881
+01:01:05.235 --> 01:01:06.395
+different scenarios and all.
+
+882
+01:01:08.075 --> 01:01:10.195
+I hope, uh, like, uh, you know, uh, like
+
+883
+01:01:10.195 --> 01:01:12.715
+because we are using for this one as we're not getting,
+
+884
+01:01:12.735 --> 01:01:15.755
+but for the text and all, uh, play next word, uh,
+
+885
+01:01:15.995 --> 01:01:17.555
+classifying the, you know, males
+
+886
+01:01:17.555 --> 01:01:20.035
+and all, uh, this algorithms are like, uh, brilliant.
+
+887
+01:01:20.035 --> 01:01:24.125
+That in that case, okay?
+
+888
+01:01:24.225 --> 01:01:26.005
+Uh, questions and all. If you're having,
+
+889
+01:01:30.015 --> 01:01:31.015
+Where do I?
+
+890
+01:01:31.995 --> 01:01:32.995
+Yeah,
+
+891
+01:01:43.465 --> 01:01:44.465
+Okay. If you are not
+
+892
+01:01:44.465 --> 01:01:45.315
+having any questions,
+
+893
+01:01:45.335 --> 01:01:46.675
+can we, uh, like close the season?
+
+894
+01:01:50.525 --> 01:01:52.465
+Excuse me, sir, I have a, uh, note sir.
+
+895
+01:01:52.695 --> 01:01:54.425
+Yeah, please, Sir.
+
+896
+01:01:54.565 --> 01:01:58.285
+Uh, in case of need base, we, if all
+
+897
+01:01:58.445 --> 01:02:00.605
+of them are independent, then what is the role
+
+898
+01:02:00.625 --> 01:02:02.205
+for conditional probabilities, if
+
+899
+01:02:02.205 --> 01:02:04.525
+that part is a little bit abstract?
+
+900
+01:02:04.915 --> 01:02:08.285
+Yeah. So condi in conditional probability, yeah,
+
+901
+01:02:08.625 --> 01:02:11.325
+in conditional probability what is happening, uh,
+
+902
+01:02:11.435 --> 01:02:13.565
+suppose you are having, you know, uh,
+
+903
+01:02:15.525 --> 01:02:16.905
+Uh, Okay,
+
+904
+01:02:19.995 --> 01:02:21.215
+you are having multiple,
+
+905
+01:02:21.955 --> 01:02:23.335
+Um, This features, right?
+
+906
+01:02:24.135 --> 01:02:27.175
+Hmm. And for, to check the conditional probability,
+
+907
+01:02:27.275 --> 01:02:29.895
+we are having one independent variable, uh, sorry,
+
+908
+01:02:29.915 --> 01:02:32.895
+one independent variable and multiple independent variable.
+
+909
+01:02:33.845 --> 01:02:36.845
+Hmm. So we are actually continuously the formula
+
+910
+01:02:37.265 --> 01:02:38.525
+for, uh, this one.
+
+911
+01:02:38.705 --> 01:02:39.705
+Uh, suppose,
+
+912
+01:02:40.745 --> 01:02:43.605
+Uh, where is it? Okay, in
+
+913
+01:02:43.605 --> 01:02:45.205
+This one we can write, Uh,
+
+914
+01:02:49.225 --> 01:02:54.175
+this n uh, machine learning
+
+915
+01:02:57.445 --> 01:03:00.345
+or multiple pages just,
+
+916
+01:03:00.965 --> 01:03:04.145
+Uh, so what is happening, uh, each
+
+917
+01:03:04.145 --> 01:03:06.465
+of the variable is pitched against the
+
+918
+01:03:06.665 --> 01:03:08.145
+dependent variable individually.
+
+919
+01:03:08.965 --> 01:03:11.385
+Now, we are actually assuming each
+
+920
+01:03:11.385 --> 01:03:12.585
+of these variables is six.
+
+921
+01:03:12.695 --> 01:03:14.785
+This age S-I-P-R-P per sphere.
+
+922
+01:03:15.235 --> 01:03:17.825
+These are all, you know, independent from each other.
+
+923
+01:03:18.175 --> 01:03:20.945
+They are not also, you know, come, uh, like, uh,
+
+924
+01:03:21.975 --> 01:03:24.865
+that is like affecting each other's values and all.
+
+925
+01:03:25.285 --> 01:03:27.145
+So that is the assumptions we are taking.
+
+926
+01:03:27.145 --> 01:03:29.105
+That might be true, that might not be true,
+
+927
+01:03:29.685 --> 01:03:32.665
+but we are taking the assumption that is the,
+
+928
+01:03:32.695 --> 01:03:35.945
+like the output variable must be, you know,
+
+929
+01:03:36.095 --> 01:03:39.105
+depending upon these individual features, uh, like,
+
+930
+01:03:39.245 --> 01:03:41.745
+you know, individually, that is the idea we are taking,
+
+931
+01:03:43.495 --> 01:03:44.495
+Okay? That is
+
+932
+01:03:44.495 --> 01:03:46.345
+the idea or assumption we are using.
+
+933
+01:03:47.665 --> 01:03:50.035
+Suppose what assumption, fail
+
+934
+01:03:51.095 --> 01:03:53.045
+Assumption that that is what I'm saying.
+
+935
+01:03:53.355 --> 01:03:56.485
+Suppose in this one, the survive id, we want to check
+
+936
+01:03:57.975 --> 01:04:00.955
+and we are actually doing a, you know,
+
+937
+01:04:01.075 --> 01:04:03.075
+a probabilistic calculation from each
+
+938
+01:04:03.075 --> 01:04:05.195
+of these features against the survived
+
+939
+01:04:06.775 --> 01:04:10.465
+that survived may be actually, you know, uh,
+
+940
+01:04:11.305 --> 01:04:14.905
+dependent upon this six probabilistically affecting this one
+
+941
+01:04:15.485 --> 01:04:17.145
+or may not be, but we don't know
+
+942
+01:04:18.145 --> 01:04:19.765
+before applying the algorithms
+
+943
+01:04:19.765 --> 01:04:22.045
+or individually we doing the calculation, we don't know,
+
+944
+01:04:22.425 --> 01:04:26.005
+but we are assuming that, okay, this six, this age, the,
+
+945
+01:04:26.025 --> 01:04:28.445
+you know, S-I-B-S-P parts, everything is
+
+946
+01:04:29.165 --> 01:04:30.925
+actually affecting the survivor id.
+
+947
+01:04:31.925 --> 01:04:35.055
+Okay? Okay. So that is the assumption we are taking in.
+
+948
+01:04:38.085 --> 01:04:39.545
+So that, that is the n part,
+
+949
+01:04:44.965 --> 01:04:45.255
+okay?
+
+950
+01:04:45.475 --> 01:04:48.895
+So in this one also, you can see this is the one y we are
+
+951
+01:04:48.895 --> 01:04:51.895
+having that is the survive X one, X two,
+
+952
+01:04:51.975 --> 01:04:53.495
+X three, multiple X are coming,
+
+953
+01:04:54.265 --> 01:04:55.265
+Okay?
+
+954
+01:04:55.585 --> 01:04:58.525
+And to calculate the, you know, uh, Value
+
+955
+01:04:58.525 --> 01:05:00.405
+that is the same probability of Y,
+
+956
+01:05:01.515 --> 01:05:03.925
+then we are having probability of x given
+
+957
+01:05:04.765 --> 01:05:08.965
+YXX one given YX two given YX three given y, uh,
+
+958
+01:05:09.195 --> 01:05:12.685
+that is a like, you know, continuous, there multiplication,
+
+959
+01:05:13.235 --> 01:05:16.765
+then we are having probability X one probability into X two
+
+960
+01:05:16.765 --> 01:05:18.045
+probability probably into X three.
+
+961
+01:05:18.185 --> 01:05:20.085
+Uh, that is the thing that we are multiplying.
+
+962
+01:05:20.225 --> 01:05:22.885
+So you're having multiple values like that.
+
+963
+01:05:23.155 --> 01:05:25.485
+This, this thing, this we are doing
+
+964
+01:05:26.165 --> 01:05:29.885
+probably X one given y this part is kind of coming as your,
+
+965
+01:05:30.345 --> 01:05:32.085
+uh, that is the nip part.
+
+966
+01:05:33.175 --> 01:05:37.475
+We are assuming these, these will be true for each
+
+967
+01:05:37.475 --> 01:05:39.915
+of the individual, you know, attribute
+
+968
+01:05:40.305 --> 01:05:42.115
+that is affected by the why.
+
+969
+01:05:42.865 --> 01:05:45.455
+Mm, sir?
+
+970
+01:05:45.595 --> 01:05:49.575
+Um, here we are not
+
+971
+01:05:49.895 --> 01:05:51.335
+actually training anything, right?
+
+972
+01:05:52.195 --> 01:05:54.455
+No, we are doing training. We are doing the calculations.
+
+973
+01:05:55.305 --> 01:05:59.435
+Yeah. So, um, so it's, it's not actually a model,
+
+974
+01:05:59.575 --> 01:06:02.675
+but just a distribution of data, so mm-hmm.
+
+975
+01:06:02.755 --> 01:06:06.595
+Mm-hmm. So how you, if your test data can be,
+
+976
+01:06:08.415 --> 01:06:10.635
+may not, uh, be from that distribution, right?
+
+977
+01:06:12.455 --> 01:06:15.445
+Let's say it's a, it's a, it is a, what I'm trying
+
+978
+01:06:15.445 --> 01:06:17.325
+to say is it is a probability, uh,
+
+979
+01:06:17.475 --> 01:06:19.525
+calculation based on the given input.
+
+980
+01:06:19.745 --> 01:06:23.685
+Mm-hmm. So out of these many number of passengers, if, uh,
+
+981
+01:06:23.685 --> 01:06:26.325
+these attributes match, this is your survival, uh,
+
+982
+01:06:26.435 --> 01:06:27.485
+chances Yes.
+
+983
+01:06:27.795 --> 01:06:29.085
+Kind of, right? Mm-hmm.
+
+984
+01:06:29.165 --> 01:06:32.325
+So let's say your, your, uh, uh,
+
+985
+01:06:32.395 --> 01:06:34.485
+your test data doesn't have, uh,
+
+986
+01:06:34.485 --> 01:06:36.405
+your training data doesn't have whatever,
+
+987
+01:06:36.465 --> 01:06:38.885
+we usually don't have that right in the test data.
+
+988
+01:06:39.145 --> 01:06:40.365
+So test data will be separate.
+
+989
+01:06:40.465 --> 01:06:42.085
+We don't use that for training.
+
+990
+01:06:42.145 --> 01:06:44.725
+So then how will this, it'll just, uh, um,
+
+991
+01:06:45.945 --> 01:06:47.765
+create based on those, it'll just create,
+
+992
+01:06:47.835 --> 01:06:49.885
+give based on the probabilities of the test data, right?
+
+993
+01:06:50.795 --> 01:06:52.405
+Yeah. We see training, any model
+
+994
+01:06:53.235 --> 01:06:56.565
+What is happening, um, basically, uh,
+
+995
+01:06:56.665 --> 01:06:57.885
+it, it is cross-checking.
+
+996
+01:06:58.745 --> 01:07:01.485
+It is cross-checking whatever the inputs you are giving
+
+997
+01:07:01.535 --> 01:07:03.525
+based upon this output.
+
+998
+01:07:03.825 --> 01:07:06.845
+It is looking and based upon the, like, you know, uh,
+
+999
+01:07:06.845 --> 01:07:08.885
+extract white test data you are giving based on that,
+
+1000
+01:07:08.945 --> 01:07:13.005
+it is like, uh, uh, just like other also tries
+
+1001
+01:07:13.005 --> 01:07:16.885
+to predict without looking the existing data, then
+
+1002
+01:07:17.625 --> 01:07:20.805
+it does actually cross check with the whatever the, uh,
+
+1003
+01:07:20.805 --> 01:07:24.005
+actual data that is there here in this algorithms.
+
+1004
+01:07:24.005 --> 01:07:26.005
+What is the difference between these algorithms
+
+1005
+01:07:26.005 --> 01:07:27.325
+and the machine learning?
+
+1006
+01:07:27.385 --> 01:07:28.965
+Uh, like, uh, deep learning algorithms, sir?
+
+1007
+01:07:29.355 --> 01:07:32.725
+Like in deep learning algorithms, we do the back propagation
+
+1008
+01:07:32.865 --> 01:07:35.925
+to actually modify the weights
+
+1009
+01:07:36.265 --> 01:07:39.205
+and biases to improve the accuracy and, all
+
+1010
+01:07:39.735 --> 01:07:40.565
+Right? Yeah.
+
+1011
+01:07:40.565 --> 01:07:42.205
+Uh, in machine learning, we're not having
+
+1012
+01:07:42.205 --> 01:07:43.685
+that option, that is the problem,
+
+1013
+01:07:45.745 --> 01:07:48.605
+But machine learning, we, um, uh, we will have, let's say,
+
+1014
+01:07:49.225 --> 01:07:52.845
+uh, kind of logistic regression model where mm-hmm, mm-hmm.
+
+1015
+01:07:52.925 --> 01:07:56.245
+It says this is yes or no kind of output. Mm-hmm.
+
+1016
+01:07:56.325 --> 01:07:58.205
+Uh, it's, it's essentially a model
+
+1017
+01:07:58.505 --> 01:08:01.445
+and, uh, your test data will, will, uh,
+
+1018
+01:08:01.645 --> 01:08:03.845
+I mean based on the test data we say whether it is right
+
+1019
+01:08:03.845 --> 01:08:05.685
+or wrong or you know, binary classware,
+
+1020
+01:08:05.685 --> 01:08:06.765
+multi-class classware.
+
+1021
+01:08:07.105 --> 01:08:11.325
+Mm-hmm. Um, but here, uh, it is gian model is just
+
+1022
+01:08:11.835 --> 01:08:15.725
+calculating the probabilities, let's say out of, um, yeah,
+
+1023
+01:08:15.745 --> 01:08:17.325
+uh, uh, calculating the probabilities
+
+1024
+01:08:17.325 --> 01:08:19.205
+of a given dataset, given population.
+
+1025
+01:08:19.465 --> 01:08:23.165
+Mm-hmm. Now, uh, your test data doesn't belong to that.
+
+1026
+01:08:23.165 --> 01:08:26.205
+Then how is it applying those probabilities on test data?
+
+1027
+01:08:30.845 --> 01:08:34.975
+Okay. It is directly, I think, uh, like during the,
+
+1028
+01:08:36.205 --> 01:08:37.975
+this formula, what is it saying?
+
+1029
+01:08:38.875 --> 01:08:41.815
+So this, I think this is the assumption they are doing
+
+1030
+01:08:41.815 --> 01:08:43.415
+something like from the training data
+
+1031
+01:08:44.035 --> 01:08:45.135
+and from the pace data,
+
+1032
+01:08:45.245 --> 01:08:47.255
+they are also taking these assumptions
+
+1033
+01:08:47.275 --> 01:08:50.675
+as well Based upon that.
+
+1034
+01:08:50.675 --> 01:08:53.715
+Yeah. It is calculating from like, like both the classes,
+
+1035
+01:08:53.905 --> 01:08:55.115
+both like multiple classes.
+
+1036
+01:08:55.855 --> 01:08:58.475
+Uh, for suppose you are giving one set of data,
+
+1037
+01:08:59.005 --> 01:09:01.715
+it'll check the probability the people had,
+
+1038
+01:09:01.825 --> 01:09:03.075
+like person has survived.
+
+1039
+01:09:04.285 --> 01:09:06.315
+Again, it'll check for the another class
+
+1040
+01:09:06.315 --> 01:09:08.555
+that is the people have didn't survive,
+
+1041
+01:09:09.255 --> 01:09:12.035
+and it will do the calculation for both of them.
+
+1042
+01:09:12.035 --> 01:09:14.035
+Probability calculate both of them,
+
+1043
+01:09:14.575 --> 01:09:18.155
+and it'll check which, uh, is having like higher value.
+
+1044
+01:09:18.335 --> 01:09:21.435
+So it like categorizes, okay, this person has survived,
+
+1045
+01:09:21.905 --> 01:09:25.195
+like it is having higher value, supposed the value is 0.08
+
+1046
+01:09:25.735 --> 01:09:26.875
+and, uh, not survived.
+
+1047
+01:09:26.875 --> 01:09:29.835
+The value was 0.0008, something like that.
+
+1048
+01:09:30.095 --> 01:09:33.355
+So whichever value is higher based on that, it tries
+
+1049
+01:09:33.355 --> 01:09:35.595
+to categorize, uh, that, you know,
+
+1050
+01:09:35.625 --> 01:09:37.075
+data points into one class.
+
+1051
+01:09:40.455 --> 01:09:42.765
+Okay? Okay. Okay.
+
+1052
+01:09:42.985 --> 01:09:46.765
+So idea is, uh, okay thing here.
+
+1053
+01:09:48.315 --> 01:09:51.535
+Now, this is the one side of the equation
+
+1054
+01:09:51.595 --> 01:09:53.015
+for like our understanding.
+
+1055
+01:09:53.035 --> 01:09:56.735
+We are saying the probability of B one given
+
+1056
+01:09:56.805 --> 01:09:58.495
+that ball is already read.
+
+1057
+01:09:59.515 --> 01:10:01.295
+Now this, uh,
+
+1058
+01:10:01.365 --> 01:10:04.135
+like a name based algorithm in your machine learning,
+
+1059
+01:10:04.305 --> 01:10:09.055
+it'll also calculate probability of B two
+
+1060
+01:10:09.625 --> 01:10:13.815
+given that r Okay, so it is basically
+
+1061
+01:10:14.535 --> 01:10:16.935
+checking that ball has been drawn,
+
+1062
+01:10:16.995 --> 01:10:18.375
+but it is not from the red.
+
+1063
+01:10:18.965 --> 01:10:22.375
+Whichever value will be higher, either this,
+
+1064
+01:10:22.375 --> 01:10:23.375
+this value will be higher
+
+1065
+01:10:23.395 --> 01:10:26.455
+or this value will be higher based on that, it will say yes
+
+1066
+01:10:26.475 --> 01:10:27.895
+or no for this like question.
+
+1067
+01:10:31.355 --> 01:10:34.085
+Okay. Okay. So it calculus for all
+
+1068
+01:10:34.085 --> 01:10:36.805
+of the istic even categories, it is having,
+
+1069
+01:10:37.195 --> 01:10:40.765
+whichever value is the highest they assign that category.
+
+1070
+01:10:40.765 --> 01:10:43.725
+Okay? This is a category it belongs to. That is the idea.
+
+1071
+01:10:45.555 --> 01:10:47.205
+Yeah. Yeah. I'm seeing that it's,
+
+1072
+01:10:47.225 --> 01:10:49.005
+it doesn't actually contain any weights,
+
+1073
+01:10:49.005 --> 01:10:51.165
+but it just calculates the probabilities.
+
+1074
+01:10:51.515 --> 01:10:53.405
+Yeah. Yeah. It is a probabilistic method
+
+1075
+01:10:53.505 --> 01:10:56.405
+and like it is not suited for like, you know, this,
+
+1076
+01:10:56.475 --> 01:11:00.125
+this kind of data, but in case of like the, like, you know,
+
+1077
+01:11:00.225 --> 01:11:01.845
+uh, the male and all, which,
+
+1078
+01:11:01.895 --> 01:11:04.165
+which we have generally we suppose
+
+1079
+01:11:04.745 --> 01:11:07.165
+go into the males and all. Okay.
+
+1080
+01:11:07.995 --> 01:11:10.845
+Okay. So multiple categories are their primary
+
+1081
+01:11:11.035 --> 01:11:14.365
+promotion, social updates, how these are done, how,
+
+1082
+01:11:14.425 --> 01:11:15.965
+you know, spam mails are coming,
+
+1083
+01:11:16.105 --> 01:11:18.845
+not spam mails are coming, these kind of things.
+
+1084
+01:11:18.945 --> 01:11:20.325
+How it is like done.
+
+1085
+01:11:20.335 --> 01:11:22.365
+These are done through this, uh, you know,
+
+1086
+01:11:22.365 --> 01:11:23.405
+name based algorithm mostly.
+
+1087
+01:11:24.145 --> 01:11:27.005
+So for like data sets, which are having like multiple words
+
+1088
+01:11:27.005 --> 01:11:29.445
+and all, but those, it works better.
+
+1089
+01:11:31.915 --> 01:11:33.255
+It tries to find out the
+
+1090
+01:11:33.975 --> 01:11:35.615
+progressive value based on the previous data
+
+1091
+01:11:36.195 --> 01:11:39.735
+and try to tries to categorize, uh, like set up data
+
+1092
+01:11:40.115 --> 01:11:42.895
+or even like predicting the next word that is also there.
+
+1093
+01:11:46.875 --> 01:11:51.805
+Okay, sir? Yeah. Thank you. Okay.
+
+1094
+01:12:01.325 --> 01:12:03.655
+Okay. I'll share the, like PPT and all
+
+1095
+01:12:03.795 --> 01:12:05.495
+and also share the like, uh,
+
+1096
+01:12:05.635 --> 01:12:07.975
+the problems related to these things. Okay.
+
+1097
+01:12:08.875 --> 01:12:11.375
+Are there any assignments for this week, sir? Yeah, yeah,
+
+1098
+01:12:11.545 --> 01:12:12.545
+There will be.
+
+1099
+01:12:13.405 --> 01:12:17.605
+Okay. How do I download?
+
+1100
+01:12:19.645 --> 01:12:22.105
+See last three?
+
+1101
+01:12:22.615 --> 01:12:22.905
+Yeah,
+
+1102
+01:12:27.865 --> 01:12:28.155
+yeah.
+
+1103
+01:12:28.155 --> 01:12:31.935
+Okay, fine. Then I'll close the session. Yeah.
+
+1104
+01:12:33.225 --> 01:12:35.655
+Thank you, sir. Thank you, sir. Thank you, sir.
+
+1105
+01:12:36.065 --> 01:12:39.135
+Thank you, sir. Yeah, thank you, sir. Have
+
+1106
+01:12:39.215 --> 01:12:40.855
+A good weekend. Long
+
+1107
+01:12:40.855 --> 01:12:41.855
+Weekend, I guess, sir.
+
+1108
+01:12:41.885 --> 01:12:43.255
+Yeah, and happy Republic Day.
+
+1109
+01:12:43.505 --> 01:12:45.815
+Thank you, sir. Wish you the same, sir. Happy days.
+
+1110
+01:12:46.145 --> 01:12:46.855
+Thank you. Thank.
