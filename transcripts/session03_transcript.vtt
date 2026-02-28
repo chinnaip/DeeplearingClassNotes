@@ -1,0 +1,7070 @@
+NOTE Vimeo URL: https://vimeo.com/1140267865
+WEBVTT
+
+1
+00:00:31.465 --> 00:00:32.275
+Good evening, sir.
+
+2
+00:00:35.635 --> 00:00:36.635
+Good evening, sir.
+
+3
+00:00:44.415 --> 00:00:45.665
+Good evening. Good evening.
+
+4
+00:00:45.805 --> 00:00:47.665
+You able to join, uh, Sunil? What?
+
+5
+00:00:48.085 --> 00:00:50.745
+Yes, I was able to join. I just
+
+6
+00:00:50.975 --> 00:00:51.975
+Good evening. Good evening. Anybody
+
+7
+00:00:51.975 --> 00:00:53.345
+you were able to join early itself?
+
+8
+00:00:55.015 --> 00:00:56.265
+Yeah, I'm able to join.
+
+9
+00:00:56.965 --> 00:00:58.905
+Oh, we were not allowed inside.
+
+10
+00:01:00.635 --> 00:01:01.725
+Okay. Oh,
+
+11
+00:01:02.445 --> 00:01:03.565
+I don't know what is.
+
+12
+00:01:04.955 --> 00:01:09.245
+Yeah, maybe they should. Good evening, sir.
+
+13
+00:01:09.835 --> 00:01:11.285
+Good evening. Good evening all.
+
+14
+00:01:15.965 --> 00:01:20.745
+Um, So,
+
+15
+00:01:20.925 --> 00:01:24.665
+so I will download and, uh, share, uh, Sunil.
+
+16
+00:01:25.325 --> 00:01:29.605
+Yes, sir. Yes, sir. Yes, yes.
+
+17
+00:02:06.335 --> 00:02:09.045
+Good evening, sir. Good evening. Good evening.
+
+18
+00:02:12.075 --> 00:02:13.075
+Is my screen shared?
+
+19
+00:02:14.395 --> 00:02:18.535
+Uh, yes, sir. Sir, it is coming now. Now it shares.
+
+20
+00:02:25.965 --> 00:02:29.255
+Yeah. So, uh,
+
+21
+00:02:31.135 --> 00:02:34.955
+I explained about, you know, how the, how
+
+22
+00:02:35.735 --> 00:02:38.715
+the structure and functioning of human brain
+
+23
+00:02:40.735 --> 00:02:45.185
+motivated development of a computational model
+
+24
+00:02:45.885 --> 00:02:47.345
+called neural networks.
+
+25
+00:02:49.105 --> 00:02:52.385
+Parallel and distributed processing is the concept which is
+
+26
+00:02:52.385 --> 00:02:53.625
+motivated from the structure
+
+27
+00:02:53.645 --> 00:02:55.145
+and functioning of the human brain.
+
+28
+00:02:55.805 --> 00:02:57.505
+And I also explained about
+
+29
+00:02:59.085 --> 00:03:01.585
+the basic computing element in the case of, uh,
+
+30
+00:03:02.205 --> 00:03:04.465
+neural networks, as well as this is, again,
+
+31
+00:03:04.745 --> 00:03:08.025
+borrowed into the deep learning is neuron,
+
+32
+00:03:09.725 --> 00:03:13.225
+the biological neuron by, based on the description available
+
+33
+00:03:13.445 --> 00:03:15.865
+for however biological neuron functions
+
+34
+00:03:16.915 --> 00:03:19.015
+and approximate model has been put
+
+35
+00:03:20.215 --> 00:03:22.555
+as a computation model on the computing machine.
+
+36
+00:03:24.615 --> 00:03:26.995
+That's what I, I told last time.
+
+37
+00:03:28.055 --> 00:03:32.295
+And, uh, now, um,
+
+38
+00:03:33.215 --> 00:03:37.775
+I think I might have also explained the macle spits model.
+
+39
+00:03:38.475 --> 00:03:40.095
+Did I explain, uh, some, uh,
+
+40
+00:03:40.845 --> 00:03:43.015
+anybody can this part I remember.
+
+41
+00:03:43.795 --> 00:03:48.215
+No, no. Up to neuron and cell, I explained.
+
+42
+00:03:48.755 --> 00:03:51.735
+Yes. Now, uh, I think a functioning
+
+43
+00:03:51.735 --> 00:03:54.335
+of neuron also I mentioned no, um,
+
+44
+00:03:54.445 --> 00:03:56.815
+from a biological neuron point of view, how
+
+45
+00:03:56.815 --> 00:03:59.135
+that whole activity happens is it's a complex,
+
+46
+00:03:59.915 --> 00:04:02.055
+um, chemical process.
+
+47
+00:04:05.565 --> 00:04:06.895
+Once the neuron files,
+
+48
+00:04:07.075 --> 00:04:10.135
+the transmitter substances are released, um,
+
+49
+00:04:11.685 --> 00:04:13.095
+into the synaptic junctions.
+
+50
+00:04:13.195 --> 00:04:14.695
+That's what I told them
+
+51
+00:04:15.675 --> 00:04:18.775
+and effect of, to riser lower electrical potential
+
+52
+00:04:19.035 --> 00:04:21.255
+inside the body of the receiving cell.
+
+53
+00:04:22.195 --> 00:04:26.535
+Uh, essentially suppose if you consider a similar neuron
+
+54
+00:04:26.825 --> 00:04:28.975
+lying in this neighborhood, okay?
+
+55
+00:04:29.635 --> 00:04:33.135
+Now, when this fired output is released
+
+56
+00:04:33.235 --> 00:04:36.775
+as a chemical substance here, that will in turn,
+
+57
+00:04:36.775 --> 00:04:38.575
+just like not adjust the dendrites
+
+58
+00:04:38.575 --> 00:04:41.575
+of the neuron in the neighborhood that receives
+
+59
+00:04:42.395 --> 00:04:44.455
+and which will result in inside
+
+60
+00:04:44.485 --> 00:04:46.295
+that cell body either increase
+
+61
+00:04:46.295 --> 00:04:48.735
+or decrease in the potential by a code potential.
+
+62
+00:04:48.735 --> 00:04:50.775
+That's what is the meaning of, uh, that.
+
+63
+00:04:53.595 --> 00:04:57.735
+Now, um, the cell body, that is this one,
+
+64
+00:04:57.735 --> 00:05:00.055
+which I told last time, it acts summing,
+
+65
+00:05:00.285 --> 00:05:02.695
+summing junction summing device.
+
+66
+00:05:03.865 --> 00:05:07.515
+Then synaptic junction is the name given to these points,
+
+67
+00:05:07.515 --> 00:05:11.955
+which are outside the toxin, where these are the points
+
+68
+00:05:11.955 --> 00:05:13.675
+where the output is released,
+
+69
+00:05:13.775 --> 00:05:15.755
+and those are called as the synoptic junctions.
+
+70
+00:05:16.425 --> 00:05:20.795
+Okay? Which is repeatedly, uh, which junction,
+
+71
+00:05:20.805 --> 00:05:24.435
+which is repeatedly triggered, uh, will grow in stent
+
+72
+00:05:24.435 --> 00:05:26.715
+otherwise will gradually, uh, weaken.
+
+73
+00:05:28.875 --> 00:05:30.135
+So accordingly, the strength
+
+74
+00:05:30.135 --> 00:05:33.215
+of this synaptic junction gets modified continuously.
+
+75
+00:05:33.915 --> 00:05:36.455
+And, uh, there is something called plasticity.
+
+76
+00:05:36.625 --> 00:05:38.655
+Plasticity means, no, there's nothing
+
+77
+00:05:39.405 --> 00:05:40.935
+returning stone and wall.
+
+78
+00:05:41.345 --> 00:05:42.695
+Stone, no. Uh,
+
+79
+00:05:42.835 --> 00:05:45.855
+it continuously the synaptic junction strength, uh,
+
+80
+00:05:46.135 --> 00:05:50.775
+modifies depending on how frequently you're using
+
+81
+00:05:50.915 --> 00:05:52.495
+or how infrequently you're using.
+
+82
+00:05:53.195 --> 00:05:57.405
+So based on that, uh, the, uh, no weakening
+
+83
+00:05:57.505 --> 00:05:59.325
+or strengthening of that connection happens.
+
+84
+00:06:02.065 --> 00:06:05.885
+And this, the activity at this synaptic junction
+
+85
+00:06:07.235 --> 00:06:09.005
+that is mimicked as,
+
+86
+00:06:09.745 --> 00:06:12.245
+and this is the junctions at which the knowledge is stored
+
+87
+00:06:12.425 --> 00:06:13.725
+in the biological neuron.
+
+88
+00:06:15.025 --> 00:06:18.405
+So the same thing has been mimicked in the artificial neuron
+
+89
+00:06:18.405 --> 00:06:20.405
+as what are called is weight parameters.
+
+90
+00:06:21.205 --> 00:06:23.185
+In increasing large amount of data,
+
+91
+00:06:23.485 --> 00:06:26.745
+we learn the parameters representing these junction threads.
+
+92
+00:06:28.135 --> 00:06:29.625
+Okay? So
+
+93
+00:06:30.495 --> 00:06:34.305
+accordingly, uh, to mimic that on,
+
+94
+00:06:35.045 --> 00:06:38.745
+as I told know, each neuron, it performs
+
+95
+00:06:38.745 --> 00:06:43.675
+that simple task you receives end, end inputs, sums them,
+
+96
+00:06:44.555 --> 00:06:45.675
+compares with the bias.
+
+97
+00:06:46.705 --> 00:06:51.505
+And once it exits the bias, uh, we say the neuron is fired.
+
+98
+00:06:51.965 --> 00:06:54.105
+The filed output is a non-linear
+
+99
+00:06:57.135 --> 00:06:59.995
+output of that some would value, okay?
+
+100
+00:06:59.995 --> 00:07:01.275
+That some would value itself.
+
+101
+00:07:01.275 --> 00:07:03.435
+Minus threshold is called as activation value.
+
+102
+00:07:03.705 --> 00:07:05.395
+That activation value pass it
+
+103
+00:07:05.395 --> 00:07:06.835
+through a non-linear output function
+
+104
+00:07:06.855 --> 00:07:07.915
+is the output of the neuro.
+
+105
+00:07:09.735 --> 00:07:11.915
+If you quickly observe this, no,
+
+106
+00:07:12.095 --> 00:07:14.915
+the structure in which it is doing, it's just a summation
+
+107
+00:07:15.595 --> 00:07:19.315
+compared with the threshold, then that value is positive
+
+108
+00:07:19.315 --> 00:07:20.635
+through a nonlinear output function.
+
+109
+00:07:20.635 --> 00:07:25.315
+It's a very simple activity compared to, Uh,
+
+110
+00:07:25.755 --> 00:07:27.195
+a computing processor action.
+
+111
+00:07:27.295 --> 00:07:29.595
+We are thinking, no, if you take a CPU,
+
+112
+00:07:30.015 --> 00:07:31.955
+you can implement a very complex, uh,
+
+113
+00:07:32.075 --> 00:07:34.235
+mathematical function there to execute.
+
+114
+00:07:34.535 --> 00:07:35.835
+But we are in a neuron.
+
+115
+00:07:35.835 --> 00:07:37.795
+We are talking about such a simple activity.
+
+116
+00:07:38.505 --> 00:07:40.595
+Then where is the power for the neural network
+
+117
+00:07:40.695 --> 00:07:42.275
+or deep learning model is coming.
+
+118
+00:07:43.125 --> 00:07:47.075
+Again, it is inspired by the structure and organization.
+
+119
+00:07:47.395 --> 00:07:49.675
+Structure means that organization of the neurons,
+
+120
+00:07:49.755 --> 00:07:52.235
+so we have several billions of neurons,
+
+121
+00:07:52.235 --> 00:07:54.475
+they are organized in layers, okay?
+
+122
+00:07:55.055 --> 00:07:57.835
+And this, the, the, the strength
+
+123
+00:07:58.095 --> 00:08:02.875
+or the, um, what we call, uh, efficiency
+
+124
+00:08:02.895 --> 00:08:04.035
+of these neural network
+
+125
+00:08:04.175 --> 00:08:05.635
+or deep learning models in terms
+
+126
+00:08:05.635 --> 00:08:07.715
+of modeling the information comes
+
+127
+00:08:07.715 --> 00:08:10.595
+because of the layered networks
+
+128
+00:08:10.595 --> 00:08:12.915
+of these neurons in the form of layers.
+
+129
+00:08:13.095 --> 00:08:14.875
+And several such layers are there.
+
+130
+00:08:14.875 --> 00:08:16.795
+Then only they become very effective.
+
+131
+00:08:21.445 --> 00:08:23.255
+Otherwise, if you just take a function
+
+132
+00:08:23.255 --> 00:08:25.615
+of a simple biological, simple artificial neuron
+
+133
+00:08:25.635 --> 00:08:27.655
+by itself doesn't have that capability,
+
+134
+00:08:28.355 --> 00:08:32.895
+but the real strength comes once you make them as layers
+
+135
+00:08:32.995 --> 00:08:35.735
+of interconnected neurons, which we call it
+
+136
+00:08:35.735 --> 00:08:36.775
+as neural networks.
+
+137
+00:08:39.975 --> 00:08:41.835
+So that is what, that is.
+
+138
+00:08:41.895 --> 00:08:43.115
+The, the real power
+
+139
+00:08:43.135 --> 00:08:46.075
+of neural networks are deep learning is when you arrange all
+
+140
+00:08:46.075 --> 00:08:47.475
+of them in the layer, that is
+
+141
+00:08:47.475 --> 00:08:49.275
+how it is happening in human brain.
+
+142
+00:08:49.505 --> 00:08:52.315
+Several billions of neurons arranged in layers
+
+143
+00:08:52.785 --> 00:08:56.965
+that the information flow happens from the base to the, uh,
+
+144
+00:08:57.205 --> 00:09:00.485
+learning centers in the highest part of the brain.
+
+145
+00:09:00.865 --> 00:09:05.445
+That's how we are able to do that, And
+
+146
+00:09:05.445 --> 00:09:09.395
+that motivates the, the organization
+
+147
+00:09:09.395 --> 00:09:11.635
+of these artificial neurons in the layered manner.
+
+148
+00:09:12.105 --> 00:09:15.475
+Okay? Um, so
+
+149
+00:09:15.975 --> 00:09:18.195
+of course there are some aspects called activation
+
+150
+00:09:18.195 --> 00:09:19.595
+dynamics, synaptic dynamics.
+
+151
+00:09:19.595 --> 00:09:21.395
+We don't have to bother much,
+
+152
+00:09:21.415 --> 00:09:25.435
+but if you want, you can, uh, read in the, I know in any
+
+153
+00:09:25.435 --> 00:09:29.635
+of the a, uh, tool that no activation dynamic means
+
+154
+00:09:30.655 --> 00:09:33.075
+the activation value of the neuron.
+
+155
+00:09:33.125 --> 00:09:35.115
+There is a difference between the activation value
+
+156
+00:09:35.175 --> 00:09:36.835
+and the actual output of the neuron.
+
+157
+00:09:37.975 --> 00:09:42.675
+The, the activation value is the value in the neuron
+
+158
+00:09:42.855 --> 00:09:46.075
+before passing through the nonlinear output function.
+
+159
+00:09:47.185 --> 00:09:49.595
+Once it passes through the nonlinear output function,
+
+160
+00:09:49.595 --> 00:09:51.715
+the resulting output is the actual output
+
+161
+00:09:51.715 --> 00:09:53.315
+of the neuron, okay?
+
+162
+00:09:54.015 --> 00:09:55.955
+And how this activation value
+
+163
+00:09:56.255 --> 00:09:59.195
+of the different neurons in a given neural network changes
+
+164
+00:09:59.215 --> 00:10:00.435
+as a function of time.
+
+165
+00:10:03.785 --> 00:10:05.675
+That is called as activation dynamics.
+
+166
+00:10:07.745 --> 00:10:11.835
+Similarly, as I told no, the synaptic junction is mimicked
+
+167
+00:10:11.855 --> 00:10:14.155
+as weights in the neural network,
+
+168
+00:10:14.855 --> 00:10:17.915
+and you consider all the weights along all the
+
+169
+00:10:17.915 --> 00:10:19.195
+links of the neural network.
+
+170
+00:10:20.215 --> 00:10:23.315
+And that how those weight parameters are changing
+
+171
+00:10:23.375 --> 00:10:26.115
+as a function of time during training, that is called
+
+172
+00:10:26.175 --> 00:10:27.595
+as synaptic dynamics.
+
+173
+00:10:28.265 --> 00:10:29.635
+Okay? Um,
+
+174
+00:10:30.335 --> 00:10:34.835
+and the concept of learning, uh, in case
+
+175
+00:10:34.835 --> 00:10:38.355
+of neural networks and deep learning is, uh, is the process
+
+176
+00:10:38.495 --> 00:10:40.515
+of adjusting the weight parameters.
+
+177
+00:10:40.985 --> 00:10:45.755
+Okay? You incrementally update the
+
+178
+00:10:45.755 --> 00:10:49.755
+weights, uh, such that no,
+
+179
+00:10:49.815 --> 00:10:53.915
+as you move from one, uh, iteration to the next iteration,
+
+180
+00:10:55.255 --> 00:10:57.275
+the weights, uh,
+
+181
+00:10:57.445 --> 00:11:01.275
+learn more information about the given dataset, okay?
+
+182
+00:11:01.535 --> 00:11:04.755
+As you move, repeated exposure should increase the knowledge
+
+183
+00:11:05.485 --> 00:11:08.555
+about those dataset in the weight parameters.
+
+184
+00:11:08.735 --> 00:11:10.835
+And that is how all the learning laws are learning.
+
+185
+00:11:10.925 --> 00:11:14.835
+Algorithms are design. That is a basic purpose.
+
+186
+00:11:14.905 --> 00:11:17.715
+Incrementally adjust the weights, but in what way?
+
+187
+00:11:17.715 --> 00:11:19.795
+They're just based around that.
+
+188
+00:11:19.795 --> 00:11:21.275
+The learning law will be different.
+
+189
+00:11:21.815 --> 00:11:23.635
+The, the working principle of each
+
+190
+00:11:23.635 --> 00:11:25.235
+of the learning law will be different.
+
+191
+00:11:26.745 --> 00:11:30.675
+Okay? Um, that is the learning part.
+
+192
+00:11:31.905 --> 00:11:36.765
+Uh, then, so this picture, which I showed no,
+
+193
+00:11:36.915 --> 00:11:39.365
+this picture, the basic neuron model picture,
+
+194
+00:11:40.035 --> 00:11:44.765
+that was the first published model mathematical model
+
+195
+00:11:45.305 --> 00:11:49.645
+for An artificial neuron.
+
+196
+00:11:50.105 --> 00:11:53.485
+It is proposed by MAC pit, the scientist.
+
+197
+00:11:53.485 --> 00:11:55.085
+That's why they're called as MP model
+
+198
+00:11:55.105 --> 00:11:58.005
+or macx pitch model, where
+
+199
+00:11:59.215 --> 00:12:01.315
+the neuron activation value is nothing,
+
+200
+00:12:01.375 --> 00:12:03.275
+but there are m inputs to the
+
+201
+00:12:04.095 --> 00:12:06.315
+neuron artificial neuron I equal to one to N
+
+202
+00:12:08.155 --> 00:12:09.635
+multipli W Yeah, yeah.
+
+203
+00:12:09.695 --> 00:12:12.515
+Is the actual input to each of those M links.
+
+204
+00:12:13.015 --> 00:12:14.555
+And the link weight is w
+
+205
+00:12:15.875 --> 00:12:19.655
+and this whole somewhat value minus the theta,
+
+206
+00:12:19.655 --> 00:12:20.655
+which is the BAAs.
+
+207
+00:12:21.555 --> 00:12:23.695
+And that value is called as the activation value.
+
+208
+00:12:23.915 --> 00:12:28.015
+It is a weighted sum of M inputs ai and the bias term theta.
+
+209
+00:12:30.955 --> 00:12:32.655
+The BAAs is nothing
+
+210
+00:12:32.835 --> 00:12:34.975
+but from a biological neuron point of view,
+
+211
+00:12:34.975 --> 00:12:38.215
+the resting potential of the cell body is the bias.
+
+212
+00:12:39.475 --> 00:12:42.135
+And when the somer value received through the dendrites
+
+213
+00:12:42.685 --> 00:12:47.055
+exceeds that, uh, bias, then the neuron fights
+
+214
+00:12:48.015 --> 00:12:49.275
+to mimic that activity.
+
+215
+00:12:49.305 --> 00:12:51.035
+This bias is there where
+
+216
+00:12:51.575 --> 00:12:53.755
+you can allow shifting the activation function
+
+217
+00:12:53.775 --> 00:12:55.555
+by adding a constant to the input.
+
+218
+00:12:55.555 --> 00:12:57.835
+That is the way we can treat, okay?
+
+219
+00:12:58.855 --> 00:13:01.715
+Uh, the output value SC is nothing,
+
+220
+00:13:01.775 --> 00:13:04.435
+but you see exceed the activation value, output value
+
+221
+00:13:04.435 --> 00:13:05.755
+of the neuron is the FFX.
+
+222
+00:13:10.845 --> 00:13:14.255
+Typically, this output function will be a nonlinear function
+
+223
+00:13:14.475 --> 00:13:15.535
+or a binary function.
+
+224
+00:13:15.555 --> 00:13:17.295
+Simple binary function can be,
+
+225
+00:13:17.665 --> 00:13:19.615
+we'll discuss about different types
+
+226
+00:13:19.615 --> 00:13:21.495
+of output functions that are possible.
+
+227
+00:13:23.635 --> 00:13:26.265
+These people felt, yes, this a good approximation
+
+228
+00:13:26.325 --> 00:13:27.785
+to implement it on a computer,
+
+229
+00:13:29.315 --> 00:13:33.055
+but what was missing was, how do I get this?
+
+230
+00:13:33.215 --> 00:13:34.335
+WI parameters.
+
+231
+00:13:35.595 --> 00:13:38.375
+See, it's a very simple task, then it's okay,
+
+232
+00:13:38.395 --> 00:13:39.935
+one time computation, you do it.
+
+233
+00:13:40.035 --> 00:13:42.735
+But when they are dealing with the neural networks
+
+234
+00:13:42.735 --> 00:13:45.735
+and deep learning model, when a real data is coming
+
+235
+00:13:46.395 --> 00:13:51.135
+in a large amount, computing is a challenge.
+
+236
+00:13:51.755 --> 00:13:54.575
+So that is, sorry, uh, manual calculation is a challenge.
+
+237
+00:13:54.835 --> 00:13:56.255
+That's where people thought about
+
+238
+00:13:57.075 --> 00:13:59.295
+can I have a automatic method
+
+239
+00:13:59.435 --> 00:14:01.895
+for automatically learning these weights?
+
+240
+00:14:02.035 --> 00:14:06.215
+But that was missing in the case of the basic MP model.
+
+241
+00:14:06.245 --> 00:14:08.215
+They assumed that you by pen
+
+242
+00:14:08.215 --> 00:14:11.375
+and paper, your computer is wi, are some statistical method,
+
+243
+00:14:11.375 --> 00:14:14.655
+your computer wi and inserting those parameters here.
+
+244
+00:14:15.555 --> 00:14:17.135
+But what people wanted was,
+
+245
+00:14:17.675 --> 00:14:20.135
+can we directly learn those weight parameters
+
+246
+00:14:20.745 --> 00:14:22.495
+while training the neuron itself?
+
+247
+00:14:23.975 --> 00:14:26.715
+So that was one of the breakthrough results proposed
+
+248
+00:14:26.895 --> 00:14:29.915
+by Pro Rosen Black, which he called it
+
+249
+00:14:29.915 --> 00:14:32.835
+as a perceptron model, till today, you know,
+
+250
+00:14:32.835 --> 00:14:34.275
+it's a known neuron model.
+
+251
+00:14:35.025 --> 00:14:39.075
+Okay? Again, here also the act,
+
+252
+00:14:39.295 --> 00:14:40.355
+the activation value,
+
+253
+00:14:40.535 --> 00:14:43.155
+the equation remains same output value.
+
+254
+00:14:43.215 --> 00:14:44.715
+The equation remains same aim.
+
+255
+00:14:46.025 --> 00:14:48.515
+Know the difference comes in this error function,
+
+256
+00:14:48.565 --> 00:14:50.955
+which very, very fundamental to neural networks.
+
+257
+00:14:51.125 --> 00:14:55.045
+Deep C, you have a target output B,
+
+258
+00:14:55.815 --> 00:15:00.205
+given from the dataset they know for this set of input
+
+259
+00:15:00.225 --> 00:15:02.165
+or value, this is the target output.
+
+260
+00:15:02.165 --> 00:15:05.445
+We are expecting the target output is B Well,
+
+261
+00:15:05.465 --> 00:15:07.765
+the actual output coming out of the neuron is yes.
+
+262
+00:15:08.915 --> 00:15:11.885
+Then target output minus the actual
+
+263
+00:15:11.885 --> 00:15:13.165
+output is the error in delta.
+
+264
+00:15:14.495 --> 00:15:18.105
+Okay? Where B is the required target output,
+
+265
+00:15:18.325 --> 00:15:22.385
+you take a consideration where no s the actual output
+
+266
+00:15:22.385 --> 00:15:25.105
+of the neuron is equal to B, then the error is zero
+
+267
+00:15:25.765 --> 00:15:26.865
+and the error is zero.
+
+268
+00:15:26.935 --> 00:15:29.785
+Your weights are exactly reflecting the phenomenon
+
+269
+00:15:29.785 --> 00:15:31.585
+of the particular process.
+
+270
+00:15:32.725 --> 00:15:35.305
+On the other hand, if yes is not equal to B,
+
+271
+00:15:35.305 --> 00:15:36.785
+then there is a non-zero error.
+
+272
+00:15:37.885 --> 00:15:41.505
+The weight update that is w is given.
+
+273
+00:15:41.505 --> 00:15:44.465
+What is the next value of WW plus delta W.
+
+274
+00:15:45.885 --> 00:15:50.335
+That is a change in the weight value that is proportional to
+
+275
+00:15:51.715 --> 00:15:55.295
+the error that is there between the
+
+276
+00:15:56.115 --> 00:16:00.375
+actual output and the predicted output or the actual output
+
+277
+00:16:00.375 --> 00:16:01.415
+and the target output.
+
+278
+00:16:01.415 --> 00:16:03.735
+That is delta. It is proportional to the delta
+
+279
+00:16:04.855 --> 00:16:06.045
+times the input
+
+280
+00:16:06.235 --> 00:16:10.845
+because I'm, I have to, uh, adjust with reference
+
+281
+00:16:10.845 --> 00:16:12.005
+to the input applied.
+
+282
+00:16:12.025 --> 00:16:15.885
+That's why, uh, error delta times the AI
+
+283
+00:16:16.505 --> 00:16:19.005
+and I replace the professional concept with equal,
+
+284
+00:16:19.215 --> 00:16:21.085
+equal sign, then it becomes eta.
+
+285
+00:16:21.185 --> 00:16:23.085
+ETA is the learning rate parameters, depending on
+
+286
+00:16:23.635 --> 00:16:25.445
+what is the value you choose for eta.
+
+287
+00:16:25.595 --> 00:16:27.245
+Typically people go by know
+
+288
+00:16:27.245 --> 00:16:30.685
+where the incremental changes 0.001, not 0.01.
+
+289
+00:16:30.685 --> 00:16:34.285
+Like if you choose very high value 0.1 light thing,
+
+290
+00:16:34.285 --> 00:16:35.325
+the jump will be high,
+
+291
+00:16:35.465 --> 00:16:37.045
+but people typically go
+
+292
+00:16:37.045 --> 00:16:40.685
+through very low shift.
+
+293
+00:16:41.115 --> 00:16:45.785
+Okay? So essentially the I
+
+294
+00:16:45.845 --> 00:16:48.825
+to weight, link weight for I equal to one.
+
+295
+00:16:48.895 --> 00:16:51.465
+Then with W one, W one,
+
+296
+00:16:52.285 --> 00:16:54.665
+the next instant next change in the value
+
+297
+00:16:54.665 --> 00:16:57.665
+of W one is W one plus delta W one
+
+298
+00:16:58.415 --> 00:17:02.065
+where delta W one is E delta,
+
+299
+00:17:02.235 --> 00:17:06.065
+which another B minus S one, B one minus S one.
+
+300
+00:17:06.065 --> 00:17:07.985
+That is delta multipli by E one.
+
+301
+00:17:08.375 --> 00:17:10.225
+That will give me the change in the value.
+
+302
+00:17:10.645 --> 00:17:14.985
+And so accordingly know, now I'm directly learning the
+
+303
+00:17:15.965 --> 00:17:18.795
+value of this weight parameters from the error
+
+304
+00:17:18.795 --> 00:17:19.795
+that is computed.
+
+305
+00:17:20.225 --> 00:17:21.555
+Okay? And
+
+306
+00:17:21.665 --> 00:17:24.195
+accordingly know the, the concept
+
+307
+00:17:24.415 --> 00:17:26.475
+of learning was demonstrated
+
+308
+00:17:26.535 --> 00:17:29.235
+for the first time in the neural network history.
+
+309
+00:17:29.705 --> 00:17:32.555
+Okay? And that, that's why this is treated as one
+
+310
+00:17:32.555 --> 00:17:35.515
+of the breakthrough results in the neural network field.
+
+311
+00:17:36.255 --> 00:17:39.395
+So introducing learning to the model so
+
+312
+00:17:39.395 --> 00:17:41.155
+accordingly know you learn the weights
+
+313
+00:17:41.155 --> 00:17:42.275
+versus fix it weights.
+
+314
+00:17:43.575 --> 00:17:46.305
+Then of course ology is nothing but know.
+
+315
+00:17:46.305 --> 00:17:49.685
+How do you connect these, organize these neurons in the form
+
+316
+00:17:49.705 --> 00:17:50.805
+of layers.
+
+317
+00:17:51.895 --> 00:17:54.075
+And depending on how the data flow happens,
+
+318
+00:17:54.215 --> 00:17:57.115
+it can be either feed forward feedback or both.
+
+319
+00:17:57.115 --> 00:17:58.675
+Combination can be there like that.
+
+320
+00:18:00.255 --> 00:18:04.475
+So in general, the basic principle
+
+321
+00:18:04.475 --> 00:18:08.595
+behind learning classes, how do I change that gesture?
+
+322
+00:18:08.595 --> 00:18:11.635
+There is not much synaptic dynamics as a weight state,
+
+323
+00:18:11.695 --> 00:18:15.475
+as a function of time in general, without even going
+
+324
+00:18:15.495 --> 00:18:17.515
+to the details of the learning law
+
+325
+00:18:19.055 --> 00:18:21.115
+at the current instant of time.
+
+326
+00:18:21.395 --> 00:18:24.715
+T the weight in the network in a particular link is wi
+
+327
+00:18:26.055 --> 00:18:28.075
+and I compute the change in the weight
+
+328
+00:18:28.135 --> 00:18:29.675
+as at this instant of time.
+
+329
+00:18:29.895 --> 00:18:33.595
+Ts delta, WIT, you add the incremental change
+
+330
+00:18:33.625 --> 00:18:35.755
+with the actual weight at this point of time
+
+331
+00:18:35.755 --> 00:18:38.315
+to get the weight in the next instant of time.
+
+332
+00:18:38.585 --> 00:18:41.315
+That is how incrementally I go on changing the weights.
+
+333
+00:18:41.765 --> 00:18:43.115
+There are many learning laws,
+
+334
+00:18:49.215 --> 00:18:50.795
+lab learning, data,
+
+335
+00:18:50.995 --> 00:18:52.675
+learning lesson based around the working principle.
+
+336
+00:18:52.675 --> 00:18:54.955
+They're there. But the fundamental principle is this,
+
+337
+00:18:55.285 --> 00:18:58.315
+under the current instant of time, you have the weight,
+
+338
+00:18:58.615 --> 00:19:01.075
+you find out the change in the weight at this instant
+
+339
+00:19:01.075 --> 00:19:03.715
+of time, you add those two to get the incremental
+
+340
+00:19:04.235 --> 00:19:05.435
+increase weight in the next extent.
+
+341
+00:19:07.665 --> 00:19:11.235
+Okay? Now we'll go to a simple perceptron learning.
+
+342
+00:19:12.735 --> 00:19:15.715
+If you recall in the perceptron learning,
+
+343
+00:19:16.485 --> 00:19:20.595
+delta W is ETA delta ai,
+
+344
+00:19:20.595 --> 00:19:24.595
+where delta is nothing but B minus S and s itself.
+
+345
+00:19:24.855 --> 00:19:26.635
+You can take it as F of x.
+
+346
+00:19:27.275 --> 00:19:30.755
+F of X is this one, this tab that is what is written here.
+
+347
+00:19:31.885 --> 00:19:36.145
+So delta W code ETA delta A,
+
+348
+00:19:37.205 --> 00:19:42.105
+and the delta is bi neuron link,
+
+349
+00:19:43.085 --> 00:19:47.745
+um, neuron link high,
+
+350
+00:19:47.765 --> 00:19:49.585
+the neuron link, uh,
+
+351
+00:19:49.675 --> 00:19:53.225
+minus this function F nonlinear function, we are using it
+
+352
+00:19:53.225 --> 00:19:54.985
+as a sigma signum function.
+
+353
+00:19:55.525 --> 00:19:57.505
+Signum function is signum of X equal
+
+354
+00:19:57.505 --> 00:20:00.385
+to plus one if F greater than zero minus one.
+
+355
+00:20:00.385 --> 00:20:01.385
+If x less than zero
+
+356
+00:20:01.725 --> 00:20:05.665
+and zero if x equal to zero, that is the val function.
+
+357
+00:20:05.735 --> 00:20:07.665
+This is a non-linear function, okay?
+
+358
+00:20:07.775 --> 00:20:09.265
+Even though X is a real value,
+
+359
+00:20:09.285 --> 00:20:12.545
+the output will be like this either binary or something.
+
+360
+00:20:14.045 --> 00:20:18.585
+So now what we do is F of X,
+
+361
+00:20:18.645 --> 00:20:21.665
+the activation values, weighted summation of the weights
+
+362
+00:20:22.345 --> 00:20:26.145
+multiply with the input vector w transpose, yay,
+
+363
+00:20:27.065 --> 00:20:28.745
+multiplied by that signal faster
+
+364
+00:20:28.745 --> 00:20:30.025
+through the signal function.
+
+365
+00:20:30.335 --> 00:20:32.345
+That will be the actual output of the neuron,
+
+366
+00:20:33.665 --> 00:20:36.045
+and it is subtracted from the target output
+
+367
+00:20:36.115 --> 00:20:38.805
+that will gimme the error and multiplied by that vector.
+
+368
+00:20:39.025 --> 00:20:41.005
+Yay. Okay?
+
+369
+00:20:41.235 --> 00:20:44.285
+This is for the entire particular neuron
+
+370
+00:20:44.885 --> 00:20:46.285
+W vector, okay?
+
+371
+00:20:46.465 --> 00:20:51.245
+The neuron. And whereas if there are m uh,
+
+372
+00:20:51.745 --> 00:20:55.805
+inputs for the E neuron that WIJ will come where a j
+
+373
+00:20:55.875 --> 00:20:59.245
+that corresponding dimension I'm keeping, so
+
+374
+00:21:00.105 --> 00:21:01.605
+the change in the way, it is nothing
+
+375
+00:21:01.625 --> 00:21:05.045
+but this BI minus E-S-I-A-A-J.
+
+376
+00:21:06.205 --> 00:21:10.145
+And, uh, if the weights are gesture only,
+
+377
+00:21:10.145 --> 00:21:12.305
+if the actual output si is incorrect,
+
+378
+00:21:12.335 --> 00:21:15.225
+that is si is not equal to ba, then it'll be gesture,
+
+379
+00:21:15.225 --> 00:21:16.225
+otherwise BA minus.
+
+380
+00:21:17.885 --> 00:21:19.505
+And then, okay,
+
+381
+00:21:19.685 --> 00:21:22.785
+now we are doing no weight adjustment from the data.
+
+382
+00:21:22.885 --> 00:21:24.385
+But what, how do you begin with?
+
+383
+00:21:24.885 --> 00:21:27.105
+That's a weight in the initialization is done
+
+384
+00:21:27.135 --> 00:21:29.385
+with some random value prior to learning.
+
+385
+00:21:30.215 --> 00:21:32.225
+Then since the target output is there,
+
+386
+00:21:32.255 --> 00:21:34.985
+this said supervised learning as it request, desire,
+
+387
+00:21:34.985 --> 00:21:36.105
+output for each input.
+
+388
+00:21:36.995 --> 00:21:40.815
+And uh, what has been shown is in certain classes
+
+389
+00:21:41.035 --> 00:21:44.575
+of problems, the weight will converge to final values
+
+390
+00:21:44.915 --> 00:21:47.495
+by repeated use of input of typically
+
+391
+00:21:47.495 --> 00:21:51.055
+that learning rate parameter is set very, very low value.
+
+392
+00:21:53.525 --> 00:21:56.055
+Okay? So that is about the, you know,
+
+393
+00:21:57.205 --> 00:21:59.415
+perceptance simple perception learning LA
+
+394
+00:21:59.415 --> 00:22:01.095
+or discrete perception learning law.
+
+395
+00:22:01.095 --> 00:22:03.815
+We say there is a continuous perception
+
+396
+00:22:03.935 --> 00:22:05.095
+learning also, we'll see later.
+
+397
+00:22:05.715 --> 00:22:08.895
+And this is what is about the perception basic neuron model
+
+398
+00:22:08.955 --> 00:22:10.015
+and how it is learned.
+
+399
+00:22:10.855 --> 00:22:13.715
+So any, any doubt here to any of you,
+
+400
+00:22:18.985 --> 00:22:22.115
+Okay, this perception working maybe, um, um,
+
+401
+00:22:22.815 --> 00:22:24.515
+sil you may kindly take over.
+
+402
+00:22:26.515 --> 00:22:29.655
+Yes, sir. Let me stop sharing you.
+
+403
+00:22:31.755 --> 00:22:32.045
+Yeah.
+
+404
+00:22:52.965 --> 00:22:55.455
+Alright. Uh, so good evening to all.
+
+405
+00:22:55.795 --> 00:22:59.935
+So I'll start with the perception learning and, uh,
+
+406
+00:23:05.775 --> 00:23:10.625
+I'll, I'll take one example to, uh, to make it, uh, um,
+
+407
+00:23:11.115 --> 00:23:15.425
+clear that how exactly the per perception works, sir,
+
+408
+00:23:15.425 --> 00:23:19.785
+has given some, uh, uh, like, uh, basic ideas that, okay,
+
+409
+00:23:19.785 --> 00:23:20.985
+what is the learning law?
+
+410
+00:23:21.605 --> 00:23:24.105
+So first of all, we'll see the perception, uh,
+
+411
+00:23:24.725 --> 00:23:25.825
+how exactly it works.
+
+412
+00:23:26.605 --> 00:23:29.785
+It is the same thing. What, uh, Sara had just explained, uh,
+
+413
+00:23:29.955 --> 00:23:33.505
+about the, uh, mp, um, case, uh,
+
+414
+00:23:34.005 --> 00:23:35.225
+um, MP neuron case.
+
+415
+00:23:35.445 --> 00:23:37.745
+It is in the same way, like this is the neuron.
+
+416
+00:23:37.765 --> 00:23:40.465
+It looks like where we are doing the weighted some,
+
+417
+00:23:41.285 --> 00:23:42.945
+and to this particular neuron,
+
+418
+00:23:42.945 --> 00:23:45.105
+there are some inputs which is coming.
+
+419
+00:23:45.305 --> 00:23:48.125
+For example, X one, X two, X three are the inputs,
+
+420
+00:23:49.025 --> 00:23:50.845
+and these three inputs are connected
+
+421
+00:23:50.845 --> 00:23:55.005
+with the neurons via these weights, W one, W2, and W three.
+
+422
+00:23:55.515 --> 00:23:59.805
+Okay? So, uh, with, along with these weights, these
+
+423
+00:24:00.345 --> 00:24:03.045
+inputs or these informations reaches
+
+424
+00:24:03.045 --> 00:24:04.245
+to this particular neuron.
+
+425
+00:24:04.945 --> 00:24:08.525
+And here at the neuron, what we do, we do the weighted sum.
+
+426
+00:24:08.725 --> 00:24:12.085
+WI xxi. So these values, you can take for an example, X one,
+
+427
+00:24:12.085 --> 00:24:17.045
+0.2, X two, 0.40 X three, 0.6, and W one, W2
+
+428
+00:24:17.045 --> 00:24:18.205
+and W three are also taken.
+
+429
+00:24:18.735 --> 00:24:21.085
+These weights I have taken randomly as of now.
+
+430
+00:24:21.985 --> 00:24:23.565
+Now, once we do the weighted sum,
+
+431
+00:24:23.675 --> 00:24:26.125
+then whatever is the output from that weighted sum,
+
+432
+00:24:26.125 --> 00:24:28.885
+we pass it through the activation function.
+
+433
+00:24:28.905 --> 00:24:31.165
+And here we are using the step function
+
+434
+00:24:31.165 --> 00:24:32.245
+as an activation function
+
+435
+00:24:32.245 --> 00:24:35.405
+where if the weighted sum value will be negative,
+
+436
+00:24:36.075 --> 00:24:37.725
+then the output would be zero.
+
+437
+00:24:38.385 --> 00:24:41.045
+If it is, uh, weighted sum would be zero
+
+438
+00:24:41.185 --> 00:24:43.245
+or positive, the output will be one.
+
+439
+00:24:43.345 --> 00:24:45.805
+Now, that is the case of this stiff function.
+
+440
+00:24:46.385 --> 00:24:50.405
+So you can see that. So now if we, if we have calculated,
+
+441
+00:24:50.505 --> 00:24:52.925
+you can see that there, there you can see the calculation
+
+442
+00:24:52.925 --> 00:24:54.845
+of weighted sum here, WIXI,
+
+443
+00:24:55.505 --> 00:24:58.085
+and here it is coming as minus 0.38.
+
+444
+00:24:58.085 --> 00:25:02.965
+If you'll multiply all this. So it, it comes as minus 0.38.
+
+445
+00:25:03.105 --> 00:25:05.685
+So obviously as per the step function,
+
+446
+00:25:05.695 --> 00:25:07.125
+it'll give the output at zero.
+
+447
+00:25:07.185 --> 00:25:08.725
+Now, this is how the single neuron,
+
+448
+00:25:08.725 --> 00:25:10.485
+or you can say single perceptron works
+
+449
+00:25:11.345 --> 00:25:15.165
+and just a perceptron working this one, right?
+
+450
+00:25:15.265 --> 00:25:19.405
+So here, uh, you, you have got some clarity that, okay,
+
+451
+00:25:19.425 --> 00:25:22.445
+how exactly the, the, uh, uh,
+
+452
+00:25:22.665 --> 00:25:25.045
+the working happens at the neuron and what, what
+
+453
+00:25:25.045 --> 00:25:27.045
+and all operations happen at the neuron.
+
+454
+00:25:27.045 --> 00:25:30.205
+So waited some and activation these two are the,
+
+455
+00:25:30.505 --> 00:25:31.925
+uh, functionality we have seen.
+
+456
+00:25:33.065 --> 00:25:35.525
+Now we have, we also talked about the bias,
+
+457
+00:25:36.025 --> 00:25:37.085
+uh, sometime back.
+
+458
+00:25:37.945 --> 00:25:41.365
+And, um, you see that, uh, I just, uh,
+
+459
+00:25:42.155 --> 00:25:44.525
+with the same set of input, X one, X two, X three,
+
+460
+00:25:44.745 --> 00:25:46.085
+and same set of weights.
+
+461
+00:25:46.385 --> 00:25:49.485
+So there is nothing, uh, change, which I have done in terms
+
+462
+00:25:49.485 --> 00:25:50.605
+of the input and the weights.
+
+463
+00:25:51.115 --> 00:25:53.645
+Same values also have taken like,
+
+464
+00:25:53.835 --> 00:25:56.445
+like it was there in the previous slide, X one, X two,
+
+465
+00:25:56.445 --> 00:25:59.485
+X three, W one, W2, W three, right?
+
+466
+00:25:59.745 --> 00:26:03.605
+The only change. Now you can see that inside the neuron
+
+467
+00:26:04.135 --> 00:26:06.685
+after the weighted sum, we are adding the bias.
+
+468
+00:26:06.945 --> 00:26:09.805
+Now, this is what we are the, uh, the change, which,
+
+469
+00:26:09.815 --> 00:26:11.525
+which I am showing you here
+
+470
+00:26:12.025 --> 00:26:13.525
+as compared to the previous slide.
+
+471
+00:26:14.425 --> 00:26:16.645
+Now, with this change, what has happened, the weighted sum,
+
+472
+00:26:16.645 --> 00:26:19.205
+which is coming as negative minus 0.38,
+
+473
+00:26:19.775 --> 00:26:21.485
+still it is minus 0.38.
+
+474
+00:26:21.485 --> 00:26:23.045
+There is no change in the weighted sum,
+
+475
+00:26:23.585 --> 00:26:25.325
+but as soon we have added the bias
+
+476
+00:26:25.425 --> 00:26:29.085
+and bias here, it has taken as plus 0.5.
+
+477
+00:26:29.865 --> 00:26:32.205
+Now, just because we have added the bias, which positive,
+
+478
+00:26:32.305 --> 00:26:34.925
+now it has become the positive number, right?
+
+479
+00:26:34.955 --> 00:26:38.045
+0.12. And as per the step function,
+
+480
+00:26:38.185 --> 00:26:42.165
+if the value is positive, then it'll give the output as one.
+
+481
+00:26:43.095 --> 00:26:46.185
+Okay? Now, this particular slide is to show
+
+482
+00:26:46.695 --> 00:26:48.105
+what is the role of bias?
+
+483
+00:26:48.815 --> 00:26:49.865
+What is the role of bias?
+
+484
+00:26:50.245 --> 00:26:54.505
+So sometimes what happen that you have the fix input,
+
+485
+00:26:54.605 --> 00:26:57.505
+no input anyway, you cannot change input is the something
+
+486
+00:26:57.505 --> 00:26:58.785
+which you have to work with.
+
+487
+00:26:59.885 --> 00:27:03.385
+And suppose you have decided a set of weights, right?
+
+488
+00:27:04.005 --> 00:27:05.665
+So with these set of inputs
+
+489
+00:27:05.665 --> 00:27:08.785
+and these set of weights, we were supposed to get the output
+
+490
+00:27:08.785 --> 00:27:11.545
+as zero and which we were getting in this particular case,
+
+491
+00:27:12.565 --> 00:27:15.465
+but sometimes we need some flexibility in this,
+
+492
+00:27:15.805 --> 00:27:17.025
+uh, in this threshold.
+
+493
+00:27:17.025 --> 00:27:19.705
+So here, the activation function is working like a threshold
+
+494
+00:27:19.705 --> 00:27:22.305
+that if it is negative, I'll give zero.
+
+495
+00:27:22.805 --> 00:27:24.505
+If it is positive, I'll give one.
+
+496
+00:27:24.645 --> 00:27:27.425
+So it's a very hard threshold, okay?
+
+497
+00:27:27.555 --> 00:27:30.505
+Which is, which, which we can see in, in, in terms
+
+498
+00:27:30.505 --> 00:27:34.145
+of this step function or activation function bias.
+
+499
+00:27:34.415 --> 00:27:38.345
+Help us to, to be little bit flexible
+
+500
+00:27:38.965 --> 00:27:40.145
+around this threshold.
+
+501
+00:27:40.145 --> 00:27:42.705
+You can say that bias is something which, uh,
+
+502
+00:27:43.155 --> 00:27:45.105
+introduces a little bit flexibility.
+
+503
+00:27:45.565 --> 00:27:47.025
+So what this bias has done here,
+
+504
+00:27:47.045 --> 00:27:48.705
+it has shifted the decision boundary,
+
+505
+00:27:48.705 --> 00:27:50.265
+which was exactly at zero.
+
+506
+00:27:51.055 --> 00:27:53.625
+Okay? So it has shifted the decision boundary.
+
+507
+00:27:53.625 --> 00:27:54.745
+So it plays around,
+
+508
+00:27:54.805 --> 00:27:56.665
+so sometimes it can shift the decision boundary
+
+509
+00:27:56.665 --> 00:27:59.425
+to the right side or to the left side here.
+
+510
+00:27:59.425 --> 00:28:03.505
+As you can see that minus 0.3, uh, minus 0.38,
+
+511
+00:28:03.515 --> 00:28:05.065
+hence it was falling here.
+
+512
+00:28:05.165 --> 00:28:06.545
+So the output was zero.
+
+513
+00:28:07.085 --> 00:28:09.265
+And just because of the bias, we have moved
+
+514
+00:28:09.265 --> 00:28:10.625
+to the right side, okay?
+
+515
+00:28:10.625 --> 00:28:11.865
+And hence, the output is one.
+
+516
+00:28:12.005 --> 00:28:13.225
+So that is the role of bias,
+
+517
+00:28:13.225 --> 00:28:16.545
+and it is very important in some cases, going further,
+
+518
+00:28:16.805 --> 00:28:17.825
+we will understand it here.
+
+519
+00:28:17.965 --> 00:28:19.385
+It may not make much sense.
+
+520
+00:28:19.385 --> 00:28:22.145
+That why obviously if you have added plus 0.5,
+
+521
+00:28:22.145 --> 00:28:23.425
+it has gone to the right side.
+
+522
+00:28:23.885 --> 00:28:27.745
+How does it make sense? But it is something like, uh,
+
+523
+00:28:28.255 --> 00:28:31.265
+when we have the fixed set of, uh, fixed threshold,
+
+524
+00:28:31.285 --> 00:28:33.265
+and if you want to make some flexibility
+
+525
+00:28:33.645 --> 00:28:36.345
+around the threshold, bias is really helpful.
+
+526
+00:28:36.735 --> 00:28:39.635
+Bias is really helpful. Okay?
+
+527
+00:28:39.895 --> 00:28:41.635
+So that's the role of the bias.
+
+528
+00:28:42.255 --> 00:28:45.595
+So with this, now, what we have understood that along
+
+529
+00:28:45.595 --> 00:28:47.715
+with the set of input and set of weights
+
+530
+00:28:47.935 --> 00:28:52.235
+and activation function bias is also one of the, um, one
+
+531
+00:28:52.235 --> 00:28:55.115
+of the most important components of a particular neurons.
+
+532
+00:28:55.735 --> 00:28:58.875
+And going further, you will see that mostly in
+
+533
+00:28:59.185 --> 00:29:01.275
+with all the neural network, what we will build,
+
+534
+00:29:01.495 --> 00:29:03.995
+we will attach one bias to each neuron,
+
+535
+00:29:04.155 --> 00:29:05.515
+although it is optional, as you can see
+
+536
+00:29:05.515 --> 00:29:08.075
+that in the previous case, we did not have the bias.
+
+537
+00:29:08.165 --> 00:29:09.355
+Still, it worked, right?
+
+538
+00:29:09.955 --> 00:29:11.315
+Whatever output it give, that doesn't
+
+539
+00:29:11.435 --> 00:29:12.995
+matter, but then it worked.
+
+540
+00:29:13.415 --> 00:29:15.475
+So having bias is not compulsory,
+
+541
+00:29:15.575 --> 00:29:19.955
+but having bias is al always gives us, uh, the, the, um,
+
+542
+00:29:20.185 --> 00:29:22.195
+flexibility to move around the
+
+543
+00:29:22.875 --> 00:29:24.515
+whatever activation function we have taken.
+
+544
+00:29:24.615 --> 00:29:28.315
+So that in that sense, the bias is sometimes helpful to,
+
+545
+00:29:28.455 --> 00:29:30.675
+to get the output whatever we desire.
+
+546
+00:29:31.535 --> 00:29:34.235
+So this is one thing about the perception
+
+547
+00:29:34.255 --> 00:29:35.315
+and how does it work.
+
+548
+00:29:36.905 --> 00:29:40.725
+Now, uh, now, now, now let's talk about the learning
+
+549
+00:29:40.745 --> 00:29:43.525
+of this perception, the how exactly the learning happens,
+
+550
+00:29:43.525 --> 00:29:45.885
+because if it is a machine learning,
+
+551
+00:29:45.985 --> 00:29:48.725
+and we are already, did you show the demo previous slide?
+
+552
+00:29:48.745 --> 00:29:52.565
+Uh, oh, yeah, sorry, I have the demo. So I'll just show you.
+
+553
+00:29:52.565 --> 00:29:55.935
+I'll switch to the demo to show you the same thing
+
+554
+00:29:55.935 --> 00:29:57.335
+what happened with or without bias.
+
+555
+00:29:57.475 --> 00:29:59.335
+So I thought that I'll show you the demo.
+
+556
+00:30:00.195 --> 00:30:03.095
+So here I have this, uh, code written.
+
+557
+00:30:03.565 --> 00:30:04.655
+It's very simple code,
+
+558
+00:30:04.795 --> 00:30:09.215
+and I'm going to use the same, uh, uh, uh, like, uh,
+
+559
+00:30:09.405 --> 00:30:12.495
+libraries and, uh, functions,
+
+560
+00:30:12.545 --> 00:30:14.855
+which we have already practiced in the last class.
+
+561
+00:30:14.855 --> 00:30:17.175
+And hopefully you have also done the practice
+
+562
+00:30:17.465 --> 00:30:19.935
+after I have shared those notebooks with you.
+
+563
+00:30:20.195 --> 00:30:23.495
+Now, I'm going to use most of the things, uh, similar here.
+
+564
+00:30:23.875 --> 00:30:27.495
+So first of all, as you can see here, uh, what we had was
+
+565
+00:30:28.045 --> 00:30:31.535
+this, uh, if you talk about this particular perceptron,
+
+566
+00:30:31.795 --> 00:30:35.015
+we have the set of inputs as X one, X two, X three,
+
+567
+00:30:35.195 --> 00:30:36.695
+and set of weights.
+
+568
+00:30:36.795 --> 00:30:40.695
+And this is what we need to first of all, uh, uh, create.
+
+569
+00:30:41.355 --> 00:30:44.375
+So I'm using the, I'm using the torch,
+
+570
+00:30:44.995 --> 00:30:47.135
+and with the torch I'm creating the tensor.
+
+571
+00:30:47.555 --> 00:30:50.415
+Now, this tensor will represent the set of inputs so
+
+572
+00:30:50.415 --> 00:30:53.415
+that this is set of inputs, which is being represented by X,
+
+573
+00:30:54.115 --> 00:30:56.375
+and this is set of weights, okay?
+
+574
+00:30:56.435 --> 00:30:58.415
+I'm just giving the name it as weights.
+
+575
+00:30:58.915 --> 00:31:02.255
+So these two are the, uh, tensors. You can say that, right?
+
+576
+00:31:02.715 --> 00:31:04.015
+And easy to understand it.
+
+577
+00:31:04.015 --> 00:31:06.175
+Now, because we have done this practice in the last class.
+
+578
+00:31:06.515 --> 00:31:09.095
+Now, once we have this set of input, set of weights,
+
+579
+00:31:09.095 --> 00:31:10.695
+then at the neuron, what we are doing,
+
+580
+00:31:10.695 --> 00:31:11.975
+we are doing the weighted sum.
+
+581
+00:31:12.615 --> 00:31:13.795
+We are doing the weighted sum.
+
+582
+00:31:13.895 --> 00:31:16.275
+So if you see this weighted sum operation, it is nothing
+
+583
+00:31:16.295 --> 00:31:17.875
+but the dot products, right?
+
+584
+00:31:17.935 --> 00:31:19.115
+It dot products.
+
+585
+00:31:19.115 --> 00:31:21.875
+0.2 is being multiplied with minus 0.3,
+
+586
+00:31:22.325 --> 00:31:24.595
+0.4 is being multiplied with 0.4,
+
+587
+00:31:24.975 --> 00:31:26.515
+and 0.6 is being multiplied
+
+588
+00:31:26.515 --> 00:31:28.315
+with minus zero point, it says dot product, right?
+
+589
+00:31:28.695 --> 00:31:32.955
+And the same thing i I have done here is I have taken
+
+590
+00:31:33.465 --> 00:31:35.035
+this torch.dot.
+
+591
+00:31:35.135 --> 00:31:38.675
+So the function is already defined in the torch library.
+
+592
+00:31:38.895 --> 00:31:40.555
+We are utilizing that one
+
+593
+00:31:40.975 --> 00:31:44.035
+and passing the two tensors, which we want to,
+
+594
+00:31:44.615 --> 00:31:45.875
+uh, do the dot product.
+
+595
+00:31:46.375 --> 00:31:48.355
+So w and x, these two are the tensiles,
+
+596
+00:31:48.355 --> 00:31:49.355
+which we have just created.
+
+597
+00:31:49.535 --> 00:31:50.835
+We are trying to do the dot product,
+
+598
+00:31:51.055 --> 00:31:53.955
+and hence this one line will do the dot product, okay?
+
+599
+00:31:54.615 --> 00:31:58.355
+And here, here we can see that what is the output,
+
+600
+00:31:58.355 --> 00:31:59.595
+which is coming from the dot product.
+
+601
+00:32:00.175 --> 00:32:03.835
+Now you can see that it is coming as minus 0.37.
+
+602
+00:32:03.895 --> 00:32:05.875
+So according to the step function, which says
+
+603
+00:32:05.875 --> 00:32:09.555
+that returns one, if X is greater than zero,
+
+604
+00:32:09.775 --> 00:32:14.435
+and what is x, X will be our weighted sum, L zero.
+
+605
+00:32:14.545 --> 00:32:17.035
+That means that if the X is less than zero
+
+606
+00:32:17.215 --> 00:32:19.475
+or equal to zero, the output is going to be zero.
+
+607
+00:32:19.655 --> 00:32:22.275
+Now, this is my step function, which we have defined here.
+
+608
+00:32:22.535 --> 00:32:23.995
+So this is just a definition of the function,
+
+609
+00:32:24.175 --> 00:32:25.995
+and we need to call this function a step.
+
+610
+00:32:26.495 --> 00:32:29.075
+So step function is being called in this particular cell,
+
+611
+00:32:29.295 --> 00:32:31.115
+and what we are passing in our weighted sum,
+
+612
+00:32:31.115 --> 00:32:32.795
+which is minus 0.37.
+
+613
+00:32:33.495 --> 00:32:36.875
+And because it is negative, the output will be zero.
+
+614
+00:32:37.935 --> 00:32:41.365
+Output will be zero. So this is what I was showing you that,
+
+615
+00:32:41.665 --> 00:32:46.005
+uh, in the, the first case where the, uh, the weighted sum
+
+616
+00:32:46.565 --> 00:32:48.405
+followed by the activation function is re
+
+617
+00:32:48.435 --> 00:32:49.925
+resulting the value zero.
+
+618
+00:32:50.825 --> 00:32:52.565
+Now, the second case, which I have shown you
+
+619
+00:32:52.565 --> 00:32:56.085
+with the perceptron, is I have added a bias into it, okay?
+
+620
+00:32:56.385 --> 00:33:00.525
+So same set of input, 0.2, 0.4, 0.6.
+
+621
+00:33:00.625 --> 00:33:03.405
+You can see that 0.2, 0.4, same set of input
+
+622
+00:33:03.405 --> 00:33:04.445
+and same set of bias.
+
+623
+00:33:04.515 --> 00:33:05.925
+I'll use, I won't change that.
+
+624
+00:33:06.425 --> 00:33:08.765
+But then what I'm adding is I'm adding a bias.
+
+625
+00:33:08.835 --> 00:33:11.445
+This is also going to be input for the neuron
+
+626
+00:33:11.985 --> 00:33:13.605
+and weighted some plus bias.
+
+627
+00:33:13.675 --> 00:33:15.685
+That is what we are going to compute now.
+
+628
+00:33:15.905 --> 00:33:18.445
+So this is, first of all, let us run this.
+
+629
+00:33:18.985 --> 00:33:21.805
+Now we have input bias, value and weights.
+
+630
+00:33:22.145 --> 00:33:24.285
+Now this, this, all three tensors are ready.
+
+631
+00:33:24.865 --> 00:33:26.845
+Now, weighted sum plus bias, you can see
+
+632
+00:33:26.845 --> 00:33:29.525
+that product plus bias will give,
+
+633
+00:33:29.555 --> 00:33:31.845
+give us the weighted sum plus bias information.
+
+634
+00:33:32.585 --> 00:33:36.205
+So as you can see that now it is coming as 0.12,
+
+635
+00:33:36.205 --> 00:33:37.325
+which is a positive number,
+
+636
+00:33:37.325 --> 00:33:39.365
+which is a positive number, okay?
+
+637
+00:33:39.705 --> 00:33:42.245
+And once we are passing this positive number
+
+638
+00:33:42.305 --> 00:33:46.045
+to the step function, it'll result as this particular
+
+639
+00:33:46.565 --> 00:33:48.125
+function which result as one.
+
+640
+00:33:48.125 --> 00:33:51.245
+Now this is what I was just explaining in terms of the, uh,
+
+641
+00:33:52.425 --> 00:33:53.765
+uh, uh, theory.
+
+642
+00:33:54.145 --> 00:33:55.725
+And, uh, this is the demo for that.
+
+643
+00:33:55.845 --> 00:33:58.005
+I, this is integrated in this slide also.
+
+644
+00:33:58.025 --> 00:34:01.285
+You can play around it, but I have taken the same values.
+
+645
+00:34:01.475 --> 00:34:03.125
+What you can see here,
+
+646
+00:34:04.015 --> 00:34:08.485
+There is a, I don't know the name, uh, sir, uh, yeah.
+
+647
+00:34:08.625 --> 00:34:09.625
+Um,
+
+648
+00:34:09.945 --> 00:34:10.945
+Sir, I had a doubt. Uh,
+
+649
+00:34:10.945 --> 00:34:12.205
+is it that, uh,
+
+650
+00:34:13.905 --> 00:34:15.875
+Yeah, Please, full output, which you,
+
+651
+00:34:16.205 --> 00:34:17.715
+which you're saying be that's
+
+652
+00:34:17.715 --> 00:34:19.235
+because that's the reason bias is helping
+
+653
+00:34:20.015 --> 00:34:21.715
+and one is a desirable output.
+
+654
+00:34:23.215 --> 00:34:26.355
+Uh, I missed something in between, uh, what you said. Oh,
+
+655
+00:34:27.425 --> 00:34:29.565
+If here we have added the bias
+
+656
+00:34:29.705 --> 00:34:31.285
+and our output has changed to
+
+657
+00:34:31.445 --> 00:34:34.425
+One, one, And, uh, are you saying
+
+658
+00:34:34.455 --> 00:34:36.385
+that one is a desirable output
+
+659
+00:34:36.385 --> 00:34:39.345
+and zero is not desirable output and biases help?
+
+660
+00:34:40.165 --> 00:34:41.505
+It, it, it may be the case.
+
+661
+00:34:41.725 --> 00:34:46.705
+For example, I will talk about the exor gate where, uh,
+
+662
+00:34:47.045 --> 00:34:50.775
+if it is one, one, the output should be one.
+
+663
+00:34:50.915 --> 00:34:53.735
+So sometimes, you know, what is your target which you want
+
+664
+00:34:53.735 --> 00:34:54.975
+to achieve, right?
+
+665
+00:34:55.405 --> 00:34:59.375
+Okay. So in such case where without bias I was not able
+
+666
+00:34:59.375 --> 00:35:02.495
+to achieve the target, this bias has helped
+
+667
+00:35:02.515 --> 00:35:03.655
+me to achieve that one.
+
+668
+00:35:03.675 --> 00:35:06.695
+So yes, it is a kind of supervised case where you know,
+
+669
+00:35:06.695 --> 00:35:08.335
+the target, what you have to achieve,
+
+670
+00:35:08.435 --> 00:35:10.655
+and this bias has helped me to achieve that one.
+
+671
+00:35:11.035 --> 00:35:14.615
+So bias is also, uh, like a weight, it is going
+
+672
+00:35:14.615 --> 00:35:18.375
+to be the parameters which we are going to learn, uh, right?
+
+673
+00:35:18.555 --> 00:35:21.375
+But then, yeah, here the bias I have introduced in a,
+
+674
+00:35:21.555 --> 00:35:26.535
+in a sense that yes, it is something which is helping us to,
+
+675
+00:35:27.635 --> 00:35:28.695
+uh, uh, shift
+
+676
+00:35:28.835 --> 00:35:31.775
+or shift the, uh, you can say decision boundary
+
+677
+00:35:32.155 --> 00:35:34.815
+or play around this decision boundary, sometimes shifting it
+
+678
+00:35:34.815 --> 00:35:36.175
+to the right side or left side.
+
+679
+00:35:36.515 --> 00:35:39.445
+So being a little bit flexible rather than visit. Yeah.
+
+680
+00:35:40.265 --> 00:35:43.845
+So one more doubt, uh, uh, correct me if I'm wrong, sir,
+
+681
+00:35:43.845 --> 00:35:47.125
+because in the LA last semester when we are doing this dual
+
+682
+00:35:47.165 --> 00:35:51.205
+networks, I, uh, I was, I was about to bias, we add
+
+683
+00:35:51.205 --> 00:35:52.605
+because, uh, once
+
+684
+00:35:55.975 --> 00:35:57.275
+in backward propagation
+
+685
+00:35:57.655 --> 00:36:00.475
+and where if the weights become zero, uh,
+
+686
+00:36:00.785 --> 00:36:02.795
+then the neuron gets dead neuron.
+
+687
+00:36:02.815 --> 00:36:06.275
+So that's the bias helps us not making it to zero.
+
+688
+00:36:06.455 --> 00:36:07.455
+Is that right?
+
+689
+00:36:08.285 --> 00:36:12.245
+I mean, I, that, that, that is also one reason maybe,
+
+690
+00:36:12.705 --> 00:36:14.685
+but that will see later on here,
+
+691
+00:36:14.745 --> 00:36:18.005
+we have not introduced the back propagation so far, okay?
+
+692
+00:36:18.015 --> 00:36:20.605
+Right. But still, there is a, uh, there,
+
+693
+00:36:20.655 --> 00:36:22.645
+there is a reason why we are adding the bias,
+
+694
+00:36:22.785 --> 00:36:25.125
+but what you have said has also some significance,
+
+695
+00:36:25.135 --> 00:36:27.045
+which we'll talk once we'll go into the back
+
+696
+00:36:27.045 --> 00:36:29.765
+propagation, we'll see that, okay. Significance. Yeah.
+
+697
+00:36:29.875 --> 00:36:34.085
+Okay. But, uh, just to add, uh, I don't know, 0, 0 3,
+
+698
+00:36:34.085 --> 00:36:35.565
+James Bond, uh, what's your name?
+
+699
+00:36:36.965 --> 00:36:41.165
+A sir A, please put T and, uh, tell you what.
+
+700
+00:36:41.165 --> 00:36:42.685
+Sure, sure. Yes, sir.
+
+701
+00:36:42.985 --> 00:36:46.565
+So others, because we had a very old CAD movie,
+
+702
+00:36:46.625 --> 00:36:48.965
+go CAD 9, 9 9 from Dr.
+
+703
+00:36:49.165 --> 00:36:53.565
+Raj Kumar. That's where, so, uh,
+
+704
+00:36:53.945 --> 00:36:57.725
+see, uh, the, the, the motivation, how
+
+705
+00:36:57.725 --> 00:37:01.565
+that bias came was, uh, to mimic the functioning
+
+706
+00:37:01.565 --> 00:37:02.805
+of the biological neuron.
+
+707
+00:37:03.725 --> 00:37:07.425
+But of course, after that, I use it for whatever mention.
+
+708
+00:37:08.055 --> 00:37:11.745
+Okay? And he also mentioned, no, I, I don't know how
+
+709
+00:37:11.745 --> 00:37:13.105
+to fix that bias initially.
+
+710
+00:37:13.105 --> 00:37:16.825
+That's where I will set that bias, uh, value, uh,
+
+711
+00:37:16.855 --> 00:37:19.785
+that node value to be either minus one or plus one.
+
+712
+00:37:20.175 --> 00:37:23.865
+Okay? Then you run, learn the link.
+
+713
+00:37:23.975 --> 00:37:26.025
+That also has w not weight parameter.
+
+714
+00:37:26.605 --> 00:37:31.295
+So essentially it is, uh, to mimic that
+
+715
+00:37:32.195 --> 00:37:36.375
+the equality sign there, uh, WXI equal to,
+
+716
+00:37:38.305 --> 00:37:40.435
+okay, to mimic, mimic that we use that.
+
+717
+00:37:40.535 --> 00:37:42.875
+But of course you can. Now it is an handler.
+
+718
+00:37:42.875 --> 00:37:46.755
+You can use it for any purpose. Okay?
+
+719
+00:37:47.205 --> 00:37:51.315
+Thank you, sir. Any other query from
+
+720
+00:37:51.315 --> 00:37:52.875
+anyone so far? It is clear,
+
+721
+00:37:53.795 --> 00:37:54.795
+Yes. Uh, sir, I
+
+722
+00:37:54.795 --> 00:37:55.335
+have it out.
+
+723
+00:37:55.335 --> 00:37:57.695
+Like, uh, we have written the steps out, like, uh,
+
+724
+00:37:57.895 --> 00:38:00.415
+whatever is given here in the slide, like this and that,
+
+725
+00:38:00.415 --> 00:38:03.295
+after that did, but how does it make those, uh,
+
+726
+00:38:03.295 --> 00:38:04.655
+statements of perception?
+
+727
+00:38:06.635 --> 00:38:10.415
+Uh, uh, I, I did not get to what, what you said. Mm-hmm.
+
+728
+00:38:10.715 --> 00:38:13.455
+How, how does all the steps makes it perceptron?
+
+729
+00:38:13.965 --> 00:38:17.135
+Yeah. Uh, no, see,
+
+730
+00:38:17.345 --> 00:38:20.455
+perceptron was the name, uh, which was given.
+
+731
+00:38:21.355 --> 00:38:24.535
+But uh, right now i, we, we are discussing how does
+
+732
+00:38:24.535 --> 00:38:25.775
+that perception work?
+
+733
+00:38:27.785 --> 00:38:30.845
+Uh, right, so what I'm explaining right now is the,
+
+734
+00:38:31.065 --> 00:38:34.005
+the working of a perceptron, and this is how it works.
+
+735
+00:38:34.075 --> 00:38:35.445
+When the set of inputs
+
+736
+00:38:35.445 --> 00:38:38.445
+and set of weights are there, then how do we add together,
+
+737
+00:38:38.665 --> 00:38:40.805
+add bias, and then pass it to the activation function?
+
+738
+00:38:40.805 --> 00:38:43.085
+This is the general working principle
+
+739
+00:38:43.085 --> 00:38:44.485
+for any neuron or perceptron.
+
+740
+00:38:44.485 --> 00:38:45.485
+Yeah,
+
+741
+00:38:47.255 --> 00:38:48.895
+I asked, I asked this question
+
+742
+00:38:48.895 --> 00:38:51.135
+because in, in Java, right, we have a concept
+
+743
+00:38:51.195 --> 00:38:53.935
+of encapsulation where we write all those things,
+
+744
+00:38:54.035 --> 00:38:56.615
+and that whole entity, like if I have
+
+745
+00:38:56.615 --> 00:38:58.735
+to make a perception in Java, I will
+
+746
+00:38:59.275 --> 00:39:00.895
+do everything inside the class.
+
+747
+00:39:01.135 --> 00:39:03.135
+I will have variables and methods and all the stuff.
+
+748
+00:39:03.635 --> 00:39:07.255
+But here in Python, like how do I make this kind
+
+749
+00:39:07.255 --> 00:39:09.175
+of stuff? Is this,
+
+750
+00:39:10.035 --> 00:39:11.095
+Oh, that is different.
+
+751
+00:39:11.315 --> 00:39:12.815
+Uh, query what you have asked.
+
+752
+00:39:13.155 --> 00:39:16.375
+See, uh, here also in Python, we can do that going further.
+
+753
+00:39:16.675 --> 00:39:20.095
+I'm not going to write that weighted surplus bias, uh,
+
+754
+00:39:20.155 --> 00:39:23.095
+the way I have shown you in the demo, the function,
+
+755
+00:39:23.435 --> 00:39:27.855
+and we are going to use the PyTorch, uh, neural network, uh,
+
+756
+00:39:28.165 --> 00:39:31.175
+like modules where we can directly add that layer
+
+757
+00:39:31.475 --> 00:39:33.735
+and then it'll do all these things automatically.
+
+758
+00:39:33.875 --> 00:39:36.615
+But so far we have not, uh, learned about that module.
+
+759
+00:39:36.715 --> 00:39:40.015
+So I have not, I have explained so similarly in the Java.
+
+760
+00:39:40.235 --> 00:39:41.615
+So they must have made one class
+
+761
+00:39:41.625 --> 00:39:43.335
+where they have implemented the same thing,
+
+762
+00:39:43.335 --> 00:39:44.735
+what we have seen just now.
+
+763
+00:39:45.325 --> 00:39:48.855
+Yeah. So it, I think it is, if it is the same perception
+
+764
+00:39:49.235 --> 00:39:50.655
+or in Java, it means something
+
+765
+00:39:50.655 --> 00:39:51.775
+else, I don't know then, yeah.
+
+766
+00:39:54.225 --> 00:39:58.685
+Thank you. Okay.
+
+767
+00:40:00.035 --> 00:40:04.805
+Alright. So, uh, so now, uh, once we have understood that,
+
+768
+00:40:04.805 --> 00:40:08.285
+okay, this is how the, the, uh, perceptron works.
+
+769
+00:40:08.865 --> 00:40:11.645
+So the next question, which must be coming in your, uh,
+
+770
+00:40:11.795 --> 00:40:13.925
+mind is, okay, inputs are fine,
+
+771
+00:40:13.985 --> 00:40:16.125
+and the output which I have to achieve is also fine,
+
+772
+00:40:16.145 --> 00:40:17.805
+but how these weights are being decided,
+
+773
+00:40:18.025 --> 00:40:19.165
+who decides that weight?
+
+774
+00:40:19.635 --> 00:40:22.165
+Suppose instead of minus 0.3, 0.5,
+
+775
+00:40:22.905 --> 00:40:23.925
+if I'll take something else
+
+776
+00:40:24.025 --> 00:40:28.365
+or instead of B equal to 0.5, if I'll take minus 0.5, then,
+
+777
+00:40:28.365 --> 00:40:30.525
+then again, I'm not going to get the output as one,
+
+778
+00:40:30.525 --> 00:40:31.765
+which is my desired output.
+
+779
+00:40:32.225 --> 00:40:35.325
+So how do we decide that, uh, the, the set
+
+780
+00:40:35.325 --> 00:40:36.565
+of weights and biases?
+
+781
+00:40:36.985 --> 00:40:38.485
+Now that is very important, and that's
+
+782
+00:40:38.485 --> 00:40:41.605
+where the learning part come into the picture, right?
+
+783
+00:40:41.905 --> 00:40:45.205
+You can try with some random set of inputs, uh, sorry,
+
+784
+00:40:45.205 --> 00:40:46.445
+weights and biases.
+
+785
+00:40:48.035 --> 00:40:51.735
+It may work, but in most of the cases it'll not, it, uh,
+
+786
+00:40:51.755 --> 00:40:53.615
+it may not, and you may have to try
+
+787
+00:40:53.615 --> 00:40:55.935
+with a different combination of weight and bias,
+
+788
+00:40:55.955 --> 00:40:57.295
+and then it may work, right?
+
+789
+00:40:57.875 --> 00:41:00.055
+So then that, that itself is called learning.
+
+790
+00:41:00.275 --> 00:41:03.655
+So what exactly we are doing is now for that one,
+
+791
+00:41:03.695 --> 00:41:05.415
+I have taken one example to understand that.
+
+792
+00:41:05.715 --> 00:41:09.015
+So suppose that we have this, this, uh, uh, example
+
+793
+00:41:09.105 --> 00:41:14.015
+where we have one input as CGPA of a student, another input
+
+794
+00:41:14.035 --> 00:41:15.215
+as IQ of the student.
+
+795
+00:41:16.115 --> 00:41:18.455
+And based on these two value, we want
+
+796
+00:41:18.475 --> 00:41:21.975
+to predict whether the student will be placed or not.
+
+797
+00:41:22.405 --> 00:41:25.895
+Okay? So it is zero means not placed, one minute placed.
+
+798
+00:41:26.475 --> 00:41:28.135
+So if you talk about the perceptron,
+
+799
+00:41:28.235 --> 00:41:32.095
+how the perceptron is going to work is it is like, uh,
+
+800
+00:41:32.395 --> 00:41:34.365
+the X node, it is a bias here.
+
+801
+00:41:34.565 --> 00:41:36.005
+X one, X two is the actual input.
+
+802
+00:41:36.125 --> 00:41:37.325
+X node is going to be bias.
+
+803
+00:41:38.105 --> 00:41:41.575
+And, uh, w node, X node,
+
+804
+00:41:42.085 --> 00:41:45.255
+because, uh, that is first input will, uh, from the bias,
+
+805
+00:41:45.255 --> 00:41:46.895
+which will come to the, uh, perceptron,
+
+806
+00:41:46.895 --> 00:41:48.815
+and then W one X one plus W2 X two,
+
+807
+00:41:48.815 --> 00:41:50.055
+the weighted sum, weighted sum.
+
+808
+00:41:50.055 --> 00:41:51.615
+This is the same weighted sum
+
+809
+00:41:52.315 --> 00:41:55.215
+and plus bias plus B, what you're seeing is nothing
+
+810
+00:41:55.315 --> 00:41:57.415
+but this particular part W not X, no,
+
+811
+00:41:57.415 --> 00:41:59.215
+because this X no is my bias.
+
+812
+00:41:59.315 --> 00:42:01.135
+It is not the actual input.
+
+813
+00:42:01.155 --> 00:42:03.255
+You can see that X one, X two is my input.
+
+814
+00:42:03.995 --> 00:42:06.255
+So perceptron equation will look like this.
+
+815
+00:42:06.875 --> 00:42:10.535
+So now the question is what should be the correct, uh,
+
+816
+00:42:10.655 --> 00:42:11.695
+correct value for this?
+
+817
+00:42:11.815 --> 00:42:14.175
+W no, W one and W2.
+
+818
+00:42:14.475 --> 00:42:18.855
+If we get these two value, uh, correctly, then it may happen
+
+819
+00:42:18.925 --> 00:42:21.255
+that I will get the correct output as zero
+
+820
+00:42:21.475 --> 00:42:24.055
+or one for, for the different data points.
+
+821
+00:42:24.945 --> 00:42:28.165
+So finding the correct, uh, correct values
+
+822
+00:42:28.385 --> 00:42:30.645
+for these parameters, W non W one
+
+823
+00:42:30.645 --> 00:42:32.685
+and W2 is known as learning.
+
+824
+00:42:33.265 --> 00:42:35.965
+And in the perceptron what happened, uh,
+
+825
+00:42:36.425 --> 00:42:38.605
+the learning happens, uh, with a trick.
+
+826
+00:42:38.745 --> 00:42:41.445
+Uh, that's why this, this known as a perceptron trick.
+
+827
+00:42:42.085 --> 00:42:43.645
+I know that you have gone through this, uh,
+
+828
+00:42:44.395 --> 00:42:46.645
+machine learning in the previous semester as well
+
+829
+00:42:46.645 --> 00:42:47.645
+as neural network, uh,
+
+830
+00:42:47.925 --> 00:42:49.525
+a little bit in the previous semester,
+
+831
+00:42:50.105 --> 00:42:51.645
+and you know that, okay, there is, uh,
+
+832
+00:42:51.645 --> 00:42:54.805
+something called back propagation at very high level, uh,
+
+833
+00:42:54.815 --> 00:42:57.285
+where we update these weights, you can say that, okay,
+
+834
+00:42:57.315 --> 00:42:59.165
+I'll start with any set of weights
+
+835
+00:42:59.385 --> 00:43:02.565
+and I'll update that one with, uh, the back propagation.
+
+836
+00:43:03.225 --> 00:43:06.485
+But the point which I want to make here is when in,
+
+837
+00:43:06.565 --> 00:43:10.205
+in the case of perceptron then when, when it was proposed,
+
+838
+00:43:10.295 --> 00:43:13.045
+there was no back propagation algorithm, which was, uh,
+
+839
+00:43:13.825 --> 00:43:15.085
+it, it was not in place.
+
+840
+00:43:16.025 --> 00:43:18.685
+So people did not use the back propagation algorithm
+
+841
+00:43:18.985 --> 00:43:22.725
+to come up with the correct set of this w nor WN W2, okay?
+
+842
+00:43:23.105 --> 00:43:24.165
+And hence what they did
+
+843
+00:43:24.475 --> 00:43:26.125
+that did something like that support.
+
+844
+00:43:26.125 --> 00:43:28.045
+There are three point say that these, this,
+
+845
+00:43:28.045 --> 00:43:30.205
+this blue point is representing the class zero,
+
+846
+00:43:30.825 --> 00:43:33.405
+and these two points are representing the class one.
+
+847
+00:43:33.705 --> 00:43:37.405
+So what they did, they started with any random set of these,
+
+848
+00:43:37.455 --> 00:43:40.685
+these weights w not say that minus one W one, 0.5,
+
+849
+00:43:40.885 --> 00:43:44.085
+W2 minus 0.3, say that random set of weights.
+
+850
+00:43:44.705 --> 00:43:48.405
+And then because these are some values, uh, of these, uh,
+
+851
+00:43:48.555 --> 00:43:50.925
+then, then obviously it'll give us one,
+
+852
+00:43:51.305 --> 00:43:52.525
+uh, one straight line.
+
+853
+00:43:52.585 --> 00:43:55.165
+So you can solve it for X two, uh,
+
+854
+00:43:55.305 --> 00:43:58.445
+and uh, you will get, you will get the, uh,
+
+855
+00:43:58.665 --> 00:44:00.885
+you will get the straight line.
+
+856
+00:44:01.105 --> 00:44:02.605
+So this is X one, X two.
+
+857
+00:44:02.665 --> 00:44:04.405
+So obviously you will get the straight line.
+
+858
+00:44:04.665 --> 00:44:06.965
+So say that this straight line is here right now,
+
+859
+00:44:06.965 --> 00:44:08.565
+this linear line is here right now.
+
+860
+00:44:09.385 --> 00:44:13.245
+So wherever it is at the first, at the first iteration,
+
+861
+00:44:13.245 --> 00:44:15.045
+this is the first straight line
+
+862
+00:44:15.045 --> 00:44:16.125
+or linear line we are getting.
+
+863
+00:44:16.785 --> 00:44:18.325
+And it may not be the correct obviously,
+
+864
+00:44:18.325 --> 00:44:20.605
+because we have started with some random weights.
+
+865
+00:44:20.905 --> 00:44:23.925
+So then what they did support, there are three data
+
+866
+00:44:24.655 --> 00:44:25.885
+perception trick says
+
+867
+00:44:25.885 --> 00:44:29.525
+that you choose any data point randomly, okay?
+
+868
+00:44:29.625 --> 00:44:31.325
+So that I will choose this blue
+
+869
+00:44:31.325 --> 00:44:32.805
+point randomly, we have to choose.
+
+870
+00:44:32.805 --> 00:44:33.925
+So we don't have any control.
+
+871
+00:44:34.265 --> 00:44:36.765
+So this point we may choose or this point we may choose
+
+872
+00:44:36.765 --> 00:44:38.445
+or this point, any point can be chosen.
+
+873
+00:44:39.215 --> 00:44:42.515
+So what a point, whatever point you are choosing, you see
+
+874
+00:44:42.515 --> 00:44:45.555
+that, okay, where is your line and where is the data point?
+
+875
+00:44:46.055 --> 00:44:48.915
+If the data point is in the correct side of the line,
+
+876
+00:44:49.735 --> 00:44:51.665
+then there is no change in the line.
+
+877
+00:44:52.415 --> 00:44:53.905
+When I say no change in the line,
+
+878
+00:44:53.905 --> 00:44:56.025
+that means no change in these parameters.
+
+879
+00:44:56.565 --> 00:44:59.465
+If suppose data points is in the wrong side of the line,
+
+880
+00:45:00.095 --> 00:45:02.585
+what you will do, you will shift the line towards this
+
+881
+00:45:02.585 --> 00:45:04.285
+data, okay?
+
+882
+00:45:04.295 --> 00:45:08.125
+Maybe I'll shift the line towards this data so that I,
+
+883
+00:45:08.205 --> 00:45:09.925
+when I'm shifting the line, that means
+
+884
+00:45:09.925 --> 00:45:11.285
+that these parameters are changing.
+
+885
+00:45:11.795 --> 00:45:15.615
+Okay? So how much you're shifting those, that
+
+886
+00:45:15.615 --> 00:45:18.215
+that much change, you will see in this w not W one
+
+887
+00:45:18.215 --> 00:45:19.695
+and W2, okay?
+
+888
+00:45:19.835 --> 00:45:21.735
+And that you will do for a particular point,
+
+889
+00:45:22.225 --> 00:45:23.615
+hence you will come up with a new line.
+
+890
+00:45:23.755 --> 00:45:27.035
+And then what you will do, you will do this process again.
+
+891
+00:45:27.035 --> 00:45:30.195
+You will again choose choose any, any other
+
+892
+00:45:30.575 --> 00:45:31.755
+or maybe the same random.
+
+893
+00:45:31.895 --> 00:45:33.795
+So because you have to choose, choose any
+
+894
+00:45:33.795 --> 00:45:35.155
+point randomly it may happen.
+
+895
+00:45:35.215 --> 00:45:37.355
+The same point will come again as a random point.
+
+896
+00:45:37.975 --> 00:45:40.105
+Then again, you will see that, okay, it is in the right side
+
+897
+00:45:40.105 --> 00:45:41.825
+or left side, or correct side or wrong side.
+
+898
+00:45:41.965 --> 00:45:44.665
+If it is correct side, there is no change in the line.
+
+899
+00:45:44.805 --> 00:45:48.105
+If it is the wrong side, change these parameters. Okay?
+
+900
+00:45:48.885 --> 00:45:52.465
+And you do it, you do it for one time, two times, 10 times,
+
+901
+00:45:52.515 --> 00:45:53.825
+50 times, a hundred times.
+
+902
+00:45:54.165 --> 00:45:57.345
+That's all blindly, okay? Blindly.
+
+903
+00:45:58.005 --> 00:46:00.865
+Uh, so obviously there is a, uh,
+
+904
+00:46:01.085 --> 00:46:03.825
+update rule which we are going to see next for how
+
+905
+00:46:03.825 --> 00:46:04.865
+to change these weights.
+
+906
+00:46:04.865 --> 00:46:09.105
+There is update rule, but the weight will change or not.
+
+907
+00:46:09.245 --> 00:46:13.225
+It depends on the random points what we are identifying.
+
+908
+00:46:13.725 --> 00:46:16.025
+So if the random point is the correct side of the line,
+
+909
+00:46:16.035 --> 00:46:17.865
+there is no change in the random weights,
+
+910
+00:46:18.125 --> 00:46:21.065
+and if it is a, a wrong side of the line, then you have
+
+911
+00:46:21.065 --> 00:46:24.425
+to change them that you have to update these weights.
+
+912
+00:46:24.425 --> 00:46:25.505
+So that's the trick.
+
+913
+00:46:25.605 --> 00:46:28.625
+So you see that with the, if we do it for number of times,
+
+914
+00:46:28.805 --> 00:46:31.185
+it may happen after certain number of hydration.
+
+915
+00:46:31.695 --> 00:46:34.185
+This line will be, this line can,
+
+916
+00:46:34.205 --> 00:46:36.265
+can come at the appropriate place with
+
+917
+00:46:36.265 --> 00:46:38.185
+where it can divide the two class of the data.
+
+918
+00:46:38.365 --> 00:46:41.465
+So if this line will move in this direction, suppose here
+
+919
+00:46:42.005 --> 00:46:43.745
+if it'll move in this direction,
+
+920
+00:46:43.745 --> 00:46:46.025
+and if it is, it'll come something like that,
+
+921
+00:46:46.255 --> 00:46:49.105
+then obviously it is, now it has moved like that
+
+922
+00:46:49.125 --> 00:46:50.225
+of obvious, right?
+
+923
+00:46:50.525 --> 00:46:53.745
+So now the, you can say that the blue is in the left side
+
+924
+00:46:53.745 --> 00:46:55.145
+of the line and two green points
+
+925
+00:46:55.145 --> 00:46:56.225
+are in the right side of the line.
+
+926
+00:46:56.325 --> 00:46:57.705
+And this is what we have to achieve.
+
+927
+00:46:58.325 --> 00:47:01.585
+And this, this, this learning is known
+
+928
+00:47:01.605 --> 00:47:03.865
+as the perceptron trick, okay?
+
+929
+00:47:03.865 --> 00:47:08.145
+This learn, because now we have never used any, any, uh, say
+
+930
+00:47:08.145 --> 00:47:09.345
+that gradient, which we are going
+
+931
+00:47:09.345 --> 00:47:10.465
+to learn in the back propagation,
+
+932
+00:47:10.485 --> 00:47:12.425
+but it's still, it may happen that
+
+933
+00:47:12.425 --> 00:47:13.825
+after some number of, uh,
+
+934
+00:47:13.825 --> 00:47:15.985
+iteration we are getting our correct line.
+
+935
+00:47:16.775 --> 00:47:20.305
+Okay? So, uh, this is, this is what, uh,
+
+936
+00:47:20.365 --> 00:47:22.225
+is there in the perceptron trick.
+
+937
+00:47:22.725 --> 00:47:27.065
+So, uh, uh, just just to show, give a little more clarity.
+
+938
+00:47:27.285 --> 00:47:31.045
+So w not X, no, WW one, X one, W2 X two is equal two zero.
+
+939
+00:47:31.075 --> 00:47:32.885
+This is going to be my decision boundary.
+
+940
+00:47:33.225 --> 00:47:36.565
+And what we'll do, we'll solve it for X two because, uh,
+
+941
+00:47:36.785 --> 00:47:38.565
+or X one, whatever it is, doesn't matter.
+
+942
+00:47:38.905 --> 00:47:41.045
+So given X one, what is X two?
+
+943
+00:47:41.045 --> 00:47:42.725
+That's why I'm saying that solve it for X two,
+
+944
+00:47:42.825 --> 00:47:44.925
+you will get an equation because W node, you know,
+
+945
+00:47:45.245 --> 00:47:47.605
+X no is fixed because it is a bias value.
+
+946
+00:47:48.305 --> 00:47:51.805
+Uh, but it is, it is, uh, it, it is already given to us.
+
+947
+00:47:52.505 --> 00:47:54.125
+And, uh, w not W one
+
+948
+00:47:54.125 --> 00:47:58.125
+and W2 randomly, we have started by minus one, 0.5 and 0.3.
+
+949
+00:47:58.705 --> 00:48:01.205
+You can always solve it for either X two or X one,
+
+950
+00:48:01.305 --> 00:48:04.105
+and hence you will get a linear line equation
+
+951
+00:48:04.565 --> 00:48:06.745
+and that that is how you get a initial line.
+
+952
+00:48:06.925 --> 00:48:10.105
+And then you update these, uh, update these values
+
+953
+00:48:10.165 --> 00:48:11.825
+of w non W one, W2,
+
+954
+00:48:12.485 --> 00:48:14.145
+and see that where the line is going
+
+955
+00:48:14.405 --> 00:48:16.145
+by randomly choosing a point.
+
+956
+00:48:16.485 --> 00:48:18.505
+So this is, this learning is known
+
+957
+00:48:18.505 --> 00:48:20.065
+as perception trick learning.
+
+958
+00:48:20.085 --> 00:48:21.425
+You can say that. Yeah, yeah.
+
+959
+00:48:21.425 --> 00:48:23.105
+There is just one question, I guess. Yeah.
+
+960
+00:48:24.895 --> 00:48:28.875
+Yes, sir. Um, uh, so it is actually reducing, uh,
+
+961
+00:48:28.975 --> 00:48:32.875
+in other terms, we can say that it is reducing the error
+
+962
+00:48:32.875 --> 00:48:36.115
+between the original value and predicted value, right? Sir?
+
+963
+00:48:36.535 --> 00:48:38.275
+Yes, you can say that although I have not
+
+964
+00:48:38.275 --> 00:48:39.915
+yet introduced the error, but which is going
+
+965
+00:48:39.915 --> 00:48:41.035
+to come in the next slide,
+
+966
+00:48:41.735 --> 00:48:45.835
+but uh, yes, you can say that some somehow, uh,
+
+967
+00:48:46.135 --> 00:48:47.475
+we are trying to do that, yeah.
+
+968
+00:48:48.015 --> 00:48:52.655
+Yes, thanks. Okay.
+
+969
+00:48:54.665 --> 00:48:57.335
+Right. So, uh, this is the a
+
+970
+00:48:59.405 --> 00:49:00.895
+Some more hands are there.
+
+971
+00:49:00.895 --> 00:49:02.815
+Yeah, please, please, please. Soman. Yeah,
+
+972
+00:49:03.075 --> 00:49:04.075
+Sir. Um,
+
+973
+00:49:04.075 --> 00:49:06.175
+can you go back to the previous slide? Yeah.
+
+974
+00:49:06.795 --> 00:49:08.615
+So you had two inputs here
+
+975
+00:49:08.835 --> 00:49:11.775
+and, uh, uh, I mean three inputs like zero x one
+
+976
+00:49:11.775 --> 00:49:16.335
+and X two, um, you're setting weights to like the, the
+
+977
+00:49:17.335 --> 00:49:20.455
+multiplied weights to zero for the decision boundary.
+
+978
+00:49:20.515 --> 00:49:24.175
+Is it like, uh, we are expecting that decision boundary
+
+979
+00:49:24.195 --> 00:49:26.895
+to pass through the origin in the end dimensional space?
+
+980
+00:49:27.825 --> 00:49:30.525
+Yes, yes. So, uh, it is something like, uh,
+
+981
+00:49:30.785 --> 00:49:34.245
+you see this step function, you see this step function.
+
+982
+00:49:34.945 --> 00:49:38.325
+So you, it'll give you some clarity that left side
+
+983
+00:49:38.325 --> 00:49:40.125
+of this step function is one class,
+
+984
+00:49:40.385 --> 00:49:41.725
+and right side is in one class.
+
+985
+00:49:41.945 --> 00:49:45.605
+And you can assume that this, this, this point
+
+986
+00:49:45.655 --> 00:49:48.045
+where it is zero is your decision boundary, so
+
+987
+00:49:48.045 --> 00:49:49.445
+that you can decide, okay, one class
+
+988
+00:49:49.585 --> 00:49:50.925
+or other class you can go.
+
+989
+00:49:51.545 --> 00:49:53.645
+So it, it's a, it is a sensory where,
+
+990
+00:49:53.855 --> 00:49:55.565
+where this per ion is working
+
+991
+00:49:55.565 --> 00:49:57.165
+as a boundary class where we can think like that,
+
+992
+00:49:57.985 --> 00:50:00.325
+Yes, obviously in the, in this case it is,
+
+993
+00:50:00.505 --> 00:50:03.485
+it is working like, uh, zero or one, yes, yes.
+
+994
+00:50:04.155 --> 00:50:07.415
+Okay, thank you sir. Now that is, that is what, that is
+
+995
+00:50:07.415 --> 00:50:09.175
+what is, that is what we are trying to achieve.
+
+996
+00:50:09.245 --> 00:50:11.895
+Also, we want to make it as a binary classifier,
+
+997
+00:50:11.895 --> 00:50:13.255
+this perception right now.
+
+998
+00:50:13.255 --> 00:50:17.935
+Yeah. Any other question from anyone?
+
+999
+00:50:24.585 --> 00:50:28.405
+Okay, so, so I guess now you have understood, uh, that
+
+1000
+00:50:28.405 --> 00:50:29.685
+what is this algorithm?
+
+1001
+00:50:29.735 --> 00:50:31.045
+Perceptron trick algorithm.
+
+1002
+00:50:31.265 --> 00:50:34.725
+So you start with any set of weights randomly,
+
+1003
+00:50:34.725 --> 00:50:38.125
+like w not W one, whatever number of inputs you have
+
+1004
+00:50:38.625 --> 00:50:40.165
+for those, you have to initialize the weight,
+
+1005
+00:50:40.165 --> 00:50:42.005
+you initialize it randomly, okay?
+
+1006
+00:50:42.635 --> 00:50:44.365
+Bias value, you can set it to one.
+
+1007
+00:50:44.985 --> 00:50:47.525
+And then this is the, this is what we have to do.
+
+1008
+00:50:47.545 --> 00:50:50.205
+We have to compute the weighted sum, which we have done,
+
+1009
+00:50:51.025 --> 00:50:54.565
+and we can, uh, using the predict, uh, step function, uh,
+
+1010
+00:50:54.715 --> 00:50:57.325
+predict the output using the step function, okay?
+
+1011
+00:50:57.785 --> 00:50:59.365
+Uh, so what we have to do is we have
+
+1012
+00:50:59.365 --> 00:51:00.605
+to randomly choose any point,
+
+1013
+00:51:01.545 --> 00:51:05.045
+and we have to see that, okay, it is in the, uh,
+
+1014
+00:51:05.045 --> 00:51:08.125
+correct site or the wrong site, okay?
+
+1015
+00:51:08.235 --> 00:51:11.525
+Then accordingly, we have to update the weights,
+
+1016
+00:51:12.305 --> 00:51:15.845
+and it says that you update the weight only if
+
+1017
+00:51:15.915 --> 00:51:18.285
+misclassified, and this is the weight update formula.
+
+1018
+00:51:18.605 --> 00:51:21.885
+WI is equal to WI plus eta,
+
+1019
+00:51:22.385 --> 00:51:24.725
+and then there is an error, okay?
+
+1020
+00:51:24.725 --> 00:51:27.525
+There is an error into XI. Okay?
+
+1021
+00:51:27.785 --> 00:51:29.165
+And how do we calculate the error?
+
+1022
+00:51:29.305 --> 00:51:31.365
+Say Y minus y hat,
+
+1023
+00:51:31.595 --> 00:51:35.205
+because step function, suppose it is giving the output as
+
+1024
+00:51:36.245 --> 00:51:38.895
+zero, but actual output is one, suppose.
+
+1025
+00:51:38.895 --> 00:51:40.535
+So then it'll be one minus zero.
+
+1026
+00:51:41.045 --> 00:51:43.855
+That will be the error which has to be inserted here.
+
+1027
+00:51:44.595 --> 00:51:47.775
+If the, the correct output is one and,
+
+1028
+00:51:48.155 --> 00:51:49.695
+and predicted output is also one,
+
+1029
+00:51:49.695 --> 00:51:51.055
+then one minus one will be zero.
+
+1030
+00:51:51.195 --> 00:51:52.935
+In that case, this whole term will be zero,
+
+1031
+00:51:53.195 --> 00:51:55.415
+and you're not doing any change in this particular weight.
+
+1032
+00:51:55.755 --> 00:51:59.175
+So this particular weight update will work only if there is
+
+1033
+00:51:59.175 --> 00:52:01.695
+any error here, otherwise it'll not,
+
+1034
+00:52:01.695 --> 00:52:05.255
+so error may be plus one or it may be minus one, alright?
+
+1035
+00:52:05.305 --> 00:52:08.695
+Right? That the, so in that case, your weight will update,
+
+1036
+00:52:09.035 --> 00:52:11.455
+uh, by increasing some value or decreasing some value,
+
+1037
+00:52:11.635 --> 00:52:14.375
+but if it is the, uh, you are doing the correct prediction,
+
+1038
+00:52:14.375 --> 00:52:15.735
+then there is no change in the weight.
+
+1039
+00:52:16.125 --> 00:52:19.055
+Okay? So this is the weight update, update rule
+
+1040
+00:52:20.085 --> 00:52:21.625
+in the perception trick algorithm.
+
+1041
+00:52:22.245 --> 00:52:23.345
+So this is what we follow
+
+1042
+00:52:23.685 --> 00:52:25.745
+and we, every time we change the weights,
+
+1043
+00:52:26.325 --> 00:52:27.865
+all these weights, right?
+
+1044
+00:52:27.925 --> 00:52:30.585
+And then we try, we come up with a new line and we see,
+
+1045
+00:52:30.645 --> 00:52:33.825
+and then we, then we choose the next random point.
+
+1046
+00:52:34.095 --> 00:52:37.425
+Okay? Next random point, and again, we repeat this process.
+
+1047
+00:52:37.525 --> 00:52:39.065
+So second step is going to repeat
+
+1048
+00:52:39.085 --> 00:52:40.625
+for say you can fix that, okay?
+
+1049
+00:52:40.625 --> 00:52:41.905
+I'll repeat it for a hundred times
+
+1050
+00:52:42.805 --> 00:52:44.145
+and that's all, and then I'll stop.
+
+1051
+00:52:44.175 --> 00:52:48.225
+That can be your, maybe the, the, um, you can say that the
+
+1052
+00:52:49.265 --> 00:52:50.345
+criteria where you can stop.
+
+1053
+00:52:50.805 --> 00:52:54.825
+So, uh, either there should no, uh, no misclassified point
+
+1054
+00:52:54.825 --> 00:52:57.105
+because you're plotting, visualizing, you can say that,
+
+1055
+00:52:57.105 --> 00:52:58.705
+okay, there is no misclassified point,
+
+1056
+00:52:59.085 --> 00:53:01.585
+or you have, uh, raised the maximum number of ion.
+
+1057
+00:53:01.585 --> 00:53:03.985
+These two criteria will take you out of the loop
+
+1058
+00:53:04.085 --> 00:53:05.825
+and you can stop this particular algorithm.
+
+1059
+00:53:06.755 --> 00:53:10.525
+Okay? So, uh, to make it more clear, I have two,
+
+1060
+00:53:10.665 --> 00:53:12.205
+uh, uh, two things.
+
+1061
+00:53:12.385 --> 00:53:14.405
+So first of all, I'll show you the visualization
+
+1062
+00:53:14.825 --> 00:53:16.285
+to understand this one clearly.
+
+1063
+00:53:17.185 --> 00:53:19.605
+So, uh, look at this.
+
+1064
+00:53:21.185 --> 00:53:23.965
+So this particular website will show you the same thing.
+
+1065
+00:53:24.865 --> 00:53:28.325
+So here, uh, number of points are taken at a hundred.
+
+1066
+00:53:28.505 --> 00:53:32.365
+You can see that there are two class, one is blue,
+
+1067
+00:53:32.365 --> 00:53:34.605
+another one is red, okay?
+
+1068
+00:53:35.345 --> 00:53:37.085
+And, uh, same algorithm.
+
+1069
+00:53:37.115 --> 00:53:38.485
+What I have explained to you just now,
+
+1070
+00:53:38.485 --> 00:53:42.325
+you initialize the weights, you initialize the weights, the
+
+1071
+00:53:42.865 --> 00:53:44.205
+all the weights to the zero
+
+1072
+00:53:45.015 --> 00:53:47.525
+while there are misclassification points, suppose.
+
+1073
+00:53:47.525 --> 00:53:49.845
+So what it'll do, it'll randomly choose any point
+
+1074
+00:53:50.145 --> 00:53:51.725
+and shift the line towards it
+
+1075
+00:53:51.785 --> 00:53:53.205
+to make it in the correct site.
+
+1076
+00:53:53.595 --> 00:53:55.885
+Okay? You can say that, okay, this is the side of blue.
+
+1077
+00:53:55.885 --> 00:53:58.645
+This is the side of green, uh, sorry, red.
+
+1078
+00:53:58.645 --> 00:54:02.245
+Then line should be this, this line, which is the, this,
+
+1079
+00:54:02.635 --> 00:54:04.285
+this line should go somewhere here.
+
+1080
+00:54:04.755 --> 00:54:07.525
+Okay? So that blue will be all way, all the blue will be
+
+1081
+00:54:07.525 --> 00:54:10.285
+that side and all the rate will be, uh, below.
+
+1082
+00:54:10.505 --> 00:54:12.285
+So that is the ultimate goal.
+
+1083
+00:54:12.745 --> 00:54:13.805
+So, uh,
+
+1084
+00:54:14.185 --> 00:54:16.405
+but then it may not be true when we'll
+
+1085
+00:54:16.405 --> 00:54:17.685
+start this particular algorithm.
+
+1086
+00:54:17.705 --> 00:54:18.845
+So we'll update the weights
+
+1087
+00:54:18.845 --> 00:54:20.965
+and for updating the weight, this is the formula.
+
+1088
+00:54:21.185 --> 00:54:23.005
+Uh, this is the equation which we have already seen.
+
+1089
+00:54:23.585 --> 00:54:25.685
+So I'll play this one and I'll, you will see that
+
+1090
+00:54:25.685 --> 00:54:27.045
+how this line is going.
+
+1091
+00:54:27.945 --> 00:54:29.445
+So let me just play.
+
+1092
+00:54:30.195 --> 00:54:34.815
+So now see that what is happening, so line is not going, uh,
+
+1093
+00:54:35.655 --> 00:54:37.575
+I mean you can say that one by one.
+
+1094
+00:54:37.575 --> 00:54:40.935
+It, it is going up, down, up, down, anywhere,
+
+1095
+00:54:41.275 --> 00:54:42.415
+up, down, up, down anywhere.
+
+1096
+00:54:42.475 --> 00:54:44.135
+And the piece that why it is happening,
+
+1097
+00:54:44.435 --> 00:54:46.215
+if it is going systematically,
+
+1098
+00:54:46.215 --> 00:54:48.615
+then it would've happened is first the line,
+
+1099
+00:54:48.615 --> 00:54:51.535
+which is here first you can say that the line which is here,
+
+1100
+00:54:51.765 --> 00:54:53.455
+that the next line, I would've chosen here
+
+1101
+00:54:53.725 --> 00:54:55.055
+that the next line I would've chosen
+
+1102
+00:54:55.055 --> 00:54:57.655
+because I'm going towards the actual boundary,
+
+1103
+00:54:58.245 --> 00:54:59.615
+then the line chosen here,
+
+1104
+00:54:59.675 --> 00:55:01.775
+and then I would have ended here, which is the,
+
+1105
+00:55:01.775 --> 00:55:03.055
+maybe the correct decision boundary.
+
+1106
+00:55:03.055 --> 00:55:05.495
+But that is not happening. You have seen, right?
+
+1107
+00:55:05.515 --> 00:55:07.815
+You have seen one once again, I'll show you that one
+
+1108
+00:55:07.835 --> 00:55:09.095
+to give you that understanding.
+
+1109
+00:55:10.905 --> 00:55:15.745
+So I will play it again, uh, pause, uh,
+
+1110
+00:55:15.745 --> 00:55:17.505
+and I will play it again.
+
+1111
+00:55:18.355 --> 00:55:21.255
+Uh, sorry. So reset, okay, reset.
+
+1112
+00:55:21.255 --> 00:55:22.495
+Now say that these two are the
+
+1113
+00:55:22.495 --> 00:55:24.015
+classes, this is the correct decision.
+
+1114
+00:55:24.015 --> 00:55:26.335
+Bond dotted line is showing the correct decision boundary.
+
+1115
+00:55:26.875 --> 00:55:29.135
+And then this is the line which we are starting.
+
+1116
+00:55:29.235 --> 00:55:30.855
+So some set of weights, random set
+
+1117
+00:55:30.855 --> 00:55:32.015
+of weights, we are, which we are starting.
+
+1118
+00:55:32.555 --> 00:55:34.175
+So if I play it now, you see
+
+1119
+00:55:34.175 --> 00:55:37.935
+that this line going very up here also sometime going very
+
+1120
+00:55:37.935 --> 00:55:39.695
+down here also sometime now, see
+
+1121
+00:55:39.865 --> 00:55:42.855
+after how many iteration, 29 iteration,
+
+1122
+00:55:43.195 --> 00:55:44.735
+it has done it for 29 times.
+
+1123
+00:55:44.795 --> 00:55:46.895
+And then it, it would, it has found that, okay,
+
+1124
+00:55:46.895 --> 00:55:48.495
+this is the place where we have the
+
+1125
+00:55:48.525 --> 00:55:49.775
+correct decision boundary.
+
+1126
+00:55:49.995 --> 00:55:52.295
+So what is happening is every time it is choosing
+
+1127
+00:55:52.875 --> 00:55:54.255
+one point randomly.
+
+1128
+00:55:54.555 --> 00:55:55.695
+So the point may be here
+
+1129
+00:55:56.275 --> 00:55:57.375
+or the point may be here,
+
+1130
+00:55:57.595 --> 00:55:59.495
+we don't know the point can be anywhere.
+
+1131
+00:55:59.885 --> 00:56:02.335
+Okay? So the point, if it is choosing here,
+
+1132
+00:56:02.595 --> 00:56:05.415
+the line will go here, so it'll only try
+
+1133
+00:56:05.435 --> 00:56:07.095
+to make this line correct.
+
+1134
+00:56:07.125 --> 00:56:09.575
+Okay, this line should be at the left side
+
+1135
+00:56:09.875 --> 00:56:11.815
+and rest, everything is right, rest,
+
+1136
+00:56:11.815 --> 00:56:13.295
+everything is in the right side.
+
+1137
+00:56:13.315 --> 00:56:15.415
+But if I'm choosing the next line, which I have
+
+1138
+00:56:15.415 --> 00:56:17.055
+to choose randomly, next point, which I have
+
+1139
+00:56:17.055 --> 00:56:20.615
+to choose randomly here, then this line will di from this
+
+1140
+00:56:20.615 --> 00:56:21.895
+place, it'll come directly here
+
+1141
+00:56:21.895 --> 00:56:24.645
+because this, it'll only focus on this particular rate
+
+1142
+00:56:24.645 --> 00:56:26.525
+point, which has to, it has to be
+
+1143
+00:56:26.735 --> 00:56:28.005
+below this particular line.
+
+1144
+00:56:28.185 --> 00:56:30.325
+And that's how it go up and down, up and, and down.
+
+1145
+00:56:30.325 --> 00:56:33.645
+Very, uh, in, in every attrition, change the weights.
+
+1146
+00:56:33.785 --> 00:56:36.165
+But after certain number of times it may converge.
+
+1147
+00:56:36.305 --> 00:56:37.485
+It may converge. That is what,
+
+1148
+00:56:37.555 --> 00:56:40.365
+because you can still see that, that your
+
+1149
+00:56:41.555 --> 00:56:44.205
+data points are linearly acceptable.
+
+1150
+00:56:44.265 --> 00:56:47.725
+You can still see that. So, uh, it, it, it has able
+
+1151
+00:56:47.725 --> 00:56:49.965
+to identify this particular decision bond, right?
+
+1152
+00:56:50.315 --> 00:56:53.205
+Yeah, yeah. Uh, what, what is the query?
+
+1153
+00:56:53.485 --> 00:56:54.765
+Karthik? Karthik is the question.
+
+1154
+00:56:55.165 --> 00:56:57.045
+Karthik. Uh, yes, sir.
+
+1155
+00:56:57.185 --> 00:57:00.685
+So, uh, here the percept, the line says perceptron
+
+1156
+00:57:00.705 --> 00:57:02.045
+as a supervised learning model,
+
+1157
+00:57:02.305 --> 00:57:06.125
+but, uh, we in, uh, we learned that perceptron is the, uh,
+
+1158
+00:57:06.275 --> 00:57:09.045
+base for our deep learning, uh, part.
+
+1159
+00:57:09.505 --> 00:57:13.445
+So, uh, can you just explain more this, how would
+
+1160
+00:57:14.275 --> 00:57:17.725
+I'll explain that how the, uh, uh, the initial perceptron,
+
+1161
+00:57:17.725 --> 00:57:19.565
+which was a single neuron later,
+
+1162
+00:57:19.565 --> 00:57:21.285
+people have extended for deep learning.
+
+1163
+00:57:21.785 --> 00:57:23.565
+So I'll explain that case also that
+
+1164
+00:57:23.585 --> 00:57:26.805
+how we moved from single neuron to the multiple neuron
+
+1165
+00:57:27.065 --> 00:57:29.525
+and from multiple neuron to the multiple layers
+
+1166
+00:57:29.945 --> 00:57:32.525
+and then way forward is the deep learning.
+
+1167
+00:57:32.625 --> 00:57:35.205
+So that also, also really, I'll take you to the direction,
+
+1168
+00:57:36.495 --> 00:57:38.955
+but this is the only case where we have a single neuron.
+
+1169
+00:57:40.345 --> 00:57:43.555
+Yeah. Uh, is it the same thing you're asking that,
+
+1170
+00:57:43.655 --> 00:57:45.875
+how it is the basis for
+
+1171
+00:57:46.035 --> 00:57:48.075
+Yes, yes, sir, yes. I'm asking this,
+
+1172
+00:57:48.795 --> 00:57:50.595
+I, I'll take you through that, uh, journey that
+
+1173
+00:57:50.595 --> 00:57:51.915
+how it had happened, actually, yeah,
+
+1174
+00:57:52.365 --> 00:57:53.365
+Sorry. Uh,
+
+1175
+00:57:53.365 --> 00:57:55.075
+uh, Karthik, can you repeat the question?
+
+1176
+00:57:55.475 --> 00:57:56.875
+I missed the point.
+
+1177
+00:57:58.415 --> 00:58:01.235
+Uh, the, the line over the, the visualization,
+
+1178
+00:58:01.235 --> 00:58:02.715
+which I was saying, the first line says
+
+1179
+00:58:02.715 --> 00:58:05.675
+that perceptrons are supervised learning model.
+
+1180
+00:58:06.135 --> 00:58:10.715
+Uh, the word is, so we have learned in the first MLP class,
+
+1181
+00:58:10.825 --> 00:58:14.155
+perceptrons are the base for deep learning models.
+
+1182
+00:58:14.895 --> 00:58:16.555
+So that's what the curiosity came,
+
+1183
+00:58:16.655 --> 00:58:19.515
+how the perception is the, uh, supervised learning model.
+
+1184
+00:58:20.575 --> 00:58:23.595
+So that basic definition for supervisor learning is, uh,
+
+1185
+00:58:23.595 --> 00:58:26.595
+while whether it is a single neuron or a network
+
+1186
+00:58:26.895 --> 00:58:30.755
+or a deep learning model, while for adjusting the weights,
+
+1187
+00:58:30.755 --> 00:58:32.555
+you have the target output.
+
+1188
+00:58:33.495 --> 00:58:37.675
+In this case, target output is available while love me.
+
+1189
+00:58:38.215 --> 00:58:39.635
+So there's a target output,
+
+1190
+00:58:39.695 --> 00:58:42.275
+and then you compute the value, take the error
+
+1191
+00:58:42.275 --> 00:58:45.035
+between them and adjust. So that's where it happens.
+
+1192
+00:58:45.255 --> 00:58:48.245
+Yes, yes. Okay.
+
+1193
+00:58:49.155 --> 00:58:51.805
+Yeah. Alright.
+
+1194
+00:58:52.785 --> 00:58:56.365
+So any other query at this point from anyone?
+
+1195
+00:58:59.185 --> 00:59:01.965
+So hopefully this visualization must have given you that,
+
+1196
+00:59:01.965 --> 00:59:04.125
+okay, how this perceptron track algorithm works
+
+1197
+00:59:04.185 --> 00:59:07.525
+and see that so far I have done nothing.
+
+1198
+00:59:07.945 --> 00:59:10.005
+No loss has come into the picture
+
+1199
+00:59:10.465 --> 00:59:12.925
+and no back propagation has come into the picture.
+
+1200
+00:59:12.985 --> 00:59:14.165
+That's why the name
+
+1201
+00:59:14.165 --> 00:59:17.445
+of the algorithm is perception trick without doing any
+
+1202
+00:59:17.445 --> 00:59:18.645
+loss calculation and all.
+
+1203
+00:59:18.715 --> 00:59:23.125
+Also, I mean, uh, uh, obviously we are,
+
+1204
+00:59:23.185 --> 00:59:26.845
+we are seeing that, uh, uh, we,
+
+1205
+00:59:26.865 --> 00:59:30.405
+we stop the itration will, uh, means the loop will stop
+
+1206
+00:59:30.835 --> 00:59:31.845
+with a two condition.
+
+1207
+00:59:31.845 --> 00:59:34.085
+Either we have raised the maximum number of itration,
+
+1208
+00:59:34.295 --> 00:59:38.085
+which is set here, uh, which is, uh, set, uh,
+
+1209
+00:59:38.535 --> 00:59:39.685
+might be set here.
+
+1210
+00:59:39.965 --> 00:59:44.045
+I don't know. It, it might be set for the, uh, complete, uh,
+
+1211
+00:59:45.395 --> 00:59:47.095
+uh, means a hundred percent classification.
+
+1212
+00:59:47.125 --> 00:59:48.255
+That that is, that is how,
+
+1213
+00:59:48.255 --> 00:59:49.815
+because it is linearly acceptable line.
+
+1214
+00:59:50.635 --> 00:59:52.895
+But, uh, you can also set it for the number of hydration,
+
+1215
+00:59:52.895 --> 00:59:54.895
+which with, uh, which you want
+
+1216
+00:59:54.895 --> 00:59:56.855
+to run this particular algorithm.
+
+1217
+00:59:57.845 --> 00:59:59.815
+Okay? So I'll switch back
+
+1218
+01:00:00.195 --> 01:00:03.395
+to the other slide.
+
+1219
+01:00:04.715 --> 01:00:07.925
+Yeah. Here, so we were here,
+
+1220
+01:00:08.105 --> 01:00:10.805
+so this is the algorithm which I wanted to explain,
+
+1221
+01:00:10.825 --> 01:00:13.605
+and now I also have the demo for that one.
+
+1222
+01:00:13.625 --> 01:00:18.045
+So let me now show, show you the demo for the same thing.
+
+1223
+01:00:18.665 --> 01:00:20.005
+So, uh,
+
+1224
+01:00:26.305 --> 01:00:29.685
+You can do the practice for this, this demo file, which I,
+
+1225
+01:00:30.245 --> 01:00:31.285
+i, I will share.
+
+1226
+01:00:32.625 --> 01:00:36.605
+So here, uh, let me stop this, to connect this one.
+
+1227
+01:00:37.545 --> 01:00:40.765
+So here I'm just importing some of the files
+
+1228
+01:00:41.025 --> 01:00:43.245
+and, uh, creating the same data
+
+1229
+01:00:43.305 --> 01:00:44.445
+set, which I have shown you there.
+
+1230
+01:00:44.515 --> 01:00:45.965
+That there are two dimensions.
+
+1231
+01:00:45.965 --> 01:00:49.885
+First one is CGPA, another one is IQ only thing is just
+
+1232
+01:00:49.885 --> 01:00:52.125
+to normalize, IQ is divided by 10
+
+1233
+01:00:52.125 --> 01:00:55.045
+because IQ was in 1 10, 1 20, 1 0 5,
+
+1234
+01:00:55.455 --> 01:00:59.085
+which is completely different from the CGPA,
+
+1235
+01:00:59.085 --> 01:01:00.645
+which is 6.5, 7.4.
+
+1236
+01:01:00.705 --> 01:01:03.365
+So just to normalize a little bit, I have divided it by 10.
+
+1237
+01:01:03.825 --> 01:01:06.765
+So that's why it is written in IQ by 10. That is one chain.
+
+1238
+01:01:07.345 --> 01:01:11.805
+So X is this, this is the tensor, okay? Two dimensional.
+
+1239
+01:01:11.805 --> 01:01:12.805
+So there are three rows
+
+1240
+01:01:13.025 --> 01:01:15.845
+and two columns in this tensor three, cross two, the size
+
+1241
+01:01:15.845 --> 01:01:16.965
+of this particular tensor,
+
+1242
+01:01:17.465 --> 01:01:19.085
+and this is the label or the target.
+
+1243
+01:01:19.145 --> 01:01:21.685
+You can say that first one has the label
+
+1244
+01:01:21.745 --> 01:01:25.045
+as zero second data point is labeled as one third is one.
+
+1245
+01:01:25.425 --> 01:01:28.245
+So this is why data, the same data which we have seen there
+
+1246
+01:01:28.245 --> 01:01:32.885
+in the slide, uh, this is just to confirm.
+
+1247
+01:01:33.185 --> 01:01:35.725
+And now what we have done is to our perceptron,
+
+1248
+01:01:35.725 --> 01:01:36.765
+we have added a bias,
+
+1249
+01:01:37.345 --> 01:01:39.565
+but in our input we don't have the bias.
+
+1250
+01:01:40.025 --> 01:01:43.325
+So, but if you see the, this particular, uh, equation,
+
+1251
+01:01:43.985 --> 01:01:46.725
+we always write the decision bond equation lab, W node,
+
+1252
+01:01:46.765 --> 01:01:49.365
+X node plus W one, X one plus W2 X two.
+
+1253
+01:01:49.865 --> 01:01:53.765
+And where this x node is the bias, which is set to one
+
+1254
+01:01:54.665 --> 01:01:56.925
+and w node is the weight with, with
+
+1255
+01:01:56.925 --> 01:01:58.605
+that bias is connected with the neuron.
+
+1256
+01:01:58.625 --> 01:02:00.285
+So that is what I'm trying to do here.
+
+1257
+01:02:00.615 --> 01:02:04.645
+First of all, I'm creating a tensor of one,
+
+1258
+01:02:05.435 --> 01:02:07.925
+okay, tensor tensor of one.
+
+1259
+01:02:08.545 --> 01:02:11.525
+And you can, if you can see that this, this X,
+
+1260
+01:02:11.865 --> 01:02:14.365
+so this is the x, it has the zero.
+
+1261
+01:02:15.345 --> 01:02:19.565
+If you will put zero, uh, then it'll, uh, uh,
+
+1262
+01:02:20.215 --> 01:02:23.125
+it'll, it'll take any, and so this is the zeroth index.
+
+1263
+01:02:23.125 --> 01:02:26.405
+This is the first index. This is third, second index.
+
+1264
+01:02:26.405 --> 01:02:29.405
+So there are three rows. So it has taken the, uh,
+
+1265
+01:02:29.465 --> 01:02:31.165
+zeroth index in this particular row,
+
+1266
+01:02:31.225 --> 01:02:33.885
+and it has gone to the, uh, it, it has seen
+
+1267
+01:02:33.885 --> 01:02:35.885
+that, uh, dimension.
+
+1268
+01:02:35.985 --> 01:02:37.525
+It has seen the dimension, okay?
+
+1269
+01:02:38.115 --> 01:02:42.085
+That, okay, how many, uh, uh, so it has in the times,
+
+1270
+01:02:42.115 --> 01:02:45.165
+that means that what it is trying to do, it has trying
+
+1271
+01:02:45.165 --> 01:02:49.025
+to create, uh, create, create a tensor
+
+1272
+01:02:50.255 --> 01:02:52.295
+vertically, not horizontally, if you will.
+
+1273
+01:02:53.035 --> 01:02:54.515
+If you will write zero,
+
+1274
+01:02:55.465 --> 01:02:58.395
+what it'll do is it'll create a tensor again,
+
+1275
+01:02:59.135 --> 01:03:03.135
+but size three, grow, zero means three, row one
+
+1276
+01:03:03.195 --> 01:03:05.255
+and zero column, three row and zero column.
+
+1277
+01:03:05.315 --> 01:03:08.055
+But what I, I wanted is I wanted
+
+1278
+01:03:08.725 --> 01:03:10.415
+that it should have the three rows,
+
+1279
+01:03:10.635 --> 01:03:12.735
+but one column, uh, okay, but one column.
+
+1280
+01:03:12.795 --> 01:03:14.575
+So that is the shape, which I have given.
+
+1281
+01:03:14.595 --> 01:03:17.135
+So you can see that the new tensor has been created as
+
+1282
+01:03:17.665 --> 01:03:20.725
+three row and single column.
+
+1283
+01:03:20.885 --> 01:03:22.765
+A single column. Why I did like that?
+
+1284
+01:03:22.765 --> 01:03:26.125
+Because bias value is going to be one bias, value is going
+
+1285
+01:03:26.125 --> 01:03:28.805
+to be one, and that one I want to attach
+
+1286
+01:03:29.075 --> 01:03:30.285
+with my initial input.
+
+1287
+01:03:30.475 --> 01:03:33.365
+Then only it'll become, uh, this particular, uh,
+
+1288
+01:03:33.405 --> 01:03:34.925
+W not x no, will be true.
+
+1289
+01:03:35.395 --> 01:03:36.445
+Okay? So
+
+1290
+01:03:36.445 --> 01:03:39.325
+because this x, no, X one, X two is going
+
+1291
+01:03:39.325 --> 01:03:41.245
+to be my first row, second row, third row.
+
+1292
+01:03:41.665 --> 01:03:45.165
+So this x, no x, no is going to be attached in first row,
+
+1293
+01:03:45.195 --> 01:03:47.085
+also second row, also third row also.
+
+1294
+01:03:47.185 --> 01:03:48.565
+So x, no value have taken one
+
+1295
+01:03:48.625 --> 01:03:50.645
+and added to the first row, also second row,
+
+1296
+01:03:50.675 --> 01:03:51.725
+also third row also.
+
+1297
+01:03:51.785 --> 01:03:55.205
+So that is the meaning of this particular line. Okay?
+
+1298
+01:03:55.345 --> 01:03:57.045
+So no, I, here, I have just created
+
+1299
+01:03:57.155 --> 01:03:58.725
+that the tensor is like that.
+
+1300
+01:03:58.985 --> 01:04:02.045
+And now I'm concatenating concatenating, my actual X,
+
+1301
+01:04:02.335 --> 01:04:04.245
+which is this, the actual input
+
+1302
+01:04:04.795 --> 01:04:07.205
+with this particular tensor, okay?
+
+1303
+01:04:07.205 --> 01:04:10.525
+With this tensor, and there is a concatenation operation.
+
+1304
+01:04:10.785 --> 01:04:14.205
+So first I'm placing the bias means this 1, 1, 1,
+
+1305
+01:04:14.225 --> 01:04:17.015
+and then I'm placing the X as it is, okay?
+
+1306
+01:04:18.505 --> 01:04:21.885
+And hence, you can see that, that now my, uh,
+
+1307
+01:04:22.065 --> 01:04:24.005
+two dimensional input has been converted
+
+1308
+01:04:24.005 --> 01:04:25.085
+into three dimensional input.
+
+1309
+01:04:25.085 --> 01:04:27.805
+This is what I wanted because I have to convert it
+
+1310
+01:04:27.825 --> 01:04:29.285
+as X, not, yeah, please.
+
+1311
+01:04:30.385 --> 01:04:33.045
+The, the bias for all the three rows you
+
+1312
+01:04:33.045 --> 01:04:34.045
+Have created, right? One,
+
+1313
+01:04:34.045 --> 01:04:36.405
+yeah, all the three rows, right, because, uh,
+
+1314
+01:04:36.515 --> 01:04:39.245
+because when input will go one by row,
+
+1315
+01:04:39.245 --> 01:04:40.685
+by row to the perceptron,
+
+1316
+01:04:41.825 --> 01:04:42.595
+Okay? No problem.
+
+1317
+01:04:42.945 --> 01:04:46.715
+Okay? Right? Uh, so every row there should be bias. Yeah.
+
+1318
+01:04:49.895 --> 01:04:52.705
+Okay. Uh, if it is not clear, let me just show you
+
+1319
+01:04:52.705 --> 01:04:54.025
+that figure once again.
+
+1320
+01:04:54.245 --> 01:04:57.025
+So if you see this particular figure, what is happening is
+
+1321
+01:04:57.625 --> 01:04:58.945
+X node, X one, X two.
+
+1322
+01:04:59.005 --> 01:05:01.025
+So first time X node, X node is anywhere,
+
+1323
+01:05:01.025 --> 01:05:02.105
+one for all the cases.
+
+1324
+01:05:02.395 --> 01:05:05.145
+First time X one, X two will be 6.1110,
+
+1325
+01:05:05.145 --> 01:05:06.385
+and we do all the calculation.
+
+1326
+01:05:06.935 --> 01:05:09.665
+Next time, X one X two will be 7.212,
+
+1327
+01:05:10.365 --> 01:05:12.985
+and third time X one, X two will be 8.2105.
+
+1328
+01:05:13.005 --> 01:05:14.905
+You see that? So row by row,
+
+1329
+01:05:14.905 --> 01:05:16.665
+we are feeding the input to the perceptron.
+
+1330
+01:05:16.725 --> 01:05:19.485
+And every time I want the bias also to be attached.
+
+1331
+01:05:19.825 --> 01:05:23.165
+And hence 1, 1, 1, I have added one more column
+
+1332
+01:05:23.265 --> 01:05:24.565
+to the left of the CGP.
+
+1333
+01:05:24.565 --> 01:05:27.045
+That's all I have done. So that I will get this equation
+
+1334
+01:05:27.505 --> 01:05:28.605
+and I can set it to zero.
+
+1335
+01:05:28.905 --> 01:05:31.405
+And once I'll set it to zero, I'll get this line. Okay.
+
+1336
+01:05:32.025 --> 01:05:33.165
+So that is what I wanted
+
+1337
+01:05:33.305 --> 01:05:36.245
+and this, this is what, uh, we are doing here.
+
+1338
+01:05:37.645 --> 01:05:39.215
+Okay, done. So the input is ready.
+
+1339
+01:05:39.715 --> 01:05:44.695
+Now, uh, I'm just randomly initializing my weight, okay?
+
+1340
+01:05:45.335 --> 01:05:46.855
+Randomly initializing. So rand,
+
+1341
+01:05:46.955 --> 01:05:48.615
+and this is the, uh,
+
+1342
+01:05:48.615 --> 01:05:52.055
+normal distribution will take zero mean one, uh,
+
+1343
+01:05:52.415 --> 01:05:55.175
+standard deviation and three such weights I have
+
+1344
+01:05:55.175 --> 01:05:56.655
+to initialize because x,
+
+1345
+01:05:56.755 --> 01:05:59.695
+not one weight will be attached X one, X two.
+
+1346
+01:05:59.715 --> 01:06:02.415
+So there are three weights, which I want 0.1.
+
+1347
+01:06:02.415 --> 01:06:05.015
+If you wish, you can write usually the weights value
+
+1348
+01:06:05.015 --> 01:06:09.215
+because random, uh, it's a random value between uh,
+
+1349
+01:06:09.425 --> 01:06:10.615
+minus one to plus one.
+
+1350
+01:06:10.615 --> 01:06:12.255
+So it can take any value, like it can take
+
+1351
+01:06:12.495 --> 01:06:13.695
+five also six also.
+
+1352
+01:06:14.115 --> 01:06:15.815
+So usually we don't take the weights
+
+1353
+01:06:15.815 --> 01:06:16.895
+too high, like five and six.
+
+1354
+01:06:16.955 --> 01:06:20.775
+So I have multiplied it like point, 0.1, okay?
+
+1355
+01:06:21.475 --> 01:06:23.815
+So, and it value, we are going to require
+
+1356
+01:06:23.835 --> 01:06:27.095
+to calculate the loss between the correct output
+
+1357
+01:06:27.095 --> 01:06:29.375
+and the actual output, which will require later, not now.
+
+1358
+01:06:29.795 --> 01:06:32.015
+So this, these are the three set of weights.
+
+1359
+01:06:32.595 --> 01:06:34.215
+We have the input and weights ready,
+
+1360
+01:06:34.635 --> 01:06:36.495
+and hence now we need to do the dot product.
+
+1361
+01:06:36.495 --> 01:06:38.575
+That's all. So here we are going
+
+1362
+01:06:38.575 --> 01:06:39.975
+to do the dot product for that.
+
+1363
+01:06:39.975 --> 01:06:42.615
+There is a one function predict XW will pass,
+
+1364
+01:06:42.925 --> 01:06:44.815
+will perform the dot product, and,
+
+1365
+01:06:45.075 --> 01:06:48.255
+and it'll return one if that is greater than zero
+
+1366
+01:06:48.815 --> 01:06:50.175
+L zero, the same thing.
+
+1367
+01:06:50.255 --> 01:06:51.735
+What I, what we have seen for the,
+
+1368
+01:06:52.155 --> 01:06:53.215
+for the decision boundary,
+
+1369
+01:06:53.215 --> 01:06:55.295
+because at the decision boundaries you equal to zero,
+
+1370
+01:06:55.675 --> 01:06:58.695
+so greater than whatever will get weighted some plus bias.
+
+1371
+01:06:59.435 --> 01:07:01.815
+Uh, if it is greater than zero, then it is plus, uh,
+
+1372
+01:07:01.925 --> 01:07:03.575
+plus uh, one, otherwise it is
+
+1373
+01:07:03.575 --> 01:07:05.015
+zero boundary classification problem.
+
+1374
+01:07:05.015 --> 01:07:06.295
+That is what we are solving here.
+
+1375
+01:07:07.895 --> 01:07:11.075
+So yeah, so this particular function is
+
+1376
+01:07:11.075 --> 01:07:13.835
+to get the decision boundary, which I have showed you how,
+
+1377
+01:07:13.855 --> 01:07:16.955
+how to get into the same equation, minus, uh,
+
+1378
+01:07:16.955 --> 01:07:19.595
+so X two is equal two W minus W,
+
+1379
+01:07:19.695 --> 01:07:22.635
+not plus W one into x divided by W2.
+
+1380
+01:07:22.635 --> 01:07:23.675
+If you see that, uh,
+
+1381
+01:07:25.315 --> 01:07:27.765
+same equation is written here, okay?
+
+1382
+01:07:28.025 --> 01:07:32.965
+So X two is equal two W not uh, uh, minus, uh, W one,
+
+1383
+01:07:33.445 --> 01:07:35.405
+X one divided by W2.
+
+1384
+01:07:35.785 --> 01:07:38.445
+The same equation, the the same equation.
+
+1385
+01:07:38.445 --> 01:07:39.645
+What is written here, same thing.
+
+1386
+01:07:39.665 --> 01:07:41.085
+It, it, it's being implemented.
+
+1387
+01:07:41.085 --> 01:07:43.565
+So with this equation we'll get that same boundary
+
+1388
+01:07:44.795 --> 01:07:46.015
+and this, then
+
+1389
+01:07:46.045 --> 01:07:48.535
+what we are doing is we are just trying to do the plots.
+
+1390
+01:07:48.715 --> 01:07:51.735
+Uh, so I will just run this one.
+
+1391
+01:07:51.885 --> 01:07:55.135
+This you can understand it is not diff difficult.
+
+1392
+01:07:55.235 --> 01:07:58.015
+So epoch, I'm setting at a hundred weight history.
+
+1393
+01:07:58.115 --> 01:08:01.175
+I'm storing because I want to plot that, okay?
+
+1394
+01:08:01.175 --> 01:08:02.975
+Weight history, I want, I'm storing
+
+1395
+01:08:03.355 --> 01:08:06.535
+and epoch in epochs, it'll run for a hundred time.
+
+1396
+01:08:06.925 --> 01:08:09.775
+What you have to do is for i, in the range of length x,
+
+1397
+01:08:10.265 --> 01:08:11.295
+there are three rows.
+
+1398
+01:08:11.435 --> 01:08:14.335
+So every time one, one row is going to come, so I will run
+
+1399
+01:08:14.335 --> 01:08:16.045
+for three times 0, 1 2.
+
+1400
+01:08:16.195 --> 01:08:17.925
+That is the meaning of this inner loop.
+
+1401
+01:08:18.505 --> 01:08:21.805
+And every time X zero will go, means first row
+
+1402
+01:08:22.435 --> 01:08:26.645
+will go in xxi and first target value will go in YI.
+
+1403
+01:08:26.675 --> 01:08:29.125
+That is what, and then we are doing the prediction means XXI
+
+1404
+01:08:29.125 --> 01:08:30.725
+will get multiplied with a W.
+
+1405
+01:08:31.385 --> 01:08:35.445
+You will get the prediction, YIY hat calculate the error,
+
+1406
+01:08:35.685 --> 01:08:36.805
+YI minus Y hat,
+
+1407
+01:08:37.105 --> 01:08:39.645
+and you check if the error is not equal
+
+1408
+01:08:39.645 --> 01:08:41.645
+to zero, then you need to update.
+
+1409
+01:08:41.645 --> 01:08:43.565
+If the error is equal to zero, you don't have
+
+1410
+01:08:43.565 --> 01:08:45.965
+to update the weights and whatever is the weight
+
+1411
+01:08:45.965 --> 01:08:47.845
+after every oc, you can store
+
+1412
+01:08:47.975 --> 01:08:50.565
+where in the weight history to see that, okay?
+
+1413
+01:08:50.565 --> 01:08:52.325
+How those weights are changing.
+
+1414
+01:08:52.605 --> 01:08:56.725
+I will just print that for your see this.
+
+1415
+01:08:57.225 --> 01:08:59.405
+So a hundred times means it'll run.
+
+1416
+01:08:59.665 --> 01:09:01.965
+So first time, this is the weights.
+
+1417
+01:09:02.785 --> 01:09:06.085
+Uh, okay, so we are appending this, this is the weight,
+
+1418
+01:09:06.085 --> 01:09:08.445
+and then second time this weights are changing a little bit.
+
+1419
+01:09:08.445 --> 01:09:09.765
+7, 8, 3 2.
+
+1420
+01:09:10.505 --> 01:09:12.885
+And this weight is not changing this time
+
+1421
+01:09:13.185 --> 01:09:15.085
+and you can say 1.1, 1 1 8.
+
+1422
+01:09:15.105 --> 01:09:17.165
+It has changed to 1.1 8, 1 8,
+
+1423
+01:09:17.705 --> 01:09:20.205
+and next time 0.4093, it has changed.
+
+1424
+01:09:20.205 --> 01:09:21.645
+2.5093.
+
+1425
+01:09:21.825 --> 01:09:25.445
+You see that it is based on what data points just selected.
+
+1426
+01:09:25.805 --> 01:09:30.085
+Randomly my line is being shifted to make it correct
+
+1427
+01:09:30.185 --> 01:09:31.605
+and hence the weight has changed.
+
+1428
+01:09:31.805 --> 01:09:33.725
+A, so that is what is happening here
+
+1429
+01:09:33.985 --> 01:09:36.685
+and it is being, it is, it is happening for a hundred times.
+
+1430
+01:09:37.395 --> 01:09:39.285
+Okay, I'll take your question Brenda, just a second.
+
+1431
+01:09:39.665 --> 01:09:43.605
+Let me finish this. And then, um, what I'm doing is
+
+1432
+01:09:43.635 --> 01:09:46.445
+because I need to plot that how the weights are changing
+
+1433
+01:09:46.585 --> 01:09:51.365
+and due to that weights, how my line decision boundary is,
+
+1434
+01:09:51.625 --> 01:09:53.605
+is looking, this is what I'm doing.
+
+1435
+01:09:54.465 --> 01:09:57.885
+I'm extracting the weight, which was at the first iteration,
+
+1436
+01:09:58.505 --> 01:10:01.975
+so zero, which was at the second iteration
+
+1437
+01:10:02.515 --> 01:10:05.375
+and which was at the last iteration means minus one.
+
+1438
+01:10:05.605 --> 01:10:07.015
+Okay? You understand this one, right?
+
+1439
+01:10:07.635 --> 01:10:09.615
+And that, that that is being saved here
+
+1440
+01:10:10.115 --> 01:10:13.535
+and then this particular box is only to show you
+
+1441
+01:10:13.535 --> 01:10:15.655
+that change the first time.
+
+1442
+01:10:15.655 --> 01:10:17.695
+Suppose these are the three data points we have.
+
+1443
+01:10:18.075 --> 01:10:22.295
+We started line here next time in the next, uh, soon.
+
+1444
+01:10:22.295 --> 01:10:24.735
+Next instead of uh, uh,
+
+1445
+01:10:26.115 --> 01:10:28.855
+so next time in the och number two, we are here.
+
+1446
+01:10:29.595 --> 01:10:31.575
+And last time it is not och 10, uh,
+
+1447
+01:10:31.655 --> 01:10:33.495
+I think in the writing it has some problem.
+
+1448
+01:10:33.855 --> 01:10:35.055
+A hundred iteration we have run.
+
+1449
+01:10:35.055 --> 01:10:37.415
+So it is in the last iteration, you see that.
+
+1450
+01:10:38.715 --> 01:10:39.975
+So only the range, uh,
+
+1451
+01:10:40.065 --> 01:10:42.695
+range why it is changing data points is still, uh,
+
+1452
+01:10:42.695 --> 01:10:43.975
+almost at the same place.
+
+1453
+01:10:44.635 --> 01:10:46.615
+Uh, data point wise there is no change.
+
+1454
+01:10:47.115 --> 01:10:49.135
+Uh, but range wise, uh, there is a change.
+
+1455
+01:10:49.435 --> 01:10:52.095
+Uh, you can see that it goes from six to 10.
+
+1456
+01:10:52.715 --> 01:10:55.855
+So data point looks like that it goes from six to 15.
+
+1457
+01:10:55.875 --> 01:10:58.335
+So data point looks like it goes from six to 16, so
+
+1458
+01:10:58.335 --> 01:11:00.175
+that's why you see some variation in the data,
+
+1459
+01:11:00.175 --> 01:11:02.335
+but data points, data we are not changing.
+
+1460
+01:11:02.335 --> 01:11:03.455
+Data is still same.
+
+1461
+01:11:04.435 --> 01:11:06.855
+Uh, okay, so uh, then
+
+1462
+01:11:07.515 --> 01:11:09.655
+at the last iteration, this is what we are getting.
+
+1463
+01:11:09.685 --> 01:11:13.165
+This is what we are. So yeah, so you can see
+
+1464
+01:11:13.165 --> 01:11:15.645
+that there is a clear decision boundary be separating the
+
+1465
+01:11:15.645 --> 01:11:18.445
+blue at top and uh, the two green point at the P.
+
+1466
+01:11:18.505 --> 01:11:20.685
+And same thing we have shown in the visualization also,
+
+1467
+01:11:20.685 --> 01:11:22.405
+this is just the demo for that.
+
+1468
+01:11:24.065 --> 01:11:25.715
+Okay, let me take the questions now.
+
+1469
+01:11:25.715 --> 01:11:27.155
+Brenda, what is the question?
+
+1470
+01:11:28.835 --> 01:11:32.455
+So can you go to the sixth one? Like for each? For loop?
+
+1471
+01:11:33.205 --> 01:11:34.785
+Oh, for loop, yeah. This one.
+
+1472
+01:11:34.805 --> 01:11:39.075
+Uh, a little bit, yeah, here, uh, just trying
+
+1473
+01:11:39.075 --> 01:11:42.955
+to understand sir, there it is mentioned that, uh, wait,
+
+1474
+01:11:43.285 --> 01:11:46.315
+we'll update, uh, like we are adding the error, right?
+
+1475
+01:11:46.855 --> 01:11:48.635
+It shouldn't it be a subtraction?
+
+1476
+01:11:50.315 --> 01:11:54.695
+Oh, so it depends on this Like W minus error. Yeah,
+
+1477
+01:11:54.995 --> 01:11:56.215
+Uh, it depends on the error.
+
+1478
+01:11:56.275 --> 01:12:00.215
+The sign will change this w plus it is written,
+
+1479
+01:12:00.355 --> 01:12:01.815
+but it suppose error is negative
+
+1480
+01:12:01.815 --> 01:12:05.135
+because see if suppose you are at the right side,
+
+1481
+01:12:05.135 --> 01:12:06.055
+then error will always be
+
+1482
+01:12:06.055 --> 01:12:07.215
+zero and there won't be any change.
+
+1483
+01:12:07.215 --> 01:12:09.775
+Obviously, if suppose you are on the wrong side,
+
+1484
+01:12:09.835 --> 01:12:11.655
+so it may happen that YA zero
+
+1485
+01:12:12.155 --> 01:12:13.655
+and your model is predicting one.
+
+1486
+01:12:13.655 --> 01:12:15.415
+So zero minus one will be minus one.
+
+1487
+01:12:16.055 --> 01:12:18.555
+Mm-hmm. In that case, this error will come minus one.
+
+1488
+01:12:18.555 --> 01:12:19.875
+This sign will be minus one.
+
+1489
+01:12:20.575 --> 01:12:22.275
+If suppose your actual value is one
+
+1490
+01:12:22.455 --> 01:12:24.795
+and you are predicting zero, this model is predicting.
+
+1491
+01:12:24.795 --> 01:12:25.995
+So why minus plus one?
+
+1492
+01:12:26.415 --> 01:12:27.715
+So this will additive,
+
+1493
+01:12:27.715 --> 01:12:29.795
+so this sign will change as per this error.
+
+1494
+01:12:30.445 --> 01:12:31.835
+It'll work for both. Yeah.
+
+1495
+01:12:32.095 --> 01:12:33.845
+Got it, sir? Yes.
+
+1496
+01:12:38.125 --> 01:12:40.425
+Any other query? Uh,
+
+1497
+01:12:40.485 --> 01:12:43.025
+if the solution isation, we are considered hundred.
+
+1498
+01:12:43.165 --> 01:12:45.585
+If it's not, uh, conversed within hundred,
+
+1499
+01:12:46.335 --> 01:12:47.425
+what are the parameters?
+
+1500
+01:12:48.535 --> 01:12:51.425
+Correct? So after a hundred iteration, suppose
+
+1501
+01:12:52.065 --> 01:12:55.025
+I have put 1,000 purposefully I had upset two 20
+
+1502
+01:12:55.295 --> 01:12:57.465
+because I don't know what is the correct number I
+
+1503
+01:12:57.465 --> 01:12:58.465
+before, right?
+
+1504
+01:12:58.925 --> 01:13:03.025
+So then you see that what will happen, uh, so uh,
+
+1505
+01:13:03.165 --> 01:13:07.075
+if I plot that this is what has happened, oh, sorry,
+
+1506
+01:13:07.095 --> 01:13:10.035
+the weights are already tuned, so I have
+
+1507
+01:13:10.195 --> 01:13:13.675
+to run it from again, so I'll run it everything again.
+
+1508
+01:13:15.435 --> 01:13:17.455
+So I'll see that what has happened first Itration,
+
+1509
+01:13:17.455 --> 01:13:19.215
+this is the line, second it, and this is the line.
+
+1510
+01:13:19.215 --> 01:13:20.415
+Third iteration, this is the line,
+
+1511
+01:13:20.875 --> 01:13:22.135
+and you see the weight wise.
+
+1512
+01:13:22.285 --> 01:13:25.215
+What is the change? 0.0 3 9 2 2 1.
+
+1513
+01:13:25.405 --> 01:13:26.895
+Here, there is a change 2, 9, 1
+
+1514
+01:13:27.355 --> 01:13:29.615
+and third weight is also changing here.
+
+1515
+01:13:29.615 --> 01:13:31.135
+Also, there is a change in the weights,
+
+1516
+01:13:31.635 --> 01:13:35.215
+but then still my line is very far from the
+
+1517
+01:13:35.215 --> 01:13:36.775
+actual decision boundary, right?
+
+1518
+01:13:37.155 --> 01:13:39.095
+So this is what, once you get to know that, okay,
+
+1519
+01:13:39.335 --> 01:13:40.695
+whatever number of hippo you have set,
+
+1520
+01:13:40.795 --> 01:13:42.215
+my line is not converging.
+
+1521
+01:13:42.435 --> 01:13:45.815
+You may have to try with the, with the different, uh,
+
+1522
+01:13:45.885 --> 01:13:48.495
+more number of hippo or something else you have to try.
+
+1523
+01:13:48.805 --> 01:13:51.055
+Yeah. This is what is the solution,
+
+1524
+01:13:51.565 --> 01:13:52.565
+Okay?
+
+1525
+01:13:53.845 --> 01:13:55.015
+Okay. That is one way.
+
+1526
+01:13:55.755 --> 01:13:59.455
+And then we can also learning factor. So learning,
+
+1527
+01:14:00.275 --> 01:14:01.275
+Uh, learning rate, right?
+
+1528
+01:14:02.455 --> 01:14:04.075
+Can we change the learning? Yeah.
+
+1529
+01:14:04.075 --> 01:14:05.515
+Yeah, you are allowed to change the learning rate,
+
+1530
+01:14:05.515 --> 01:14:08.595
+but usually we take the learning rate very small so
+
+1531
+01:14:08.755 --> 01:14:10.995
+that wherever we are moving, uh,
+
+1532
+01:14:11.225 --> 01:14:12.885
+we talked about the learning rate in the,
+
+1533
+01:14:12.965 --> 01:14:14.165
+I guess previous class, right?
+
+1534
+01:14:14.465 --> 01:14:16.805
+If we take very high learning in linear regression,
+
+1535
+01:14:16.805 --> 01:14:19.445
+we had talked about it, what will happen if it is
+
+1536
+01:14:19.445 --> 01:14:20.645
+very small or very high?
+
+1537
+01:14:21.385 --> 01:14:23.005
+So there was a convex curve
+
+1538
+01:14:23.185 --> 01:14:26.005
+and uh, we talked with respect to that convex score.
+
+1539
+01:14:26.035 --> 01:14:27.565
+What will happen with that if we
+
+1540
+01:14:27.565 --> 01:14:28.885
+take learning rate very small.
+
+1541
+01:14:29.305 --> 01:14:32.205
+So usually the learning rates are like 0.1, 0.2.
+
+1542
+01:14:32.205 --> 01:14:35.765
+It's a small one. It's not like 0.00001, which is very small
+
+1543
+01:14:36.345 --> 01:14:38.445
+or 10 20 or a hundred very, very high.
+
+1544
+01:14:38.915 --> 01:14:42.885
+Yeah, but it's, uh, you can tune it. No restriction on that.
+
+1545
+01:14:42.885 --> 01:14:43.885
+Yeah.
+
+1546
+01:14:44.335 --> 01:14:49.065
+Yeah. Thank you sir. Yes, Linda?
+
+1547
+01:14:50.075 --> 01:14:51.745
+Quick question for epoc,
+
+1548
+01:14:51.815 --> 01:14:54.225
+it's usually based on our experience, right, sir?
+
+1549
+01:14:54.225 --> 01:14:56.025
+Like, uh, we do a trial
+
+1550
+01:14:56.025 --> 01:14:58.185
+and error method, like which one is suiting
+
+1551
+01:14:58.685 --> 01:15:01.025
+and how there is decreasing, correct?
+
+1552
+01:15:01.325 --> 01:15:02.465
+No certain standards, right?
+
+1553
+01:15:02.675 --> 01:15:03.865
+There is no certain standard
+
+1554
+01:15:03.925 --> 01:15:05.225
+for setting the number of epoc.
+
+1555
+01:15:05.415 --> 01:15:07.505
+Yeah. Okay, Thank you
+
+1556
+01:15:09.145 --> 01:15:10.145
+There. Under what
+
+1557
+01:15:10.145 --> 01:15:10.895
+conditions?
+
+1558
+01:15:11.035 --> 01:15:14.575
+Uh, perceptin, uh, perceptron guarantees to convert, sir.
+
+1559
+01:15:16.395 --> 01:15:18.455
+Uh, that is the next thing which we are going to cover.
+
+1560
+01:15:18.755 --> 01:15:22.815
+So going further, we'll see that, uh, that perceptron
+
+1561
+01:15:24.185 --> 01:15:28.955
+converses, if your data is linearly separable
+
+1562
+01:15:29.895 --> 01:15:33.715
+or sort of linearly separable, okay, linearly separable.
+
+1563
+01:15:34.375 --> 01:15:37.915
+As soon your data will be non-linearly separable
+
+1564
+01:15:38.015 --> 01:15:40.675
+or non-linear perceptron will fail.
+
+1565
+01:15:40.675 --> 01:15:42.875
+Now that is the next thing which we are going to cover.
+
+1566
+01:15:42.875 --> 01:15:43.995
+Yeah, okay,
+
+1567
+01:15:47.445 --> 01:15:48.445
+Fine. So, so
+
+1568
+01:15:48.445 --> 01:15:49.895
+far it is good everyone.
+
+1569
+01:15:50.995 --> 01:15:54.615
+So can you just, uh, drag that horizontal,
+
+1570
+01:15:54.615 --> 01:15:58.335
+that loop results a little
+
+1571
+01:15:58.335 --> 01:15:59.615
+bit right side, sir?
+
+1572
+01:16:00.505 --> 01:16:02.605
+Oh, this one? Yeah, Just I want to see.
+
+1573
+01:16:03.515 --> 01:16:05.335
+So it is adding a hundred iteration, right? Yes.
+
+1574
+01:16:05.335 --> 01:16:08.415
+Hundred third list will be added every time.
+
+1575
+01:16:08.805 --> 01:16:12.375
+That how my, uh, so the last one will have everything.
+
+1576
+01:16:13.385 --> 01:16:15.195
+Okay, so every time that is being added,
+
+1577
+01:16:15.295 --> 01:16:16.295
+Yes.
+
+1578
+01:16:16.315 --> 01:16:18.685
+Yeah, yeah. This actually I wanted to see.
+
+1579
+01:16:18.685 --> 01:16:20.205
+Yeah, thank you, sir.
+
+1580
+01:16:20.205 --> 01:16:21.645
+You'll have the access of this notebook.
+
+1581
+01:16:21.785 --> 01:16:24.405
+You can, uh, work practice this. Yeah.
+
+1582
+01:16:25.115 --> 01:16:28.405
+Okay, sir. Thank you, sir. Yes, sir. One question here.
+
+1583
+01:16:28.425 --> 01:16:32.205
+So here we are providing bi um, bias manually,
+
+1584
+01:16:32.985 --> 01:16:35.685
+but in real time it is, uh, adjusted again,
+
+1585
+01:16:35.705 --> 01:16:38.005
+the data our parameter, right?
+
+1586
+01:16:38.105 --> 01:16:42.145
+So bias value, uh, bias of value,
+
+1587
+01:16:42.155 --> 01:16:44.825
+which is usually set as one just to
+
+1588
+01:16:45.875 --> 01:16:47.135
+get this particular equation.
+
+1589
+01:16:47.275 --> 01:16:50.335
+If it is not set to one, then uh,
+
+1590
+01:16:50.395 --> 01:16:54.055
+you can't write the equation, uh, like that, uh, usually,
+
+1591
+01:16:54.275 --> 01:16:56.455
+so bias value is usually set to one.
+
+1592
+01:16:56.795 --> 01:16:58.695
+Now, this weights obviously we are changing
+
+1593
+01:16:58.835 --> 01:17:00.735
+as we are changing this W one and W2.
+
+1594
+01:17:01.635 --> 01:17:04.975
+So this weight we are changing, obviously,
+
+1595
+01:17:05.315 --> 01:17:07.735
+but bias value, we usually, we don't change,
+
+1596
+01:17:08.015 --> 01:17:09.285
+although you can change, uh,
+
+1597
+01:17:09.625 --> 01:17:11.365
+but uh, usually we don't change. Yeah,
+
+1598
+01:17:11.715 --> 01:17:12.715
+Yeah. Okay.
+
+1599
+01:17:12.715 --> 01:17:13.925
+Yeah. Thank you.
+
+1600
+01:17:16.595 --> 01:17:20.115
+Okay. Alright.
+
+1601
+01:17:20.295 --> 01:17:23.115
+So maybe now, sir, uh, if you're there,
+
+1602
+01:17:23.965 --> 01:17:25.175
+Yeah, I, I'm there.
+
+1603
+01:17:25.955 --> 01:17:28.335
+Um, shall we start this?
+
+1604
+01:17:29.435 --> 01:17:31.335
+Uh, it's nine, six, uh,
+
+1605
+01:17:32.155 --> 01:17:34.375
+Uh, if your people have any other question,
+
+1606
+01:17:34.795 --> 01:17:35.975
+we can start this next.
+
+1607
+01:17:35.975 --> 01:17:37.695
+Otherwise I can introduce also.
+
+1608
+01:17:39.485 --> 01:17:43.945
+Oh, so let, let me all of you have any other question.
+
+1609
+01:17:45.885 --> 01:17:49.495
+Okay, so I think many of you ask this question of
+
+1610
+01:17:49.915 --> 01:17:51.375
+how do you ensure convergence
+
+1611
+01:17:51.555 --> 01:17:55.415
+and those things see so far, uh,
+
+1612
+01:17:55.675 --> 01:17:58.335
+sir talked about a single perceptron
+
+1613
+01:17:58.635 --> 01:18:01.515
+or, uh, no, you can.
+
+1614
+01:18:02.655 --> 01:18:06.675
+How? Um, one thing, uh,
+
+1615
+01:18:06.675 --> 01:18:09.675
+he carefully chose the examples while showing the
+
+1616
+01:18:09.875 --> 01:18:14.075
+demonstration training, and he also mentioned the, uh,
+
+1617
+01:18:14.615 --> 01:18:16.315
+men mentioned the statement that
+
+1618
+01:18:17.565 --> 01:18:20.505
+if the classes are linearly supportable,
+
+1619
+01:18:21.805 --> 01:18:25.365
+linearly supportable, that means to say you are able
+
+1620
+01:18:25.365 --> 01:18:29.165
+to suppose if you take a two dimensional plane server
+
+1621
+01:18:29.165 --> 01:18:33.075
+showing, showing the data points of two classes, linear
+
+1622
+01:18:33.775 --> 01:18:35.595
+is a two dimensional plane is a line.
+
+1623
+01:18:36.815 --> 01:18:39.195
+If you can buy a strike line, if you're able
+
+1624
+01:18:39.195 --> 01:18:41.395
+to separate the data points of the two classes,
+
+1625
+01:18:42.415 --> 01:18:44.265
+then there are the linearly separable classes.
+
+1626
+01:18:45.975 --> 01:18:48.785
+Okay? Of course you can extend it to three dimension,
+
+1627
+01:18:48.785 --> 01:18:50.945
+then line becomes a play and all those things.
+
+1628
+01:18:51.885 --> 01:18:55.145
+So the fundamental assumption they made in the case
+
+1629
+01:18:55.145 --> 01:18:58.385
+of percept is as long as the data points
+
+1630
+01:18:59.085 --> 01:19:02.665
+of different classes are linearly supportable, okay,
+
+1631
+01:19:03.855 --> 01:19:08.425
+then you should be able to handle convergences insured.
+
+1632
+01:19:08.595 --> 01:19:11.825
+There is no doubt about it convergences insured. Okay?
+
+1633
+01:19:14.755 --> 01:19:19.335
+See, alternatively there are, uh, machine learning tasks
+
+1634
+01:19:21.205 --> 01:19:24.465
+in which the, the data points
+
+1635
+01:19:24.485 --> 01:19:26.985
+or different classes may not be linearly separable.
+
+1636
+01:19:27.755 --> 01:19:32.245
+Okay? So under such condition,
+
+1637
+01:19:33.755 --> 01:19:38.745
+how do we, um, um, build
+
+1638
+01:19:39.935 --> 01:19:44.915
+the, um, neural networks which can,
+
+1639
+01:19:46.105 --> 01:19:48.845
+uh, still do our separation supportability
+
+1640
+01:19:48.905 --> 01:19:50.765
+of the data points of the given classes.
+
+1641
+01:19:51.915 --> 01:19:54.335
+So that's where know, for example, uh,
+
+1642
+01:19:54.395 --> 01:19:57.135
+say we have all studied the basic logic gates,
+
+1643
+01:19:57.135 --> 01:19:58.775
+our function logic R function
+
+1644
+01:19:58.875 --> 01:20:02.055
+and function, our function and function.
+
+1645
+01:20:03.555 --> 01:20:06.375
+So similarly, XR function, XR function.
+
+1646
+01:20:07.275 --> 01:20:11.725
+Suppose if you see, if you yourself plot the two table
+
+1647
+01:20:11.905 --> 01:20:14.435
+and see XR
+
+1648
+01:20:14.435 --> 01:20:18.795
+and XR functions, the, uh,
+
+1649
+01:20:18.855 --> 01:20:23.405
+if you take the data point belonging to um,
+
+1650
+01:20:24.315 --> 01:20:27.525
+zero, uh, one output is either zero or one.
+
+1651
+01:20:27.525 --> 01:20:29.045
+In the case of any of this logic function,
+
+1652
+01:20:29.315 --> 01:20:32.085
+suppose if you take zero and one
+
+1653
+01:20:32.225 --> 01:20:35.165
+and try to separate by linear class, you can do it in R
+
+1654
+01:20:35.225 --> 01:20:37.805
+and r and N, but you cannot do it by XR
+
+1655
+01:20:37.805 --> 01:20:41.115
+and X mark that you can, you can try to do that.
+
+1656
+01:20:41.855 --> 01:20:44.835
+If you try to put a straight lane in one side,
+
+1657
+01:20:44.965 --> 01:20:47.315
+there will be zero also one also in the other side,
+
+1658
+01:20:47.345 --> 01:20:50.115
+also zero also, then any number of trials you do,
+
+1659
+01:20:50.865 --> 01:20:51.915
+that gives an example
+
+1660
+01:20:51.985 --> 01:20:56.005
+that when the classes are not linearly separable, so at
+
+1661
+01:20:56.005 --> 01:20:58.405
+that point you will not be,
+
+1662
+01:20:58.435 --> 01:21:00.165
+your perception will not converge.
+
+1663
+01:21:02.545 --> 01:21:06.805
+So for that purpose, okay, um,
+
+1664
+01:21:07.705 --> 01:21:11.845
+um, if they're not linearly,
+
+1665
+01:21:12.705 --> 01:21:17.005
+um, that is their ins, then it'll not lead
+
+1666
+01:21:17.005 --> 01:21:18.685
+to the convergence of perceptin law.
+
+1667
+01:21:19.705 --> 01:21:20.885
+And then
+
+1668
+01:21:20.885 --> 01:21:25.285
+accordingly, no, we say such machine learning task
+
+1669
+01:21:26.785 --> 01:21:30.005
+cannot be represented by a single layer perception.
+
+1670
+01:21:30.545 --> 01:21:34.085
+So, so far SAR talked about only one layer
+
+1671
+01:21:34.085 --> 01:21:35.845
+of perception, maybe either one.
+
+1672
+01:21:36.075 --> 01:21:38.045
+Suppose you need only binary classification.
+
+1673
+01:21:38.045 --> 01:21:40.805
+You can use, uh, one perception in a given layer,
+
+1674
+01:21:40.945 --> 01:21:44.765
+or if you more than one class, you can have a series
+
+1675
+01:21:44.825 --> 01:21:46.365
+of perceptrons in one layer.
+
+1676
+01:21:47.125 --> 01:21:49.465
+And as long as the number of classes are linearly,
+
+1677
+01:21:49.885 --> 01:21:52.145
+you can build a multi-class classifier also
+
+1678
+01:21:52.245 --> 01:21:55.545
+by using multiple, uh, perceptron in a given layer,
+
+1679
+01:21:55.645 --> 01:21:59.425
+but single layer, such single perception,
+
+1680
+01:21:59.505 --> 01:22:03.105
+a single layer perceptron, you will not be able to separate
+
+1681
+01:22:03.965 --> 01:22:06.625
+the classes which are not linearly separate.
+
+1682
+01:22:07.285 --> 01:22:11.465
+So that is where we say representation problem, go
+
+1683
+01:22:11.465 --> 01:22:12.505
+to the next slide as,
+
+1684
+01:22:16.885 --> 01:22:19.425
+um, create slide and just come back once again.
+
+1685
+01:22:20.745 --> 01:22:24.205
+Ah, next. So then,
+
+1686
+01:22:24.785 --> 01:22:27.645
+and those problems are treated as hard problems.
+
+1687
+01:22:27.785 --> 01:22:30.725
+The terminology used in the neur network is such problems
+
+1688
+01:22:30.725 --> 01:22:32.725
+which are not linearly supportable are called
+
+1689
+01:22:32.725 --> 01:22:34.285
+as hard problems.
+
+1690
+01:22:35.285 --> 01:22:38.465
+So then how to deal with those hard problems.
+
+1691
+01:22:38.965 --> 01:22:42.225
+So that is where they came up with the idea
+
+1692
+01:22:42.295 --> 01:22:45.345
+that you have a two layer feed for a neural network.
+
+1693
+01:22:46.525 --> 01:22:49.735
+Okay? So with hard limiting
+
+1694
+01:22:50.335 --> 01:22:53.015
+threshold units in the output layer can solve linear
+
+1695
+01:22:53.605 --> 01:22:55.415
+pattern, pattern classification problem.
+
+1696
+01:22:55.645 --> 01:23:00.455
+Okay? So, uh, it is
+
+1697
+01:23:01.275 --> 01:23:04.055
+no, this can also be called as a single layer perceptron
+
+1698
+01:23:04.155 --> 01:23:07.165
+as there are only one layer of nonlinear units here,
+
+1699
+01:23:07.445 --> 01:23:12.085
+a two layer with hard limiting units, uh,
+
+1700
+01:23:12.135 --> 01:23:15.205
+limit hard limiting threshold units in the output layer can
+
+1701
+01:23:15.205 --> 01:23:17.845
+solve linearly sufferable pattern classification problem.
+
+1702
+01:23:18.395 --> 01:23:20.845
+Okay? So, uh,
+
+1703
+01:23:21.445 --> 01:23:23.805
+I told no there are many problems which are not linear
+
+1704
+01:23:23.805 --> 01:23:26.525
+acceptable and ends, it cannot be represented
+
+1705
+01:23:26.585 --> 01:23:28.045
+by a single layer perceptron.
+
+1706
+01:23:28.545 --> 01:23:31.085
+And those are called as the hard pro perceptron.
+
+1707
+01:23:31.915 --> 01:23:34.885
+Then what they do is now they go for two layer,
+
+1708
+01:23:35.305 --> 01:23:36.365
+uh, perceptron.
+
+1709
+01:23:36.665 --> 01:23:39.605
+If I have a two layer perceptron, then I have
+
+1710
+01:23:40.505 --> 01:23:44.005
+one non-linear output function from the previous layer.
+
+1711
+01:23:44.375 --> 01:23:47.125
+Perceptron another hard limiting output function.
+
+1712
+01:23:47.145 --> 01:23:49.365
+You can have a combination of that output function
+
+1713
+01:23:49.825 --> 01:23:53.325
+to generate an nonlinear, uh, curve,
+
+1714
+01:23:53.935 --> 01:23:56.925
+which can round about the, uh,
+
+1715
+01:23:58.445 --> 01:24:01.645
+decision boundaries need not be linear light.
+
+1716
+01:24:01.745 --> 01:24:03.525
+It can be a current light convex surface.
+
+1717
+01:24:03.705 --> 01:24:06.085
+If the data points are lying in the convex surface, then
+
+1718
+01:24:06.675 --> 01:24:09.965
+with having one more previous layer of perceptron
+
+1719
+01:24:11.535 --> 01:24:14.995
+and passing that data through that previous layer
+
+1720
+01:24:14.995 --> 01:24:17.955
+of perceptron and then combining in the, uh, uh,
+
+1721
+01:24:17.975 --> 01:24:19.835
+one layer perceptron, which you're looking,
+
+1722
+01:24:20.465 --> 01:24:25.155
+then it'll be able to handle at least some, some cases of,
+
+1723
+01:24:26.035 --> 01:24:29.375
+um, linearly inseparable problems.
+
+1724
+01:24:29.765 --> 01:24:31.895
+Okay? That's what we told the output
+
+1725
+01:24:31.895 --> 01:24:34.375
+of the second layer combined forming another layer.
+
+1726
+01:24:34.405 --> 01:24:39.055
+Then any ConX region can be formed by separating surfaces.
+
+1727
+01:24:39.305 --> 01:24:42.615
+It'll create a convex surface, which we can use it
+
+1728
+01:24:42.615 --> 01:24:44.375
+for the separation of the problems.
+
+1729
+01:24:44.475 --> 01:24:45.735
+So that is what is there.
+
+1730
+01:24:46.405 --> 01:24:47.975
+Next slide, uh, Sunil,
+
+1731
+01:24:50.125 --> 01:24:54.905
+and this continues suppose a, a place of linearly
+
+1732
+01:24:55.495 --> 01:24:58.905
+separable, inseparable problems which are non convex.
+
+1733
+01:24:59.325 --> 01:25:00.905
+So in that non convex, again,
+
+1734
+01:25:00.905 --> 01:25:02.865
+this two layer will be not be possible.
+
+1735
+01:25:03.205 --> 01:25:06.465
+We go for three layer, um, problems
+
+1736
+01:25:06.575 --> 01:25:07.985
+that we will see in the next class.
+
+1737
+01:25:08.105 --> 01:25:10.585
+I think these things, I'll explain pictorially,
+
+1738
+01:25:11.055 --> 01:25:12.585
+then we'll go to the next, next slide.
+
+1739
+01:25:12.645 --> 01:25:16.265
+Uh, uh, that's what it continues,
+
+1740
+01:25:16.275 --> 01:25:19.265
+which results into more than two layers of ion.
+
+1741
+01:25:19.265 --> 01:25:22.145
+That's where the multi-layer perception comes into picture.
+
+1742
+01:25:23.085 --> 01:25:25.665
+We will see that when we go to the next session,
+
+1743
+01:25:25.855 --> 01:25:27.185
+next session.
+
+1744
+01:25:27.325 --> 01:25:28.865
+Uh, next slide is, okay,
+
+1745
+01:25:29.425 --> 01:25:31.585
+I think we will first in the next session.
+
+1746
+01:25:31.595 --> 01:25:34.625
+First I'll explain pictorially what are these cases
+
+1747
+01:25:34.845 --> 01:25:37.905
+and then we'll take it there. Yes? Yes,
+
+1748
+01:25:38.365 --> 01:25:39.365
+Sir. One quick
+
+1749
+01:25:39.365 --> 01:25:40.345
+question, sir. Yes.
+
+1750
+01:25:40.485 --> 01:25:43.665
+So it means that as the ity increases, the number
+
+1751
+01:25:43.665 --> 01:25:45.145
+of layer also increases.
+
+1752
+01:25:45.685 --> 01:25:48.425
+No non-linearity, non Non-linearity increases.
+
+1753
+01:25:48.485 --> 01:25:51.065
+The number of layer also increases, sir,
+
+1754
+01:25:51.095 --> 01:25:52.095
+Correct? Correct, correct.
+
+1755
+01:25:52.095 --> 01:25:52.665
+Yes.
+
+1756
+01:25:52.945 --> 01:25:57.665
+'cause yeah, as an increase number, that's correct. Yes.
+
+1757
+01:25:58.275 --> 01:26:01.815
+Thank you. Thank you. Thank you all.
+
+1758
+01:26:03.615 --> 01:26:06.485
+Thank you, sir. Goodnight, sir. Goodnight. Thank you.
+
+1759
+01:26:06.485 --> 01:26:08.805
+Thank you. Thank you, sir.
+
+1760
+01:26:10.045 --> 01:26:12.375
+Work, uh, workbook is shared.
+
+1761
+01:26:13.775 --> 01:26:16.755
+Uh, Yes, sir.
+
+1762
+01:26:17.095 --> 01:26:18.875
+Uh, sir, uh, we'll do it, sir.
+
+1763
+01:26:20.375 --> 01:26:22.955
+Uh, you, you created it immediately. Okay?
+
+1764
+01:26:23.265 --> 01:26:25.555
+That is actually created, okay?
+
+1765
+01:26:25.555 --> 01:26:28.435
+It's, uh, created, created Tke. Yes, sir.
+
+1766
+01:26:32.655 --> 01:26:35.005
+Thank you all. Thank you. Thank you all.
+
+1767
+01:26:35.215 --> 01:26:37.365
+Thank you, sir. Thank you, sir. Thank.
