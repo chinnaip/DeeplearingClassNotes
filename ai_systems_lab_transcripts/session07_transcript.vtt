@@ -1,0 +1,4818 @@
+NOTE Vimeo URL: https://vimeo.com/1151150281
+WEBVTT
+
+1
+00:18:10.505 --> 00:18:11.475
+Good morning everyone.
+
+2
+00:18:13.665 --> 00:18:17.255
+Morning, sir. Uh, everything good?
+
+3
+00:18:17.925 --> 00:18:21.575
+Yeah, good morning. Happy new, happy New Year
+
+4
+00:18:21.575 --> 00:18:23.455
+to everyone, sir.
+
+5
+00:18:23.545 --> 00:18:26.215
+Sorry. Weekend
+
+6
+00:18:26.835 --> 00:18:29.695
+On this, like pretty, like fairly new morning.
+
+7
+00:18:29.795 --> 00:18:34.575
+Uh, new year actually. Thank you, sir.
+
+8
+00:18:34.575 --> 00:18:37.015
+Okay. Anyways, okay,
+
+9
+00:18:37.115 --> 00:18:39.935
+So, uh, today's topic will be, uh, you know, uh,
+
+10
+00:18:39.935 --> 00:18:42.335
+diving into one of the factors that is the regression.
+
+11
+00:18:42.555 --> 00:18:44.655
+So two aspects of the regression.
+
+12
+00:18:44.805 --> 00:18:47.455
+I'll be actually diving that is the largest regression
+
+13
+00:18:47.795 --> 00:18:49.335
+and nearly linear regression.
+
+14
+00:18:49.435 --> 00:18:51.215
+And I know as a matter of fact,
+
+15
+00:18:51.235 --> 00:18:53.495
+you guys are already familiar with one of the things,
+
+16
+00:18:53.565 --> 00:18:55.535
+like both of the things during your past,
+
+17
+00:18:55.635 --> 00:18:57.455
+uh, semester data science lab.
+
+18
+00:18:57.955 --> 00:19:01.735
+So in this one, what I thought of like, uh, giving you one,
+
+19
+00:19:01.795 --> 00:19:05.255
+uh, like a live demonstration with a Python scripts
+
+20
+00:19:05.255 --> 00:19:07.655
+and all, how we can like, uh, build our own, you know,
+
+21
+00:19:08.155 --> 00:19:12.135
+AI model like, uh, or ML models with the linear regression
+
+22
+00:19:12.235 --> 00:19:13.695
+and logistic regression.
+
+23
+00:19:13.755 --> 00:19:17.055
+So, uh, step by step I'll be showing you, uh, like how
+
+24
+00:19:17.155 --> 00:19:19.695
+to actually import the data, how to actually, uh, you know,
+
+25
+00:19:20.115 --> 00:19:21.735
+sub select the data, purify the data,
+
+26
+00:19:21.795 --> 00:19:24.135
+and then apply the algorithms, also evaluate the algorithms
+
+27
+00:19:24.135 --> 00:19:25.175
+and all that.
+
+28
+00:19:25.375 --> 00:19:26.495
+I will be actually showing you
+
+29
+00:19:26.545 --> 00:19:30.015
+Today, okay?
+
+30
+00:19:30.445 --> 00:19:31.445
+Sure.
+
+31
+00:19:35.205 --> 00:19:38.065
+So I hope my screen is visible. Oh, just
+
+32
+00:19:38.105 --> 00:19:39.105
+A second. I think
+
+33
+00:19:39.105 --> 00:19:43.865
+so now it is not visible, sir. Okay. Okay.
+
+34
+00:19:43.865 --> 00:19:45.425
+Just a second. Let me rejoin.
+
+35
+00:20:27.635 --> 00:20:27.925
+Yeah,
+
+36
+00:20:28.135 --> 00:20:30.045
+Sorry, I had a problem with my system.
+
+37
+00:20:31.305 --> 00:20:35.885
+Uh, lemme check. Yeah, I hope it is visible, right?
+
+38
+00:20:36.635 --> 00:20:41.245
+Yeah. Yes, yes, sir. Okay, so
+
+39
+00:20:41.705 --> 00:20:45.365
+The, uh, like, uh, ideas, I'll be using the Google collab,
+
+40
+00:20:45.985 --> 00:20:48.885
+so I hope you are already familiar with the like, uh,
+
+41
+00:20:48.885 --> 00:20:50.965
+this ID along with like Jupyter Notebook, sir.
+
+42
+00:20:50.965 --> 00:20:53.725
+So, two, yes, I think mostly we focus for the,
+
+43
+00:20:53.725 --> 00:20:55.365
+like a development of AI models.
+
+44
+00:20:56.185 --> 00:20:59.605
+Uh, if you're having good system GPUs and everything,
+
+45
+00:20:59.625 --> 00:21:02.365
+and if you like to, you know, uh, like, uh, do, uh,
+
+46
+00:21:02.365 --> 00:21:04.685
+like a own set up, like a configuration
+
+47
+00:21:04.705 --> 00:21:08.125
+and all with a powerful system, then Jupyter Notebook is,
+
+48
+00:21:08.185 --> 00:21:12.365
+or Anaconda whole system environment is way to go, I think.
+
+49
+00:21:12.665 --> 00:21:15.965
+And if you are into something where your system is not much
+
+50
+00:21:15.965 --> 00:21:18.565
+that powerful, you don't want to do the configuration part
+
+51
+00:21:18.565 --> 00:21:21.045
+and all those things, this, uh, Google, uh,
+
+52
+00:21:21.045 --> 00:21:23.285
+Google collab works so phenomenal.
+
+53
+00:21:23.285 --> 00:21:26.085
+That is a thing. Okay, so, uh, today,
+
+54
+00:21:26.455 --> 00:21:28.965
+let's just do the thing that I'll be going.
+
+55
+00:21:29.065 --> 00:21:32.085
+So I'll create a new notebook, okay?
+
+56
+00:21:43.355 --> 00:21:47.905
+Okay, let's just, okay, for, uh,
+
+57
+00:21:48.055 --> 00:21:50.585
+dataset, I'm using one thing that is
+
+58
+00:21:51.475 --> 00:21:52.865
+tightening dataset, okay?
+
+59
+00:21:53.205 --> 00:21:56.665
+If you search, that is Titan, Nick, CSV.
+
+60
+00:21:57.895 --> 00:21:59.515
+If you Google Titan, CSV,
+
+61
+00:21:59.815 --> 00:22:02.315
+either you can go on the GitHub page
+
+62
+00:22:02.415 --> 00:22:03.835
+or this, uh, you know, Kegel
+
+63
+00:22:03.895 --> 00:22:05.515
+or multiple other that is there.
+
+64
+00:22:05.615 --> 00:22:07.115
+So I'm going into GitHub,
+
+65
+00:22:07.775 --> 00:22:10.315
+and from there, this three button, uh, like, uh,
+
+66
+00:22:10.745 --> 00:22:13.635
+this three button icon, like
+
+67
+00:22:14.945 --> 00:22:18.315
+from there you can just download this, you know, file.
+
+68
+00:22:19.245 --> 00:22:23.355
+Let's just go and do this. Okay? So I'll repeat once again.
+
+69
+00:22:23.655 --> 00:22:28.255
+Uh, you search the Titan CSB five for the dataset, okay?
+
+70
+00:22:29.355 --> 00:22:33.375
+Uh, you go to the data link on this side, more file actions.
+
+71
+00:22:33.375 --> 00:22:35.935
+That is the icon that see on the right hand side,
+
+72
+00:22:36.555 --> 00:22:39.775
+you click on that one and you can click on the downloads
+
+73
+00:22:39.775 --> 00:22:41.955
+for downloading the file, right?
+
+74
+00:22:42.655 --> 00:22:44.635
+So once you download this one, okay,
+
+75
+00:22:44.805 --> 00:22:46.635
+it'll sit somewhere in your download folder.
+
+76
+00:22:47.945 --> 00:22:49.715
+Okay? So I have this data set file,
+
+77
+00:22:49.715 --> 00:22:52.515
+Titanic one CSV, I'll just show, okay?
+
+78
+00:22:56.975 --> 00:22:59.875
+Now, once you download this one, you have to do one thing
+
+79
+00:22:59.875 --> 00:23:02.755
+that is upload the data into, uh,
+
+80
+00:23:02.935 --> 00:23:04.955
+Google collab to use this one.
+
+81
+00:23:05.255 --> 00:23:07.435
+If you're having, uh, like a basic, uh,
+
+82
+00:23:07.495 --> 00:23:08.835
+no Google Jupyter notebook
+
+83
+00:23:08.835 --> 00:23:12.035
+and all, you can directly give them the path
+
+84
+00:23:12.095 --> 00:23:13.355
+and it can directly work.
+
+85
+00:23:13.575 --> 00:23:16.475
+But, uh, because this Google Cloud runs in the cloud,
+
+86
+00:23:16.895 --> 00:23:19.555
+so you have to upload the dataset in the cloud in order
+
+87
+00:23:19.655 --> 00:23:21.995
+to like, uh, you know, read the data sets and all.
+
+88
+00:23:22.575 --> 00:23:25.755
+So here I'll be doing like a, in this one, uh,
+
+89
+00:23:25.935 --> 00:23:27.755
+you click on this hamburger menu.
+
+90
+00:23:28.655 --> 00:23:31.515
+Uh, you can go to this folder icon,
+
+91
+00:23:31.855 --> 00:23:33.955
+and there there's upload icon.
+
+92
+00:23:33.955 --> 00:23:38.385
+Is there, okay, I'll repeat in the hamburger menu.
+
+93
+00:23:38.385 --> 00:23:41.385
+If you click okay, then the folder icon
+
+94
+00:23:41.445 --> 00:23:44.345
+and there is the upload icon, you click on that one,
+
+95
+00:23:44.405 --> 00:23:46.605
+it will prompt it with a window there,
+
+96
+00:23:46.605 --> 00:23:47.965
+you can upload the file.
+
+97
+00:23:48.065 --> 00:23:50.445
+So I have previously done the Titan CSV file,
+
+98
+00:23:50.505 --> 00:23:51.845
+so I'll upload this one.
+
+99
+00:23:52.975 --> 00:23:55.145
+Okay, so some warning is there, that is fine.
+
+100
+00:23:55.245 --> 00:23:57.905
+Now the file has been uploaded, so I'll do what?
+
+101
+00:23:58.055 --> 00:24:01.065
+I'll read the file. Okay, so for this one, I'll use
+
+102
+00:24:01.805 --> 00:24:03.145
+the Pandas library.
+
+103
+00:24:03.445 --> 00:24:06.985
+So I'm writing the script here, WS PD D. Okay.
+
+104
+00:24:08.175 --> 00:24:11.235
+And I'm reading the data in a data frame
+
+105
+00:24:11.235 --> 00:24:12.795
+that is a variable, variable.
+
+106
+00:24:12.815 --> 00:24:16.115
+I'm creating df PDed read,
+
+107
+00:24:16.715 --> 00:24:18.515
+CSV, okay?
+
+108
+00:24:18.655 --> 00:24:20.355
+And then the file name.
+
+109
+00:24:21.015 --> 00:24:24.735
+So I have eight AIC
+
+110
+00:24:27.945 --> 00:24:32.775
+csv slash okay, do says present folder within
+
+111
+00:24:32.775 --> 00:24:36.535
+that the Titanic csv folder, uh, file, it'll search, okay,
+
+112
+00:24:36.835 --> 00:24:39.615
+if I run this with the, uh, like a control enter
+
+113
+00:24:40.075 --> 00:24:42.855
+or command enter or Mac, uh, so
+
+114
+00:24:43.395 --> 00:24:46.415
+if you see this right tick, that means it is working.
+
+115
+00:24:46.765 --> 00:24:47.895
+Okay? That is the idea.
+
+116
+00:24:48.235 --> 00:24:52.225
+Now, the data has like already, you know, loaded.
+
+117
+00:24:52.635 --> 00:24:55.625
+Let's just see with the D dot head, what are the like, uh,
+
+118
+00:24:55.625 --> 00:24:57.305
+you know, contents of the file that is there.
+
+119
+00:24:57.845 --> 00:25:01.505
+So if I execute d do head, I have the first five, you know,
+
+120
+00:25:02.975 --> 00:25:06.955
+uh, rules that has been like, uh, given as an output.
+
+121
+00:25:07.015 --> 00:25:10.635
+So these are the columns I'm having passengers Id survived,
+
+122
+00:25:10.735 --> 00:25:15.275
+uh, uh, B class name six H uh, SYP, posh.
+
+123
+00:25:15.335 --> 00:25:17.635
+So multiple data information you are getting.
+
+124
+00:25:17.695 --> 00:25:20.795
+So what kinda data also dealing with, along with that one,
+
+125
+00:25:20.795 --> 00:25:23.795
+you can run this command also D info.
+
+126
+00:25:24.715 --> 00:25:26.975
+So this info, uh, describe, uh,
+
+127
+00:25:26.975 --> 00:25:29.015
+then there's the other factors that they said.
+
+128
+00:25:29.015 --> 00:25:31.815
+These kind of things. We try to inspect the data,
+
+129
+00:25:32.035 --> 00:25:35.135
+how these are actually, uh, what kind
+
+130
+00:25:35.135 --> 00:25:36.815
+of data we are dealing with basically fine.
+
+131
+00:25:36.835 --> 00:25:39.215
+So d info, basically whos you, what kind
+
+132
+00:25:39.215 --> 00:25:41.095
+of columns you're dealing with, right?
+
+133
+00:25:42.155 --> 00:25:43.255
+So basically
+
+134
+00:25:43.615 --> 00:25:45.415
+whenever you are applying any machine learning,
+
+135
+00:25:45.415 --> 00:25:47.415
+deep learning, AI, algorithms, uh,
+
+136
+00:25:47.875 --> 00:25:49.255
+the dataset you're providing,
+
+137
+00:25:49.315 --> 00:25:53.045
+the dataset should be always numeric value, okay?
+
+138
+00:25:53.065 --> 00:25:55.765
+If it is non-numeric value, if you are trying to suppose,
+
+139
+00:25:56.185 --> 00:25:58.885
+uh, add to, you know, names or something,
+
+140
+00:25:59.145 --> 00:26:01.165
+or multiply something, the characters
+
+141
+00:26:01.165 --> 00:26:02.405
+and all, it'll give you a,
+
+142
+00:26:02.815 --> 00:26:04.405
+there is a basic fundamental idea.
+
+143
+00:26:05.025 --> 00:26:07.525
+So you have to, you know, see the,
+
+144
+00:26:07.535 --> 00:26:09.765
+which are the like data set you are using.
+
+145
+00:26:09.765 --> 00:26:13.045
+You're not actually giving input as a string or character.
+
+146
+00:26:13.505 --> 00:26:15.165
+You have to have numerical values.
+
+147
+00:26:15.585 --> 00:26:17.205
+So in this one, you see all
+
+148
+00:26:17.205 --> 00:26:21.085
+of the data are mostly in 64, okay?
+
+149
+00:26:21.235 --> 00:26:25.045
+Some float 64, but some of them are objects, okay?
+
+150
+00:26:26.405 --> 00:26:29.145
+Now you have to check whether these objects are like useful
+
+151
+00:26:29.145 --> 00:26:32.665
+for you or you can like, uh, discard those and all.
+
+152
+00:26:32.895 --> 00:26:36.785
+Okay? So basic idea first all be actually going further,
+
+153
+00:26:37.465 --> 00:26:39.065
+dropping off the few of the columns, fine.
+
+154
+00:26:39.605 --> 00:26:42.585
+So if you see the dataset, uh, that is the, uh,
+
+155
+00:26:42.615 --> 00:26:45.085
+passenger id, okay, that is not needed.
+
+156
+00:26:45.845 --> 00:26:48.005
+P class might be useful, name is not needed.
+
+157
+00:26:48.445 --> 00:26:50.485
+Whenever I'm going for any, uh, model training
+
+158
+00:26:50.545 --> 00:26:54.085
+and all, uh, so let's just make it like very simple.
+
+159
+00:26:54.275 --> 00:26:56.645
+I'll first give you one example, then you can go ahead
+
+160
+00:26:56.645 --> 00:27:00.085
+and like, uh, do like a multi, you know, uh, dataset, uh,
+
+161
+00:27:00.085 --> 00:27:03.165
+like a multiple columns and apply the algorithms and all.
+
+162
+00:27:03.585 --> 00:27:07.805
+So let's just divide X and y actually do one thing,
+
+163
+00:27:10.595 --> 00:27:11.595
+Okay?
+
+164
+00:27:13.115 --> 00:27:16.015
+So I'll create one section
+
+165
+00:27:16.345 --> 00:27:19.255
+where I'll be keeping, okay?
+
+166
+00:27:19.515 --> 00:27:24.455
+Uh huh. So like one by one, I'll give you one actually.
+
+167
+00:27:31.885 --> 00:27:33.615
+What are the things you need to do in order
+
+168
+00:27:33.635 --> 00:27:35.175
+to apply any kinda algorithm?
+
+169
+00:27:35.285 --> 00:27:36.495
+Fine. So notes.
+
+170
+00:27:41.625 --> 00:27:43.485
+So first you need to load the data.
+
+171
+00:27:45.985 --> 00:27:48.875
+Fine, once you load the data, you inspect the data,
+
+172
+00:27:48.985 --> 00:27:51.075
+what kind of data set you're dealing with.
+
+173
+00:27:51.765 --> 00:27:55.345
+So you can go for the like, uh, various, uh, you know, uh,
+
+174
+00:27:55.655 --> 00:27:57.185
+just head, uh, info.
+
+175
+00:27:57.545 --> 00:27:59.425
+Describe these kind of functions once
+
+176
+00:27:59.425 --> 00:28:00.505
+you're done with that one.
+
+177
+00:28:00.685 --> 00:28:03.065
+Now you need to do one is that is the, you need
+
+178
+00:28:03.065 --> 00:28:04.385
+to check NN values
+
+179
+00:28:06.035 --> 00:28:09.125
+whether your data set is having some blank values
+
+180
+00:28:09.185 --> 00:28:10.605
+or n values, NN values.
+
+181
+00:28:10.635 --> 00:28:15.445
+Suppose, uh, in Excel sheet, I'm like, uh, giving inputs
+
+182
+00:28:15.445 --> 00:28:16.685
+as a data, okay?
+
+183
+00:28:17.185 --> 00:28:19.445
+And few of the days or entries I have missed.
+
+184
+00:28:19.465 --> 00:28:21.165
+So I have kept that as a blank.
+
+185
+00:28:21.905 --> 00:28:24.245
+And finally, I'm sending you the whole Excel sheet.
+
+186
+00:28:24.245 --> 00:28:26.885
+There are some blank values, so those are known
+
+187
+00:28:26.885 --> 00:28:28.085
+as NN values, fine.
+
+188
+00:28:28.625 --> 00:28:32.485
+So for checking that in your, you know, code, you need
+
+189
+00:28:32.485 --> 00:28:33.845
+to apply this one.
+
+190
+00:28:33.965 --> 00:28:35.645
+D is na.
+
+191
+00:28:36.145 --> 00:28:39.365
+So we are checking, is there any NN values are there
+
+192
+00:28:39.905 --> 00:28:44.445
+dot n So basically it will show you column wise,
+
+193
+00:28:45.025 --> 00:28:48.325
+if there is any NN values, fine, let go this one.
+
+194
+00:28:48.865 --> 00:28:52.445
+So you can check this NN values, once we are checking, uh,
+
+195
+00:28:52.465 --> 00:28:55.805
+the synchronous how to apply the load the data,
+
+196
+00:28:55.855 --> 00:28:58.085
+check the data, check the NN values.
+
+197
+00:28:58.185 --> 00:29:00.605
+So in this NN values passenger ID is having false.
+
+198
+00:29:00.705 --> 00:29:02.125
+So no NN values are there.
+
+199
+00:29:02.525 --> 00:29:06.645
+Survival ID is also having false P class, false name false.
+
+200
+00:29:06.825 --> 00:29:09.565
+But in this age, that is true, Kevin,
+
+201
+00:29:09.575 --> 00:29:11.645
+there is true embark that is true.
+
+202
+00:29:11.745 --> 00:29:13.885
+So few of the columns where,
+
+203
+00:29:14.025 --> 00:29:16.965
+or the features where NN values are present, okay?
+
+204
+00:29:17.435 --> 00:29:20.245
+Also, if you see the D head, okay,
+
+205
+00:29:21.015 --> 00:29:24.285
+there you can see this, you know, cabin
+
+206
+00:29:25.085 --> 00:29:26.525
+NNNN is there.
+
+207
+00:29:26.585 --> 00:29:28.485
+So there are blank values. Something is there.
+
+208
+00:29:29.185 --> 00:29:31.045
+So if you actually give this data
+
+209
+00:29:31.345 --> 00:29:33.685
+and try to train the model with this NN values,
+
+210
+00:29:33.815 --> 00:29:37.085
+it'll give you where it, so we have to first deal
+
+211
+00:29:37.085 --> 00:29:38.565
+with the NN values, okay?
+
+212
+00:29:38.985 --> 00:29:41.405
+So the first idea you should be having,
+
+213
+00:29:41.585 --> 00:29:43.565
+if your data set is like huge,
+
+214
+00:29:43.675 --> 00:29:44.675
+Okay? To
+
+215
+00:29:44.675 --> 00:29:46.605
+directly discard the end values.
+
+216
+00:29:47.325 --> 00:29:49.805
+I repeat if your data set is huge in number
+
+217
+00:29:50.025 --> 00:29:52.205
+to directly discard the values, okay?
+
+218
+00:29:52.305 --> 00:29:54.085
+The rules which are having end values.
+
+219
+00:29:54.745 --> 00:29:58.365
+If you're not having like a, uh, enough set of data,
+
+220
+00:29:58.795 --> 00:30:01.205
+then you go for the, like, backfield for field
+
+221
+00:30:01.225 --> 00:30:03.845
+or even predicting from the existing columns
+
+222
+00:30:03.865 --> 00:30:06.525
+to actually in like, uh, replace the NN values
+
+223
+00:30:06.595 --> 00:30:07.925
+with some predicted values.
+
+224
+00:30:07.925 --> 00:30:09.525
+These kind of operations we do.
+
+225
+00:30:09.945 --> 00:30:12.445
+So, uh, for making it simple, let's just go with the,
+
+226
+00:30:12.445 --> 00:30:15.205
+like some, uh, like just dropping of this columns fine.
+
+227
+00:30:15.865 --> 00:30:17.795
+So After this checking this,
+
+228
+00:30:17.955 --> 00:30:21.435
+NN like you can directly do df is called to df
+
+229
+00:30:22.105 --> 00:30:23.195
+Drop na.
+
+230
+00:30:23.655 --> 00:30:26.115
+So this is basically for dropping your columns.
+
+231
+00:30:27.195 --> 00:30:29.675
+Uh, then, uh,
+
+232
+00:30:29.975 --> 00:30:34.115
+If I write this one, okay, df, physical to df drop na.
+
+233
+00:30:34.115 --> 00:30:37.345
+So it is basically execute. And
+
+234
+00:30:38.925 --> 00:30:40.345
+If you Go
+
+235
+00:30:40.345 --> 00:30:42.225
+and df, if you check this one, right,
+
+236
+00:30:42.805 --> 00:30:45.785
+the NN values will be not there, fine.
+
+237
+00:30:45.925 --> 00:30:49.125
+Now, the DF data has been, uh,
+
+238
+00:30:49.265 --> 00:30:51.885
+the n values has been discarded the rules basically.
+
+239
+00:30:52.145 --> 00:30:55.685
+Now, if I, again, check df.is in a
+
+240
+00:30:57.735 --> 00:31:00.275
+Any, Again, I'm checking whether there's any
+
+241
+00:31:00.875 --> 00:31:03.035
+n values are laptop of the dropping off N,
+
+242
+00:31:03.205 --> 00:31:04.205
+Right? So currently
+
+243
+00:31:04.205 --> 00:31:08.375
+if you see I have rectified the N values,
+
+244
+00:31:09.125 --> 00:31:10.125
+Okay? Now n values
+
+245
+00:31:10.125 --> 00:31:13.695
+are not there. Now I can go for my next step.
+
+246
+00:31:13.795 --> 00:31:16.015
+So NN values are like already removed,
+
+247
+00:31:16.565 --> 00:31:17.565
+Okay?
+
+248
+00:31:17.595 --> 00:31:22.025
+Now I'll be dissecting the data sets into
+
+249
+00:31:22.745 --> 00:31:24.825
+dependent variable and independent variable.
+
+250
+00:31:26.105 --> 00:31:28.365
+The analysis part that I want to do,
+
+251
+00:31:28.425 --> 00:31:30.845
+or you can go in this one visualization part as well.
+
+252
+00:31:31.305 --> 00:31:32.965
+So let's just go with the no,
+
+253
+00:31:35.335 --> 00:31:38.685
+Divide the data into
+
+254
+00:31:40.005 --> 00:31:44.745
+independent and
+
+255
+00:31:45.535 --> 00:31:48.235
+independent variable.
+
+256
+00:31:49.065 --> 00:31:50.065
+Fine.
+
+257
+00:31:51.785 --> 00:31:54.565
+So suppose, uh, in the initial stage,
+
+258
+00:31:54.635 --> 00:31:56.645
+I'll be applying the linear regression point
+
+259
+00:31:56.645 --> 00:31:57.765
+in the linear regression.
+
+260
+00:31:58.485 --> 00:32:02.965
+I want to actually predict, uh, based on the age,
+
+261
+00:32:03.155 --> 00:32:04.565
+Okay? If
+
+262
+00:32:04.565 --> 00:32:06.965
+Your age is something, if you're giving cancer input,
+
+263
+00:32:07.035 --> 00:32:10.965
+what is the chance that you have survived in this dataset?
+
+264
+00:32:11.675 --> 00:32:13.845
+Okay? The survived is one, is
+
+265
+00:32:13.995 --> 00:32:16.485
+that means the person is survived, has survived.
+
+266
+00:32:17.075 --> 00:32:19.365
+Zero means the person didn't survive, okay?
+
+267
+00:32:19.485 --> 00:32:22.205
+In this titan dataset, the Titanic, uh, ships, uh,
+
+268
+00:32:22.205 --> 00:32:23.605
+passengers details are there.
+
+269
+00:32:24.025 --> 00:32:27.445
+If one is there, that means the passenger did survive
+
+270
+00:32:27.705 --> 00:32:30.285
+and zero that means passenger didn't survive
+
+271
+00:32:30.285 --> 00:32:31.605
+based on that age factor.
+
+272
+00:32:32.145 --> 00:32:35.285
+We are cross checking. If your age is something like, uh,
+
+273
+00:32:35.605 --> 00:32:39.845
+supposed 30, 40, 50, anything, okay, what is the likelihood
+
+274
+00:32:39.915 --> 00:32:41.845
+that you'll survive on you or not?
+
+275
+00:32:42.115 --> 00:32:45.445
+Okay? That is the actually, uh, you know, model.
+
+276
+00:32:45.605 --> 00:32:48.525
+I want to create the linear regression model based on age.
+
+277
+00:32:48.585 --> 00:32:50.765
+I'm checking whether the people has survived or not.
+
+278
+00:32:51.065 --> 00:32:54.965
+So I will do one thing that is divide this data into X
+
+279
+00:32:54.965 --> 00:32:57.245
+and y, depending independent in the,
+
+280
+00:32:58.755 --> 00:33:01.815
+You know, Independent dependent variable.
+
+281
+00:33:02.115 --> 00:33:03.415
+I'm doing this df
+
+282
+00:33:06.815 --> 00:33:11.085
+H So I'm basically taking the H and in the X I'm taking
+
+283
+00:33:14.235 --> 00:33:14.355
+C
+
+284
+00:33:20.475 --> 00:33:20.765
+fine.
+
+285
+00:33:22.905 --> 00:33:25.245
+So once I compile it, I have two variables.
+
+286
+00:33:26.085 --> 00:33:26.805
+I have y
+
+287
+00:33:27.875 --> 00:33:31.345
+Head y capital because
+
+288
+00:33:31.345 --> 00:33:35.975
+These are, Okay, so I have in the y that is the age
+
+289
+00:33:36.985 --> 00:33:38.455
+based on some age, I want
+
+290
+00:33:38.455 --> 00:33:40.495
+to predict whether the people has survived or not.
+
+291
+00:33:40.755 --> 00:33:42.895
+And in this y go my head,
+
+292
+00:33:45.825 --> 00:33:46.825
+Okay? So
+
+293
+00:33:46.825 --> 00:33:49.895
+it is saying the Survive. So up
+
+294
+00:33:50.005 --> 00:33:51.415
+Till this point, this is fine.
+
+295
+00:33:52.005 --> 00:33:53.175
+Okay? Now,
+
+296
+00:33:53.175 --> 00:33:56.455
+after division, another thing you need to do that is the,
+
+297
+00:33:56.875 --> 00:33:59.775
+you know, whenever you are actually applying some, uh,
+
+298
+00:34:00.365 --> 00:34:02.135
+evolution methods, R squared
+
+299
+00:34:02.135 --> 00:34:05.295
+or something, MSC, you might get a like huge value
+
+300
+00:34:05.295 --> 00:34:06.495
+because these are some hub
+
+301
+00:34:06.495 --> 00:34:07.775
+squared data, something like that.
+
+302
+00:34:08.475 --> 00:34:12.895
+So to get a like idea, like in which, you know, value,
+
+303
+00:34:13.075 --> 00:34:16.335
+I'm dealing with the, the problems and all, we basically go
+
+304
+00:34:16.355 --> 00:34:17.735
+and apply the minimax color.
+
+305
+00:34:18.165 --> 00:34:20.895
+That is also minimizes the, you know, uh,
+
+306
+00:34:21.795 --> 00:34:22.795
+The, You Know,
+
+307
+00:34:22.795 --> 00:34:25.735
+uh, The biases towards the data.
+
+308
+00:34:26.165 --> 00:34:30.005
+Okay? So we apply some kind of scaler or scaling
+
+309
+00:34:32.055 --> 00:34:34.795
+Of the data. So this
+
+310
+00:34:34.795 --> 00:34:37.315
+Is the fifth stage that I usually do.
+
+311
+00:34:37.375 --> 00:34:39.355
+The, on the fifth stage we do the scaling.
+
+312
+00:34:40.135 --> 00:34:43.795
+So because this x data that is survived,
+
+313
+00:34:43.855 --> 00:34:45.995
+the minimum value is zero, maximum value is one.
+
+314
+00:34:45.995 --> 00:34:49.875
+There is no like a need of applying of any kinda,
+
+315
+00:34:50.015 --> 00:34:51.155
+you know, mean muscular.
+
+316
+00:34:51.375 --> 00:34:56.115
+But in this case, y you see there are ranges. Okay?
+
+317
+00:34:56.185 --> 00:34:58.955
+Four is there, so 54 is 35, 58.
+
+318
+00:34:58.955 --> 00:35:01.235
+So ranges there, it is not between zero to one.
+
+319
+00:35:01.935 --> 00:35:03.515
+So basically you can apply
+
+320
+00:35:04.025 --> 00:35:07.195
+because it is one to one, you might get away.
+
+321
+00:35:07.255 --> 00:35:10.515
+But, uh, for like understanding the evolution metrics,
+
+322
+00:35:10.815 --> 00:35:12.035
+we generally apply this one
+
+323
+00:35:12.575 --> 00:35:16.355
+for applying the mini minimax scale that I usually go for.
+
+324
+00:35:16.975 --> 00:35:19.715
+Uh, I'll be importing one of the algorithm,
+
+325
+00:35:20.515 --> 00:35:21.515
+Right? A scale learned
+
+326
+00:35:21.515 --> 00:35:24.415
+dot reprocessing
+
+327
+00:35:28.635 --> 00:35:32.615
+Processing import
+
+328
+00:35:34.995 --> 00:35:36.485
+mini max scaler,
+
+329
+00:35:37.115 --> 00:35:38.115
+Okay?
+
+330
+00:35:38.685 --> 00:35:40.655
+Okay. Once you import the inax scaler,
+
+331
+00:35:40.655 --> 00:35:43.295
+you will create an object of minax scaler scaler.
+
+332
+00:35:43.845 --> 00:35:47.055
+Then basically you'll apply the minax scaler into the data.
+
+333
+00:35:47.275 --> 00:35:48.815
+Why is it going to, why scale?
+
+334
+00:35:48.815 --> 00:35:51.935
+Suppose, okay, why scale is goal to
+
+335
+00:35:52.985 --> 00:35:54.605
+scaler.fit and transform.
+
+336
+00:35:55.645 --> 00:35:57.855
+Okay? Why do values did reshape?
+
+337
+00:35:58.665 --> 00:36:02.405
+So this is basically converting in 1D RA into 2D RA. Okay?
+
+338
+00:36:03.325 --> 00:36:05.285
+X scale is not required. Fine.
+
+339
+00:36:07.955 --> 00:36:10.775
+Oh, sorry, why? Huh? Y isn't required. X is not required.
+
+340
+00:36:13.395 --> 00:36:14.855
+Now, if I apply this one
+
+341
+00:36:14.995 --> 00:36:17.775
+and also do this y scaled,
+
+342
+00:36:20.435 --> 00:36:20.725
+okay,
+
+343
+00:36:31.285 --> 00:36:34.705
+now you see after applying this one, the previous value used
+
+344
+00:36:34.705 --> 00:36:38.585
+to be, uh, this thing 38, uh, 35, 54.
+
+345
+00:36:39.085 --> 00:36:42.745
+Now the value has become, the range is between zero to one.
+
+346
+00:36:42.965 --> 00:36:44.505
+The minimum value becomes zero,
+
+347
+00:36:44.605 --> 00:36:46.185
+the maximum value becomes one.
+
+348
+00:36:46.485 --> 00:36:50.145
+Now, the values will be within the range of that one.
+
+349
+00:36:50.255 --> 00:36:52.705
+There's the minax scaler that we use.
+
+350
+00:36:53.535 --> 00:36:55.905
+I'll be going further splitting of the data.
+
+351
+00:36:55.935 --> 00:36:57.985
+That is the training and testing, right?
+
+352
+00:36:59.425 --> 00:37:01.365
+Sir, what is the minus one in reshape?
+
+353
+00:37:01.935 --> 00:37:05.735
+Sorry. So the minus one in reshape you did
+
+354
+00:37:06.935 --> 00:37:07.935
+Minus one is basic.
+
+355
+00:37:07.985 --> 00:37:11.485
+Uh, minus one is basically, uh, you, uh, actually, uh,
+
+356
+00:37:11.515 --> 00:37:15.965
+this one, uh, you are converting the 1D RN two DR
+
+357
+00:37:16.185 --> 00:37:18.485
+for this one we use this minus one comma one,
+
+358
+00:37:18.945 --> 00:37:23.225
+or you can use this one dot two three.
+
+359
+00:37:25.655 --> 00:37:27.755
+You can also use this one right
+
+360
+00:37:28.995 --> 00:37:29.995
+Focus.
+
+361
+00:37:37.885 --> 00:37:39.545
+Now, I'll use this one
+
+362
+00:37:40.765 --> 00:37:43.515
+from my scale learn dot.
+
+363
+00:37:44.815 --> 00:37:46.315
+Uh, which one?
+
+364
+00:37:47.845 --> 00:37:52.625
+Uh, I need to do this, uh, data division into X and y.
+
+365
+00:37:53.435 --> 00:37:58.365
+That is the scale model selection,
+
+366
+00:38:00.305 --> 00:38:01.925
+import trend test split.
+
+367
+00:38:02.635 --> 00:38:03.845
+Okay? So
+
+368
+00:38:04.735 --> 00:38:07.725
+after the scaling of the data, then you do what you do.
+
+369
+00:38:07.725 --> 00:38:12.045
+That is the, uh, divide
+
+370
+00:38:13.105 --> 00:38:16.945
+the data into
+
+371
+00:38:17.515 --> 00:38:19.345
+print test split.
+
+372
+00:38:20.385 --> 00:38:21.605
+So, you know, always
+
+373
+00:38:21.885 --> 00:38:23.165
+whenever you're applying the algorithm,
+
+374
+00:38:23.215 --> 00:38:26.405
+first you divide the data into, uh, two
+
+375
+00:38:26.425 --> 00:38:30.365
+or three parts, two parts as in extreme, that is the data,
+
+376
+00:38:30.585 --> 00:38:32.925
+um, will be using for the model training.
+
+377
+00:38:33.795 --> 00:38:37.765
+Then white, uh, white range, that is the model for the,
+
+378
+00:38:37.865 --> 00:38:39.205
+you know, betterment of the model.
+
+379
+00:38:39.235 --> 00:38:41.685
+Then we will be having lip two data, the, uh,
+
+380
+00:38:42.395 --> 00:38:44.045
+expressed and white test.
+
+381
+00:38:44.055 --> 00:38:47.965
+These are data to use that the model hasn't seen the data,
+
+382
+00:38:48.145 --> 00:38:50.005
+and it'll be checked to, uh, like
+
+383
+00:38:50.065 --> 00:38:52.245
+how the performance has been done.
+
+384
+00:38:52.545 --> 00:38:55.165
+So I will give you one demonstration on that one.
+
+385
+00:38:55.585 --> 00:38:56.845
+So what is happening is,
+
+386
+00:38:57.795 --> 00:39:01.525
+Suppose you are Having the X and Y data currently.
+
+387
+00:39:02.385 --> 00:39:06.285
+Now you divide the X into each two data, X train
+
+388
+00:39:08.655 --> 00:39:10.355
+And X test,
+
+389
+00:39:13.045 --> 00:39:17.935
+And you also divide the Y data into wide train
+
+390
+00:39:20.115 --> 00:39:21.115
+Y test.
+
+391
+00:39:21.935 --> 00:39:23.035
+Now, this extreme
+
+392
+00:39:23.095 --> 00:39:25.755
+and wide train data, I be showing to the model
+
+393
+00:39:26.015 --> 00:39:27.195
+and it'll know,
+
+394
+00:39:27.695 --> 00:39:30.555
+Uh, The what is the input
+
+395
+00:39:30.555 --> 00:39:32.955
+and what is the expected output output.
+
+396
+00:39:33.255 --> 00:39:36.115
+So it'll try to predict and try to learn from that one.
+
+397
+00:39:36.615 --> 00:39:38.035
+Now, this X test
+
+398
+00:39:38.055 --> 00:39:41.915
+and white test data, these two model hasn't seen this one.
+
+399
+00:39:42.695 --> 00:39:46.315
+Now, once the model is trained, I'll use this x test data
+
+400
+00:39:46.895 --> 00:39:49.555
+to actually predict one data that is the y predict.
+
+401
+00:39:50.655 --> 00:39:52.675
+So the prediction will be done from the model,
+
+402
+00:39:53.335 --> 00:39:56.635
+and I will compare this why predict with the wide taste.
+
+403
+00:39:56.895 --> 00:40:00.155
+So this is the, you know, your calculated output,
+
+404
+00:40:00.215 --> 00:40:03.595
+and this will be why taste will be your actual output if
+
+405
+00:40:03.595 --> 00:40:04.595
+there is any difference.
+
+406
+00:40:04.655 --> 00:40:05.955
+So that will be the error
+
+407
+00:40:06.825 --> 00:40:08.675
+that we check basically with this one.
+
+408
+00:40:08.975 --> 00:40:11.035
+So that is the, you know, requirement
+
+409
+00:40:11.035 --> 00:40:12.555
+of this strain test plate.
+
+410
+00:40:13.715 --> 00:40:14.955
+I hope it is clear, right?
+
+411
+00:40:16.375 --> 00:40:17.745
+Okay, so
+
+412
+00:40:19.195 --> 00:40:22.535
+You can use this one s scale learn model selection train
+
+413
+00:40:22.535 --> 00:40:24.495
+test plate for this training
+
+414
+00:40:24.555 --> 00:40:26.335
+and, uh, like a splitting of the data.
+
+415
+00:40:26.955 --> 00:40:30.255
+So in this one, I have, uh, divided the data extreme, uh,
+
+416
+00:40:31.445 --> 00:40:34.935
+extracted wide y train, y test, tender split, uh,
+
+417
+00:40:34.935 --> 00:40:36.175
+this, you know, function.
+
+418
+00:40:36.995 --> 00:40:40.455
+Now I have given the X and Y scale dataset, obviously,
+
+419
+00:40:40.795 --> 00:40:42.295
+and test size is 0.2.
+
+420
+00:40:42.445 --> 00:40:45.855
+What does it mean? 0.2 means 20% data will be reserved
+
+421
+00:40:45.855 --> 00:40:49.655
+for the testing purpose and 80% will go for the training.
+
+422
+00:40:49.755 --> 00:40:50.935
+So whatever the data,
+
+423
+00:40:51.005 --> 00:40:53.775
+suppose you are having thousand, you know, rows of data.
+
+424
+00:40:54.235 --> 00:40:57.335
+So 800 datas will be going to the extreme
+
+425
+00:40:57.435 --> 00:40:58.815
+and white train train
+
+426
+00:40:58.955 --> 00:41:02.215
+and 20% data that will be extracted and white test.
+
+427
+00:41:02.235 --> 00:41:05.135
+So you can change this to like any value 0.1.
+
+428
+00:41:05.135 --> 00:41:08.135
+You can take 0.3, you can take based upon your, you
+
+429
+00:41:08.135 --> 00:41:10.575
+Know, Uh, like, uh, you know, data set
+
+430
+00:41:10.575 --> 00:41:13.335
+and your practices generally 0.2 is a, like a good value.
+
+431
+00:41:13.395 --> 00:41:16.015
+So 20% data is reserved for your testing.
+
+432
+00:41:16.515 --> 00:41:19.215
+80% of the data is reserved for training.
+
+433
+00:41:19.685 --> 00:41:21.135
+That is the thing we are going with
+
+434
+00:41:21.135 --> 00:41:22.135
+Here.
+
+435
+00:41:22.595 --> 00:41:27.195
+So once you execute it, now the data set, now I have
+
+436
+00:41:27.195 --> 00:41:30.435
+to write two, three lines to actually build the algorithms
+
+437
+00:41:30.435 --> 00:41:31.555
+and test the algorithms.
+
+438
+00:41:31.615 --> 00:41:34.685
+How do we do it? We do it just like this from a scale learn,
+
+439
+00:41:35.565 --> 00:41:37.545
+Uh, Not linear model.
+
+440
+00:41:37.725 --> 00:41:39.505
+So it is already there, linear model,
+
+441
+00:41:39.845 --> 00:41:41.185
+import linear regression.
+
+442
+00:41:41.325 --> 00:41:44.025
+So that is the first line that is the library I'm importing
+
+443
+00:41:44.025 --> 00:41:45.985
+where the, you know, function is written.
+
+444
+00:41:46.575 --> 00:41:48.425
+Then you are creating one OB object
+
+445
+00:41:48.425 --> 00:41:51.145
+that is a model you could linear regression, okay?
+
+446
+00:41:51.605 --> 00:41:53.625
+Now there's a third line model, do fit.
+
+447
+00:41:54.055 --> 00:41:58.825
+Then you are giving the data extreme values reset. Okay?
+
+448
+00:41:59.045 --> 00:42:02.785
+So two frame also you can do and wide train.
+
+449
+00:42:03.325 --> 00:42:05.985
+So this data is already reset previously, uh,
+
+450
+00:42:06.005 --> 00:42:07.065
+due to the scaling function.
+
+451
+00:42:07.525 --> 00:42:09.945
+We don't need to, uh, like reset this one.
+
+452
+00:42:10.685 --> 00:42:12.305
+Now, if I do this, execute this one.
+
+453
+00:42:12.445 --> 00:42:15.065
+So the model has been prepared, the model is done.
+
+454
+00:42:15.195 --> 00:42:16.625
+Let's just, uh, write this one
+
+455
+00:42:22.515 --> 00:42:22.835
+model,
+
+456
+00:42:23.265 --> 00:42:24.265
+Okay, fine. Uh,
+
+457
+00:42:24.265 --> 00:42:26.275
+excuse me, sir, I have one doubt, sir.
+
+458
+00:42:26.695 --> 00:42:30.195
+Sir, in this reshape, uh, we put minus one to one, right?
+
+459
+00:42:31.095 --> 00:42:32.435
+So that part alone,
+
+460
+00:42:32.435 --> 00:42:35.795
+if you can help explain, will be helpful, sir. Okay?
+
+461
+00:42:35.895 --> 00:42:38.715
+Uh, so this linear regression model in the S scale learn
+
+462
+00:42:39.415 --> 00:42:41.635
+it is, has been written in such a way
+
+463
+00:42:42.175 --> 00:42:43.715
+it actually takes the input
+
+464
+00:42:43.715 --> 00:42:46.195
+as a two dimensional area instead of one dimensional area.
+
+465
+00:42:46.965 --> 00:42:48.735
+Okay? Now, I'll give you the example.
+
+466
+00:42:49.515 --> 00:42:51.335
+If you actually try to train
+
+467
+00:42:51.405 --> 00:42:56.055
+that model without actually doing the, you know, conversion
+
+468
+00:42:56.075 --> 00:42:58.695
+of this, uh mm-hmm one dimensional array
+
+469
+00:42:58.875 --> 00:43:00.375
+to two dimensional array, this happens,
+
+470
+00:43:00.825 --> 00:43:02.055
+we'll basically get an error
+
+471
+00:43:05.205 --> 00:43:06.925
+expected two dimensional container,
+
+472
+00:43:06.925 --> 00:43:11.325
+but got instead a data from contending single row.
+
+473
+00:43:12.435 --> 00:43:13.645
+Okay? Okay.
+
+474
+00:43:14.025 --> 00:43:16.445
+So for that one, we do the reshaping
+
+475
+00:43:16.545 --> 00:43:19.125
+before training the mal linear regression modeler.
+
+476
+00:43:19.125 --> 00:43:22.885
+Most, uh, actually models that we are having currently.
+
+477
+00:43:23.845 --> 00:43:26.905
+Now this wide train model is a subsidiary of this one.
+
+478
+00:43:29.265 --> 00:43:31.315
+This, you know, minimax scaler, we have applied
+
+479
+00:43:31.335 --> 00:43:34.635
+and we have already reset the Y, but we haven't reset
+
+480
+00:43:34.635 --> 00:43:37.745
+The X here Before applying.
+
+481
+00:43:37.845 --> 00:43:40.185
+So we are applying the reshaped here,
+
+482
+00:43:41.425 --> 00:43:42.425
+Okay? Okay.
+
+483
+00:43:42.425 --> 00:43:43.995
+Now, if you reset this one
+
+484
+00:43:44.015 --> 00:43:48.605
+and apply the model model, we successfully run that is the,
+
+485
+00:43:49.065 --> 00:43:51.445
+you know, one of the problem this psych learn is having,
+
+486
+00:43:51.945 --> 00:43:55.165
+and this is like a know work around we apply
+
+487
+00:43:55.345 --> 00:43:56.645
+to actually solve the issue,
+
+488
+00:43:57.685 --> 00:43:58.695
+Okay? Okay?
+
+489
+00:43:58.915 --> 00:44:01.135
+Now the model is trained and everything is done,
+
+490
+00:44:02.225 --> 00:44:03.225
+Sir. Uh, this
+
+491
+00:44:03.225 --> 00:44:06.325
+step of, uh, the step of extreme, uh, reshape
+
+492
+00:44:06.325 --> 00:44:07.725
+that we are doing for x extreme, right?
+
+493
+00:44:07.795 --> 00:44:09.405
+Yeah. Why can't we do it when we are doing
+
+494
+00:44:09.405 --> 00:44:12.165
+for also at the same time, sir, is there any specific thing?
+
+495
+00:44:12.355 --> 00:44:14.845
+Yeah, you can do it. I didn't actually, you know,
+
+496
+00:44:14.845 --> 00:44:16.005
+applied this scaling.
+
+497
+00:44:16.835 --> 00:44:20.005
+Okay, the, Uh, x, because X range is what?
+
+498
+00:44:20.125 --> 00:44:22.165
+X range is zero and one itself, correct?
+
+499
+00:44:22.165 --> 00:44:23.365
+Correct. Okay. Okay, got it. Got it.
+
+500
+00:44:23.745 --> 00:44:25.565
+And minimax color, we are applying
+
+501
+00:44:25.625 --> 00:44:28.725
+to actually divide the value between zero to one itself.
+
+502
+00:44:29.145 --> 00:44:30.725
+So X is not needed here,
+
+503
+00:44:31.795 --> 00:44:32.795
+Correct? I didn't
+
+504
+00:44:32.795 --> 00:44:35.405
+actually, uh, um, apply this scaling, uh,
+
+505
+00:44:35.405 --> 00:44:40.375
+transformation for the X wherever you can, like if you want
+
+506
+00:44:40.375 --> 00:44:43.215
+to apply re transformation, you can do, you can basically
+
+507
+00:44:43.535 --> 00:44:46.095
+whenever you actually going for this XY split here,
+
+508
+00:44:46.405 --> 00:44:48.255
+then you can directly also go for the,
+
+509
+00:44:48.255 --> 00:44:50.675
+this reshape here also.
+
+510
+00:44:51.175 --> 00:44:52.795
+So you don't need to bother in the future.
+
+511
+00:44:53.465 --> 00:44:54.955
+Correct? Got it. Okay. Sir,
+
+512
+00:44:55.715 --> 00:44:56.875
+Anywhere you do before the
+
+513
+00:44:56.875 --> 00:44:58.355
+model training, you have to perform.
+
+514
+00:44:58.385 --> 00:44:59.385
+That is the idea.
+
+515
+00:45:00.265 --> 00:45:03.405
+So one question, sir. So this reshape is only always
+
+516
+00:45:03.475 --> 00:45:07.765
+with minus one and one or, uh, why can't it be zero to one?
+
+517
+00:45:07.785 --> 00:45:09.005
+Sir, that is my question,
+
+518
+00:45:09.005 --> 00:45:12.445
+because logistic regression we have minus one to one,
+
+519
+00:45:12.585 --> 00:45:16.085
+but in case of linear regression, it is always in the past.
+
+520
+00:45:16.385 --> 00:45:18.845
+No, the re reshape as in like the dimension,
+
+521
+00:45:18.845 --> 00:45:23.785
+you are having this one row dimension, one dimensional data,
+
+522
+00:45:24.205 --> 00:45:26.705
+you actually divided into two dimensional data.
+
+523
+00:45:30.365 --> 00:45:33.985
+The input data that you are providing, that data,
+
+524
+00:45:34.125 --> 00:45:38.105
+you are converting into like, uh, the, this way, uh, instead
+
+525
+00:45:38.105 --> 00:45:39.425
+of like one dimensional input,
+
+526
+00:45:39.425 --> 00:45:42.345
+you're providing two dimensional input for the secret level.
+
+527
+00:45:43.735 --> 00:45:44.825
+Okay? Okay.
+
+528
+00:45:45.445 --> 00:45:49.025
+So, uh, so here, so it is one variable only,
+
+529
+00:45:49.085 --> 00:45:50.385
+no independent variable.
+
+530
+00:45:50.645 --> 00:45:53.825
+In case we have more than one in independent variable,
+
+531
+00:45:53.825 --> 00:45:55.945
+then we don't need to do resha, right?
+
+532
+00:45:57.325 --> 00:46:02.225
+Mm. It is better to do if it is asking, sometimes I,
+
+533
+00:46:02.585 --> 00:46:04.745
+I feel that like sometimes it doesn't work
+
+534
+00:46:04.745 --> 00:46:05.865
+or like a needed if, uh,
+
+535
+00:46:05.925 --> 00:46:08.185
+if it is having multiple dimension of data
+
+536
+00:46:08.845 --> 00:46:11.665
+Yes, sir, then automatically it'll be a two
+
+537
+00:46:11.665 --> 00:46:12.945
+dimensional data, yes.
+
+538
+00:46:13.125 --> 00:46:14.745
+If we have more than one, uh,
+
+539
+00:46:14.815 --> 00:46:16.585
+independent variable things, yes.
+
+540
+00:46:16.715 --> 00:46:18.225
+We'll, we'll practice that one also.
+
+541
+00:46:18.255 --> 00:46:20.105
+I'll show you some demonstration, don't worry.
+
+542
+00:46:21.015 --> 00:46:23.585
+Yeah, sure. So quick question.
+
+543
+00:46:23.805 --> 00:46:26.545
+So you have mentioned that we are predicting whether people
+
+544
+00:46:26.575 --> 00:46:28.905
+have surveyed or not based on the age, right?
+
+545
+00:46:28.925 --> 00:46:30.425
+Yes. So, but you are doing y versa
+
+546
+00:46:30.425 --> 00:46:33.065
+because X is considered as survival
+
+547
+00:46:33.285 --> 00:46:35.825
+and y is considered to be the age, right?
+
+548
+00:46:36.285 --> 00:46:40.025
+Mm-hmm. So isn't that the, uh,
+
+549
+00:46:40.565 --> 00:46:41.785
+the reverse that we are doing
+
+550
+00:46:42.985 --> 00:46:45.435
+Reverse, we can apply for the linear regression.
+
+551
+00:46:45.665 --> 00:46:50.235
+Also, value linear regression is what the, you know, we, uh,
+
+552
+00:46:50.235 --> 00:46:53.155
+trying to fit a line somewhere in the dataset
+
+553
+00:46:53.455 --> 00:46:54.955
+to predict some kind of output.
+
+554
+00:46:55.615 --> 00:46:58.075
+In case of logistic regression, it genuinely,
+
+555
+00:46:58.215 --> 00:47:01.035
+if you're having, uh, like binary dataset zero one,
+
+556
+00:47:01.145 --> 00:47:03.355
+then you try to fit the logistic regression.
+
+557
+00:47:03.415 --> 00:47:05.515
+So because I'm applying the linear regression
+
+558
+00:47:05.535 --> 00:47:07.275
+and trying to show you one of the example
+
+559
+00:47:07.375 --> 00:47:11.435
+for linear regression, I have taken the dependent variable
+
+560
+00:47:11.435 --> 00:47:12.635
+as why that is the age.
+
+561
+00:47:14.265 --> 00:47:16.395
+Okay? Now I'll, when I'll show you the logistic
+
+562
+00:47:16.395 --> 00:47:17.595
+regression, I'll do the reverse.
+
+563
+00:47:17.785 --> 00:47:21.995
+I'll put the survived as your, you know, dependent variable
+
+564
+00:47:22.215 --> 00:47:24.395
+and age with some other variables
+
+565
+00:47:24.395 --> 00:47:27.115
+and combine those as a independent variable.
+
+566
+00:47:29.935 --> 00:47:34.595
+Uh, Okay, but, uh, shouldn't survival be based on age?
+
+567
+00:47:34.705 --> 00:47:36.155
+That means, uh,
+
+568
+00:47:36.395 --> 00:47:38.915
+survival is dependent on age and not vice versa?
+
+569
+00:47:40.235 --> 00:47:41.565
+Yeah. That, that is what we
+
+570
+00:47:41.565 --> 00:47:42.725
+are actually trying to predict.
+
+571
+00:47:44.525 --> 00:47:46.025
+Now, suppose,
+
+572
+00:47:46.495 --> 00:47:50.735
+yeah. Hmm.
+
+573
+00:47:51.075 --> 00:47:53.775
+Yes. Suppose Now if I do this one prediction,
+
+574
+00:47:53.875 --> 00:47:56.255
+linear model do predict, okay?
+
+575
+00:47:56.875 --> 00:48:00.375
+Now here I'll actually give you some input as a H, okay?
+
+576
+00:48:00.375 --> 00:48:02.735
+Suppose I'm giving the input as h suppose 40.
+
+577
+00:48:05.675 --> 00:48:06.935
+Now if I print this one,
+
+578
+00:48:22.555 --> 00:48:22.905
+Check,
+
+579
+00:48:42.195 --> 00:48:43.055
+so this one,
+
+580
+00:48:57.715 --> 00:49:01.775
+So here you train model based on the survival, right?
+
+581
+00:49:01.885 --> 00:49:03.495
+Zero and one. Mm-hmm.
+
+582
+00:49:03.575 --> 00:49:06.095
+So you cannot pass prediction as in age,
+
+583
+00:49:06.095 --> 00:49:07.735
+because that is what you're predicting.
+
+584
+00:49:07.995 --> 00:49:10.175
+So we should be passing one or zero,
+
+585
+00:49:11.865 --> 00:49:13.845
+and Brenda is right here, like, uh
+
+586
+00:49:13.985 --> 00:49:14.845
+Oh. Oh,
+
+587
+00:49:15.635 --> 00:49:17.085
+Okay, okay, okay, okay.
+
+588
+00:49:17.195 --> 00:49:18.405
+Reverse. I did right?
+
+589
+00:49:20.825 --> 00:49:24.915
+Prediction, Uh, I'll give the input as
+
+590
+00:49:27.845 --> 00:49:32.405
+Because, um, x is like zero and
+
+591
+00:49:32.755 --> 00:49:36.765
+Link, Uh, YI have done the reverse just a second.
+
+592
+00:49:37.075 --> 00:49:39.205
+Exactly. We need to interchange the,
+
+593
+00:49:40.635 --> 00:49:43.515
+yeah, okay.
+
+594
+00:49:45.795 --> 00:49:47.175
+But then if we reverse it,
+
+595
+00:49:47.175 --> 00:49:48.455
+then linear regression won't work.
+
+596
+00:49:48.455 --> 00:49:49.775
+Linear regression won't work, right?
+
+597
+00:49:51.325 --> 00:49:53.295
+Then we have to go for logistic regression.
+
+598
+00:49:53.365 --> 00:49:55.775
+Okay, fine. Le I'll do something else then.
+
+599
+00:49:56.475 --> 00:50:00.895
+So let's just go with the P class based on age, what kind
+
+600
+00:50:00.895 --> 00:50:03.535
+of people has like opted for what kind of like tickets
+
+601
+00:50:07.335 --> 00:50:08.335
+Fine.
+
+602
+00:50:09.405 --> 00:50:10.895
+That what we can do? I, I guess, right?
+
+603
+00:50:13.415 --> 00:50:15.035
+Yes. Based on the age, what kind
+
+604
+00:50:15.035 --> 00:50:16.395
+of p class people has bought.
+
+605
+00:50:17.615 --> 00:50:18.745
+Yeah, If you're going
+
+606
+00:50:18.745 --> 00:50:20.785
+to fit a linear regression, it won't work.
+
+607
+00:50:21.165 --> 00:50:25.345
+It would be just logistic regression or any decision tree,
+
+608
+00:50:27.075 --> 00:50:29.265
+Right? Linear
+
+609
+00:50:29.265 --> 00:50:31.985
+Regression is very, Yeah, it needs some values, right?
+
+610
+00:50:32.055 --> 00:50:33.745
+Like multiple value should be, cannot
+
+611
+00:50:33.745 --> 00:50:35.545
+Be zero, and one, which defines a
+
+612
+00:50:35.545 --> 00:50:37.425
+Class like a P class is having multiple,
+
+613
+00:50:37.615 --> 00:50:39.025
+like one, three, something like
+
+614
+00:50:39.025 --> 00:50:39.545
+That. Okay?
+
+615
+00:50:40.315 --> 00:50:42.485
+Yeah. Fine. Let us split it and see,
+
+616
+00:50:42.485 --> 00:50:43.545
+Sir. Okay.
+
+617
+00:50:43.545 --> 00:50:45.425
+Huh? Let, like we have already done it.
+
+618
+00:50:45.515 --> 00:50:47.505
+Let's just go and see what is the,
+
+619
+00:50:47.505 --> 00:50:48.585
+like accuracy and all that.
+
+620
+00:50:48.675 --> 00:50:50.785
+We'll see prediction.
+
+621
+00:51:01.905 --> 00:51:02.195
+Okay?
+
+622
+00:51:14.475 --> 00:51:15.475
+Uh,
+
+623
+00:51:52.045 --> 00:51:53.625
+So we're having some kind of value
+
+624
+00:51:53.935 --> 00:51:54.585
+That is
+
+625
+00:52:01.305 --> 00:52:03.645
+in score one.
+
+626
+00:52:22.795 --> 00:52:24.735
+So you need to store the value before printing.
+
+627
+00:52:27.785 --> 00:52:28.135
+Sorry,
+
+628
+00:52:48.925 --> 00:52:53.785
+You haven't imported, uh, M-S-C-M-C, I heard,
+
+629
+00:52:54.685 --> 00:52:57.425
+Uh, it should, it shouldn't be directly as MSC.
+
+630
+00:52:57.455 --> 00:52:58.455
+Yeah,
+
+631
+00:53:00.375 --> 00:53:01.555
+No, this will back,
+
+632
+00:53:02.335 --> 00:53:04.435
+So we have calculated these two value.
+
+633
+00:53:04.615 --> 00:53:08.115
+Now it is coming somewhere around zero point or zero eight
+
+634
+00:53:08.135 --> 00:53:09.595
+and 0.37.
+
+635
+00:53:09.815 --> 00:53:13.715
+So, uh, if you do like a one minus this one, so
+
+636
+00:53:13.715 --> 00:53:15.955
+that is like a probable, you know, close
+
+637
+00:53:15.955 --> 00:53:18.275
+to the accuracy metrics that we are very much familiar with.
+
+638
+00:53:18.545 --> 00:53:20.795
+That is what we are having in this linear, uh,
+
+639
+00:53:20.795 --> 00:53:23.155
+linear regression, uh, fundamentals idea.
+
+640
+00:53:23.655 --> 00:53:25.645
+Now, let's just like do the river order.
+
+641
+00:53:25.645 --> 00:53:28.245
+That is that we are applying this logistic regression
+
+642
+00:53:28.245 --> 00:53:29.605
+Plan. So
+
+643
+00:53:30.385 --> 00:53:33.885
+For applying this logistic regression, um, let's just go
+
+644
+00:53:33.905 --> 00:53:35.805
+and we are having suppose,
+
+645
+00:53:36.955 --> 00:53:39.575
+Um, The, the survived as,
+
+646
+00:53:40.605 --> 00:53:42.095
+Okay, do The D
+
+647
+00:53:42.525 --> 00:53:44.215
+Here, okay?
+
+648
+00:53:49.105 --> 00:53:52.165
+Now we are having this one, this survival.
+
+649
+00:53:52.255 --> 00:53:55.325
+Let's just take this one as your, uh, dependent variable.
+
+650
+00:53:55.425 --> 00:53:56.805
+Uh, let's just take, uh, six
+
+651
+00:53:56.825 --> 00:53:58.405
+and age these two variable as your,
+
+652
+00:53:58.985 --> 00:54:00.725
+Uh, Independent variable.
+
+653
+00:54:00.725 --> 00:54:03.605
+Then we'll apply this, uh, logistic regression.
+
+654
+00:54:03.605 --> 00:54:05.925
+We'll try to find out based on the like, uh, you know,
+
+655
+00:54:06.185 --> 00:54:09.125
+gender as well as your age, what is the chances
+
+656
+00:54:09.125 --> 00:54:10.365
+of the survival that
+
+657
+00:54:10.905 --> 00:54:12.605
+Sir, uh, sir, sorry to interrupt.
+
+658
+00:54:12.785 --> 00:54:14.485
+Uh, one quick question here, sir.
+
+659
+00:54:14.865 --> 00:54:17.765
+So we have scaled the values no, for the age.
+
+660
+00:54:18.105 --> 00:54:20.005
+Is there any, uh, way
+
+661
+00:54:20.005 --> 00:54:23.045
+that we can get the original value from the scale values?
+
+662
+00:54:24.345 --> 00:54:27.645
+MinMax, scaler, we have used MinMax,
+
+663
+00:54:27.705 --> 00:54:29.485
+scaler we have used mm-hmm.
+
+664
+00:54:29.565 --> 00:54:31.925
+And we have, uh, scaled the values you
+
+665
+00:54:31.925 --> 00:54:33.405
+between minimum and maximum.
+
+666
+00:54:34.065 --> 00:54:37.085
+Is there any other way that we can from the scale values,
+
+667
+00:54:37.225 --> 00:54:38.725
+we get the original values?
+
+668
+00:54:40.055 --> 00:54:42.635
+No, You need to identify the previous value, the mean
+
+669
+00:54:42.635 --> 00:54:43.875
+and max value of that column.
+
+670
+00:54:43.945 --> 00:54:46.475
+Then you can like, uh, reverse the, you know, equation.
+
+671
+00:54:46.745 --> 00:54:48.995
+Then you can, uh, extract the mean max
+
+672
+00:54:48.995 --> 00:54:50.595
+value. Actually this one,
+
+673
+00:54:50.975 --> 00:54:52.355
+Uh, just, sorry,
+
+674
+00:54:53.115 --> 00:54:56.725
+no max
+
+675
+00:54:57.015 --> 00:54:59.625
+scale. So this
+
+676
+00:54:59.625 --> 00:55:02.065
+Is the function we are having basically
+
+677
+00:55:03.345 --> 00:55:04.985
+X max minus X mean, huh?
+
+678
+00:55:04.985 --> 00:55:07.905
+So X minus X mean divided by X max minus X mean.
+
+679
+00:55:08.165 --> 00:55:10.145
+So if you have this value, okay,
+
+680
+00:55:10.445 --> 00:55:13.985
+the X scale we are already having, okay, from this, you want
+
+681
+00:55:13.985 --> 00:55:15.545
+to calculate the XX.
+
+682
+00:55:15.725 --> 00:55:19.025
+Now, now this mean and max value, if you calculate like, uh,
+
+683
+00:55:19.065 --> 00:55:20.705
+take from the like a dataset
+
+684
+00:55:21.085 --> 00:55:22.345
+and if you replace these things,
+
+685
+00:55:22.445 --> 00:55:24.505
+you can easily calculate this X value as well.
+
+686
+00:55:25.375 --> 00:55:27.625
+Yeah, yeah, yeah. Thank you.
+
+687
+00:55:28.215 --> 00:55:32.065
+Yeah. Okay.
+
+688
+00:55:33.075 --> 00:55:36.775
+So let's just do this division of this X and Y again.
+
+689
+00:55:37.675 --> 00:55:42.645
+Okay? So I'll do that. So in the dependent variable,
+
+690
+00:55:43.115 --> 00:55:43.405
+Okay,
+
+691
+00:55:47.865 --> 00:55:48.915
+I'll do df,
+
+692
+00:55:53.755 --> 00:55:54.105
+right?
+
+693
+00:55:58.335 --> 00:55:58.945
+Okay. In
+
+694
+00:55:58.945 --> 00:56:01.705
+The independent variable, I will take two dataset df,
+
+695
+00:56:02.665 --> 00:56:03.665
+Okay? And I
+
+696
+00:56:03.665 --> 00:56:06.125
+will take H
+
+697
+00:56:08.155 --> 00:56:11.775
+and six.
+
+698
+00:56:21.245 --> 00:56:21.945
+Double. Double,
+
+699
+00:56:26.415 --> 00:56:27.415
+Yeah, right?
+
+700
+00:56:28.005 --> 00:56:30.985
+So once it is done, okay, now I'll be going into one
+
+701
+00:56:30.985 --> 00:56:34.185
+of the things that is the x dot, you know, info.
+
+702
+00:56:34.325 --> 00:56:38.865
+If I see, I'll be able to check this ages
+
+703
+00:56:39.435 --> 00:56:42.665
+float, that is fine, but the six is objective type thing.
+
+704
+00:56:43.005 --> 00:56:46.345
+So I need to apply some kind of things like, uh, I need
+
+705
+00:56:46.345 --> 00:56:49.745
+to convert this, you know, uh, the six, uh,
+
+706
+00:56:50.535 --> 00:56:52.305
+parameter into some numeric value.
+
+707
+00:56:53.565 --> 00:56:54.985
+Now, let's just go one thing.
+
+708
+00:56:55.055 --> 00:56:56.785
+That is the, if I go
+
+709
+00:56:56.885 --> 00:57:00.585
+and do this thing extra head, okay, now
+
+710
+00:57:02.085 --> 00:57:05.415
+this female, female, male female, this,
+
+711
+00:57:05.515 --> 00:57:06.655
+we are having binary values.
+
+712
+00:57:06.675 --> 00:57:09.055
+So I can convert into zero one for this thing.
+
+713
+00:57:09.135 --> 00:57:11.495
+I can definitely go for level encoder,
+
+714
+00:57:11.845 --> 00:57:12.845
+Fine. So I'll
+
+715
+00:57:12.845 --> 00:57:15.215
+use the level encoder to encode this, uh,
+
+716
+00:57:15.315 --> 00:57:16.615
+you know, six parameter.
+
+717
+00:57:16.765 --> 00:57:18.815
+Then we'll be actually able
+
+718
+00:57:18.815 --> 00:57:21.495
+to apply any machine algorithms and all,
+
+719
+00:57:22.925 --> 00:57:23.925
+Okay?
+
+720
+00:57:32.155 --> 00:57:32.445
+Okay.
+
+721
+00:57:47.565 --> 00:57:47.915
+Right.
+
+722
+00:57:48.375 --> 00:57:50.955
+So from scale proposing level and quota, we are doing,
+
+723
+00:57:55.195 --> 00:57:59.845
+Ah, Hmm, now we are doing the free transform, the X.
+
+724
+00:58:00.345 --> 00:58:02.485
+Now, if I apply and run this command,
+
+725
+00:58:04.905 --> 00:58:07.085
+Pre-processing, not need it
+
+726
+00:58:14.555 --> 00:58:14.905
+start.
+
+727
+00:58:19.425 --> 00:58:21.605
+Now, if you see this, you know,
+
+728
+00:58:21.715 --> 00:58:25.485
+this level encoder transform the data into something where
+
+729
+00:58:26.895 --> 00:58:29.675
+one of the element that is a female has become zero in this
+
+730
+00:58:29.675 --> 00:58:31.795
+case, and male has become one in this case.
+
+731
+00:58:31.935 --> 00:58:34.915
+So I have a numeric value instead of a non numeric value.
+
+732
+00:58:35.415 --> 00:58:38.555
+Now I can go and apply the models and like algorithms
+
+733
+00:58:39.805 --> 00:58:41.115
+After this Level quota.
+
+734
+00:58:41.775 --> 00:58:43.475
+So I'll open this
+
+735
+00:58:44.305 --> 00:58:47.035
+notepad again, divide data,
+
+736
+00:58:50.255 --> 00:58:51.525
+Apply In coding.
+
+737
+00:58:54.465 --> 00:58:55.475
+That Is optional.
+
+738
+00:59:03.875 --> 00:59:06.295
+If You need, if you're dealing with some kind of value,
+
+739
+00:59:06.915 --> 00:59:09.415
+uh, that is repetitive, uh, categorical data,
+
+740
+00:59:09.445 --> 00:59:10.815
+then you need to apply.
+
+741
+00:59:10.995 --> 00:59:14.335
+So string value, okay? Then you need to apply the encoding.
+
+742
+00:59:14.755 --> 00:59:17.615
+Now, once you do the encoding, you can go
+
+743
+00:59:17.675 --> 00:59:18.855
+for model selection.
+
+744
+00:59:19.325 --> 00:59:23.805
+Then what you calling it? Optional.
+
+745
+00:59:25.045 --> 00:59:27.245
+Optional. As in suppose in the previous, you know,
+
+746
+00:59:27.465 --> 00:59:30.085
+our dataset, we didn't have that, uh, you know, uh,
+
+747
+00:59:30.515 --> 00:59:32.805
+categorical data where the string value is there.
+
+748
+00:59:33.065 --> 00:59:36.045
+So we didn't do the encoding, right? Okay.
+
+749
+00:59:36.065 --> 00:59:38.245
+But here we are dealing with some data
+
+750
+00:59:38.245 --> 00:59:40.245
+where like this encoding is needed.
+
+751
+00:59:40.425 --> 00:59:44.045
+We need to convert the, uh, string data into numeric data.
+
+752
+00:59:44.155 --> 00:59:45.685
+That is why this is optional.
+
+753
+00:59:45.865 --> 00:59:49.085
+If it is optional means if it is there, you have to apply
+
+754
+00:59:50.485 --> 00:59:51.485
+Focus. If it is
+
+755
+00:59:51.485 --> 00:59:52.675
+needed, you have to apply.
+
+756
+00:59:52.675 --> 00:59:54.675
+Otherwise, you would model, actually,
+
+757
+00:59:54.675 --> 00:59:56.515
+if I don't apply this encoding
+
+758
+00:59:56.515 --> 00:59:57.955
+and try to fit the model,
+
+759
+00:59:58.015 --> 01:00:00.915
+it will say basically we are expecting the numeric value,
+
+760
+01:00:01.015 --> 01:00:04.935
+but we are getting, uh, non-numeric value a rate.
+
+761
+01:00:06.815 --> 01:00:08.465
+Okay? So that is the idea.
+
+762
+01:00:08.645 --> 01:00:10.385
+If it is needed, you have to apply.
+
+763
+01:00:10.725 --> 01:00:15.675
+If it's not needed, you can skip it. Uh, just a second.
+
+764
+01:00:16.785 --> 01:00:18.175
+Hello? Yeah,
+
+765
+01:00:32.185 --> 01:00:33.225
+I call, okay?
+
+766
+01:00:33.485 --> 01:00:35.505
+Now we'll do model session and model feed.
+
+767
+01:00:35.505 --> 01:00:37.585
+Then you can do for the evaluation.
+
+768
+01:00:42.175 --> 01:00:44.875
+So how the model is working, and you can directly go
+
+769
+01:00:45.335 --> 01:00:46.875
+and do the prediction and model.
+
+770
+01:00:49.675 --> 01:00:52.605
+Okay? So let's just go and do this thing.
+
+771
+01:00:53.225 --> 01:00:54.805
+Now I have the data, everything set.
+
+772
+01:00:55.505 --> 01:00:57.605
+So I'll forward this form from a scale, learn,
+
+773
+01:01:00.735 --> 01:01:04.955
+do linear models, import,
+
+774
+01:01:05.235 --> 01:01:08.475
+logistic ion log model, logistic fit,
+
+775
+01:01:09.015 --> 01:01:10.395
+that's X and y.
+
+776
+01:01:11.225 --> 01:01:14.325
+Uh, okay, we need to also scaler X
+
+777
+01:01:19.095 --> 01:01:23.305
+from scale learn dot pre-processing,
+
+778
+01:01:24.785 --> 01:01:26.765
+put in max scaler scale, huh?
+
+779
+01:01:27.625 --> 01:01:28.835
+That we doing fine
+
+780
+01:01:33.215 --> 01:01:35.665
+From, from F. Okay,
+
+781
+01:01:36.555 --> 01:01:37.555
+Thank You.
+
+782
+01:01:38.345 --> 01:01:40.735
+Okay, it is done. Okay.
+
+783
+01:01:40.795 --> 01:01:43.335
+Uh, another thing I forgot to do
+
+784
+01:01:43.485 --> 01:01:45.455
+that is the splitting the data.
+
+785
+01:01:46.115 --> 01:01:49.975
+Um, scale, learn dot, uh,
+
+786
+01:01:52.195 --> 01:01:54.745
+model selection, input 20 split
+
+787
+01:01:57.315 --> 01:01:59.655
+scaled y, that is there.
+
+788
+01:01:59.885 --> 01:02:02.375
+Fine test size 0.2.
+
+789
+01:02:03.445 --> 01:02:07.375
+Once we are done, then we can go for this one.
+
+790
+01:02:14.345 --> 01:02:18.795
+Okay? So sequentially, if you see the checkbox,
+
+791
+01:02:19.275 --> 01:02:20.525
+plus I've loaded the data
+
+792
+01:02:20.545 --> 01:02:22.605
+for the ation load is already loaded.
+
+793
+01:02:22.605 --> 01:02:26.005
+Inspection, we had already done none values we have already
+
+794
+01:02:26.005 --> 01:02:28.445
+removed because the DF, we are using that, uh,
+
+795
+01:02:28.465 --> 01:02:29.645
+non value is removed.
+
+796
+01:02:30.185 --> 01:02:31.765
+Divide the data into depending
+
+797
+01:02:31.765 --> 01:02:33.165
+independent variables that we did.
+
+798
+01:02:33.345 --> 01:02:37.965
+We did the, you know, on this one, uh, that is, uh, y
+
+799
+01:02:38.025 --> 01:02:42.055
+as in survived, and X
+
+800
+01:02:42.115 --> 01:02:44.415
+as in your age, comma six.
+
+801
+01:02:44.885 --> 01:02:46.575
+Okay? That we did. Okay?
+
+802
+01:02:47.195 --> 01:02:51.295
+Now, once we have done that, we had scaled the data
+
+803
+01:02:51.445 --> 01:02:53.655
+that is the, like a age we had to scale.
+
+804
+01:02:53.675 --> 01:02:56.575
+We did the scaling. Now we have divided the data
+
+805
+01:02:56.645 --> 01:02:57.695
+into train test split.
+
+806
+01:02:57.995 --> 01:03:00.455
+We did that in coding. We have already done.
+
+807
+01:03:00.515 --> 01:03:03.895
+So somewhere you can do after the splitting out the data or
+
+808
+01:03:03.895 --> 01:03:05.975
+before even encoding is done.
+
+809
+01:03:05.995 --> 01:03:10.195
+Now, model selection, the model selection is done.
+
+810
+01:03:11.575 --> 01:03:15.105
+This one, the linear logic regression, we create the
+
+811
+01:03:15.695 --> 01:03:16.905
+objective of the model.
+
+812
+01:03:17.415 --> 01:03:19.985
+That is also done. Now, we'll do the model fitting.
+
+813
+01:03:20.255 --> 01:03:21.665
+Okay, the stretch.
+
+814
+01:03:22.125 --> 01:03:25.825
+So model fit, extreme wide range, that is the thing.
+
+815
+01:03:26.465 --> 01:03:27.505
+I just run it, okay?
+
+816
+01:03:27.535 --> 01:03:30.385
+Once it is done, the model is already trained,
+
+817
+01:03:31.055 --> 01:03:33.705
+I'll go further doing this evolution.
+
+818
+01:03:35.015 --> 01:03:36.835
+In this evolution, I can do what?
+
+819
+01:03:37.155 --> 01:03:39.715
+Y and let's go red equal to
+
+820
+01:03:40.945 --> 01:03:42.805
+log dot predict test.
+
+821
+01:03:43.385 --> 01:03:45.805
+And once we've done that, we can directly go
+
+822
+01:03:46.695 --> 01:03:48.745
+from scale learn dot
+
+823
+01:03:48.815 --> 01:03:52.555
+metrics, okay?
+
+824
+01:03:52.775 --> 01:03:55.025
+Import accuracy,
+
+825
+01:03:55.055 --> 01:03:57.785
+confusion metrics, okay?
+
+826
+01:03:57.935 --> 01:04:00.745
+Because this logistic regression works, you know, zero
+
+827
+01:04:00.845 --> 01:04:04.105
+and one, we can directly predict the, you know, accuracy
+
+828
+01:04:04.365 --> 01:04:06.265
+and the, so, you know, confusion matters.
+
+829
+01:04:06.265 --> 01:04:08.225
+These kind of things we can directly predict.
+
+830
+01:04:08.915 --> 01:04:10.585
+Let's go and run it. Okay?
+
+831
+01:04:10.645 --> 01:04:13.145
+So you are having some kind of value 0.7.
+
+832
+01:04:13.965 --> 01:04:17.755
+So you are having approximately 70% accuracy for the model
+
+833
+01:04:17.815 --> 01:04:19.515
+to predict based on the age
+
+834
+01:04:19.535 --> 01:04:22.235
+and your agenda, what is the chances of your survey rate?
+
+835
+01:04:22.865 --> 01:04:25.715
+Okay? So this is I think a HandsOn experience that I wanted
+
+836
+01:04:25.715 --> 01:04:28.595
+to share on, given like, uh, you know, live demonstration,
+
+837
+01:04:28.895 --> 01:04:31.315
+how step by step you can go
+
+838
+01:04:31.315 --> 01:04:34.795
+and like, uh, do your model, you know, creation, uh,
+
+839
+01:04:34.865 --> 01:04:37.075
+like creating your own machine learning
+
+840
+01:04:37.075 --> 01:04:38.155
+or deep learning model.
+
+841
+01:04:38.255 --> 01:04:40.555
+So basic idea is the workflow you need
+
+842
+01:04:40.555 --> 01:04:41.915
+to follow in this scenario only.
+
+843
+01:04:42.615 --> 01:04:44.875
+So loading up the data, inspect the data,
+
+844
+01:04:45.055 --> 01:04:46.515
+how it is you are dealing with the data
+
+845
+01:04:46.515 --> 01:04:47.955
+and all, what kind of values,
+
+846
+01:04:47.985 --> 01:04:49.275
+data, what is the size of the data.
+
+847
+01:04:49.695 --> 01:04:52.475
+If you, you can also go into the visualization aspects
+
+848
+01:04:52.475 --> 01:04:56.275
+and all, uh, then you'll be having the understandings, okay?
+
+849
+01:04:56.275 --> 01:04:58.995
+What kinda algorithms I should be able to actually apply.
+
+850
+01:04:59.295 --> 01:05:02.675
+Now, uh, I was forcing myself into like
+
+851
+01:05:02.875 --> 01:05:03.915
+applying the linear regression.
+
+852
+01:05:03.915 --> 01:05:07.315
+So I was actually forcing, uh, to take the, you know, y
+
+853
+01:05:07.615 --> 01:05:09.755
+or the dependent variable as your age.
+
+854
+01:05:10.335 --> 01:05:13.035
+And then when I'm going for the logistic location,
+
+855
+01:05:13.115 --> 01:05:15.155
+I was applying the what?
+
+856
+01:05:16.275 --> 01:05:18.845
+Now again, after that you deal
+
+857
+01:05:18.845 --> 01:05:20.765
+with the NN values, not a numbered values.
+
+858
+01:05:22.155 --> 01:05:23.295
+You omit those
+
+859
+01:05:23.515 --> 01:05:27.175
+or get rid of those in such a way, like, uh, either deletion
+
+860
+01:05:27.175 --> 01:05:28.175
+or filling those data.
+
+861
+01:05:28.995 --> 01:05:31.015
+Now you do one thing
+
+862
+01:05:31.015 --> 01:05:33.055
+that is the dividing the data into training.
+
+863
+01:05:33.235 --> 01:05:36.295
+Uh, sorry, uh, dependent and independent variables.
+
+864
+01:05:36.875 --> 01:05:41.455
+You do the scaling, you do the like, uh, uh, encoding.
+
+865
+01:05:41.455 --> 01:05:43.975
+If it is needed, then you can do
+
+866
+01:05:43.995 --> 01:05:46.135
+and go for the scaling of the data, okay?
+
+867
+01:05:46.475 --> 01:05:48.735
+And after that you can go for the model selection,
+
+868
+01:05:48.735 --> 01:05:50.735
+model fit, then go for the evolution and all.
+
+869
+01:05:50.835 --> 01:05:52.775
+So this is the basic, you know, flow.
+
+870
+01:05:53.455 --> 01:05:55.095
+Whenever you are applying any machine learning
+
+871
+01:05:55.095 --> 01:05:57.935
+or deep learning algorithm, that is the flow actually, uh,
+
+872
+01:05:57.995 --> 01:06:00.055
+as a, like a skeleton you can use.
+
+873
+01:06:01.365 --> 01:06:04.355
+Okay? I hope, uh,
+
+874
+01:06:04.545 --> 01:06:06.435
+I'll conclude the class today here only,
+
+875
+01:06:07.795 --> 01:06:08.795
+Yeah. Yes sir.
+
+876
+01:06:08.795 --> 01:06:10.645
+A few questions here, sir. Yeah, please do.
+
+877
+01:06:10.705 --> 01:06:12.085
+And one request also, sir.
+
+878
+01:06:12.545 --> 01:06:17.445
+So, uh, what is, uh, label encoder in place of, uh,
+
+879
+01:06:17.545 --> 01:06:20.125
+hot encoding so we can apply here.
+
+880
+01:06:20.225 --> 01:06:21.605
+Hot encoding also known.
+
+881
+01:06:21.625 --> 01:06:23.685
+So what is the difference between labeling?
+
+882
+01:06:23.685 --> 01:06:27.005
+Yeah, or we'll decide that uh, we have
+
+883
+01:06:27.005 --> 01:06:29.205
+to apply label encoding or hot encoders.
+
+884
+01:06:30.725 --> 01:06:31.885
+Hmm, a good question.
+
+885
+01:06:32.165 --> 01:06:34.925
+Actually, one hot encoder we are having
+
+886
+01:06:36.515 --> 01:06:40.755
+and we are having level encoder, okay?
+
+887
+01:06:41.655 --> 01:06:46.415
+Now suppose no,
+
+888
+01:06:46.435 --> 01:06:49.275
+in this one level encoder does what?
+
+889
+01:06:49.275 --> 01:06:50.435
+Suppose in a column
+
+890
+01:06:50.655 --> 01:06:54.525
+or feature, suppose you are having some
+
+891
+01:06:54.615 --> 01:06:55.685
+model of the car.
+
+892
+01:06:59.905 --> 01:07:02.685
+So that is the attribute you're dealing with. In this one.
+
+893
+01:07:02.695 --> 01:07:04.805
+There are 10, okay?
+
+894
+01:07:05.865 --> 01:07:10.375
+Types of cars are there, suppose
+
+895
+01:07:11.115 --> 01:07:14.975
+we are having different features there, okay?
+
+896
+01:07:15.435 --> 01:07:19.575
+Trunks is there. Then you are having, uh,
+
+897
+01:07:19.605 --> 01:07:23.575
+suppose I 10, I 20, something like that.
+
+898
+01:07:24.635 --> 01:07:27.775
+So multiple variables are there for your, you know,
+
+899
+01:07:28.005 --> 01:07:29.095
+that particular feature.
+
+900
+01:07:29.275 --> 01:07:30.895
+And these are important suppose
+
+901
+01:07:30.895 --> 01:07:32.575
+for your model training and all.
+
+902
+01:07:32.575 --> 01:07:33.935
+You can get rid of this one.
+
+903
+01:07:34.315 --> 01:07:37.455
+Now, if you apply this level in code at what it'll do
+
+904
+01:07:38.675 --> 01:07:40.655
+the suppose in that dataset,
+
+905
+01:07:42.805 --> 01:07:47.695
+dataset will have same number
+
+906
+01:07:47.995 --> 01:07:48.535
+of feature
+
+907
+01:07:53.125 --> 01:07:55.205
+features as in column won't change, okay?
+
+908
+01:07:56.145 --> 01:07:58.165
+And each of this, you know,
+
+909
+01:07:58.175 --> 01:08:00.925
+swift suppose will be encoded with zero.
+
+910
+01:08:02.185 --> 01:08:05.085
+Now FFR will be encoded with one.
+
+911
+01:08:05.985 --> 01:08:10.795
+Now this berlino will be encoded by two, okay? And so on.
+
+912
+01:08:12.795 --> 01:08:15.965
+Now, the problem is when you apply this level in quota,
+
+913
+01:08:16.065 --> 01:08:19.085
+you are having multiple, you know, uh, categories.
+
+914
+01:08:19.085 --> 01:08:20.805
+Suppose thousands of data is there
+
+915
+01:08:20.945 --> 01:08:22.525
+and these 10 cards are repeated.
+
+916
+01:08:23.665 --> 01:08:26.125
+Now, Some of the value is zero, some
+
+917
+01:08:26.125 --> 01:08:28.045
+of the value will be nine, 10, something like that.
+
+918
+01:08:28.265 --> 01:08:31.005
+In that way, when you apply the models algorithm,
+
+919
+01:08:31.225 --> 01:08:32.845
+it creates some biasness.
+
+920
+01:08:34.375 --> 01:08:37.955
+So somewhere you actually, um, applying the model
+
+921
+01:08:38.015 --> 01:08:41.035
+and you are multiplying the France car with one
+
+922
+01:08:41.375 --> 01:08:44.875
+and suppose, uh, late strength, suppose there's one car
+
+923
+01:08:44.905 --> 01:08:47.635
+that is also, it came later for the calculation.
+
+924
+01:08:47.635 --> 01:08:49.555
+Suppose there's value is suppose nine.
+
+925
+01:08:50.095 --> 01:08:52.835
+So it will have some emphasis bias business on the data
+
+926
+01:08:53.225 --> 01:08:54.755
+that is the level encoder for you.
+
+927
+01:08:55.015 --> 01:08:57.915
+So if you're having binary, even maybe binary data,
+
+928
+01:08:58.335 --> 01:09:01.835
+so 0, 1, 2, 0, 1, you can directly go for the level encoder.
+
+929
+01:09:02.585 --> 01:09:06.005
+You're not having, uh, like too much categorical, uh, data.
+
+930
+01:09:06.265 --> 01:09:11.245
+So in this one, in this example, okay, we had the age
+
+931
+01:09:11.275 --> 01:09:13.205
+that is the male and female only.
+
+932
+01:09:14.035 --> 01:09:16.405
+Okay? We had only male
+
+933
+01:09:17.145 --> 01:09:20.285
+Age, Sorry, male sex, that is male and female only.
+
+934
+01:09:20.385 --> 01:09:22.205
+So we applied the level and quota.
+
+935
+01:09:22.305 --> 01:09:25.005
+So we converted into zero one only, no issue.
+
+936
+01:09:26.065 --> 01:09:29.445
+Now, if This category data instead, uh, you know, sex
+
+937
+01:09:29.445 --> 01:09:33.645
+or gender, we had like a data where hundreds of like tens
+
+938
+01:09:33.645 --> 01:09:35.005
+of, you know, uh, categorical
+
+939
+01:09:35.005 --> 01:09:36.125
+data, which are getting repeated.
+
+940
+01:09:36.145 --> 01:09:38.445
+So we cannot apply this level in quota bin will
+
+941
+01:09:38.445 --> 01:09:39.605
+be there for those things.
+
+942
+01:09:39.945 --> 01:09:42.605
+We apply this thing that is the one hot end code.
+
+943
+01:09:43.935 --> 01:09:44.935
+Now this do what?
+
+944
+01:09:45.905 --> 01:09:47.125
+Yeah, I
+
+945
+01:09:47.125 --> 01:09:48.125
+Think cross question. Okay,
+
+946
+01:09:48.125 --> 01:09:51.405
+so this does what along with the dataset, you know,
+
+947
+01:09:51.755 --> 01:09:54.445
+dataset is something like that. Dataset. Suppose
+
+948
+01:09:54.865 --> 01:09:58.445
+The, you know, um, uh, Production year,
+
+949
+01:09:59.245 --> 01:10:00.735
+Suppose This is the column you're dealing
+
+950
+01:10:00.735 --> 01:10:01.815
+with production year,
+
+951
+01:10:02.405 --> 01:10:03.405
+Okay? Uh, kilometers,
+
+952
+01:10:03.405 --> 01:10:05.895
+okay? Uh,
+
+953
+01:10:05.895 --> 01:10:07.855
+Then you are having other sets of data.
+
+954
+01:10:07.855 --> 01:10:11.775
+Suppose that is, uh, develop control, so or ev
+
+955
+01:10:12.395 --> 01:10:16.565
+Uh, ev slash petrol
+
+956
+01:10:17.455 --> 01:10:18.455
+Slash diesel.
+
+957
+01:10:19.625 --> 01:10:22.525
+So This kind attribute along with having model
+
+958
+01:10:23.185 --> 01:10:27.115
+Of The card, then having the price, these kind
+
+959
+01:10:27.115 --> 01:10:28.235
+of features you're dealing with.
+
+960
+01:10:28.575 --> 01:10:31.475
+Now, this was the data before applying the encoder.
+
+961
+01:10:31.615 --> 01:10:36.115
+And in this model, okay, card models, okay, this,
+
+962
+01:10:36.335 --> 01:10:40.195
+you wanted to apply some kinda this encoder method.
+
+963
+01:10:40.655 --> 01:10:42.755
+Now applying this level encoder, what happens?
+
+964
+01:10:43.425 --> 01:10:45.315
+This, all of the data remains same,
+
+965
+01:10:47.205 --> 01:10:49.385
+except this model, no, this model.
+
+966
+01:10:49.765 --> 01:10:52.025
+Now it'll be changed with swift,
+
+967
+01:10:53.175 --> 01:10:54.175
+Okay?
+
+968
+01:10:54.895 --> 01:10:57.705
+Then ano, Then frogs,
+
+969
+01:11:06.655 --> 01:11:06.945
+okay?
+
+970
+01:11:07.495 --> 01:11:11.015
+Then suppose other I trend I 20,
+
+971
+01:11:12.835 --> 01:11:14.255
+Then Suppose more cars.
+
+972
+01:11:14.565 --> 01:11:18.355
+Okay? All
+
+973
+01:11:18.415 --> 01:11:21.155
+two, okay?
+
+974
+01:11:21.225 --> 01:11:24.315
+Then the price will be there. Now what is happening?
+
+975
+01:11:25.715 --> 01:11:30.205
+Instead of one column, it'll have multiple columns, fine.
+
+976
+01:11:33.565 --> 01:11:36.345
+Now, in each of the dataset, what will happen, everything
+
+977
+01:11:36.435 --> 01:11:40.665
+where the swift model was there, that will be,
+
+978
+01:11:41.455 --> 01:11:42.875
+you know, quoted as one
+
+979
+01:11:43.335 --> 01:11:45.835
+or just, let's take an example from male, female only
+
+980
+01:11:45.855 --> 01:11:48.315
+for one, we had the age
+
+981
+01:11:48.735 --> 01:11:51.245
+and we had the sex, okay?
+
+982
+01:11:51.475 --> 01:11:55.185
+This will be replaced by age, sex dot
+
+983
+01:11:56.535 --> 01:12:00.035
+male six dot,
+
+984
+01:12:00.705 --> 01:12:02.035
+okay, fort it.
+
+985
+01:12:02.665 --> 01:12:06.915
+This will be our new dataset Instead of two,
+
+986
+01:12:06.915 --> 01:12:07.995
+we'll have three columns.
+
+987
+01:12:08.335 --> 01:12:12.805
+Now, in this one, if I see the dataset, we had 38 female.
+
+988
+01:12:13.465 --> 01:12:15.365
+So in this one we'll have 38.
+
+989
+01:12:15.825 --> 01:12:17.965
+In this six male, that will become zero.
+
+990
+01:12:18.145 --> 01:12:20.045
+And in the female it'll become one.
+
+991
+01:12:20.965 --> 01:12:24.815
+Next column, we are having 35 females, we'll have 35
+
+992
+01:12:25.875 --> 01:12:27.975
+as male, as zero female as one.
+
+993
+01:12:29.425 --> 01:12:33.075
+Next we are having 54 male, so we'll have 54.
+
+994
+01:12:33.625 --> 01:12:34.795
+This column remain same.
+
+995
+01:12:35.425 --> 01:12:37.715
+This one will become one, this will become zero.
+
+996
+01:12:38.135 --> 01:12:41.235
+So what is happening if you have multiple columns, okay?
+
+997
+01:12:41.235 --> 01:12:43.435
+After that also supports, uh, transgender,
+
+998
+01:12:43.535 --> 01:12:46.035
+was there something like that, this column would've become
+
+999
+01:12:46.065 --> 01:12:47.995
+0, 0, 0, something like that.
+
+1000
+01:12:48.675 --> 01:12:50.895
+So this is a difference between the level and code one
+
+1001
+01:12:50.895 --> 01:12:53.455
+or 10 30, if it happen multiple columns, okay?
+
+1002
+01:12:53.455 --> 01:12:56.695
+So multiple, you know, categorical data, then you can go
+
+1003
+01:12:56.695 --> 01:12:57.775
+for the 100 coda,
+
+1004
+01:12:57.795 --> 01:13:02.095
+but the dimension of the data increases by many fold.
+
+1005
+01:13:02.765 --> 01:13:04.135
+That is the 100 coda.
+
+1006
+01:13:04.475 --> 01:13:08.015
+And in case of label and coda, if you're having lower number
+
+1007
+01:13:08.035 --> 01:13:10.135
+of categorical data, you apply the label in Coda.
+
+1008
+01:13:10.835 --> 01:13:13.685
+Yes. I hope you understood the problem, right?
+
+1009
+01:13:13.915 --> 01:13:18.845
+Yeah. Yes sir. Thank you. It was great explanations. Yeah.
+
+1010
+01:13:19.065 --> 01:13:23.805
+And so one request also, sir, uh, can we also going forward,
+
+1011
+01:13:24.385 --> 01:13:26.365
+not right now, almost at the end,
+
+1012
+01:13:26.625 --> 01:13:29.045
+can we also cover deployment of the models?
+
+1013
+01:13:29.145 --> 01:13:31.925
+So how to deploy a model in production, deploy?
+
+1014
+01:13:31.925 --> 01:13:33.125
+Is there deploy? Is there
+
+1015
+01:13:33.345 --> 01:13:34.345
+No deployment?
+
+1016
+01:13:34.375 --> 01:13:36.085
+Deployment in production, sir?
+
+1017
+01:13:36.535 --> 01:13:39.685
+Deployment and production will try, actually I'll try
+
+1018
+01:13:39.685 --> 01:13:41.405
+to do something like, uh, you know,
+
+1019
+01:13:41.405 --> 01:13:43.445
+dockerizing the application and deploy.
+
+1020
+01:13:43.505 --> 01:13:45.565
+Yes, Something like that will try to do that.
+
+1021
+01:13:46.075 --> 01:13:47.325
+Yeah, it'll be very helpful
+
+1022
+01:13:47.635 --> 01:13:50.285
+because deployment is also important parts.
+
+1023
+01:13:50.875 --> 01:13:53.445
+Yeah, yeah, yeah. One, one feedback, sir,
+
+1024
+01:13:53.795 --> 01:13:55.165
+today's session was really great.
+
+1025
+01:13:55.345 --> 01:13:58.005
+It was very insightful and very easily we could understand.
+
+1026
+01:13:58.625 --> 01:14:02.195
+Yes, thank you. Thank you. Thank you, sir.
+
+1027
+01:14:02.485 --> 01:14:04.035
+Thank you, sir. Yeah, actually this is
+
+1028
+01:14:04.035 --> 01:14:05.115
+the like way of teaching.
+
+1029
+01:14:05.315 --> 01:14:07.755
+I try to do more on the hands-on experience
+
+1030
+01:14:08.255 --> 01:14:11.645
+and basically in offline classes, what we do, uh, actually
+
+1031
+01:14:11.645 --> 01:14:13.685
+what I do, I actually ask the students
+
+1032
+01:14:13.745 --> 01:14:16.245
+to bring their laptops and all, and I do,
+
+1033
+01:14:16.265 --> 01:14:18.365
+and they do kind of, we both learn together.
+
+1034
+01:14:18.685 --> 01:14:19.725
+Actually I'm doing some mistakes.
+
+1035
+01:14:19.725 --> 01:14:22.405
+They are actually solving it for me. Exactly. They're
+
+1036
+01:14:23.345 --> 01:14:24.345
+The same thing.
+
+1037
+01:14:24.435 --> 01:14:26.605
+Yeah. When you are doing, we are doing it, uh, parallel
+
+1038
+01:14:26.605 --> 01:14:27.725
+with our collab nos.
+
+1039
+01:14:28.225 --> 01:14:30.885
+So it's very useful. You could understand it very easily.
+
+1040
+01:14:30.995 --> 01:14:32.445
+Then the PPTs,
+
+1041
+01:14:32.915 --> 01:14:35.085
+Yeah, obviously this is, this is the best way
+
+1042
+01:14:35.085 --> 01:14:38.005
+to learn in my opinion, of course, uh, people, uh,
+
+1043
+01:14:38.005 --> 01:14:40.005
+have a different opinion in this cases.
+
+1044
+01:14:41.845 --> 01:14:44.335
+Okay? Uh, so I think that is also for two days,
+
+1045
+01:14:44.335 --> 01:14:47.895
+afternoon season, this one will have, uh, something to deal
+
+1046
+01:14:47.895 --> 01:14:49.135
+with the Titan data set.
+
+1047
+01:14:49.135 --> 01:14:51.815
+You'll be applying the same models, uh, linear integration,
+
+1048
+01:14:52.095 --> 01:14:54.575
+logistic education, and uh, try to actually do
+
+1049
+01:14:54.635 --> 01:14:56.615
+and evaluate, uh, practice this thing.
+
+1050
+01:14:56.615 --> 01:14:58.295
+That is what I want you to do.
+
+1051
+01:15:00.635 --> 01:15:02.135
+Any more questions and sessions?
+
+1052
+01:15:03.575 --> 01:15:04.875
+Sir? I have one question.
+
+1053
+01:15:05.335 --> 01:15:08.355
+Uh, sir, sir, the assignment, which happened like last,
+
+1054
+01:15:08.585 --> 01:15:10.115
+last assignment on December.
+
+1055
+01:15:10.295 --> 01:15:11.635
+Mm-hmm. So can we have like,
+
+1056
+01:15:11.705 --> 01:15:13.315
+will we have similar options again?
+
+1057
+01:15:13.315 --> 01:15:15.355
+Like I actually missed, uh, submitting
+
+1058
+01:15:15.355 --> 01:15:17.275
+that one during that frame. I Oh,
+
+1059
+01:15:17.275 --> 01:15:18.555
+The, was that graded lab
+
+1060
+01:15:18.575 --> 01:15:20.115
+or was like normal? The graded one.
+
+1061
+01:15:20.895 --> 01:15:23.635
+Huh? Normal, sir. It is fine. I missed the graded one.
+
+1062
+01:15:24.805 --> 01:15:26.745
+Uh, okay. That is one of the problem,
+
+1063
+01:15:27.095 --> 01:15:29.185
+like the deadline was seven days.
+
+1064
+01:15:29.385 --> 01:15:33.665
+I, I can do one thing, like based on some, like extra seven,
+
+1065
+01:15:33.665 --> 01:15:35.545
+something like that I can give you later.
+
+1066
+01:15:36.175 --> 01:15:38.225
+Okay. That you can like compile
+
+1067
+01:15:38.225 --> 01:15:40.745
+and perform, uh, then some kind of like, uh,
+
+1068
+01:15:41.245 --> 01:15:42.585
+not the full mark, but the fraction
+
+1069
+01:15:42.585 --> 01:15:44.065
+of the marks I can give you for that one.
+
+1070
+01:15:44.635 --> 01:15:47.655
+Could I email you, sir? Uh, yeah, please.
+
+1071
+01:15:48.445 --> 01:15:49.535
+I'll Email you also, uh,
+
+1072
+01:15:49.595 --> 01:15:51.175
+if you see, I'll show you again.
+
+1073
+01:15:51.805 --> 01:15:53.615
+That is the systems lab.
+
+1074
+01:15:55.155 --> 01:16:00.035
+Uh, so today's, uh, lab session, the afternoon,
+
+1075
+01:16:00.035 --> 01:16:01.475
+we'll have the same thing or, uh,
+
+1076
+01:16:01.765 --> 01:16:04.315
+it'll have some more, some more added to this. No,
+
+1077
+01:16:04.315 --> 01:16:08.675
+No, this thing only I think like a, um, multiple people,
+
+1078
+01:16:09.055 --> 01:16:11.755
+uh, who doesn't have like exposure to this one, they will,
+
+1079
+01:16:11.775 --> 01:16:14.195
+uh, actually have that time to learn and adapt.
+
+1080
+01:16:15.475 --> 01:16:18.605
+Yeah. So, uh, you see the component for this, you know,
+
+1081
+01:16:18.605 --> 01:16:20.845
+grading policy, but 10 assignments based on 10.
+
+1082
+01:16:21.425 --> 01:16:24.325
+Uh, this, uh, you know, each of the labs will be whatever
+
+1083
+01:16:24.325 --> 01:16:26.085
+with the, as assignments you're submitting four marks they,
+
+1084
+01:16:26.115 --> 01:16:28.445
+that they carry, but the grade lab, each
+
+1085
+01:16:28.445 --> 01:16:30.045
+of the grade lab carries 15 marks.
+
+1086
+01:16:30.045 --> 01:16:31.285
+So you shouldn't miss this one.
+
+1087
+01:16:31.355 --> 01:16:34.165
+That is the, uh, ideal, fundamental idea is that
+
+1088
+01:16:34.665 --> 01:16:35.665
+Yes, sir. So can I
+
+1089
+01:16:35.665 --> 01:16:36.325
+like, uh,
+
+1090
+01:16:36.545 --> 01:16:38.925
+submit again if possible, maybe fraction as
+
+1091
+01:16:39.765 --> 01:16:40.885
+I, I don't think like that,
+
+1092
+01:16:40.915 --> 01:16:43.365
+that will be the discrepancy towards the like other
+
+1093
+01:16:43.365 --> 01:16:44.845
+candidate who has done true, true,
+
+1094
+01:16:45.325 --> 01:16:47.205
+I Understand hard work within the timeline
+
+1095
+01:16:47.225 --> 01:16:50.565
+and they have maintained the, you know, uh, sanctity
+
+1096
+01:16:50.565 --> 01:16:52.005
+that's the local one of the thing.
+
+1097
+01:16:52.225 --> 01:16:55.405
+But I can do what, uh, you mail me, I'll give you some kind
+
+1098
+01:16:55.405 --> 01:16:58.005
+of assignments and all, uh, that you can submit
+
+1099
+01:16:58.005 --> 01:16:59.245
+and present, uh, the work,
+
+1100
+01:16:59.385 --> 01:17:01.325
+and I can give you some fraction of the mark
+
+1101
+01:17:01.345 --> 01:17:02.405
+for this grade level one.
+
+1102
+01:17:02.715 --> 01:17:05.165
+Sure, sure. Sir, can you share your email Id?
+
+1103
+01:17:05.895 --> 01:17:08.355
+Uh, yeah, I'll write it here. You just note it down, fine.
+
+1104
+01:17:09.475 --> 01:17:11.605
+Okay, sir? Yeah, yeah.
+
+1105
+01:17:11.865 --> 01:17:14.805
+Answer classroom notes like we have not got yet any now,
+
+1106
+01:17:16.335 --> 01:17:19.715
+Uh, I always share, uh, to the TAs,
+
+1107
+01:17:19.745 --> 01:17:21.555
+they usually upload these things.
+
+1108
+01:17:21.985 --> 01:17:23.915
+I'll ask him again or heard again
+
+1109
+01:17:24.255 --> 01:17:27.035
+and I'll see what is the, like a problem that is, uh,
+
+1110
+01:17:27.035 --> 01:17:28.075
+they're, they're facing.
+
+1111
+01:17:29.135 --> 01:17:31.435
+Is it visible? Yeah. Yeah, it's visible.
+
+1112
+01:17:32.025 --> 01:17:35.875
+It's mentioned the classroom notes, 5% mask carries here.
+
+1113
+01:17:36.985 --> 01:17:39.085
+Do we have to write some classroom notes or something?
+
+1114
+01:17:39.965 --> 01:17:41.085
+I was asking that the, uh,
+
+1115
+01:17:41.145 --> 01:17:45.965
+The idea initially I said, uh, that is, uh,
+
+1116
+01:17:46.485 --> 01:17:49.525
+whatever the lab says, you are actually doing the, you know,
+
+1117
+01:17:49.625 --> 01:17:52.445
+you compile all of these things together
+
+1118
+01:17:52.985 --> 01:17:56.725
+and some of the people, if they're like new when they want
+
+1119
+01:17:56.725 --> 01:17:58.725
+to learn this thing and like,
+
+1120
+01:17:58.745 --> 01:18:01.125
+but just seeing your, you know, entire, you know,
+
+1121
+01:18:01.145 --> 01:18:03.645
+one single document, they'll be able to understand, okay,
+
+1122
+01:18:03.645 --> 01:18:04.725
+this is the way I should be
+
+1123
+01:18:04.925 --> 01:18:06.285
+learning this, you know, subject.
+
+1124
+01:18:08.105 --> 01:18:09.365
+So The basic idea
+
+1125
+01:18:09.365 --> 01:18:11.285
+of the simplest way you can compile all
+
+1126
+01:18:11.285 --> 01:18:13.325
+of the lab assignments into one
+
+1127
+01:18:13.345 --> 01:18:17.485
+and you can create a class, uh, class notebook, okay?
+
+1128
+01:18:17.485 --> 01:18:19.285
+And if you actually do some efforts
+
+1129
+01:18:19.305 --> 01:18:22.925
+and all you can apply, uh, like put mode of volume contains
+
+1130
+01:18:22.925 --> 01:18:25.005
+and all that, that will become much more better.
+
+1131
+01:18:26.285 --> 01:18:27.575
+Okay, sir, when are we
+
+1132
+01:18:27.815 --> 01:18:28.815
+Supposed to submit then? Uh,
+
+1133
+01:18:28.815 --> 01:18:30.895
+that is the, like in the, like
+
+1134
+01:18:30.895 --> 01:18:33.175
+during the interim you submit, I'll give you some end,
+
+1135
+01:18:33.245 --> 01:18:35.975
+like a time that is not like a regular thing.
+
+1136
+01:18:36.625 --> 01:18:38.215
+Every class and everything ends.
+
+1137
+01:18:38.445 --> 01:18:42.135
+Then you'll have some, like a time like buffer time then
+
+1138
+01:18:42.165 --> 01:18:43.935
+that you can compile and send it.
+
+1139
+01:18:45.395 --> 01:18:47.885
+Okay, sir? So For, for today's assignment, uh,
+
+1140
+01:18:47.905 --> 01:18:49.725
+for the evening, uh, lab session,
+
+1141
+01:18:49.745 --> 01:18:52.125
+you'll be uploading a assignment for that, sir.
+
+1142
+01:18:52.755 --> 01:18:54.765
+Yeah, it'll be shared in the afternoon itself.
+
+1143
+01:18:54.925 --> 01:18:56.365
+I think within 30 minutes I'll share.
+
+1144
+01:18:57.055 --> 01:18:58.545
+Okay, sir. Thank you. Yeah.
+
+1145
+01:18:58.685 --> 01:19:01.665
+Uh, sir, one question regarding this classroom notes.
+
+1146
+01:19:02.045 --> 01:19:05.585
+So let's say I'm noting down some important TD points, uh,
+
+1147
+01:19:05.645 --> 01:19:06.785
+for today's session.
+
+1148
+01:19:07.405 --> 01:19:10.785
+Mm-hmm. So if I, if I include the same in the document,
+
+1149
+01:19:10.805 --> 01:19:11.825
+that's enough, right?
+
+1150
+01:19:12.045 --> 01:19:14.185
+So we don't need to include the code
+
+1151
+01:19:14.185 --> 01:19:15.265
+and all that stuff, right?
+
+1152
+01:19:16.735 --> 01:19:19.105
+That is, that is all new. Like whatever way you are
+
+1153
+01:19:19.105 --> 01:19:21.865
+filling this, you know, data should be compiled
+
+1154
+01:19:21.865 --> 01:19:23.425
+and the content should be compiled.
+
+1155
+01:19:23.425 --> 01:19:26.035
+That is on you, that is your choice
+
+1156
+01:19:26.035 --> 01:19:28.555
+because you are the author, you are having that freedom.
+
+1157
+01:19:29.985 --> 01:19:33.635
+Okay, sir. Got it. One last thing.
+
+1158
+01:19:35.495 --> 01:19:39.755
+Yes. When is the next grade assignment?
+
+1159
+01:19:40.505 --> 01:19:41.555
+Next grade assignment?
+
+1160
+01:19:41.855 --> 01:19:45.395
+Uh, uh, this Monday we are having one season. Okay.
+
+1161
+01:19:46.055 --> 01:19:48.035
+And, uh, after next Monday,
+
+1162
+01:19:48.225 --> 01:19:50.595
+that will be our, uh, just a second.
+
+1163
+01:19:52.085 --> 01:19:53.255
+This is our, I think
+
+1164
+01:19:55.445 --> 01:19:57.295
+this is our fourth lab technically.
+
+1165
+01:19:58.195 --> 01:20:02.045
+So fifth, sixth. So fifth assignment or fifth.
+
+1166
+01:20:02.465 --> 01:20:05.205
+Uh, this thing will be done on the Monday.
+
+1167
+01:20:06.545 --> 01:20:11.045
+So technically if we see, uh, next to next, uh,
+
+1168
+01:20:11.045 --> 01:20:12.325
+week, we'll have a session.
+
+1169
+01:20:12.355 --> 01:20:16.005
+Then after that we'll have a, no, this one, let me sell you
+
+1170
+01:20:17.395 --> 01:20:20.475
+Submitted This.
+
+1171
+01:20:21.025 --> 01:20:24.755
+Okay. 17th, uh, January, we'll have next grade lab.
+
+1172
+01:20:26.585 --> 01:20:28.195
+Okay, 17th, January.
+
+1173
+01:20:30.095 --> 01:20:32.155
+So far we have submitted one
+
+1174
+01:20:35.615 --> 01:20:40.155
+For each of the believe, uh, uh, this, uh, you know,
+
+1175
+01:20:40.155 --> 01:20:42.275
+sessions, you are having some tasks and all.
+
+1176
+01:20:42.465 --> 01:20:45.475
+Okay? Except the first one. Okay.
+
+1177
+01:20:45.535 --> 01:20:50.115
+So for this, uh, state speech, uh, search, uh, sorry, uh,
+
+1178
+01:20:50.115 --> 01:20:52.035
+searching techniques and all, you have done
+
+1179
+01:20:52.035 --> 01:20:54.115
+that concern satisfaction, probably you have done that.
+
+1180
+01:20:54.175 --> 01:20:56.115
+Two, I think you have already completed.
+
+1181
+01:20:58.965 --> 01:21:00.825
+Uh, excuse me, sir. Yeah,
+
+1182
+01:21:02.085 --> 01:21:03.085
+Sir. Uh, the next
+
+1183
+01:21:03.085 --> 01:21:05.185
+graded lab assignment, we,
+
+1184
+01:21:05.235 --> 01:21:06.945
+we'll have the same timeline
+
+1185
+01:21:06.965 --> 01:21:08.705
+as the previous one, right? One week,
+
+1186
+01:21:08.855 --> 01:21:09.855
+Yeah. Yes. Seven days of
+
+1187
+01:21:09.855 --> 01:21:10.545
+time will be there.
+
+1188
+01:21:10.965 --> 01:21:12.145
+Yes, that will be it.
+
+1189
+01:21:12.565 --> 01:21:15.545
+One more question I wanted to ask you is that this, uh,
+
+1190
+01:21:15.915 --> 01:21:17.705
+state space search is there, right, sir?
+
+1191
+01:21:18.125 --> 01:21:21.305
+So, uh, if you look at control engineering, uh, um,
+
+1192
+01:21:22.865 --> 01:21:24.785
+multiple input, multiple output.
+
+1193
+01:21:25.445 --> 01:21:28.745
+So are there any relation between this, uh,
+
+1194
+01:21:29.025 --> 01:21:31.545
+reinforcement learning and the conventional con control
+
+1195
+01:21:31.785 --> 01:21:35.425
+engineering approaches, or, uh, how does it work?
+
+1196
+01:21:36.535 --> 01:21:39.145
+Yeah, that, that I think like will be discussed in the
+
+1197
+01:21:39.145 --> 01:21:40.665
+machine learning group planning aspects.
+
+1198
+01:21:40.685 --> 01:21:45.305
+So not here the theoretical side, I think like, uh,
+
+1199
+01:21:46.095 --> 01:21:47.585
+will discuss much better than me.
+
+1200
+01:21:48.375 --> 01:21:49.945
+Okay, sir. Thanks. Yeah.
+
+1201
+01:21:52.135 --> 01:21:53.785
+Okay. Then I'm closing the session, right?
+
+1202
+01:21:54.455 --> 01:21:58.905
+Yeah. Thank you, sir. Thank sir. Thank you, sir. Yeah,
+
+1203
+01:21:58.975 --> 01:21:59.975
+Have a good day.
+
+1204
+01:22:00.355 --> 01:22:01.785
+Thank you, sir. Thank you. Thank.
