@@ -1,0 +1,8177 @@
+WEBVTT
+
+1
+00:00:26.785 --> 00:00:27.225
+Good evening.
+
+2
+00:00:27.655 --> 00:00:30.615
+Good evening to all. Good evening, sir. Sir.
+
+3
+00:00:30.615 --> 00:00:33.835
+Good evening, sir. Good evening, sir. Good evening, sir.
+
+4
+00:00:41.505 --> 00:00:44.165
+Uh, 7 45. We'll wait for two, three minutes.
+
+5
+00:00:44.305 --> 00:00:47.255
+Let there's also join. We start there. Thank you.
+
+6
+00:00:52.825 --> 00:00:57.645
+Afternoon. Yes. Thank you. Thank you.
+
+7
+00:00:57.645 --> 00:01:00.305
+Happy year 12. Thank you. Thank you.
+
+8
+00:04:02.015 --> 00:04:05.305
+Okay, lemme start now I present my screen.
+
+9
+00:04:17.335 --> 00:04:19.955
+Good evening, sir. Good evening. Good evening.
+
+10
+00:04:28.115 --> 00:04:29.115
+So, uh,
+
+11
+00:04:30.115 --> 00:04:34.085
+So In, I just, uh,
+
+12
+00:04:34.705 --> 00:04:36.085
+let me start from here.
+
+13
+00:04:36.345 --> 00:04:41.325
+So in the last class, uh, what we did, we were, uh,
+
+14
+00:04:41.425 --> 00:04:45.865
+at the First we saw how
+
+15
+00:04:45.865 --> 00:04:47.145
+to build this a NN.
+
+16
+00:04:47.325 --> 00:04:51.745
+And if you can recall, I was showing you some demo on this,
+
+17
+00:04:51.925 --> 00:04:55.385
+uh, a NN with CPU, then building a
+
+18
+00:04:55.385 --> 00:05:00.165
+and N network with the GPU of, uh, with that F data set.
+
+19
+00:05:00.945 --> 00:05:02.125
+And finally, uh,
+
+20
+00:05:02.125 --> 00:05:04.845
+because of the over fitting problem, we were also,
+
+21
+00:05:04.945 --> 00:05:07.125
+we also talked how to optimize our in.
+
+22
+00:05:07.225 --> 00:05:09.365
+And we were talking on, uh,
+
+23
+00:05:09.705 --> 00:05:12.685
+and we optimized that one using, adding some dropout layer.
+
+24
+00:05:12.865 --> 00:05:16.165
+We added batch normalization, weight decay,
+
+25
+00:05:16.225 --> 00:05:20.965
+at least three types of, uh, regularization, uh, uh, layer
+
+26
+00:05:21.185 --> 00:05:23.645
+or parameters we optimized in order to
+
+27
+00:05:24.265 --> 00:05:25.525
+reduce the over fitting problem.
+
+28
+00:05:25.585 --> 00:05:29.085
+And that we achieved also. That was in the first half.
+
+29
+00:05:29.715 --> 00:05:30.965
+Then in the second half,
+
+30
+00:05:30.965 --> 00:05:34.885
+server was introducing the CNN network Conal neural Network.
+
+31
+00:05:36.065 --> 00:05:38.365
+And he, he explained that.
+
+32
+00:05:38.465 --> 00:05:42.445
+Uh, so what I'll do is I'll take, I'll start, uh, from this,
+
+33
+00:05:42.465 --> 00:05:46.565
+uh, CNN network itself a little bit, uh, so
+
+34
+00:05:46.565 --> 00:05:49.085
+that if you have any doubt and all you can ask me,
+
+35
+00:05:50.065 --> 00:05:53.205
+and I'll come back to this slide, and then we'll go
+
+36
+00:05:53.205 --> 00:05:57.945
+and see today, uh, the, um, one, one
+
+37
+00:05:57.945 --> 00:06:00.985
+of the network where we will build the CNN networks from
+
+38
+00:06:01.005 --> 00:06:03.305
+the, uh, in the, in the s Okay.
+
+39
+00:06:03.445 --> 00:06:04.945
+So that's the plan I have today.
+
+40
+00:06:06.495 --> 00:06:08.155
+So our whole discussion
+
+41
+00:06:08.155 --> 00:06:10.115
+for today's class would be based on the CNN
+
+42
+00:06:10.115 --> 00:06:11.235
+correlation neural network.
+
+43
+00:06:11.815 --> 00:06:14.155
+And yeah, that is how, so it'll go
+
+44
+00:06:14.155 --> 00:06:15.315
+for one or two more classes.
+
+45
+00:06:15.485 --> 00:06:18.515
+Maybe we'll go into the depth of the CNN as well with the
+
+46
+00:06:19.065 --> 00:06:22.995
+even, uh, even a little bit of complex networks.
+
+47
+00:06:23.465 --> 00:06:26.515
+Okay? So, uh, let us understand once, once again,
+
+48
+00:06:26.535 --> 00:06:27.955
+how does the CNN looks like?
+
+49
+00:06:28.465 --> 00:06:29.595
+What is the architecture?
+
+50
+00:06:29.595 --> 00:06:31.515
+What are the different layers we have in the CNN?
+
+51
+00:06:31.515 --> 00:06:32.875
+And we'll code that one. That is
+
+52
+00:06:32.875 --> 00:06:34.795
+what is the plan I have for today's class.
+
+53
+00:06:37.235 --> 00:06:42.165
+Okay? So, uh, if, if, uh, I think from last class,
+
+54
+00:06:42.345 --> 00:06:44.325
+one thing must have been clear that
+
+55
+00:06:45.345 --> 00:06:48.325
+the CNN overall architecture, if you will see,
+
+56
+00:06:48.425 --> 00:06:49.605
+it looks something like that,
+
+57
+00:06:49.605 --> 00:06:52.085
+what you're seeing on the screen now, okay,
+
+58
+00:06:52.085 --> 00:06:53.365
+this has already explained.
+
+59
+00:06:54.465 --> 00:06:57.795
+So if you see that, how does it work?
+
+60
+00:06:58.255 --> 00:07:01.795
+It takes the input here, the input is shown as image,
+
+61
+00:07:02.295 --> 00:07:03.675
+but the input can be anything.
+
+62
+00:07:03.895 --> 00:07:05.395
+The input can be text also,
+
+63
+00:07:06.175 --> 00:07:11.165
+or input can be, uh, uh, uh, text in the sense,
+
+64
+00:07:11.345 --> 00:07:13.765
+uh, the input has to be vector.
+
+65
+00:07:14.065 --> 00:07:16.365
+If it is a text, it'll be a one dimensional vector.
+
+66
+00:07:16.425 --> 00:07:18.365
+If it is an image, then it is a two
+
+67
+00:07:18.365 --> 00:07:19.765
+dimensional vector like metrics.
+
+68
+00:07:19.905 --> 00:07:21.565
+You can see that between like structure.
+
+69
+00:07:22.425 --> 00:07:24.925
+So that is what is the input, right?
+
+70
+00:07:25.505 --> 00:07:29.515
+And, uh, this input goes to, there are two layers.
+
+71
+00:07:29.815 --> 00:07:33.835
+Uh, two, uh, you can say that the primary layers in
+
+72
+00:07:33.835 --> 00:07:37.195
+between the first layer, we see it as a convolution layer,
+
+73
+00:07:37.855 --> 00:07:40.355
+and the second layer, we see it as a pooling layer.
+
+74
+00:07:41.225 --> 00:07:45.915
+Okay? And you may, uh, you can add in fact these together,
+
+75
+00:07:46.135 --> 00:07:49.635
+we say it as one layer, so convolution and pooling.
+
+76
+00:07:49.865 --> 00:07:54.035
+Then we can add one more convolution and pooling, right?
+
+77
+00:07:54.095 --> 00:07:56.755
+So you can see here, this is one layer, convolution
+
+78
+00:07:57.305 --> 00:07:58.395
+operation is happening.
+
+79
+00:07:58.395 --> 00:07:59.875
+Then pooling operation is happening.
+
+80
+00:08:00.385 --> 00:08:02.595
+Then further, there's the convolution operation is
+
+81
+00:08:02.595 --> 00:08:04.435
+happening, and then again, pooling layer is happening.
+
+82
+00:08:04.715 --> 00:08:06.915
+Likewise, you can add third, also fourth.
+
+83
+00:08:07.175 --> 00:08:10.675
+So you can add 50 such convolution pooling layer.
+
+84
+00:08:10.915 --> 00:08:13.435
+I mean, uh, yeah, that is how it, it can be like that
+
+85
+00:08:13.435 --> 00:08:14.835
+because a neural network, you know
+
+86
+00:08:14.835 --> 00:08:15.875
+that it is quite flexible.
+
+87
+00:08:15.875 --> 00:08:18.315
+There is no rigid, it like a structure
+
+88
+00:08:18.345 --> 00:08:20.795
+that you can have only one layer of the convolution
+
+89
+00:08:20.895 --> 00:08:23.155
+or only 10 layer of the convolution.
+
+90
+00:08:23.185 --> 00:08:24.755
+It's up to you how you want to build
+
+91
+00:08:24.755 --> 00:08:25.795
+and how you want to train.
+
+92
+00:08:26.345 --> 00:08:30.835
+Okay? So then once we do all this conation pooling,
+
+93
+00:08:30.835 --> 00:08:33.155
+conation pooling, then we have a flatten layer.
+
+94
+00:08:33.335 --> 00:08:36.195
+So whatever we get at the last, we say that
+
+95
+00:08:36.215 --> 00:08:38.755
+as a features which is extracted from this convolution
+
+96
+00:08:38.755 --> 00:08:42.595
+and pooling now that we first do
+
+97
+00:08:42.615 --> 00:08:43.915
+as a flatten, okay?
+
+98
+00:08:44.035 --> 00:08:45.995
+A one dimensional vector, you can understand it
+
+99
+00:08:46.905 --> 00:08:49.355
+because one dimensional vector can only go
+
+100
+00:08:49.355 --> 00:08:50.435
+to the fully connected network.
+
+101
+00:08:50.535 --> 00:08:53.035
+And finally, we get the output at the output layer.
+
+102
+00:08:53.055 --> 00:08:54.995
+So these three are the fully connected lit network
+
+103
+00:08:55.190 --> 00:08:56.805
+layers, right?
+
+104
+00:08:56.865 --> 00:08:59.605
+The input to the fully connected layers are always the one
+
+105
+00:08:59.605 --> 00:09:01.365
+dimensional vector, and that's why the flatten
+
+106
+00:09:01.365 --> 00:09:02.445
+is required in between.
+
+107
+00:09:02.545 --> 00:09:03.885
+So flatten is another layer,
+
+108
+00:09:04.015 --> 00:09:06.245
+which simply takes your two dimensional input
+
+109
+00:09:06.275 --> 00:09:07.285
+into one dimension.
+
+110
+00:09:08.035 --> 00:09:11.375
+Now, this is the, you can say that, uh, overall structure
+
+111
+00:09:11.375 --> 00:09:14.655
+of the CNN, where you have the input,
+
+112
+00:09:14.795 --> 00:09:16.095
+you have the convolution layer,
+
+113
+00:09:16.095 --> 00:09:17.335
+then you have a pooling layer,
+
+114
+00:09:17.335 --> 00:09:20.575
+then you may have one more convolution pooling, okay?
+
+115
+00:09:20.755 --> 00:09:24.815
+And, uh, uh, you may have few more conation pooling, but
+
+116
+00:09:24.815 --> 00:09:26.855
+after having this convolution pooling,
+
+117
+00:09:27.195 --> 00:09:28.495
+you will have one flatten layer,
+
+118
+00:09:28.795 --> 00:09:30.535
+and then you will have the fully connected layer.
+
+119
+00:09:30.635 --> 00:09:33.175
+And then here also you have quite flexibility.
+
+120
+00:09:33.235 --> 00:09:35.535
+You can add two layers, three L layer, four layers.
+
+121
+00:09:35.795 --> 00:09:38.735
+But usually the practice is people don't go more than three,
+
+122
+00:09:39.635 --> 00:09:43.055
+uh, three to four layers in the case of, uh, CNN,
+
+123
+00:09:43.075 --> 00:09:44.375
+the fully connected one.
+
+124
+00:09:45.155 --> 00:09:46.775
+So this is how, how, uh,
+
+125
+00:09:47.035 --> 00:09:49.455
+the network look like the architecture looks like.
+
+126
+00:09:50.195 --> 00:09:54.935
+So, uh, if you see in this whole architecture where,
+
+127
+00:09:54.935 --> 00:09:57.615
+and all the neurons are, you can ask, right?
+
+128
+00:09:57.635 --> 00:09:58.855
+The question is where and all the,
+
+129
+00:09:58.855 --> 00:10:00.135
+because there are multiple layers.
+
+130
+00:10:01.515 --> 00:10:05.455
+So, uh, is, uh, is the neuron available in all the layers?
+
+131
+00:10:05.885 --> 00:10:09.055
+When I say neuron, you have to recall that
+
+132
+00:10:09.055 --> 00:10:10.615
+what we talked about, the neuron.
+
+133
+00:10:11.105 --> 00:10:12.335
+About the neuron, we said
+
+134
+00:10:12.335 --> 00:10:14.415
+that it can do the weighted surplus bias
+
+135
+00:10:14.675 --> 00:10:16.975
+and then it can be followed by an activation function.
+
+136
+00:10:17.515 --> 00:10:20.175
+Now, if you clearly see in this particular network here,
+
+137
+00:10:20.315 --> 00:10:22.215
+we have the convolution plus relu.
+
+138
+00:10:22.215 --> 00:10:24.015
+There is one activation, which you can see here,
+
+139
+00:10:24.795 --> 00:10:28.375
+but when we do pooling, there is no activation as such.
+
+140
+00:10:28.725 --> 00:10:32.135
+Okay? Again, when we see here convolution, we,
+
+141
+00:10:32.135 --> 00:10:33.455
+we are also doing the relu,
+
+142
+00:10:33.595 --> 00:10:35.855
+but in the pooling there is no such activation.
+
+143
+00:10:36.485 --> 00:10:37.815
+Then we have the flatten layer
+
+144
+00:10:38.275 --> 00:10:40.175
+and then fully connected layer as usual.
+
+145
+00:10:40.315 --> 00:10:42.095
+We have seen that all these are neurons.
+
+146
+00:10:42.235 --> 00:10:45.375
+So obviously there is a, uh, weighted some plus bias,
+
+147
+00:10:45.375 --> 00:10:47.415
+and there will be one activation function which
+
+148
+00:10:47.415 --> 00:10:48.695
+you're using with each of these.
+
+149
+00:10:49.395 --> 00:10:51.575
+So now, if you can try to understand where
+
+150
+00:10:51.575 --> 00:10:54.215
+and all my neurons are available, you can say
+
+151
+00:10:54.215 --> 00:10:56.255
+that the convolution operation, what you're doing,
+
+152
+00:10:56.485 --> 00:10:58.415
+that is actually the neuron operation.
+
+153
+00:10:58.415 --> 00:10:59.695
+That is a linear operation,
+
+154
+00:11:00.075 --> 00:11:02.655
+and then you pass it through the nonlinearity, like relu.
+
+155
+00:11:02.655 --> 00:11:06.575
+So one, uh, the possibility of having the neurons, uh,
+
+156
+00:11:06.595 --> 00:11:08.615
+is here and the neuron, uh,
+
+157
+00:11:08.635 --> 00:11:12.055
+you can say the functionality is here, okay?
+
+158
+00:11:12.075 --> 00:11:14.935
+But then in the pooling, we don't do the operations
+
+159
+00:11:14.995 --> 00:11:16.975
+of the neuron in the pooling.
+
+160
+00:11:16.975 --> 00:11:18.655
+We don't do such operations, okay?
+
+161
+00:11:19.115 --> 00:11:21.855
+Uh, we simply pull, suppose we have four numbers,
+
+162
+00:11:22.045 --> 00:11:24.735
+I'll tell you, okay, pull the maximum one,
+
+163
+00:11:25.115 --> 00:11:27.615
+or if you have four numbers, I can tell you pull the minimum
+
+164
+00:11:27.755 --> 00:11:30.695
+one, or I can tell you, okay, pull the average one.
+
+165
+00:11:31.155 --> 00:11:33.375
+So the either maximum minimum
+
+166
+00:11:33.755 --> 00:11:37.595
+or average, all these are not the neuron, uh,
+
+167
+00:11:37.595 --> 00:11:38.835
+neuron, uh, functionality.
+
+168
+00:11:39.105 --> 00:11:42.115
+It's, it's an operation, mathematical operation, obviously,
+
+169
+00:11:42.695 --> 00:11:46.395
+but just, uh, just uh, um, um, some kind
+
+170
+00:11:46.395 --> 00:11:47.835
+of ag aggregation we are doing
+
+171
+00:11:47.895 --> 00:11:50.955
+and not the, uh, functionality of the neuron,
+
+172
+00:11:50.955 --> 00:11:52.275
+which we are performing over here.
+
+173
+00:11:52.545 --> 00:11:56.085
+Okay? That's the main difference between these layers, okay?
+
+174
+00:11:56.155 --> 00:12:00.375
+Between convolution layer and pooling layer. Okay?
+
+175
+00:12:00.955 --> 00:12:04.695
+So, uh, uh, what we do, uh, here we do the, uh,
+
+176
+00:12:04.775 --> 00:12:08.295
+weighted some plus bias, okay, in the convolution layer,
+
+177
+00:12:08.295 --> 00:12:10.095
+and we pass it through the activation function.
+
+178
+00:12:10.205 --> 00:12:12.735
+Then whatever metrics, figures as an output,
+
+179
+00:12:13.075 --> 00:12:14.415
+we pass it through the pooling layer.
+
+180
+00:12:14.415 --> 00:12:17.375
+We extract some, uh, prominent features,
+
+181
+00:12:17.715 --> 00:12:20.015
+and then we again pass it through the convolution layer.
+
+182
+00:12:20.015 --> 00:12:21.895
+Again, we do here weight some plus bias.
+
+183
+00:12:22.305 --> 00:12:25.015
+Again, we pass it to the pooling layer, we do the flattening
+
+184
+00:12:25.015 --> 00:12:26.295
+and then fully connected layer.
+
+185
+00:12:26.475 --> 00:12:27.855
+Now, this is the overall structure
+
+186
+00:12:28.915 --> 00:12:30.975
+of the convolution neural network.
+
+187
+00:12:31.195 --> 00:12:32.855
+Now, I'll come back to this slide.
+
+188
+00:12:33.695 --> 00:12:35.415
+I will just explain you a few more things.
+
+189
+00:12:37.535 --> 00:12:39.635
+So what happened in the convolution layer?
+
+190
+00:12:39.975 --> 00:12:43.075
+Uh, okay, these, these are the things we are reiterating so
+
+191
+00:12:43.075 --> 00:12:44.555
+that you will understand it a better way.
+
+192
+00:12:44.555 --> 00:12:46.155
+And then I'll stop for your questions as well.
+
+193
+00:12:46.625 --> 00:12:48.635
+That will finish this, uh, part.
+
+194
+00:12:49.615 --> 00:12:51.395
+So the idea of the convolution,
+
+195
+00:12:51.505 --> 00:12:53.235
+convolution is an operation, right?
+
+196
+00:12:53.295 --> 00:12:54.715
+We said that other day also.
+
+197
+00:12:54.735 --> 00:12:57.475
+So once you have the image which is given, say that here
+
+198
+00:12:58.175 --> 00:13:01.795
+in this particular case, the image is of size 32 across 32
+
+199
+00:13:02.335 --> 00:13:05.195
+and three represent, there are three channels, channels,
+
+200
+00:13:05.365 --> 00:13:09.235
+three channels represent that you have the colored image.
+
+201
+00:13:09.375 --> 00:13:11.635
+If there is one channel only, then it represents
+
+202
+00:13:11.635 --> 00:13:14.515
+that you have only the black and white image.
+
+203
+00:13:14.575 --> 00:13:15.715
+Now, that is the main difference.
+
+204
+00:13:15.715 --> 00:13:18.115
+So either the channel can be three or it can be one.
+
+205
+00:13:18.115 --> 00:13:20.315
+Usually in the case of image it can be colored
+
+206
+00:13:20.315 --> 00:13:21.395
+or it can be black and white, right?
+
+207
+00:13:21.395 --> 00:13:22.475
+Only the two possibility.
+
+208
+00:13:23.585 --> 00:13:25.675
+What we do in the case of convolution,
+
+209
+00:13:26.255 --> 00:13:29.035
+we find one filter, okay?
+
+210
+00:13:29.135 --> 00:13:30.515
+We find one filter. Filter is
+
+211
+00:13:30.515 --> 00:13:31.595
+nothing but the weight metrics.
+
+212
+00:13:31.855 --> 00:13:33.595
+For example, if you ask me
+
+213
+00:13:33.595 --> 00:13:36.535
+for this particular neuron, what is the weight metrics?
+
+214
+00:13:36.815 --> 00:13:39.615
+I would say weight metrics is a one dimensional vector
+
+215
+00:13:39.625 --> 00:13:41.975
+where you have W node, W one, and W2.
+
+216
+00:13:42.025 --> 00:13:44.615
+These are the weights. It's a one dimensional vector.
+
+217
+00:13:45.005 --> 00:13:46.935
+It's not a metrics in this particular case,
+
+218
+00:13:47.535 --> 00:13:48.855
+w not W one and W2.
+
+219
+00:13:48.855 --> 00:13:50.455
+These are the, these are the values.
+
+220
+00:13:50.555 --> 00:13:52.975
+So it's together if you'll represent that this is,
+
+221
+00:13:53.125 --> 00:13:54.575
+this is a one dimensional vector,
+
+222
+00:13:55.395 --> 00:13:57.615
+but here in this particular case, uh, uh,
+
+223
+00:13:57.715 --> 00:13:59.495
+in the convolution case, instead
+
+224
+00:13:59.495 --> 00:14:02.335
+of having the one dimensional vector as a weight,
+
+225
+00:14:02.335 --> 00:14:05.255
+we have a two dimensional vector, which we say it
+
+226
+00:14:05.255 --> 00:14:08.135
+as a filter or metrics, okay?
+
+227
+00:14:08.995 --> 00:14:13.215
+So the idea is that that that weight metrics,
+
+228
+00:14:13.345 --> 00:14:15.375
+which we say it as a kernel
+
+229
+00:14:15.555 --> 00:14:18.735
+or sometimes is will, I'll tell it as a filter that will go
+
+230
+00:14:18.755 --> 00:14:21.135
+and convolve on a port of an image.
+
+231
+00:14:21.135 --> 00:14:25.015
+Like you can see here, it comes here only in this part
+
+232
+00:14:25.015 --> 00:14:27.535
+of the image, it's convolve, convolve in the sense
+
+233
+00:14:28.165 --> 00:14:29.375
+that there is a metrics here.
+
+234
+00:14:29.405 --> 00:14:32.775
+Also because it is an image, there is a metrics here also
+
+235
+00:14:32.775 --> 00:14:35.855
+because this is also an, uh, this is the,
+
+236
+00:14:35.855 --> 00:14:40.015
+this is also a 2D two dimensional vector or, right?
+
+237
+00:14:40.075 --> 00:14:42.455
+So metrics here also here also they
+
+238
+00:14:42.455 --> 00:14:43.615
+just overlap on each other.
+
+239
+00:14:43.875 --> 00:14:45.695
+And element wise, multiplication
+
+240
+00:14:45.715 --> 00:14:47.575
+and addition, we do that is
+
+241
+00:14:47.575 --> 00:14:49.535
+what is happening in the case of the convolution.
+
+242
+00:14:50.475 --> 00:14:52.085
+So, and then what we do, we pass it
+
+243
+00:14:52.085 --> 00:14:53.485
+through the activation function.
+
+244
+00:14:54.285 --> 00:14:56.255
+Okay? So if you see that one, that
+
+245
+00:14:56.255 --> 00:14:59.215
+what exactly we do at this convolution operation,
+
+246
+00:14:59.435 --> 00:15:02.295
+it is nothing but what we were doing with the neuron.
+
+247
+00:15:02.725 --> 00:15:06.175
+Same thing. It is, it's exactly same thing, okay?
+
+248
+00:15:06.555 --> 00:15:11.335
+So here also we did some linear operation first, WX plus
+
+249
+00:15:11.855 --> 00:15:14.935
+B, and then we pass it through the activation function.
+
+250
+00:15:15.135 --> 00:15:18.815
+F here also, we are doing the same thing, WX plus B
+
+251
+00:15:19.395 --> 00:15:21.095
+and passing through the activation function.
+
+252
+00:15:23.075 --> 00:15:26.015
+So, uh, the only difference, if you will ask me earlier,
+
+253
+00:15:27.155 --> 00:15:29.415
+we were considering the entire input
+
+254
+00:15:30.225 --> 00:15:33.685
+and having connect, this entire input was connected
+
+255
+00:15:33.685 --> 00:15:37.485
+with all the, uh, uh, was connected with one neuron
+
+256
+00:15:37.795 --> 00:15:39.325
+with different weights.
+
+257
+00:15:39.325 --> 00:15:41.005
+But the only difference in the case
+
+258
+00:15:41.005 --> 00:15:43.605
+of convolution is instead of having the entire input,
+
+259
+00:15:43.665 --> 00:15:47.485
+we only, uh, go, uh, like, uh,
+
+260
+00:15:48.505 --> 00:15:49.885
+you can say that the chunk wise
+
+261
+00:15:50.025 --> 00:15:53.565
+or you can say the, uh, reason wise and we calculate
+
+262
+00:15:53.865 --> 00:15:57.085
+and, uh, do the same operation, WX plus B followed
+
+263
+00:15:57.105 --> 00:15:58.165
+by the activation function.
+
+264
+00:15:58.625 --> 00:16:01.005
+So each conation filter behaves like a neuron.
+
+265
+00:16:01.005 --> 00:16:03.565
+You can say that every convolution filter,
+
+266
+00:16:04.155 --> 00:16:05.525
+it's behaving like a neuron
+
+267
+00:16:05.525 --> 00:16:07.805
+because it does this operation, WXRP,
+
+268
+00:16:07.995 --> 00:16:09.805
+this is the operation we filter, which,
+
+269
+00:16:09.975 --> 00:16:11.685
+which it performs, okay?
+
+270
+00:16:12.705 --> 00:16:15.485
+And it inputs our pixel and same weights are used.
+
+271
+00:16:15.505 --> 00:16:17.245
+The one more thing is weights are same,
+
+272
+00:16:17.245 --> 00:16:20.605
+because same filters are going to be ev uh, uh, are going
+
+273
+00:16:20.605 --> 00:16:24.045
+to control on the entire image by changing its position.
+
+274
+00:16:24.845 --> 00:16:27.945
+So how does it work? Say that initially you have 32 cross,
+
+275
+00:16:27.945 --> 00:16:32.225
+32 cross three, this is the, uh, filter size.
+
+276
+00:16:32.695 --> 00:16:36.705
+Okay? So, uh, uh, what happened that, uh, first
+
+277
+00:16:36.705 --> 00:16:37.865
+of all, this is the MS size.
+
+278
+00:16:37.865 --> 00:16:38.945
+We have 32 cross, 32
+
+279
+00:16:38.945 --> 00:16:42.385
+and three represent the channels red, green, and blue,
+
+280
+00:16:42.535 --> 00:16:43.985
+because it is a color image.
+
+281
+00:16:44.295 --> 00:16:45.705
+What we do, we take one filter.
+
+282
+00:16:46.485 --> 00:16:49.425
+Now, filter size here, it is taken as five, cross five.
+
+283
+00:16:49.925 --> 00:16:51.505
+And here also there should be three channel,
+
+284
+00:16:51.505 --> 00:16:53.145
+because if it is a three channel here,
+
+285
+00:16:53.355 --> 00:16:54.705
+there should be three channels here,
+
+286
+00:16:54.705 --> 00:16:56.985
+three channels in center, there are three mattresses, okay?
+
+287
+00:16:57.095 --> 00:16:59.865
+When I say three channel and three mattresses
+
+288
+00:16:59.865 --> 00:17:03.145
+of 32 cross 32, 1 for red, one for green, one
+
+289
+00:17:03.145 --> 00:17:05.225
+for blue, okay?
+
+290
+00:17:05.845 --> 00:17:09.025
+And, uh, because they are on, on top of each other,
+
+291
+00:17:09.135 --> 00:17:11.185
+stacked on top of each other together,
+
+292
+00:17:11.335 --> 00:17:13.825
+they are making some color, okay?
+
+293
+00:17:14.135 --> 00:17:15.425
+Otherwise, their pixel values,
+
+294
+00:17:15.425 --> 00:17:18.265
+they are going from range weapons zero to 2 55 only.
+
+295
+00:17:19.255 --> 00:17:22.545
+Here. Also, we have such five cross, five, three different
+
+296
+00:17:23.105 --> 00:17:24.865
+mattresses stacked on top of each other.
+
+297
+00:17:25.125 --> 00:17:27.145
+So this will go here
+
+298
+00:17:28.125 --> 00:17:30.465
+and it'll extract, it'll convolve
+
+299
+00:17:30.465 --> 00:17:31.785
+and it'll give you one number.
+
+300
+00:17:32.405 --> 00:17:33.825
+So it'll be something like that.
+
+301
+00:17:33.825 --> 00:17:37.945
+This 32 cross, 32 cross three image, this is my input,
+
+302
+00:17:38.925 --> 00:17:40.985
+and five plus five plus three is a filter.
+
+303
+00:17:41.525 --> 00:17:44.065
+And this is filtering nothing but the weights. Okay?
+
+304
+00:17:44.085 --> 00:17:45.665
+The weights, which we learn at the back
+
+305
+00:17:45.735 --> 00:17:47.225
+with the back propagation, okay?
+
+306
+00:17:47.845 --> 00:17:50.525
+So here it'll go at a particular position or region.
+
+307
+00:17:50.625 --> 00:17:52.965
+In this particular whole image, convolve,
+
+308
+00:17:53.385 --> 00:17:54.725
+it con involves what happens.
+
+309
+00:17:55.625 --> 00:17:59.325
+So, uh, five cross, five cross three, these many
+
+310
+00:17:59.845 --> 00:18:01.645
+multiplication you do, okay?
+
+311
+00:18:02.265 --> 00:18:03.885
+Uh, and then you add them together
+
+312
+00:18:03.905 --> 00:18:07.365
+and it'll result you with one, number one scaler
+
+313
+00:18:08.115 --> 00:18:10.085
+because, uh, metrics, uh,
+
+314
+00:18:10.085 --> 00:18:11.965
+element wise multiplication you are doing
+
+315
+00:18:11.965 --> 00:18:13.405
+obviously with the, these journals.
+
+316
+00:18:13.585 --> 00:18:16.745
+So it'll result you with one number,
+
+317
+00:18:16.925 --> 00:18:19.865
+and that is the feature, what you're extracting out
+
+318
+00:18:19.865 --> 00:18:20.905
+of this particular reason.
+
+319
+00:18:21.415 --> 00:18:25.465
+Okay? So, uh, say that this is, this is for one such filter.
+
+320
+00:18:25.565 --> 00:18:27.105
+Now say that I have one more filter.
+
+321
+00:18:27.645 --> 00:18:30.185
+Now it's a green filter like that again,
+
+322
+00:18:30.185 --> 00:18:31.585
+five cross five cross three.
+
+323
+00:18:32.125 --> 00:18:35.225
+Now that green filter will also go in a particular region
+
+324
+00:18:35.285 --> 00:18:37.145
+of this particular image vol,
+
+325
+00:18:37.405 --> 00:18:39.985
+and it'll give you one number, okay?
+
+326
+00:18:40.005 --> 00:18:42.465
+One number. So what,
+
+327
+00:18:42.465 --> 00:18:44.625
+what it is showing in this particular slide is
+
+328
+00:18:45.245 --> 00:18:48.865
+as many filter, you will have those many feature map
+
+329
+00:18:48.925 --> 00:18:51.025
+or we say activation map, you will get,
+
+330
+00:18:51.805 --> 00:18:54.695
+so here one filter wa drops type blue.
+
+331
+00:18:55.435 --> 00:18:58.455
+So one feature map you have got for
+
+332
+00:18:58.455 --> 00:19:00.855
+that one filter type green.
+
+333
+00:19:00.995 --> 00:19:03.095
+So another filter you're getting of the green type.
+
+334
+00:19:03.295 --> 00:19:05.295
+Likewise, if you have third filter also,
+
+335
+00:19:05.755 --> 00:19:07.215
+you will get the third feature map.
+
+336
+00:19:07.675 --> 00:19:09.975
+So as many filter you will have those many feature
+
+337
+00:19:10.035 --> 00:19:11.255
+map you will get, okay?
+
+338
+00:19:11.255 --> 00:19:13.935
+That is the meaning of it. If you go in little
+
+339
+00:19:14.035 --> 00:19:15.455
+detail, then what will happen?
+
+340
+00:19:15.845 --> 00:19:18.935
+Suppose I have, uh, okay, before that, suppose I have six.
+
+341
+00:19:19.035 --> 00:19:22.295
+If we had six, five graphs, five filters, say that six
+
+342
+00:19:22.835 --> 00:19:25.695
+and all the six five cross five filter is being convolved
+
+343
+00:19:25.695 --> 00:19:27.735
+here, how many feature map we get
+
+344
+00:19:27.735 --> 00:19:30.135
+or activation map I gate six one, you can see
+
+345
+00:19:30.135 --> 00:19:31.495
+that 1, 2, 3, 4, 5, 6
+
+346
+00:19:31.625 --> 00:19:33.335
+being represented with different colors.
+
+347
+00:19:34.115 --> 00:19:35.175
+So this is how it happens.
+
+348
+00:19:35.315 --> 00:19:39.355
+For every filter map, you will get one, uh, for,
+
+349
+00:19:39.415 --> 00:19:42.795
+for every filter, which is being convolve on this image,
+
+350
+00:19:42.795 --> 00:19:44.235
+you will get one activation map
+
+351
+00:19:44.235 --> 00:19:46.115
+or feature map, whatever you will say, okay?
+
+352
+00:19:46.115 --> 00:19:50.915
+That is how it's, uh, then
+
+353
+00:19:50.915 --> 00:19:53.395
+what we do, as, as i at it, at it shown,
+
+354
+00:19:53.735 --> 00:19:55.635
+you can add multiple convolution layer.
+
+355
+00:19:55.635 --> 00:19:57.235
+So this is one, uh, convolution,
+
+356
+00:19:57.235 --> 00:19:59.155
+which is happening on the original image.
+
+357
+00:19:59.505 --> 00:20:03.075
+Then from the original image, you'll get the feature map.
+
+358
+00:20:03.775 --> 00:20:06.595
+And on this also, you can add one more convolution,
+
+359
+00:20:06.735 --> 00:20:09.875
+you will get another feature map on this also,
+
+360
+00:20:09.875 --> 00:20:11.755
+you can add one more layer of convolution,
+
+361
+00:20:11.775 --> 00:20:14.235
+you will get another feature map and so on.
+
+362
+00:20:14.235 --> 00:20:17.595
+This is how you can add multiple convolution layer one
+
+363
+00:20:17.595 --> 00:20:18.755
+by one, one after another.
+
+364
+00:20:19.025 --> 00:20:22.155
+Okay? So what exactly they do?
+
+365
+00:20:22.505 --> 00:20:26.275
+This is what the intuition that if you have an image, so
+
+366
+00:20:26.275 --> 00:20:29.235
+for the first conation layer, obviously there is a pooling,
+
+367
+00:20:29.235 --> 00:20:33.435
+which is not shown, but then, uh, pooling, uh, most, most
+
+368
+00:20:33.435 --> 00:20:35.275
+of the time pooling is attached with the conation.
+
+369
+00:20:35.855 --> 00:20:38.075
+So first layer of the convolution try
+
+370
+00:20:38.075 --> 00:20:40.315
+to extract the low level features like edges.
+
+371
+00:20:41.115 --> 00:20:44.835
+Vertical is horizontal, is lights, uh,
+
+372
+00:20:45.075 --> 00:20:46.675
+slightly tilted edge and so on.
+
+373
+00:20:47.275 --> 00:20:49.165
+Then mid-level of features, what they do,
+
+374
+00:20:49.165 --> 00:20:53.645
+they combine these ass and try to get some clarity, okay?
+
+375
+00:20:53.705 --> 00:20:55.045
+And then the high level
+
+376
+00:20:55.045 --> 00:20:57.605
+of feature may be combining all these further images
+
+377
+00:20:57.665 --> 00:20:58.805
+and get some, some kind
+
+378
+00:20:58.805 --> 00:21:01.885
+of object like wheel structure or something like that.
+
+379
+00:21:01.905 --> 00:21:05.005
+And finally, what we do with this high level feature,
+
+380
+00:21:05.065 --> 00:21:07.645
+we pass it through the fully connected layer classifier.
+
+381
+00:21:07.705 --> 00:21:11.165
+It can say that this is of what, what, what object.
+
+382
+00:21:11.195 --> 00:21:14.245
+It's, this is the whole architecture of the CNN right?
+
+383
+00:21:15.905 --> 00:21:17.845
+Now, uh, before I stop
+
+384
+00:21:17.845 --> 00:21:20.405
+and you can ask me questions, uh, a few more things,
+
+385
+00:21:20.525 --> 00:21:22.565
+I would like to show you that suppose,
+
+386
+00:21:22.955 --> 00:21:26.165
+suppose I have 32 cross, 32 cross three image.
+
+387
+00:21:26.195 --> 00:21:27.525
+This is the size of the image,
+
+388
+00:21:28.025 --> 00:21:31.885
+and if I'm applying five cross, five cross three filter,
+
+389
+00:21:33.355 --> 00:21:37.145
+then we are going to get one output, okay?
+
+390
+00:21:37.205 --> 00:21:40.265
+Output. What will be the size of this output?
+
+391
+00:21:40.265 --> 00:21:44.545
+That is what I, I want, uh, you to understand here, okay?
+
+392
+00:21:45.605 --> 00:21:49.845
+So see as I said, as many filter,
+
+393
+00:21:49.945 --> 00:21:52.125
+you'll have those many activation map
+
+394
+00:21:52.225 --> 00:21:53.605
+or feature map you will get.
+
+395
+00:21:53.605 --> 00:21:56.045
+So here, if I'm showing you only one filter,
+
+396
+00:21:56.515 --> 00:21:59.765
+that means I'm going to get only one activation map, okay?
+
+397
+00:21:59.945 --> 00:22:01.565
+But what would be the size of this?
+
+398
+00:22:02.305 --> 00:22:04.325
+So that is what I'm going to explain you now.
+
+399
+00:22:04.345 --> 00:22:09.035
+So here it is shown as 32 cross 32, uh, uh, across three
+
+400
+00:22:10.135 --> 00:22:12.995
+is now, uh, now given as 28 cross.
+
+401
+00:22:12.995 --> 00:22:17.515
+28 cross one. One, okay? Single channel, okay?
+
+402
+00:22:17.515 --> 00:22:20.515
+Single channel. That is what you have to understand, okay?
+
+403
+00:22:20.515 --> 00:22:22.955
+Because when these two convolve on each other,
+
+404
+00:22:23.055 --> 00:22:24.835
+you get single number, okay?
+
+405
+00:22:24.975 --> 00:22:27.515
+So if suppose it is combined, uh, it'll go to any
+
+406
+00:22:27.515 --> 00:22:29.395
+of these location, it'll get single number.
+
+407
+00:22:29.415 --> 00:22:30.675
+So three channel, you'll not get,
+
+408
+00:22:30.675 --> 00:22:31.675
+you'll get only one channel.
+
+409
+00:22:32.215 --> 00:22:34.835
+So for one filter, you will get one channel. That's all.
+
+410
+00:22:34.905 --> 00:22:39.785
+Okay? So now the point is how it is 28 cross 28, that is
+
+411
+00:22:39.865 --> 00:22:42.785
+what you have to understand why the image side is reduced.
+
+412
+00:22:43.245 --> 00:22:46.505
+So what is happening, okay, so let us see that part.
+
+413
+00:22:46.685 --> 00:22:49.905
+So suppose just for the example, we have seven cross seven,
+
+414
+00:22:50.375 --> 00:22:52.825
+this is the size of the image,
+
+415
+00:22:53.005 --> 00:22:55.985
+and we are applying three cross, three filters.
+
+416
+00:22:55.985 --> 00:22:58.785
+So this, uh, this shaded region
+
+417
+00:22:58.785 --> 00:23:00.985
+where you can see the green shades.
+
+418
+00:23:01.375 --> 00:23:03.105
+This is where your filter is applied.
+
+419
+00:23:03.105 --> 00:23:05.865
+Just assume that there are some number between zero to 2 55.
+
+420
+00:23:05.865 --> 00:23:06.905
+That doesn't matter, right?
+
+421
+00:23:07.725 --> 00:23:11.225
+So here we have two numbers, one from coming from the image,
+
+422
+00:23:11.325 --> 00:23:13.425
+one coming from the filter, and these,
+
+423
+00:23:13.425 --> 00:23:17.505
+those two will multiply here also, we have two numbers, one
+
+424
+00:23:17.505 --> 00:23:19.905
+of the image, one for the filter, okay?
+
+425
+00:23:20.055 --> 00:23:21.865
+Here also here also in all the places.
+
+426
+00:23:21.925 --> 00:23:24.265
+So what is happening, how many multiplication you're doing,
+
+427
+00:23:24.415 --> 00:23:26.625
+nine multiplication, you again, three cross, three filter,
+
+428
+00:23:27.055 --> 00:23:28.105
+nine multiplication.
+
+429
+00:23:28.105 --> 00:23:29.825
+You'll do, you'll add all of them
+
+430
+00:23:30.455 --> 00:23:32.185
+that will result you one scaler.
+
+431
+00:23:32.185 --> 00:23:34.465
+So out of all these, this particular reason,
+
+432
+00:23:34.465 --> 00:23:37.825
+you'll extract one single feature that is a scaler value,
+
+433
+00:23:38.045 --> 00:23:39.625
+and that will be the output.
+
+434
+00:23:39.855 --> 00:23:43.225
+Then what will happen, this three cross, three filter,
+
+435
+00:23:43.225 --> 00:23:46.685
+which is shown here in green will stride in the right,
+
+436
+00:23:47.115 --> 00:23:49.205
+rightward in the right direction, okay?
+
+437
+00:23:49.275 --> 00:23:52.325
+Left to right. Okay, so now you can see that it'll stride.
+
+438
+00:23:52.665 --> 00:23:54.165
+Now you see that first, first column,
+
+439
+00:23:54.305 --> 00:23:57.605
+I'm not considering it has stride it to the right direction.
+
+440
+00:23:57.975 --> 00:23:59.925
+Again, same filter, filter.
+
+441
+00:23:59.985 --> 00:24:01.725
+I'm not changing means same weights,
+
+442
+00:24:02.035 --> 00:24:03.205
+weights I'm not changing.
+
+443
+00:24:04.305 --> 00:24:06.885
+We will now convolve with these three new columns.
+
+444
+00:24:06.885 --> 00:24:09.485
+Obviously there is one column which is new, and
+
+445
+00:24:09.485 --> 00:24:11.845
+because now the weights will multiply
+
+446
+00:24:11.845 --> 00:24:15.525
+with the different set inputs, you will also get one scaler
+
+447
+00:24:15.525 --> 00:24:17.205
+as an output out of this particular reason.
+
+448
+00:24:17.875 --> 00:24:19.045
+Then you'll strike it again.
+
+449
+00:24:20.125 --> 00:24:22.585
+You'll get one more output, you'll strike it again,
+
+450
+00:24:22.805 --> 00:24:24.945
+you'll get one more output, you'll strike it again.
+
+451
+00:24:24.945 --> 00:24:26.225
+You'll get one more output.
+
+452
+00:24:27.615 --> 00:24:30.315
+And once you suppose you have covered everything from left
+
+453
+00:24:30.315 --> 00:24:32.275
+to right, what is the next step?
+
+454
+00:24:32.335 --> 00:24:34.595
+You will go one label down means instead
+
+455
+00:24:34.595 --> 00:24:37.395
+of covering now first row, I'll start with the second row.
+
+456
+00:24:37.655 --> 00:24:39.995
+And again, in the second row, how many times you can see
+
+457
+00:24:39.995 --> 00:24:44.395
+that there's the first, second, third, fourth,
+
+458
+00:24:44.925 --> 00:24:48.515
+fifth, five time you can go from left to right.
+
+459
+00:24:48.855 --> 00:24:51.755
+And if I, i, if I see if I'll go one
+
+460
+00:24:51.755 --> 00:24:52.915
+level down, one, one row.
+
+461
+00:24:52.915 --> 00:24:56.115
+If I'll throw, uh, first, first I'll cover these three row,
+
+462
+00:24:56.665 --> 00:25:00.195
+then these three second, then these three third,
+
+463
+00:25:00.625 --> 00:25:02.595
+then these three fourth and these three five.
+
+464
+00:25:02.695 --> 00:25:04.995
+So if you go top two because seven, cross seven, right?
+
+465
+00:25:05.215 --> 00:25:06.875
+So left to right also you can stride
+
+466
+00:25:06.875 --> 00:25:08.675
+for five times top two down.
+
+467
+00:25:08.675 --> 00:25:10.115
+Also you can stride for five times
+
+468
+00:25:10.375 --> 00:25:14.795
+and hence you'll end up with five cross five, one
+
+469
+00:25:15.305 --> 00:25:16.955
+metrics you'll get as an output,
+
+470
+00:25:16.955 --> 00:25:18.795
+which will result in five, cross five.
+
+471
+00:25:19.295 --> 00:25:21.075
+And that is, that was the reason, okay?
+
+472
+00:25:22.055 --> 00:25:25.715
+Now, uh, you can see that if I will put the stride is equal
+
+473
+00:25:25.715 --> 00:25:28.435
+to two stride in the sense next time.
+
+474
+00:25:28.435 --> 00:25:31.315
+Suppose now suppose is the first reason three cross three
+
+475
+00:25:31.315 --> 00:25:32.355
+filter is being vol.
+
+476
+00:25:32.825 --> 00:25:35.555
+Next time, instead of just leaving one column,
+
+477
+00:25:35.665 --> 00:25:36.795
+I'll leave two column.
+
+478
+00:25:36.855 --> 00:25:38.555
+You can see here, see here,
+
+479
+00:25:38.825 --> 00:25:40.755
+this is the first region three, cross three.
+
+480
+00:25:41.465 --> 00:25:43.875
+Then I'll, I have left two columns, this column,
+
+481
+00:25:43.875 --> 00:25:46.035
+this column, and now I'm just occupying with this.
+
+482
+00:25:46.775 --> 00:25:49.515
+So this is called stride with two, stride
+
+483
+00:25:49.515 --> 00:25:50.915
+with the value two, two columns.
+
+484
+00:25:50.975 --> 00:25:53.435
+I'm leaving. So that, that will be true for left
+
+485
+00:25:53.435 --> 00:25:55.395
+to right also and top to bottom also.
+
+486
+00:25:55.855 --> 00:25:58.115
+And then I will have the last feature,
+
+487
+00:25:58.115 --> 00:25:59.955
+which I can extract will be this.
+
+488
+00:26:00.295 --> 00:26:03.075
+So what is happening? I can only, I can only go
+
+489
+00:26:03.135 --> 00:26:05.595
+and extract three different features left to right,
+
+490
+00:26:05.735 --> 00:26:07.435
+and even from top to bottom you can extract.
+
+491
+00:26:07.435 --> 00:26:08.915
+So three, cross three you'll get as an
+
+492
+00:26:08.915 --> 00:26:11.555
+or three, three, okay?
+
+493
+00:26:11.895 --> 00:26:14.515
+Now you can increase it if you will go ahead
+
+494
+00:26:14.515 --> 00:26:17.995
+with the stride three, stride three, then what will happen?
+
+495
+00:26:18.295 --> 00:26:20.035
+So this is the first reason, okay?
+
+496
+00:26:20.175 --> 00:26:22.595
+Now all the three, these three columns, we have to leave
+
+497
+00:26:22.735 --> 00:26:24.395
+and we have to shift to these three.
+
+498
+00:26:25.105 --> 00:26:27.515
+Okay? The second time, you will conwell on these three.
+
+499
+00:26:28.575 --> 00:26:30.395
+And then again these three you have to leave.
+
+500
+00:26:31.215 --> 00:26:32.395
+And then there is a problem.
+
+501
+00:26:32.775 --> 00:26:35.475
+The problem is now I left with only last column.
+
+502
+00:26:35.675 --> 00:26:39.385
+I can only stride. I mean I can do this as stride one time,
+
+503
+00:26:40.655 --> 00:26:43.245
+last time I'll be left with only a single column.
+
+504
+00:26:43.635 --> 00:26:45.005
+Only a single column.
+
+505
+00:26:45.455 --> 00:26:46.925
+Hence, I cannot strike
+
+506
+00:26:46.925 --> 00:26:49.325
+because I have, I need at least three columns
+
+507
+00:26:49.325 --> 00:26:51.525
+and three row to apply this filter,
+
+508
+00:26:51.945 --> 00:26:55.725
+but I'm left with only a single column and hence it'll fail.
+
+509
+00:26:55.875 --> 00:26:58.805
+Miss, you cannot apply the uh, three,
+
+510
+00:26:58.815 --> 00:27:00.405
+cross three filter with a stride.
+
+511
+00:27:00.415 --> 00:27:02.605
+Three on the seven cross seven image.
+
+512
+00:27:02.605 --> 00:27:05.405
+That is the meaning of it. That is the meaning of it. Okay?
+
+513
+00:27:06.525 --> 00:27:08.025
+So this is what you need to understand.
+
+514
+00:27:08.445 --> 00:27:10.545
+So what is happening? This is a convolution operation,
+
+515
+00:27:10.545 --> 00:27:12.265
+this is what happened in the convolution operation.
+
+516
+00:27:12.265 --> 00:27:15.225
+We go from left to right, whatever filtered size you have,
+
+517
+00:27:15.445 --> 00:27:17.425
+and then we go from top to down, okay?
+
+518
+00:27:18.085 --> 00:27:21.185
+And uh, if I'll summarize now that
+
+519
+00:27:21.405 --> 00:27:23.345
+for slide three will not fit, first of all,
+
+520
+00:27:23.895 --> 00:27:25.425
+that if someone will ask you
+
+521
+00:27:26.055 --> 00:27:29.305
+what will be the feature map shape, then you can always
+
+522
+00:27:29.935 --> 00:27:32.705
+calculate that with this, uh, example.
+
+523
+00:27:33.125 --> 00:27:36.785
+Always calculate that with this example. One second.
+
+524
+00:27:37.375 --> 00:27:40.775
+What is this? Uh,
+
+525
+00:27:45.945 --> 00:27:46.675
+just a second.
+
+526
+00:27:50.825 --> 00:27:52.915
+I'll just put it here so
+
+527
+00:27:52.915 --> 00:27:57.515
+that everything should be visible and
+
+528
+00:27:59.145 --> 00:27:59.435
+Okay.
+
+529
+00:28:04.555 --> 00:28:04.635
+Hmm.
+
+530
+00:28:05.455 --> 00:28:08.485
+So, uh, What?
+
+531
+00:28:12.665 --> 00:28:15.395
+Yeah, this one. Okay, you can see this.
+
+532
+00:28:15.895 --> 00:28:18.875
+Now, uh, I use this, this formula N,
+
+533
+00:28:19.085 --> 00:28:22.955
+which represents the dimension of my image, okay?
+
+534
+00:28:23.075 --> 00:28:26.635
+N represents the dimension of my image, right?
+
+535
+00:28:26.925 --> 00:28:30.875
+Means 28, cross 28, then n value will be 28, 32 across 32.
+
+536
+00:28:30.875 --> 00:28:32.155
+Then n value will be 32.
+
+537
+00:28:32.175 --> 00:28:36.515
+Now, F represents the dimension of my, uh,
+
+538
+00:28:36.515 --> 00:28:38.315
+filter in this particular case,
+
+539
+00:28:38.475 --> 00:28:39.955
+f represent dimension of my filter.
+
+540
+00:28:40.615 --> 00:28:45.195
+So what we do, we do n minus f divide
+
+541
+00:28:45.295 --> 00:28:48.255
+by stride plus one, okay?
+
+542
+00:28:48.605 --> 00:28:49.975
+When a stride is equal to one,
+
+543
+00:28:49.975 --> 00:28:51.655
+that you're just shifting one column
+
+544
+00:28:51.715 --> 00:28:54.735
+and one row, then anyway divide by one.
+
+545
+00:28:54.795 --> 00:28:57.175
+So it'll be the same quantity and minus f plus one.
+
+546
+00:28:57.435 --> 00:28:58.655
+If a stride is equal to two,
+
+547
+00:28:58.655 --> 00:29:00.055
+you'll divide by two strategical.
+
+548
+00:29:00.055 --> 00:29:01.415
+Three, you'll divide with the, and that is
+
+549
+00:29:01.415 --> 00:29:03.575
+how you will end up with a one value, which will say that,
+
+550
+00:29:03.605 --> 00:29:07.295
+okay, what will be the size of your feature map?
+
+551
+00:29:07.595 --> 00:29:11.255
+Or you can say that what is that? Uh, activation map, okay?
+
+552
+00:29:11.255 --> 00:29:12.255
+This is how you can get it.
+
+553
+00:29:12.255 --> 00:29:14.535
+So sometimes the numerical questions may come like
+
+554
+00:29:14.535 --> 00:29:15.575
+that, okay?
+
+555
+00:29:15.575 --> 00:29:18.335
+That we may give the image, uh, size.
+
+556
+00:29:18.435 --> 00:29:21.135
+We may give the filter size and we may ask you that, okay?
+
+557
+00:29:21.135 --> 00:29:23.495
+What will be the feature map size?
+
+558
+00:29:23.675 --> 00:29:25.815
+And you have to calculate with this simple formula,
+
+559
+00:29:25.915 --> 00:29:27.415
+and you can tell that one.
+
+560
+00:29:27.645 --> 00:29:32.375
+Okay? Now, uh, I will show you one visualization.
+
+561
+00:29:32.525 --> 00:29:34.975
+That is what I have planned. One second.
+
+562
+00:29:38.435 --> 00:29:42.525
+Uh, let me just go here, let, let just go this
+
+563
+00:29:42.945 --> 00:29:47.565
+and cnn, I'll stop for your question.
+
+564
+00:29:47.675 --> 00:29:50.605
+Just let us finish with this visualization.
+
+565
+00:29:50.765 --> 00:29:54.605
+I guess that will give you more clarity visualization, okay?
+
+566
+00:29:54.665 --> 00:29:58.445
+So there is one website, this deep lizard, uh,
+
+567
+00:29:59.135 --> 00:30:01.485
+where we can see these visualization.
+
+568
+00:30:01.705 --> 00:30:04.485
+So I will first show you the convolution same operation,
+
+569
+00:30:04.485 --> 00:30:07.005
+which I was showing you that visualization.
+
+570
+00:30:08.025 --> 00:30:12.615
+So here we'll use the f amnesty dataset, okay?
+
+571
+00:30:14.245 --> 00:30:17.665
+And uh, this, uh, this is the image.
+
+572
+00:30:18.095 --> 00:30:20.185
+This is the image, right?
+
+573
+00:30:20.245 --> 00:30:22.225
+So you can see that this is a black and white image.
+
+574
+00:30:22.225 --> 00:30:24.225
+So there is just one single channel, that's all.
+
+575
+00:30:25.045 --> 00:30:28.225
+And uh, this is a window right now where we are in,
+
+576
+00:30:28.325 --> 00:30:30.985
+and we are going to con start con revolving from here,
+
+577
+00:30:31.445 --> 00:30:34.345
+the filter, which we are considering is top edge filter.
+
+578
+00:30:34.765 --> 00:30:39.065
+So it is going to always in, in fact, I will, I will
+
+579
+00:30:39.735 --> 00:30:44.385
+take top is, bottom is left, is right, is so top is filter.
+
+580
+00:30:44.485 --> 00:30:49.105
+So it'll be, uh, extracting the horizontal, horizontal, uh,
+
+581
+00:30:49.275 --> 00:30:51.265
+edges from this, this whole image.
+
+582
+00:30:51.295 --> 00:30:52.745
+That is the role of this particular filter.
+
+583
+00:30:53.845 --> 00:30:55.665
+And what will happen when this, this,
+
+584
+00:30:55.855 --> 00:30:58.985
+this whole on this window, when this filter will convolve,
+
+585
+00:30:59.285 --> 00:31:00.785
+all these things will multiply.
+
+586
+00:31:00.855 --> 00:31:03.545
+This zero gets multiplied with minus 1.0.
+
+587
+00:31:03.775 --> 00:31:06.265
+This zero gets multiplied with minus 1.0.
+
+588
+00:31:06.495 --> 00:31:09.185
+This zero gets multiplied with this minus 1.0.
+
+589
+00:31:09.405 --> 00:31:12.065
+And so on element wise multiplication, you can see that
+
+590
+00:31:12.125 --> 00:31:16.865
+how many, 1, 2, 3, 4, 5, 6, 7, 8, 9, 3
+
+591
+00:31:16.885 --> 00:31:20.025
+to three filter means nine multiplication will happen.
+
+592
+00:31:20.525 --> 00:31:22.465
+And then you will add all those nine numbers
+
+593
+00:31:22.645 --> 00:31:24.265
+and you will end up with one value
+
+594
+00:31:24.375 --> 00:31:26.305
+that is the scaler value in this case,
+
+595
+00:31:26.305 --> 00:31:28.225
+because these are all zero,
+
+596
+00:31:28.405 --> 00:31:30.225
+so obviously you'll get zero as an output.
+
+597
+00:31:30.225 --> 00:31:32.865
+You can see here you are getting zero. Okay?
+
+598
+00:31:32.865 --> 00:31:37.585
+You're getting zero. Now, when, when you will, uh, uh,
+
+599
+00:31:37.725 --> 00:31:39.465
+you can say that I'll put the step.
+
+600
+00:31:39.805 --> 00:31:41.545
+Now this has slide it.
+
+601
+00:31:41.565 --> 00:31:43.825
+You see that this has slide it one first column,
+
+602
+00:31:43.845 --> 00:31:46.105
+it has now left, it has gone to the second column,
+
+603
+00:31:46.105 --> 00:31:47.865
+third column, fifth column, and three cross three
+
+604
+00:31:48.125 --> 00:31:51.105
+and the same three cross three window.
+
+605
+00:31:51.365 --> 00:31:53.185
+Now the same filter, the filter is not changing,
+
+606
+00:31:53.185 --> 00:31:55.785
+means weights are not changing with the same weights.
+
+607
+00:31:56.085 --> 00:31:58.345
+Now we are con revolving on the different reason
+
+608
+00:31:58.565 --> 00:31:59.625
+of this whole image.
+
+609
+00:32:00.075 --> 00:32:03.025
+Again, the same nine different element wise, multiplication
+
+610
+00:32:03.165 --> 00:32:04.385
+and their addition will happen.
+
+611
+00:32:04.445 --> 00:32:06.305
+You will end up with one more value called zero.
+
+612
+00:32:06.655 --> 00:32:10.745
+Here again, we'll do, and this will also result in zero
+
+613
+00:32:10.745 --> 00:32:12.625
+because all the value here also it is zero.
+
+614
+00:32:13.045 --> 00:32:15.825
+Now when I'll do one more time here, you see
+
+615
+00:32:15.825 --> 00:32:18.065
+that the first time there is one value called 0.1,
+
+616
+00:32:18.065 --> 00:32:19.305
+this value 0.1.
+
+617
+00:32:19.605 --> 00:32:21.625
+But the point is corresponding value
+
+618
+00:32:21.695 --> 00:32:23.585
+with which it is being multiplied is zero.
+
+619
+00:32:23.645 --> 00:32:25.905
+So 0.1 and zero still to zero.
+
+620
+00:32:25.965 --> 00:32:29.465
+So your overall result is zero. I'll do one more time.
+
+621
+00:32:30.365 --> 00:32:32.225
+So here also you can see that, uh,
+
+622
+00:32:33.025 --> 00:32:35.465
+although this is 0.7, gets multiplied with zero.
+
+623
+00:32:35.565 --> 00:32:38.105
+So zero 0.1 gets multiplied with zero, zero.
+
+624
+00:32:38.205 --> 00:32:39.725
+So output is still zero.
+
+625
+00:32:40.355 --> 00:32:41.885
+This time you see that the output is
+
+626
+00:32:41.885 --> 00:32:43.885
+0.2, why it has happened.
+
+627
+00:32:44.175 --> 00:32:46.285
+These three values are zero, can't do anything.
+
+628
+00:32:46.375 --> 00:32:47.845
+These two are zero, can't do anything.
+
+629
+00:32:47.845 --> 00:32:51.445
+This 0.2, you can see these 0.2 gets multiplied
+
+630
+00:32:51.445 --> 00:32:54.725
+with one here, and hence it represents to 0.2.
+
+631
+00:32:54.795 --> 00:32:56.805
+Otherwise all other values are also zero
+
+632
+00:32:57.185 --> 00:32:58.525
+to result, it'll have resulted.
+
+633
+00:32:58.545 --> 00:33:00.005
+So 0.2, this is one word,
+
+634
+00:33:00.405 --> 00:33:02.725
+likewise, if you'll put step, step, step.
+
+635
+00:33:03.145 --> 00:33:04.205
+So one by one,
+
+636
+00:33:04.205 --> 00:33:05.885
+what is happening is the convolution is
+
+637
+00:33:05.885 --> 00:33:07.045
+now it is being shown here.
+
+638
+00:33:07.825 --> 00:33:10.645
+My window is being lighted from left to right
+
+639
+00:33:10.645 --> 00:33:12.205
+with the stride is equal to one,
+
+640
+00:33:12.235 --> 00:33:13.685
+with the stride is equal to one.
+
+641
+00:33:13.875 --> 00:33:17.405
+Okay? Now I'll just keep on showing that first.
+
+642
+00:33:17.535 --> 00:33:20.925
+It'll stride like that from left to right, okay?
+
+643
+00:33:20.945 --> 00:33:23.445
+For each three graphs, three window till here,
+
+644
+00:33:23.945 --> 00:33:26.765
+and these are all the outputs for every convolution,
+
+645
+00:33:26.765 --> 00:33:28.365
+there is one scaler as an output.
+
+646
+00:33:28.365 --> 00:33:31.045
+You can see that once it has completed the first one,
+
+647
+00:33:31.055 --> 00:33:32.165
+it'll slide down.
+
+648
+00:33:32.795 --> 00:33:35.885
+Okay? So then it'll start from the second row onwards.
+
+649
+00:33:36.105 --> 00:33:39.005
+You see this. Now it has left the first row
+
+650
+00:33:39.005 --> 00:33:40.005
+and it has started the second,
+
+651
+00:33:40.225 --> 00:33:43.645
+and then it'll start again going from left to right, okay,
+
+652
+00:33:43.705 --> 00:33:46.445
+in the three cross three window giving you the output.
+
+653
+00:33:46.825 --> 00:33:48.965
+And then it'll go against slide one more
+
+654
+00:33:49.185 --> 00:33:50.245
+and then it'll go down.
+
+655
+00:33:50.505 --> 00:33:52.725
+So I'll just, uh, play.
+
+656
+00:33:53.105 --> 00:33:54.685
+So it'll show you the same thing
+
+657
+00:33:54.755 --> 00:33:55.765
+what I was just showing you.
+
+658
+00:33:55.785 --> 00:33:57.565
+By step by step it'll show you the same thing.
+
+659
+00:33:57.565 --> 00:33:59.525
+You see that the convolution operation is happening
+
+660
+00:34:00.025 --> 00:34:04.645
+and my filter is being conval on the image left
+
+661
+00:34:04.665 --> 00:34:06.165
+to right, top to bottom.
+
+662
+00:34:06.305 --> 00:34:07.885
+Now, this is the way the,
+
+663
+00:34:08.105 --> 00:34:10.725
+the convolution is happening in the two dimension.
+
+664
+00:34:10.725 --> 00:34:12.605
+That's why we say that it is a 2D car,
+
+665
+00:34:12.705 --> 00:34:14.245
+2D convolution, which is happening.
+
+666
+00:34:14.985 --> 00:34:16.405
+So you can see that, right?
+
+667
+00:34:16.585 --> 00:34:19.525
+So, uh, some, some, uh, the resulting output,
+
+668
+00:34:19.525 --> 00:34:21.685
+if you see there are most of the values are zero,
+
+669
+00:34:22.145 --> 00:34:24.405
+but some values are like, uh, uh,
+
+670
+00:34:24.785 --> 00:34:26.045
+red, represented with the red.
+
+671
+00:34:26.395 --> 00:34:29.325
+Some other values are represented with the blue.
+
+672
+00:34:29.905 --> 00:34:32.285
+So I said that this is the top is filter.
+
+673
+00:34:32.475 --> 00:34:35.325
+That means that from the image it'll identify
+
+674
+00:34:35.505 --> 00:34:37.565
+or it'll extract the horizontal
+
+675
+00:34:38.145 --> 00:34:40.445
+or mostly the top is filter the edge,
+
+676
+00:34:40.455 --> 00:34:42.005
+which is available here.
+
+677
+00:34:42.385 --> 00:34:45.525
+So this particular age, I want to identify more specifically
+
+678
+00:34:45.945 --> 00:34:49.885
+or this age, I want to identify there are multiple edge,
+
+679
+00:34:50.105 --> 00:34:53.045
+but you see that what we have extracted the top edge.
+
+680
+00:34:53.305 --> 00:34:55.565
+So in this whole image, the top edge, now,
+
+681
+00:34:55.565 --> 00:34:57.165
+you'd be surprised at what is there in
+
+682
+00:34:57.165 --> 00:34:58.365
+this, in these reasons.
+
+683
+00:34:59.035 --> 00:35:00.605
+This, this, this blue numbers,
+
+684
+00:35:00.665 --> 00:35:02.285
+the numbers which are represented by,
+
+685
+00:35:02.285 --> 00:35:03.845
+so you can see two types of numbers, right?
+
+686
+00:35:04.385 --> 00:35:07.805
+So numbers which are represented by uh, uh, red
+
+687
+00:35:07.825 --> 00:35:09.965
+and the numbers which are represented by blue.
+
+688
+00:35:10.145 --> 00:35:11.565
+If you'll see here carefully,
+
+689
+00:35:11.625 --> 00:35:13.845
+the blue numbers all are negative numbers.
+
+690
+00:35:14.265 --> 00:35:16.085
+All are negative numbers, okay?
+
+691
+00:35:16.475 --> 00:35:18.685
+This minus 2.3, this is minus 2.3,
+
+692
+00:35:18.685 --> 00:35:20.205
+minus 2.4 minus two point.
+
+693
+00:35:20.205 --> 00:35:21.525
+This is minus 2.0 here.
+
+694
+00:35:21.555 --> 00:35:23.165
+Also, all the blue numbers are negative.
+
+695
+00:35:23.755 --> 00:35:27.485
+That means that all these blue numbers are not,
+
+696
+00:35:27.505 --> 00:35:29.565
+the features are not the features, okay?
+
+697
+00:35:29.565 --> 00:35:33.885
+They are not giving any edge, uh, what is, uh, the top edge.
+
+698
+00:35:34.025 --> 00:35:36.685
+It is not extracting the top edge based o of this
+
+699
+00:35:37.275 --> 00:35:38.325
+from this particular filter.
+
+700
+00:35:38.825 --> 00:35:41.565
+So what happened, I explained earlier in the convolution
+
+701
+00:35:41.565 --> 00:35:43.925
+operation, first you do this weighted surplus bias.
+
+702
+00:35:44.445 --> 00:35:46.485
+Actually what you're doing is you are actually doing
+
+703
+00:35:46.485 --> 00:35:47.565
+the weighted surplus bias.
+
+704
+00:35:47.565 --> 00:35:50.085
+This is the operation which you are doing here, okay?
+
+705
+00:35:50.375 --> 00:35:52.965
+Means one is input, one is weight, another is input,
+
+706
+00:35:52.965 --> 00:35:54.605
+another is weight, another is input another.
+
+707
+00:35:54.625 --> 00:35:56.285
+So weighted sum you are doing correct.
+
+708
+00:35:57.105 --> 00:35:59.525
+Now, once you do this linear operation in the neuron,
+
+709
+00:35:59.525 --> 00:36:02.245
+what you do after that, you apply the activation.
+
+710
+00:36:02.885 --> 00:36:04.725
+Remember, an activation function was relu.
+
+711
+00:36:04.945 --> 00:36:06.125
+How does the relu work here?
+
+712
+00:36:06.265 --> 00:36:08.885
+For all these negative number, which is here represented
+
+713
+00:36:08.885 --> 00:36:10.725
+by blue will be zero
+
+714
+00:36:10.725 --> 00:36:13.005
+because for negative relu will give you zero.
+
+715
+00:36:13.065 --> 00:36:16.685
+And after putting the activation, the feature,
+
+716
+00:36:16.715 --> 00:36:20.245
+what you will get will be only left with these red numbers.
+
+717
+00:36:20.795 --> 00:36:24.845
+Some are more, uh, uh, red, uh, some are lighter red,
+
+718
+00:36:25.005 --> 00:36:27.405
+likewise, but blue value all will become zero.
+
+719
+00:36:27.405 --> 00:36:28.845
+So that is not the features which we
+
+720
+00:36:28.845 --> 00:36:29.925
+are extracting from here.
+
+721
+00:36:29.995 --> 00:36:31.125
+That is the meaning of it.
+
+722
+00:36:31.345 --> 00:36:32.965
+If I'll change the filter, say
+
+723
+00:36:32.965 --> 00:36:35.005
+that I will write this filter, that means that
+
+724
+00:36:35.565 --> 00:36:38.565
+I will have only the right side is capturing.
+
+725
+00:36:38.565 --> 00:36:40.125
+So I'll quickly play that so
+
+726
+00:36:40.125 --> 00:36:42.205
+that you can just see that, okay?
+
+727
+00:36:42.205 --> 00:36:44.245
+Whether it is happening. And so now you can observe
+
+728
+00:36:44.865 --> 00:36:47.965
+all my red values are coming in the right site.
+
+729
+00:36:48.345 --> 00:36:50.285
+So you can, uh, you can observe here
+
+730
+00:36:51.175 --> 00:36:52.945
+some somewhere it is coming here also,
+
+731
+00:36:52.945 --> 00:36:55.025
+which is representing this particular reason maybe.
+
+732
+00:36:55.765 --> 00:36:58.425
+And all the blue, uh, verticals, what you're seeing,
+
+733
+00:36:58.425 --> 00:37:00.745
+these are all the negative activation.
+
+734
+00:37:00.925 --> 00:37:03.185
+And uh, relu will anyway make them zero.
+
+735
+00:37:03.205 --> 00:37:04.985
+So that is not the features which will extract.
+
+736
+00:37:04.985 --> 00:37:07.505
+So now we are extracting the right age out of that.
+
+737
+00:37:07.765 --> 00:37:09.425
+And this is what is, this is
+
+738
+00:37:09.425 --> 00:37:10.825
+what happens in the convolution.
+
+739
+00:37:11.285 --> 00:37:15.145
+Now, if you can ask, okay, how many, what will be the, uh,
+
+740
+00:37:15.405 --> 00:37:18.065
+uh, uh, what is the size of this
+
+741
+00:37:18.285 --> 00:37:21.785
+and uh, what is the size of uh, this, okay, that,
+
+742
+00:37:21.785 --> 00:37:25.625
+that you can always, uh, that, that you can always, um,
+
+743
+00:37:25.735 --> 00:37:28.465
+calculate during the formula, which I was showing you there,
+
+744
+00:37:28.495 --> 00:37:32.865
+that n minus f plus one, n minus f plus one stride,
+
+745
+00:37:32.865 --> 00:37:34.985
+obviously you have to divide, okay?
+
+746
+00:37:34.985 --> 00:37:37.465
+But here you might have observed that it is,
+
+747
+00:37:37.725 --> 00:37:39.985
+it is showing where it was.
+
+748
+00:37:41.325 --> 00:37:43.735
+Yeah, it is showing the same size
+
+749
+00:37:43.795 --> 00:37:45.935
+of this size is is similar to same size.
+
+750
+00:37:45.935 --> 00:37:49.375
+There is a reason behind it because I have padded my, uh,
+
+751
+00:37:49.545 --> 00:37:53.175
+whole image with zeros on all the four sides.
+
+752
+00:37:53.195 --> 00:37:56.415
+So as you can see that zeros are at top, zeros are
+
+753
+00:37:56.415 --> 00:37:59.335
+as left side zeros are at right side.
+
+754
+00:37:59.355 --> 00:38:02.095
+And even the below, if you will see one more row,
+
+755
+00:38:02.095 --> 00:38:03.255
+that will be the zeros.
+
+756
+00:38:04.285 --> 00:38:06.305
+It is not shown here, here it is shown.
+
+757
+00:38:06.925 --> 00:38:08.585
+Oh, it, it is not shown here.
+
+758
+00:38:09.045 --> 00:38:11.265
+Oh, it is not zero, it's only the three site.
+
+759
+00:38:11.265 --> 00:38:12.865
+It is showing zero. But all the four site
+
+760
+00:38:12.865 --> 00:38:14.065
+we have to add zero.
+
+761
+00:38:14.605 --> 00:38:17.665
+So basically what is, what, what I'm trying to tell is
+
+762
+00:38:18.445 --> 00:38:22.145
+the feature map you can always calculate with this formula
+
+763
+00:38:22.365 --> 00:38:25.385
+and minus f divided by strip plus one there.
+
+764
+00:38:25.445 --> 00:38:26.665
+The demo, which I have shown
+
+765
+00:38:26.815 --> 00:38:29.905
+that is only showing you the stride is called two one.
+
+766
+00:38:29.965 --> 00:38:32.945
+But if you can, if you wish you can also use the stride two
+
+767
+00:38:32.945 --> 00:38:34.825
+then these many features you will, this is
+
+768
+00:38:34.825 --> 00:38:36.165
+how you can expect the features.
+
+769
+00:38:36.345 --> 00:38:37.845
+Now this is the convolution operation.
+
+770
+00:38:39.185 --> 00:38:41.445
+So, so far any question then I'll go ahead.
+
+771
+00:38:42.705 --> 00:38:44.085
+Uh, yes sir. Uh, sir,
+
+772
+00:38:44.085 --> 00:38:45.605
+where does padding come in the formula?
+
+773
+00:38:46.935 --> 00:38:48.435
+Oh, formula. Uh, uh, see
+
+774
+00:38:48.435 --> 00:38:50.635
+what happens though in the formula padding will not come.
+
+775
+00:38:51.025 --> 00:38:53.755
+What happens? We increase our image size.
+
+776
+00:38:53.825 --> 00:38:57.475
+When we do the padding, we increase our image size.
+
+777
+00:38:57.475 --> 00:38:59.155
+So what will happen, one more row will come,
+
+778
+00:38:59.155 --> 00:39:01.875
+one more column will come the same seven cross F seven image
+
+779
+00:39:01.875 --> 00:39:04.115
+will become eight, cross eight, okay?
+
+780
+00:39:04.415 --> 00:39:06.155
+Now with the eight cross eight image,
+
+781
+00:39:06.215 --> 00:39:07.835
+if you'll apply this three cross three
+
+782
+00:39:07.835 --> 00:39:09.475
+filter, then what will happen?
+
+783
+00:39:09.475 --> 00:39:11.955
+You can use the same formula again. Okay?
+
+784
+00:39:11.955 --> 00:39:16.805
+Eight minus three plus one. Okay? It become six.
+
+785
+00:39:16.905 --> 00:39:21.485
+So, uh, so if you want to have the same size of feature map,
+
+786
+00:39:22.185 --> 00:39:25.245
+uh, uh, as, as as the size of the image,
+
+787
+00:39:25.345 --> 00:39:26.645
+you can do the padding.
+
+788
+00:39:26.865 --> 00:39:29.285
+If, if one row, one column is not sufficient,
+
+789
+00:39:29.285 --> 00:39:31.765
+you can add two row and two column also of zeros.
+
+790
+00:39:32.265 --> 00:39:34.845
+So which will all, then you can use always the same formula
+
+791
+00:39:35.105 --> 00:39:37.205
+and you can get that that, okay,
+
+792
+00:39:37.205 --> 00:39:40.965
+what is the output feature map size you are getting? Okay,
+
+793
+00:39:41.225 --> 00:39:42.225
+Got it, sir? Uh,
+
+794
+00:39:42.225 --> 00:39:43.205
+I have one more question.
+
+795
+00:39:43.425 --> 00:39:46.125
+So how does, uh, stride affect the quality
+
+796
+00:39:46.145 --> 00:39:47.245
+of feature extraction?
+
+797
+00:39:47.265 --> 00:39:50.285
+So will there be any feature loss if we increase the
+
+798
+00:39:50.355 --> 00:39:51.685
+size, uh, stride value?
+
+799
+00:39:51.995 --> 00:39:53.525
+Correct? Definitely, definitely.
+
+800
+00:39:53.905 --> 00:39:58.725
+So, uh, with the stride one, we are, uh, uh,
+
+801
+00:39:58.935 --> 00:40:01.605
+extracting the low level features,
+
+802
+00:40:01.755 --> 00:40:03.565
+also very low level features also
+
+803
+00:40:03.565 --> 00:40:07.565
+because we are trying to extract everything stride equal
+
+804
+00:40:07.565 --> 00:40:09.325
+to two or three, what will happen?
+
+805
+00:40:09.665 --> 00:40:11.685
+It may not consider, okay?
+
+806
+00:40:11.865 --> 00:40:13.925
+How does these three columns are coming together
+
+807
+00:40:13.985 --> 00:40:15.845
+to directly jump from this column to this column?
+
+808
+00:40:16.035 --> 00:40:19.565
+Suppose obviously you are missing the details that
+
+809
+00:40:19.625 --> 00:40:21.685
+how these three columns would have been come together
+
+810
+00:40:21.745 --> 00:40:23.005
+and what is the output which is coming.
+
+811
+00:40:23.305 --> 00:40:27.685
+So the, uh, as the strategical two one, you can say
+
+812
+00:40:27.685 --> 00:40:31.685
+that then you extract all, all low level features,
+
+813
+00:40:31.715 --> 00:40:33.205
+also everything you're extracting.
+
+814
+00:40:33.585 --> 00:40:35.845
+But with the, as you increase the stride,
+
+815
+00:40:36.105 --> 00:40:38.725
+you go on extracting the high level features
+
+816
+00:40:38.785 --> 00:40:40.525
+and you may miss some of the things,
+
+817
+00:40:40.945 --> 00:40:42.965
+but having the very big sizes,
+
+818
+00:40:43.105 --> 00:40:45.765
+and nowadays the MS sizes are very big, right?
+
+819
+00:40:46.185 --> 00:40:47.325
+2 28 across to
+
+820
+00:40:47.325 --> 00:40:50.245
+likewise that in such cases stride is two,
+
+821
+00:40:50.245 --> 00:40:52.085
+one may create it little slow
+
+822
+00:40:52.235 --> 00:40:54.245
+that the conation operation a little slow.
+
+823
+00:40:54.745 --> 00:40:58.525
+And if you feel that, like for example, uh, some cases, uh,
+
+824
+00:40:58.555 --> 00:41:03.205
+like, uh, visit where you see this, uh, my whole
+
+825
+00:41:03.785 --> 00:41:07.805
+uh, uh, where it was, you see that where is the object?
+
+826
+00:41:07.805 --> 00:41:09.565
+Object is available in this particular reason,
+
+827
+00:41:09.585 --> 00:41:10.965
+it is not available here, here.
+
+828
+00:41:10.965 --> 00:41:15.245
+Similarly, if I, uh, select the, this data set,
+
+829
+00:41:15.245 --> 00:41:17.125
+this zero is represent only the rest,
+
+830
+00:41:17.125 --> 00:41:21.005
+every other reason are like 0, 0, 0, maybe strategical two,
+
+831
+00:41:21.345 --> 00:41:23.805
+one I don't want, because most of the operation,
+
+832
+00:41:23.805 --> 00:41:26.445
+which I'll do here, conation operation will result in zero
+
+833
+00:41:26.945 --> 00:41:29.245
+and it'll simply make my system little slow.
+
+834
+00:41:29.825 --> 00:41:32.965
+So maybe, uh, that many low level details are not required
+
+835
+00:41:32.965 --> 00:41:35.485
+required, but in some images where you see that every
+
+836
+00:41:36.025 --> 00:41:38.765
+in the image, the every object in every corner,
+
+837
+00:41:38.765 --> 00:41:40.485
+there are some information available.
+
+838
+00:41:40.625 --> 00:41:42.405
+You should go with the strategical two one
+
+839
+00:41:42.625 --> 00:41:45.405
+to extract all those dual level features, actually, yeah.
+
+840
+00:41:45.955 --> 00:41:48.845
+Okay, sir. And also you have shown that, uh, this,
+
+841
+00:41:48.995 --> 00:41:51.885
+there's a top edge, um, filter, right?
+
+842
+00:41:52.145 --> 00:41:54.645
+So, and different edges filter.
+
+843
+00:41:54.985 --> 00:41:57.045
+So let's say if we, if we want
+
+844
+00:41:57.045 --> 00:41:58.605
+to extract everything at once.
+
+845
+00:41:58.905 --> 00:42:01.045
+So is there any filter for that?
+
+846
+00:42:02.105 --> 00:42:04.565
+Oh, so usually the practice is, I will tell you
+
+847
+00:42:04.565 --> 00:42:07.805
+that you may have multiple conation layer at, at a time.
+
+848
+00:42:07.805 --> 00:42:10.365
+You can apply one filter, okay?
+
+849
+00:42:10.865 --> 00:42:12.765
+And extract the, uh, features
+
+850
+00:42:13.265 --> 00:42:16.205
+and then you'll have the next, uh, conation layer,
+
+851
+00:42:16.205 --> 00:42:18.165
+which will extract the other filter.
+
+852
+00:42:18.385 --> 00:42:19.885
+So, but I remember,
+
+853
+00:42:20.025 --> 00:42:23.285
+and when I was doing, uh, uh, five years,
+
+854
+00:42:23.545 --> 00:42:25.125
+six years back when my PhD
+
+855
+00:42:25.265 --> 00:42:29.485
+and all I, I do did apply in a single conation layer,
+
+856
+00:42:29.805 --> 00:42:32.605
+multiple, uh, multiple filters, that is also possible.
+
+857
+00:42:32.665 --> 00:42:36.365
+But in that case, you may have to, uh, run a loop that,
+
+858
+00:42:36.365 --> 00:42:38.685
+that you will still be in the same conation
+
+859
+00:42:38.785 --> 00:42:41.285
+and will apply many other filters also,
+
+860
+00:42:41.305 --> 00:42:43.365
+and then you will go further next conation.
+
+861
+00:42:43.625 --> 00:42:46.045
+So it is possible the answer is yes, it is possible,
+
+862
+00:42:46.865 --> 00:42:48.885
+but the usual practice is not like that.
+
+863
+00:42:49.225 --> 00:42:51.845
+The usual practice is for a single conation layer,
+
+864
+00:42:51.865 --> 00:42:53.605
+you apply only one type of filter
+
+865
+00:42:53.745 --> 00:42:55.605
+and then go for the next conation layer.
+
+866
+00:42:55.735 --> 00:42:58.085
+There you can change the filter, right?
+
+867
+00:42:58.545 --> 00:43:00.165
+And uh, likewise, yeah,
+
+868
+00:43:00.385 --> 00:43:03.565
+but one thing is, uh, this, no, this, uh,
+
+869
+00:43:03.565 --> 00:43:06.645
+right is filter bottom is filter, left is filter.
+
+870
+00:43:07.385 --> 00:43:11.725
+Uh, uh, uh, actually, uh, why, uh,
+
+871
+00:43:11.945 --> 00:43:16.325
+the notion of these filters, uh, doesn't stay as it is
+
+872
+00:43:16.955 --> 00:43:18.885
+when you train your convolutional
+
+873
+00:43:18.885 --> 00:43:20.685
+network, what does it mean?
+
+874
+00:43:20.685 --> 00:43:24.005
+I'll tell you, it means that, uh, see there are two things.
+
+875
+00:43:24.625 --> 00:43:28.005
+The first thing is you can have n number of filters,
+
+876
+00:43:28.605 --> 00:43:29.645
+n number of filters,
+
+877
+00:43:30.295 --> 00:43:33.405
+which may come at one convolution layer.
+
+878
+00:43:33.645 --> 00:43:34.805
+I have shown you this one.
+
+879
+00:43:34.805 --> 00:43:36.965
+First of all, let us understand this part as you have asked.
+
+880
+00:43:37.985 --> 00:43:40.805
+Uh, let us understand this particular figure.
+
+881
+00:43:40.875 --> 00:43:45.485
+Yeah, this figure. So I have single convolution layer
+
+882
+00:43:45.595 --> 00:43:49.605
+here, and this is the image I can apply six different filter
+
+883
+00:43:50.145 --> 00:43:52.205
+and then you will get six different features.
+
+884
+00:43:52.265 --> 00:43:53.485
+Map, activation map.
+
+885
+00:43:54.315 --> 00:43:57.205
+What you have to keep in mind is all the filters should be
+
+886
+00:43:57.205 --> 00:43:58.245
+of the same size.
+
+887
+00:43:58.585 --> 00:44:00.325
+All the filters should be of the same size.
+
+888
+00:44:00.515 --> 00:44:04.645
+Then you can apply as many filter you want
+
+889
+00:44:04.825 --> 00:44:06.005
+to one conation layer.
+
+890
+00:44:06.115 --> 00:44:09.205
+Also, if you wish to apply different size of the filter,
+
+891
+00:44:09.475 --> 00:44:10.845
+like here it is five, cross five,
+
+892
+00:44:11.305 --> 00:44:13.445
+but I want to apply three, cross three also, I want
+
+893
+00:44:13.445 --> 00:44:15.205
+to apply four cross four also in
+
+894
+00:44:15.205 --> 00:44:17.245
+that case the good practices go
+
+895
+00:44:17.245 --> 00:44:18.525
+to the next convolution layer.
+
+896
+00:44:18.705 --> 00:44:20.685
+And there you apply four cross four,
+
+897
+00:44:20.685 --> 00:44:22.205
+three cross three whatever you want.
+
+898
+00:44:22.625 --> 00:44:25.525
+So in a single convolution layer, you can apply
+
+899
+00:44:25.545 --> 00:44:26.805
+as many filter as you want,
+
+900
+00:44:26.985 --> 00:44:29.165
+but the size of all the filters will be same.
+
+901
+00:44:30.035 --> 00:44:33.495
+Okay? And the notion of like right is filter
+
+902
+00:44:34.435 --> 00:44:37.255
+top is filter, it is good for the demo,
+
+903
+00:44:37.835 --> 00:44:40.215
+but with the actual neural network, CNN, what happens,
+
+904
+00:44:41.075 --> 00:44:42.495
+all these filters are weights, right?
+
+905
+00:44:42.875 --> 00:44:44.535
+And they get initialized randomly.
+
+906
+00:44:44.555 --> 00:44:47.015
+You don't initialize those filter weights.
+
+907
+00:44:47.015 --> 00:44:48.175
+Like left is filter
+
+908
+00:44:48.235 --> 00:44:51.015
+or right leg filter, those weights are being
+
+909
+00:44:51.015 --> 00:44:52.295
+trained with the back propagation.
+
+910
+00:44:52.515 --> 00:44:53.975
+So that is what happened in reality.
+
+911
+00:44:54.395 --> 00:44:55.815
+But the demo, which I have shown
+
+912
+00:44:55.815 --> 00:44:57.975
+where the filter was designed just
+
+913
+00:44:57.975 --> 00:44:59.615
+to show you the demo, that this is what happens.
+
+914
+00:45:00.905 --> 00:45:02.925
+That's it. Uh, thanks for the explanation.
+
+915
+00:45:03.395 --> 00:45:07.295
+Yeah, thank you. Any other question?
+
+916
+00:45:09.035 --> 00:45:12.175
+Yes, sir. Uh, can we go to that website once?
+
+917
+00:45:12.285 --> 00:45:14.335
+Demo. Demo? Okay. No website, sir.
+
+918
+00:45:14.335 --> 00:45:15.495
+Yeah, we just this one.
+
+919
+00:45:15.995 --> 00:45:19.655
+So, uh, as you mentioned that each filter will be, uh,
+
+920
+00:45:19.825 --> 00:45:21.375
+correspond to one neuron.
+
+921
+00:45:21.795 --> 00:45:26.175
+So we have so much of values, output values when we are,
+
+922
+00:45:26.835 --> 00:45:30.055
+uh, generating, uh, the output from these filters.
+
+923
+00:45:30.355 --> 00:45:33.815
+So those many neurons will be there for one condition layer.
+
+924
+00:45:34.285 --> 00:45:37.935
+Exactly. Or it'll be multiple conation there or one No,
+
+925
+00:45:37.935 --> 00:45:38.935
+No. Uh, I see you
+
+926
+00:45:38.935 --> 00:45:40.895
+may have the multiple conversion layer also
+
+927
+00:45:40.895 --> 00:45:41.935
+that, that also I've said,
+
+928
+00:45:41.935 --> 00:45:44.055
+but when I'm, I have shown you here
+
+929
+00:45:44.405 --> 00:45:47.015
+that all these are output, which you're getting, yes.
+
+930
+00:45:47.015 --> 00:45:50.015
+Every output you can consider is coming from one neuron.
+
+931
+00:45:50.195 --> 00:45:53.735
+Yes. So how many sounds it'll be equal to the size
+
+932
+00:45:53.735 --> 00:45:55.255
+of this image in this particular
+
+933
+00:45:55.515 --> 00:45:58.495
+how many neurons you have in the one layer of convolution
+
+934
+00:45:59.505 --> 00:46:00.955
+that is, yeah.
+
+935
+00:46:01.455 --> 00:46:04.515
+So another question I have regarding the filter values,
+
+936
+00:46:05.215 --> 00:46:06.635
+but you have answered that question.
+
+937
+00:46:06.935 --> 00:46:10.195
+So how those filter initial values are getting generated?
+
+938
+00:46:10.575 --> 00:46:11.715
+So it is randomly
+
+939
+00:46:11.815 --> 00:46:16.235
+and, uh, it's completely Yes, that answer already asking,
+
+940
+00:46:16.845 --> 00:46:17.845
+Right? Right. Thank
+
+941
+00:46:17.845 --> 00:46:18.475
+you. Thank you,
+
+942
+00:46:19.095 --> 00:46:20.095
+Sir. Uh,
+
+943
+00:46:20.095 --> 00:46:20.915
+one more doubt, sir.
+
+944
+00:46:21.055 --> 00:46:24.035
+Uh, activation functions, sir, we can use multiple,
+
+945
+00:46:24.095 --> 00:46:25.115
+uh, activation.
+
+946
+00:46:25.265 --> 00:46:27.595
+It's different activation functions we can use, right, sir?
+
+947
+00:46:27.665 --> 00:46:30.515
+Correct. You are free to use any activation function,
+
+948
+00:46:31.495 --> 00:46:34.515
+but uh, they said, uh, yes, the, the good, uh,
+
+949
+00:46:34.865 --> 00:46:38.235
+with the CNN at least people have tried this has
+
+950
+00:46:38.895 --> 00:46:41.075
+worked better than any other activation function
+
+951
+00:46:41.135 --> 00:46:43.035
+for the convolution layer at least.
+
+952
+00:46:43.535 --> 00:46:45.555
+But you're free to use any other, that's that.
+
+953
+00:46:45.555 --> 00:46:47.355
+There is no problem in that. Yeah. Okay,
+
+954
+00:46:47.375 --> 00:46:48.375
+Sir. One more. So
+
+955
+00:46:48.375 --> 00:46:50.435
+the 28 number, how it came, sir?
+
+956
+00:46:51.295 --> 00:46:54.635
+Uh, so I'll go back. That is important to know.
+
+957
+00:46:55.585 --> 00:46:58.685
+For example here, 32 cross 32 was my input.
+
+958
+00:47:00.135 --> 00:47:03.475
+Now I'll apply the same n minus F plus one formula
+
+959
+00:47:04.235 --> 00:47:06.555
+N is the dimension of my image,
+
+960
+00:47:06.555 --> 00:47:09.075
+which is 32 means 32 row, 32 column.
+
+961
+00:47:10.295 --> 00:47:11.755
+Now, what is FF says
+
+962
+00:47:11.755 --> 00:47:13.875
+that it is five across five filter F means
+
+963
+00:47:13.875 --> 00:47:15.515
+filter, which is five.
+
+964
+00:47:15.515 --> 00:47:19.665
+So 32 minus 5 27 plus
+
+965
+00:47:19.925 --> 00:47:22.265
+1 28 because that is the,
+
+966
+00:47:22.325 --> 00:47:24.065
+and that, that will be the actual case.
+
+967
+00:47:24.095 --> 00:47:27.345
+I've shown you here that when I had here the seven cross
+
+968
+00:47:27.345 --> 00:47:30.325
+seven filter, how many and seven across seven image
+
+969
+00:47:30.325 --> 00:47:32.525
+and three across three filter, what will the size
+
+970
+00:47:32.525 --> 00:47:35.605
+of the feature map or features feature metrics.
+
+971
+00:47:36.265 --> 00:47:38.285
+So how many times it can go from left to right,
+
+972
+00:47:38.285 --> 00:47:42.005
+five times can go, this is first time this second, third,
+
+973
+00:47:42.665 --> 00:47:44.965
+fourth five left to right.
+
+974
+00:47:44.965 --> 00:47:48.165
+It can go five times similarly from top to bottom.
+
+975
+00:47:48.235 --> 00:47:49.325
+Also, it can go five times.
+
+976
+00:47:49.325 --> 00:47:52.045
+So five plus five will be the size of the feature map.
+
+977
+00:47:52.345 --> 00:47:54.765
+And that is how it has, if you use the formula
+
+978
+00:47:55.455 --> 00:47:59.525
+seven minus three plus one, which is five, that is
+
+979
+00:47:59.525 --> 00:48:00.725
+how you can always calculate.
+
+980
+00:48:01.135 --> 00:48:02.405
+Given the image size
+
+981
+00:48:02.425 --> 00:48:04.525
+and filter size, you can always calculate
+
+982
+00:48:04.525 --> 00:48:06.685
+what will be the size of the feature map.
+
+983
+00:48:06.835 --> 00:48:08.725
+Obviously there is a role of stride
+
+984
+00:48:09.105 --> 00:48:11.325
+and the stride role will be stride.
+
+985
+00:48:11.325 --> 00:48:13.805
+You always divide in the case when the stride is equal
+
+986
+00:48:13.805 --> 00:48:15.965
+to one, you don't consider the stride is there
+
+987
+00:48:15.965 --> 00:48:17.725
+because n minus a plus divided
+
+988
+00:48:17.745 --> 00:48:19.405
+by one will be N minus F itself,
+
+989
+00:48:19.825 --> 00:48:21.245
+but stride is more than one.
+
+990
+00:48:21.245 --> 00:48:23.685
+Then you always have to divide it. Ag shown here.
+
+991
+00:48:25.775 --> 00:48:28.475
+Uh, does it, uh, make sense? Yes, sir. Thank you sir.
+
+992
+00:48:30.405 --> 00:48:31.665
+Sir? Uh, Anisha.
+
+993
+00:48:32.285 --> 00:48:35.185
+Sir, I wanted to ask you that, uh, like wanted to ask again,
+
+994
+00:48:35.185 --> 00:48:36.625
+like for the fractions,
+
+995
+00:48:37.065 --> 00:48:38.505
+I did not understand actually how it works.
+
+996
+00:48:38.505 --> 00:48:41.345
+Like for 2.33 it'll be considered two strides.
+
+997
+00:48:42.805 --> 00:48:44.705
+Oh, so I have not written right?
+
+998
+00:48:45.125 --> 00:48:47.225
+So, uh, for fraction it doesn't work.
+
+999
+00:48:47.245 --> 00:48:50.225
+That's why I say fraction for three, statistical to three.
+
+1000
+00:48:50.225 --> 00:48:51.945
+In this particular case, this
+
+1001
+00:48:51.945 --> 00:48:53.265
+conation operation will not work.
+
+1002
+00:48:53.355 --> 00:48:56.705
+It'll give you the error. Okay?
+
+1003
+00:48:56.765 --> 00:48:58.905
+So it, it doesn't work for fraction. It doesn't work.
+
+1004
+00:48:59.415 --> 00:49:02.545
+Okay. Okay. So it has to be like, like precisely correct.
+
+1005
+00:49:02.545 --> 00:49:04.265
+In this case it has to, has
+
+1006
+00:49:04.265 --> 00:49:06.545
+To be, uh, the results should be an in t
+
+1007
+00:49:06.765 --> 00:49:07.785
+it cannot be fraction.
+
+1008
+00:49:08.925 --> 00:49:11.345
+So as I've shown you here, 2.33 I should have written here,
+
+1009
+00:49:11.395 --> 00:49:14.465
+it'll fail for statistical to three or more.
+
+1010
+00:49:15.125 --> 00:49:17.145
+Uh, conation will not operate. Yeah.
+
+1011
+00:49:19.125 --> 00:49:22.475
+Okay, sir. Okay, any other questions? Um,
+
+1012
+00:49:22.615 --> 00:49:25.835
+One, one question in CNN, um, in this, uh, while, while,
+
+1013
+00:49:26.045 --> 00:49:27.275
+while we are training this
+
+1014
+00:49:27.335 --> 00:49:31.655
+or when we are, while we are building this, how many filters
+
+1015
+00:49:31.655 --> 00:49:35.715
+or how many strides we will choose for a whole network?
+
+1016
+00:49:37.605 --> 00:49:40.585
+See, uh, I'll tell, I told you, uh, that
+
+1017
+00:49:40.645 --> 00:49:43.905
+how the CNN architecture overall looks something like
+
+1018
+00:49:43.905 --> 00:49:44.985
+this, okay?
+
+1019
+00:49:45.085 --> 00:49:46.305
+Uh, like this.
+
+1020
+00:49:46.685 --> 00:49:49.545
+So you may have the image, which is 32 cross 32,
+
+1021
+00:49:49.565 --> 00:49:51.945
+you may apply one convolution layer.
+
+1022
+00:49:52.015 --> 00:49:54.745
+Here you'll get something feature. Mm-hmm.
+
+1023
+00:49:54.745 --> 00:49:56.305
+You may apply one more convolution.
+
+1024
+00:49:56.815 --> 00:49:58.505
+Then you will again get featured on that.
+
+1025
+00:49:58.505 --> 00:50:00.025
+You can apply one more convolution.
+
+1026
+00:50:00.125 --> 00:50:03.025
+So you can apply as many convolution, first of all.
+
+1027
+00:50:03.105 --> 00:50:07.265
+Secondly, when you apply a particular convolution operation
+
+1028
+00:50:07.365 --> 00:50:08.745
+on image here, here
+
+1029
+00:50:08.765 --> 00:50:11.385
+or here, you decide it that, okay,
+
+1030
+00:50:11.385 --> 00:50:12.745
+what is the size of the filter?
+
+1031
+00:50:13.145 --> 00:50:15.425
+I can apply? Size of the filter is different.
+
+1032
+00:50:15.685 --> 00:50:18.585
+Number of filters are different. Okay.
+
+1033
+00:50:19.415 --> 00:50:22.305
+Size of the filter is five plus five. Mm-hmm.
+
+1034
+00:50:22.725 --> 00:50:26.905
+How many I can apply? I can apply 10, 20, 30.
+
+1035
+00:50:26.995 --> 00:50:29.235
+That is up to me. Okay.
+
+1036
+00:50:29.255 --> 00:50:32.355
+But all the uh, filter would be of the same size.
+
+1037
+00:50:32.385 --> 00:50:35.315
+That is what it ensures that in one convolution layer.
+
+1038
+00:50:36.175 --> 00:50:37.995
+So you can, it, it is written here.
+
+1039
+00:50:38.175 --> 00:50:42.115
+Six five cross five filters means six feature map.
+
+1040
+00:50:42.145 --> 00:50:44.875
+I'll get here and here it is written
+
+1041
+00:50:45.015 --> 00:50:47.355
+as ten five plus five filters.
+
+1042
+00:50:47.745 --> 00:50:50.075
+That the 10 I'm going to get from here.
+
+1043
+00:50:51.065 --> 00:50:54.365
+That is how uh, uh, that is how it happens. Okay?
+
+1044
+00:50:54.365 --> 00:50:55.485
+I'll show you the demo also
+
+1045
+00:50:55.545 --> 00:50:59.205
+how exactly you can code it quickly in the, yeah.
+
+1046
+00:51:00.105 --> 00:51:02.645
+Uh, can you re-explain that one? That six and tens, sir?
+
+1047
+00:51:03.545 --> 00:51:07.325
+So, uh, for example, why it is six here?
+
+1048
+00:51:07.785 --> 00:51:10.965
+Yes, because to this particular input
+
+1049
+00:51:11.845 --> 00:51:15.805
+I applied six filters, six filter of
+
+1050
+00:51:16.315 --> 00:51:18.885
+five across five metrics or size.
+
+1051
+00:51:18.905 --> 00:51:21.285
+You can say that. So for each filter
+
+1052
+00:51:21.945 --> 00:51:23.485
+you have one, one output.
+
+1053
+00:51:23.745 --> 00:51:26.125
+You can see that here I'm getting six outputs,
+
+1054
+00:51:26.145 --> 00:51:27.645
+six metrics as an output.
+
+1055
+00:51:28.585 --> 00:51:30.565
+Six because six filters I have applied.
+
+1056
+00:51:30.825 --> 00:51:32.725
+But what is the size of the filter filter
+
+1057
+00:51:32.755 --> 00:51:34.005
+When I say it is an image?
+
+1058
+00:51:34.145 --> 00:51:36.605
+Uh, sorry, it is a metrics, weight of weight metrics.
+
+1059
+00:51:37.585 --> 00:51:39.805
+So how many six weight metrics,
+
+1060
+00:51:40.275 --> 00:51:41.845
+what is the size of those metrics?
+
+1061
+00:51:42.275 --> 00:51:46.485
+Five across five. So for each filter you will get one,
+
+1062
+00:51:46.485 --> 00:51:48.605
+one output, one, one output.
+
+1063
+00:51:48.625 --> 00:51:50.925
+It means one, one. Uh, you can say the feature map
+
+1064
+00:51:50.925 --> 00:51:52.165
+or metrics as an output.
+
+1065
+00:51:52.675 --> 00:51:54.475
+Yeah. Okay.
+
+1066
+00:51:54.895 --> 00:51:58.075
+So as many filter you will decide those many
+
+1067
+00:51:59.475 --> 00:52:01.725
+outputs you will get as a Azure metrics.
+
+1068
+00:52:01.855 --> 00:52:06.275
+Again, it depends on how many filters you're using. Yeah,
+
+1069
+00:52:07.855 --> 00:52:11.835
+So I think, so it depends also sir, uh, how many
+
+1070
+00:52:12.475 --> 00:52:15.995
+features we want to capture from the image, from depth, uh,
+
+1071
+00:52:16.215 --> 00:52:18.235
+is it related to the and depth?
+
+1072
+00:52:18.495 --> 00:52:22.955
+Uh, so for example, if you want to capture full, uh,
+
+1073
+00:52:23.055 --> 00:52:25.275
+entire image, everything, then we have
+
+1074
+00:52:25.275 --> 00:52:26.635
+to increase the filters. Sir,
+
+1075
+00:52:27.185 --> 00:52:28.185
+That is true. That
+
+1076
+00:52:28.185 --> 00:52:30.795
+is true. But uh, to be very frank, uh,
+
+1077
+00:52:30.795 --> 00:52:33.875
+with when you'll have used data, network is very used.
+
+1078
+00:52:34.185 --> 00:52:36.035
+Getting that notion is very difficult.
+
+1079
+00:52:36.035 --> 00:52:38.195
+Whether I need 10 filters at this stage
+
+1080
+00:52:38.535 --> 00:52:40.915
+or next I need 20 filters.
+
+1081
+00:52:41.555 --> 00:52:43.675
+I mean that is very difficult. So you start with one number
+
+1082
+00:52:43.735 --> 00:52:45.835
+and you see that whether it works or not, you change it.
+
+1083
+00:52:45.905 --> 00:52:47.035
+That is what is the game.
+
+1084
+00:52:47.735 --> 00:52:49.195
+Yes, you do not have the correct picture
+
+1085
+00:52:49.265 --> 00:52:50.675
+that what should I keep?
+
+1086
+00:52:51.055 --> 00:52:53.555
+But one good practice is people always increase the number
+
+1087
+00:52:53.555 --> 00:52:55.275
+of filter like I was showing you here.
+
+1088
+00:52:55.685 --> 00:52:59.355
+First it is six, then I have increased to 10.
+
+1089
+00:52:59.815 --> 00:53:02.835
+In the next it'll further increased. Why? Why?
+
+1090
+00:53:02.985 --> 00:53:05.915
+Because the formula is N minus F plus one.
+
+1091
+00:53:06.735 --> 00:53:11.355
+So if it is 32, it goes to 28. If it is 28, it goes to 24.
+
+1092
+00:53:11.355 --> 00:53:13.475
+You see that the MS size is decreasing slowly.
+
+1093
+00:53:15.175 --> 00:53:19.555
+So, uh, just to have, uh, if we keep on going like that,
+
+1094
+00:53:19.555 --> 00:53:21.715
+then at last I'll end up with one value, right?
+
+1095
+00:53:21.935 --> 00:53:25.605
+So that's why we keep on adding the filters more fill number
+
+1096
+00:53:25.605 --> 00:53:27.365
+of filters, more in the next two, next layer so
+
+1097
+00:53:27.365 --> 00:53:29.485
+that I should not lose the information also.
+
+1098
+00:53:29.485 --> 00:53:31.405
+That is, so that is one practice what we do.
+
+1099
+00:53:31.405 --> 00:53:34.165
+Usually we increase the number of filters as we go
+
+1100
+00:53:34.185 --> 00:53:35.525
+and add the conation layer.
+
+1101
+00:53:36.535 --> 00:53:39.005
+Yeah, sure, sir. Okay,
+
+1102
+00:53:39.015 --> 00:53:40.565
+Thank you sir.
+
+1103
+00:53:40.585 --> 00:53:44.725
+Sir, what is the effect of number of strides on the output
+
+1104
+00:53:44.745 --> 00:53:46.885
+or, uh, activation maps that we get?
+
+1105
+00:53:47.175 --> 00:53:48.285
+Uhhuh, I said earlier.
+
+1106
+00:53:48.545 --> 00:53:52.325
+So see what happened, uh, when the stride is called to one.
+
+1107
+00:53:52.465 --> 00:53:54.405
+So you capture each row
+
+1108
+00:53:54.745 --> 00:53:57.765
+and every row here, at least with the three cross,
+
+1109
+00:53:57.765 --> 00:54:01.045
+three quilter every row with every other two row.
+
+1110
+00:54:01.635 --> 00:54:03.525
+Okay? Side also right side also.
+
+1111
+00:54:03.525 --> 00:54:05.845
+So you try to capture all the minute label
+
+1112
+00:54:05.845 --> 00:54:07.085
+details also in the image.
+
+1113
+00:54:07.155 --> 00:54:08.205
+Yeah. Okay.
+
+1114
+00:54:08.345 --> 00:54:11.405
+But when I put a strategical to two,
+
+1115
+00:54:11.405 --> 00:54:12.605
+like you see in this case, yes,
+
+1116
+00:54:12.765 --> 00:54:16.365
+I jumped at least this particular row, sorry,
+
+1117
+00:54:16.365 --> 00:54:19.085
+column has participated only once.
+
+1118
+00:54:19.755 --> 00:54:24.045
+Okay. Okay. And uh, the number of the participation
+
+1119
+00:54:24.045 --> 00:54:25.685
+of each row and column will reduce
+
+1120
+00:54:26.395 --> 00:54:27.395
+Okay? In the feature
+
+1121
+00:54:27.395 --> 00:54:28.045
+extraction.
+
+1122
+00:54:28.465 --> 00:54:31.965
+And hence you may not get that minute level feature
+
+1123
+00:54:32.105 --> 00:54:34.125
+as you are getting in the statistical tool one.
+
+1124
+00:54:34.425 --> 00:54:35.485
+Oh, okay. Okay.
+
+1125
+00:54:35.865 --> 00:54:40.525
+So if you are figured is so dense that it has lot
+
+1126
+00:54:40.525 --> 00:54:43.685
+of information, okay, in some, some cases it is like that,
+
+1127
+00:54:44.155 --> 00:54:46.845
+then you should keep strategical to one itself.
+
+1128
+00:54:46.905 --> 00:54:48.165
+One, you should not take a chance.
+
+1129
+00:54:50.005 --> 00:54:52.685
+Anything. Yeah. Yeah. I mean to understand, uh, if number
+
+1130
+00:54:52.685 --> 00:54:54.205
+of strides are more mm-hmm.
+
+1131
+00:54:54.465 --> 00:54:57.125
+Uh, the output image, what I get would be coser
+
+1132
+00:54:58.575 --> 00:55:00.275
+Uh, output image, B four
+
+1133
+00:55:00.735 --> 00:55:02.515
+Course, course image. It's not fine.
+
+1134
+00:55:02.515 --> 00:55:03.715
+Imaging course. Ah, course.
+
+1135
+00:55:03.745 --> 00:55:05.315
+Yeah, fine. Correct, correct, correct.
+
+1136
+00:55:05.505 --> 00:55:06.755
+Okay. Thank you sir. Thank you.
+
+1137
+00:55:09.715 --> 00:55:11.915
+Okay. Alright.
+
+1138
+00:55:13.665 --> 00:55:14.925
+So hopefully you understood.
+
+1139
+00:55:15.505 --> 00:55:17.445
+How does the convolution operation works?
+
+1140
+00:55:17.475 --> 00:55:19.525
+This is what happens in the convolution operation.
+
+1141
+00:55:19.705 --> 00:55:21.125
+We do the linear operation.
+
+1142
+00:55:21.425 --> 00:55:23.845
+So convolution operation is a linear operation,
+
+1143
+00:55:23.875 --> 00:55:25.325
+like weighted sum plus bias.
+
+1144
+00:55:25.395 --> 00:55:26.885
+Here also we do the weighted sum.
+
+1145
+00:55:27.135 --> 00:55:30.765
+There is a bias concept also. I, I gave the example earlier.
+
+1146
+00:55:31.115 --> 00:55:33.165
+Bias is not being shown explicitly,
+
+1147
+00:55:33.185 --> 00:55:35.005
+but then bias is also integrated.
+
+1148
+00:55:35.375 --> 00:55:38.005
+Every output, when you get say that three plus three,
+
+1149
+00:55:38.415 --> 00:55:40.885
+there is a bias which is being added, okay?
+
+1150
+00:55:40.905 --> 00:55:43.565
+So that you have to always remember, okay?
+
+1151
+00:55:43.665 --> 00:55:45.445
+So although it is not shown, it is happening.
+
+1152
+00:55:46.385 --> 00:55:49.165
+So conation operation is a linear operation.
+
+1153
+00:55:50.025 --> 00:55:51.365
+To make it non-linear.
+
+1154
+00:55:51.425 --> 00:55:53.765
+You add the relu, the activation function.
+
+1155
+00:55:53.765 --> 00:55:56.845
+So it is nothing but the neuron. How does it work?
+
+1156
+00:55:57.185 --> 00:56:00.365
+So in the CNL in the convolution, this is what is the neuron
+
+1157
+00:56:00.655 --> 00:56:04.765
+where, so this is what is the neuron is now
+
+1158
+00:56:05.235 --> 00:56:08.205
+what we'll see that how the pooling operation works, okay?
+
+1159
+00:56:08.225 --> 00:56:09.365
+How the pooling operation works.
+
+1160
+00:56:09.385 --> 00:56:11.845
+And now for that, again, I'll go to the same, uh, this, this
+
+1161
+00:56:13.465 --> 00:56:17.035
+lamu part and we go to this max pooling demo.
+
+1162
+00:56:17.215 --> 00:56:20.635
+So here they have the max pooling demo also, uh,
+
+1163
+00:56:20.825 --> 00:56:22.395
+what we'll do, we'll do the fullest screen.
+
+1164
+00:56:22.575 --> 00:56:27.135
+Now, say that this is the input, okay? This is the input.
+
+1165
+00:56:28.115 --> 00:56:31.835
+And uh, you see this, what is happening, uh,
+
+1166
+00:56:31.835 --> 00:56:33.915
+these are the digits we have, okay?
+
+1167
+00:56:33.915 --> 00:56:35.235
+These are the digits we have.
+
+1168
+00:56:36.015 --> 00:56:38.715
+And, uh, all these digits, they have done it only
+
+1169
+00:56:38.775 --> 00:56:41.075
+for the AM administrator, not the fashion administ.
+
+1170
+00:56:41.735 --> 00:56:43.315
+So these are all the digits we have.
+
+1171
+00:56:43.315 --> 00:56:44.955
+You can select any of these, doesn't matter.
+
+1172
+00:56:45.135 --> 00:56:47.195
+Oh, here we have the fashion you can select.
+
+1173
+00:56:47.335 --> 00:56:50.435
+So dataset also you can select and then filter.
+
+1174
+00:56:50.615 --> 00:56:53.035
+You can see here also there is a concept of filter,
+
+1175
+00:56:53.095 --> 00:56:54.795
+but these filters are not the weights.
+
+1176
+00:56:55.075 --> 00:56:57.875
+Remember one thing we say here also it is a filter.
+
+1177
+00:56:58.985 --> 00:57:02.245
+Height is two, weight three, two means two cross two.
+
+1178
+00:57:03.195 --> 00:57:04.815
+And stride is written as one.
+
+1179
+00:57:04.815 --> 00:57:08.935
+Uh, two means, uh, instead of, uh, going one by one left
+
+1180
+00:57:08.935 --> 00:57:12.215
+to right and uh, top to bottom, it is going, uh, two,
+
+1181
+00:57:12.495 --> 00:57:13.935
+although you can decrease it, does it matter?
+
+1182
+00:57:14.255 --> 00:57:16.055
+Actually, you can decrease the stride is called to one also.
+
+1183
+00:57:16.685 --> 00:57:19.935
+Okay? And if I play, see what is happening,
+
+1184
+00:57:20.105 --> 00:57:21.295
+first I'll show you the step.
+
+1185
+00:57:21.395 --> 00:57:23.535
+So now we are not doing the convolution operations.
+
+1186
+00:57:23.535 --> 00:57:25.655
+So waited some plus waited some
+
+1187
+00:57:26.075 --> 00:57:27.935
+and followed by the activation will not happen.
+
+1188
+00:57:28.115 --> 00:57:32.415
+Simply what will happen, uh, it is showing the max pooling.
+
+1189
+00:57:32.755 --> 00:57:35.975
+So whatever window it is selected here in this window,
+
+1190
+00:57:35.985 --> 00:57:37.815
+it'll pull the maximum value.
+
+1191
+00:57:38.195 --> 00:57:40.935
+So here, all the values are zero, zero is being pulled.
+
+1192
+00:57:41.725 --> 00:57:43.215
+I'll go next here.
+
+1193
+00:57:43.355 --> 00:57:45.335
+All the values are zero, zero is being pulled.
+
+1194
+00:57:45.545 --> 00:57:47.855
+There is no multiplication element wise,
+
+1195
+00:57:48.555 --> 00:57:50.055
+no activation, nothing is happening.
+
+1196
+00:57:50.195 --> 00:57:51.495
+See the main difference. Otherwise,
+
+1197
+00:57:51.795 --> 00:57:54.095
+it looks like the same filter con revolving on this region
+
+1198
+00:57:54.095 --> 00:57:57.295
+there is, okay, but then there is no weighted surplus
+
+1199
+00:57:57.295 --> 00:57:58.495
+bias followed by activation.
+
+1200
+00:57:58.495 --> 00:58:00.655
+So these are not the neurons, okay?
+
+1201
+00:58:00.655 --> 00:58:03.255
+These are simply one mathematical aggregation,
+
+1202
+00:58:03.255 --> 00:58:06.215
+which you're doing simply if I go next, zero,
+
+1203
+00:58:06.565 --> 00:58:09.055
+next 0, 0, 0 here.
+
+1204
+00:58:09.315 --> 00:58:11.575
+Now you'll see that first time 0.2 will
+
+1205
+00:58:11.575 --> 00:58:13.425
+come, this is the maximum.
+
+1206
+00:58:14.095 --> 00:58:15.625
+0.2 will be extracted.
+
+1207
+00:58:16.005 --> 00:58:19.705
+Now, next time, 0.5 is maximum 0.5 would be extracted.
+
+1208
+00:58:19.705 --> 00:58:24.505
+Next time, 0.9 0.9, you can see that in this region also,
+
+1209
+00:58:24.505 --> 00:58:26.425
+0.9 is maximum 0.9 is extracted.
+
+1210
+00:58:26.665 --> 00:58:31.365
+Likewise, if you'll see it is, it is going in the same way
+
+1211
+00:58:31.385 --> 00:58:32.885
+how we have seen for convolution.
+
+1212
+00:58:33.235 --> 00:58:36.765
+True pooling also works in the same way, left to right, top
+
+1213
+00:58:36.765 --> 00:58:38.285
+to bottom windows are going.
+
+1214
+00:58:38.425 --> 00:58:43.285
+But the main difference is here, there is no, uh, neuron,
+
+1215
+00:58:43.585 --> 00:58:45.245
+neuron operation, which is happening.
+
+1216
+00:58:45.245 --> 00:58:46.285
+That means there is no weighted
+
+1217
+00:58:46.285 --> 00:58:47.365
+some plus bias followed back.
+
+1218
+00:58:47.365 --> 00:58:49.085
+Nothing is happening only in that window.
+
+1219
+00:58:49.405 --> 00:58:51.045
+Whatever is the maximum value, it is pooling.
+
+1220
+00:58:51.305 --> 00:58:53.885
+That's why it is known as pooling operation.
+
+1221
+00:58:54.105 --> 00:58:58.015
+It is pooling that. Uh, yeah. Okay.
+
+1222
+00:58:58.275 --> 00:59:01.695
+Uh, so likewise, uh, I, I, uh, there is, uh,
+
+1223
+00:59:02.005 --> 00:59:03.055
+this is for max pooling.
+
+1224
+00:59:03.055 --> 00:59:05.095
+You may might have the min pooling in that case.
+
+1225
+00:59:05.555 --> 00:59:06.655
+In a particular window,
+
+1226
+00:59:06.655 --> 00:59:08.655
+minimum value might have been extracted.
+
+1227
+00:59:08.845 --> 00:59:11.455
+Okay? Or if you average pooling in that window,
+
+1228
+00:59:12.465 --> 00:59:13.735
+it'll add all the four value,
+
+1229
+00:59:13.735 --> 00:59:15.855
+because two, cross two that filter sizes here,
+
+1230
+00:59:15.915 --> 00:59:18.375
+two cross two, it'll add and divide by four.
+
+1231
+00:59:18.375 --> 00:59:20.615
+That will be the average pooling. Okay?
+
+1232
+00:59:20.615 --> 00:59:23.005
+So these are all the different pooling strategies, which we,
+
+1233
+00:59:23.005 --> 00:59:25.125
+which we have, which, which you can apply.
+
+1234
+00:59:25.905 --> 00:59:28.845
+So pooling is, uh, a simpler operation as compared
+
+1235
+00:59:28.845 --> 00:59:30.005
+to the convolution operation.
+
+1236
+00:59:30.425 --> 00:59:31.965
+Let me know if you have any question on this.
+
+1237
+00:59:36.075 --> 00:59:37.735
+So basically reducing the size,
+
+1238
+00:59:38.835 --> 00:59:41.055
+Uh, basically reducing the size, you're correct.
+
+1239
+00:59:41.395 --> 00:59:44.415
+So, uh, say that, oh, all these are the features only,
+
+1240
+00:59:44.515 --> 00:59:48.335
+but then I mean here, uh, there is no, uh, uh,
+
+1241
+00:59:48.395 --> 00:59:50.775
+the features are not, so it'll only extract.
+
+1242
+00:59:50.835 --> 00:59:53.775
+So, uh, basically reducing the pooling operation
+
+1243
+00:59:53.775 --> 00:59:55.015
+always reduces the size.
+
+1244
+00:59:55.015 --> 00:59:56.975
+That is your absolutely correct Yeah,
+
+1245
+01:00:00.825 --> 01:00:04.445
+Is it integral part of full, uh, conation
+
+1246
+01:00:04.585 --> 01:00:06.005
+and network training part?
+
+1247
+01:00:06.265 --> 01:00:08.685
+Or we can skip also, sir, max boom. Ah,
+
+1248
+01:00:09.025 --> 01:00:10.245
+So max cooling, you can skip.
+
+1249
+01:00:10.245 --> 01:00:11.245
+There is a very good question.
+
+1250
+01:00:11.795 --> 01:00:15.845
+That is it a must having layer in the convolution?
+
+1251
+01:00:16.205 --> 01:00:19.965
+I would say no, it is not a, it is not the compulsory layer.
+
+1252
+01:00:20.145 --> 01:00:24.605
+You can skip the pooling layer. I mean, that's right.
+
+1253
+01:00:24.605 --> 01:00:27.485
+Mm-hmm. So it's main idea of the pooling is
+
+1254
+01:00:27.785 --> 01:00:29.845
+to retain the most important features
+
+1255
+01:00:29.845 --> 01:00:32.365
+and ignore the other features, right?
+
+1256
+01:00:32.365 --> 01:00:34.325
+Because anyway, you have used the stride.
+
+1257
+01:00:34.325 --> 01:00:35.925
+One is called the strategical two one.
+
+1258
+01:00:36.305 --> 01:00:38.045
+So you might have captured many
+
+1259
+01:00:38.045 --> 01:00:39.605
+information which are redundant.
+
+1260
+01:00:39.905 --> 01:00:41.445
+So maybe max pooling will help us
+
+1261
+01:00:41.505 --> 01:00:44.165
+to ignore other information in that reason
+
+1262
+01:00:44.265 --> 01:00:46.285
+and retain the maximum value
+
+1263
+01:00:46.425 --> 01:00:48.085
+or maximum features in
+
+1264
+01:00:48.085 --> 01:00:49.405
+that particular, that is the main idea.
+
+1265
+01:00:50.145 --> 01:00:52.405
+So, but if you wish, you can ignore this. Pooling.
+
+1266
+01:00:52.405 --> 01:00:55.285
+Pooling is a optional layer. It's not compulsory.
+
+1267
+01:00:55.945 --> 01:00:57.965
+Yes. Thank you sir.
+
+1268
+01:00:58.545 --> 01:01:02.445
+Yes. Okay.
+
+1269
+01:01:03.065 --> 01:01:05.005
+Any other question on the pooling part?
+
+1270
+01:01:10.625 --> 01:01:12.155
+Alright, so if there is no question,
+
+1271
+01:01:12.215 --> 01:01:16.035
+so let me just go back here and what is the time?
+
+1272
+01:01:16.035 --> 01:01:19.635
+Eight, six. Okay, so, uh, that's all.
+
+1273
+01:01:19.945 --> 01:01:21.875
+Then if uh, you have understood this,
+
+1274
+01:01:21.875 --> 01:01:23.675
+then now I will show you the same figure.
+
+1275
+01:01:23.705 --> 01:01:25.835
+Once again, it'll make sense.
+
+1276
+01:01:25.975 --> 01:01:27.395
+Now this one, so
+
+1277
+01:01:27.395 --> 01:01:30.315
+what is happening once we are feeding the image the same
+
+1278
+01:01:30.325 --> 01:01:32.355
+image, the amnesty is three.
+
+1279
+01:01:32.355 --> 01:01:35.115
+Here it is written, plus we apply the convolution.
+
+1280
+01:01:35.115 --> 01:01:37.875
+So what happened? Waited some plus bias followed by the loo,
+
+1281
+01:01:38.055 --> 01:01:39.595
+and then we apply the pooling.
+
+1282
+01:01:39.655 --> 01:01:41.715
+So pooling jobs, pooling is not a weight.
+
+1283
+01:01:42.135 --> 01:01:44.595
+So you can skip this pooling layer if you wish.
+
+1284
+01:01:44.735 --> 01:01:46.155
+You can keep it. Okay?
+
+1285
+01:01:46.175 --> 01:01:47.515
+The good practice is to keep it,
+
+1286
+01:01:47.515 --> 01:01:48.715
+but then you can always skip.
+
+1287
+01:01:49.135 --> 01:01:52.075
+If it is not required, you can check that adding
+
+1288
+01:01:52.075 --> 01:01:53.155
+that will help or not.
+
+1289
+01:01:53.155 --> 01:01:54.355
+Then, then you can take a call.
+
+1290
+01:01:54.815 --> 01:01:58.515
+But here we do the, the same functionality as we do
+
+1291
+01:01:58.515 --> 01:02:00.675
+for the neurons at the convolution layer.
+
+1292
+01:02:00.785 --> 01:02:02.195
+Here. Also you have, so that means
+
+1293
+01:02:02.195 --> 01:02:04.675
+that weights are available here, not here.
+
+1294
+01:02:04.905 --> 01:02:07.555
+Similarly, weights are available at convolution layer,
+
+1295
+01:02:07.655 --> 01:02:08.675
+not at the pooling layer.
+
+1296
+01:02:08.905 --> 01:02:12.995
+Okay? Once we add couple of convolution layer, then
+
+1297
+01:02:12.995 --> 01:02:15.915
+what we do, we have that by the time we believe
+
+1298
+01:02:15.915 --> 01:02:19.075
+that we have expected all the information, uh, spatial
+
+1299
+01:02:20.075 --> 01:02:21.765
+special information from the figure,
+
+1300
+01:02:21.865 --> 01:02:24.845
+and then it's time to attach the fully connected layer.
+
+1301
+01:02:24.865 --> 01:02:26.245
+Now this is story, you know, already
+
+1302
+01:02:26.545 --> 01:02:28.045
+how does the fully connected layer work,
+
+1303
+01:02:28.505 --> 01:02:30.605
+but the fully connected layer will accept the
+
+1304
+01:02:30.605 --> 01:02:31.845
+input in one dimens vector.
+
+1305
+01:02:31.865 --> 01:02:33.125
+That's why there is a flatten layer,
+
+1306
+01:02:33.125 --> 01:02:34.285
+which requires some between.
+
+1307
+01:02:34.585 --> 01:02:36.925
+And you add as many fully connected
+
+1308
+01:02:36.925 --> 01:02:38.245
+layer you want here a layer.
+
+1309
+01:02:38.245 --> 01:02:39.805
+And then finally there will output layer.
+
+1310
+01:02:39.825 --> 01:02:43.245
+In the output layer. You will keep as many neurons, uh,
+
+1311
+01:02:43.305 --> 01:02:45.765
+as uh, uh, those many neurons, which is equivalent
+
+1312
+01:02:45.765 --> 01:02:48.445
+to your number of output here, in this case, zero to 10.
+
+1313
+01:02:48.625 --> 01:02:50.325
+So 10 outputs, you apply the sort
+
+1314
+01:02:50.325 --> 01:02:51.485
+mass, you'll get the result.
+
+1315
+01:02:51.955 --> 01:02:55.125
+This is what is happening. So this is uh, uh,
+
+1316
+01:02:55.125 --> 01:02:57.525
+this is another way of showing the conation operation.
+
+1317
+01:02:57.525 --> 01:02:59.485
+This is the kernel. See, kernel and filter.
+
+1318
+01:02:59.845 --> 01:03:03.445
+I mean these two are being used interchangeably,
+
+1319
+01:03:03.545 --> 01:03:04.685
+so do not get confused.
+
+1320
+01:03:05.305 --> 01:03:08.685
+So we say that kernel is the weight metrics filter is
+
+1321
+01:03:08.685 --> 01:03:09.845
+number of such kernels.
+
+1322
+01:03:09.955 --> 01:03:12.325
+Otherwise people use filter, filter also
+
+1323
+01:03:12.475 --> 01:03:15.565
+that I'm using one filter of size three, cross three,
+
+1324
+01:03:15.585 --> 01:03:18.885
+or I can say I'm using one filter, uh,
+
+1325
+01:03:19.115 --> 01:03:20.965
+with the kernel size three, cross three,
+
+1326
+01:03:21.085 --> 01:03:23.725
+I mean these are all the terminology people use it.
+
+1327
+01:03:23.785 --> 01:03:25.005
+Do not get confused with that.
+
+1328
+01:03:25.105 --> 01:03:28.055
+It is representing the same thing. Okay?
+
+1329
+01:03:28.555 --> 01:03:29.895
+So pulling operation, as I said,
+
+1330
+01:03:30.595 --> 01:03:32.815
+you will apply a window in the same way
+
+1331
+01:03:32.815 --> 01:03:34.575
+how you apply for the conation.
+
+1332
+01:03:34.575 --> 01:03:36.455
+But here, there is no weighted surplus bias.
+
+1333
+01:03:36.525 --> 01:03:38.615
+Only you pull the maximum number.
+
+1334
+01:03:38.675 --> 01:03:41.615
+So in this window, three is the maximum next window,
+
+1335
+01:03:42.455 --> 01:03:43.775
+I mean strategical to two.
+
+1336
+01:03:43.775 --> 01:03:45.615
+You can see strategical to two, cross two.
+
+1337
+01:03:45.875 --> 01:03:48.295
+So it'll come to this particular location.
+
+1338
+01:03:48.305 --> 01:03:50.695
+Again, three is maximum in this location,
+
+1339
+01:03:50.695 --> 01:03:52.775
+maximum is two in this location, maximum two.
+
+1340
+01:03:52.875 --> 01:03:55.015
+So then it has reduced the size. It was four.
+
+1341
+01:03:55.035 --> 01:03:57.175
+Pro rows is reduced to two, cross two.
+
+1342
+01:03:57.325 --> 01:03:58.335
+That is what is happening.
+
+1343
+01:03:58.475 --> 01:04:00.495
+So pooling is always used to reduce the size
+
+1344
+01:04:00.515 --> 01:04:02.415
+and retain the more important feature.
+
+1345
+01:04:02.555 --> 01:04:05.775
+Ignore the, uh, redundant features. That is what it says.
+
+1346
+01:04:06.035 --> 01:04:08.815
+And that you can understand here where 3, 3 0 0,
+
+1347
+01:04:08.815 --> 01:04:11.135
+maybe this is one of the feature which I want to retain
+
+1348
+01:04:11.675 --> 01:04:12.735
+anyway, these towards zero,
+
+1349
+01:04:13.105 --> 01:04:15.215
+there is nothing and this is the same.
+
+1350
+01:04:15.215 --> 01:04:16.255
+What is three? So one
+
+1351
+01:04:16.255 --> 01:04:18.375
+of only one value three, I'm retaining other value.
+
+1352
+01:04:19.235 --> 01:04:22.715
+So it makes sense, okay?
+
+1353
+01:04:24.525 --> 01:04:27.675
+Right? And then as I said, then there is a flatten layer
+
+1354
+01:04:27.935 --> 01:04:29.355
+and uh, it'll give you thought.
+
+1355
+01:04:31.105 --> 01:04:34.735
+Alright? Uh, so now
+
+1356
+01:04:35.565 --> 01:04:37.055
+I'll show you the demo for this.
+
+1357
+01:04:38.095 --> 01:04:40.395
+Uh, it was here. Okay?
+
+1358
+01:04:40.685 --> 01:04:45.635
+First I'll show you the demo, uh, quickly. So it's eight 15.
+
+1359
+01:04:47.225 --> 01:04:52.045
+Uh, so now this is my, uh, code.
+
+1360
+01:04:52.865 --> 01:04:57.805
+Uh, I, I mean, uh, uh, I have already, uh,
+
+1361
+01:04:59.165 --> 01:05:02.145
+in the previous slide when I, I shared,
+
+1362
+01:05:02.265 --> 01:05:05.625
+I have shared the data set of fmni in that, uh, slide.
+
+1363
+01:05:05.935 --> 01:05:08.585
+Okay? I believe you must have practiced it.
+
+1364
+01:05:08.645 --> 01:05:13.145
+It suppose not you do it later, but the dataset is the same.
+
+1365
+01:05:13.325 --> 01:05:17.245
+The complete train file I'm using, uh, here in this case,
+
+1366
+01:05:18.075 --> 01:05:20.645
+only thing is few changes I'll show you
+
+1367
+01:05:20.715 --> 01:05:22.085
+with respect to A and n.
+
+1368
+01:05:22.865 --> 01:05:24.885
+So if you see that this is the final
+
+1369
+01:05:25.515 --> 01:05:28.485
+code which I had shown you, uh, in the previous class,
+
+1370
+01:05:29.745 --> 01:05:31.005
+we built the a and n network
+
+1371
+01:05:31.185 --> 01:05:34.085
+and we optimized it to, uh,
+
+1372
+01:05:34.085 --> 01:05:35.605
+address the over fitting problem.
+
+1373
+01:05:36.305 --> 01:05:37.325
+Why I say over fitting,
+
+1374
+01:05:37.355 --> 01:05:40.245
+because you see that here, uh,
+
+1375
+01:05:40.825 --> 01:05:42.485
+uh, here.
+
+1376
+01:05:43.105 --> 01:05:44.925
+Uh, uh, when we were
+
+1377
+01:05:46.315 --> 01:05:48.595
+building the a NN network on the GPU
+
+1378
+01:05:48.595 --> 01:05:53.515
+with a complete data set, we, we, uh, observed that that,
+
+1379
+01:05:53.615 --> 01:05:57.355
+uh, my evaluation accuracy was coming as 0.88 means 88%
+
+1380
+01:05:57.355 --> 01:06:00.235
+around, but my training accuracy was coming as 98%.
+
+1381
+01:06:00.235 --> 01:06:01.955
+There was a huge difference between training
+
+1382
+01:06:02.375 --> 01:06:03.835
+and uh, evaluation.
+
+1383
+01:06:04.175 --> 01:06:05.395
+So we understood that there is
+
+1384
+01:06:05.395 --> 01:06:06.595
+over fitting, which is happening.
+
+1385
+01:06:07.335 --> 01:06:09.355
+So if these two accuracy are not trained,
+
+1386
+01:06:09.355 --> 01:06:12.795
+means your model doesn't behave same, uh, at train time
+
+1387
+01:06:12.915 --> 01:06:15.275
+and test time, then it is having high variance
+
+1388
+01:06:15.295 --> 01:06:17.835
+and it is not good for the, uh, machine learning,
+
+1389
+01:06:18.425 --> 01:06:19.555
+it's not reliable network.
+
+1390
+01:06:19.585 --> 01:06:21.995
+Then, then what we did, we optimized it.
+
+1391
+01:06:22.135 --> 01:06:23.155
+How did we optimize?
+
+1392
+01:06:23.155 --> 01:06:26.195
+So you see that when we were getting this 88 98 variance,
+
+1393
+01:06:26.625 --> 01:06:28.515
+then our model was like this.
+
+1394
+01:06:29.175 --> 01:06:33.035
+In our model we had linear layer,
+
+1395
+01:06:33.035 --> 01:06:35.155
+which is a fully connected layer followed by activation.
+
+1396
+01:06:35.385 --> 01:06:37.555
+Then one more linear layer followed by activation,
+
+1397
+01:06:37.555 --> 01:06:38.795
+and finally the output layer.
+
+1398
+01:06:39.025 --> 01:06:41.835
+This is the simplest network, what we used with GPU.
+
+1399
+01:06:42.215 --> 01:06:44.995
+But when we addressed this fitting problem,
+
+1400
+01:06:45.495 --> 01:06:46.875
+we added few more layer.
+
+1401
+01:06:46.875 --> 01:06:48.075
+We added the batch normalization.
+
+1402
+01:06:48.335 --> 01:06:51.835
+We added the dropout here also in the second, uh,
+
+1403
+01:06:52.135 --> 01:06:54.155
+hidden layer, we added the batch normalization,
+
+1404
+01:06:54.335 --> 01:06:55.435
+we added a dropout.
+
+1405
+01:06:55.975 --> 01:06:58.315
+And finally the output layer, we don't add anything
+
+1406
+01:06:58.735 --> 01:07:01.115
+and we, we, so this is, this was the major change.
+
+1407
+01:07:01.115 --> 01:07:02.635
+You can only change, you can say that.
+
+1408
+01:07:02.855 --> 01:07:05.435
+And one more change we did in terms of this weight decay,
+
+1409
+01:07:05.445 --> 01:07:08.925
+which is L two normalization three change we did
+
+1410
+01:07:09.545 --> 01:07:11.005
+and it controlled our foot
+
+1411
+01:07:11.065 --> 01:07:13.485
+or fitting problem a little bit earlier.
+
+1412
+01:07:14.145 --> 01:07:17.445
+The evaluation accuracy was 88, which is still here, 88.
+
+1413
+01:07:18.625 --> 01:07:22.245
+The training accuracy was 98, which has now reduced to 93.
+
+1414
+01:07:22.945 --> 01:07:25.245
+So in a way, we have uh,
+
+1415
+01:07:25.465 --> 01:07:29.485
+now made these two accuracy closer means training accuracy
+
+1416
+01:07:29.545 --> 01:07:30.965
+and evaluation accuracy.
+
+1417
+01:07:31.535 --> 01:07:33.525
+Still there is a problem over fitting problem,
+
+1418
+01:07:33.665 --> 01:07:35.685
+but now we have controlled it a little bit
+
+1419
+01:07:35.945 --> 01:07:37.125
+as compared to the previous case.
+
+1420
+01:07:37.125 --> 01:07:39.765
+Obviously my accuracy of the training time has reduced,
+
+1421
+01:07:40.505 --> 01:07:42.485
+but that is okay as long as it is
+
+1422
+01:07:43.045 --> 01:07:44.765
+becoming more reliable, right?
+
+1423
+01:07:45.185 --> 01:07:49.805
+So reliable network is is better than, than the over fitting
+
+1424
+01:07:50.635 --> 01:07:52.805
+case where the training accuracy is very high.
+
+1425
+01:07:52.805 --> 01:07:54.725
+Testing accuracy is very, okay.
+
+1426
+01:07:55.105 --> 01:07:56.445
+Now what we are trying to do is
+
+1427
+01:07:56.445 --> 01:07:59.445
+with the CNN in the CNN everything, you will see
+
+1428
+01:07:59.445 --> 01:08:01.805
+that in the coding is same two place.
+
+1429
+01:08:01.805 --> 01:08:03.725
+There. You will change, first of all, network will change.
+
+1430
+01:08:03.945 --> 01:08:06.685
+Now we'll have the CNN network integrated.
+
+1431
+01:08:07.445 --> 01:08:10.685
+Secondly, you will also see that in the a NN case,
+
+1432
+01:08:10.945 --> 01:08:13.965
+the input was given as one dimensional vector
+
+1433
+01:08:13.965 --> 01:08:16.365
+because my dataset has the pixel value,
+
+1434
+01:08:16.665 --> 01:08:17.765
+the original dataset,
+
+1435
+01:08:17.795 --> 01:08:20.645
+this trained csv, it has a pixel value.
+
+1436
+01:08:20.865 --> 01:08:22.565
+It is not a image, right?
+
+1437
+01:08:22.825 --> 01:08:24.485
+So original data set is in the form
+
+1438
+01:08:24.485 --> 01:08:25.685
+of one dimensional vector.
+
+1439
+01:08:25.745 --> 01:08:27.925
+So each row is representing one image
+
+1440
+01:08:28.155 --> 01:08:29.445
+with the one dimensional vector.
+
+1441
+01:08:29.545 --> 01:08:32.565
+Why? Because we have to feed it to A-N-N-E-N-N always accept
+
+1442
+01:08:33.145 --> 01:08:34.645
+single vector as an input.
+
+1443
+01:08:34.825 --> 01:08:37.045
+It doesn't accept two dimension like image,
+
+1444
+01:08:37.115 --> 01:08:38.205
+like metrics and all.
+
+1445
+01:08:39.515 --> 01:08:41.695
+Uh, uh, so what we did here,
+
+1446
+01:08:44.145 --> 01:08:47.245
+you can see that uh, this is what we fit to the ENN.
+
+1447
+01:08:47.885 --> 01:08:51.615
+Obviously here we have just plotted those each row to
+
+1448
+01:08:52.125 --> 01:08:54.255
+show it as, but actual dataset was
+
+1449
+01:08:54.355 --> 01:08:55.455
+the one-dimensional vector.
+
+1450
+01:08:56.235 --> 01:08:59.375
+But now in the CNN we can, we will not feed it like that.
+
+1451
+01:08:59.755 --> 01:09:02.295
+In the CNN, the main idea is to feed the image
+
+1452
+01:09:02.435 --> 01:09:04.495
+as image means as two dimensional
+
+1453
+01:09:04.495 --> 01:09:05.815
+vector as a metrics, right?
+
+1454
+01:09:05.815 --> 01:09:08.095
+So that is what is the effort which we have to make.
+
+1455
+01:09:08.515 --> 01:09:12.335
+So first change. Now if I'm showing you here, this is kuda
+
+1456
+01:09:12.335 --> 01:09:13.735
+what the GPU is still, we are using,
+
+1457
+01:09:14.195 --> 01:09:16.135
+we are reading the data in the same way, right?
+
+1458
+01:09:16.545 --> 01:09:19.855
+Shape of the data is same 60,000 across 7 85.
+
+1459
+01:09:19.965 --> 01:09:22.535
+This is just to display some of the image here.
+
+1460
+01:09:22.905 --> 01:09:26.615
+Train test is split where first we identify the columns,
+
+1461
+01:09:26.615 --> 01:09:30.015
+which are participating as features and columns only.
+
+1462
+01:09:30.095 --> 01:09:32.815
+First column is participating as label.
+
+1463
+01:09:33.125 --> 01:09:34.735
+Then we do the trend tester split.
+
+1464
+01:09:34.755 --> 01:09:37.975
+And this is why where we do the normalization of features
+
+1465
+01:09:37.975 --> 01:09:41.095
+between zero to 2 55 to zero to one three till this,
+
+1466
+01:09:41.095 --> 01:09:42.615
+there is no change in my code.
+
+1467
+01:09:43.115 --> 01:09:45.495
+Now first change, you will see here when we are defining our
+
+1468
+01:09:45.495 --> 01:09:49.655
+custom class, because custom class is the one where, uh,
+
+1469
+01:09:49.655 --> 01:09:53.295
+custom data sets class is the one where you uh, actually say
+
+1470
+01:09:53.435 --> 01:09:55.015
+how you are going to load the data.
+
+1471
+01:09:55.195 --> 01:09:57.495
+In the case of a NN, you loaded the data
+
+1472
+01:09:57.555 --> 01:09:59.175
+as one dimensional vector because
+
+1473
+01:09:59.725 --> 01:10:02.655
+because of the nature of the architecture of a NN,
+
+1474
+01:10:02.655 --> 01:10:04.335
+that it accept only one dimensional input.
+
+1475
+01:10:05.035 --> 01:10:06.695
+Now, CNN can accept two dimensional,
+
+1476
+01:10:06.795 --> 01:10:10.095
+so you should load the data as two dimensional, right?
+
+1477
+01:10:10.275 --> 01:10:12.375
+But my actual data is only one dimensional data.
+
+1478
+01:10:12.685 --> 01:10:15.375
+It's a ROIs data, right? It's not like row and column both.
+
+1479
+01:10:15.565 --> 01:10:17.855
+It's a ROIs data. So we have
+
+1480
+01:10:17.855 --> 01:10:19.575
+to convert the shape of the data.
+
+1481
+01:10:19.575 --> 01:10:22.055
+That is what you see here. Major change here.
+
+1482
+01:10:22.235 --> 01:10:27.095
+One of the changes earlier case when I was loading my data,
+
+1483
+01:10:27.735 --> 01:10:30.335
+I converted the features into tensor.
+
+1484
+01:10:30.395 --> 01:10:32.975
+That's all obviously the type 4 32.
+
+1485
+01:10:33.635 --> 01:10:37.095
+Now when I'm loading my data, converting it as a tensor,
+
+1486
+01:10:37.595 --> 01:10:39.055
+but also reshaping.
+
+1487
+01:10:39.315 --> 01:10:43.415
+Now this is one change you see in terms of loading the data.
+
+1488
+01:10:43.925 --> 01:10:45.615
+That means that now I will be loading
+
+1489
+01:10:45.635 --> 01:10:48.215
+or giving, feeding the data as two dimensions.
+
+1490
+01:10:48.215 --> 01:10:51.135
+So you see that my one dimensional value was
+
+1491
+01:10:51.135 --> 01:10:53.295
+7 84 74 pixels, right?
+
+1492
+01:10:53.875 --> 01:10:56.695
+Uh, you can see here the size shape I have shown.
+
+1493
+01:10:56.695 --> 01:10:59.215
+7 85 we first column I have separated as label.
+
+1494
+01:10:59.215 --> 01:11:02.535
+So 7 84 and if you convert them into two dimension,
+
+1495
+01:11:02.535 --> 01:11:04.335
+it did nothing but 28 cross 28.
+
+1496
+01:11:04.335 --> 01:11:07.535
+So my MS size is 28 cross 20. That is what we are reshaping.
+
+1497
+01:11:08.315 --> 01:11:09.815
+Now what are these two numbers then?
+
+1498
+01:11:10.955 --> 01:11:13.565
+So this number one here is representing
+
+1499
+01:11:13.565 --> 01:11:14.845
+that I have a single channel,
+
+1500
+01:11:15.625 --> 01:11:18.835
+obviously only single row representing each image.
+
+1501
+01:11:19.455 --> 01:11:21.555
+And if each image is a black
+
+1502
+01:11:21.555 --> 01:11:24.475
+and white image, so it is a single channel image.
+
+1503
+01:11:24.665 --> 01:11:26.475
+It's not a three channel image
+
+1504
+01:11:26.765 --> 01:11:28.835
+where you have the colored image as an input.
+
+1505
+01:11:28.835 --> 01:11:32.155
+So this one representative is a single channel image, okay?
+
+1506
+01:11:32.695 --> 01:11:36.275
+And what it is minus one representing this is just notional
+
+1507
+01:11:36.305 --> 01:11:38.115
+here for batch size
+
+1508
+01:11:38.265 --> 01:11:41.275
+because later on when we'll do the data loader class,
+
+1509
+01:11:41.275 --> 01:11:43.675
+call the data class, we'll pass batch size equal
+
+1510
+01:11:43.675 --> 01:11:45.235
+to 32 60,000 data.
+
+1511
+01:11:45.255 --> 01:11:48.355
+We are right and we were dividing it in the batch of 32.
+
+1512
+01:11:48.355 --> 01:11:49.475
+32, 32, right?
+
+1513
+01:11:49.935 --> 01:11:52.035
+So here, just as a notional, we are saying
+
+1514
+01:11:52.035 --> 01:11:54.315
+that there is some batch size which is going to come,
+
+1515
+01:11:54.685 --> 01:11:57.515
+which we define here in this data loader class.
+
+1516
+01:11:58.015 --> 01:11:59.315
+So you can see are four things.
+
+1517
+01:11:59.765 --> 01:12:01.315
+First one, say the batch size.
+
+1518
+01:12:01.415 --> 01:12:04.315
+Second one say how many channels are there in your image?
+
+1519
+01:12:04.525 --> 01:12:07.915
+Third and fourth are the size of the image. 28 across 28.
+
+1520
+01:12:08.265 --> 01:12:11.235
+Okay? So this is the first change which we do at the time
+
+1521
+01:12:11.235 --> 01:12:13.235
+of data loading with this constructor calling
+
+1522
+01:12:14.015 --> 01:12:15.195
+and this length class
+
+1523
+01:12:15.295 --> 01:12:17.955
+and gate item class, as I explained earlier, will be called
+
+1524
+01:12:18.055 --> 01:12:19.675
+by the data in order class.
+
+1525
+01:12:20.255 --> 01:12:21.995
+The data loader class will call the length.
+
+1526
+01:12:22.085 --> 01:12:24.755
+It'll get to know that with this size then
+
+1527
+01:12:25.295 --> 01:12:27.035
+how many images are possible,
+
+1528
+01:12:27.615 --> 01:12:30.315
+and then make the mini badge of 32.
+
+1529
+01:12:30.815 --> 01:12:33.235
+So that's why it required this length.
+
+1530
+01:12:34.315 --> 01:12:36.335
+And once it'll create those batches,
+
+1531
+01:12:36.645 --> 01:12:38.215
+then let us fetch those images
+
+1532
+01:12:38.635 --> 01:12:41.255
+and for fetching those images, we required this key item
+
+1533
+01:12:41.255 --> 01:12:43.775
+because gate item will actually give me the zero image
+
+1534
+01:12:43.775 --> 01:12:45.735
+number, zero image number one image number two,
+
+1535
+01:12:46.235 --> 01:12:47.255
+by passing the index.
+
+1536
+01:12:47.255 --> 01:12:50.335
+That's why these two extra methods we have defined in the
+
+1537
+01:12:50.335 --> 01:12:52.215
+custom data, which is called internally
+
+1538
+01:12:52.275 --> 01:12:53.415
+by this data loader class.
+
+1539
+01:12:54.685 --> 01:12:58.145
+And hence we create this train loader and test loader. Okay?
+
+1540
+01:12:58.165 --> 01:13:00.905
+Now remember my data is no more a single dimension.
+
+1541
+01:13:00.905 --> 01:13:04.145
+It is an image because we have always already reshaped it.
+
+1542
+01:13:04.935 --> 01:13:07.225
+Okay? Now what we do,
+
+1543
+01:13:07.725 --> 01:13:10.265
+one more change is required data is ready.
+
+1544
+01:13:10.445 --> 01:13:12.185
+Now you have to define your neural network.
+
+1545
+01:13:12.325 --> 01:13:15.765
+Now in the neural network, what happened, uh,
+
+1546
+01:13:16.125 --> 01:13:19.245
+I was showing I am going to build this neural network,
+
+1547
+01:13:19.995 --> 01:13:22.765
+this neural network where my image will be one
+
+1548
+01:13:23.195 --> 01:13:25.925
+because single channel 28 across 28,
+
+1549
+01:13:26.875 --> 01:13:29.285
+I'll put first layer of convolution
+
+1550
+01:13:30.145 --> 01:13:31.845
+and then followed by max pooling.
+
+1551
+01:13:32.075 --> 01:13:34.045
+Then I'll put second layer of convolution
+
+1552
+01:13:35.005 --> 01:13:36.125
+followed by max pooling.
+
+1553
+01:13:36.545 --> 01:13:39.125
+That's all only two layers of convolution and max phoning.
+
+1554
+01:13:39.475 --> 01:13:41.645
+Then we'll have one feature map.
+
+1555
+01:13:41.865 --> 01:13:45.325
+Uh, there will be some size, there will be, uh, some size
+
+1556
+01:13:45.325 --> 01:13:47.645
+of the sensor, which I will flatten.
+
+1557
+01:13:47.995 --> 01:13:50.805
+I'll pass it to two hidden layer, 1 28 neuron.
+
+1558
+01:13:50.805 --> 01:13:52.165
+Here we'll have 64 neuron.
+
+1559
+01:13:52.385 --> 01:13:54.605
+And finally, the output layer with the 10 neuron say
+
+1560
+01:13:54.605 --> 01:13:57.605
+that this architecture I want to build in PyTorch.
+
+1561
+01:13:57.795 --> 01:14:02.325
+Okay? Earlier I was only having this architecture, a NN.
+
+1562
+01:14:02.505 --> 01:14:04.125
+Now I'm just adding CNN.
+
+1563
+01:14:04.625 --> 01:14:06.445
+So if you see this particular architecture,
+
+1564
+01:14:06.445 --> 01:14:08.485
+clearly there are two parts in this architecture.
+
+1565
+01:14:09.025 --> 01:14:10.845
+The first part we are doing the feature extraction
+
+1566
+01:14:10.845 --> 01:14:13.525
+with the CNN means convolution and pooling.
+
+1567
+01:14:13.665 --> 01:14:15.725
+And the second part we are doing the classification
+
+1568
+01:14:15.725 --> 01:14:17.725
+with the ENL fully connected layer.
+
+1569
+01:14:18.505 --> 01:14:22.405
+So while uh, the designing this, this kind of uh,
+
+1570
+01:14:23.165 --> 01:14:26.365
+CNN architecture, what we'll do is we'll use two sequential
+
+1571
+01:14:26.365 --> 01:14:28.825
+container, sequential container.
+
+1572
+01:14:28.825 --> 01:14:31.305
+Because these layers are connected in a sequence,
+
+1573
+01:14:32.105 --> 01:14:34.525
+all these layers are connected in a sequence only change.
+
+1574
+01:14:34.525 --> 01:14:37.885
+What is happening is here, once we get the image, we have
+
+1575
+01:14:37.885 --> 01:14:41.305
+to flatten and then it'll go as an input.
+
+1576
+01:14:41.305 --> 01:14:43.225
+So there is no operation which is happening here.
+
+1577
+01:14:43.255 --> 01:14:45.225
+Only thing is we are converting the shape 2D
+
+1578
+01:14:45.225 --> 01:14:46.265
+into 1D in this part.
+
+1579
+01:14:46.605 --> 01:14:50.385
+That's why this whole part I will keep in once container.
+
+1580
+01:14:51.165 --> 01:14:53.065
+So container's job is one layer output
+
+1581
+01:14:53.065 --> 01:14:54.105
+would be second layer input.
+
+1582
+01:14:54.215 --> 01:14:55.985
+This layer output would be this layer output.
+
+1583
+01:14:55.985 --> 01:14:57.505
+This layer output would be this layer output.
+
+1584
+01:14:57.525 --> 01:14:59.065
+So feature extraction will do once
+
+1585
+01:14:59.605 --> 01:15:01.225
+and then fully connected will do once.
+
+1586
+01:15:01.615 --> 01:15:03.025
+Okay, that is what is the idea.
+
+1587
+01:15:03.805 --> 01:15:04.825
+Now you can see the same here.
+
+1588
+01:15:05.395 --> 01:15:07.505
+First of all, I'm starting with the features.
+
+1589
+01:15:07.765 --> 01:15:10.385
+So this container till here I'm saying it is a feature
+
+1590
+01:15:10.595 --> 01:15:13.465
+extraction container, which is sequential container.
+
+1591
+01:15:13.675 --> 01:15:16.625
+First time adding the con 2D, layer two DY
+
+1592
+01:15:16.625 --> 01:15:18.905
+because two dimensional convolution is going to happen.
+
+1593
+01:15:19.715 --> 01:15:23.745
+There is a con 1D function also, which is used with the
+
+1594
+01:15:24.575 --> 01:15:26.585
+text data when you do the convolution
+
+1595
+01:15:26.585 --> 01:15:29.745
+with the one dimensional, one dimensional itself.
+
+1596
+01:15:29.775 --> 01:15:31.905
+I'll explain that later if it is required.
+
+1597
+01:15:32.845 --> 01:15:36.145
+So here we are calling convo 2D from the NN module.
+
+1598
+01:15:37.165 --> 01:15:39.105
+We have to tell what is the size,
+
+1599
+01:15:39.255 --> 01:15:40.585
+what is the input features.
+
+1600
+01:15:40.645 --> 01:15:43.705
+So input features here will accept it tells that, okay,
+
+1601
+01:15:43.705 --> 01:15:47.345
+how many, what is the, you can say that uh, uh,
+
+1602
+01:15:47.545 --> 01:15:49.985
+channels you have, we have already defined it.
+
+1603
+01:15:50.085 --> 01:15:53.025
+The channels are one, it's a gray scale image.
+
+1604
+01:15:53.525 --> 01:15:56.425
+So input, uh, features will actually, we have
+
+1605
+01:15:56.425 --> 01:15:57.825
+to pass here how many channels you have.
+
+1606
+01:15:57.825 --> 01:15:59.025
+If you take a color image, we'll pass three.
+
+1607
+01:15:59.025 --> 01:16:00.025
+If it is a black
+
+1608
+01:16:00.025 --> 01:16:02.585
+and white image, it will, you have to pass, uh, one.
+
+1609
+01:16:02.925 --> 01:16:06.175
+That's all. Okay, now what is 32?
+
+1610
+01:16:07.245 --> 01:16:10.015
+Okay, it, it tells that here,
+
+1611
+01:16:10.155 --> 01:16:12.615
+let me just explain with this.
+
+1612
+01:16:12.955 --> 01:16:14.975
+So maybe it'll be more clear little bit.
+
+1613
+01:16:14.975 --> 01:16:18.415
+So I'm using the same here where we have the input channel,
+
+1614
+01:16:18.515 --> 01:16:20.375
+output channel, these are all the parameters which we have
+
+1615
+01:16:20.375 --> 01:16:23.855
+to define kernel size, stride padding bias.
+
+1616
+01:16:24.485 --> 01:16:27.215
+Okay? So input channel number of input channel.
+
+1617
+01:16:27.645 --> 01:16:30.015
+That is what it say three channel or one channel only.
+
+1618
+01:16:30.015 --> 01:16:32.815
+These two possibility we have in our case,
+
+1619
+01:16:32.825 --> 01:16:36.375
+it'll be one output channel will be uh, set by
+
+1620
+01:16:36.375 --> 01:16:37.695
+how many filters you are using
+
+1621
+01:16:37.885 --> 01:16:39.575
+because I said you know, right?
+
+1622
+01:16:40.435 --> 01:16:43.455
+If you'll define 32, that means 32 feature maps,
+
+1623
+01:16:43.455 --> 01:16:46.505
+you will get 32 features means ma
+
+1624
+01:16:46.505 --> 01:16:47.625
+feature metrics you will get.
+
+1625
+01:16:47.625 --> 01:16:51.185
+So output channel will defer, uh, you will set, uh,
+
+1626
+01:16:51.285 --> 01:16:54.065
+as equivalent to the number of filters you are going to use.
+
+1627
+01:16:54.375 --> 01:16:55.945
+What will be the size of the filter
+
+1628
+01:16:56.095 --> 01:16:57.665
+that will be decided by this code.
+
+1629
+01:16:58.575 --> 01:17:01.105
+Each filter of the size three, cross three say
+
+1630
+01:17:01.105 --> 01:17:04.185
+that in this particular layer, stride is equal to one.
+
+1631
+01:17:04.225 --> 01:17:06.505
+I guess this is clear to you padding.
+
+1632
+01:17:06.505 --> 01:17:08.345
+When I say zero, what we do
+
+1633
+01:17:09.255 --> 01:17:13.045
+after applying the convolution, usually my MS size reduce it
+
+1634
+01:17:13.045 --> 01:17:14.405
+and minus f plus one.
+
+1635
+01:17:15.465 --> 01:17:19.805
+If I don't want my MS size to be reduced, I'll add some
+
+1636
+01:17:20.595 --> 01:17:22.525
+rows and column with zeros.
+
+1637
+01:17:22.525 --> 01:17:23.725
+So it calls zero padding.
+
+1638
+01:17:23.795 --> 01:17:27.005
+It's called zero padding so that my MS size will not reduce.
+
+1639
+01:17:27.635 --> 01:17:30.725
+Okay? Our feature and sage will be same many times
+
+1640
+01:17:31.195 --> 01:17:32.405
+padding is called to same.
+
+1641
+01:17:32.405 --> 01:17:33.565
+That is what is the function.
+
+1642
+01:17:33.665 --> 01:17:35.765
+Uh, that is what is the parameter.
+
+1643
+01:17:35.765 --> 01:17:38.725
+You can use bias if you want to use it. Uh, it is true.
+
+1644
+01:17:38.825 --> 01:17:40.485
+So most of the time we make it true.
+
+1645
+01:17:40.915 --> 01:17:43.365
+This is what I was explaining here in this
+
+1646
+01:17:43.415 --> 01:17:45.585
+whole, this is what we are doing.
+
+1647
+01:17:46.085 --> 01:17:49.185
+So input feature will tell how many uh, channels you have.
+
+1648
+01:17:49.255 --> 01:17:50.825
+This is how many filters you're using.
+
+1649
+01:17:50.855 --> 01:17:55.045
+Each filter sort of size three across three padding is same.
+
+1650
+01:17:55.045 --> 01:18:00.025
+That means that after conation, I want the feature size
+
+1651
+01:18:00.685 --> 01:18:02.425
+to be same as my input size.
+
+1652
+01:18:02.425 --> 01:18:05.375
+Then pad is equal to say that is what you have to say. Okay?
+
+1653
+01:18:05.795 --> 01:18:09.135
+So once convolution is done, you apply relu, okay?
+
+1654
+01:18:09.135 --> 01:18:11.415
+Because convolution is a linear operation to relu,
+
+1655
+01:18:11.525 --> 01:18:14.815
+non-linearity batch normalization you apply just
+
+1656
+01:18:14.815 --> 01:18:17.855
+because you want to control the over fitting problem.
+
+1657
+01:18:17.855 --> 01:18:19.255
+Otherwise it's not required here.
+
+1658
+01:18:19.515 --> 01:18:22.055
+So after convolution in relu you can also
+
+1659
+01:18:22.065 --> 01:18:23.175
+apply the max pooling.
+
+1660
+01:18:23.635 --> 01:18:26.575
+So try difficult to two ker sizes, two cross two.
+
+1661
+01:18:26.715 --> 01:18:28.775
+So it'll reduce the dimension.
+
+1662
+01:18:28.775 --> 01:18:30.815
+Suppose here 32 uh,
+
+1663
+01:18:31.255 --> 01:18:32.935
+features you will get feature map you'll get,
+
+1664
+01:18:33.145 --> 01:18:37.335
+it'll reduce it to 16 because stride is called to two.
+
+1665
+01:18:37.915 --> 01:18:40.335
+Stride is equal to two. That means 32 by two.
+
+1666
+01:18:40.335 --> 01:18:42.935
+Those many features you will left with.
+
+1667
+01:18:43.955 --> 01:18:47.655
+Now this completes the one layer of convolution.
+
+1668
+01:18:48.245 --> 01:18:50.255
+Similarly, I have another layer of convolution
+
+1669
+01:18:50.255 --> 01:18:52.175
+because this is what we decided earlier, right?
+
+1670
+01:18:52.315 --> 01:18:55.135
+So know in our network we'll have one convolution max.
+
+1671
+01:18:55.165 --> 01:18:56.935
+Then again we'll have one more convolution layer
+
+1672
+01:18:56.935 --> 01:18:59.775
+and then max, so just copy paste it.
+
+1673
+01:19:00.165 --> 01:19:05.015
+Only differences. Now 32, uh,
+
+1674
+01:19:05.275 --> 01:19:08.715
+was the uh, uh,
+
+1675
+01:19:10.695 --> 01:19:12.635
+was the input which is coming from this one.
+
+1676
+01:19:13.215 --> 01:19:16.555
+So output, which is coming from this one can, uh, is going
+
+1677
+01:19:16.555 --> 01:19:20.835
+to be the, uh, you can say that the, uh, input
+
+1678
+01:19:20.855 --> 01:19:22.035
+for the next convolution.
+
+1679
+01:19:22.035 --> 01:19:25.035
+Yeah, 32 cross 32, uh, sorry, uh, the
+
+1680
+01:19:25.625 --> 01:19:27.075
+convolution, yeah, 32.
+
+1681
+01:19:27.535 --> 01:19:29.715
+So you will have the, this number
+
+1682
+01:19:29.735 --> 01:19:34.155
+of input would be 32, 64 will be the number of,
+
+1683
+01:19:34.335 --> 01:19:36.835
+you can say that the filters kernel size again, three,
+
+1684
+01:19:36.835 --> 01:19:38.275
+which you can change for cross four.
+
+1685
+01:19:38.295 --> 01:19:40.555
+So you can do, but here it is kept as three.
+
+1686
+01:19:40.655 --> 01:19:42.355
+So everything is same. Only thing is here.
+
+1687
+01:19:42.355 --> 01:19:43.755
+The number of filters is increased.
+
+1688
+01:19:43.755 --> 01:19:46.995
+Padding is same, then relu, then rationalization
+
+1689
+01:19:46.995 --> 01:19:50.435
+and max pooling again, we are doing, so yeah,
+
+1690
+01:19:50.535 --> 01:19:51.755
+two layers of convolution.
+
+1691
+01:19:51.935 --> 01:19:53.395
+We have kept in one container
+
+1692
+01:19:53.975 --> 01:19:56.465
+that is called features followed by it.
+
+1693
+01:19:56.615 --> 01:19:59.945
+What we have seen, we have one flatten layer
+
+1694
+01:20:00.165 --> 01:20:03.285
+and then two hidden layer and one output layer.
+
+1695
+01:20:03.395 --> 01:20:06.125
+Okay? And that is what we are going to see next.
+
+1696
+01:20:06.625 --> 01:20:08.245
+We have one more sequential container.
+
+1697
+01:20:08.275 --> 01:20:09.885
+This container damage classifier.
+
+1698
+01:20:09.885 --> 01:20:11.165
+First we do the flatten layer
+
+1699
+01:20:11.225 --> 01:20:13.485
+and then we have the first hidden layer
+
+1700
+01:20:14.185 --> 01:20:15.365
+to this first hidden layer.
+
+1701
+01:20:15.865 --> 01:20:18.525
+The input is 64 cross seven, cross seven.
+
+1702
+01:20:19.265 --> 01:20:23.205
+Now, uh, how does this 64 cross seven, cross seven has come.
+
+1703
+01:20:23.385 --> 01:20:26.725
+So first of all, you have to understand this, that 64 number
+
+1704
+01:20:26.905 --> 01:20:30.565
+of features metrics you will get from the last
+
+1705
+01:20:30.715 --> 01:20:32.005
+convolution layer.
+
+1706
+01:20:32.815 --> 01:20:34.765
+64 number of features.
+
+1707
+01:20:35.515 --> 01:20:38.565
+Each feature size would be seven across seven.
+
+1708
+01:20:38.655 --> 01:20:40.725
+After passing through this convolution,
+
+1709
+01:20:41.235 --> 01:20:43.205
+each feature size would be 64.
+
+1710
+01:20:43.205 --> 01:20:46.405
+Number of feature metrics, you will get 64 numbers.
+
+1711
+01:20:46.905 --> 01:20:48.925
+Now what will be the size of those feature metrics?
+
+1712
+01:20:49.335 --> 01:20:53.165
+Seven across seven. That's why this will be 64 across seven.
+
+1713
+01:20:53.165 --> 01:20:54.805
+Across seven. Okay.
+
+1714
+01:20:55.285 --> 01:20:57.125
+I know there might be little difficulty
+
+1715
+01:20:57.125 --> 01:20:58.205
+in understanding that part.
+
+1716
+01:20:58.265 --> 01:21:01.765
+So what is happening here is, let me explain it once again.
+
+1717
+01:21:02.155 --> 01:21:03.965
+Here we are having 32 filters.
+
+1718
+01:21:04.225 --> 01:21:07.565
+32 filters means here what will be the size
+
+1719
+01:21:07.895 --> 01:21:10.485
+after the max pooling, what will be the size?
+
+1720
+01:21:11.345 --> 01:21:16.205
+So after the max pooling, you will get 32 features here,
+
+1721
+01:21:16.205 --> 01:21:18.285
+32 metrics mattresses,
+
+1722
+01:21:18.905 --> 01:21:21.605
+and uh, if it is a zero padding,
+
+1723
+01:21:21.605 --> 01:21:23.965
+zero padding means you are using the formula
+
+1724
+01:21:24.145 --> 01:21:28.365
+and minus F plus one and minus F plus one, okay?
+
+1725
+01:21:28.635 --> 01:21:30.525
+With one stride. That is what you're using.
+
+1726
+01:21:31.105 --> 01:21:34.965
+So here what you will get 32, uh, 28 was the
+
+1727
+01:21:35.625 --> 01:21:39.205
+MS size 3 28 minus three plus one.
+
+1728
+01:21:40.155 --> 01:21:44.445
+Okay, so how much? It'll be 26. So 26.
+
+1729
+01:21:44.865 --> 01:21:47.725
+So how 26 across 26 will be the size
+
+1730
+01:21:47.725 --> 01:21:49.245
+of each feature map here.
+
+1731
+01:21:50.025 --> 01:21:52.525
+And how many such feature maps? 32. 32.
+
+1732
+01:21:52.525 --> 01:21:55.345
+Because 32 filters you're applying here are you getting,
+
+1733
+01:21:55.605 --> 01:21:59.025
+so then that 26 to 26, you'll pass it
+
+1734
+01:21:59.025 --> 01:22:02.185
+through this max pooling, which will reduce it to
+
+1735
+01:22:03.265 --> 01:22:06.145
+13 across 13 because two strategical two.
+
+1736
+01:22:06.165 --> 01:22:09.145
+But how many? Such 32 will be 32.
+
+1737
+01:22:09.145 --> 01:22:12.985
+Such, uh, feature map you will remain 32 filter, uh,
+
+1738
+01:22:12.985 --> 01:22:16.025
+feature map with 16 cross 16 sites,
+
+1739
+01:22:16.375 --> 01:22:18.785
+16 across 16 sites of the metrics.
+
+1740
+01:22:19.655 --> 01:22:23.305
+Okay? And then you apply the same uh, here, uh,
+
+1741
+01:22:23.305 --> 01:22:25.585
+32 across 32 across 16.
+
+1742
+01:22:25.585 --> 01:22:28.705
+That is what you have. You apply with the 64 filters.
+
+1743
+01:22:28.835 --> 01:22:29.985
+64 filters.
+
+1744
+01:22:30.365 --> 01:22:33.745
+So 64 filters means then 64 feature metrics,
+
+1745
+01:22:33.845 --> 01:22:37.265
+you will get 64 feature metrics you will get, okay?
+
+1746
+01:22:37.485 --> 01:22:41.305
+And it was each of them was like 16 cross 16 here.
+
+1747
+01:22:42.005 --> 01:22:43.345
+Uh, right. And that,
+
+1748
+01:22:43.345 --> 01:22:46.825
+that 16 minus three plus one will remain age 14,
+
+1749
+01:22:48.055 --> 01:22:51.025
+16 minus three plus one will remain age 14
+
+1750
+01:22:51.685 --> 01:22:55.465
+and then 14 cross 14, when you'll apply with the stride,
+
+1751
+01:22:55.555 --> 01:22:59.375
+it'll be seven, cross seven and 64 will carry from here.
+
+1752
+01:22:59.375 --> 01:23:00.455
+64. 64.
+
+1753
+01:23:00.635 --> 01:23:05.565
+That's why the size of this sensor will be 64 across seven.
+
+1754
+01:23:05.565 --> 01:23:09.955
+Across seven. Okay, let me write it here. For how much time?
+
+1755
+01:23:09.955 --> 01:23:11.035
+Yeah, we have some time.
+
+1756
+01:23:11.655 --> 01:23:16.505
+So what is happening here is uh, uh,
+
+1757
+01:23:16.535 --> 01:23:19.785
+okay, so what is happening here is, so you're applying 32.
+
+1758
+01:23:19.845 --> 01:23:23.065
+So here our size of the image 28 across 28, okay,
+
+1759
+01:23:23.825 --> 01:23:25.025
+applying three cross three filters.
+
+1760
+01:23:25.025 --> 01:23:26.225
+So normal. So what will happen
+
+1761
+01:23:26.225 --> 01:23:27.825
+and minus f plus one, this is the formula.
+
+1762
+01:23:27.895 --> 01:23:32.065
+What we are using N okay, N is here 28 minus
+
+1763
+01:23:32.825 --> 01:23:34.825
+FF here is three
+
+1764
+01:23:34.825 --> 01:23:38.025
+because three cross three filter plus one, okay?
+
+1765
+01:23:38.335 --> 01:23:39.385
+Plus one.
+
+1766
+01:23:39.885 --> 01:23:42.025
+So it what will be remain here
+
+1767
+01:23:42.045 --> 01:23:44.905
+and 28 minus three plus one is 26.
+
+1768
+01:23:45.285 --> 01:23:48.905
+So now whatever feature you will get here, that will be
+
+1769
+01:23:49.005 --> 01:23:52.385
+of size 26 cross 26.
+
+1770
+01:23:54.635 --> 01:23:58.135
+How many, how many such features you will get 32 filters.
+
+1771
+01:23:58.135 --> 01:24:01.535
+32 filters you're applying means 32 such features,
+
+1772
+01:24:01.595 --> 01:24:03.095
+you will get 32.
+
+1773
+01:24:03.095 --> 01:24:07.505
+Such features you will get, okay, now coming, coming
+
+1774
+01:24:07.565 --> 01:24:09.225
+to max layer, what will happen,
+
+1775
+01:24:09.735 --> 01:24:12.545
+because you're applying a stride is equal to two,
+
+1776
+01:24:13.415 --> 01:24:17.145
+this 20 clause 26 core 26 will be reduced to 13 clause 13
+
+1777
+01:24:17.145 --> 01:24:18.665
+because stride is equal to two.
+
+1778
+01:24:18.805 --> 01:24:21.225
+So you can simply divide it by two
+
+1779
+01:24:21.645 --> 01:24:24.985
+and you will left here with 13 across 13.
+
+1780
+01:24:25.575 --> 01:24:28.465
+This is the size I'm talking, this is the size
+
+1781
+01:24:28.605 --> 01:24:31.185
+of the feature, uh, features what you are left with,
+
+1782
+01:24:31.485 --> 01:24:34.305
+how many you are still having 32
+
+1783
+01:24:34.535 --> 01:24:38.715
+because 32 filters you have used, you're still having 32 uh,
+
+1784
+01:24:39.145 --> 01:24:42.315
+such, uh, uh, features, uh,
+
+1785
+01:24:42.315 --> 01:24:44.715
+feature feature metrics.
+
+1786
+01:24:44.775 --> 01:24:48.835
+You have 30 13, column 13 is a size 13 to 13 column.
+
+1787
+01:24:48.895 --> 01:24:51.955
+But how many? 32. Now you apply again convolution.
+
+1788
+01:24:52.335 --> 01:24:54.155
+So what happened in the convolution, again,
+
+1789
+01:24:54.375 --> 01:24:58.275
+you do n minus f plus one size of the image is 13 plus 13.
+
+1790
+01:24:58.555 --> 01:25:02.185
+13 minus three plus one. Okay?
+
+1791
+01:25:02.845 --> 01:25:05.825
+So, uh, uh, 20, sorry,
+
+1792
+01:25:06.095 --> 01:25:10.785
+here 28, 26, 26, uh, means, uh, 13, 13,
+
+1793
+01:25:11.685 --> 01:25:13.665
+uh, 13 minus three plus one.
+
+1794
+01:25:13.665 --> 01:25:15.625
+Suppose you are doing to 13 minus three is equal to 10.
+
+1795
+01:25:16.005 --> 01:25:17.585
+So you will left here with 11.
+
+1796
+01:25:17.785 --> 01:25:21.135
+I guess in that case you'll have to hear with 11, okay?
+
+1797
+01:25:21.275 --> 01:25:23.775
+11 cross level will be the size of the image. How many?
+
+1798
+01:25:23.785 --> 01:25:25.535
+64 filters be 64?
+
+1799
+01:25:26.285 --> 01:25:28.935
+Such filters means features you will remain with.
+
+1800
+01:25:29.195 --> 01:25:31.895
+Now if you'll apply here, two, cross two, you have
+
+1801
+01:25:31.895 --> 01:25:32.895
+to divide it by two.
+
+1802
+01:25:33.285 --> 01:25:35.495
+That is what is the rule? That is what is the rule. Okay?
+
+1803
+01:25:36.075 --> 01:25:37.895
+So that is what I'm doing here.
+
+1804
+01:25:37.895 --> 01:25:39.455
+There is some mismatch I understand.
+
+1805
+01:25:39.515 --> 01:25:42.455
+So from 28 we will come to the 26
+
+1806
+01:25:42.995 --> 01:25:44.935
+and uh, strategical to two.
+
+1807
+01:25:45.995 --> 01:25:49.655
+So, uh, I should, uh, 28. Okay?
+
+1808
+01:25:50.115 --> 01:25:51.255
+Uh, so this is, uh,
+
+1809
+01:25:51.255 --> 01:25:53.615
+this calculation here is different from here.
+
+1810
+01:25:54.035 --> 01:25:58.135
+Why I will tell you because, sorry, lemme just close.
+
+1811
+01:25:58.465 --> 01:26:00.295
+Lemme just erase this. Everything.
+
+1812
+01:26:02.115 --> 01:26:04.605
+So what is here is here.
+
+1813
+01:26:04.625 --> 01:26:06.885
+If you see in our implementation, you will see
+
+1814
+01:26:06.885 --> 01:26:09.325
+that here I end up with 64 plus seven plus seven.
+
+1815
+01:26:09.465 --> 01:26:11.605
+But there it was a fraction which is coming at the last
+
+1816
+01:26:11.735 --> 01:26:12.805
+difference is here.
+
+1817
+01:26:12.805 --> 01:26:13.965
+Padding is equal to same.
+
+1818
+01:26:14.475 --> 01:26:17.525
+When do padding is equal to same size doesn't change.
+
+1819
+01:26:18.215 --> 01:26:22.005
+Means if you start with 32 filters here, uh,
+
+1820
+01:26:22.105 --> 01:26:24.565
+but means 28 cross 28 here also you end up
+
+1821
+01:26:24.565 --> 01:26:26.765
+with 28 cross 28 in this particular layer.
+
+1822
+01:26:27.065 --> 01:26:30.005
+But this 28 cross 28 divided by two will remain 14,
+
+1823
+01:26:30.005 --> 01:26:31.525
+cross 14, okay?
+
+1824
+01:26:31.745 --> 01:26:35.685
+Now 14, cross 14 here will remain based, uh, uh, uh,
+
+1825
+01:26:35.755 --> 01:26:40.325
+like say, uh, 28, 28, 14
+
+1826
+01:26:40.625 --> 01:26:43.045
+and 14, uh, will remain 14 here
+
+1827
+01:26:43.185 --> 01:26:45.685
+and that will be divided here will remain seven plus seven.
+
+1828
+01:26:45.685 --> 01:26:49.405
+That's why you are left with 64 into seven into seven.
+
+1829
+01:26:49.405 --> 01:26:51.445
+That is the size of this particular tensor,
+
+1830
+01:26:51.575 --> 01:26:52.765
+which we are flattening.
+
+1831
+01:26:53.345 --> 01:26:54.525
+And that is what you can see here.
+
+1832
+01:26:54.905 --> 01:26:58.045
+So that then the, into the, to to my first hidden layer
+
+1833
+01:26:58.505 --> 01:26:59.965
+to this particular hidden layer,
+
+1834
+01:27:00.715 --> 01:27:02.365
+what is the size of this flatten layer?
+
+1835
+01:27:02.425 --> 01:27:04.485
+It is like 20, uh, what is that?
+
+1836
+01:27:04.655 --> 01:27:06.725
+64 across seven across seven.
+
+1837
+01:27:06.815 --> 01:27:08.725
+Those many inputs we are going to feed,
+
+1838
+01:27:08.875 --> 01:27:10.125
+that is what is written here.
+
+1839
+01:27:10.515 --> 01:27:15.135
+Then in the first hidden layer, 1 28 euro applying relu, uh,
+
+1840
+01:27:15.135 --> 01:27:16.415
+here also and drop out.
+
+1841
+01:27:16.605 --> 01:27:19.735
+Then in the second hidden layer from 1 28 inputs, we go
+
+1842
+01:27:19.735 --> 01:27:22.375
+to 64 neuron dropout.
+
+1843
+01:27:22.555 --> 01:27:25.715
+And from 64 we go to 10. Okay?
+
+1844
+01:27:25.775 --> 01:27:28.115
+So this is my three fully connected layer,
+
+1845
+01:27:28.115 --> 01:27:30.395
+what you can see here, and that is what is being applied.
+
+1846
+01:27:30.545 --> 01:27:31.595
+That is what is being applied.
+
+1847
+01:27:31.905 --> 01:27:35.635
+This is the another change you do as compared to your a NN
+
+1848
+01:27:36.295 --> 01:27:37.955
+uh, a n code.
+
+1849
+01:27:38.215 --> 01:27:40.875
+So we have built here this network, okay?
+
+1850
+01:27:40.875 --> 01:27:42.995
+It looks difficult, right? But we have built,
+
+1851
+01:27:43.255 --> 01:27:45.635
+that's all rest, all the code will be same
+
+1852
+01:27:46.315 --> 01:27:50.155
+learning rate apoch, my NN uh, everything is same.
+
+1853
+01:27:50.215 --> 01:27:52.395
+In fact, training loop is same, no change.
+
+1854
+01:27:52.395 --> 01:27:56.645
+Only thing my network has changed. No. Okay? Uh, that's all.
+
+1855
+01:27:57.065 --> 01:27:59.405
+But both, both of these function, you see
+
+1856
+01:27:59.405 --> 01:28:02.525
+that it is coming one after other in the constructor.
+
+1857
+01:28:02.665 --> 01:28:05.005
+So whenever we'll create an object of it,
+
+1858
+01:28:05.035 --> 01:28:06.805
+constructed will get called first.
+
+1859
+01:28:06.835 --> 01:28:07.965
+This will get executed,
+
+1860
+01:28:07.995 --> 01:28:10.685
+then this will get executed automatically in a sequence.
+
+1861
+01:28:11.435 --> 01:28:13.645
+Okay? So that's all.
+
+1862
+01:28:13.905 --> 01:28:18.285
+And then you will end up, uh, with what you will create, uh,
+
+1863
+01:28:18.285 --> 01:28:19.965
+the training loop, no change.
+
+1864
+01:28:20.505 --> 01:28:22.845
+And if you see here only 20 epoch,
+
+1865
+01:28:22.845 --> 01:28:25.045
+because it was taking a little more time, a lot
+
+1866
+01:28:25.045 --> 01:28:28.765
+of calculations were happening right then, uh, when I, uh,
+
+1867
+01:28:28.765 --> 01:28:32.045
+stopped it after 20 epoch, this is what was the situation.
+
+1868
+01:28:32.505 --> 01:28:35.125
+My training accuracy was 97%.
+
+1869
+01:28:36.195 --> 01:28:40.385
+Again, training accuracy jumped from 93 to 97,
+
+1870
+01:28:41.165 --> 01:28:44.465
+but evaluation accuracy has also jumped from
+
+1871
+01:28:44.465 --> 01:28:46.225
+89 88 to 92.
+
+1872
+01:28:46.765 --> 01:28:48.985
+So the gap, if you'll see is still there is a 5%.
+
+1873
+01:28:49.205 --> 01:28:51.425
+So word fitting is still there. Okay?
+
+1874
+01:28:51.585 --> 01:28:54.025
+I, we have to do something to reduce this over fitting,
+
+1875
+01:28:54.725 --> 01:28:56.865
+but accuracy has increased with the CNN
+
+1876
+01:28:56.865 --> 01:28:59.065
+because now it has understood image
+
+1877
+01:28:59.065 --> 01:29:03.045
+as a data rather than just one dimens input as a data.
+
+1878
+01:29:03.345 --> 01:29:06.185
+So this is what is the, I'll stop here
+
+1879
+01:29:06.185 --> 01:29:07.545
+for your questions, okay?
+
+1880
+01:29:07.565 --> 01:29:09.265
+And we'll see the next thing in the next class.
+
+1881
+01:29:11.805 --> 01:29:14.145
+Sir, one quick question here, sir for a second.
+
+1882
+01:29:14.185 --> 01:29:17.705
+Conventional here, do we need to always increase the number
+
+1883
+01:29:17.705 --> 01:29:18.705
+of filters, sir?
+
+1884
+01:29:19.005 --> 01:29:20.105
+Uh, why we do,
+
+1885
+01:29:20.105 --> 01:29:23.745
+because, uh, I mean it's a good practice, although it is not.
+
+1886
+01:29:23.935 --> 01:29:25.865
+It's again, it's your wish.
+
+1887
+01:29:26.005 --> 01:29:27.825
+How many filters you want to add here?
+
+1888
+01:29:27.825 --> 01:29:29.185
+Here we have added 64.
+
+1889
+01:29:29.885 --> 01:29:32.065
+Yes Sir. You could have done, you can could have stayed
+
+1890
+01:29:32.125 --> 01:29:33.545
+32 could have reduced it.
+
+1891
+01:29:33.575 --> 01:29:36.705
+Also, only challenge would be if you reduce
+
+1892
+01:29:36.735 --> 01:29:37.905
+here, now what will happen?
+
+1893
+01:29:38.285 --> 01:29:41.185
+You are following it by max pooling where strategical
+
+1894
+01:29:41.185 --> 01:29:43.705
+to two, it'll further reduce the size of your
+
+1895
+01:29:43.895 --> 01:29:45.745
+what distance, sir.
+
+1896
+01:29:45.745 --> 01:29:48.865
+Finally, what you're going to get, it should not happen
+
+1897
+01:29:48.865 --> 01:29:51.585
+that you are end up here with a zero value, A zero features
+
+1898
+01:29:52.175 --> 01:29:55.025
+because the, the nature of the CNN
+
+1899
+01:29:55.025 --> 01:29:57.545
+and pooling it, it'll reduce the size of the input.
+
+1900
+01:29:58.885 --> 01:30:01.025
+So if I have shown here only two layers,
+
+1901
+01:30:01.085 --> 01:30:04.345
+but you can add 10 layers also, if you will not maintain
+
+1902
+01:30:04.345 --> 01:30:08.025
+that increasing number of filter, then overall at last,
+
+1903
+01:30:08.025 --> 01:30:09.425
+what you will end up with this,
+
+1904
+01:30:09.495 --> 01:30:12.345
+this sensor will have very small size or almost wrong.
+
+1905
+01:30:12.345 --> 01:30:15.665
+Almost it'll be zero because it directly divided by two.
+
+1906
+01:30:16.325 --> 01:30:19.825
+So 64, 20, 28 got divided
+
+1907
+01:30:19.885 --> 01:30:22.585
+by 2 14, 4 14 got divided by two seven.
+
+1908
+01:30:23.125 --> 01:30:25.625
+One more layer. If I add, I almost will be one
+
+1909
+01:30:25.625 --> 01:30:29.025
+or two if I don't increase the conation filter here.
+
+1910
+01:30:29.165 --> 01:30:32.065
+That's why that's a good practice to add the con filter.
+
+1911
+01:30:32.525 --> 01:30:34.945
+But if you're sufficient, if you are assured
+
+1912
+01:30:34.945 --> 01:30:36.345
+that my MS size is too big
+
+1913
+01:30:36.525 --> 01:30:40.825
+and with two layers of convolution I want, uh, big, uh,
+
+1914
+01:30:40.825 --> 01:30:42.185
+getting into that particular problem,
+
+1915
+01:30:42.495 --> 01:30:43.905
+then you can keep the same normal filter.
+
+1916
+01:30:43.905 --> 01:30:45.625
+Does it matter? Yeah, matter.
+
+1917
+01:30:46.265 --> 01:30:47.755
+Yeah, sure, sir. Thank you sir.
+
+1918
+01:30:48.805 --> 01:30:50.495
+Well, one more do that, uh,
+
+1919
+01:30:50.495 --> 01:30:53.575
+after the, uh, from two dimensional
+
+1920
+01:30:53.575 --> 01:30:57.215
+to one dimensional array, where in flattening means, uh,
+
+1921
+01:30:57.715 --> 01:30:59.175
+the dimensional will go up.
+
+1922
+01:30:59.175 --> 01:31:01.775
+Now, if that, uh, minus is increasing
+
+1923
+01:31:02.325 --> 01:31:03.935
+This much, this, the dimension
+
+1924
+01:31:03.935 --> 01:31:06.935
+of the platinum input will be 64 across sims, across seven,
+
+1925
+01:31:07.065 --> 01:31:10.745
+these many, but that doesn't matter, right?
+
+1926
+01:31:10.845 --> 01:31:12.425
+We will connect it with the fully connected
+
+1927
+01:31:12.505 --> 01:31:13.545
+layer, we'll process it.
+
+1928
+01:31:13.545 --> 01:31:15.945
+Those many weights would be required obviously. Yeah.
+
+1929
+01:31:17.245 --> 01:31:18.345
+How many weights would be here?
+
+1930
+01:31:18.355 --> 01:31:21.945
+64 cross seven, cross seven into 1 28. Yes.
+
+1931
+01:31:22.205 --> 01:31:23.985
+So yeah, parameters would be here too much.
+
+1932
+01:31:24.175 --> 01:31:25.945
+That is true, but yeah, we can process it
+
+1933
+01:31:26.015 --> 01:31:27.785
+with the system what we have here.
+
+1934
+01:31:29.745 --> 01:31:30.035
+Okay,
+
+1935
+01:31:34.585 --> 01:31:35.005
+others?
+
+1936
+01:31:35.345 --> 01:31:39.075
+Any question? Does it making sense that how
+
+1937
+01:31:39.075 --> 01:31:40.075
+to build the c nnn?
+
+1938
+01:31:40.075 --> 01:31:41.195
+What is going inside?
+
+1939
+01:31:41.225 --> 01:31:42.995
+What is convolution layer, pooling layer
+
+1940
+01:31:42.995 --> 01:31:44.235
+or it is going on the top?
+
+1941
+01:31:46.595 --> 01:31:47.595
+Yes, sir.
+
+1942
+01:31:48.885 --> 01:31:51.575
+It's making some sense. Making some sense. Okay.
+
+1943
+01:31:51.715 --> 01:31:54.895
+We need to hear another two, three times of this, it'll,
+
+1944
+01:31:56.805 --> 01:31:57.805
+Okay. Okay. So
+
+1945
+01:31:57.805 --> 01:31:58.295
+for
+
+1946
+01:31:58.645 --> 01:32:02.925
+Example, padding is done for, uh, three times, right?
+
+1947
+01:32:02.955 --> 01:32:06.365
+Like uh, three cross, uh, like it is increased three times.
+
+1948
+01:32:07.275 --> 01:32:10.405
+That means uh, the input is made to 34,
+
+1949
+01:32:10.405 --> 01:32:12.605
+right? 34 cross
+
+1950
+01:32:12.605 --> 01:32:17.005
+34, 28 we started the MS size, correct?
+
+1951
+01:32:17.225 --> 01:32:19.005
+28 cross 28, 32,
+
+1952
+01:32:19.065 --> 01:32:20.065
+Sir? No,
+
+1953
+01:32:20.065 --> 01:32:22.165
+no. In this example it was 28 only.
+
+1954
+01:32:22.565 --> 01:32:26.005
+I mean in the, it's 28 PPTI showed you 32, correct?
+
+1955
+01:32:26.425 --> 01:32:28.845
+But then in this example it was just,
+
+1956
+01:32:31.545 --> 01:32:36.285
+uh, it is, it is 28, cross 28 because 7 84 pixels, right?
+
+1957
+01:32:37.525 --> 01:32:41.295
+Okay. 7 7 84 pixels. It's 28 plus 28 here.
+
+1958
+01:32:41.555 --> 01:32:44.735
+Yes sir. Okay. Yeah.
+
+1959
+01:32:45.755 --> 01:32:46.755
+So what was the question?
+
+1960
+01:32:48.685 --> 01:32:51.225
+Uh, no sir. I think, uh, pretty much it.
+
+1961
+01:32:52.055 --> 01:32:52.345
+Okay.
+
+1962
+01:32:58.075 --> 01:32:59.645
+Okay. So one thing
+
+1963
+01:32:59.645 --> 01:33:02.765
+before, we'll close these CNNs are good when you have this
+
+1964
+01:33:02.765 --> 01:33:05.685
+great sort of data when image data
+
+1965
+01:33:05.855 --> 01:33:08.365
+where we would've passed one dimension also,
+
+1966
+01:33:08.365 --> 01:33:09.845
+which we have done in the case of PNN,
+
+1967
+01:33:09.845 --> 01:33:13.005
+but then spatial features, region wise features
+
+1968
+01:33:13.115 --> 01:33:14.445
+because those, that in
+
+1969
+01:33:14.445 --> 01:33:16.365
+that region only the pixel values is high.
+
+1970
+01:33:16.365 --> 01:33:18.605
+Rest of the reason is it's zero.
+
+1971
+01:33:19.225 --> 01:33:21.925
+So we are giving the special focus to
+
+1972
+01:33:21.925 --> 01:33:23.765
+that region while extracting the features.
+
+1973
+01:33:23.765 --> 01:33:26.565
+That is what makes the CNN different from the a NN,
+
+1974
+01:33:26.565 --> 01:33:28.285
+which is required in the case of images.
+
+1975
+01:33:29.075 --> 01:33:31.005
+Okay? And that's why it is performing little better.
+
+1976
+01:33:31.005 --> 01:33:32.805
+You have seen that my training
+
+1977
+01:33:32.825 --> 01:33:35.125
+and validation, both accuracy has jumped.
+
+1978
+01:33:35.795 --> 01:33:37.405
+Obviously there is over fitting problem,
+
+1979
+01:33:37.405 --> 01:33:39.045
+which we'll see in the coming classes how
+
+1980
+01:33:39.045 --> 01:33:40.605
+to overcome with that.
+
+1981
+01:33:40.755 --> 01:33:44.375
+Yeah. Okay, sure sir. Yeah.
+
+1982
+01:33:44.595 --> 01:33:45.935
+And tomorrow there is no class.
+
+1983
+01:33:46.715 --> 01:33:48.935
+And the two more announcement on Monday,
+
+1984
+01:33:49.025 --> 01:33:51.215
+we'll release the, uh, assignment.
+
+1985
+01:33:52.025 --> 01:33:54.695
+Assignment will be the coding based assignment
+
+1986
+01:33:54.945 --> 01:33:58.335
+where we may ask you to build some CNN based networks,
+
+1987
+01:33:58.335 --> 01:34:01.335
+including an a NN write and do some tasks.
+
+1988
+01:34:01.345 --> 01:34:03.255
+We'll give you the data set, which will be common,
+
+1989
+01:34:03.355 --> 01:34:06.015
+but you're free to build any kind of CNN network
+
+1990
+01:34:06.195 --> 01:34:08.895
+and we'll collect, we'll give you two weeks time from the
+
+1991
+01:34:08.895 --> 01:34:12.215
+next Monday, 15 days time to submit your assignment.
+
+1992
+01:34:12.685 --> 01:34:15.935
+Okay? Second announcement is next Saturday.
+
+1993
+01:34:16.445 --> 01:34:17.615
+This Saturday you don't have
+
+1994
+01:34:17.615 --> 01:34:18.775
+class tomorrow, you don't have class.
+
+1995
+01:34:19.405 --> 01:34:23.255
+Next Saturday you will have the mid-semester examination.
+
+1996
+01:34:24.205 --> 01:34:26.575
+Okay, because we are now ending the seventh week.
+
+1997
+01:34:26.635 --> 01:34:30.015
+So we are now have to have the mid-semester examination.
+
+1998
+01:34:31.755 --> 01:34:34.895
+What's the format? Uh, sim semester,
+
+1999
+01:34:35.395 --> 01:34:38.975
+Mid sim will be again, uh, again, uh, multi m CQ based.
+
+2000
+01:34:39.845 --> 01:34:41.175
+Okay. Yeah.
+
+2001
+01:34:41.845 --> 01:34:44.415
+Only the end semester will be descriptive as we did
+
+2002
+01:34:44.415 --> 01:34:46.375
+for the MLP will go in the same way.
+
+2003
+01:34:46.375 --> 01:34:49.295
+Otherwise, uh, m mid semester will also will be MCQ
+
+2004
+01:34:50.215 --> 01:34:52.775
+portions will be complete CNN part
+
+2005
+01:34:52.775 --> 01:34:54.335
+availability extra obviously.
+
+2006
+01:34:54.365 --> 01:34:56.095
+Yeah. But then portions will be complete.
+
+2007
+01:34:57.565 --> 01:34:59.115
+We'll repeat it on the Monday also,
+
+2008
+01:34:59.115 --> 01:35:02.555
+but, uh, I just thought of telling you today, sir.
+
+2009
+01:35:02.665 --> 01:35:03.665
+Okay?
+
+2010
+01:35:03.975 --> 01:35:06.275
+Yes. May 10th, uh,
+
+2011
+01:35:06.405 --> 01:35:09.155
+10th of January it'll be sir
+
+2012
+01:35:09.485 --> 01:35:10.485
+10th? Yes. Next
+
+2013
+01:35:10.485 --> 01:35:12.435
+day, correct? Correct.
+
+2014
+01:35:13.055 --> 01:35:14.155
+The kind request, uh,
+
+2015
+01:35:14.155 --> 01:35:16.075
+timing should be preferable in the evening
+
+2016
+01:35:16.075 --> 01:35:17.515
+because Saturday also we're working.
+
+2017
+01:35:19.185 --> 01:35:21.565
+Oh, okay. Okay. So you don't want, but whatever.
+
+2018
+01:35:21.645 --> 01:35:22.925
+I thought that during the class hour
+
+2019
+01:35:22.925 --> 01:35:24.165
+itself, we can conduct that.
+
+2020
+01:35:24.985 --> 01:35:26.245
+Uh, that would be fine, sir.
+
+2021
+01:35:26.245 --> 01:35:29.085
+But Saturday, uh, it's nine to 10 30 of class,
+
+2022
+01:35:29.265 --> 01:35:30.645
+but we are working on that day.
+
+2023
+01:35:31.285 --> 01:35:32.405
+I mean, every Saturday we work.
+
+2024
+01:35:32.785 --> 01:35:35.675
+Mm-hmm. Okay.
+
+2025
+01:35:35.745 --> 01:35:38.595
+Then we'll see that will, but Saturday will be the exam.
+
+2026
+01:35:39.065 --> 01:35:41.155
+Sure. I'll just talk with the team whether it'll be
+
+2027
+01:35:41.155 --> 01:35:42.275
+morning or evening, okay?
+
+2028
+01:35:42.275 --> 01:35:45.545
+Okay. Okay. Yeah. Okay. We'll see you on Monday then.
+
+2029
+01:35:45.545 --> 01:35:46.545
+Thank you.
+
+2030
+01:35:47.645 --> 01:35:50.615
+Yeah, sir. Also Saturday we have a class in the evening
+
+2031
+01:35:50.645 --> 01:35:54.215
+from 7 45 to nine 15 different class,
+
+2032
+01:35:55.325 --> 01:35:57.625
+Uh, 7 45, which, which course class,
+
+2033
+01:35:57.885 --> 01:36:01.665
+Uh, LRS, uh, literature review seminar taken
+
+2034
+01:36:01.805 --> 01:36:02.985
+by, uh, personas, sir.
+
+2035
+01:36:04.565 --> 01:36:06.625
+Uh, okay.
+
+2036
+01:36:06.625 --> 01:36:08.265
+Then, uh, what to do you people,
+
+2037
+01:36:08.315 --> 01:36:09.505
+we'll, we'll discuss on Monday.
+
+2038
+01:36:09.615 --> 01:36:11.385
+Okay? We are exceeding the time. We'll discuss it.
+
+2039
+01:36:11.705 --> 01:36:14.745
+Previous, uh, test was conducted on weekdays, sir,
+
+2040
+01:36:15.105 --> 01:36:17.975
+actually previous test for, uh, deep learning.
+
+2041
+01:36:18.195 --> 01:36:20.935
+Mm-hmm. It was conducted in weekdays Monday, I think.
+
+2042
+01:36:22.675 --> 01:36:26.495
+Uh, we'll discuss that. Yeah. Thank you.
+
+2043
+01:36:27.835 --> 01:36:28.835
+Thank You, sir. Goodnight.
+
+2044
+01:36:30.715 --> 01:36:32.385
+Thank you. Thank you, sir. Thank you.
