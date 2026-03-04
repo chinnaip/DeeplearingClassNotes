@@ -1,0 +1,3263 @@
+\documentclass[12pt,a4paper]{article}
+
+%% ---------- mathematics ----------
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+
+%% ---------- graphics & diagrams ----------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds,matrix,decorations.pathreplacing}
+\usepackage{graphicx}
+
+%% ---------- tables ----------
+\usepackage{booktabs,tabularx,multirow,longtable,array}
+
+%% ---------- algorithms ----------
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+%% ---------- coloured boxes ----------
+\usepackage[most]{tcolorbox}
+
+%% ---------- hyperlinks & cross-refs ----------
+\usepackage{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%% ---------- page layout ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+%% ---------- fonts & misc ----------
+\usepackage{microtype}
+
+%% ============================================================
+%%  Custom tcolorbox environments
+%% ============================================================
+\newtcolorbox{keyinsight}[1][]{%
+  colback=blue!5!white,colframe=blue!75!black,
+  fonttitle=\bfseries,title=Key Insight,#1}
+
+\newtcolorbox{example}[1][]{%
+  colback=green!5!white,colframe=green!75!black,
+  fonttitle=\bfseries,title=Example,#1}
+
+\newtcolorbox{warningbox}[1][]{%
+  colback=red!5!white,colframe=red!75!black,
+  fonttitle=\bfseries,title=Warning,#1}
+
+%% ============================================================
+%%  amsthm environments
+%% ============================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+%% ============================================================
+%%  Custom commands (collected from all sessions in this file)
+%% ============================================================
+\newcommand{\xt}{x_t}
+\newcommand{\ht}{h_t}
+\newcommand{\hprev}{h_{t-1}}
+\newcommand{\sigmoid}{\sigma}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\odotop}{\odot}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textsc{Deep Learning} --- IIIT Dharwad}
+\rhead{LSTM: Theory, Gates, and Numerical Practice}
+\rfoot{Page \thepage}
+\lfoot{Prof.\ S R M Prasanna \& Dr.\ Sunil Saumya}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\title{%
+  {\Large\bfseries Deep Learning Course}\\[6pt]
+  {\LARGE LSTM: Theory, Gates, and Numerical Practice}\\[4pt]
+  {\normalsize IIIT Dharwad --- M.Tech Programme}
+}
+\author{Prof.\ S R M Prasanna \& Dr.\ Sunil Saumya}
+\date{Sessions 18, 19, 20}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\clearpage
+
+%% ============================================================
+%% Session 18: RNN Hands-On and LSTM Introduction
+%% ============================================================
+\part{Session 18: RNN Hands-On and LSTM Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ── Title page ──────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Huge\bfseries Deep Learning Course\\[0.4em]
+   Session 18 Lecture Notes\par}
+  \vspace{1.2cm}
+  {\LARGE\itshape RNN Hands-On Implementation \&\\[0.3em]
+   Introduction to LSTM\par}
+  \vspace{1.5cm}
+  \rule{\linewidth}{0.6pt}\\[0.4cm]
+  \begin{tabular}{ll}
+    \textbf{Session Number:}  & 18 \\[4pt]
+    \textbf{Topic:}           & Recurrent Neural Networks -- hands-on; \\
+                              & unrolled RNN as feedforward network; \\
+                              & motivation for LSTM \\[4pt]
+    \textbf{Date:}            & January 17, 2026 \\[4pt]
+    \textbf{Instructors:}     & Prof.\ S R M Prasanna \& Dr.\ Sunil Saumya \\[4pt]
+    \textbf{Institution:}     & IIIT Dharwad \\[4pt]
+    \textbf{Slide Deck:}      & \texttt{08-PyTorchDL-RNN} (slide 20/29) \\[4pt]
+    \textbf{Notebook:}        & \texttt{RNNClassification.ipynb} (Google Colab) \\[4pt]
+    \textbf{Dataset:}         & IMDB Movie Reviews (50\,000 samples) \\
+                              & Shakespeare Dataset (500 plays) via Kaggle \\
+  \end{tabular}
+  \rule{\linewidth}{0.6pt}
+  \vfill
+  {\large These notes synthesise the lecture transcript and visual slide
+   extractions for Session~18 of the deep learning course at IIIT Dharwad.
+   They cover the architecture of simple RNNs, text pre-processing,
+   the PyTorch implementation of a sentiment-analysis RNN, and the
+   theoretical motivation for LSTM.\par}
+\end{titlepage}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Session~18 is a pivotal bridge between RNN theory and real-world
+implementation.  The session opened with a brief review of L2
+regularisation and a Q\&A on assignments, then devoted the majority of
+its $\approx 1$h\,52\,min runtime to two interlocking themes:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{RNN as an unrolled feedforward network.}  The instructor
+        revisited the computational graph of an RNN unrolled to time step
+        $t=3$, establishing the shared weight matrices $W$ and $U$, and
+        deriving the hidden-state update equation.
+  \item \textbf{Hands-on sentiment analysis.}  A complete PyTorch
+        implementation of a simple RNN for IMDB movie-review sentiment
+        classification was built from scratch inside a Google Colab
+        notebook (\texttt{RNNClassification.ipynb}).  Every stage of the
+        pipeline -- data loading, text pre-processing, vocabulary
+        construction, dataset/dataloader classes, model definition, and
+        training loop -- was coded and explained live.
+\end{enumerate}
+
+The session concluded by returning to the unrolled RNN diagram to
+explain \emph{why} long sequences create a vanishing-gradient problem,
+directly motivating the LSTM architecture to be introduced in the
+next session.
+
+\begin{keyinsight}
+The central architectural difference between a standard ANN and an RNN
+is the \emph{recurrent connection}: when processing word $x_t$, the
+network also receives the hidden state $h_{t-1}$ produced when
+processing $x_{t-1}$.  This allows the network to maintain a
+``memory'' of previous inputs, which is essential for sequential data.
+\end{keyinsight}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background and Prerequisites}
+\label{sec:background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Sequential Data and the Limits of ANNs}
+\label{subsec:ann_limits}
+
+A standard feed-forward neural network (ANN) treats every input
+independently.  Given a vocabulary of size $V$, each word $w$ is
+represented as a one-hot vector $\mathbf{x} \in \{0,1\}^V$, and the
+network applies:
+
+\begin{equation}
+  \mathbf{o} = f\!\left(W_{\text{in}}\,\mathbf{x} + \mathbf{b}\right),
+  \label{eq:ann_forward}
+\end{equation}
+
+where $f$ is a non-linear activation function.  Two limitations arise
+immediately:
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Vocabulary-sized input.}  For $V = 75\,509$ (the vocabulary
+        of the IMDB corpus used in this session), $W_{\text{in}}$ has
+        $75\,509 \times h$ parameters for a hidden layer of width $h$.
+        At $h=64$ that is already $\approx 4.8$\,M weights \emph{just}
+        for the first layer.
+  \item \textbf{No temporal dependency.}  Processing the words
+        ``\emph{not}'' and ``\emph{good}'' simultaneously in a window
+        discards the positional relationship between them.  The network
+        sees both as part of a fixed-length input vector; it does not
+        ``know'' which came first.
+\end{enumerate}
+
+Window-based approaches (feeding $k$ consecutive words as a single
+input) partially address (b) but cannot handle variable-length
+sequences without padding, and they still treat the $k$ words as a
+single unordered bag.
+
+\subsection{L2 Regularisation Review}
+\label{subsec:l2_review}
+
+The session opened with a clarification about L2 regularisation,
+which had appeared in an assignment question.  The standard form adds
+a penalty proportional to the squared weight magnitudes to the loss:
+
+\begin{equation}
+  \mathcal{L}_{\text{reg}} = \mathcal{L} + \frac{\lambda}{2}
+  \sum_{j} w_j^2,
+  \label{eq:l2_regularisation}
+\end{equation}
+
+where $\lambda$ is the regularisation strength (\texttt{weight\_decay}
+in PyTorch optimisers).  The factor of $\tfrac{1}{2}$ is a
+mathematical convenience: when differentiating, the $2$ in the
+exponent cancels with $\tfrac{1}{2}$, yielding the clean gradient
+$\nabla_{w_j}\mathcal{L}_{\text{reg}} = \nabla_{w_j}\mathcal{L} +
+\lambda w_j$.
+
+\begin{example}[title=L2 Penalty Calculation]
+  Given $\lambda = 10^{-4}$ and a weight $w = 2.0$:
+  \begin{align}
+    \text{With factor } \tfrac{1}{2}:&\quad
+      \frac{\lambda}{2} w^2 = \frac{10^{-4}}{2} \times 4 = 2 \times 10^{-4} \\
+    \text{Without factor } \tfrac{1}{2}:&\quad
+      \lambda w^2 = 10^{-4} \times 4 = 4 \times 10^{-4}
+  \end{align}
+  Both forms are mathematically valid; the choice must be consistent
+  with the convention used when defining the loss function.
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RNN Architecture: Unrolled View}
+\label{sec:rnn_architecture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hidden-State Update Equation}
+\label{subsec:hidden_state}
+
+At every time step $t$, a simple RNN computes:
+
+\begin{equation}
+  \boxed{h_t = f\!\left(W\,h_{t-1} + U\,x_t + b\right)}
+  \label{eq:rnn_update}
+\end{equation}
+
+where:
+\begin{itemize}[noitemsep]
+  \item $x_t \in \mathbb{R}^{d}$ is the embedding of the word at
+        position $t$ ($d = 100$ in the notebook);
+  \item $h_t \in \mathbb{R}^{n_h}$ is the hidden state ($n_h = 64$
+        neurons);
+  \item $W \in \mathbb{R}^{n_h \times n_h}$ is the
+        \emph{hidden-to-hidden} weight matrix (shared across all $t$);
+  \item $U \in \mathbb{R}^{n_h \times d}$ is the
+        \emph{input-to-hidden} weight matrix (shared across all $t$);
+  \item $b \in \mathbb{R}^{n_h}$ is the bias vector;
+  \item $f$ is a point-wise non-linearity (typically $\tanh$).
+\end{itemize}
+
+The output at time step $t=3$ as shown on slide V01 is:
+
+\begin{equation}
+  O_3 = f\!\left(W \cdot O_2 + U \cdot X_3\right),
+  \label{eq:o3}
+\end{equation}
+
+which is the equation explicitly displayed on the course slide.
+
+\begin{keyinsight}[title=Parameter Sharing is the Key]
+  The matrices $W$ and $U$ are \textbf{identical} at every time step.
+  This is why an RNN can handle sequences of any length without
+  increasing the number of parameters.  A 391-word review and a
+  61-word review both use the same $W$ and $U$; only the number of
+  times they are applied differs.
+\end{keyinsight}
+
+\subsection{Unrolled RNN as a Deep Feedforward Network}
+\label{subsec:unrolled}
+
+\Cref{fig:rnn_unrolled} shows the unrolled computational graph for a
+sequence of length $T$.  Each column corresponds to one time step;
+the rows represent layers.  The horizontal arrows represent the flow
+of hidden state from $h_{t-1}$ to $h_t$, while the vertical arrows
+represent the local computation within each time step.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.8cm and 2.2cm,
+      box/.style={draw,rounded corners=3pt,minimum width=1.4cm,
+                  minimum height=0.8cm,fill=blue!10,font=\small},
+      inp/.style={draw,circle,minimum size=0.7cm,fill=orange!20,font=\small},
+      out/.style={draw,circle,minimum size=0.7cm,fill=green!20,font=\small},
+      arr/.style={-{Stealth[length=5pt]},thick},
+      rarr/.style={-{Stealth[length=5pt]},thick,blue!70!black}
+    ]
+
+    %% Hidden state nodes
+    \node[box] (h0) {$h_0$};
+    \node[box,right=of h0] (h1) {$h_1$};
+    \node[box,right=of h1] (h2) {$h_2$};
+    \node[box,right=of h2] (h3) {$h_3$};
+
+    %% Recurrent arrows
+    \draw[rarr] (h0) -- node[above,font=\tiny]{$W$} (h1);
+    \draw[rarr] (h1) -- node[above,font=\tiny]{$W$} (h2);
+    \draw[rarr] (h2) -- node[above,font=\tiny]{$W$} (h3);
+
+    %% Input nodes (below)
+    \node[inp,below=1.2cm of h0] (x0) {$x_0$};
+    \node[inp,below=1.2cm of h1] (x1) {$x_1$};
+    \node[inp,below=1.2cm of h2] (x2) {$x_2$};
+    \node[inp,below=1.2cm of h3] (x3) {$x_3$};
+
+    %% Input arrows
+    \draw[arr] (x0) -- node[right,font=\tiny]{$U$} (h0);
+    \draw[arr] (x1) -- node[right,font=\tiny]{$U$} (h1);
+    \draw[arr] (x2) -- node[right,font=\tiny]{$U$} (h2);
+    \draw[arr] (x3) -- node[right,font=\tiny]{$U$} (h3);
+
+    %% Output nodes (above)
+    \node[out,above=1.2cm of h0] (o0) {$O_0$};
+    \node[out,above=1.2cm of h1] (o1) {$O_1$};
+    \node[out,above=1.2cm of h2] (o2) {$O_2$};
+    \node[out,above=1.2cm of h3] (o3) {$O_3$};
+
+    %% Output arrows
+    \draw[arr] (h0) -- (o0);
+    \draw[arr] (h1) -- (o1);
+    \draw[arr] (h2) -- (o2);
+    \draw[arr] (h3) -- (o3);
+
+    %% Labels
+    \node[font=\footnotesize,below=0.2cm of x0] {$t=0$};
+    \node[font=\footnotesize,below=0.2cm of x1] {$t=1$};
+    \node[font=\footnotesize,below=0.2cm of x2] {$t=2$};
+    \node[font=\footnotesize,below=0.2cm of x3] {$t=3$};
+
+    %% Initial state h_{-1}
+    \node[left=1.2cm of h0,font=\small] (hinit) {$h_{-1}=\mathbf{0}$};
+    \draw[rarr] (hinit) -- node[above,font=\tiny]{$W$} (h0);
+
+  \end{tikzpicture}
+  \caption{RNN unrolled over four time steps $t = 0, 1, 2, 3$.  The
+           weight matrices $W$ (hidden-to-hidden) and $U$
+           (input-to-hidden) are \emph{shared} at every column.
+           The highlighted output $O_3$ at $t=3$ satisfies
+           $O_3 = f(W \cdot O_2 + U \cdot X_3)$, as shown on slide V01.}
+  \label{fig:rnn_unrolled}
+\end{figure}
+
+\begin{remark}
+  The unrolled view makes clear that an RNN with sequence length $T$
+  is equivalent to a feedforward network of depth $T$.  For a 391-word
+  IMDB review, the unrolled network has 391 ``layers'', all sharing
+  the same parameters $W$, $U$.  This depth is precisely why
+  gradients can vanish during backpropagation through time (BPTT).
+\end{remark}
+
+\subsection{ANN vs.\ RNN: Architectural Comparison}
+\label{subsec:ann_vs_rnn}
+
+\Cref{tab:ann_vs_rnn} summarises the key differences between a
+standard ANN and an RNN for sequential NLP tasks, as discussed by
+the instructor during the session.
+
+\begin{table}[ht]
+  \centering
+  \caption{ANN versus RNN for sequential text processing.}
+  \label{tab:ann_vs_rnn}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Property} & \textbf{ANN} & \textbf{RNN} \\
+    \midrule
+    Input at time $t$ & Fixed-size window of $k$ words
+                      & Single word $x_t$; also receives $h_{t-1}$ \\
+    \addlinespace
+    Sequence order & Implicit (position in window)
+                   & Explicit (strictly sequential) \\
+    \addlinespace
+    Variable-length input & Requires padding to fixed $k$
+                          & Handled naturally (no padding needed) \\
+    \addlinespace
+    Parameter count & $V \times h$ for first layer ($V = 75\,509$)
+                    & $d \times n_h + n_h \times n_h$ (after embedding) \\
+    \addlinespace
+    Long-range context & Limited to window size $k$
+                       & Theoretically unlimited (in practice limited by vanishing gradient) \\
+    \addlinespace
+    Parallelism & All words in window processed simultaneously
+                & Sequential -- $t+1$ requires $h_t$ \\
+    \addlinespace
+    Typical use & Classification with fixed context
+                & Sequence classification, language modelling \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Text Pre-Processing Pipeline}
+\label{sec:preprocessing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The IMDB dataset contains 50\,000 labelled movie reviews (25\,000
+positive, 25\,000 negative).  The session used a randomly sampled
+subset of 5\,000 reviews to keep training times manageable on Colab.
+\Cref{fig:preprocessing_pipeline} illustrates the five-stage pipeline.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      stage/.style={draw,rectangle,rounded corners=4pt,
+                    minimum width=2.4cm,minimum height=0.9cm,
+                    fill=teal!15,font=\small,align=center,thick},
+      arr/.style={-{Stealth[length=6pt]},thick,teal!60!black}
+    ]
+    \node[stage] (s1) {Raw\\Text};
+    \node[stage,right=1.3cm of s1] (s2) {Lower-\\case};
+    \node[stage,right=1.3cm of s2] (s3) {Remove\\Punct.};
+    \node[stage,right=1.3cm of s3] (s4) {Tokenise};
+    \node[stage,right=1.3cm of s4] (s5) {Build\\Vocab};
+    \node[stage,below=1.2cm of s5] (s6) {Text\\$\to$ Indices};
+    \node[stage,below=1.2cm of s3] (s7) {Tensor\\Dataset};
+    \node[stage,below=1.2cm of s1] (s8) {Data\\Loader};
+
+    \draw[arr] (s1) -- (s2);
+    \draw[arr] (s2) -- (s3);
+    \draw[arr] (s3) -- (s4);
+    \draw[arr] (s4) -- (s5);
+    \draw[arr] (s5) -- (s6);
+    \draw[arr] (s6) -- (s7);
+    \draw[arr] (s7) -- (s8);
+
+    %% labels below arrows
+    \node[font=\tiny,below=0.1cm of s2] {step 1};
+    \node[font=\tiny,below=0.1cm of s3] {step 2};
+    \node[font=\tiny,below=0.1cm of s4] {step 3};
+    \node[font=\tiny,below=0.1cm of s5] {step 4};
+  \end{tikzpicture}
+  \caption{Five-stage text pre-processing pipeline implemented in
+           \texttt{RNNClassification.ipynb}.}
+  \label{fig:preprocessing_pipeline}
+\end{figure}
+
+\subsection{Tokenisation and Cleaning}
+\label{subsec:tokenisation}
+
+The \texttt{tokenize(text)} function applied the following
+transformations in sequence:
+
+\begin{enumerate}[label=\arabic*.]
+  \item Convert to lower-case.
+  \item Remove all punctuation characters using the \texttt{string.punctuation} set.
+  \item Split on whitespace to produce a list of tokens.
+\end{enumerate}
+
+These three steps are illustrated below in Python pseudocode:
+
+\begin{verbatim}
+import string
+
+def tokenize(text):
+    text = text.lower()
+    text = ''.join(c for c in text if c not in string.punctuation)
+    tokens = text.split()
+    return tokens
+\end{verbatim}
+
+\begin{example}[title=Tokenisation in Action]
+  Input: \texttt{``One of the most beautifully crafted films you'll ever see.''}\\[4pt]
+  After lower-case: \texttt{``one of the most beautifully crafted films youll ever see''}\\[4pt]
+  After removing punctuation: same (apostrophe removed; ``you'll'' $\to$ ``youll'')\\[4pt]
+  After splitting: \texttt{[`one', `of', `the', `most', `beautifully', `crafted', `films', `youll', `ever', `see']}
+\end{example}
+
+Note that the apostrophe in ``you'll'' is stripped, making the
+token \texttt{youll} (index~190 in the vocabulary).  A student asked
+why this was not classified as the \texttt{<UNK>} token -- the answer
+is that tokenisation removes the apostrophe \emph{before} vocabulary
+lookup, so \texttt{youll} appears as a known token in the vocabulary.
+
+\subsection{Vocabulary Construction}
+\label{subsec:vocabulary}
+
+The vocabulary is a Python dictionary mapping each unique token to an
+integer index:
+
+\begin{equation}
+  \text{vocab} = \bigl\{\,\text{token} \mapsto \text{index}\,\bigr\}
+  \label{eq:vocab}
+\end{equation}
+
+Two special tokens are pre-inserted before any text is processed:
+
+\begin{center}
+  \begin{tabular}{cll}
+    \toprule
+    \textbf{Index} & \textbf{Token} & \textbf{Purpose} \\
+    \midrule
+    0 & \texttt{<PAD>} & Padding (needed when batches contain variable-length sequences) \\
+    1 & \texttt{<UNK>} & Unknown token (used at inference for out-of-vocabulary words) \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Every new unique token encountered while iterating through the 5\,000
+training reviews is assigned the next available index
+($|\text{vocab}|$ at the time of insertion):
+
+\begin{verbatim}
+def build_vocab(texts):
+    vocab = {'<PAD>': 0, '<UNK>': 1}
+    for text in texts:
+        for token in tokenize(text):
+            if token not in vocab:
+                vocab[token] = len(vocab)
+    return vocab
+\end{verbatim}
+
+After processing all 5\,000 rows the vocabulary contained
+$|\text{vocab}| = 75\,509$ unique tokens.  The instructor noted that
+processing the full 50\,000-sample dataset would likely exceed
+100\,000 unique tokens.
+
+\begin{keyinsight}[title=Why Both \texttt{<PAD>} and \texttt{<UNK>}?]
+  \textbf{\texttt{<UNK>}} (index 1) handles out-of-vocabulary words at
+  test time.  If a review contains a word not seen during training, it
+  is mapped to index~1.  \textbf{\texttt{<PAD>}} (index 0) is included
+  as a standard convention even though this notebook processes each
+  review individually (batch size = 1), so no padding is actually
+  applied.  Padding becomes necessary when batching multiple
+  variable-length sequences together.
+\end{keyinsight}
+
+\subsection{Text-to-Indices Conversion}
+\label{subsec:text_to_indices}
+
+The function \texttt{text\_to\_indices(text, vocab)} converts a raw
+review string into a tensor of vocabulary indices:
+
+\begin{verbatim}
+def text_to_indices(text, vocab):
+    tokens = tokenize(text)
+    return [vocab[t] if t in vocab else vocab['<UNK>'] for t in tokens]
+\end{verbatim}
+
+The sequence of indices preserves the word order of the original
+review.  For example, the sentence ``one of the \ldots'' maps to the
+integer sequence $[162, 12, 16, \ldots]$.  This is the input
+$[x_0, x_1, x_2, \ldots]$ that will be fed token-by-token to the RNN.
+
+\subsection{Padding and Batch Processing Trade-offs}
+\label{subsec:padding}
+
+A student raised the question of padding during the live session.
+\Cref{tab:padding_tradeoffs} summarises the trade-offs discussed:
+
+\begin{table}[ht]
+  \centering
+  \caption{Trade-offs between padded batching and individual sequence processing.}
+  \label{tab:padding_tradeoffs}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Property} & \textbf{Batch with Padding} & \textbf{Batch Size = 1} \\
+    \midrule
+    GPU utilisation & Higher (parallelism) & Lower \\
+    \addlinespace
+    Information loss & Yes -- zeros dilute gradient signal & None \\
+    \addlinespace
+    Memory & Fixed (max-length sequences) & Variable \\
+    \addlinespace
+    Implementation & Requires \texttt{<PAD>} masking & Simple \\
+    \addlinespace
+    Recommended for RNN & Only when resource-constrained & Preferred \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{warningbox}
+  Padding with zeros is never ideal for RNNs.  The padded time steps
+  produce meaningless hidden-state updates, dilute the gradient signal
+  during backpropagation, and can degrade model performance.  The
+  best practice is to process each sequence individually
+  (\texttt{batch\_size = 1}) or to use \texttt{pack\_padded\_sequence}
+  in PyTorch, which skips padded positions entirely.
+\end{warningbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PyTorch Dataset and DataLoader}
+\label{sec:dataset_dataloader}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Custom Dataset Class}
+\label{subsec:custom_dataset}
+
+Following the standard PyTorch pattern introduced in earlier sessions,
+a custom \texttt{IMDBDataset} class was defined by inheriting from
+\texttt{torch.utils.data.Dataset} and implementing three methods:
+
+\begin{itemize}[noitemsep]
+  \item \texttt{\_\_init\_\_(self, df, vocab)}: Stores the DataFrame
+        (with a reset index) and the vocabulary dictionary.
+  \item \texttt{\_\_len\_\_(self)}: Returns the number of reviews.
+  \item \texttt{\_\_getitem\_\_(self, idx)}: Converts the $idx$-th
+        review to a tensor of indices and returns the
+        (review\_tensor, label\_tensor) pair.
+\end{itemize}
+
+The \texttt{\_\_getitem\_\_} method calls \texttt{text\_to\_indices}
+on-the-fly, so no pre-encoded copy of the entire dataset needs to be
+held in memory.  The label is returned as a floating-point tensor
+($0.0$ for negative, $1.0$ for positive) to match the binary
+cross-entropy loss expectation.
+
+\begin{verbatim}
+class IMDBDataset(Dataset):
+    def __init__(self, df, vocab):
+        self.df = df.reset_index(drop=True)
+        self.vocab = vocab
+
+    def __len__(self):
+        return len(self.df)
+
+    def __getitem__(self, idx):
+        review = self.df.loc[idx, 'review']
+        label  = self.df.loc[idx, 'sentiment']
+        x = torch.tensor(text_to_indices(review, self.vocab))
+        y = torch.tensor(float(label))
+        return x, y
+\end{verbatim}
+
+The reason for \texttt{reset\_index(drop=True)} is that the 5\,000
+rows were drawn by \emph{random sampling} from the original 50\,000,
+so the index values are non-contiguous (e.g.\ 4, 312, 7003, \ldots).
+Resetting creates a clean 0-to-4999 integer index that \texttt{iloc}
+can use directly.
+
+\subsection{DataLoader Configuration}
+\label{subsec:dataloader}
+
+The DataLoader was configured with \texttt{batch\_size = 1} for the
+reasons discussed in \cref{subsec:padding}:
+
+\begin{verbatim}
+train_loader = DataLoader(train_dataset,
+                          batch_size=1,
+                          shuffle=True)
+\end{verbatim}
+
+Iterating the loader yields batches of shape
+$1 \times T_i$ for the review tensor (where $T_i$ is the number of
+tokens in the $i$-th review) and shape $1$ for the label scalar.  The
+instructor demonstrated this live, showing:
+
+\begin{itemize}[noitemsep]
+  \item Batch 0: review shape $1 \times 61$ (61 tokens) -- label: positive.
+  \item Batch 1: review shape $1 \times 391$ (391 tokens) -- label: negative.
+  \item Batch 2: review shape $1 \times 173$ (173 tokens).
+\end{itemize}
+
+This confirms that RNNs handle variable-length inputs naturally -- the
+DataLoader does not need to pad or truncate any sequence.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simple RNN Model Implementation}
+\label{sec:model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Model Architecture Overview}
+\label{subsec:model_overview}
+
+The \texttt{SimpleRNN} model consists of exactly three learnable
+components stacked in sequence:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Embedding layer} (\texttt{nn.Embedding}): maps each
+        integer token index to a dense $d$-dimensional vector.
+  \item \textbf{RNN layer} (\texttt{nn.RNN}): processes the embedded
+        sequence token-by-token, maintaining a hidden state.
+  \item \textbf{Linear (fully-connected) layer} (\texttt{nn.Linear}):
+        maps the final hidden state to a scalar sentiment score.
+\end{enumerate}
+
+\Cref{fig:model_architecture} illustrates the full forward pass.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      layer/.style={draw,rectangle,rounded corners=5pt,
+                    minimum width=3.5cm,minimum height=0.9cm,
+                    fill=violet!12,font=\small,align=center,thick},
+      data/.style={draw,rectangle,rounded corners=3pt,
+                   minimum width=3.5cm,minimum height=0.7cm,
+                   fill=gray!12,font=\small,align=center},
+      arr/.style={-{Stealth[length=6pt]},thick}
+    ]
+
+    \node[data]  (inp)   {Token indices $[i_0,i_1,\ldots,i_{T-1}]$};
+    \node[layer,below=0.8cm of inp]  (emb)
+        {Embedding\\$V \times 100 \to T \times 100$};
+    \node[layer,below=0.8cm of emb]  (rnn)
+        {RNN\\input=100, hidden=64\\(batch\_first=True)};
+    \node[data,below=0.6cm of rnn]   (hn)
+        {$h_T \in \mathbb{R}^{64}$ (final hidden state)};
+    \node[layer,below=0.6cm of hn]   (fc)
+        {Linear $64 \to 1$};
+    \node[data,below=0.6cm of fc]    (out)
+        {Scalar logit $\hat{y} \in \mathbb{R}$};
+    \node[layer,below=0.6cm of out,fill=orange!15]  (loss)
+        {BCEWithLogitsLoss\\$\mathcal{L}(\hat{y}, y)$};
+
+    \draw[arr] (inp)  -- (emb);
+    \draw[arr] (emb)  -- node[right,font=\tiny]{embedded sequence} (rnn);
+    \draw[arr] (rnn)  -- node[right,font=\tiny]{output, $h_n$} (hn);
+    \draw[arr] (hn)   -- (fc);
+    \draw[arr] (fc)   -- (out);
+    \draw[arr] (out)  -- (loss);
+
+  \end{tikzpicture}
+  \caption{Forward pass of the \texttt{SimpleRNN} model used in the
+           session.  $V = 75\,509$ (vocabulary size), $T$ = sequence
+           length (variable), $d = 100$ (embedding dimension),
+           $n_h = 64$ (RNN hidden size).}
+  \label{fig:model_architecture}
+\end{figure}
+
+\subsection{The Embedding Layer}
+\label{subsec:embedding}
+
+The embedding layer performs two roles simultaneously:
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{One-hot encoding:} internally, the layer treats each
+        integer index as selecting the corresponding row from a learnable
+        weight matrix $E \in \mathbb{R}^{V \times d}$.  This is
+        mathematically identical to multiplying a one-hot vector by $E$.
+  \item \textbf{Dimensionality reduction:} the 75\,509-dimensional
+        one-hot vector is compressed to a dense $d=100$-dimensional
+        vector.
+\end{enumerate}
+
+\begin{equation}
+  \mathbf{e}_t = E[i_t] \in \mathbb{R}^{d}, \quad d = 100
+  \label{eq:embedding}
+\end{equation}
+
+The two key advantages of using embeddings rather than raw one-hot
+vectors:
+
+\begin{enumerate}[noitemsep]
+  \item \textbf{Parameter reduction:} the input-to-hidden weight
+        matrix changes from $V \times n_h = 75\,509 \times 64
+        \approx 4.8$\,M parameters to $d \times n_h = 100 \times 64
+        = 6\,400$ parameters -- a reduction by a factor of $\approx 750$.
+  \item \textbf{Denser gradients:} a one-hot vector with 75\,508 zeros
+        produces almost no gradient signal.  A dense embedding vector
+        with non-zero values everywhere propagates gradients more
+        effectively.
+\end{enumerate}
+
+\begin{keyinsight}[title=Embedding Layer as Fully-Connected Layer]
+  Conceptually, the embedding layer is simply a fully-connected layer
+  (without bias or activation) placed \emph{before} the main
+  architecture starts.  Its weights $E$ are initialised randomly and
+  learned by gradient descent along with all other parameters.  If
+  pre-trained word embeddings (Word2Vec, GloVe, FastText) are loaded
+  into $E$, the model can leverage semantic information from large
+  external corpora.
+\end{keyinsight}
+
+\subsection{The RNN Layer}
+\label{subsec:rnn_layer}
+
+The \texttt{nn.RNN} module implements \cref{eq:rnn_update} for every
+time step in a vectorised manner.  Key constructor arguments used:
+
+\begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Argument} & \textbf{Value} & \textbf{Meaning} \\
+    \midrule
+    \texttt{input\_size}  & 100  & Dimension of each embedded token \\
+    \texttt{hidden\_size} & 64   & Width of the hidden state $h_t$ \\
+    \texttt{batch\_first} & \texttt{True} & Input tensor shape: $(B, T, d)$ not $(T, B, d)$ \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+When called, \texttt{nn.RNN} returns two tensors:
+\begin{itemize}[noitemsep]
+  \item \texttt{output}: shape $(B, T, n_h)$ -- the hidden state at
+        \emph{every} time step.
+  \item \texttt{h\_n}: shape $(1, B, n_h)$ -- the hidden state at the
+        \emph{last} time step only.
+\end{itemize}
+
+For sentiment classification, only \texttt{h\_n} is needed because
+the final hidden state encodes a summary of the entire sequence.
+The instructor verified this by showing that the last row of
+\texttt{output} is numerically identical to \texttt{h\_n}.
+
+\subsection{Parameter Count}
+\label{subsec:param_count}
+
+The total number of trainable parameters in the model is:
+
+\begin{align}
+  \text{Embedding:} &\quad V \times d = 75\,509 \times 100 = 7\,550\,900 \label{eq:emb_params} \\
+  \text{RNN} \;(U): &\quad d \times n_h = 100 \times 64 = 6\,400 \label{eq:rnn_u} \\
+  \text{RNN} \;(W): &\quad n_h \times n_h = 64 \times 64 = 4\,096 \label{eq:rnn_w} \\
+  \text{RNN biases:}&\quad 2 \times n_h = 128 \label{eq:rnn_bias} \\
+  \text{Linear:}    &\quad n_h \times 1 + 1 = 65 \label{eq:fc_params} \\
+  \hline \nonumber \\
+  \text{Total:}     &\quad \approx 7\,561\,589 \label{eq:total_params}
+\end{align}
+
+The embedding layer dominates the parameter count.  This is typical
+for NLP models with large vocabularies; pre-training embeddings or
+using sub-word tokenisation (BPE) are common mitigations.
+
+\subsection{Forward Pass Code}
+\label{subsec:forward_pass}
+
+\begin{verbatim}
+class SimpleRNN(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_size, output_size):
+        super(SimpleRNN, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        self.rnn = nn.RNN(embed_dim, hidden_size, batch_first=True)
+        self.fc  = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        embedded = self.embedding(x)          # (B, T, 100)
+        _, h_n   = self.rnn(embedded)         # h_n: (1, B, 64)
+        h_n      = h_n.squeeze(0)             # (B, 64)
+        out      = self.fc(h_n)               # (B, 1)
+        return out
+\end{verbatim}
+
+The underscore \texttt{\_} discards the per-timestep output tensor;
+only the final hidden state \texttt{h\_n} is passed to the
+fully-connected layer.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Training Procedure}
+\label{sec:training}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Loss Function and Optimiser}
+\label{subsec:loss_optimiser}
+
+Binary cross-entropy with logits was used as the loss function:
+
+\begin{equation}
+  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N}
+    \Bigl[ y_i \log \sigma(\hat{y}_i)
+         + (1 - y_i) \log (1 - \sigma(\hat{y}_i)) \Bigr],
+  \label{eq:bce_loss}
+\end{equation}
+
+where $\sigma$ is the sigmoid function.  \texttt{BCEWithLogitsLoss}
+applies the sigmoid internally, which is numerically more stable than
+applying it explicitly and then computing the log.
+
+A student asked why a ``linear'' output layer is used instead of
+logistic regression.  The answer: the linear layer produces a logit
+$\hat{y}$; the \emph{sigmoid} non-linearity is applied inside
+\texttt{BCEWithLogitsLoss}, so the full model does implement logistic
+regression -- the non-linearity just appears in the loss function rather
+than in \texttt{forward()}.
+
+\subsection{Training Loop}
+\label{subsec:training_loop}
+
+\Cref{alg:training_loop} presents the training algorithm used in the
+session.
+
+\begin{algorithm}[ht]
+  \caption{RNN Sentiment Classifier Training Loop}
+  \label{alg:training_loop}
+  \SetAlgoLined
+  \KwIn{Training DataLoader \texttt{train\_loader}, number of epochs
+        \texttt{num\_epochs}, model, loss function \texttt{criterion},
+        optimiser \texttt{optimizer}}
+  \KwOut{Trained model parameters}
+  \BlankLine
+  model.train()\;
+  \For{epoch $\leftarrow 1$ \KwTo \texttt{num\_epochs}}{
+    epoch\_loss $\leftarrow 0$\;
+    \For{(review, label) \textbf{in} train\_loader}{
+      review, label $\leftarrow$ review.to(device), label.to(device)\;
+      optimizer.zero\_grad()\;
+      output $\leftarrow$ model(review)\tcp*{forward pass}
+      output $\leftarrow$ output.squeeze(1)\tcp*{match label shape}
+      loss $\leftarrow$ criterion(output, label)\tcp*{compute BCE loss}
+      loss.backward()\tcp*{backprop through time (BPTT)}
+      optimizer.step()\tcp*{SGD / Adam weight update}
+      epoch\_loss $\leftarrow$ epoch\_loss $+$ loss.item()\;
+    }
+    \textbf{print} epoch, epoch\_loss / len(train\_loader)\;
+  }
+\end{algorithm}
+
+\subsection{Key Training Observations}
+\label{subsec:training_observations}
+
+\begin{itemize}
+  \item The model was trained for 10 epochs on the 5\,000-sample subset.
+  \item The instructor showed the loss decreasing epoch by epoch,
+        confirming that the pipeline was correctly connected.
+  \item Because \texttt{batch\_size = 1}, each gradient step is computed
+        from a single review -- this is stochastic gradient descent
+        (SGD) in its purest form, with very noisy gradient estimates.
+  \item Moving to GPU (\texttt{device = 'cuda'} if available) was
+        highlighted as essential for larger datasets or more epochs.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hands-On: Shakespeare Next-Character Prediction}
+\label{sec:shakespeare}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The visual extractions (V02--V04) also captured code from a
+secondary notebook focused on \emph{next-character prediction} using
+the Kaggle Shakespeare dataset (500 plays).  This task trains an RNN
+to predict the next character $c_{t+1}$ given a sequence of
+characters $[c_1, c_2, \ldots, c_t]$.
+
+\subsection{Dataset Download}
+\label{subsec:shakespeare_data}
+
+\begin{verbatim}
+import kagglehub
+path = kagglehub.dataset_download(
+    "kylehobbsdev/shakespeare-dataset-of-500-shakespeare-plays"
+)
+print("Path to dataset files:", path)
+# Path to dataset files:
+#   /root/.cache/kaggle/datasets/kylehobbsdev/
+#   shakespeare-dataset-of-500-shakespeare-plays/versions/1
+\end{verbatim}
+
+\subsection{Sliding-Window Sequence Construction}
+\label{subsec:sliding_window}
+
+Given the encoded Shakespeare text $[c_1, c_2, \ldots, c_N]$ (where
+each $c_i$ is a character index), training pairs are constructed as:
+
+\begin{equation}
+  (x^{(k)},\, y^{(k)}) = \bigl([c_k, c_{k+1}, \ldots, c_{k+L-1}],\;
+                                 c_{k+L}\bigr), \quad
+  k = 1, 2, \ldots, N - L
+  \label{eq:sliding_window}
+\end{equation}
+
+where $L$ is the context length.  The session notebook constructed
+942 such training sequences from the sampled Shakespeare corpus.
+
+\begin{example}[title=Sliding Window Sequences]
+  For an encoded text starting with character indices $[3, 7, 5, 2, \ldots]$
+  with context length $L = 2$:
+  \begin{align*}
+    (x^{(1)}, y^{(1)}) &= ([3, 7],\; 5) \\
+    (x^{(2)}, y^{(2)}) &= ([3, 7, 5],\; 2) \\
+    (x^{(3)}, y^{(3)}) &= ([3, 7, 5, 2],\; \ldots)
+  \end{align*}
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vanishing Gradient and LSTM Motivation}
+\label{sec:lstm_motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Backpropagation Through Time (BPTT)}
+\label{subsec:bptt}
+
+Training an RNN requires computing gradients of the loss
+$\mathcal{L}$ with respect to the shared weights $W$ and $U$.
+Because the hidden state at time $t$ depends on all previous hidden
+states, the chain rule produces products of the Jacobian matrices of
+$f$:
+
+\begin{equation}
+  \frac{\partial \mathcal{L}}{\partial W}
+    = \sum_{t=1}^{T} \frac{\partial \mathcal{L}}{\partial h_T}
+      \underbrace{\prod_{k=t}^{T-1}
+        \frac{\partial h_{k+1}}{\partial h_k}}_{\text{product of }T-t\text{ Jacobians}}
+      \frac{\partial h_t}{\partial W}.
+  \label{eq:bptt}
+\end{equation}
+
+If the spectral norm of each Jacobian $\tfrac{\partial h_{k+1}}{\partial h_k}$
+is less than 1 (which commonly occurs with $\tanh$ activations when
+$\|W\| < 1$), then for large $T$:
+
+\begin{equation}
+  \prod_{k=t}^{T-1} \left\| \frac{\partial h_{k+1}}{\partial h_k} \right\|
+  \;\longrightarrow\; 0 \quad \text{as } T - t \to \infty.
+  \label{eq:vanishing}
+\end{equation}
+
+This is the \textbf{vanishing gradient problem}: gradients for early
+time steps become negligibly small, making it impossible to learn
+long-range dependencies.
+
+\begin{keyinsight}[title=Unrolled View Explains Vanishing Gradients]
+  The unrolled RNN (slide V05) has \emph{depth} equal to sequence
+  length $T$.  A 391-word review produces an unrolled network 391
+  layers deep.  Just as very deep feedforward networks suffer from
+  vanishing gradients in their early layers, very long RNN sequences
+  lose gradient signal for early time steps.  LSTM (Long Short-Term
+  Memory) solves this by introducing a \emph{cell state} and
+  \emph{gating mechanisms} that allow gradients to flow through long
+  sequences without vanishing.
+\end{keyinsight}
+
+\subsection{Properties of Long Sequences in RNNs}
+\label{subsec:long_seq}
+
+Two further issues arise with long sequences:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Slow processing.}  Because computation is strictly
+        sequential (time step $t+1$ waits for $t$), a 500-word review
+        requires 500 sequential matrix-vector multiplications.
+        Compare this to a Transformer, which processes all positions
+        in parallel.
+  \item \textbf{Context degradation.}  Even without vanishing
+        gradients, the hidden state $h_t$ is a fixed-size vector
+        ($n_h = 64$) that must encode the entire history
+        $[x_0, \ldots, x_{t-1}]$.  For very long sequences, the
+        ``memory'' of the earliest tokens is overwritten by later ones.
+\end{enumerate}
+
+The instructor addressed a student's question about building a
+question-answering system from a 100-page PDF using RNNs:
+
+\begin{itemize}
+  \item Possible in principle: convert the PDF to a structured dataset
+        (e.g.\ one row per paragraph), then train a sequence-to-sequence
+        RNN.
+  \item Not ideal: RNNs struggle with the very long context of an entire
+        book, and modern systems (RAG + large language models) perform
+        significantly better on such tasks.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparison of RNN Variants}
+\label{sec:rnn_variants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Cref{tab:rnn_variants} compares the vanilla RNN introduced in this
+session with the more advanced architectures (LSTM and GRU) mentioned
+as upcoming topics.
+
+\begin{table}[ht]
+  \centering
+  \caption{Comparison of RNN, LSTM, and GRU architectures.}
+  \label{tab:rnn_variants}
+  \begin{tabularx}{\linewidth}{lXXX}
+    \toprule
+    \textbf{Property} & \textbf{Vanilla RNN} & \textbf{LSTM} & \textbf{GRU} \\
+    \midrule
+    Hidden state & $h_t$ only & $h_t$ + cell state $c_t$ & $h_t$ only \\
+    \addlinespace
+    Gates & None & Input, forget, output (3) & Reset, update (2) \\
+    \addlinespace
+    Vanishing gradient & Severe for long $T$ & Mitigated by cell state & Partially mitigated \\
+    \addlinespace
+    Parameters (per layer) & $d n_h + n_h^2 + 2n_h$ & $4(d n_h + n_h^2 + 2n_h)$ & $3(d n_h + n_h^2 + 2n_h)$ \\
+    \addlinespace
+    Training speed & Fastest & Slowest & Intermediate \\
+    \addlinespace
+    Long-range dependency & Poor & Good & Good \\
+    \addlinespace
+    Best for & Short sequences & Long sequences & Long sequences \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{remark}
+  For the IMDB sentiment task, both LSTM and GRU typically achieve
+  better accuracy than vanilla RNN because movie reviews can be
+  hundreds of words long and sentiment often depends on long-range
+  context (e.g.\ a negation at the start of the review).
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary and Conclusion}
+\label{sec:summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{What Was Covered}
+\label{subsec:covered}
+
+Session~18 covered the following material:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{L2 Regularisation Review.}  Both forms
+        ($\lambda \sum w^2$ and $\tfrac{\lambda}{2} \sum w^2$) are
+        mathematically valid; the $\tfrac{1}{2}$ factor is a
+        convenience that simplifies the gradient.
+
+  \item \textbf{RNN Architectural Motivation.}  The key change from
+        ANN to RNN is the recurrent connection that feeds the previous
+        hidden state $h_{t-1}$ as an additional input at each time
+        step $t$.  This gives the network an explicit ``memory'' of the
+        sequence so far.
+
+  \item \textbf{Text Pre-Processing Pipeline.}  A five-stage pipeline
+        was implemented: lower-casing, punctuation removal,
+        tokenisation, vocabulary construction (with \texttt{<PAD>} and
+        \texttt{<UNK>}), and text-to-index mapping.  The IMDB
+        5\,000-sample vocabulary contained 75\,509 unique tokens.
+
+  \item \textbf{PyTorch Dataset and DataLoader.}  A custom
+        \texttt{IMDBDataset} class was created following the standard
+        PyTorch pattern, with \texttt{batch\_size = 1} to avoid padding.
+
+  \item \textbf{SimpleRNN Model.}  The model comprises three layers:
+        \texttt{nn.Embedding}($V$, 100),
+        \texttt{nn.RNN}(100, 64, \texttt{batch\_first=True}), and
+        \texttt{nn.Linear}(64, 1).  The embedding layer converts sparse
+        one-hot vectors to dense 100-dimensional representations,
+        reducing parameter count by $\approx 750\times$.
+
+  \item \textbf{Forward Pass Mechanics.}  The RNN processes the embedded
+        sequence token by token.  After the final token, the hidden
+        state $h_T \in \mathbb{R}^{64}$ encodes the entire sequence
+        and is fed to the linear layer for binary classification.
+
+  \item \textbf{Training Loop.}  \texttt{BCEWithLogitsLoss} +
+        Adam optimiser; 10 epochs on 5\,000 samples.  Loss decreased
+        monotonically, confirming correct implementation.
+
+  \item \textbf{Vanishing Gradient and LSTM Motivation.}  The unrolled
+        RNN at depth $T$ suffers from vanishing gradients because
+        gradient products shrink exponentially.  LSTM addresses this
+        with a gated cell state; GRU uses a simplified two-gate design.
+\end{enumerate}
+
+\subsection{Key Equations}
+\label{subsec:key_equations}
+
+For quick reference, the three core equations from this session:
+
+\begin{align}
+  \text{Hidden state update:} &\quad
+    h_t = \tanh(W h_{t-1} + U x_t + b)
+    \label{eq:hidden_summary} \\
+  \text{Output at } t=3: &\quad
+    O_3 = f(W \cdot O_2 + U \cdot X_3)
+    \label{eq:o3_summary} \\
+  \text{Binary cross-entropy loss:} &\quad
+    \mathcal{L} = -\bigl[y \log \sigma(\hat{y})
+                       + (1-y)\log(1-\sigma(\hat{y}))\bigr]
+    \label{eq:bce_summary}
+\end{align}
+
+\subsection{Looking Ahead}
+\label{subsec:ahead}
+
+The next session will introduce \textbf{Long Short-Term Memory (LSTM)}
+networks.  Key topics to anticipate:
+
+\begin{itemize}[noitemsep]
+  \item The cell state $c_t$ as a ``conveyor belt'' for long-range information.
+  \item The forget gate, input gate, and output gate.
+  \item How LSTM mitigates the vanishing gradient problem.
+  \item PyTorch implementation using \texttt{nn.LSTM}.
+\end{itemize}
+
+Students were encouraged to practise by:
+\begin{enumerate}[noitemsep,label=(\roman*)]
+  \item Printing the output of every layer in the notebook to verify
+        shapes at each stage.
+  \item Extending the training to the full 50\,000-sample dataset and
+        comparing accuracy.
+  \item Replacing the embedding with pre-trained GloVe vectors and
+        observing any accuracy improvement.
+\end{enumerate}
+
+\begin{keyinsight}[title=The Big Picture]
+  The RNN family -- from the vanilla network in this session through
+  LSTM and GRU -- all share the fundamental design principle of
+  \cref{eq:rnn_update}: a hidden state that is updated at each time
+  step by combining the current input with the previous hidden state.
+  Every subsequent innovation (LSTM gates, attention mechanisms,
+  Transformers) can be understood as a solution to specific limitations
+  of this basic recurrence.
+\end{keyinsight}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% References / Resources
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Session Resources}
+\addcontentsline{toc}{section}{Session Resources}
+
+\begin{itemize}
+  \item \textbf{Video lecture:}
+        \url{https://vimeo.com/1156130746}
+  \item \textbf{Slide deck (PDF):}
+        \url{https://learning.iiitdwd.ac.in/mod/pdfprotect/view.php?id=1556}
+  \item \textbf{Notebook:} \texttt{RNNClassification.ipynb}
+        (shared via course portal; PyTorch implementation of the
+        IMDB sentiment classifier)
+  \item \textbf{Dataset -- IMDB:}
+        \texttt{datasets.load\_dataset("imdb")} via HuggingFace, or
+        download from Kaggle
+  \item \textbf{Dataset -- Shakespeare:}
+        \texttt{kylehobbsdev/shakespeare-dataset-of-500-shakespeare-plays}
+        on Kaggle Hub
+\end{itemize}
+
+\clearpage
+
+%% ============================================================
+%% Session 19: LSTM: Short vs Long-Term Dependency and Gates
+%% ============================================================
+\part{Session 19: LSTM: Short vs Long-Term Dependency and Gates}
+
+%% ── Title page ───────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE\bfseries Deep Learning Course\\[0.4em]
+   Indian Institute of Information Technology Dharwad\\[1.5em]}
+  \rule{\linewidth}{1pt}\\[0.8em]
+  {\huge\bfseries Session 19\\[0.5em]
+   Long Short-Term Memory (LSTM):\\[0.3em]
+   Short vs Long-Term Dependency and Gates}\\[0.8em]
+  \rule{\linewidth}{1pt}\\[1.5em]
+  \begin{tabular}{ll}
+    \textbf{Session Number:} & 19 \\[0.4em]
+    \textbf{Topic:}          & LSTM motivation, vanishing gradient, gate mechanism \\[0.4em]
+    \textbf{Date:}           & January 24, 2026 \\[0.4em]
+    \textbf{Duration:}       & $\approx 1$h\,39m \\[0.4em]
+    \textbf{Instructors:}    & Prof.\ S.\ R.\ Mahadeva Prasanna \\
+                             & Dr.\ Sunil Saumya \\[0.4em]
+    \textbf{Slide Decks:}    & \texttt{05-DL-RNN} (slides 30, 35, 37/63) \\
+                             & \texttt{06-RNNTypesBackpropagation} (slide 20/22) \\
+  \end{tabular}
+  \vfill
+  {\large\itshape Acknowledgement: Colah's Blog --
+   ``Understanding LSTM Networks''}\\[1em]
+  {\large IIITDwd -- B.Tech Deep Learning, 2025--26}
+\end{titlepage}
+
+%% ── Table of contents ────────────────────────────────────────────────────────
+
+\newpage
+
+% =============================================================================
+\section{Introduction}
+\label{sec:introduction}
+% =============================================================================
+
+Session~19 of the IIITDwd Deep Learning course marks the transition from
+standard Recurrent Neural Networks (RNNs) to the Long Short-Term Memory
+(LSTM) architecture. The session was delivered jointly by
+Prof.\ S.\ R.\ Mahadeva Prasanna and Dr.\ Sunil Saumya and draws primarily
+from two slide decks: \texttt{05-DL-RNN} and
+\texttt{06-RNNTypesBackpropagation}.
+
+The central thesis of the session is that standard RNNs, while capable of
+modelling \emph{short-term} sequential dependencies, fundamentally fail on
+\emph{long-term} dependencies because gradients vanish as they propagate
+backwards through many time steps. The LSTM architecture, proposed by
+Hochreiter and Schmidhuber (1997), addresses this failure through two
+complementary innovations:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item A dedicated \textbf{cell-state highway} $C_t$ that carries long-term
+        context with only minor, additive interactions --- preventing the
+        multiplicative gradient decay that cripples plain RNNs.
+  \item A set of three \textbf{gates} (forget, input, output), each
+        implemented as a sigmoid neural network, that selectively read,
+        write, and erase information on the cell-state line.
+\end{enumerate}
+
+\begin{keyinsight}[title=Session Objective]
+By the end of Session~19 students should be able to: (i) articulate why
+plain RNNs fail on long-range context using the gradient-vanishing argument;
+(ii) describe the two-line (cell-state + hidden-state) feedback structure of
+LSTM; and (iii) explain the role of each of the three gates at a conceptual
+level. Numerical gate computations are deferred to Session~20.
+\end{keyinsight}
+
+% =============================================================================
+\section{Background and Prerequisites}
+\label{sec:background}
+% =============================================================================
+
+\subsection{Sequence Modelling and the RNN Recap}
+\label{subsec:rnn-recap}
+
+Before LSTM can be appreciated, it is essential to recall the operation of a
+vanilla RNN cell. At each time step $t$ the hidden state is updated as
+
+\begin{equation}
+  \label{eq:rnn-update}
+  h_t = \tanh\!\bigl(W_{hh}\,h_{t-1} + W_{xh}\,x_t + b_h\bigr),
+\end{equation}
+
+where $x_t \in \mathbb{R}^{d}$ is the input vector, $h_{t-1} \in
+\mathbb{R}^{n}$ is the previous hidden state, $W_{hh} \in \mathbb{R}^{n
+\times n}$ and $W_{xh} \in \mathbb{R}^{n \times d}$ are learnable weight
+matrices, and $b_h$ is a bias vector. The output at each time step (e.g.\
+for language modelling) is
+
+\begin{equation}
+  \label{eq:rnn-output}
+  \hat{y}_t = \text{softmax}(W_{hy}\,h_t + b_y).
+\end{equation}
+
+The feedback loop through $h_{t-1}$ gives the RNN its \emph{memory}: at
+time step $t$ the hidden state encodes a compressed representation of all
+tokens seen so far. As the instructors emphasised,
+
+\begin{quote}
+``The goal [in language modelling] is, given one word or a set of words in a
+given sequence, predict the next word.'' \hfill (Dr.\ Sunil Saumya, 00:15)
+\end{quote}
+
+\subsection{What Is Short-Term Dependency?}
+\label{subsec:short-term}
+
+\begin{definition}[Short-Term Dependency]
+  \label{def:short-term}
+  A prediction task exhibits \emph{short-term dependency} when the
+  relevant context lies within a small, fixed window immediately preceding
+  the prediction point. A standard RNN with a shallow hidden state suffices
+  for such tasks.
+\end{definition}
+
+\begin{example}[title=``The clouds are in the \underline{\hspace{1.5em}}'']
+  Given the phrase ``the clouds are in the'', any fluent speaker immediately
+  predicts ``sky''. The information required (clouds, in, the) is entirely
+  local --- the gap between evidence and prediction is negligible. This is a
+  classic short-term dependency, and a vanilla RNN handles it well.
+\end{example}
+
+\subsection{What Is Long-Term Dependency?}
+\label{subsec:long-term}
+
+\begin{definition}[Long-Term Dependency]
+  \label{def:long-term}
+  A prediction task exhibits \emph{long-term dependency} when the evidence
+  needed to make a correct prediction lies many time steps before the
+  prediction point, so that the gap between relevant context and usage is
+  large.
+\end{definition}
+
+The canonical classroom example from the slide deck (V01, 00:18:55) is
+reproduced below.
+
+\begin{example}[title=Karnataka/Delhi/Hindi Example (V01)]
+  \textit{``I am from a South Indian family, specifically Karnataka, but
+  settled in Delhi. I had spent most of my childhood and done schooling as
+  well as college education in Delhi. Apart from Kannada, I can speak
+  fluent \underline{\hspace{1.5em}} also.''}
+
+  \medskip
+  \noindent The missing word is ``Hindi''. The \emph{short-term} context
+  (``Apart from Kannada, I can speak fluent'') tells us to expect a
+  \emph{language name} but is ambiguous about \emph{which} language.
+  To resolve the ambiguity we need the long-range context
+  ``settled in Delhi'' --- many tokens earlier. A standard RNN with
+  vanishing gradients cannot bridge this gap.
+\end{example}
+
+% =============================================================================
+\section{Why Standard RNNs Fail on Long-Range Context}
+\label{sec:rnn-failure}
+% =============================================================================
+
+\subsection{Backpropagation Through Time (BPTT)}
+\label{subsec:bptt}
+
+Training RNNs uses Backpropagation Through Time (BPTT), which unrolls the
+network across all $T$ time steps and applies the chain rule. The gradient
+of the loss $\mathcal{L}$ with respect to the hidden state at an early time
+step $t$ passes through every intermediate step:
+
+\begin{align}
+  \label{eq:bptt-chain}
+  \frac{\partial \mathcal{L}}{\partial h_t}
+  &= \frac{\partial \mathcal{L}}{\partial h_T}
+     \prod_{k=t+1}^{T}
+     \frac{\partial h_k}{\partial h_{k-1}}.
+\end{align}
+
+Each factor in the product is
+
+\begin{equation}
+  \label{eq:jacobian-factor}
+  \frac{\partial h_k}{\partial h_{k-1}}
+  = W_{hh}^{\top} \operatorname{diag}\!\bigl(\tanh'(a_{k-1})\bigr),
+\end{equation}
+
+where $a_{k-1} = W_{hh}h_{k-2} + W_{xh}x_{k-1} + b_h$ is the
+pre-activation. Since $|\tanh'(z)| \leq 1$ for all $z$, the spectral norm
+of each factor is bounded by $\|W_{hh}\|_2$.
+
+\subsection{The Vanishing Gradient Problem}
+\label{subsec:vanishing}
+
+\begin{theorem}[Gradient Magnitude Decay]
+  \label{thm:vanishing}
+  Let $\gamma = \|W_{hh}\|_2 \cdot \max_z|\tanh'(z)|$. If $\gamma < 1$,
+  then
+  \begin{equation}
+    \label{eq:vanishing-bound}
+    \left\|\frac{\partial \mathcal{L}}{\partial h_t}\right\|
+    \;\leq\;
+    \left\|\frac{\partial \mathcal{L}}{\partial h_T}\right\|
+    \cdot \gamma^{T-t}.
+  \end{equation}
+  The gradient at step $t$ decays \emph{exponentially} with the distance
+  $T - t$ from the output.
+\end{theorem}
+
+\begin{example}[title=Numerical Illustration (V04 scenario)]
+  Consider the sentence ``I am from France \ldots\ I speak fluent
+  \underline{\hspace{1em}}'' (slide 20/22 of \texttt{06-RNNTypesBackpropagation}).
+  Suppose the sequence has $T = 6$ steps and $\gamma \approx 0.5$. The
+  gradient arriving at the first token (``France'') is
+  \[
+    \|\nabla_{h_1}\| \;\leq\; \|\nabla_{h_6}\| \cdot (0.5)^{5}
+    \;=\; \|\nabla_{h_6}\| \cdot 0.03125.
+  \]
+  That is, only $\approx 3\%$ of the gradient signal from the output
+  reaches the earliest relevant token --- effectively zero for learning.
+\end{example}
+
+\cref{fig:rnn-fail} illustrates the gradient flow for this scenario.
+
+\begin{figure}[ht]
+  \centering
+  % ── TikZ: RNN Long-Dependency Failure ─────────────────────────────────────
+  \begin{tikzpicture}[
+      node distance=1.4cm and 1.8cm,
+      cell/.style={draw,rounded corners=3pt,minimum width=1.0cm,
+                   minimum height=0.8cm,fill=orange!20,font=\small},
+      word/.style={font=\small\itshape},
+      arr/.style={-{Stealth[scale=0.8]},thick},
+      garr/.style={-{Stealth[scale=0.8]},thick,red!70!black,dashed},
+    ]
+    \node[cell] (h1) {$h_1$};
+    \node[cell,right=of h1] (h2) {$h_2$};
+    \node[cell,right=of h2] (h3) {$h_3$};
+    \node[cell,right=of h3] (h4) {$h_4$};
+    \node[cell,right=of h4] (h5) {$h_5$};
+    \node[cell,right=of h5] (h6) {$h_6$};
+
+    % forward arrows
+    \draw[arr] (h1)--(h2);
+    \draw[arr] (h2)--(h3);
+    \draw[arr] (h3)--(h4);
+    \draw[arr] (h4)--(h5);
+    \draw[arr] (h5)--(h6);
+
+    % input words
+    \node[word,below=0.5cm of h1] (w1) {France};
+    \node[word,below=0.5cm of h2] (w2) {\ldots};
+    \node[word,below=0.5cm of h3] (w3) {\ldots};
+    \node[word,below=0.5cm of h4] (w4) {\ldots};
+    \node[word,below=0.5cm of h5] (w5) {speak};
+    \node[word,below=0.5cm of h6] (w6) {fluent};
+
+    \draw[arr] (w1)--(h1);
+    \draw[arr] (w2)--(h2);
+    \draw[arr] (w3)--(h3);
+    \draw[arr] (w4)--(h4);
+    \draw[arr] (w5)--(h5);
+    \draw[arr] (w6)--(h6);
+
+    % output
+    \node[above=0.7cm of h6,font=\small\bfseries] (yhat) {$\hat{y}$: ``\textit{French}''};
+    \draw[arr] (h6)--(yhat);
+
+    % backward gradient arrows (dashed red, fading)
+    \draw[garr,line width=1.8pt] (h6) to[bend left=25]
+          node[above,font=\tiny,red!80!black]{$\nabla$} (h5);
+    \draw[garr,line width=1.3pt] (h5) to[bend left=25]
+          node[above,font=\tiny,red!80!black]{$\approx 0.5\nabla$} (h4);
+    \draw[garr,line width=0.9pt] (h4) to[bend left=25] (h3);
+    \draw[garr,line width=0.5pt] (h3) to[bend left=25] (h2);
+    \draw[garr,line width=0.2pt] (h2) to[bend left=25]
+          node[above,font=\tiny,red!80!black]{$\approx 0$} (h1);
+
+    % annotation
+    \node[below=1.2cm of h1,text=red!70!black,font=\small\itshape,
+          align=center] {Gradient nearly\\vanishes here};
+  \end{tikzpicture}
+  \caption{Gradient flow in a plain RNN processing a long-dependency
+           sentence. The dashed red arrows show the gradient magnitude
+           decaying from right (output) to left (early token ``France'').
+           By the time the gradient reaches $h_1$, it is negligibly small,
+           so the network cannot learn that ``France'' determines the
+           answer.}
+  \label{fig:rnn-fail}
+\end{figure}
+
+\subsection{Exploding Gradients}
+\label{subsec:exploding}
+
+The complementary failure mode occurs when $\gamma > 1$: the gradient grows
+\emph{exponentially}, causing numerical overflow and training instability.
+As \cref{eq:vanishing-bound} shows, the regime $\gamma < 1$ causes
+vanishing and $\gamma > 1$ causes explosion --- both are pathological.
+
+\begin{warningbox}[title=Vanishing vs Exploding Gradient]
+  The plain RNN \cref{eq:rnn-update} is unstable in the BPTT sense:
+  \begin{itemize}[nosep]
+    \item If $\|W_{hh}\|_2 \cdot \max|\tanh'| < 1$: gradients
+          \textbf{vanish} --- long-term dependencies cannot be learned.
+    \item If $\|W_{hh}\|_2 \cdot \max|\tanh'| > 1$: gradients
+          \textbf{explode} --- training diverges.
+  \end{itemize}
+  Gradient clipping (heuristic) can partially address explosion, but
+  vanishing requires an architectural fix --- which is precisely what
+  LSTM provides.
+\end{warningbox}
+
+\subsection{Short-Term vs Long-Term: A Practical Comparison}
+\label{subsec:comparison}
+
+\cref{tab:rnn-lstm-comparison} summarises the empirical performance
+difference observed by the instructors (confirmed via a TA experiment on
+sentiment classification):
+
+\begin{table}[ht]
+  \centering
+  \caption{RNN vs LSTM accuracy (\%) on sentiment classification for
+           varying sequence lengths. Longer sequences magnify the RNN
+           performance gap (illustrative values from lecture).}
+  \label{tab:rnn-lstm-comparison}
+  \begin{tabular}{@{}lcc@{}}
+    \toprule
+    \textbf{Sequence Length} & \textbf{Plain RNN (\%)} & \textbf{LSTM (\%)} \\
+    \midrule
+    50  & 81.0 & 81.6 \\
+    100 & 81.6 & 82.0 \\
+    200 & $\downarrow$ (degraded) & 85.0 \\
+    \midrule
+    \multicolumn{3}{@{}l@{}}{\small As sequence length increases, RNN
+    accuracy degrades gracefully then plateaus at a lower value.} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{keyinsight}[title=Task-Dependent Architecture Choice]
+  It is \emph{not} always the case that LSTM outperforms RNN. For
+  purely short-term tasks, LSTM adds computational overhead (roughly
+  $4\times$ more parameters per cell) with negligible accuracy gain.
+  LSTM is warranted when the task genuinely requires long-range context.
+\end{keyinsight}
+
+% =============================================================================
+\section{The LSTM Architecture: Motivation and Design}
+\label{sec:lstm-design}
+% =============================================================================
+
+\subsection{Design Rationale: Two Feedback Lines}
+\label{subsec:two-lines}
+
+The instructors motivated the LSTM design from first principles. The
+insight is that a plain RNN has \emph{one} feedback line (the hidden state
+$h_{t-1}$) which conflates short-term and long-term context:
+
+\begin{quote}
+``The first [idea] was we need two feedback parts. One, to keep track of the
+short-term context information. Another to keep track of the long-term
+context information.'' \hfill (Prof.\ Prasanna, 00:25)
+\end{quote}
+
+This motivates the dual-state design:
+
+\begin{itemize}
+  \item \textbf{Hidden state} $h_t$: the lower feedback line; carries
+        short-term sequence knowledge (identical in spirit to a plain RNN
+        hidden state).
+  \item \textbf{Cell state} $C_t$: the upper feedback line; a
+        \emph{memory highway} that preserves long-term context across
+        potentially many time steps.
+\end{itemize}
+
+Between these two lines, \textbf{gate mechanisms} regulate the flow of
+information: deciding what to write to $C_t$, what to erase from $C_t$,
+and how much of $C_t$ to expose in $h_t$.
+
+\subsection{The Cell State Highway}
+\label{subsec:cell-state}
+
+The cell state $C_t$ is the defining innovation. As Prof.\ Prasanna
+explained:
+
+\begin{quote}
+``The cell state is the horizontal line running through the top of the
+diagram. LSTM can remove or add information to the cell state, regulated by
+structures called gates.''
+\end{quote}
+
+The key property is that updates to $C_t$ are \emph{additive}, not
+multiplicative:
+
+\begin{equation}
+  \label{eq:cell-state-update}
+  C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t,
+\end{equation}
+
+where $\odot$ denotes element-wise (Hadamard) multiplication, $f_t$ is
+the forget-gate vector, $i_t$ is the input-gate vector, and $\tilde{C}_t$
+is the candidate cell state. The gradient of $C_t$ with respect to
+$C_{t-1}$ is simply $f_t$ --- a diagonal matrix with entries in $[0,1]$.
+There is no repeated multiplication by $W_{hh}$ or $\tanh'$ along this
+path, so gradients can flow unobstructed over long distances.
+
+\begin{keyinsight}[title=Additive Updates Prevent Vanishing Gradients]
+  In a plain RNN the gradient through time is a \emph{product} of Jacobians
+  (\cref{eq:bptt-chain}), causing exponential decay. On the LSTM cell-state
+  highway the gradient path reduces to a \emph{sum} modulated only by the
+  forget gate. This is the fundamental mechanism by which LSTM overcomes the
+  vanishing gradient problem.
+\end{keyinsight}
+
+% =============================================================================
+\section{Gates in LSTM}
+\label{sec:gates}
+% =============================================================================
+
+\subsection{The Gate Concept}
+\label{subsec:gate-concept}
+
+A \textbf{gate} in LSTM is a combination of a sigmoid neural network and a
+pointwise multiplication (slide 37/63 of \texttt{05-DL-RNN}, V02 at
+00:38:50):
+
+\begin{equation}
+  \label{eq:gate-generic}
+  g_t = \sigma\!\bigl(W_g\,[h_{t-1},\,x_t] + b_g\bigr),
+\end{equation}
+
+where $\sigma(\cdot)$ is the sigmoid function, $[h_{t-1}, x_t]$ denotes
+the concatenation of the previous hidden state and the current input, and
+$W_g$, $b_g$ are learnable parameters specific to gate $g$. The output
+$g_t \in [0,1]^n$ is then applied element-wise to the vector being gated:
+
+\begin{equation}
+  \label{eq:gate-apply}
+  \text{gated output} = g_t \odot \text{input vector}.
+\end{equation}
+
+\begin{keyinsight}[title=Sigmoid as a Soft Gate]
+  Unlike a digital logic gate (binary 0 or 1), an LSTM gate produces
+  \emph{continuous} values in $[0,1]$ per dimension. A value of 0 means
+  ``block this dimension completely''; a value of 1 means ``pass this
+  dimension through unchanged''; intermediate values scale the
+  information proportionally. This differentiability is what allows
+  backpropagation to train the gate parameters.
+\end{keyinsight}
+
+\cref{fig:gate-diagram} shows the structure of a single LSTM gate.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.2cm,
+      sig/.style={draw,circle,minimum size=0.8cm,fill=yellow!30,font=\small},
+      mul/.style={draw,circle,minimum size=0.8cm,fill=pink!50,font=\small},
+      arr/.style={-{Stealth[scale=0.8]},thick},
+      lbl/.style={font=\small},
+    ]
+    % input
+    \node[lbl] (inp) {$[h_{t-1},\,x_t]$};
+    % sigmoid block
+    \node[sig,right=1.5cm of inp] (sig) {$\sigma$};
+    % multiply
+    \node[mul,right=2.0cm of sig] (mult) {$\times$};
+    % info stream from above
+    \node[lbl,above=1.2cm of mult] (stream) {information vector};
+    % output
+    \node[lbl,right=1.5cm of mult] (out) {gated output};
+
+    \draw[arr] (inp)--(sig) node[midway,above,font=\tiny]{weight $W_g$};
+    \draw[arr] (sig)--(mult) node[midway,above,font=\small]{$g_t \in [0,1]^n$};
+    \draw[arr] (stream)--(mult);
+    \draw[arr] (mult)--(out);
+
+    % annotation boxes
+    \node[draw,dashed,rounded corners,
+          fit=(inp)(sig),inner sep=4pt,
+          label=below:{\footnotesize sigmoid net}] {};
+    \node[draw,dashed,rounded corners,
+          fit=(mult),inner sep=6pt,
+          label=below:{\footnotesize pointwise $\odot$}] {};
+  \end{tikzpicture}
+  \caption{Structure of a single LSTM gate (slide 37/63, V02). The sigmoid
+           layer maps the concatenated input to a gating vector $g_t \in
+           [0,1]^n$, which is then multiplied element-wise with the
+           information vector to selectively allow or block information.}
+  \label{fig:gate-diagram}
+\end{figure}
+
+\subsection{The Three Gates of LSTM}
+\label{subsec:three-gates}
+
+LSTM uses three gates, each with independent weight matrices, to regulate
+the cell state $C_t$:
+
+\subsubsection{Forget Gate $f_t$}
+\label{subsubsec:forget}
+
+The forget gate decides how much of the \emph{previous} cell state $C_{t-1}$
+to retain:
+
+\begin{equation}
+  \label{eq:forget-gate}
+  f_t = \sigma\!\bigl(W_f\,[h_{t-1},\,x_t] + b_f\bigr).
+\end{equation}
+
+When $f_t \approx \mathbf{0}$, the previous cell state is completely
+erased (``forgotten''). When $f_t \approx \mathbf{1}$, it is fully
+preserved. As the instructor stated:
+
+\begin{quote}
+``One means completely keep this dimension, zero means completely get rid of
+this dimension. So that is the purpose of forgetting it.''
+\hfill (Prof.\ Prasanna, 00:41)
+\end{quote}
+
+\subsubsection{Input Gate $i_t$ and Candidate Cell State $\tilde{C}_t$}
+\label{subsubsec:input}
+
+The input gate decides which components of the \emph{current} information
+should be written to the cell state:
+
+\begin{align}
+  \label{eq:input-gate}
+  i_t &= \sigma\!\bigl(W_i\,[h_{t-1},\,x_t] + b_i\bigr), \\
+  \label{eq:candidate}
+  \tilde{C}_t &= \tanh\!\bigl(W_C\,[h_{t-1},\,x_t] + b_C\bigr).
+\end{align}
+
+The candidate $\tilde{C}_t \in [-1,1]^n$ is the new information proposed
+by the standard RNN operation ($\tanh$ of the weighted input). The gate
+$i_t$ decides how much of this candidate actually enters the cell state.
+
+\begin{remark}
+  \label{rem:input-gate-naming}
+  The instructors noted a common naming confusion: in Gated Recurrent
+  Units (GRU) the analogous gate is called the \emph{update gate}, whereas
+  in LSTM it is called the \emph{input gate}. Both serve the same
+  conceptual purpose of writing new information into the memory.
+\end{remark}
+
+\subsubsection{Cell State Update}
+\label{subsubsec:cell-update}
+
+The cell state is updated by combining the forget and input gate outputs:
+
+\begin{equation}
+  \label{eq:cell-update}
+  C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t.
+\end{equation}
+
+The additive structure of \cref{eq:cell-update} is what makes $C_t$ a
+gradient highway: $\partial C_t / \partial C_{t-1} = f_t$, which is not
+repeatedly multiplied across time steps.
+
+\subsubsection{Output Gate $o_t$}
+\label{subsubsec:output}
+
+The output gate determines how much of the cell state to expose as the
+hidden state $h_t$:
+
+\begin{align}
+  \label{eq:output-gate}
+  o_t &= \sigma\!\bigl(W_o\,[h_{t-1},\,x_t] + b_o\bigr), \\
+  \label{eq:hidden-update}
+  h_t &= o_t \odot \tanh(C_t).
+\end{align}
+
+The $\tanh$ squashes $C_t$ into $[-1,1]$ before the gate is applied,
+keeping the hidden state bounded.
+
+\subsection{Summary of LSTM Equations}
+\label{subsec:lstm-equations}
+
+The complete set of LSTM equations for one time step is:
+
+\begin{align}
+  f_t          &= \sigma(W_f\,[h_{t-1},x_t] + b_f)
+                 \label{eq:lstm-f} \\
+  i_t          &= \sigma(W_i\,[h_{t-1},x_t] + b_i)
+                 \label{eq:lstm-i} \\
+  \tilde{C}_t  &= \tanh(W_C\,[h_{t-1},x_t] + b_C)
+                 \label{eq:lstm-Ctil} \\
+  C_t          &= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t
+                 \label{eq:lstm-C} \\
+  o_t          &= \sigma(W_o\,[h_{t-1},x_t] + b_o)
+                 \label{eq:lstm-o} \\
+  h_t          &= o_t \odot \tanh(C_t)
+                 \label{eq:lstm-h}
+\end{align}
+
+\cref{tab:lstm-params} catalogues the learnable parameter matrices.
+
+\begin{table}[ht]
+  \centering
+  \caption{Learnable parameters in a single LSTM cell with hidden size $n$
+           and input size $d$. Each gate has its own weight matrix and bias.}
+  \label{tab:lstm-params}
+  \begin{tabular}{@{}llll@{}}
+    \toprule
+    \textbf{Gate / State} & \textbf{Weight Matrix} & \textbf{Shape} & \textbf{Bias Shape} \\
+    \midrule
+    Forget gate $f_t$      & $W_f$ & $n \times (n+d)$ & $n$ \\
+    Input gate $i_t$       & $W_i$ & $n \times (n+d)$ & $n$ \\
+    Candidate $\tilde{C}_t$ & $W_C$ & $n \times (n+d)$ & $n$ \\
+    Output gate $o_t$      & $W_o$ & $n \times (n+d)$ & $n$ \\
+    \midrule
+    \multicolumn{4}{@{}l@{}}{\small Total parameters: $4n(n+d) + 4n = 4n(n+d+1)$} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% =============================================================================
+\section{LSTM Cell Architecture: Diagram and Walk-Through}
+\label{sec:lstm-cell}
+% =============================================================================
+
+\subsection{The Full LSTM Cell Diagram}
+\label{subsec:lstm-cell-diagram}
+
+\cref{fig:lstm-cell} shows the full LSTM recurrence cell in the style of
+Colah's blog (referenced in slides 35/63 of \texttt{05-DL-RNN}, V03 and V05).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      scale=0.95,
+      node distance=0.9cm and 1.1cm,
+      sig/.style={draw,rounded corners=2pt,minimum width=0.7cm,
+                  minimum height=0.6cm,fill=yellow!40,font=\small},
+      tnh/.style={draw,rounded corners=2pt,minimum width=0.7cm,
+                  minimum height=0.6cm,fill=cyan!30,font=\small},
+      op/.style={draw,circle,minimum size=0.55cm,fill=pink!50,font=\footnotesize},
+      arr/.style={-{Stealth[scale=0.7]},thick},
+      lbl/.style={font=\small},
+    ]
+
+    % ── Cell state (top horizontal line) ──────────────────────────────────
+    \coordinate (CL) at (0,3.5);
+    \coordinate (CR) at (10,3.5);
+
+    % ── Forget gate ────────────────────────────────────────────────────────
+    \node[sig]  (fg)  at (2.0,1.5) {$\sigma$};
+    \node[op]   (fmul) at (2.0,3.5) {$\times$};
+
+    % ── Input gate + candidate ─────────────────────────────────────────────
+    \node[sig]  (ig)  at (4.5,1.5) {$\sigma$};
+    \node[tnh]  (cand) at (6.0,1.5) {$\tanh$};
+    \node[op]   (imul) at (5.2,3.5) {$\times$};
+    \node[op]   (iadd) at (7.0,3.5) {$+$};
+
+    % ── Output gate ────────────────────────────────────────────────────────
+    \node[sig]  (og)  at (8.5,1.5) {$\sigma$};
+    \node[tnh]  (otanh) at (8.5,3.5) {$\tanh$};
+    \node[op]   (omul) at (9.3,2.5) {$\times$};
+
+    % ── Cell state line ────────────────────────────────────────────────────
+    \draw[arr,line width=1.2pt,blue!60!black]
+          (CL) -- (fmul) -- (imul) -- (iadd) -- (otanh);
+
+    % ── Forget gate connections ────────────────────────────────────────────
+    \draw[arr] (fg) -- (fmul);
+
+    % ── Input gate connections ─────────────────────────────────────────────
+    \draw[arr] (ig)   -- (imul);
+    \draw[arr] (cand) -- (imul);
+    \draw[arr] (imul) -- (iadd);
+
+    % ── Output gate connections ────────────────────────────────────────────
+    \draw[arr] (iadd) -- (otanh);
+    \draw[arr] (otanh) -- (omul);
+    \draw[arr] (og)  -- (omul);
+
+    % ── Input h_{t-1} and x_t (shared concatenated input) ─────────────────
+    \coordinate (htminus1) at (0.5, 0.2);
+    \node[lbl,left=0.1cm of htminus1] {$h_{t-1}$};
+    \coordinate (xt)       at (0.5, -0.5);
+    \node[lbl,left=0.1cm of xt] {$x_t$};
+
+    % feed all gates
+    \draw[arr,gray!70] (htminus1) -- (fg.south);
+    \draw[arr,gray!70] (xt)       -- (fg.south);
+    \draw[arr,gray!70] (htminus1) to[out=0,in=240] (ig.south);
+    \draw[arr,gray!70] (xt)       to[out=0,in=270] (ig.south);
+    \draw[arr,gray!70] (htminus1) to[out=0,in=240] (cand.south);
+    \draw[arr,gray!70] (xt)       to[out=0,in=270] (cand.south);
+    \draw[arr,gray!70] (htminus1) to[out=0,in=240] (og.south);
+    \draw[arr,gray!70] (xt)       to[out=0,in=270] (og.south);
+
+    % ── Outputs ────────────────────────────────────────────────────────────
+    \node[lbl,right=0.3cm of omul] (ht) {$h_t$};
+    \draw[arr,line width=1.2pt] (omul) -- (ht);
+
+    \node[lbl,above=0.2cm of CR] {$C_t$};
+    \node[lbl,above=0.2cm of CL] {$C_{t-1}$};
+
+    % ── Labels ─────────────────────────────────────────────────────────────
+    \node[below=0.1cm of fg,  font=\footnotesize,text=gray] {forget};
+    \node[below=0.1cm of ig,  font=\footnotesize,text=gray] {input};
+    \node[below=0.1cm of cand,font=\footnotesize,text=gray] {candidate};
+    \node[below=0.1cm of og,  font=\footnotesize,text=gray] {output};
+
+  \end{tikzpicture}
+  \caption{LSTM recurrence cell (after Colah's blog, referenced in slides
+           35/63 of \texttt{05-DL-RNN}, V03). The thick blue horizontal line
+           is the \textbf{cell state} $C_t$ --- the long-term memory highway.
+           Yellow $\sigma$ blocks are sigmoid gates; cyan $\tanh$ blocks
+           produce bounded values. Pink circles denote element-wise
+           operations ($\times$ = multiply, $+$ = add).}
+  \label{fig:lstm-cell}
+\end{figure}
+
+\subsection{Step-by-Step Walk-Through}
+\label{subsec:walkthrough}
+
+The following algorithm formalises the forward pass through one LSTM cell,
+as explained by the instructors.
+
+\begin{algorithm}[ht]
+  \DontPrintSemicolon
+  \caption{LSTM Cell Forward Pass}
+  \label{alg:lstm-forward}
+  \KwIn{Current input $x_t \in \mathbb{R}^d$, previous hidden state
+        $h_{t-1} \in \mathbb{R}^n$, previous cell state
+        $C_{t-1} \in \mathbb{R}^n$}
+  \KwOut{New hidden state $h_t \in \mathbb{R}^n$, new cell state
+         $C_t \in \mathbb{R}^n$}
+  \BlankLine
+  \tcp{Step 1: Concatenate inputs}
+  $z \leftarrow [h_{t-1};\, x_t] \in \mathbb{R}^{n+d}$\;
+  \BlankLine
+  \tcp{Step 2: Forget gate -- decide what to erase from $C_{t-1}$}
+  $f_t \leftarrow \sigma(W_f z + b_f)$\;
+  \BlankLine
+  \tcp{Step 3: Input gate -- decide what new info to write}
+  $i_t \leftarrow \sigma(W_i z + b_i)$\;
+  \BlankLine
+  \tcp{Step 4: Candidate cell state -- new information proposal}
+  $\tilde{C}_t \leftarrow \tanh(W_C z + b_C)$\;
+  \BlankLine
+  \tcp{Step 5: Update cell state (additive -- gradient highway)}
+  $C_t \leftarrow f_t \odot C_{t-1} + i_t \odot \tilde{C}_t$\;
+  \BlankLine
+  \tcp{Step 6: Output gate -- decide how much of $C_t$ to expose}
+  $o_t \leftarrow \sigma(W_o z + b_o)$\;
+  \BlankLine
+  \tcp{Step 7: Compute new hidden state}
+  $h_t \leftarrow o_t \odot \tanh(C_t)$\;
+  \BlankLine
+  \Return{$h_t,\; C_t$}
+\end{algorithm}
+
+\subsection{Intuition Behind Each Step}
+\label{subsec:intuition}
+
+\begin{keyinsight}[title=Why Tanh for the Candidate, Sigmoid for Gates?]
+  The candidate $\tilde{C}_t$ uses $\tanh$ to produce values in $[-1,1]$,
+  which can represent both \emph{increasing} and \emph{decreasing} a
+  dimension of the cell state. The gates use $\sigma$ to produce values in
+  $[0,1]$, acting as \emph{soft switches}. As the instructor noted, any
+  function with output range $[0,1]$ could in principle serve as a gate;
+  sigmoid is used because it is well-established and differentiable
+  everywhere.
+\end{keyinsight}
+
+The key intuitions for each gate, as articulated in the lecture, are:
+
+\begin{itemize}
+  \item \textbf{Forget gate} $f_t$: ``I check whether this long-term
+        information which I'm preserving from a long duration, whether it
+        is relevant now or we can throw it out.''
+  \item \textbf{Input gate} $i_t$ + candidate $\tilde{C}_t$: ``Whether
+        the current state information should become part of the long-term
+        context information --- that is decided by this input gate.''
+  \item \textbf{Output gate} $o_t$: ``Whatever the output I have, I want
+        to convert [it] into the output for the next sequence of
+        information.''
+\end{itemize}
+
+% =============================================================================
+\section{How LSTM Solves the Vanishing Gradient Problem}
+\label{sec:solution}
+% =============================================================================
+
+\subsection{The Gradient Path Through the Cell State}
+\label{subsec:grad-path}
+
+Consider backpropagating through the cell state update
+(\cref{eq:cell-update}). The partial derivative of $C_t$ with respect to
+$C_{t-1}$ is:
+
+\begin{equation}
+  \label{eq:cell-grad}
+  \frac{\partial C_t}{\partial C_{t-1}}
+  = \operatorname{diag}(f_t).
+\end{equation}
+
+Crucially, this is a \emph{diagonal} matrix whose entries are the forget
+gate values $f_{t,j} \in [0,1]$. When tracing gradients across $k$ steps:
+
+\begin{equation}
+  \label{eq:cell-grad-multi}
+  \frac{\partial C_t}{\partial C_{t-k}}
+  = \prod_{\tau=1}^{k} \operatorname{diag}(f_{t-\tau+1}).
+\end{equation}
+
+If the network learns to set $f_t \approx \mathbf{1}$ for the relevant
+dimensions, then $\prod f_{t-\tau+1} \approx \mathbf{1}$ and the gradient
+flows unattenuated. This is fundamentally different from the RNN case where
+the product involves the full matrix $W_{hh}$ at every step.
+
+\begin{lemma}[LSTM Gradient Preservation]
+  \label{lem:lstm-gradient}
+  If $f_{t,j} = 1$ for all $t$ and some dimension $j$, then dimension $j$
+  of the gradient $\partial \mathcal{L}/\partial C_{t_0,j}$ equals
+  dimension $j$ of $\partial \mathcal{L}/\partial C_{T,j}$ for all
+  $t_0 \leq T$ --- the gradient is perfectly preserved over arbitrarily
+  many steps in that dimension.
+\end{lemma}
+
+\begin{keyinsight}[title=Additive vs Multiplicative Updates]
+  The essential contrast between RNN and LSTM gradient flow:
+  \begin{itemize}[nosep]
+    \item \textbf{RNN}: $\partial h_t / \partial h_{t-1}$
+          involves $W_{hh}$ and $\tanh'$ --- multiplicative, prone to
+          vanishing/exploding.
+    \item \textbf{LSTM cell state}: $\partial C_t / \partial C_{t-1}$
+          is just the forget gate $f_t$ --- the gate is \emph{learned}
+          and can be kept near 1, allowing gradients to flow.
+  \end{itemize}
+  A student in the session insightfully observed: ``We are doing a
+  summation operator here\ldots\ even if we have very small values, we are
+  not directly multiplying, we are adding to it.''
+\end{keyinsight}
+
+\subsection{Artificial Memory Lifting}
+\label{subsec:artificial-memory}
+
+The instructors provided a powerful intuition for what LSTM does
+architecturally:
+
+\begin{quote}
+``If I just forget [early information], it means I don't go by short-term
+[RNN], because of the vanishing gradient problem --- it'll disappear. That's
+why I'm \emph{artificially lifting up} and putting into the long-term context
+information and taking it forward.'' \hfill (Prof.\ Prasanna, 01:08)
+\end{quote}
+
+That is, whenever a piece of information is deemed important
+(input gate $i_t \approx 1$), it is \emph{explicitly copied} from the
+short-term hidden state into the cell-state highway, where it can travel
+any number of steps without decaying. This is the architectural realisation
+of the two-feedback-line intuition.
+
+\cref{tab:rnn-lstm-arch} compares the two architectures side-by-side.
+
+\begin{table}[ht]
+  \centering
+  \caption{Architectural comparison between standard RNN and LSTM.}
+  \label{tab:rnn-lstm-arch}
+  \begin{tabularx}{\linewidth}{@{}lXX@{}}
+    \toprule
+    \textbf{Property}
+      & \textbf{Standard RNN}
+      & \textbf{LSTM} \\
+    \midrule
+    Feedback lines
+      & 1 ($h_t$)
+      & 2 ($h_t$ + $C_t$) \\
+    Memory type
+      & Short-term only
+      & Short-term ($h_t$) and long-term ($C_t$) \\
+    Gradient path
+      & Multiplicative: $W_{hh}^k \cdot \tanh'^k$
+      & Additive through $C_t$; multiplicative for $h_t$ \\
+    Parameter count
+      & $n(n+d)+n$
+      & $4n(n+d+1)$ \\
+    Handles long deps.\
+      & No (gradient vanishes)
+      & Yes (cell-state highway) \\
+    Complexity
+      & Low
+      & High ($\approx 4\times$ RNN) \\
+    Use when\ldots
+      & Short-term task
+      & Long-term task required \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% =============================================================================
+\section{Worked Example: Language Modelling with Long Context}
+\label{sec:worked-example}
+% =============================================================================
+
+\subsection{Scenario 1: Short Dependency (RNN Succeeds)}
+\label{subsec:scenario1}
+
+\begin{example}[title=``Your mobile number is selected as \underline{\hspace{1.5em}}'']
+  Context: ``your mobile number is selected as'' (6 tokens). \medskip
+
+  \noindent\textbf{RNN processing:}
+  \begin{align*}
+    h_1 &= \tanh(W_{xh}\,\mathbf{e}_{\text{your}} + b_h), \\
+    h_2 &= \tanh(W_{hh}h_1 + W_{xh}\,\mathbf{e}_{\text{mobile}} + b_h), \\
+        &\;\vdots \\
+    h_6 &= \tanh(W_{hh}h_5 + W_{xh}\,\mathbf{e}_{\text{as}} + b_h), \\
+    \hat{y} &= \text{softmax}(W_{hy}h_6).
+  \end{align*}
+  The word ``selected as'' strongly predicts ``winner''. The RNN handles
+  this well because all the relevant evidence is within 6 steps.
+\end{example}
+
+\subsection{Scenario 2: Long Dependency (RNN Fails, LSTM Succeeds)}
+\label{subsec:scenario2}
+
+\begin{example}[title=``I am from France \ldots\ I speak fluent \underline{\hspace{1.5em}}'']
+  Context (paraphrased from slide 20/22): ``I am from France. Once I visited
+  India\ldots\ I speak fluent \underline{\hspace{1em}}''. The evidence
+  ``France'' is at $h_1$, but the prediction is at $h_6$. \medskip
+
+  \noindent\textbf{RNN gradient reaching $h_1$:}
+  \[
+    \|\nabla_{h_1}\| \leq \|\nabla_{h_6}\| \cdot \gamma^5
+    \approx 0 \quad \text{for } \gamma < 1.
+  \]
+  \textbf{LSTM cell state at $h_1$:} The LSTM input gate fires
+  ($i_1 \approx 1$) for the ``France'' dimension, writing it into $C_1$.
+  The forget gate maintains it ($f_t \approx 1$) across steps 2--5. At
+  step 6, the hidden state $h_6$ reads from $C_6 \approx C_1$ via the
+  output gate, correctly predicting ``French''.
+\end{example}
+
+% =============================================================================
+\section{LSTM in Practice: Design Considerations}
+\label{sec:practice}
+% =============================================================================
+
+\subsection{When to Use LSTM vs RNN}
+\label{subsec:when-to-use}
+
+A recurring theme in the lecture was that LSTM is not a universal
+replacement for RNN. The choice depends on the task:
+
+\begin{itemize}
+  \item \textbf{Short-term only tasks} (e.g.\ next word prediction from a
+        short phrase): Standard RNN is sufficient and computationally
+        cheaper.
+  \item \textbf{Long-term tasks} (e.g.\ paragraph-level language modelling,
+        machine translation, speech recognition): LSTM is required.
+  \item \textbf{Mixed or unknown}: Use LSTM as the safer default, accepting
+        the $\approx 4\times$ computation overhead.
+\end{itemize}
+
+\begin{warningbox}[title=LSTM is Not Always Better]
+  ``It is not a generic statement to say that LSTM always gives better
+  performance than RNN. It depends on the task at your hand. If your task
+  needs only modelling of the short-term context information, then you will
+  not gain much by LSTM.'' \hfill (Prof.\ Prasanna, 01:03)
+\end{warningbox}
+
+\subsection{Multiple Stacked LSTM Layers}
+\label{subsec:stacked}
+
+In practice, LSTM cells are stacked: the output $h_t^{(\ell)}$ of layer
+$\ell$ becomes the input $x_t^{(\ell+1)}$ of layer $\ell+1$:
+
+\begin{equation}
+  \label{eq:stacked}
+  h_t^{(\ell)},\; C_t^{(\ell)}
+  = \operatorname{LSTM}^{(\ell)}\!\bigl(h_t^{(\ell-1)},\,
+    h_{t-1}^{(\ell)},\, C_{t-1}^{(\ell)}\bigr),
+  \quad \ell = 1,\ldots,L.
+\end{equation}
+
+Lower layers tend to capture syntactic patterns (short-range), while
+higher layers capture semantic patterns (long-range), naturally creating a
+hierarchy of dependency lengths.
+
+\subsection{Bidirectional LSTM}
+\label{subsec:bilstm}
+
+Many NLP tasks benefit from both left-to-right and right-to-left context.
+A Bidirectional LSTM (BiLSTM) runs two LSTM cells in opposite directions
+and concatenates their hidden states:
+
+\begin{equation}
+  \label{eq:bilstm}
+  h_t^{\text{bi}} = \bigl[\overrightarrow{h}_t;\; \overleftarrow{h}_t\bigr],
+\end{equation}
+
+where $\overrightarrow{h}_t$ is the forward LSTM hidden state and
+$\overleftarrow{h}_t$ is the backward LSTM hidden state. This is
+a standard feature of modern sequence-labelling systems.
+
+% =============================================================================
+\section{Summary and Conclusion}
+\label{sec:conclusion}
+% =============================================================================
+
+\subsection{Session Summary}
+\label{subsec:session-summary}
+
+Session~19 covered the motivation and introduction of the LSTM architecture
+through the lens of the vanishing gradient problem in standard RNNs.
+\cref{tab:session-summary} maps each key concept to the visual evidence
+from the lecture slides.
+
+\begin{table}[ht]
+  \centering
+  \caption{Session~19 concept map: key ideas, visual evidence, and
+           mathematical expression.}
+  \label{tab:session-summary}
+  \begin{tabularx}{\linewidth}{@{}lXl@{}}
+    \toprule
+    \textbf{Concept}
+      & \textbf{Key Insight}
+      & \textbf{Slide / Equation} \\
+    \midrule
+    Short-term dependency
+      & ``Clouds are in the sky'' -- local context suffices
+      & V01, \cref{def:short-term} \\
+    Long-term dependency
+      & Karnataka/Delhi/Hindi -- context spans paragraphs
+      & V01, \cref{def:long-term} \\
+    Vanishing gradient
+      & $\gamma^{T-t} \to 0$ exponentially for $\gamma < 1$
+      & V04, \cref{thm:vanishing} \\
+    Gate concept
+      & $\sigma \in [0,1]$ times information vector
+      & V02, \cref{eq:gate-generic} \\
+    Cell-state highway
+      & Additive update; gradient $= f_t$
+      & V03/V05, \cref{eq:cell-update} \\
+    Forget gate
+      & Erases stale long-term context
+      & \cref{eq:forget-gate} \\
+    Input gate
+      & Writes new info to cell state
+      & \cref{eq:input-gate,eq:candidate} \\
+    Output gate
+      & Exposes relevant cell state as $h_t$
+      & \cref{eq:output-gate,eq:hidden-update} \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Key Takeaways}
+\label{subsec:takeaways}
+
+\begin{keyinsight}[title=The Three Core Ideas of Session 19]
+  \begin{enumerate}[nosep,label=\textbf{\arabic*.}]
+    \item \textbf{Why RNNs fail on long sequences.} Backpropagation
+          through time multiplies Jacobians at every step; when the
+          spectral radius is below 1, gradients vanish exponentially,
+          erasing early context.
+    \item \textbf{The LSTM fix: cell-state highway.} A second feedback
+          line $C_t$ with additive (not multiplicative) updates provides a
+          gradient-preserving memory highway across unlimited time steps.
+    \item \textbf{Gates as soft switches.} Three sigmoid networks
+          (forget, input, output) learn, from data, when to erase, write,
+          and read the cell state --- enabling the network to maintain or
+          discard long-term context as required by the task.
+  \end{enumerate}
+\end{keyinsight}
+
+\subsection{Looking Ahead}
+\label{subsec:looking-ahead}
+
+Session~20 will perform a full numerical walkthrough of all three LSTM
+gates for a concrete example, making the abstract equations in
+\cref{eq:lstm-f,eq:lstm-i,eq:lstm-Ctil,eq:lstm-C,eq:lstm-o,eq:lstm-h}
+tangible. The session will also introduce the Gated Recurrent Unit (GRU),
+which simplifies the LSTM design to two gates while retaining most of the
+long-term memory capability.
+
+\medskip
+\noindent\textbf{Acknowledgements.} The LSTM cell diagram in this document
+is adapted from C.\ Olah, ``Understanding LSTM Networks,''
+\textit{colah.github.io}, 2015. The slide content is from
+\texttt{05-DL-RNN} and \texttt{06-RNNTypesBackpropagation},
+IIITDwd, January 2026.
+
+\clearpage
+
+%% ============================================================
+%% Session 20: LSTM Numerical Walkthrough and Next-Word Prediction Hands-On
+%% ============================================================
+\part{Session 20: LSTM Numerical Walkthrough and Next-Word Prediction Hands-On}
+
+%% ============================================================
+%%  TITLE PAGE
+%% ============================================================
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE\bfseries Deep Learning: Course Notes\par}
+  \vspace{0.8cm}
+  \rule{\linewidth}{0.5pt}\\[0.4cm]
+  {\huge\bfseries Session 20\\[0.3cm]
+   LSTM Numerical Walkthrough\\[0.2cm]
+   \& Next-Word Prediction Hands-On\par}
+  \rule{\linewidth}{0.5pt}\\[1.5cm]
+
+  \begin{tabular}{rl}
+    \textbf{Session Number:} & 20 \\[4pt]
+    \textbf{Date:}           & January 31, 2026 \\[4pt]
+    \textbf{Instructors:}    & Prof.\ S.\ R.\ M.\ Prasanna \\
+                             & Dr.\ Sunil Saumya \\[4pt]
+    \textbf{Institute:}      & IIIT Dharwad \\[4pt]
+    \textbf{Slide Deck:}     & \texttt{05-DL-RNN} (slides 35, 39, 42 of 75) \\[4pt]
+    \textbf{Video:}          & \url{https://vimeo.com/1160427634} \\[4pt]
+    \textbf{Duration:}       & $\approx 1$ hr 41 min \\
+  \end{tabular}
+
+  \vfill
+  {\large\itshape Topics Covered}\\[0.4cm]
+  \begin{itemize}[leftmargin=4cm,rightmargin=4cm]
+    \item LSTM recurrence cell recap (Colah's blog style diagram)
+    \item Forget Gate -- detailed numerical walkthrough
+    \item Input Gate -- sigmoid and tanh sub-operations
+    \item Output Gate -- filtered memory exposure
+    \item Cell-state update equation
+    \item GRU comparison (brief)
+    \item Hands-on: next-word prediction with PyTorch LSTM
+    \item Pre-processing pipeline: tokenisation, vocabulary, sliding-window sequences, padding
+    \item \texttt{LSTMModel} class implementation
+  \end{itemize}
+  \vfill
+\end{titlepage}
+
+\newpage
+
+%% ============================================================
+\section{Introduction}
+\label{sec:intro}
+%% ============================================================
+
+Session 20 of the deep learning course is devoted to two complementary goals.
+The first half provides a careful, \emph{numerical} walkthrough of how the three
+gates of a Long Short-Term Memory (LSTM) cell operate, working with explicit
+4-dimensional vectors so that every dot-product, sigmoid evaluation, and
+element-wise multiplication can be traced by hand.
+The second half transitions to a fully working hands-on session in which an
+LSTM is trained to perform \emph{next-word prediction} on a short text corpus,
+walking through every stage of the PyTorch pipeline: tokenisation, vocabulary
+construction, self-supervised sequence creation, padding, custom dataset and
+data loader, model definition, and training.
+
+\begin{keyinsight}
+  The central motivation for LSTM is the \emph{vanishing gradient} problem of
+  vanilla RNNs.  A plain RNN uses a \emph{single} hidden-state vector that must
+  simultaneously encode short-term context (the current word) and long-term
+  context (words seen many steps ago).  As back-propagation is applied through
+  many time steps, gradients shrink exponentially, making it practically
+  impossible to learn long-range dependencies.
+  LSTM introduces a dedicated \textbf{cell state} $C_t$ that acts as a
+  long-term memory highway, updated only through controlled additive operations
+  that let gradients flow almost unchanged across many time steps.
+\end{keyinsight}
+
+The session is taught by Dr.\ Sunil Saumya (theoretical portion) and references
+Prof.\ S.\ R.\ M.\ Prasanna's slides from the \texttt{05-DL-RNN} deck.
+The visual material is drawn from Christopher Olah's widely cited blog post
+``Understanding LSTM Networks'' (2015), which provides the iconic cell-diagram
+used throughout the lecture.
+
+%% ============================================================
+\section{Background and Prerequisites}
+\label{sec:background}
+%% ============================================================
+
+\subsection{Vanilla RNN and Its Limitations}
+\label{subsec:rnn-limits}
+
+A standard (Elman) RNN maintains a single hidden state $h_t$ updated as
+
+\begin{equation}
+  h_t = \tanh\!\bigl(W_h h_{t-1} + W_x x_t + b\bigr),
+  \label{eq:rnn-update}
+\end{equation}
+
+where $x_t \in \R^d$ is the input at time step $t$, $W_h$ and $W_x$ are
+learned weight matrices, and $b$ is a bias vector.
+The same vector $h_t$ serves as both:
+\begin{itemize}
+  \item the \textbf{short-term} representation passed forward to the next cell, and
+  \item the \textbf{long-term} carrier of all contextual information seen so far.
+\end{itemize}
+Because $h_t$ is overwritten at every step, information from distant time steps
+(e.g.\ $x_{100}$) is diluted by the time the network processes $x_1$ in
+reverse during BPTT, resulting in near-zero gradients --- the vanishing
+gradient problem.
+
+\subsection{Word Representations}
+\label{subsec:word-rep}
+
+Before feeding text into any recurrent network, words must be converted to
+vectors.  Two representations are used in this session:
+
+\begin{description}[style=nextline]
+  \item[One-hot vectors] A vocabulary of size $V$ maps each word to a binary
+    vector $v \in \{0,1\}^V$ with exactly one non-zero entry.  This is
+    sparse, high-dimensional, and carries no semantic information.
+  \item[Dense embeddings] An \texttt{nn.Embedding} layer learns a weight matrix
+    $E \in \R^{V \times d_e}$; look-up of word index $i$ returns the $i$-th
+    row, producing a dense $d_e$-dimensional vector.  This dramatically reduces
+    dimensionality and allows the network to learn semantic similarity.
+\end{description}
+
+\begin{remark}
+  In the running example used during the lecture, the vocabulary contains
+  $V = 4$ words (\emph{I}, \emph{love}, \emph{deep}, \emph{learning}) and the
+  embedding dimension is set to $d_e = 4$, giving equal embedding and hidden
+  dimensions for simplicity.  In the later hands-on, $V = 289$, $d_e = 100$.
+\end{remark}
+
+\subsection{Tensor Dimensions for LSTM Input}
+\label{subsec:tensor-dims}
+
+With \texttt{batch\_first=True} (PyTorch convention used in this session),
+the input tensor has shape
+
+\[
+  \text{input} \;\in\; \R^{B \times T \times d_e},
+\]
+
+where $B$ is the batch size, $T$ is the sequence length (number of time steps),
+and $d_e$ is the embedding dimension.  For the minimal toy example
+($B=1$, $T=4$, $d_e=4$) the shape is $1 \times 4 \times 4$.
+
+%% ============================================================
+\section{LSTM Cell Architecture}
+\label{sec:lstm-arch}
+%% ============================================================
+
+\subsection{The Two-Stream Design}
+\label{subsec:two-stream}
+
+The defining architectural choice of an LSTM is the separation of internal
+memory into two distinct vectors:
+
+\begin{itemize}
+  \item \textbf{Cell state} $C_t \in \R^H$ --- the long-term memory highway.
+    It flows from left to right across the unrolled cell with only two
+    point-wise operations (one multiplication and one addition), so gradients
+    can propagate almost unchanged over many steps.
+  \item \textbf{Hidden state} $h_t \in \R^H$ --- the short-term, context-filtered
+    output.  It is derived from $C_t$ at each step and is what the cell exposes
+    to the next time step and to downstream layers.
+\end{itemize}
+
+\begin{keyinsight}[title=Memory Storage vs.\ Memory Exposure]
+  The instructor uses an evocative analogy: think of $C_t$ as everything stored
+  in your brain --- childhood memories, professional knowledge, personal plans
+  --- all of which is available but not all simultaneously relevant.  When
+  someone asks you about LSTM, you draw on only the relevant subset and
+  express it as your answer; that filtered response is $h_t$.
+  LSTM explicitly \emph{separates memory storage} ($C_t$) from
+  \emph{memory exposure} ($h_t$).
+\end{keyinsight}
+
+\subsection{TikZ Diagram: LSTM Recurrence Cell}
+\label{subsec:lstm-diagram}
+
+\cref{fig:lstm-cell} recreates the Colah's-blog style cell diagram shown on
+slide 35/75 of the lecture deck.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    >=Stealth,
+    node distance=1.3cm and 1.6cm,
+    gate/.style={draw, rounded corners=4pt, fill=yellow!30,
+                 minimum width=1.1cm, minimum height=0.75cm, font=\small},
+    op/.style={draw, circle, fill=pink!50, minimum size=0.55cm, font=\small\bfseries},
+    vec/.style={->, thick},
+    label/.style={font=\small\itshape}
+  ]
+
+  %% Cell state line (top horizontal highway)
+  \node (cin)  [left=2.5cm of {(0,1.8)}] {};
+  \node (cout) [right=5.8cm of cin]       {};
+  \draw[vec, line width=1.5pt, blue!60] (cin) -- node[above, label]{$C_{t-1}$} ++(2.0,0)
+       node (cmul) [op] {$\times$};
+  \draw[vec, line width=1.5pt, blue!60] (cmul) -- ++(1.5,0)
+       node (cadd) [op] {$+$};
+  \draw[vec, line width=1.5pt, blue!60] (cadd) -- node[above, label]{$C_t$} ++(2.2,0);
+
+  %% Forget gate
+  \node (fg) [gate, below=1.4cm of cmul] {$\sigma_f$};
+  \draw[vec] (fg) -- node[right, label, xshift=2pt]{$f_t$} (cmul);
+
+  %% Input gate (sigmoid part)
+  \node (ig) [gate, below=1.4cm of cadd, xshift=-0.7cm] {$\sigma_i$};
+  %% Candidate (tanh part)
+  \node (tg) [gate, right=0.5cm of ig] {$\tanh$};
+  %% Multiply i_t and ~C_t
+  \node (imul) [op, above=0.7cm of ig, xshift=0.5cm] {$\times$};
+  \draw[vec] (ig)  -- (imul);
+  \draw[vec] (tg)  -- (imul);
+  \draw[vec] (imul) -- (cadd);
+
+  %% Output gate
+  \node (tanh2) [gate, right=1.2cm of cadd, yshift=-1.0cm] {$\tanh$};
+  \node (og)    [gate, below=0.6cm of tanh2, xshift=-1.0cm] {$\sigma_o$};
+  \node (omul)  [op,   right=0.5cm of og, yshift=0.5cm] {$\times$};
+  \draw[vec] (cadd)  |- (tanh2);
+  \draw[vec] (tanh2) -- (omul);
+  \draw[vec] (og)    -- (omul);
+  \draw[vec] (omul)  -- node[right, label]{$h_t$} ++(0,1.2);
+
+  %% Input lines for x_t and h_{t-1}
+  \node (xt)   [below=2.5cm of fg, xshift=-0.5cm]  {$x_t$};
+  \node (htm1) [left=0.3cm of fg, yshift=-1.2cm]   {$h_{t-1}$};
+  \draw[vec, dashed] (xt)   -| (fg);
+  \draw[vec, dashed] (htm1) |- (fg);
+  \draw[vec, dashed] (xt)   -| (ig);
+  \draw[vec, dashed] (xt)   -| (tg);
+  \draw[vec, dashed] (xt)   -| (og);
+
+\end{tikzpicture}
+\caption{LSTM recurrence cell (Colah's blog style, slide 35/75).
+  Blue: cell-state highway $C_t$.
+  Yellow rectangles: learned single-layer sub-networks (gates).
+  Pink circles: point-wise operations ($\times$ = element-wise multiply,
+  $+$ = element-wise add).
+  The four internal networks are: forget gate ($\sigma_f$), input gate
+  ($\sigma_i$), candidate generator ($\tanh$), and output gate ($\sigma_o$).}
+\label{fig:lstm-cell}
+\end{figure}
+
+%% ============================================================
+\section{LSTM Gate Mathematics and Numerical Walkthrough}
+\label{sec:gates}
+%% ============================================================
+
+This section presents the complete forward-pass equations for one LSTM time
+step, followed by the 4-dimensional numerical example worked through by the
+instructor.
+
+\subsection{Notation and Setup}
+\label{subsec:notation}
+
+Throughout, the LSTM has $H$ hidden units (neurons per gate).  At time step
+$t$ the following vectors are available:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Symbol} & \textbf{Shape} & \textbf{Description} \\
+\midrule
+$x_t$     & $\R^d$  & Input embedding at time $t$ \\
+$h_{t-1}$ & $\R^H$  & Hidden state from previous step \\
+$C_{t-1}$ & $\R^H$  & Cell state from previous step \\
+$f_t$     & $\R^H$  & Forget gate output \\
+$i_t$     & $\R^H$  & Input gate output \\
+$\tilde{C}_t$ & $\R^H$ & Candidate cell values \\
+$o_t$     & $\R^H$  & Output gate \\
+$C_t$     & $\R^H$  & Updated cell state \\
+$h_t$     & $\R^H$  & Updated hidden state \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+In the lecture example, $d = H = 4$ (4-dimensional vectors throughout).
+
+\subsection{Forget Gate}
+\label{subsec:forget-gate}
+
+\begin{definition}[Forget Gate]
+  The forget gate $f_t$ is a vector in $[0,1]^H$ computed by a single-layer
+  neural network with sigmoid activation.  It decides, for each dimension of
+  the cell state, what fraction of $C_{t-1}$ to \emph{retain}.
+\end{definition}
+
+\begin{align}
+  z_f &= W_{xf}\, x_t + W_{hf}\, h_{t-1} + b_f, \label{eq:zf} \\
+  f_t &= \sigma(z_f), \label{eq:ft}
+\end{align}
+
+where $W_{xf} \in \R^{H \times d}$, $W_{hf} \in \R^{H \times H}$,
+$b_f \in \R^H$.
+
+\textbf{Interpretation.}
+Each element $f_t[k] \in [0,1]$:
+\begin{itemize}
+  \item $f_t[k] \approx 1$: keep almost all of $C_{t-1}[k]$.
+  \item $f_t[k] \approx 0$: erase almost all of $C_{t-1}[k]$.
+  \item $f_t[k] \in (0,1)$: partial retention (soft gating).
+\end{itemize}
+
+The forget-gated cell state is then
+
+\begin{equation}
+  C_{t-1}^{\text{forget}} = f_t \odot C_{t-1}.
+  \label{eq:forget-applied}
+\end{equation}
+
+\subsubsection{Numerical Example (Forget Gate)}
+\label{subsubsec:forget-numerical}
+
+\begin{example}[title=Forget Gate -- 4-D Numerical Example (slide 42/75)]
+Given:
+\[
+  x_t = \begin{bmatrix} 0.2 \\ 0.6 \\ 0.1 \\ 0.9 \end{bmatrix},\quad
+  h_{t-1} = \begin{bmatrix} 0.5 \\ 0.1 \\ 0.3 \\ 0.7 \end{bmatrix},\quad
+  C_{t-1} = \begin{bmatrix} 0.9 \\ 0.2 \\ 0.8 \\ 0.4 \end{bmatrix}.
+\]
+
+After applying \cref{eq:zf} with some fixed $W_{xf},W_{hf},b_f$:
+\[
+  z_f = \begin{bmatrix} 1.2 \\ -0.5 \\ 0.3 \\ 2.0 \end{bmatrix}.
+\]
+
+Applying sigmoid element-wise:
+\[
+  f_t = \sigma(z_f) = \begin{bmatrix}
+    \sigma(1.2) \\ \sigma(-0.5) \\ \sigma(0.3) \\ \sigma(2.0)
+  \end{bmatrix}
+  = \begin{bmatrix} 0.77 \\ 0.38 \\ 0.57 \\ 0.88 \end{bmatrix}.
+\]
+
+Element-wise multiplication with $C_{t-1}$ (\cref{eq:forget-applied}):
+\[
+  f_t \odot C_{t-1}
+  = \begin{bmatrix} 0.77 \\ 0.38 \\ 0.57 \\ 0.88 \end{bmatrix}
+  \odot
+  \begin{bmatrix} 0.9 \\ 0.2 \\ 0.8 \\ 0.4 \end{bmatrix}
+  = \begin{bmatrix} 0.69 \\ 0.08 \\ 0.46 \\ 0.35 \end{bmatrix}.
+\]
+
+\textbf{Reading off the result:}
+\begin{itemize}
+  \item Dimension 0: 77\% of 0.9 retained $\to$ 0.69 (moderate forgetting).
+  \item Dimension 1: only 38\% of 0.2 retained $\to$ 0.08 (mostly forgotten).
+  \item Dimension 2: 57\% of 0.8 retained $\to$ 0.46 (partial forgetting).
+  \item Dimension 3: 88\% of 0.4 retained $\to$ 0.35 (mostly kept).
+\end{itemize}
+\end{example}
+
+\subsection{Input Gate and Candidate Cell State}
+\label{subsec:input-gate}
+
+The input gate has \emph{two} sub-components operating in parallel:
+
+\begin{align}
+  i_t         &= \sigma\!\bigl(W_{xi}\,x_t + W_{hi}\,h_{t-1} + b_i\bigr),
+                \label{eq:it} \\
+  \tilde{C}_t &= \tanh\!\bigl(W_{xC}\,x_t + W_{hC}\,h_{t-1} + b_C\bigr).
+                \label{eq:Ct-cand}
+\end{align}
+
+\begin{description}
+  \item[$\tilde{C}_t$ (candidate cell).] The $\tanh$ layer generates new
+    \emph{candidate values} in $[-1,1]^H$ --- what new information \emph{could}
+    be added to memory based on the current context.
+  \item[$i_t$ (input gate).] The sigmoid layer decides, for each dimension,
+    \emph{how much} of the candidate to actually write into memory.
+\end{description}
+
+\begin{keyinsight}[title=Analogy for Input Gate]
+  Imagine learning that ``deep learning is a subfield of machine learning.''
+  The candidate $\tilde{C}_t$ represents \emph{all} the new information
+  (everything about deep learning).  The input gate $i_t$ decides that you
+  should add only \emph{part} of it --- perhaps already knowing machine
+  learning means the overlap can be discarded.
+  So the actual addition to memory is $i_t \odot \tilde{C}_t$: only
+  the fraction $i_t[k]$ of each candidate dimension is written.
+\end{keyinsight}
+
+\subsection{Cell State Update}
+\label{subsec:cell-update}
+
+The new cell state combines the forget-gated old memory with the input-gated
+new information:
+
+\begin{equation}
+  \boxed{C_t = f_t \odot C_{t-1} \;+\; i_t \odot \tilde{C}_t.}
+  \label{eq:cell-update}
+\end{equation}
+
+This is the core LSTM update equation.  Crucially, it is purely
+\emph{additive}: information is subtracted (via multiplication by $f_t < 1$)
+or added (via $i_t \odot \tilde{C}_t$), but there is no tanh squashing of the
+highway itself, which is what allows gradients to flow far back in time.
+
+\subsection{Output Gate and Hidden State}
+\label{subsec:output-gate}
+
+Finally, the output gate decides what part of the (now-updated) cell state
+to expose as the hidden state:
+
+\begin{align}
+  o_t &= \sigma\!\bigl(W_{xo}\,x_t + W_{ho}\,h_{t-1} + b_o\bigr),
+         \label{eq:ot} \\
+  h_t &= o_t \odot \tanh(C_t).
+         \label{eq:ht}
+\end{align}
+
+The $\tanh(C_t)$ squashes cell-state values into $[-1,1]$, and $o_t$ acts as
+a soft mask that selects which dimensions are relevant for the current output.
+
+\begin{remark}
+  A student question during the lecture highlighted that all three sigmoid
+  outputs ($f_t$, $i_t$, $o_t$) share the same functional form
+  (linear combination followed by sigmoid) and even the same inputs
+  ($x_t$ and $h_{t-1}$).  What distinguishes them are:
+  (1) separate weight matrices ($W_{*f}$, $W_{*i}$, $W_{*o}$) that are
+  independently learned; and
+  (2) the object each gate is \emph{applied to}: $f_t$ acts on $C_{t-1}$,
+  $i_t$ acts on the candidate $\tilde{C}_t$, and $o_t$ acts on $\tanh(C_t)$.
+\end{remark}
+
+\subsection{Complete LSTM Forward-Pass Summary}
+\label{subsec:full-pass}
+
+Collecting \cref{eq:ft,eq:it,eq:Ct-cand,eq:cell-update,eq:ot,eq:ht}:
+
+\begin{align}
+  f_t         &= \sigma(W_{xf}x_t + W_{hf}h_{t-1} + b_f) \label{eq:full-ft} \\
+  i_t         &= \sigma(W_{xi}x_t + W_{hi}h_{t-1} + b_i) \label{eq:full-it} \\
+  \tilde{C}_t &= \tanh(W_{xC}x_t + W_{hC}h_{t-1} + b_C) \label{eq:full-Ct} \\
+  C_t         &= f_t \odot C_{t-1} + i_t \odot \tilde{C}_t \label{eq:full-cell} \\
+  o_t         &= \sigma(W_{xo}x_t + W_{ho}h_{t-1} + b_o) \label{eq:full-ot} \\
+  h_t         &= o_t \odot \tanh(C_t) \label{eq:full-ht}
+\end{align}
+
+\subsection{Dimensional Consistency Constraint}
+\label{subsec:dim-constraint}
+
+A key point stressed by the instructor: all gate outputs, the cell state,
+and the hidden state must share the same dimension $H$.  This is enforced by
+the number of neurons in each gate sub-network.
+
+\begin{warningbox}[title=Dimension Mismatch Will Break the Forward Pass]
+  If you set the number of neurons to $H' \neq H$, the gate outputs will be
+  $\R^{H'}$-vectors while $C_{t-1} \in \R^H$.  The element-wise operations
+  in \cref{eq:forget-applied,eq:cell-update} require identical shapes, so
+  PyTorch will raise a dimension mismatch error.  PyTorch's \texttt{nn.LSTM}
+  enforces this automatically via its \texttt{hidden\_size} parameter.
+\end{warningbox}
+
+\subsection{Gate Parameter Count}
+\label{subsec:param-count}
+
+For a single LSTM layer with input dimension $d$ and hidden size $H$,
+the total number of trainable parameters is:
+
+\begin{equation}
+  \text{Params}_{\text{LSTM}} = 4 \times \bigl(H \cdot d + H \cdot H + H\bigr)
+  = 4H(d + H + 1).
+  \label{eq:param-count}
+\end{equation}
+
+The factor of 4 comes from the four sub-networks: forget gate, input gate,
+candidate generator, and output gate.
+
+\begin{example}[title=Parameter Count for the Hands-On Model]
+  With $d = 100$ (embedding dimension) and $H = 150$ (hidden size):
+  \[
+    \text{Params}_{\text{LSTM}} = 4 \times 150 \times (100 + 150 + 1)
+    = 600 \times 251 = 150\,600.
+  \]
+\end{example}
+
+\newpage
+\subsection{LSTM Algorithm}
+\label{subsec:algorithm}
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\linesnumbered
+\DontPrintSemicolon
+\caption{LSTM Single Time-Step Forward Pass}
+\label{alg:lstm-forward}
+\KwIn{$x_t \in \R^d$, $h_{t-1} \in \R^H$, $C_{t-1} \in \R^H$,
+      weight matrices $W_{xf}, W_{hf}, W_{xi}, W_{hi},
+      W_{xC}, W_{hC}, W_{xo}, W_{ho}$,
+      biases $b_f, b_i, b_C, b_o$}
+\KwOut{$h_t \in \R^H$, $C_t \in \R^H$}
+
+\BlankLine
+\tcp{Step 1 -- Forget Gate}
+$z_f \leftarrow W_{xf}\,x_t + W_{hf}\,h_{t-1} + b_f$\;
+$f_t \leftarrow \sigma(z_f)$\;
+
+\BlankLine
+\tcp{Step 2 -- Input Gate (two sub-operations)}
+$z_i \leftarrow W_{xi}\,x_t + W_{hi}\,h_{t-1} + b_i$\;
+$i_t \leftarrow \sigma(z_i)$\;
+$z_C \leftarrow W_{xC}\,x_t + W_{hC}\,h_{t-1} + b_C$\;
+$\tilde{C}_t \leftarrow \tanh(z_C)$\;
+
+\BlankLine
+\tcp{Step 3 -- Cell State Update}
+$C_t \leftarrow f_t \odot C_{t-1} + i_t \odot \tilde{C}_t$\;
+
+\BlankLine
+\tcp{Step 4 -- Output Gate}
+$z_o \leftarrow W_{xo}\,x_t + W_{ho}\,h_{t-1} + b_o$\;
+$o_t \leftarrow \sigma(z_o)$\;
+$h_t \leftarrow o_t \odot \tanh(C_t)$\;
+
+\BlankLine
+\Return{$h_t,\; C_t$}\;
+\end{algorithm}
+
+%% ============================================================
+\section{LSTM vs.\ GRU: A Brief Comparison}
+\label{sec:gru}
+%% ============================================================
+
+The instructor briefly previewed the Gated Recurrent Unit (GRU), which will
+be covered in detail in Session 21.  \cref{tab:lstm-gru} summarises the main
+architectural differences.
+
+\begin{table}[ht]
+\centering
+\caption{Comparison of LSTM and GRU architectures.}
+\label{tab:lstm-gru}
+\begin{tabularx}{\textwidth}{lXX}
+\toprule
+\textbf{Property}           & \textbf{LSTM}                              & \textbf{GRU} \\
+\midrule
+Memory vectors              & Two: $C_t$ (long-term) and $h_t$ (short-term) & One: $h_t$ only \\
+Gates                       & Three gates + candidate: forget $f_t$, input $i_t$, output $o_t$, candidate $\tilde{C}_t$ & Two gates: reset $r_t$, update $z_t$ \\
+Parameter count (input $d$, hidden $H$) & $4H(d+H+1)$ & $3H(d+H+1)$ \\
+Cell state highway          & Explicit $C_t$ line                        & Merged into $h_t$ \\
+Complexity                  & Higher                                     & Lower \\
+Typical performance         & Strong on long sequences                   & Comparable; sometimes faster to train \\
+Recommendation              & When sequence length is very long          & When computational efficiency matters \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{keyinsight}[title=When to Choose LSTM vs.\ GRU]
+  The instructor's advice: ``If you care about efficiency and complexity,
+  prefer GRU.  If you care about performance, you can choose either -- most of
+  the time the difference is marginal.''  GRU achieves a similar effect to
+  LSTM's forget/input split through its update gate, but uses a single hidden
+  vector instead of the separate $C_t$ and $h_t$, reducing parameter count by
+  approximately 25\%.
+\end{keyinsight}
+
+%% ============================================================
+\section{Hands-On: Next-Word Prediction with PyTorch LSTM}
+\label{sec:handson}
+%% ============================================================
+
+The second half of the session builds a complete next-word prediction
+(language model) pipeline.  The corpus is a single paragraph of text
+(approx.\ 78 sentences, 289 unique tokens) about a data science mentorship
+programme, kept deliberately short to fit within a single session.
+
+\subsection{Pipeline Overview}
+\label{subsec:pipeline}
+
+\cref{fig:pipeline} shows the end-to-end flow of data through the system.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    >=Stealth,
+    node distance=0.5cm and 0.1cm,
+    box/.style={draw, rounded corners=4pt, fill=gray!10,
+                minimum width=2.8cm, minimum height=0.9cm,
+                text centered, font=\small},
+    arr/.style={->, thick}
+  ]
+  \node (raw)   [box]                          {Raw Text\\Corpus};
+  \node (lower) [box, right=1.1cm of raw]      {Lowercase +\\Tokenise (NLTK)};
+  \node (vocab) [box, right=1.1cm of lower]    {Build\\Vocabulary};
+  \node (idx)   [box, below=0.9cm of vocab]    {Text $\to$\\Index Sequences};
+  \node (slide) [box, left=1.1cm of idx]       {Sliding-Window\\Self-Supervised};
+  \node (pad)   [box, left=1.1cm of slide]     {Pad to\\$\max\_len=62$};
+  \node (split) [box, below=0.9cm of pad]      {Split $X$, $y$\\(input, label)};
+  \node (data)  [box, right=1.1cm of split]    {Custom Dataset\\+ DataLoader};
+  \node (model) [box, right=1.1cm of data]     {LSTMModel\\(Emb+LSTM+FC)};
+  \node (train) [box, right=1.1cm of model]    {Train\\(CE Loss + Adam)};
+
+  \draw[arr] (raw)   -- (lower);
+  \draw[arr] (lower) -- (vocab);
+  \draw[arr] (vocab) -- (idx);
+  \draw[arr] (idx)   -- (slide);
+  \draw[arr] (slide) -- (pad);
+  \draw[arr] (pad)   -- (split);
+  \draw[arr] (split) -- (data);
+  \draw[arr] (data)  -- (model);
+  \draw[arr] (model) -- (train);
+\end{tikzpicture}
+\caption{End-to-end pipeline for the next-word prediction hands-on
+  (\texttt{pytorch-lstm-next-word-predictor.ipynb}).}
+\label{fig:pipeline}
+\end{figure}
+
+\subsection{Step 1: Tokenisation and Vocabulary Construction}
+\label{subsec:tokenisation}
+
+The raw text is processed as follows:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Lowercase conversion.}  All characters are converted to
+    lowercase so that \texttt{About} and \texttt{about} are treated as the
+    same token.  Python is case-sensitive; without this step the vocabulary
+    would contain duplicates.
+
+  \item \textbf{Word tokenisation.}  NLTK's \texttt{word\_tokenize} splits
+    the text into individual word tokens and punctuation, automatically
+    discarding HTML-style artefacts (e.g.\ \verb|\/|).
+
+  \item \textbf{Frequency counting.}  A \texttt{Counter} object maps each
+    unique token to its frequency.  The keys of this dictionary become the
+    vocabulary.
+
+  \item \textbf{Index assignment.}  Starting from index 1 (index 0 is
+    reserved for the \texttt{<UNK>} token to handle out-of-vocabulary words
+    at test time), each new token receives the next integer index.
+\end{enumerate}
+
+The resulting vocabulary size is $V = 289$ unique tokens.
+
+\subsection{Step 2: Converting Sentences to Index Sequences}
+\label{subsec:index-seq}
+
+The document is split on newline characters (\verb|\n|), yielding 78
+sentences of varying length.  A helper function \texttt{text\_to\_indices}
+converts each sentence from a list of string tokens to a list of integer
+indices by looking up the vocabulary dictionary; unknown tokens receive
+index 0.
+
+\subsection{Step 3: Self-Supervised Sliding-Window Sequences}
+\label{subsec:sliding-window}
+
+Next-word prediction is a \emph{self-supervised} task: the supervision signal
+is derived from the data itself without manual annotation.  For each sentence
+of length $L$ (represented as indices $[w_1, w_2, \ldots, w_L]$), the
+following training pairs are generated:
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Input sequence $X$}   & \textbf{Target $y$} & \textbf{Interpretation} \\
+\midrule
+$[w_1]$                       & $w_2$               & Given first word, predict second \\
+$[w_1, w_2]$                  & $w_3$               & Given first two, predict third \\
+$[w_1, w_2, w_3]$             & $w_4$               & \ldots \\
+$\vdots$                      & $\vdots$            & \\
+$[w_1, \ldots, w_{L-1}]$      & $w_L$               & Given all but last, predict last \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This produces a total of 942 training sequences from the 78 sentences.
+Sequence lengths vary from 2 tokens (shortest) up to 62 tokens (longest).
+
+\begin{example}[title=Sliding-Window Output for Sentence 10]
+\begin{verbatim}
+training_sequence[10]
+# [ [3, 7],
+#   [3, 7, 5],
+#   [3, 7, 5, 2],
+#   [3, 7, 5, 2, 6],
+#   [3, 7, 5, 2, 6, 7],
+#   ... ]
+\end{verbatim}
+Each sub-list is one training example.  The last element of the sub-list is
+the target word; everything before it is the input context.
+\end{example}
+
+\subsection{Step 4: Padding to Uniform Length}
+\label{subsec:padding}
+
+Because PyTorch processes data in \emph{batches}, all sequences within a
+batch must share the same length.  The maximum sequence length found in the
+dataset is 62, so all shorter sequences are left-padded with zeros:
+
+\[
+  \text{padded\_seq} = [\underbrace{0,\ldots,0}_{62-L},\; w_1,\; w_2,\; \ldots,\; w_L].
+\]
+
+Left-padding (rather than right-padding) is used so that the target word
+always occupies the \emph{last} position of the padded array, enabling a
+uniform \texttt{y = sequence[-1]} split.
+
+\begin{warningbox}[title=Why Left-Pad, Not Right-Pad]
+  If zeros were appended to the right, the last column of the padded matrix
+  would contain zeros for all short sequences, and those zeros would become
+  the prediction targets.  Training on zero-targets would teach the model to
+  predict ``unknown'' at the end of every sentence --- a catastrophic failure
+  of data preparation.  Left-padding avoids this entirely.
+\end{warningbox}
+
+\subsection{Step 5: Input/Label Split}
+\label{subsec:xy-split}
+
+After padding, each training example is a length-62 integer vector.  The
+split is:
+
+\begin{itemize}
+  \item $X = \text{sequence}[0:61]$ (first 61 tokens) --- the input context.
+  \item $y = \text{sequence}[61]$ --- the target word to predict.
+\end{itemize}
+
+This yields a dataset $X \in \mathbb{Z}^{942 \times 61}$ and
+$y \in \mathbb{Z}^{942}$.
+
+\subsection{Step 6: PyTorch Dataset and DataLoader}
+\label{subsec:dataset}
+
+A standard PyTorch \texttt{Dataset} subclass wraps $X$ and $y$, and a
+\texttt{DataLoader} creates mini-batches of size 32 with shuffling:
+
+\begin{itemize}
+  \item \texttt{\_\_len\_\_}: returns 942 (total training examples).
+  \item \texttt{\_\_getitem\_\_(i)}: returns $(X[i], y[i])$ as tensors.
+\end{itemize}
+
+The DataLoader draws random batches of 32 examples, so each epoch consists
+of $\lceil 942 / 32 \rceil = 30$ gradient updates.
+
+\subsection{Step 7: LSTMModel Architecture}
+\label{subsec:model}
+
+The model is implemented as a PyTorch \texttt{nn.Module} with three components
+arranged in sequence:
+
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\textbf{Layer}          & \textbf{Class}      & \textbf{Input shape}        & \textbf{Output shape} \\
+\midrule
+Embedding               & \texttt{nn.Embedding}  & $(B, 61)$ indices           & $(B, 61, 100)$ \\
+LSTM                    & \texttt{nn.LSTM}       & $(B, 61, 100)$              & $(B, 61, 150)$ \\
+Linear (FC head)        & \texttt{nn.Linear}     & $(B, 150)$ (last step only) & $(B, 289)$ logits \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{example}[title=LSTMModel Class (PyTorch)]
+\begin{verbatim}
+class LSTMModel(nn.Module):
+    def __init__(self, vocab_size, embedding_dim,
+                 hidden_size, num_layers=1):
+        super(LSTMModel, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embedding_dim)
+        self.lstm = nn.LSTM(embedding_dim, hidden_size,
+                            num_layers=num_layers,
+                            batch_first=True)
+        self.fc = nn.Linear(hidden_size, vocab_size)
+        self.total_hidden_states = num_layers * hidden_size
+
+    def forward(self, x):
+        embedded = self.embedding(x)          # (B, T, d_e)
+        lstm_out, (hidden_state, cell_state) \
+            = self.lstm(embedded)             # (B, T, H)
+        output = self.fc(lstm_out[:, -1, :])  # (B, V)
+        return output
+
+model = LSTMModel(
+    vocab_size=100,
+    embedding_dim=100,
+    hidden_size=100,
+    num_layers=1
+)
+\end{verbatim}
+The line \texttt{lstm\_out[:, -1, :]} extracts only the hidden state at the
+\emph{last} time step, which encodes the full context of the input sequence.
+This single 150-dimensional vector is then projected to logits over the
+289-word vocabulary.
+\end{example}
+
+\begin{keyinsight}[title=Why \texttt{batch\_first=True}?]
+  By default, PyTorch's \texttt{nn.LSTM} expects input of shape
+  $(T, B, d_e)$ (time first).  Setting \texttt{batch\_first=True} changes
+  this to $(B, T, d_e)$ (batch first), which is more natural when indexing
+  with \texttt{lstm\_out[:, -1, :]} (select all batches, last time step).
+  Without this flag, the equivalent slice would be
+  \texttt{lstm\_out[-1, :, :]} (last time step, all batches), which is less
+  readable.
+\end{keyinsight}
+
+\subsection{Step 8: Training Loop}
+\label{subsec:training}
+
+The model is trained for 10 epochs with:
+\begin{itemize}
+  \item \textbf{Loss function:} Cross-entropy loss
+    $\mathcal{L} = -\sum_{k=1}^{V} y_k \log \hat{p}_k$, applied to the
+    vocabulary logits.
+  \item \textbf{Optimiser:} Adam with learning rate $\eta = 0.01$.
+  \item \textbf{Device:} GPU if available (\texttt{cuda}), else CPU.
+\end{itemize}
+
+\newpage
+%% ============================================================
+\section{Comparison Tables}
+\label{sec:tables}
+%% ============================================================
+
+\subsection{LSTM Gate Properties}
+\label{subsec:gate-table}
+
+\begin{table}[ht]
+\centering
+\caption{Summary of LSTM gate properties for a single time step.}
+\label{tab:gate-props}
+\begin{tabularx}{\textwidth}{lXXXX}
+\toprule
+\textbf{Gate}    & \textbf{Equation}
+                 & \textbf{Activation}
+                 & \textbf{Acts on}
+                 & \textbf{Role} \\
+\midrule
+Forget $f_t$
+  & $W_{xf}x_t + W_{hf}h_{t-1} + b_f$
+  & Sigmoid $\in [0,1]$
+  & $C_{t-1}$
+  & Decides how much old memory to erase \\[4pt]
+Input $i_t$
+  & $W_{xi}x_t + W_{hi}h_{t-1} + b_i$
+  & Sigmoid $\in [0,1]$
+  & $\tilde{C}_t$
+  & Decides how much new info to write \\[4pt]
+Candidate $\tilde{C}_t$
+  & $W_{xC}x_t + W_{hC}h_{t-1} + b_C$
+  & Tanh $\in [-1,1]$
+  & (new proposal)
+  & Generates candidate update values \\[4pt]
+Output $o_t$
+  & $W_{xo}x_t + W_{ho}h_{t-1} + b_o$
+  & Sigmoid $\in [0,1]$
+  & $\tanh(C_t)$
+  & Filters memory for short-term output \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Hyperparameters Used in the Hands-On}
+\label{subsec:hyperparams}
+
+\begin{table}[ht]
+\centering
+\caption{Hyperparameter values used in the hands-on notebook.}
+\label{tab:hyperparams}
+\begin{tabular}{lll}
+\toprule
+\textbf{Hyperparameter}    & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Vocabulary size ($V$)      & 289            & Unique tokens after lowercasing \\
+Embedding dimension ($d_e$)& 100            & \texttt{nn.Embedding} output size \\
+Hidden size ($H$)          & 150            & LSTM neurons per gate \\
+Number of LSTM layers      & 1              & Single-layer LSTM \\
+Sequence length ($T$)      & 61             & After left-padding to 62, minus label \\
+Batch size                 & 32             & Mini-batch gradient descent \\
+Epochs                     & 10             & Full passes over training data \\
+Learning rate ($\eta$)     & 0.01           & Adam optimiser \\
+Max sequence length        & 62             & Determined from training data \\
+Training sequences         & 942            & Generated by sliding-window \\
+Sentences in corpus        & 78             & After splitting on newlines \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Forget Gate Numerical Results}
+\label{subsec:forget-table}
+
+\begin{table}[ht]
+\centering
+\caption{Forget gate numerical walkthrough results (4-dimensional example).}
+\label{tab:forget-nums}
+\begin{tabular}{ccccc}
+\toprule
+\textbf{Dim.} & $z_f[k]$ & $f_t[k] = \sigma(z_f[k])$ & $C_{t-1}[k]$ & $f_t[k]\cdot C_{t-1}[k]$ \\
+\midrule
+0 & $1.2$  & $0.77$ & $0.9$ & $0.69$ \\
+1 & $-0.5$ & $0.38$ & $0.2$ & $0.08$ \\
+2 & $0.3$  & $0.57$ & $0.8$ & $0.46$ \\
+3 & $2.0$  & $0.88$ & $0.4$ & $0.35$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ============================================================
+\section{Summary and Conclusions}
+\label{sec:summary}
+%% ============================================================
+
+Session 20 achieved two closely linked objectives:
+
+\paragraph{Objective 1: Demystifying LSTM Mathematics.}
+By working through a complete 4-dimensional numerical example, the session
+gave students a concrete, calculable understanding of how the three LSTM
+gates operate.  The key equations --- \cref{eq:full-ft} through
+\cref{eq:full-ht} --- were derived step by step, with each intermediate vector
+explicitly computed and interpreted.  The central insight is that LSTM resolves
+the vanishing gradient problem by (a) maintaining a dedicated cell-state
+highway $C_t$ updated only additively, and (b) using learnable, input-dependent
+gates to modulate what is forgotten, what is added, and what is exposed.
+
+\paragraph{Objective 2: Building a Working Language Model.}
+The hands-on demonstrated that the same LSTM equations, when wrapped in a
+\texttt{nn.Module} with an embedding layer and a linear projection head, can
+be trained end-to-end on a next-word prediction task using standard PyTorch
+utilities.  All stages of the NLP pre-processing pipeline were covered:
+tokenisation, vocabulary construction, self-supervised sliding-window sequence
+generation, left-padding for batched processing, and dataset/dataloader setup.
+
+\begin{keyinsight}[title=Core Takeaways from Session 20]
+\begin{enumerate}[label=\arabic*.]
+  \item The LSTM cell state $C_t$ is a \textbf{long-term memory highway};
+    the hidden state $h_t$ is a \textbf{context-filtered short-term output}.
+  \item All internal vectors ($x_t$, $h_t$, $C_t$, $f_t$, $i_t$, $o_t$,
+    $\tilde{C}_t$) must share the same dimension $H$.
+  \item The forget gate multiplies $C_{t-1}$ by values in $[0,1]$;
+    the input gate adds a fraction of the candidate $\tilde{C}_t$.
+    Together, \cref{eq:full-cell} is the only update to long-term memory.
+  \item In PyTorch, \texttt{nn.LSTM} encapsulates all gate computations.
+    With \texttt{batch\_first=True}, input shape is
+    $(B, T, d_e)$ and \texttt{lstm\_out[:, -1, :]} gives the final-step
+    hidden state for classification or prediction.
+  \item Batched processing of variable-length sequences requires
+    \textbf{padding}.  Left-padding ensures the true target token always
+    occupies the last position, avoiding zero-target training artefacts.
+\end{enumerate}
+\end{keyinsight}
+
+\paragraph{Looking Ahead.}
+Session 21 will introduce the Gated Recurrent Unit (GRU), which achieves
+comparable performance to LSTM with approximately 25\% fewer parameters by
+merging the cell state and hidden state into a single vector and replacing
+the three separate gates with just two (reset and update).
+
+\clearpage
+
+\end{document}
