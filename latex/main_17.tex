@@ -1,0 +1,1046 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+%% ──────────────────────────────────────────────
+%% tcolorbox environments
+%% ──────────────────────────────────────────────
+\newtcolorbox{keyinsight}[1][]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Key Insight,#1}
+\newtcolorbox{example}[1][]{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries,title=Example,#1}
+\newtcolorbox{warningbox}[1][]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Warning,#1}
+
+%% ──────────────────────────────────────────────
+%% amsthm environments
+%% ──────────────────────────────────────────────
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+%% ──────────────────────────────────────────────
+%% Page style
+%% ──────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Deep Learning -- Session 17}
+\lhead{IIIT Dharwad}
+\rfoot{Page \thepage}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black
+}
+
+%% ──────────────────────────────────────────────
+%% Convenience math macros
+%% ──────────────────────────────────────────────
+\newcommand{\Whh}{W_{hh}}
+\newcommand{\Wxh}{W_{xh}}
+\newcommand{\Why}{W_{hy}}
+\newcommand{\ht}{h_t}
+\newcommand{\htmo}{h_{t-1}}
+\newcommand{\xt}{x_t}
+\newcommand{\yt}{\hat{y}_t}
+\newcommand{\Lt}{L_t}
+
+%% ══════════════════════════════════════════════
+\begin{document}
+%% ══════════════════════════════════════════════
+
+%% ──────────────────────────────────────────────
+%% Title page
+%% ──────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE\bfseries Deep Learning Course\\[0.4em]
+   Session 17 Lecture Notes\par}
+  \vspace{1.5cm}
+  {\large\bfseries Recurrent Neural Networks:\\
+  Parameter Sharing, Computational Graphs,\\
+  Backpropagation Through Time, and the\\
+  Vanishing Gradient Problem\par}
+  \vspace{1.5cm}
+  \begin{tabular}{ll}
+    \textbf{Session Number:} & 17 \\[0.3em]
+    \textbf{Date:}           & January 13, 2026 \\[0.3em]
+    \textbf{Duration:}       & $\approx$ 1 hour 55 minutes \\[0.3em]
+    \textbf{Instructors:}    & Prof.\ S R M Prasanna \& Dr.\ Sunil Saumya \\[0.3em]
+    \textbf{Institution:}    & IIIT Dharwad \\[0.3em]
+    \textbf{Slide Deck:}     & \texttt{05-DL-RNN} (slides 17--43) \\[0.3em]
+    \textbf{Video:}          & \url{https://vimeo.com/1155843264} \\
+  \end{tabular}
+  \vspace{2cm}
+  \hrule
+  \vspace{0.5cm}
+  {\itshape Topics covered: RNN parameter-sharing rationale; RNN computational
+  graph across time (BPTT); vanishing gradient problem; RNN types and
+  applications; motivation for LSTM/GRU.\par}
+  \vspace{0.5cm}
+  \hrule
+  \vfill
+  {\small These notes are compiled from lecture transcripts and slide visual
+  extractions.  They are intended as a study aid and do not replace the
+  official course material.}
+\end{titlepage}
+
+%% ──────────────────────────────────────────────
+%% Table of contents
+%% ──────────────────────────────────────────────
+\tableofcontents
+\newpage
+
+%% ══════════════════════════════════════════════
+\section{Introduction}
+\label{sec:introduction}
+%% ══════════════════════════════════════════════
+
+Session~17 of the deep learning course continues the study of sequence
+modelling that was introduced in Session~16.  The session opens with a recap of
+why standard feedforward (fully connected) networks fail on sequential data and
+then motivates the key innovation of Recurrent Neural Networks (RNNs):
+\emph{parameter sharing across time steps}.
+
+The main teaching arc of the session is:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Recap of MLP limitations} for sequence data --
+        fixed input size, loss of order information, and inefficient
+        computation.
+  \item \textbf{Parameter sharing as the core RNN idea} -- why the same weight
+        matrices are reused at every time step, and what benefits this brings.
+  \item \textbf{Folded and unfolded RNN representations} -- how the compact
+        loop notation expands into a feed-forward computation graph in time.
+  \item \textbf{RNN forward equations} -- the three weight matrices
+        $\Wxh$, $\Whh$, and $\Why$ and how they combine to produce hidden
+        states and outputs.
+  \item \textbf{RNN Loss and Backpropagation Through Time (BPTT)} -- how the
+        total loss is accumulated across time steps and how gradients flow
+        backward through the unrolled graph.
+  \item \textbf{Vanishing gradient problem in RNNs} -- why both the vertical
+        (depth) and horizontal (time) gradient paths degrade, and why this
+        makes long-range dependency learning nearly impossible with a plain RNN.
+  \item \textbf{Motivation for LSTM and GRU} -- gated architectures that
+        provide explicit gradient highways to solve the vanishing gradient
+        problem.
+\end{enumerate}
+
+\begin{keyinsight}[title=Session Roadmap]
+Session~17 covers the plain (vanilla) RNN only.  LSTM is introduced in
+Sessions~18--20 and GRU in Sessions~21--22.  Understanding the failures of the
+plain RNN is essential for appreciating why gated architectures were invented.
+\end{keyinsight}
+
+%% ══════════════════════════════════════════════
+\section{Background and Prerequisites}
+\label{sec:background}
+%% ══════════════════════════════════════════════
+
+\subsection{Sequential vs.\ Non-Sequential Data}
+\label{subsec:seq_vs_nonseq}
+
+A \emph{non-sequential} dataset (e.g., a table of patient measurements) treats
+each sample as independent.  The order in which rows appear carries no meaning.
+A \emph{sequential} dataset is one where order is semantically significant:
+swapping the tokens of a sentence, the frames of a video, or the time steps of
+a speech signal destroys the meaning.
+
+\begin{definition}[Sequential Data]
+\label{def:sequential}
+A dataset $\{x^{(1)}, x^{(2)}, \ldots, x^{(N)}\}$ is \emph{sequential} if the
+ordering of elements within each sample $x^{(i)} = (x^{(i)}_0, x^{(i)}_1,
+\ldots, x^{(i)}_{T_i})$ carries information that must be preserved during
+modelling.  The length $T_i$ may differ across samples.
+\end{definition}
+
+Examples of sequential data encountered in the course include:
+
+\begin{itemize}[noitemsep]
+  \item \textbf{Natural language} -- sentences, paragraphs, documents.
+  \item \textbf{Speech} -- sequences of acoustic feature vectors (e.g., MFCCs).
+  \item \textbf{Time series} -- stock prices, sensor readings, ECG signals.
+  \item \textbf{Video} -- ordered sequences of image frames.
+\end{itemize}
+
+\subsection{MLP Limitations for Sequence Modelling}
+\label{subsec:mlp_limits}
+
+A multi-layer perceptron (MLP) expects a \emph{fixed-size} input vector.  When
+faced with variable-length sequences, a common workaround is \emph{zero
+padding}: all sequences are padded to the length of the longest sequence in the
+corpus.
+
+\begin{warningbox}[title=Problems with Zero Padding in MLPs]
+\begin{enumerate}[label=\arabic*., noitemsep]
+  \item \textbf{Computational cost:} The input dimension equals the maximum
+        sequence length in the entire training corpus, leading to a massive
+        weight matrix even when most inputs are zero.
+  \item \textbf{Generalisation failure:} If a test sentence is longer than any
+        training sentence, the fixed network cannot handle it.
+  \item \textbf{Loss of order information:} All input positions are processed
+        simultaneously and symmetrically; the network cannot distinguish which
+        token came first.
+  \item \textbf{No shared statistical strength:} A pattern (e.g., the word
+        ``not'') that occurs at position 3 in one sentence and position 7 in
+        another is learned as two completely separate features because each
+        position has its own independent weight column.
+\end{enumerate}
+\end{warningbox}
+
+The instructor summarised the MLP shortcomings as: \emph{fixed input size,
+variable-length sequential data, loss of order information, inefficient
+computation, and poor generalisation}.
+
+\subsection{RNN Design Goals}
+\label{subsec:rnn_goals}
+
+The ideal sequence model should:
+
+\begin{itemize}[noitemsep]
+  \item Handle variable-length inputs without modification.
+  \item Preserve the order of tokens as information.
+  \item Share parameters across positions (time steps) so that a pattern
+        appearing at any position is recognised by the same detector.
+  \item Maintain a ``memory'' of past inputs when producing each output.
+\end{itemize}
+
+These four requirements are precisely what the RNN architecture addresses.
+
+%% ══════════════════════════════════════════════
+\section{RNN Architecture and Parameter Sharing}
+\label{sec:rnn_arch}
+%% ══════════════════════════════════════════════
+
+\subsection{The Parameter-Sharing Principle}
+\label{subsec:param_sharing}
+
+\begin{keyinsight}[title=Core Innovation of RNNs]
+The key idea in moving from an MLP to an RNN is \textbf{sharing parameters
+across different parts of the model} -- specifically, reusing the \emph{same}
+weight matrices at every time step.  In an MLP every link has a unique,
+independently-learned weight; in an RNN a single set of weight matrices
+$\{\Wxh, \Whh, \Why\}$ is applied repeatedly as the network processes each
+token in the sequence.
+\end{keyinsight}
+
+Why does sharing parameters help?
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Variable-length sequences:} Because the same structure is
+        applied at every time step, the network can loop for as many steps as
+        the current sequence requires -- 3 steps for a 3-word sentence, 200
+        steps for a 200-word document -- without any architectural change.
+  \item \textbf{Generalisation across positions:} If the word ``not'' reverses
+        sentiment whether it appears at position 2 or position 12, the shared
+        weights learn this once and apply it everywhere.
+  \item \textbf{Reduced parameter count:} Instead of $T \times d_x \times d_h$
+        parameters for $T$ independent position-specific weight matrices, there
+        are only $d_x \times d_h$ parameters in $\Wxh$, shared across all $T$
+        positions.
+  \item \textbf{Statistical strength:} Every occurrence of a pattern in the
+        training corpus -- regardless of its position -- contributes gradient
+        signal to the same weight update.
+\end{enumerate}
+
+\begin{remark}[RNN vs.\ Feedback Network]
+\label{rem:feedforward}
+Although RNN diagrams show a loop arrow, an RNN is still a \emph{feed-forward}
+architecture: signal flows from input to output at each time step.  The loop
+represents the fact that the weight state computed at time $t$ is \emph{passed
+forward} to time $t+1$; it does not mean signal flows backwards through the
+network in the way that a true feedback (recurrent) network would.
+\end{remark}
+
+\subsection{Folded and Unfolded RNN Representations}
+\label{subsec:folded_unfolded}
+
+\Cref{fig:rnn_compact} shows the \emph{folded} (compact) representation of a
+single-layer RNN.  The recurrent cell $h$ represents the entire hidden-layer
+structure.  The self-loop on $h$ indicates that the hidden state at time $t$
+depends on the hidden state at time $t-1$.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    node distance=1.8cm,
+    cell/.style={draw, rectangle, rounded corners=4pt, minimum width=1.6cm,
+                 minimum height=1.0cm, fill=blue!15, thick},
+    io/.style={draw, circle, minimum size=0.85cm, fill=orange!20, thick},
+    arr/.style={-{Stealth[length=7pt]}, thick},
+    label/.style={font=\small}
+  ]
+  % Nodes
+  \node[io]  (x)  {$x_t$};
+  \node[cell, right=of x] (h) {$h_t$};
+  \node[io,  right=of h]  (y) {$\hat{y}_t$};
+
+  % Forward arrows
+  \draw[arr] (x) -- node[above,label]{$\Wxh$} (h);
+  \draw[arr] (h) -- node[above,label]{$\Why$} (y);
+
+  % Self-loop (recurrent connection)
+  \draw[arr] (h.north) to[out=120,in=60,looseness=3.5]
+             node[above,label]{$\Whh$} (h.north west);
+
+\end{tikzpicture}
+\caption{Folded (compact) representation of a vanilla RNN.  The loop on the
+hidden cell $h_t$ indicates that the previous hidden state $h_{t-1}$ (carrying
+sequence knowledge) is fed back as an additional input at the next time step.}
+\label{fig:rnn_compact}
+\end{figure}
+
+\Cref{fig:rnn_unfolded} shows the same RNN \emph{unfolded} across time.  Each
+vertical slice is identical to the folded network; the horizontal arrows carry
+the hidden state forward.  Crucially, the weight matrices $\Wxh$, $\Whh$, and
+$\Why$ are \emph{identical} in every slice -- this is the parameter sharing.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    node distance=0.9cm and 2.2cm,
+    cell/.style={draw, rectangle, rounded corners=4pt,
+                 minimum width=1.3cm, minimum height=0.9cm,
+                 fill=blue!15, thick},
+    io/.style={draw, circle, minimum size=0.75cm,
+               fill=orange!20, thick, font=\small},
+    loss/.style={draw, diamond, minimum size=0.75cm,
+                 fill=red!20, thick, font=\small},
+    arr/.style={-{Stealth[length=6pt]}, thick},
+    darr/.style={-{Stealth[length=6pt]}, thick, dashed},
+    lbl/.style={font=\footnotesize}
+  ]
+  % Time step 0
+  \node[io]  (x0) {$x_0$};
+  \node[cell, above=of x0] (h0) {$h_0$};
+  \node[io,   above=of h0] (y0) {$\hat{y}_0$};
+  \node[loss, above=of y0] (L0) {$L_0$};
+
+  % Time step 1
+  \node[io,   right=2.4cm of x0] (x1) {$x_1$};
+  \node[cell, above=of x1]       (h1) {$h_1$};
+  \node[io,   above=of h1]       (y1) {$\hat{y}_1$};
+  \node[loss, above=of y1]       (L1) {$L_1$};
+
+  % Time step 2
+  \node[io,   right=2.4cm of x1] (x2) {$x_2$};
+  \node[cell, above=of x2]       (h2) {$h_2$};
+  \node[io,   above=of h2]       (y2) {$\hat{y}_2$};
+  \node[loss, above=of y2]       (L2) {$L_2$};
+
+  % Ellipsis / time T
+  \node[io,   right=2.4cm of x2] (xT) {$x_T$};
+  \node[cell, above=of xT]       (hT) {$h_T$};
+  \node[io,   above=of hT]       (yT) {$\hat{y}_T$};
+  \node[loss, above=of yT]       (LT) {$L_T$};
+
+  % Total loss node
+  \node[loss, fill=red!40, above=0.6cm of L1, xshift=1.2cm] (L) {$L$};
+
+  % Input -> hidden
+  \draw[arr] (x0) -- node[right,lbl]{$\Wxh$} (h0);
+  \draw[arr] (x1) -- node[right,lbl]{$\Wxh$} (h1);
+  \draw[arr] (x2) -- node[right,lbl]{$\Wxh$} (h2);
+  \draw[arr] (xT) -- node[right,lbl]{$\Wxh$} (hT);
+
+  % Hidden -> output
+  \draw[arr] (h0) -- node[right,lbl]{$\Why$} (y0);
+  \draw[arr] (h1) -- node[right,lbl]{$\Why$} (y1);
+  \draw[arr] (h2) -- node[right,lbl]{$\Why$} (y2);
+  \draw[arr] (hT) -- node[right,lbl]{$\Why$} (yT);
+
+  % Output -> loss
+  \draw[arr] (y0) -- (L0);
+  \draw[arr] (y1) -- (L1);
+  \draw[arr] (y2) -- (L2);
+  \draw[arr] (yT) -- (LT);
+
+  % Loss -> total
+  \draw[arr] (L0) -- (L);
+  \draw[arr] (L1) -- (L);
+  \draw[arr] (L2) -- (L);
+  \draw[arr] (LT) -- (L);
+
+  % Recurrent connections h -> h (shared Whh)
+  \draw[arr] (h0) -- node[above,lbl]{$\Whh$} (h1);
+  \draw[arr] (h1) -- node[above,lbl]{$\Whh$} (h2);
+  \draw[darr](h2) -- node[above,lbl]{$\cdots$} (hT);
+
+  % Initial state
+  \node[left=0.7cm of h0, font=\small] (h_init) {$h_{-1}$};
+  \draw[arr] (h_init) -- (h0);
+
+\end{tikzpicture}
+\caption{Unrolled RNN showing the computation graph across time (BPTT diagram).
+The same weight matrices $\Wxh$, $\Whh$, $\Why$ appear at \emph{every}
+time step, illustrating parameter sharing.  Each time step produces a local
+loss $L_t$; the total loss $L = \sum_t L_t$ accumulates these.  Gradients flow
+\emph{backward through time} (right to left along the $\Whh$ arrows) as well
+as vertically through each slice.}
+\label{fig:rnn_unfolded}
+\end{figure}
+
+\subsection{Forward Pass Equations}
+\label{subsec:forward_pass}
+
+At every time step $t$, the RNN performs two computations:
+
+\begin{align}
+  \ht &= \tanh\!\bigl(\Wxh\, \xt + \Whh\, \htmo + b_h\bigr)
+  \label{eq:hidden_state} \\[4pt]
+  \yt &= \mathrm{softmax}\!\bigl(\Why\, \ht + b_y\bigr)
+  \label{eq:output}
+\end{align}
+
+where:
+
+\begin{itemize}[noitemsep]
+  \item $\xt \in \mathbb{R}^{d_x}$ is the input vector at time $t$ (e.g., a
+        one-hot or embedding vector for a word).
+  \item $\htmo \in \mathbb{R}^{d_h}$ is the hidden state from the previous
+        time step (the ``memory'').
+  \item $\Wxh \in \mathbb{R}^{d_h \times d_x}$ maps input to hidden.
+  \item $\Whh \in \mathbb{R}^{d_h \times d_h}$ maps previous hidden state to
+        current hidden state (the recurrent weight).
+  \item $\Why \in \mathbb{R}^{d_y \times d_h}$ maps hidden state to output.
+  \item $b_h \in \mathbb{R}^{d_h}$ and $b_y \in \mathbb{R}^{d_y}$ are bias
+        vectors.
+  \item $\tanh$ is applied element-wise as the hidden-layer activation.
+\end{itemize}
+
+\begin{remark}[Comparison with MLP]
+\label{rem:mlp_compare}
+The MLP computes $h_t = f(W\, x_t)$ -- there is no $\Whh\, \htmo$ term.
+The entire content of the RNN innovation is adding this \emph{one term}: the
+previous hidden state, weighted by $\Whh$, carries sequence knowledge forward.
+\end{remark}
+
+\subsection{Parameter Count Example}
+\label{subsec:param_count}
+
+The lecture walked through a concrete example with $d_x = 4$ (vocabulary of 4
+words, one-hot encoded), $d_h = 3$ (3 neurons in the hidden/output layer, no
+separate hidden layer for simplicity), and $d_y = 3$.  The total number of
+trainable parameters is:
+
+\begin{align}
+  \text{Parameters} &= \underbrace{d_x \times d_h}_{\Wxh}
+                     + \underbrace{d_h \times d_h}_{\Whh}
+                     + \underbrace{d_h}_{\text{bias}} \notag \\
+                    &= (4 \times 3) + (3 \times 3) + 3 \notag \\
+                    &= 12 + 9 + 3 = 24
+  \label{eq:param_count}
+\end{align}
+
+These 24 parameters are \emph{shared} across all time steps.  If the sequence
+has $T$ tokens, the unrolled network uses the same 24 parameters at all $T$
+positions -- it does not multiply by $T$.
+
+\begin{example}[title=Variable-Length Handling]
+Suppose we have three training sentences of lengths 3, 5, and 4 words.  With
+the RNN architecture above:
+\begin{itemize}[noitemsep]
+  \item Sentence 1 (3 words): the recurrent loop executes 3 times.
+  \item Sentence 2 (5 words): the recurrent loop executes 5 times.
+  \item Sentence 3 (4 words): the recurrent loop executes 4 times.
+\end{itemize}
+In every case the parameter count remains 24.  No padding or architectural
+modification is needed.  This is the variable-length advantage of parameter
+sharing.
+\end{example}
+
+%% ══════════════════════════════════════════════
+\section{Backpropagation Through Time (BPTT)}
+\label{sec:bptt}
+%% ══════════════════════════════════════════════
+
+\subsection{Loss Function}
+\label{subsec:loss}
+
+For a many-to-many RNN (one output per time step), the loss at time step $t$ is
+typically the cross-entropy between the predicted output $\hat{y}_t$ and the
+true label $y_t$:
+
+\begin{equation}
+  L_t = -\sum_{k} y_t^{(k)} \log \hat{y}_t^{(k)}
+  \label{eq:local_loss}
+\end{equation}
+
+The \emph{total loss} over the entire sequence is the sum of individual losses:
+
+\begin{equation}
+  L = \sum_{t=1}^{T} L_t
+  \label{eq:total_loss}
+\end{equation}
+
+This matches the visual extraction slide which showed $L = L_0 + L_1 + \cdots
++ L_T$ with all partial losses feeding into a single total-loss node at the
+top of the computation graph.
+
+\subsection{Two Gradient Paths}
+\label{subsec:two_paths}
+
+The unrolled RNN has two distinct paths along which gradients must travel
+during backpropagation:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Vertical path (conventional backpropagation):} At each time
+        step $t$, the error at $\hat{y}_t$ propagates downward through the
+        $\Why$ weight, through the hidden layer, and through $\Wxh$ to the
+        input.  This is the same gradient path as in any deep MLP.
+  \item \textbf{Horizontal path (BPTT):} The error must also propagate
+        \emph{backwards across time}, from step $T$ back to step $0$, through
+        the chain of $\Whh$ matrices.  This is unique to sequence models.
+\end{enumerate}
+
+\begin{keyinsight}[title=What BPTT Computes]
+The gradient of the total loss with respect to the shared weight matrix $W$ is
+the \emph{sum} of the per-step gradients:
+\begin{equation}
+  \frac{\partial L}{\partial W} = \sum_{t=1}^{T}
+    \frac{\partial L_t}{\partial W}
+  \label{eq:bptt_gradient}
+\end{equation}
+Each term $\partial L_t / \partial W$ itself requires unrolling the gradient
+back to time step $0$, making the full gradient computation $O(T)$.
+\end{keyinsight}
+
+\subsection{BPTT Algorithm}
+\label{subsec:bptt_algo}
+
+\begin{algorithm}[H]
+\caption{Backpropagation Through Time (BPTT)}
+\label{alg:bptt}
+\SetAlgoLined
+\DontPrintSemicolon
+\KwIn{Input sequence $\{x_0, x_1, \ldots, x_T\}$, true labels
+      $\{y_0, y_1, \ldots, y_T\}$, initial hidden state $h_{-1}$,\\
+      \hspace{1.2cm}weight matrices $\Wxh$, $\Whh$, $\Why$}
+\KwOut{Gradients $\nabla_{\Wxh} L$, $\nabla_{\Whh} L$, $\nabla_{\Why} L$}
+\BlankLine
+\tcp{Forward pass}
+\For{$t \leftarrow 0$ \KwTo $T$}{
+  $h_t \leftarrow \tanh\!\bigl(\Wxh\, x_t + \Whh\, h_{t-1} + b_h\bigr)$\;
+  $\hat{y}_t \leftarrow \mathrm{softmax}\!\bigl(\Why\, h_t + b_y\bigr)$\;
+  $L_t \leftarrow \mathrm{CrossEntropy}(\hat{y}_t,\, y_t)$\;
+}
+$L \leftarrow \sum_{t=0}^{T} L_t$\;
+\BlankLine
+\tcp{Initialise accumulated gradients}
+$\nabla_{\Wxh} L \leftarrow \mathbf{0}$;\quad
+$\nabla_{\Whh} L \leftarrow \mathbf{0}$;\quad
+$\nabla_{\Why} L \leftarrow \mathbf{0}$\;
+$\delta_h^{(T+1)} \leftarrow \mathbf{0}$\tcp*{no future gradient at last step}
+\BlankLine
+\tcp{Backward pass through time}
+\For{$t \leftarrow T$ \KwTo $0$}{
+  $\delta_y^{(t)} \leftarrow \hat{y}_t - y_t$
+    \tcp*{gradient of cross-entropy + softmax}
+  $\nabla_{\Why} L \leftarrow \nabla_{\Why} L
+    + \delta_y^{(t)}\, h_t^{\top}$\;
+  $\delta_h^{(t)} \leftarrow \bigl(\Why^{\top}\, \delta_y^{(t)}
+    + \Whh^{\top}\, \delta_h^{(t+1)}\bigr)
+    \odot \tanh'(h_t)$\;
+  $\nabla_{\Wxh} L \leftarrow \nabla_{\Wxh} L
+    + \delta_h^{(t)}\, x_t^{\top}$\;
+  $\nabla_{\Whh} L \leftarrow \nabla_{\Whh} L
+    + \delta_h^{(t)}\, h_{t-1}^{\top}$\;
+}
+\Return $\nabla_{\Wxh} L$,\; $\nabla_{\Whh} L$,\; $\nabla_{\Why} L$\;
+\end{algorithm}
+
+\subsection{Computational Complexity}
+\label{subsec:bptt_complexity}
+
+\begin{table}[ht]
+\centering
+\caption{Comparison of standard backpropagation (MLP) vs.\ BPTT (RNN).}
+\label{tab:bp_vs_bptt}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Property} & \textbf{Standard BP (MLP)} & \textbf{BPTT (RNN)} \\
+\midrule
+Gradient paths       & Vertical only             & Vertical \emph{and} horizontal \\
+Number of weight copies & $L$ (one per layer)    & 1 (shared across $T$ steps) \\
+Memory for activations & $O(L \cdot d_h)$        & $O(T \cdot d_h)$ \\
+Computation time     & $O(L)$ per sample         & $O(T \cdot L)$ per sample \\
+Vanishing gradient   & Through depth $L$         & Through depth $L$ \emph{and} time $T$ \\
+Parallelism          & Limited by depth          & None across time steps \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ══════════════════════════════════════════════
+\section{The Vanishing Gradient Problem in RNNs}
+\label{sec:vanishing}
+%% ══════════════════════════════════════════════
+
+\subsection{Mathematical Origin}
+\label{subsec:vanishing_math}
+
+To update $\Whh$ correctly, the gradient must flow from a loss at time $t$
+back to hidden state $h_k$ for $k \ll t$.  This requires computing:
+
+\begin{equation}
+  \frac{\partial h_t}{\partial h_k}
+  = \prod_{i=k+1}^{t} \frac{\partial h_i}{\partial h_{i-1}}
+  = \prod_{i=k+1}^{t} \Whh^{\top} \cdot
+    \mathrm{diag}\!\bigl(\tanh'(h_{i-1})\bigr)
+  \label{eq:gradient_product}
+\end{equation}
+
+This is a product of $(t - k)$ matrices, each equal to $\Whh^{\top}$ scaled by
+the Jacobian of the $\tanh$ activation.  Two facts drive the vanishing gradient
+problem:
+
+\begin{enumerate}[label=\arabic*.]
+  \item $\tanh'(x) = 1 - \tanh^2(x) \leq 1$, with equality only at $x = 0$.
+        For saturated activations the derivative is nearly zero.
+  \item If the largest singular value of $\Whh$ satisfies $\sigma_1(\Whh) < 1$,
+        then $\|\Whh^{\top}\|^{(t-k)} \to 0$ exponentially as $(t-k)$ grows.
+\end{enumerate}
+
+Combining both effects:
+
+\begin{equation}
+  \left\|\frac{\partial h_t}{\partial h_k}\right\| \leq
+  \left(\sigma_1(\Whh)\cdot \max_x |\tanh'(x)|\right)^{t-k}
+  \label{eq:vanishing_bound}
+\end{equation}
+
+When the base of this exponential is less than 1, the gradient shrinks
+exponentially in the temporal distance $(t-k)$, making it impossible for the
+network to learn that $h_k$ should influence $L_t$ for large $(t-k)$.
+
+\begin{keyinsight}[title=Exponential Gradient Decay]
+For a sequence of length $T$, the gradient signal from the last time step that
+reaches the first time step has passed through $T$ multiplications by
+$\Whh^{\top}$ and $T$ applications of $\tanh'(\cdot)$.  If each factor
+contributes a factor of, say, $0.9$, then after 50 steps the gradient magnitude
+is $0.9^{50} \approx 0.005$ -- less than $1\%$ of its original strength.  After
+100 steps it is $0.9^{100} \approx 2.6 \times 10^{-5}$.
+\end{keyinsight}
+
+\subsection{Local Influence Effect}
+\label{subsec:local_influence}
+
+The practical consequence of the vanishing gradient is what the instructors
+called the \emph{local influence} or \emph{local effect}: each output $\hat{y}_t$
+is effectively influenced only by the inputs in its temporal neighbourhood.
+Inputs far back in time have negligible influence because the gradient signal
+linking them to the loss has vanished.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    node distance=0.8cm and 1.6cm,
+    cell/.style={draw, rectangle, rounded corners=3pt,
+                 minimum width=1.1cm, minimum height=0.8cm,
+                 fill=blue!15, thick, font=\small},
+    io/.style={draw, circle, minimum size=0.7cm,
+               fill=orange!20, thick, font=\small},
+    arr/.style={-{Stealth[length=5pt]}, thick},
+    fade/.style={-{Stealth[length=5pt]}, thick, draw=gray!40},
+    highlight/.style={-{Stealth[length=5pt]}, ultra thick, draw=red!70!black}
+  ]
+  % Hidden states
+  \node[cell] (h0) {$h_0$};
+  \node[cell, right=of h0] (h1) {$h_1$};
+  \node[cell, right=of h1] (h2) {$h_2$};
+  \node[cell, right=of h2] (h3) {$h_3$};
+  \node[cell, right=of h3] (h4) {$h_4$};
+
+  % Recurrent arrows: strong near end, fade near start
+  \draw[fade]      (h0) -- node[above,font=\tiny]{$\Whh$} (h1);
+  \draw[fade]      (h1) -- node[above,font=\tiny]{$\Whh$} (h2);
+  \draw[arr]       (h2) -- node[above,font=\tiny]{$\Whh$} (h3);
+  \draw[highlight] (h3) -- node[above,font=\tiny]{$\Whh$} (h4);
+
+  % Outputs
+  \node[io, above=of h4] (y4) {$\hat{y}_4$};
+  \draw[arr] (h4) -- (y4);
+
+  % Gradient back-arrows
+  \draw[fade,      bend left=30] (y4) to node[below,font=\tiny,xshift=5pt]{tiny} (h0.south);
+  \draw[fade,      bend left=25] (y4) to node[below,font=\tiny]{small} (h1.south);
+  \draw[arr,       bend left=20] (y4) to (h2.south);
+  \draw[highlight, bend left=10] (y4) to node[below,font=\tiny]{strong} (h3.south);
+
+  % Legend
+  \node[right=0.4cm of h4, font=\footnotesize, align=left] (leg) {
+    \textcolor{red!70!black}{\rule{0.5cm}{2pt}} strong gradient \\
+    \textcolor{black}{\rule{0.5cm}{1pt}} moderate \\
+    \textcolor{gray!60}{\rule{0.5cm}{1pt}} vanished
+  };
+
+\end{tikzpicture}
+\caption{Illustration of the local influence effect.  The gradient signal from
+output $\hat{y}_4$ reaches $h_3$ and $h_4$ strongly (red), but effectively
+vanishes by the time it reaches $h_0$ and $h_1$ (gray).  Only nearby inputs
+influence the current output -- long-range dependencies cannot be learned.}
+\label{fig:local_influence}
+\end{figure}
+
+\subsection{Two Sources of Vanishing Gradient in RNNs}
+\label{subsec:two_sources}
+
+The instructors emphasised that in RNNs there are \emph{two} independent sources
+of the vanishing gradient problem, unlike plain deep MLPs which have only one:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Vertical vanishing gradient:} At any single time step, the
+        unrolled RNN is essentially a deep MLP (if the recurrent cell has
+        multiple layers).  The conventional backpropagation through these
+        vertical layers can suffer from vanishing gradients, exactly as in any
+        deep network.
+  \item \textbf{Horizontal vanishing gradient (BPTT):} The gradient must also
+        travel horizontally across all time steps.  Each step multiplies by
+        $\Whh^{\top}$ and $\tanh'(\cdot)$, causing the gradient to vanish
+        exponentially in the sequence length.
+\end{enumerate}
+
+\begin{warningbox}[title=Compounded Vanishing Gradient in RNNs]
+Because RNNs have \emph{both} vertical and horizontal gradient paths, the
+vanishing gradient problem is more severe in RNNs than in ordinary deep
+networks.  In a deep MLP with $L$ layers, gradients vanish over depth $L$.  In
+an RNN with sequence length $T$ and recurrent cell depth $D$, gradients can
+vanish over both $D$ (vertical) and $T$ (horizontal), making training on long
+sequences extremely difficult.
+\end{warningbox}
+
+\subsection{Experimental Illustration}
+\label{subsec:experiment}
+
+The instructor shared a student experiment on the IMDB sentiment classification
+dataset (movie reviews, binary positive/negative labels) to illustrate the
+importance of sequence knowledge.  \Cref{tab:imdb} shows representative results.
+
+\begin{table}[ht]
+\centering
+\caption{Indicative accuracy on IMDB sentiment classification: feedforward MLP
+vs.\ RNN at different sequence lengths.  The MLP processes all words in
+parallel (no sequence knowledge); the RNN processes them sequentially.
+Note: the instructor cautioned that these numbers are illustrative only.}
+\label{tab:imdb}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{Sequence Length} &
+\textbf{MLP Accuracy (\%)} &
+\textbf{RNN Accuracy (\%)} &
+\textbf{RNN Advantage} \\
+\midrule
+50  & $\approx 50$ & $> 50$ & Moderate \\
+100 & $\approx 50$ & $> 50$ & Moderate \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The MLP achieves roughly 50\% accuracy (chance level for binary classification)
+at any sequence length because it cannot model the sequential context needed to
+determine sentiment.  The RNN outperforms the MLP because it accumulates
+sequence knowledge step by step.  However, as the sequence length grows, the
+RNN's advantage eventually diminishes because long-range gradients vanish and
+the network loses track of early context.
+
+%% ══════════════════════════════════════════════
+\section{RNN Types and Applications}
+\label{sec:rnn_types}
+%% ══════════════════════════════════════════════
+
+\subsection{Taxonomy of RNN Configurations}
+\label{subsec:rnn_taxonomy}
+
+RNNs are not restricted to the many-to-many configuration shown in the unrolled
+diagram.  The input and output sequence lengths are generally independent.  The
+lecture discussed the following configurations:
+
+\begin{table}[ht]
+\centering
+\caption{Common RNN input/output configurations and representative applications.}
+\label{tab:rnn_configs}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{@{}lllX@{}}
+\toprule
+\textbf{Type} & \textbf{Input} & \textbf{Output} & \textbf{Applications} \\
+\midrule
+One-to-one     & Single vector & Single vector &
+  Standard classification (MLP; RNN not needed) \\
+Many-to-one    & Sequence      & Single vector &
+  Sentiment analysis, document classification \\
+One-to-many    & Single vector & Sequence      &
+  Image captioning, music generation \\
+Many-to-many (sync) & Sequence & Sequence (same length) &
+  Named entity recognition, POS tagging \\
+Many-to-many (async) & Sequence & Sequence (different length) &
+  Machine translation, speech recognition \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{keyinsight}[title=Input and Output Lengths are Independent]
+A common misconception is that the input and output sequence lengths must be
+equal.  They need not be.  In machine translation, an English sentence of 3
+words (``I am going'') may translate to a Hindi sentence of 4 words.  The
+asymmetric many-to-many case requires an encoder--decoder architecture
+(sequence-to-sequence), which is covered in later sessions alongside
+Transformers.
+\end{keyinsight}
+
+\subsection{Speech Recognition as a Running Example}
+\label{subsec:speech_example}
+
+The instructors used speech recognition throughout the session as a concrete
+illustration.  In this task:
+
+\begin{itemize}[noitemsep]
+  \item \textbf{Input:} A recorded speech signal is processed into a sequence
+        of acoustic feature vectors $x_1, x_2, \ldots, x_T$ (e.g., one feature
+        vector per 10\,ms frame).  For the phrase ``recurrent neural network'',
+        this might produce $T \approx 50$--100 feature vectors.
+  \item \textbf{Output:} The three text words $\{y_1, y_2, y_3\}$ = \{recurrent,
+        neural, network\}.
+  \item \textbf{Length mismatch:} $T_{\text{input}} \approx 50$--100 while
+        $T_{\text{output}} = 3$.  A different recording of the same phrase
+        might have $T_{\text{input}} = 47$ or $T_{\text{input}} = 52$, but
+        $T_{\text{output}}$ remains 3.
+\end{itemize}
+
+\begin{example}[title=Word-by-Word Input Processing]
+Consider the sentence ``We are in LLM class'' (5 words, vocabulary size $V$).
+At each time step one word is fed in as a one-hot vector of length $V$:
+
+\medskip
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+\textbf{Time step} & \textbf{Input $x_t$} & \textbf{One-hot index} \\
+\midrule
+$t=0$ & ``We''    & index of ``We'' in vocabulary \\
+$t=1$ & ``are''   & index of ``are'' \\
+$t=2$ & ``in''    & index of ``in'' \\
+$t=3$ & ``LLM''   & index of ``LLM'' \\
+$t=4$ & ``class'' & index of ``class'' \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+At each step the hidden state is updated:
+$h_t = \tanh(\Wxh\, x_t + \Whh\, h_{t-1})$.
+By step $t=4$, $h_4$ encodes contextual information from all five words.
+\end{example}
+
+\subsection{Input Representation: One-Hot Encoding}
+\label{subsec:one_hot}
+
+Words cannot be fed directly into a neural network; they must be represented
+numerically.  The simplest representation is \emph{one-hot encoding}: a vector
+of length $V$ (vocabulary size) with a 1 in the position corresponding to the
+word and 0 everywhere else.
+
+For a vocabulary $\{$``we'', ``are'', ``LLM'', ``class''$\}$ of size $V=4$:
+
+\begin{align}
+  \text{``we''}   &\mapsto [1, 0, 0, 0]^\top \notag \\
+  \text{``are''}  &\mapsto [0, 1, 0, 0]^\top \notag \\
+  \text{``LLM''}  &\mapsto [0, 0, 1, 0]^\top \notag \\
+  \text{``class''}&\mapsto [0, 0, 0, 1]^\top \notag
+\end{align}
+
+The vector length $V$ determines the input dimension $d_x$ and hence the number
+of columns in $\Wxh$.  The instructor noted that more sophisticated
+representations (word embeddings, dense vectors) can be used in place of
+one-hot vectors, and would be covered in subsequent sessions.
+
+\subsection{Recurrent CNN (RCNN)}
+\label{subsec:rcnn}
+
+A student question at the end of the session asked whether the recurrent
+connection concept can be combined with CNNs.  The instructor confirmed this
+exists and is called a \emph{Recurrent CNN (RCNN)}, where convolutional layers
+are augmented with recurrent connections.  The course does not cover RCNN in
+detail, but students were encouraged to explore it independently.
+
+%% ══════════════════════════════════════════════
+\section{Solutions to the Vanishing Gradient Problem}
+\label{sec:solutions}
+%% ══════════════════════════════════════════════
+
+\subsection{Overview of Mitigation Strategies}
+\label{subsec:solutions_overview}
+
+Several approaches have been proposed to address or mitigate the vanishing
+gradient problem in RNNs:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Careful weight initialisation:} Initialising $\Whh$ as an
+        orthogonal matrix ensures $\|\Whh\| = 1$ initially, delaying (but not
+        eliminating) gradient decay.
+  \item \textbf{Gradient clipping:} Cap the gradient norm before applying the
+        weight update to prevent \emph{exploding} gradients.  Does not address
+        \emph{vanishing} gradients directly.
+  \item \textbf{ReLU activation:} Unlike $\tanh$, the ReLU function has
+        derivative 1 for positive inputs, avoiding the saturation-driven
+        component of the vanishing gradient.  However, this introduces the
+        dying-ReLU problem and instability in the recurrent path.
+  \item \textbf{LSTM (Long Short-Term Memory):} Introduces gating mechanisms
+        (forget gate, input gate, output gate) that create direct gradient
+        highways through the cell state, largely bypassing the multiplicative
+        gradient decay.  Introduced by Hochreiter \& Schmidhuber (1997).
+  \item \textbf{GRU (Gated Recurrent Unit):} A simplified variant of LSTM with
+        fewer gates (reset gate, update gate), introduced by Cho et al.\ (2014).
+        Achieves comparable performance to LSTM with fewer parameters.
+\end{enumerate}
+
+\begin{keyinsight}[title=LSTM and GRU as Gradient Highways]
+The fundamental innovation of LSTM and GRU is not simply ``more parameters'' but
+the creation of \emph{additive} gradient paths.  In a plain RNN the gradient
+from step $T$ to step $k$ must pass through $T-k$ \emph{multiplicative}
+operations.  In an LSTM, the cell state update includes an \emph{additive}
+component (the forget gate times the old cell state plus the input gate times
+the new candidate), which allows gradients to flow backward with minimal
+attenuation.
+\end{keyinsight}
+
+\subsection{Comparison: Plain RNN vs.\ LSTM vs.\ GRU}
+\label{subsec:rnn_lstm_gru_compare}
+
+\begin{table}[ht]
+\centering
+\caption{Comparison of Plain RNN, LSTM, and GRU on key properties.}
+\label{tab:rnn_vs_lstm_vs_gru}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{@{}lXXX@{}}
+\toprule
+\textbf{Property} & \textbf{Plain RNN} & \textbf{LSTM} & \textbf{GRU} \\
+\midrule
+Hidden state     & $h_t$ only & $h_t$ + cell state $c_t$ & $h_t$ only \\
+Gates            & None & Forget, Input, Output (3) & Reset, Update (2) \\
+Gradient flow    & Multiplicative chain & Additive cell state path & Additive update path \\
+Vanishing gradient & Severe & Largely mitigated & Largely mitigated \\
+Parameters       & $O(d_h^2)$ & $O(4 d_h^2)$ & $O(3 d_h^2)$ \\
+Training speed   & Fastest & Slowest & Intermediate \\
+Long-range deps. & Poor & Good & Good \\
+Introduced       & 1986 (Elman) & 1997 (Hochreiter \& Schmidhuber) & 2014 (Cho et al.) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Course Roadmap for Sequence Models}
+\label{subsec:roadmap}
+
+The session concluded by placing the vanilla RNN in the broader context of the
+sequence modelling module:
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=0.5cm and 2.0cm,
+    box/.style={draw, rectangle, rounded corners=3pt,
+                minimum width=2.8cm, minimum height=0.9cm,
+                fill=blue!10, thick, font=\small, align=center},
+    done/.style={box, fill=green!15},
+    future/.style={box, fill=gray!15, dashed},
+    arr/.style={-{Stealth[length=6pt]}, thick}
+  ]
+  \node[done]   (s16) {Session 16\\Sequential data\\motivation};
+  \node[done,   right=of s16] (s17) {Session 17\\Plain RNN,\\BPTT, Vanishing~$\nabla$};
+  \node[future, right=of s17] (s18) {Sessions 18--20\\LSTM};
+  \node[future, right=of s18] (s21) {Sessions 21--22\\GRU};
+  \node[future, below=0.8cm of s18, xshift=1.5cm] (s_deep) {Sessions 23+\\Deep \& Bidirectional\\RNN};
+
+  \draw[arr] (s16) -- (s17);
+  \draw[arr] (s17) -- (s18);
+  \draw[arr] (s18) -- (s21);
+  \draw[arr] (s18) -- (s_deep);
+  \draw[arr] (s21) -- (s_deep);
+
+\end{tikzpicture}
+\end{center}
+
+%% ══════════════════════════════════════════════
+\section{Summary and Conclusions}
+\label{sec:summary}
+%% ══════════════════════════════════════════════
+
+Session~17 provided a deep theoretical foundation for Recurrent Neural Networks.
+The following key points were covered:
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+
+  \item \textbf{MLP limitations for sequential data.}
+        MLPs require fixed-size inputs, cannot handle variable-length sequences
+        without wasteful zero-padding, lose order information by processing all
+        inputs simultaneously, and learn position-specific rather than
+        position-invariant patterns.
+
+  \item \textbf{Parameter sharing as the RNN core innovation.}
+        The transition from MLP to RNN is achieved by reusing the same weight
+        matrices $\{\Wxh, \Whh, \Why\}$ at every time step.  This single change
+        simultaneously addresses variable-length inputs, order preservation,
+        reduced parameter count, and statistical generalisation across positions.
+
+  \item \textbf{Forward pass equations.}
+        The hidden state update
+        $h_t = \tanh(\Wxh\, x_t + \Whh\, h_{t-1} + b_h)$
+        is the defining equation of the plain RNN.  Compared to the MLP,
+        the only addition is the $\Whh\, h_{t-1}$ term carrying sequence memory.
+
+  \item \textbf{Backpropagation Through Time (BPTT).}
+        The total loss $L = \sum_t L_t$ is minimised by computing
+        $\nabla_W L = \sum_t \nabla_W L_t$, which requires propagating gradients
+        both vertically (through depth) and horizontally (through time steps)
+        in the unrolled graph.
+
+  \item \textbf{Vanishing gradient problem.}
+        Because the horizontal gradient path involves a product of $(t-k)$
+        matrices of the form $\Whh^{\top} \cdot \mathrm{diag}(\tanh'(h_i))$,
+        gradients decay exponentially with temporal distance.  This leads to a
+        \emph{local influence effect}: outputs are influenced only by nearby
+        inputs.
+
+  \item \textbf{Two sources of vanishing gradients.}
+        RNNs suffer vanishing gradients both vertically (through deep hidden
+        layers) and horizontally (through long sequences via BPTT).  This
+        double exposure makes the problem strictly worse in RNNs than in
+        standard deep MLPs.
+
+  \item \textbf{LSTM and GRU as solutions.}
+        Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU)
+        architectures were specifically designed to provide additive gradient
+        pathways that resist exponential decay, enabling learning of long-range
+        dependencies.  These are covered in detail in Sessions~18--22.
+
+\end{enumerate}
+
+\begin{keyinsight}[title=The Central Tension of Plain RNNs]
+The plain RNN is theoretically capable of modelling arbitrarily long
+dependencies, but is practically unable to learn them because of the vanishing
+gradient problem.  The entire purpose of LSTM and GRU is to resolve this
+tension by giving the network a mechanism to \emph{choose} which information to
+remember and for how long -- something the plain RNN cannot do.
+\end{keyinsight}
+
+\vspace{1cm}
+\noindent\textbf{Acknowledgements.}  These notes are based on the lecture
+delivered by Prof.\ S R M Prasanna and Dr.\ Sunil Saumya at IIIT Dharwad,
+January 13, 2026.  The slide deck \texttt{05-DL-RNN} (slides 17--43) and the
+session video at \url{https://vimeo.com/1155843264} are the primary sources.
+Additional mathematical formulation draws on the standard deep learning
+literature, particularly Goodfellow, Bengio \& Courville (2016) and the MIT
+6.S191 sequence modelling lecture by Ava Soleimany (2022).
+
+\end{document}

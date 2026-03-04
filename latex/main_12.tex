@@ -1,0 +1,1240 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+%% ---------- tcolorbox environments ----------
+\newtcolorbox{keyinsight}[1][]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Key Insight,#1}
+\newtcolorbox{example}[1][]{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries,title=Example,#1}
+\newtcolorbox{warningbox}[1][]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Warning,#1}
+
+%% ---------- amsthm environments ----------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+%% ---------- Header / Footer ----------
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Session 12 -- ANN Regularisation \& CNN Introduction}
+\lhead{Deep Learning Course}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% ---------- Hyperref ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=green!50!black
+}
+
+%% ---------- Convenience macros ----------
+\newcommand{\PyTorch}{\textsc{PyTorch}}
+\newcommand{\Ltwo}{L_2}
+\newcommand{\batchnorm}{\texttt{BatchNorm1d}}
+\newcommand{\dropout}{\texttt{Dropout}}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+%% ---- Title page ----
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE\bfseries Deep Learning Course\\[0.4em]
+   \rule{\linewidth}{0.5pt}\\[0.6em]
+   Session 12 Lecture Notes}\\[1.2em]
+  {\large\itshape ANN Regularisation (BatchNorm, Dropout, $\Ltwo$)\\
+   on Fashion-MNIST and Introduction to CNNs}\\[2em]
+  \begin{tabular}{ll}
+    \textbf{Session:}     & 12 of 24 \\[0.3em]
+    \textbf{Topic:}       & ANN Optimisation + CNN Foundations \\[0.3em]
+    \textbf{Instructors:} & Prof.\ S R M Prasanna \&\ Dr.\ Sunil Saumya \\[0.3em]
+    \textbf{Institute:}   & IIIT Dharwad (IIITDwd) \\[0.3em]
+    \textbf{Slide Decks:} & \texttt{04-PyTorchDL-NNmodule} (ANN),
+                            \texttt{03-DL-CNN} (CNN) \\[0.3em]
+    \textbf{Duration:}    & $\approx 1$\,hr\,32\,min \\[0.3em]
+    \textbf{Date:}        & December 26, 2025 \\
+  \end{tabular}\\[3em]
+  \begin{abstract}
+    \noindent
+    Session 12 bridges the hands-on ANN experiments from Session 11 with the
+    theoretical and practical foundations of Convolutional Neural Networks
+    (CNNs).  The first hour is devoted to reviewing the three versions of the
+    Fashion-MNIST ANN built in the previous session, identifying the
+    overfitting gap (training accuracy 98\,\% vs.\ test accuracy 88\,\%),
+    and introducing three complementary regularisation strategies:
+    $\Ltwo$~weight-decay, Batch Normalisation, and Dropout.  An optimised
+    fourth version combines all three remedies and achieves a tighter
+    train/test gap ($93\,\% / 88\,\%$).  The second half of the session is
+    presented by Prof.\ Prasanna, who motivates CNNs from first principles
+    --- the spatial structure of image data, the history of the ImageNet
+    challenge, and the fundamental distinction between matrix multiplication
+    (used in ANNs) and the convolution operation (used in CNNs).
+  \end{abstract}
+  \vfill
+  {\small These notes were compiled from the video transcript and visual
+   extractions of the session recording.}
+\end{titlepage}
+
+%% ---- Table of Contents ----
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Introduction and Session Overview}
+\label{sec:intro}
+% ============================================================
+
+Session 12 occupies a pivotal position in the course: it closes the ANN
+regularisation arc that began in Session 11 and opens the new chapter on
+Convolutional Neural Networks.  The session is co-taught:
+Dr.\ Sunil Saumya leads the first $\approx$50 minutes, covering regularisation
+theory and the Google Colab notebook, while Prof.\ S R M Prasanna presents the
+CNN motivation and introduction from $\approx$51 minutes onwards.
+
+\subsection{Learning Objectives}
+\label{sec:intro:objectives}
+
+By the end of this session, students should be able to:
+
+\begin{enumerate}[label=\textbf{O\arabic*.}]
+  \item Explain the concept of overfitting and diagnose it from the
+        train/test accuracy gap.
+  \item Apply $\Ltwo$ regularisation (weight decay) via the
+        \texttt{weight\_decay} parameter of PyTorch optimisers.
+  \item Insert \texttt{nn.BatchNorm1d} and \texttt{nn.Dropout} layers into an
+        \texttt{nn.Sequential} model in the correct order.
+  \item Describe the intuition behind dropout as an implicit ensemble of
+        sub-networks.
+  \item State the key differences between a fully-connected ANN layer (matrix
+        multiplication) and a CNN layer (convolution with a kernel).
+  \item Define the terms \emph{kernel}, \emph{filter}, and \emph{feature map}
+        in the CNN context.
+\end{enumerate}
+
+\subsection{Session Roadmap}
+\label{sec:intro:roadmap}
+
+The session proceeds in three logical stages:
+
+\begin{enumerate}
+  \item \textbf{Recap} (0:00--0:25): Dr.\ Saumya reviews the three ANN
+        versions built on Fashion-MNIST in the previous session, identifies
+        the overfitting problem, and lists the remedies to be explored today.
+  \item \textbf{ANN Regularisation} (0:25--0:50): Live coding in Google Colab
+        demonstrating BatchNorm, Dropout, and $\Ltwo$ weight-decay,
+        followed by a student Q\&A session.
+  \item \textbf{CNN Introduction} (0:51--1:33): Prof.\ Prasanna introduces
+        the historical motivation for CNNs, the concept of spatial
+        data structure, and the convolution operation.
+\end{enumerate}
+
+% ============================================================
+\section{Background and Prerequisites}
+\label{sec:background}
+% ============================================================
+
+\subsection{The Fashion-MNIST Dataset}
+\label{sec:background:fashionmnist}
+
+Fashion-MNIST \cite{xiao2017fashionmnist} is a drop-in replacement for the
+classic MNIST handwritten-digits dataset.  It contains $70{,}000$ grayscale
+images ($28\times28$ pixels each) belonging to 10 clothing categories
+(T-shirt, Trouser, Pullover, \ldots, Ankle boot).  The standard split
+provides $60{,}000$ training samples and $10{,}000$ test samples.
+
+\begin{keyinsight}
+  Each $28\times28$ image is \emph{flattened} into a 784-dimensional vector
+  before being fed into an ANN.  This discards all spatial (2D) structure ---
+  the primary motivation for CNNs introduced in \cref{sec:cnn_intro}.
+\end{keyinsight}
+
+\subsection{PyTorch Data Pipeline Recap}
+\label{sec:background:pipeline}
+
+Two PyTorch classes handle data loading:
+
+\begin{itemize}
+  \item \textbf{\texttt{Dataset}}: Loads raw data and converts it to
+        \texttt{torch.float32} tensors (features) and \texttt{torch.long}
+        tensors (labels).  Implements \texttt{\_\_init\_\_},
+        \texttt{\_\_len\_\_}, and \texttt{\_\_getitem\_\_}.
+  \item \textbf{\texttt{DataLoader}}: Wraps a \texttt{Dataset} and provides
+        shuffled mini-batches via the inner loop.  The \texttt{batch\_size}
+        parameter controls how many samples are drawn at once.
+\end{itemize}
+
+The relationship can be summarised as:
+
+\[
+  \underbrace{\texttt{DataLoader}}_{\text{mini-batch generator}}
+  \xrightarrow{\text{calls}}
+  \underbrace{\texttt{Dataset.\_\_getitem\_\_}(i)}_{\text{returns one sample}}
+\]
+
+\subsection{The Training Loop}
+\label{sec:background:loop}
+
+Every mini-batch passes through four canonical steps:
+
+\begin{enumerate}
+  \item \textbf{Forward pass}: compute predictions $\hat{y} = f_\theta(x)$.
+  \item \textbf{Loss}: compute $\mathcal{L}(\hat{y}, y)$.
+  \item \textbf{Backward pass}: compute gradients via
+        \texttt{loss.backward()}.
+  \item \textbf{Weight update}: apply \texttt{optimizer.step()}.
+\end{enumerate}
+
+% ============================================================
+\section{ANN Architecture for Fashion-MNIST}
+\label{sec:ann_arch}
+% ============================================================
+
+\subsection{Baseline Architecture}
+\label{sec:ann_arch:baseline}
+
+The baseline network maps the flattened input ($784$ features) through two
+hidden layers to a 10-class softmax output:
+
+\begin{equation}
+  \label{eq:ann_dims}
+  784 \;\xrightarrow{\text{Linear}+\text{ReLU}}\; 128
+      \;\xrightarrow{\text{Linear}+\text{ReLU}}\; 64
+      \;\xrightarrow{\text{Linear}}\; 10
+\end{equation}
+
+\Cref{fig:ann_arch} shows the architecture diagram as presented on the
+lecture slide.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      node distance=2.2cm,
+      neuron/.style={circle, draw=gray!70, fill=gray!15,
+                     minimum size=0.55cm, inner sep=0pt},
+      layer/.style={rectangle, draw=blue!40, fill=blue!5,
+                    rounded corners=3pt, minimum width=1.1cm,
+                    minimum height=4.5cm},
+      lbl/.style={font=\small\bfseries, text=blue!70!black},
+      arr/.style={-{Latex[length=2.5mm]}, gray!60, line width=0.4pt}
+    ]
+    %% Input layer
+    \foreach \i in {1,...,5}{
+      \node[neuron] (I\i) at (0, {-(\i-1)*0.75}) {};
+    }
+    \node[lbl, above=0.2cm of I1] {Input};
+    \node[font=\small, below=0.05cm of I5] {$784$};
+
+    %% Hidden layer 1
+    \foreach \i in {1,...,5}{
+      \node[neuron] (H1\i) at (2.5, {-(\i-1)*0.75}) {};
+    }
+    \node[lbl, above=0.2cm of H11] {Hidden 1};
+    \node[font=\small, below=0.05cm of H15] {$128$};
+
+    %% Hidden layer 2
+    \foreach \i in {1,...,4}{
+      \node[neuron] (H2\i) at (5.0, {-(\i-1)*0.75 - 0.375}) {};
+    }
+    \node[lbl, above=0.2cm of H21] {Hidden 2};
+    \node[font=\small, below=0.05cm of H24] {$64$};
+
+    %% Output layer
+    \foreach \i in {1,...,3}{
+      \node[neuron] (O\i) at (7.5, {-(\i-1)*0.75 - 0.75}) {};
+    }
+    \node[lbl, above=0.2cm of O1] {Output};
+    \node[font=\small, below=0.05cm of O3] {$10$};
+
+    %% Connections I -> H1
+    \foreach \i in {1,...,5}{
+      \foreach \j in {1,...,5}{
+        \draw[arr] (I\i) -- (H1\j);
+      }
+    }
+    %% Connections H1 -> H2
+    \foreach \i in {1,...,5}{
+      \foreach \j in {1,...,4}{
+        \draw[arr] (H1\i) -- (H2\j);
+      }
+    }
+    %% Connections H2 -> O
+    \foreach \i in {1,...,4}{
+      \foreach \j in {1,...,3}{
+        \draw[arr] (H2\i) -- (O\j);
+      }
+    }
+
+    %% Activation labels
+    \node[font=\footnotesize\itshape, text=green!50!black]
+      at (1.25, -2.2) {ReLU};
+    \node[font=\footnotesize\itshape, text=green!50!black]
+      at (3.75, -2.2) {ReLU};
+    \node[font=\footnotesize\itshape, text=orange!70!black]
+      at (6.25, -2.2) {(none)};
+  \end{tikzpicture}
+  \caption{ANN architecture for Fashion-MNIST: $784\to128\to64\to10$.
+           Connections are fully connected between consecutive layers.
+           (Only a representative subset of neurons is drawn.)}
+  \label{fig:ann_arch}
+\end{figure}
+
+\subsection{PyTorch Implementation}
+\label{sec:ann_arch:impl}
+
+The baseline model is implemented using \texttt{nn.Sequential}:
+
+\begin{example}[title=Baseline ANN (Version 1 -- CPU, 6{,}000 samples)]
+\begin{verbatim}
+class MyANN(nn.Module):
+    def __init__(self, num_features):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Linear(num_features, 128),
+            nn.ReLU(),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+learning_rate = 0.1
+epochs        = 100
+\end{verbatim}
+\end{example}
+
+\subsection{Version 2: Full Dataset on GPU}
+\label{sec:ann_arch:gpu}
+
+In Version 2, the full 60{,}000-sample training set is used and the model
+and data are moved to the GPU:
+
+\begin{verbatim}
+device = "cuda" if torch.cuda.is_available() else "cpu"
+model  = MyANN(X_train.shape[1]).to(device)
+
+# Inside the training loop:
+X_batch = X_batch.to(device)
+y_batch = y_batch.to(device)
+\end{verbatim}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Performance comparison across ANN versions on Fashion-MNIST.}
+  \label{tab:ann_versions}
+  \begin{tabular}{clcccc}
+    \toprule
+    \textbf{Version} & \textbf{Description}
+      & \textbf{Data} & \textbf{Train Acc.}
+      & \textbf{Test Acc.} & \textbf{Overfit Gap} \\
+    \midrule
+    V1 & Baseline, CPU          & 6{,}000  & --    & 83\,\% & -- \\
+    V2 & Full data, GPU         & 60{,}000 & 98\,\% & 88\,\% & 10\,\% \\
+    V3 & BatchNorm + Dropout + $\Ltwo$ & 60{,}000 & 93\,\% & 88\,\% & 5\,\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\cref{tab:ann_versions} summarises the progression.  Moving from Version 2
+to Version 3 reduces the training accuracy from 98\,\% to 93\,\% while
+holding test accuracy constant at 88\,\%, demonstrating that the overfit
+gap has been halved.
+
+% ============================================================
+\section{Overfitting and Regularisation Techniques}
+\label{sec:regularisation}
+% ============================================================
+
+\subsection{Diagnosing Overfitting}
+\label{sec:regularisation:diagnosis}
+
+\begin{definition}[Overfitting]
+  \label{def:overfitting}
+  A model is said to \emph{overfit} the training data when it achieves
+  significantly higher accuracy (or lower loss) on the training set than on
+  an unseen test set.  Formally, if $\text{acc}_{\text{train}} \gg
+  \text{acc}_{\text{test}}$, the model has learned spurious patterns
+  (memorised the data) rather than generalising.
+\end{definition}
+
+In the session, this was observed as:
+
+\begin{align}
+  \text{Training accuracy} &= 98\,\% \notag \\
+  \text{Test accuracy}     &= 88\,\% \notag \\
+  \text{Gap}               &= 10\,\% \quad \Longrightarrow \quad \text{overfitting}
+  \label{eq:overfit_gap}
+\end{align}
+
+\begin{keyinsight}
+  The goal of regularisation is \emph{not} necessarily to improve test
+  accuracy, but to \emph{reduce the gap} between train and test accuracy,
+  thereby producing a model that generalises better.
+\end{keyinsight}
+
+\subsection{Strategies to Combat Overfitting}
+\label{sec:regularisation:strategies}
+
+The instructor outlined four strategies, in order of practicality for this
+experiment:
+
+\begin{enumerate}[label=\textbf{S\arabic*.}]
+  \item \textbf{Add more data} --- increases diversity seen during training;
+        not available here (60{,}000 is the full dataset).
+  \item \textbf{Reduce model complexity} --- fewer hidden units or layers;
+        the 2-layer network is already modest, so this has limited effect.
+  \item \textbf{Early stopping} --- monitor validation accuracy and halt
+        training when it plateaus.
+  \item \textbf{Explicit regularisation} --- Dropout, Batch Normalisation,
+        and $\Ltwo$ penalty (weight decay); the focus of this session.
+\end{enumerate}
+
+\subsection{\texorpdfstring{$\Ltwo$}{L2} Regularisation (Weight Decay)}
+\label{sec:regularisation:l2}
+
+\subsubsection{Concept}
+\label{sec:regularisation:l2:concept}
+
+$\Ltwo$ regularisation adds a penalty proportional to the squared magnitude
+of all weights to the loss function:
+
+\begin{equation}
+  \label{eq:l2_loss}
+  \mathcal{L}_{\text{total}}
+    = \mathcal{L}_{\text{data}}
+    + \lambda \sum_{i} w_i^2
+\end{equation}
+
+where $\lambda > 0$ is the regularisation strength (hyper-parameter) and
+$w_i$ denotes the $i$-th learnable weight.
+
+\begin{keyinsight}
+  The gradient of the $\Ltwo$ penalty with respect to $w_i$ is $2\lambda
+  w_i$.  When added to the ordinary gradient, this \emph{shrinks} every
+  weight at each update step, which is why the technique is also known as
+  \textbf{weight decay}.
+\end{keyinsight}
+
+\subsubsection{Effect on Gradient Descent}
+\label{sec:regularisation:l2:grad}
+
+Let $\eta$ be the learning rate.  The weight update rule becomes:
+
+\begin{align}
+  \label{eq:l2_update}
+  w_i^{(t+1)}
+    &= w_i^{(t)} - \eta \frac{\partial \mathcal{L}_{\text{data}}}{\partial w_i}
+       - \eta \cdot 2\lambda w_i^{(t)} \notag \\
+    &= w_i^{(t)}\bigl(1 - 2\eta\lambda\bigr)
+       - \eta \frac{\partial \mathcal{L}_{\text{data}}}{\partial w_i}
+\end{align}
+
+The factor $(1 - 2\eta\lambda)$ is less than 1, so the weight is
+multiplicatively decayed at each step, preventing any single weight from
+growing excessively large.
+
+\subsubsection{PyTorch Implementation}
+\label{sec:regularisation:l2:code}
+
+In PyTorch, $\Ltwo$ regularisation is passed directly to the optimiser via
+the \texttt{weight\_decay} parameter (equivalent to $\lambda$):
+
+\begin{verbatim}
+optimizer = torch.optim.Adam(
+    model.parameters(),
+    lr=0.01,
+    weight_decay=1e-4   # lambda = 0.0001
+)
+\end{verbatim}
+
+\begin{warningbox}
+  Setting \texttt{weight\_decay} too high forces all weights toward zero,
+  causing \emph{underfitting}.  Conversely, too small a value provides
+  negligible regularisation.  The instructor recommended $\lambda \approx
+  10^{-4}$ as a safe starting point.
+\end{warningbox}
+
+\subsection{Batch Normalisation}
+\label{sec:regularisation:batchnorm}
+
+\subsubsection{Motivation}
+\label{sec:regularisation:batchnorm:motivation}
+
+During training, the distribution of activations feeding into each layer
+shifts as earlier weights are updated --- a phenomenon known as
+\emph{internal covariate shift}.  This forces downstream layers to
+continually adapt, slowing convergence.
+
+\subsubsection{Mathematical Formulation}
+\label{sec:regularisation:batchnorm:math}
+
+For a mini-batch $\mathcal{B} = \{z_1, \ldots, z_m\}$ of pre-activation
+values at one layer, Batch Normalisation \cite{ioffe2015batchnorm} computes:
+
+\begin{align}
+  \label{eq:batchnorm}
+  \mu_\mathcal{B} &= \frac{1}{m}\sum_{i=1}^{m} z_i
+    & &\text{(batch mean)} \notag \\
+  \sigma^2_\mathcal{B} &= \frac{1}{m}\sum_{i=1}^{m}(z_i - \mu_\mathcal{B})^2
+    & &\text{(batch variance)} \notag \\
+  \hat{z}_i &= \frac{z_i - \mu_\mathcal{B}}
+                    {\sqrt{\sigma^2_\mathcal{B} + \epsilon}}
+    & &\text{(normalise)} \\
+  y_i &= \gamma \hat{z}_i + \beta
+    & &\text{(scale and shift)} \notag
+\end{align}
+
+where $\gamma$ (scale) and $\beta$ (shift) are \emph{learnable parameters}
+and $\epsilon$ is a small constant for numerical stability.
+
+\subsubsection{Placement in the Layer Stack}
+\label{sec:regularisation:batchnorm:placement}
+
+The usual practice, as demonstrated in the session, is:
+
+\[
+  \texttt{Linear} \;\longrightarrow\;
+  \texttt{BatchNorm1d} \;\longrightarrow\;
+  \texttt{ReLU} \;\longrightarrow\;
+  \texttt{Dropout}
+\]
+
+Batch Normalisation is applied \emph{before} the activation so that the
+activation function (e.g.\ ReLU, sigmoid) receives values in a well-bounded
+range, preventing saturation.
+
+\subsection{Dropout}
+\label{sec:regularisation:dropout}
+
+\subsubsection{Concept}
+\label{sec:regularisation:dropout:concept}
+
+Dropout \cite{srivastava2014dropout} randomly deactivates a fraction $p$ of
+neurons in a layer during each forward pass of training.
+
+\begin{definition}[Dropout Mask]
+  \label{def:dropout_mask}
+  Let $\mathbf{h} \in \mathbb{R}^n$ be the post-activation vector for a
+  layer of $n$ neurons.  The dropout mask $\mathbf{m} \in \{0,1\}^n$ is
+  drawn independently for each element:
+  \[
+    m_i \sim \mathrm{Bernoulli}(1-p)
+  \]
+  The masked output is $\tilde{\mathbf{h}} = \mathbf{m} \odot \mathbf{h}$,
+  where $\odot$ denotes element-wise multiplication.  At inference, no
+  masking is applied and activations are scaled by $(1-p)$ to preserve
+  expected magnitude.
+\end{definition}
+
+\subsubsection{Intuition: Implicit Ensemble}
+\label{sec:regularisation:dropout:intuition}
+
+The instructor drew an analogy with \emph{Random Forests}:
+
+\begin{keyinsight}
+  With $n$ neurons and dropout probability $p$, there are $2^n$ possible
+  sub-networks.  Each mini-batch effectively trains a \emph{different}
+  sub-network.  The final model can be thought of as an implicit
+  \textbf{ensemble} of exponentially many networks that share weights.
+  Because each sub-network sees a different architecture, co-adaptation of
+  neurons is prevented and the model is forced to learn \emph{redundant}
+  representations --- a powerful regulariser.
+\end{keyinsight}
+
+\subsubsection{Training vs.\ Inference Behaviour}
+\label{sec:regularisation:dropout:train_vs_test}
+
+A crucial point raised by students in the session Q\&A:
+
+\begin{table}[htbp]
+  \centering
+  \caption{Dropout behaviour during training vs.\ inference.}
+  \label{tab:dropout_mode}
+  \begin{tabular}{lcc}
+    \toprule
+    \textbf{Phase} & \textbf{Masking Applied?} & \textbf{PyTorch call} \\
+    \midrule
+    Training   & Yes (random $p$-fraction zeroed) & \texttt{model.train()} \\
+    Inference  & No (all neurons active, scaled)  & \texttt{model.eval()}  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{Dropout Hyperparameter}
+\label{sec:regularisation:dropout:hyperparam}
+
+The parameter $p$ (fraction of neurons dropped) controls the trade-off:
+
+\begin{itemize}
+  \item Typical range: $p \in [0.2,\, 0.5]$.
+  \item Higher $p$ ($\approx 0.4$--$0.5$): stronger regularisation, useful
+        when severe overfitting is detected.
+  \item Lower $p$ ($\approx 0.1$--$0.2$): milder regularisation, appropriate
+        when the model underfits or has few parameters.
+\end{itemize}
+
+In the session notebook, $p = 0.3$ was used, dropping 30\,\% of neurons
+in each hidden layer.
+
+\subsection{Optimised ANN (Version 3)}
+\label{sec:regularisation:v3}
+
+\begin{example}[title=Optimised ANN (Version 3 -- BatchNorm + Dropout + $\Ltwo$)]
+\begin{verbatim}
+class MyANN(nn.Module):
+    def __init__(self, num_features):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Linear(num_features, 128),
+            nn.BatchNorm1d(128),      # normalise before activation
+            nn.ReLU(),
+            nn.Dropout(p=0.3),        # drop 30% after activation
+            nn.Linear(128, 64),
+            nn.BatchNorm1d(64),
+            nn.ReLU(),
+            nn.Dropout(p=0.3),
+            nn.Linear(64, 10)
+        )
+
+    def forward(self, x):
+        return self.model(x)
+
+learning_rate = 0.01
+epochs        = 100
+model = MyANN(X_train.shape[1]).to(device)
+optimizer = torch.optim.Adam(model.parameters(),
+                             lr=learning_rate,
+                             weight_decay=1e-4)
+
+train_loader = DataLoader(train_dataset, batch_size=32,
+                          shuffle=True, pin_memory=True)
+test_loader  = DataLoader(test_dataset,  batch_size=32,
+                          shuffle=False, pin_memory=True)
+\end{verbatim}
+\end{example}
+
+\cref{fig:layer_stack} illustrates the layer ordering inside one block of
+the optimised model.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      box/.style={rectangle, draw=blue!50, fill=blue!8,
+                  rounded corners=4pt, minimum width=3.6cm,
+                  minimum height=0.75cm, align=center,
+                  font=\small},
+      arr/.style={-{Latex[length=3mm]}, blue!60, line width=1pt},
+      lbl/.style={font=\footnotesize\itshape, text=gray!70}
+    ]
+    \node[box] (L)  at (0,0)    {\texttt{nn.Linear}};
+    \node[box] (BN) at (0,-1.4) {\texttt{nn.BatchNorm1d}};
+    \node[box] (R)  at (0,-2.8) {\texttt{nn.ReLU}};
+    \node[box] (D)  at (0,-4.2) {\texttt{nn.Dropout(p=0.3)}};
+
+    \draw[arr] (L)  -- (BN)
+      node[midway, right=3mm, lbl] {pre-activation};
+    \draw[arr] (BN) -- (R)
+      node[midway, right=3mm, lbl] {normalised};
+    \draw[arr] (R)  -- (D)
+      node[midway, right=3mm, lbl] {activated};
+    \draw[arr] (D)  -- +(0,-1.0)
+      node[below, lbl] {to next block};
+
+    \node[lbl, left=1.6cm of L]  {weighted sum $z = Wx+b$};
+    \node[lbl, left=1.6cm of BN] {$\hat{z} = (z-\mu)/\sigma$};
+    \node[lbl, left=1.6cm of R]  {$a = \max(0,\hat{z})$};
+    \node[lbl, left=1.6cm of D]  {$\tilde{a} = m \odot a$};
+  \end{tikzpicture}
+  \caption{Layer ordering within a single regularised block of the Version 3
+           ANN.  BatchNorm is applied before the activation to ensure inputs
+           are in a well-bounded range; Dropout is applied after the
+           activation so that complete neuron outputs are masked.}
+  \label{fig:layer_stack}
+\end{figure}
+
+% ============================================================
+\section{Training Algorithm}
+\label{sec:algorithm}
+% ============================================================
+
+\begin{algorithm}[H]
+  \caption{Mini-Batch Training with BatchNorm, Dropout, and $\Ltwo$}
+  \label{alg:training}
+  \SetAlgoLined
+  \KwIn{Training set $\mathcal{D}_{\text{train}}$,
+        test set $\mathcal{D}_{\text{test}}$,
+        model $f_\theta$ with BatchNorm and Dropout layers,
+        learning rate $\eta$, weight decay $\lambda$,
+        dropout probability $p$, epochs $E$, batch size $B$}
+  \KwOut{Trained parameters $\theta^*$}
+
+  Initialise $\theta$ (Xavier / He initialisation)\;
+  Set \texttt{device} $\leftarrow$ \texttt{cuda} if GPU available else \texttt{cpu}\;
+  Move $f_\theta$ and data to \texttt{device}\;
+  Create \texttt{optimizer} $\leftarrow$ Adam($\theta$, lr=$\eta$, weight\_decay=$\lambda$)\;
+  Create \texttt{train\_loader} with shuffle=True, batch\_size=$B$\;
+
+  \For{epoch $= 1$ \KwTo $E$}{
+    $f_\theta$.\texttt{train}()\tcp*{Enable BatchNorm statistics; enable Dropout}
+    total\_loss $\leftarrow 0$\;
+
+    \ForEach{$(X_b, y_b)$ in \texttt{train\_loader}}{
+      $X_b, y_b \leftarrow X_b$.\texttt{to(device)}, $y_b$.\texttt{to(device)}\;
+      \texttt{optimizer.zero\_grad()}\;
+      $\hat{y}_b \leftarrow f_\theta(X_b)$\tcp*{Forward pass (Dropout active)}
+      $\ell \leftarrow$ CrossEntropyLoss$(\hat{y}_b, y_b)$\;
+      $\ell$.\texttt{backward()}\tcp*{Backprop through active sub-network}
+      \texttt{optimizer.step()}\tcp*{Update weights including $\Ltwo$ decay}
+      total\_loss $\leftarrow$ total\_loss $+ \ell$\;
+    }
+    avg\_loss $\leftarrow$ total\_loss / $|\texttt{train\_loader}|$\;
+    \textbf{print} epoch, avg\_loss\;
+  }
+
+  \tcp{Evaluation}
+  $f_\theta$.\texttt{eval}()\tcp*{Disable Dropout; use running stats for BN}
+  \With{\texttt{torch.no\_grad}()}{
+    Compute accuracy on $\mathcal{D}_{\text{test}}$\;
+  }
+  \Return $\theta^*$\;
+\end{algorithm}
+
+\begin{remark}
+  \label{rem:dropout_backward}
+  A subtlety raised during the session Q\&A: when a neuron is masked
+  (dropped) during the forward pass, the corresponding connections are
+  treated as non-existent for that mini-batch.  Only the weights connected
+  to \emph{active} neurons in that particular sub-network receive gradient
+  updates during backpropagation.  Across many mini-batches, all weights
+  accumulate gradient signal from the batches in which their neurons were
+  active.
+\end{remark}
+
+% ============================================================
+\section{Experimental Results and Analysis}
+\label{sec:results}
+% ============================================================
+
+\subsection{Accuracy Results}
+\label{sec:results:accuracy}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Detailed accuracy results for each ANN version on Fashion-MNIST.
+           All results use 100 epochs, Adam optimiser, batch size 32.}
+  \label{tab:results_detail}
+  \begin{tabularx}{\linewidth}{clXcc}
+    \toprule
+    \textbf{Ver.} & \textbf{Key Changes} & \textbf{Notes}
+      & \textbf{Train Acc.} & \textbf{Test Acc.} \\
+    \midrule
+    V1 & Baseline, no GPU
+       & 6{,}000 samples, lr=0.1
+       & --
+       & 83\,\% \\
+    \addlinespace
+    V2 & GPU training
+       & 60{,}000 samples, same architecture as V1
+       & 98\,\%
+       & 88\,\% \\
+    \addlinespace
+    V3 & BatchNorm + Dropout($p$=0.3) + $\Ltwo$($\lambda$=$10^{-4}$)
+       & 60{,}000 samples, lr=0.01
+       & 93\,\%
+       & 88\,\% \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{Interpretation}
+\label{sec:results:interpretation}
+
+The key observations from \cref{tab:results_detail} are:
+
+\begin{enumerate}
+  \item \textbf{Data size matters}: Moving from 6{,}000 to 60{,}000 samples
+        (V1$\to$V2) improved test accuracy by $+5$ percentage points.
+  \item \textbf{Regularisation reduces the gap}: V2 had a 10\,\% gap;
+        V3 reduces this to 5\,\% by forcing the model to generalise.
+  \item \textbf{Test accuracy is preserved}: Despite the drop in training
+        accuracy (98\,\%$\to$93\,\%), test accuracy is unchanged at 88\,\%,
+        confirming that V3 has reduced memorisation without harming true
+        generalisation.
+\end{enumerate}
+
+\begin{keyinsight}
+  Regularisation is working correctly when \emph{training} accuracy
+  decreases while \emph{test} accuracy stays the same or improves.  The
+  goal is convergence of the two curves, not maximisation of either in
+  isolation.
+\end{keyinsight}
+
+% ============================================================
+\section{Introduction to Convolutional Neural Networks}
+\label{sec:cnn_intro}
+% ============================================================
+
+\subsection{Historical Context: The ImageNet Challenge}
+\label{sec:cnn_intro:imagenet}
+
+Prof.\ Prasanna opened the CNN segment with historical context.  Prior to
+2012, image classification on the large-scale \textbf{ImageNet} dataset
+(millions of crowdsourced images, 1{,}000 classes) was dominated by
+hand-crafted feature methods (HOG, SIFT, etc.).
+
+In 2012, the \emph{SuperVision} system (AlexNet) developed by Krizhevsky,
+Sutskever and Hinton at the University of Toronto demonstrated a dramatic
+improvement using a deep convolutional network.  This event marked the
+beginning of the modern deep-learning era.
+
+\begin{keyinsight}
+  CNNs are now the \emph{de-facto} models for:
+  \begin{enumerate}[noitemsep]
+    \item \textbf{Feature extraction}: learning nonlinear spatial features
+          from image, speech, and sequential data arranged in a grid.
+    \item \textbf{Classification}: end-to-end mapping from raw input to
+          class probability.
+  \end{enumerate}
+\end{keyinsight}
+
+\subsection{Motivation: Preserving Spatial Structure}
+\label{sec:cnn_intro:motivation}
+
+When a $256 \times 256$ image is flattened into a $65{,}536$-dimensional
+vector and fed to a fully-connected ANN, all \emph{spatial relationships}
+between pixels are destroyed.  A pixel at position $(i, j)$ is treated as
+completely independent of its neighbours at $(i, j\pm1)$ and
+$(i\pm1, j)$.
+
+However, human visual perception derives meaning from \emph{local spatial
+patterns}: edges, corners, textures are defined by how pixel intensities
+change in the $x$- and $y$-directions within a small neighbourhood.
+
+\begin{definition}[Spatial Data]
+  \label{def:spatial_data}
+  Data is said to have \emph{spatial structure} if meaningful patterns can
+  be found in local neighbourhoods of the data grid.  For images, this means
+  pixels close to each other tend to be correlated, and edges/textures are
+  detectable by examining small rectangular sub-regions.
+\end{definition}
+
+\subsection{The Convolution Operation}
+\label{sec:cnn_intro:convolution}
+
+\subsubsection{ANN vs.\ CNN Signal Flow}
+\label{sec:cnn_intro:convolution:comparison}
+
+\begin{table}[htbp]
+  \centering
+  \caption{Fundamental distinction between ANN and CNN inter-layer
+           operations.}
+  \label{tab:ann_vs_cnn}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Aspect} & \textbf{ANN (fully connected)} & \textbf{CNN (convolutional)} \\
+    \midrule
+    Operation     & Matrix multiplication             & Discrete convolution \\
+    Input scope   & Entire input vector               & Local receptive field \\
+    Weight sharing& No (unique weight per connection) & Yes (kernel shared spatially) \\
+    Parameter count & $n_{\text{in}} \times n_{\text{out}}$ & $k \times k$ (kernel) \\
+    Output        & Neuron activation                 & Feature map \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{Discrete 2-D Convolution}
+\label{sec:cnn_intro:convolution:math}
+
+Let $\mathbf{X} \in \mathbb{R}^{H \times W}$ be a 2-D input (one channel
+of an image) and $\mathbf{K} \in \mathbb{R}^{k \times k}$ be a kernel (filter).
+The $(i,j)$-th element of the output feature map
+$\mathbf{S} \in \mathbb{R}^{(H-k+1)\times(W-k+1)}$ is:
+
+\begin{equation}
+  \label{eq:convolution}
+  S(i,j) = \sum_{m=0}^{k-1} \sum_{n=0}^{k-1} X(i+m,\; j+n) \cdot K(m,n)
+\end{equation}
+
+The kernel $\mathbf{K}$ \emph{slides} across the input, and at each
+position the dot product between the kernel and the corresponding local
+patch of $\mathbf{X}$ is computed.  This produces a single scalar output
+value.
+
+\begin{equation}
+  \label{eq:output_size}
+  \text{Output size (no padding)} = (N - k + 1)
+\end{equation}
+
+where $N$ is the spatial dimension of the input and $k$ is the kernel size.
+
+\begin{example}[title=Convolution Size Example]
+  For a $28 \times 28$ input and a $3 \times 3$ kernel (no padding,
+  stride 1):
+  \[
+    \text{Output size} = (28 - 3 + 1) \times (28 - 3 + 1) = 26 \times 26
+  \]
+  Each of the $26\times26 = 676$ output values is produced by a dot product
+  of the kernel with a $3\times3$ local patch of the input.
+\end{example}
+
+\subsubsection{Visualisation of the Convolution Operation}
+\label{sec:cnn_intro:convolution:viz}
+
+\cref{fig:convolution} illustrates how a $3\times3$ kernel slides over a
+$5\times5$ input to produce a $3\times3$ feature map.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      cell/.style={rectangle, draw=gray!60, minimum size=0.65cm,
+                   inner sep=0, font=\tiny},
+      kcell/.style={rectangle, draw=orange!80, fill=orange!20,
+                    minimum size=0.65cm, inner sep=0, font=\tiny},
+      fcell/.style={rectangle, draw=blue!60, fill=blue!10,
+                    minimum size=0.65cm, inner sep=0, font=\tiny},
+      lbl/.style={font=\small\bfseries}
+    ]
+    %% Input 5x5
+    \foreach \r in {0,...,4}{
+      \foreach \c in {0,...,4}{
+        \pgfmathsetmacro{\val}{int(\r*5+\c+1)}
+        \ifnum\r<3
+          \ifnum\c<3
+            \node[kcell] at ({(\c)*0.68},{-(\r)*0.68}) {\val};
+          \else
+            \node[cell] at ({(\c)*0.68},{-(\r)*0.68}) {\val};
+          \fi
+        \else
+          \node[cell] at ({(\c)*0.68},{-(\r)*0.68}) {\val};
+        \fi
+      }
+    }
+    \node[lbl, above=0.3cm] at (1.36, 0.1) {Input ($5\!\times\!5$)};
+
+    %% Arrow
+    \draw[-{Latex[length=3mm]}, thick, blue!60]
+      (3.8, -0.68) -- node[above, font=\small] {$*$} (4.5, -0.68);
+
+    %% Kernel 3x3
+    \foreach \r in {0,...,2}{
+      \foreach \c in {0,...,2}{
+        \node[kcell, fill=orange!30] at ({4.9+(\c)*0.68},{-(\r)*0.68}) {};
+      }
+    }
+    \node[lbl, above=0.3cm] at (5.58, 0.1) {Kernel ($3\!\times\!3$)};
+
+    %% Arrow
+    \draw[-{Latex[length=3mm]}, thick, blue!60]
+      (7.3, -0.68) -- node[above, font=\small] {$=$} (8.0, -0.68);
+
+    %% Output 3x3
+    \foreach \r in {0,...,2}{
+      \foreach \c in {0,...,2}{
+        \node[fcell] at ({8.4+(\c)*0.68},{-(\r)*0.68}) {};
+      }
+    }
+    \node[fcell, fill=blue!25] at ({8.4},{0}) {};
+    \node[lbl, above=0.3cm] at (9.08, 0.1) {Feature Map ($3\!\times\!3$)};
+
+    %% Annotation
+    \draw[dashed, orange!70, rounded corners=2pt]
+      (-0.34, 0.34) rectangle (1.7, -1.7)
+      node[below right, font=\tiny\itshape, text=orange!70!black]
+      {receptive field};
+  \end{tikzpicture}
+  \caption{Convolution of a $5\!\times\!5$ input with a $3\!\times\!3$ kernel
+           produces a $3\!\times\!3$ feature map.  The orange highlighted
+           region is the \emph{receptive field} --- the local patch used to
+           compute the top-left output value.  The kernel slides across all
+           valid positions.}
+  \label{fig:convolution}
+\end{figure}
+
+\subsection{Kernels and Feature Maps}
+\label{sec:cnn_intro:kernels}
+
+The CNN slide (V08, timestamp 1:01:01) stated the following key points
+verbatim:
+
+\begin{enumerate}
+  \item CNNs are designed for processing 2D data such as images.
+  \item CNNs use the \emph{convolution operation} in place of matrix
+        multiplication in at least one of their layers.
+  \item The output of convolving an input with a kernel is called a
+        \textbf{feature map}.
+  \item The goal is to \emph{learn} appropriate values for the kernel using a
+        suitable learning algorithm (backpropagation).
+  \item Each kernel will represent a meaningful pattern once learning is
+        complete (e.g., edge detectors, texture filters).
+\end{enumerate}
+
+\begin{definition}[Feature Map]
+  \label{def:feature_map}
+  A \emph{feature map} is the output tensor produced by applying a single
+  learned kernel to the input.  If $C_{\text{in}}$ input channels are each
+  convolved with the same kernel and the results summed, one feature map
+  of size $(H - k + 1) \times (W - k + 1)$ is produced.  Using $C_{\text{out}}$
+  distinct kernels produces $C_{\text{out}}$ feature maps stacked as a
+  3-D output tensor.
+\end{definition}
+
+\begin{remark}
+  \label{rem:weight_sharing}
+  The key computational advantage of convolution is \emph{weight sharing}:
+  the same $k \times k$ kernel is applied at \emph{every} position of the
+  input.  This drastically reduces the number of learnable parameters
+  compared to a fully-connected layer and makes the model
+  \emph{translation-equivariant} (detecting a pattern anywhere in the image
+  uses the same kernel weights).
+\end{remark}
+
+\subsection{CNN Architecture Overview}
+\label{sec:cnn_intro:arch}
+
+A complete CNN consists of two functional stages:
+
+\begin{enumerate}
+  \item \textbf{Feature extraction backbone}: stacked convolutional layers
+        (each followed by an activation and optionally a pooling layer) that
+        progressively transform the raw pixel grid into abstract
+        feature representations.
+  \item \textbf{Classifier head}: one or more fully-connected layers that
+        map the extracted features to class scores.
+\end{enumerate}
+
+\cref{fig:cnn_pipeline} provides a schematic of the full pipeline.
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}[
+      block/.style={rectangle, draw=blue!50, fill=blue!8,
+                    rounded corners=4pt, minimum width=2.2cm,
+                    minimum height=1.0cm, align=center, font=\small},
+      pool/.style={rectangle, draw=green!60!black, fill=green!8,
+                   rounded corners=4pt, minimum width=1.4cm,
+                   minimum height=1.0cm, align=center, font=\small},
+      fc/.style={rectangle, draw=orange!70, fill=orange!8,
+                 rounded corners=4pt, minimum width=1.6cm,
+                 minimum height=1.0cm, align=center, font=\small},
+      arr/.style={-{Latex[length=3mm]}, gray!70, line width=0.8pt},
+      lbl/.style={font=\footnotesize\itshape, text=gray}
+    ]
+    \node[block] (inp)  at (0,0)    {Input\\Image};
+    \node[block] (c1)   at (2.6,0)  {Conv\\Layer 1};
+    \node[pool]  (p1)   at (4.8,0)  {Pool\\Layer};
+    \node[block] (c2)   at (7.0,0)  {Conv\\Layer 2};
+    \node[pool]  (p2)   at (9.2,0)  {Pool\\Layer};
+    \node[fc]    (flat) at (11.0,0) {Flatten};
+    \node[fc]    (fc1)  at (12.8,0) {FC\\Layer};
+    \node[fc]    (out)  at (14.6,0) {Output\\Softmax};
+
+    \foreach \a/\b in {inp/c1, c1/p1, p1/c2, c2/p2, p2/flat, flat/fc1, fc1/out}{
+      \draw[arr] (\a) -- (\b);
+    }
+
+    \node[lbl, below=0.6cm of c1] {Feature\\Maps};
+    \node[lbl, below=0.6cm of c2] {Feature\\Maps};
+    \node[lbl, below=0.6cm of fc1] {Logits};
+
+    \draw[decorate, decoration={brace,amplitude=8pt},
+          blue!60, thick]
+      (1.5, 0.7) -- (9.8, 0.7)
+      node[midway, above=10pt, font=\small\bfseries, text=blue!70!black]
+      {Feature Extraction (Convolutional Backbone)};
+
+    \draw[decorate, decoration={brace,amplitude=8pt},
+          orange!70, thick]
+      (10.3, 0.7) -- (15.2, 0.7)
+      node[midway, above=10pt, font=\small\bfseries, text=orange!70!black]
+      {Classifier Head};
+  \end{tikzpicture}
+  \caption{Schematic of a typical CNN pipeline: convolutional and pooling
+           layers extract hierarchical spatial features; fully-connected
+           layers perform the final classification.}
+  \label{fig:cnn_pipeline}
+\end{figure}
+
+% ============================================================
+\section{Student Q\&A: Key Clarifications}
+\label{sec:qa}
+% ============================================================
+
+The session included an extended Q\&A period covering important subtleties.
+The most significant exchanges are summarised below.
+
+\subsection{Dropout during Backpropagation}
+\label{sec:qa:dropout_backprop}
+
+\textbf{Question}: When neurons are dropped during the forward pass, are
+their weights also updated during backpropagation?
+
+\textbf{Answer} (paraphrased): For a given mini-batch, only the
+\emph{active} sub-network (the network with dropped neurons removed) is
+used for both the forward pass and the backward pass.  The weights connected
+to dropped neurons receive no gradient for that mini-batch.  However, since
+dropping is \emph{random}, different weights are updated at different
+mini-batches, ensuring all weights accumulate gradient over the full
+training run.
+
+\subsection{ReLU vs.\ Dropout}
+\label{sec:qa:relu_vs_dropout}
+
+\textbf{Question}: ReLU also sets negative activations to zero --- is it
+not similar to dropout?
+
+\textbf{Answer}: Both zero out activations, but in fundamentally different
+ways:
+
+\begin{itemize}
+  \item \textbf{ReLU} zeros activations deterministically based on the
+        \emph{sign} of the pre-activation value.  There is no guarantee
+        about \emph{how many} neurons will be suppressed.
+  \item \textbf{Dropout} zeros activations \emph{randomly} with a fixed
+        probability $p$.  This guarantees that exactly $p \times n$ neurons
+        are zeroed (on average), regardless of activation values, forcing the
+        network to build robust, distributed representations.
+\end{itemize}
+
+\subsection{Effect of Dropout on Convergence}
+\label{sec:qa:convergence}
+
+\textbf{Question}: Does dropout slow down convergence?
+
+\textbf{Answer}: There are two competing effects:
+
+\begin{enumerate}
+  \item \textbf{Fewer parameters per step}: dropping 30\,\% of neurons means
+        30\,\% fewer weight updates per mini-batch, which \emph{reduces} the
+        computation per step and may slightly accelerate wall-clock training.
+  \item \textbf{Noisier gradient estimates}: the effective network changes
+        every batch, introducing variance into the gradient signal, which
+        may require more epochs to converge.
+\end{enumerate}
+
+Net effect: dropout can slow convergence slightly but produces a model that
+\emph{generalises better}, which is the primary objective.
+
+% ============================================================
+\section{Summary and Conclusion}
+\label{sec:summary}
+% ============================================================
+
+\subsection{Session Recap}
+\label{sec:summary:recap}
+
+Session 12 covered three main threads:
+
+\begin{enumerate}
+  \item \textbf{Diagnosing overfitting}: A 10\,\% train/test accuracy gap
+        (98\,\% vs.\ 88\,\%) in the Version 2 ANN was identified as
+        evidence of overfitting and the target for regularisation.
+
+  \item \textbf{Three regularisation strategies}:
+    \begin{itemize}
+      \item \textbf{$\Ltwo$ weight decay} adds a quadratic penalty
+            $\lambda\sum_i w_i^2$ to the loss, discouraging large weights and
+            simplifying the decision boundary.
+      \item \textbf{Batch Normalisation} normalises pre-activation values
+            within each mini-batch, stabilising training and reducing internal
+            covariate shift.  Placement: \emph{after Linear, before ReLU}.
+      \item \textbf{Dropout} randomly zeroes $p$-fraction of neurons during
+            training, acting as an implicit ensemble and preventing
+            co-adaptation.  Placement: \emph{after ReLU}.
+    \end{itemize}
+
+  \item \textbf{CNN Introduction}: Prof.\ Prasanna motivated CNNs from the
+        failure of flattening to preserve spatial structure, reviewed the
+        ImageNet breakthrough, and formally defined the convolution operation,
+        kernels, and feature maps as foundations for the upcoming hands-on
+        sessions.
+\end{enumerate}
+
+\subsection{Mathematical Summary}
+\label{sec:summary:math}
+
+\begin{align}
+  \mathcal{L}_{\text{total}}
+    &= \mathcal{L}_{\text{data}} + \lambda \sum_i w_i^2
+    & &(\Ltwo\text{ regularisation}) \label{eq:summary_l2} \\[4pt]
+  \hat{z}_i
+    &= \frac{z_i - \mu_\mathcal{B}}{\sqrt{\sigma^2_\mathcal{B}+\varepsilon}},
+      \quad y_i = \gamma\hat{z}_i + \beta
+    & &(\text{Batch Normalisation}) \label{eq:summary_bn} \\[4pt]
+  \tilde{h}_i
+    &= m_i \cdot h_i, \quad m_i \sim \mathrm{Bernoulli}(1-p)
+    & &(\text{Dropout}) \label{eq:summary_dropout} \\[4pt]
+  S(i,j)
+    &= \sum_{m,n} X(i+m,j+n)\cdot K(m,n)
+    & &(\text{2-D Convolution}) \label{eq:summary_conv}
+\end{align}
+
+\subsection{Looking Ahead}
+\label{sec:summary:ahead}
+
+Session 13 will dive into the full CNN theory: convolutional layers with
+multiple input/output channels, padding and stride, pooling layers, and the
+complete LeNet-style architecture applied to image classification.  The
+Fashion-MNIST dataset will be revisited using a CNN to demonstrate the
+accuracy gains possible over the ANN baseline.
+
+\begin{keyinsight}
+  The transition from ANN to CNN is not merely about adding convolution layers
+  --- it represents a shift in \emph{inductive bias}.  By assuming local
+  connectivity and weight sharing, CNNs encode the prior belief that
+  \emph{spatial proximity matters}, which is a highly effective prior for
+  image, audio, and time-series data.
+\end{keyinsight}
+
+% ============================================================
+%% References (manual, as no .bib file)
+% ============================================================
+\begin{thebibliography}{9}
+
+\bibitem{xiao2017fashionmnist}
+H.\ Xiao, K.\ Rasul, and R.\ Vollgraf,
+``Fashion-MNIST: a novel image dataset for benchmarking machine learning
+  algorithms,''
+\textit{arXiv preprint arXiv:1708.07747}, 2017.
+
+\bibitem{ioffe2015batchnorm}
+S.\ Ioffe and C.\ Szegedy,
+``Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift,''
+in \textit{Proceedings of ICML}, 2015, pp.\ 448--456.
+
+\bibitem{srivastava2014dropout}
+N.\ Srivastava, G.\ Hinton, A.\ Krizhevsky, I.\ Sutskever, and R.\ Salakhutdinov,
+``Dropout: A simple way to prevent neural networks from overfitting,''
+\textit{Journal of Machine Learning Research}, vol.\ 15, pp.\ 1929--1958, 2014.
+
+\bibitem{lecun1989cnn}
+Y.\ LeCun, B.\ Boser, J.\ Denker, D.\ Henderson, R.\ Howard, W.\ Hubbard,
+and L.\ Jackel,
+``Backpropagation applied to handwritten zip code recognition,''
+\textit{Neural Computation}, vol.\ 1, no.\ 4, pp.\ 541--551, 1989.
+
+\bibitem{krizhevsky2012alexnet}
+A.\ Krizhevsky, I.\ Sutskever, and G.\ E.\ Hinton,
+``ImageNet classification with deep convolutional neural networks,''
+in \textit{Advances in Neural Information Processing Systems (NeurIPS)},
+2012, pp.\ 1097--1105.
+
+\end{thebibliography}
+
+\end{document}

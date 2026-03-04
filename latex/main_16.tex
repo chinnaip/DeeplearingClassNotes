@@ -1,0 +1,1042 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% ── tcolorbox environments ──────────────────────────────────────────────────
+\newtcolorbox{keyinsight}[1][]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Key Insight,#1}
+\newtcolorbox{example}[1][]{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries,title=Example,#1}
+\newtcolorbox{warningbox}[1][]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Warning,#1}
+
+% ── amsthm environments ─────────────────────────────────────────────────────
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+% ── Page style ───────────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Session 16: RNN Introduction \& Sequence Modelling}
+\lhead{Deep Learning Course -- IIITDwd}
+\cfoot{\thepage}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  urlcolor=blue!70!black,
+  citecolor=green!50!black
+}
+
+% ── Convenience macros ───────────────────────────────────────────────────────
+\newcommand{\xt}{x_t}
+\newcommand{\ht}{h_t}
+\newcommand{\yt}{y_t}
+\newcommand{\Whh}{W_{hh}}
+\newcommand{\Wxh}{W_{xh}}
+\newcommand{\Why}{W_{hy}}
+
+% ────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ============================================================
+%  TITLE PAGE
+% ============================================================
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+
+  {\LARGE\bfseries Deep Learning Course\\[0.4em]
+   Indian Institute of Information Technology, Dharwad}
+
+  \vspace{1.5cm}
+  \rule{\linewidth}{0.8pt}\\[0.4em]
+  {\Huge\bfseries Session 16}\\[0.5em]
+  {\Large\bfseries Recurrent Neural Networks:\\[0.3em]
+   Motivation and Sequence Modelling}
+  \\[0.4em]\rule{\linewidth}{0.8pt}
+
+  \vspace{1.5cm}
+
+  \begin{tabular}{ll}
+    \textbf{Session Number:}  & 16 \\[4pt]
+    \textbf{Date:}            & January 11--12, 2026 \\[4pt]
+    \textbf{Instructors:}     & Prof.\ S.\ R.\ Mahadeva Prasanna \\
+                              & Dr.\ Sunil Saumya \\[4pt]
+    \textbf{Slide Decks:}     & \texttt{05-DL-RNN} (slides 1--63) \\
+                              & \texttt{07-PyTorchDL-TransferLearning} (slides 1--29) \\[4pt]
+    \textbf{Duration:}        & $\approx$ 1 hr 37 min \\[4pt]
+    \textbf{Topics Covered:}  & Sequence modelling motivation; \\
+                              & Limitations of feedforward networks; \\
+                              & FFNN $\to$ RNN architectural transition; \\
+                              & Variable-length input problem; \\
+                              & Order/position blindness problem \\
+  \end{tabular}
+
+  \vfill
+  {\small These notes are compiled from the lecture transcript and visual
+   extractions for archival and study purposes.}
+\end{titlepage}
+
+% ============================================================
+%  TABLE OF CONTENTS
+% ============================================================
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Introduction}
+\label{sec:introduction}
+% ============================================================
+
+Session~16 marks the transition in the deep learning course from spatial
+models (convolutional neural networks, CNNs) to \emph{sequential} models.
+Having established CNN architectures and transfer learning in the preceding
+sessions, the instructors now motivate a fundamentally different class of
+architectures: \textbf{Recurrent Neural Networks (RNNs)} and their
+variants---Gated Recurrent Units (GRUs) and Long Short-Term Memory networks
+(LSTMs).
+
+The central question posed at the outset is: \emph{Why do feedforward neural
+networks (FFNNs), despite their universal approximation capability, fail for
+sequential data?} The session answers this question through two distinct
+lines of argument:
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Fixed window / long-range dependency failure.} A feedforward
+        network operating on a sliding context window is structurally incapable
+        of capturing dependencies that span more tokens than the window width.
+  \item \textbf{Parallel input / order blindness.} When an entire sequence is
+        flattened and fed as a single input vector, the network has no
+        mechanism to distinguish word order; permuting the input produces the
+        same (or nearly the same) output.
+\end{enumerate}
+
+The second half of the session, drawing from the
+\texttt{07-PyTorchDL-TransferLearning} deck, formalises these problems in
+the concrete setting of text classification with one-hot word vectors,
+culminating in the realisation that the input dimension $N \times V$ varies
+per sentence---an impossibility for a standard fully connected layer.
+
+\begin{keyinsight}
+RNNs were proposed alongside CNNs during the era of shallow neural networks,
+but their true effectiveness was only demonstrated with the computational
+power and training techniques of the deep learning era.  Both CNN and RNN
+are \emph{structured} extensions of the basic MLP: CNNs exploit spatial
+locality; RNNs exploit temporal/sequential ordering.
+\end{keyinsight}
+
+% ============================================================
+\section{Background and Prerequisites}
+\label{sec:background}
+% ============================================================
+
+\subsection{Data Taxonomy: Sequential vs.\ Non-Sequential}
+\label{subsec:data_taxonomy}
+
+Before introducing RNNs, the instructors establish a clear dichotomy between
+the two data types that have been encountered so far in the course.
+
+\begin{definition}[Non-Sequential Data]
+\label{def:nonseq}
+Data is \emph{non-sequential} when the order in which features (or rows) are
+presented to a model carries no semantic information.  Permuting features
+does not change the classification or regression target.
+\end{definition}
+
+\begin{definition}[Sequential Data]
+\label{def:seq}
+Data is \emph{sequential} when the temporal or positional ordering of
+observations encodes information that is necessary to recover the target
+label or prediction.  Permuting the observations destroys this information.
+\end{definition}
+
+\Cref{tab:data_types} gives concrete examples of both categories encountered
+in the lecture.
+
+\begin{table}[ht]
+  \centering
+  \caption{Non-sequential vs.\ sequential data examples discussed in Session~16.}
+  \label{tab:data_types}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Type} & \textbf{Example} & \textbf{Key Property} \\
+    \midrule
+    Non-sequential & Student placement data (CGPA, IQ, placement) &
+      Shuffling feature columns does not change prediction \\
+    Non-sequential & MNIST digit images &
+      Fixed spatial grid; no temporal component \\
+    Sequential & Stock price time series (open, high, close by date) &
+      Shuffling rows destroys temporal patterns \\
+    Sequential & Natural language text &
+      Word order encodes meaning \\
+    Sequential & Speech signal &
+      Phoneme sequence encodes words \\
+    Sequential & Video frames &
+      Frame order encodes actions and events \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\subsection{One-Hot Encoding Recap}
+\label{subsec:onehot}
+
+Throughout the session, words are represented as \emph{one-hot vectors}.
+Given a vocabulary $\mathcal{V}$ of size $V$, each word $w_i$ is mapped to a
+vector $\mathbf{e}_i \in \{0,1\}^{V}$ with exactly one non-zero component:
+
+\begin{equation}
+  \label{eq:onehot}
+  [\mathbf{e}_i]_j =
+  \begin{cases}
+    1 & \text{if } j = i, \\
+    0 & \text{otherwise.}
+  \end{cases}
+\end{equation}
+
+A sentence of $N$ words is then a sequence
+$(\mathbf{e}_{w_1}, \mathbf{e}_{w_2}, \ldots, \mathbf{e}_{w_N})$, each
+vector of dimension $V$.
+
+\subsection{Standard FFNN Review}
+\label{subsec:ffnn_review}
+
+A standard feedforward neural network with input dimension $d_{\text{in}}$,
+one hidden layer of width $H$, and output dimension $d_{\text{out}}$ computes:
+
+\begin{align}
+  \label{eq:ffnn_hidden}
+  \mathbf{h} &= \sigma\!\left(W_1 \mathbf{x} + \mathbf{b}_1\right), \\
+  \label{eq:ffnn_output}
+  \hat{\mathbf{y}} &= \text{softmax}\!\left(W_2 \mathbf{h} + \mathbf{b}_2\right),
+\end{align}
+
+where $W_1 \in \mathbb{R}^{H \times d_{\text{in}}}$,
+$W_2 \in \mathbb{R}^{d_{\text{out}} \times H}$, and $\sigma$ is an
+element-wise nonlinearity (e.g., ReLU or tanh).  The architecture is
+\emph{fixed}: $d_{\text{in}}$ is a compile-time hyperparameter that cannot
+change between inference calls.
+
+% ============================================================
+\section{Motivation for Sequence Modelling}
+\label{sec:motivation}
+% ============================================================
+
+\subsection{The Significance of Sequential Order}
+\label{subsec:order_significance}
+
+Prof.\ Prasanna opens the technical discussion with a compelling linguistic
+argument.  Consider the Hindi words \emph{kama} and \emph{kamala}: they
+share identical constituent phonemes (\emph{ka}, \emph{ma}, \emph{la}), yet
+their meanings differ entirely because of the \emph{order} in which the
+phonemes appear.  A model based purely on the distribution of phoneme
+occurrences would find the two words indistinguishable.
+
+\begin{example}
+The English word ``book'' illustrates context-dependent meaning driven by
+sequence:
+\begin{itemize}[nosep]
+  \item ``I want to \textbf{book} a flight.'' \quad (\textit{book} = verb,
+        to reserve)
+  \item ``I want to read a \textbf{book}.'' \quad (\textit{book} = noun,
+        a text)
+\end{itemize}
+The meaning is disambiguated entirely by the neighbouring words in the
+sequence.
+\end{example}
+
+\begin{example}[title={Ball Trajectory Prediction}]
+Given only the \emph{current position} of a ball on a field, all directions
+of motion are equally probable.  However, given the sequence of positions
+at $t{=}1,2,3,4$, the direction at $t{=}5$ can be predicted with high
+confidence.  This illustrates that \emph{past sequence context} provides
+the necessary information.
+\end{example}
+
+\subsection{Requirements for a Sequence Modelling Architecture}
+\label{subsec:requirements}
+
+The instructors enumerate the wishlist for any architecture designed to
+handle sequential data (slide V01, \texttt{05-DL-RNN}, slide 9/63):
+
+\begin{enumerate}[label=\textbf{R\arabic*.}, leftmargin=3em]
+  \item \label{req:order} \textbf{Preserve order.} The model must process
+        tokens in the order they appear; $w_t$ must be processed after
+        $w_{t-1}$.
+  \item \label{req:varlen} \textbf{Handle variable sequence lengths.} For the
+        same class of information, different instances may have different
+        sequence lengths.  The architecture must not require a fixed length.
+  \item \label{req:params} \textbf{Parameter count independent of sequence
+        length.} Parameters should not grow linearly (or worse) with
+        sequence length; they must be \emph{shared} across time steps.
+  \item \label{req:longterm} \textbf{Model long-range dependencies.}
+        Information from many steps in the past must remain accessible when
+        generating an output at the current step.
+\end{enumerate}
+
+\begin{keyinsight}
+Requirements \ref{req:params} and \ref{req:longterm} are in tension: a model
+with shared parameters that still retains long-range information requires a
+form of \emph{memory} that persists and evolves across time steps.  This is
+precisely the role of the hidden state $h_t$ in an RNN.
+\end{keyinsight}
+
+\subsection{Applications of Sequence Modelling}
+\label{subsec:applications}
+
+\Cref{tab:applications} summarises the sequence modelling tasks discussed in
+the lecture.
+
+\begin{table}[ht]
+  \centering
+  \caption{Representative sequence modelling tasks and their input/output
+           structure.}
+  \label{tab:applications}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Task} & \textbf{Input $X$} & \textbf{Output $Y$} \\
+    \midrule
+    Speech recognition &
+      Sequence of acoustic feature frames &
+      Sequence of recognised words \\
+    Machine translation &
+      Sentence in source language &
+      Sentence in target language \\
+    Text summarisation &
+      Long document ($\sim$200 words) &
+      Compressed summary ($\sim$25 words) \\
+    Sentiment classification &
+      Text review &
+      Sentiment label (positive/negative) \\
+    Named entity recognition &
+      Token sequence &
+      Per-token entity label \\
+    Video action recognition &
+      Sequence of video frames &
+      Action label \\
+    Stock price forecasting &
+      Time-ordered OHLC prices &
+      Next-day closing price \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ============================================================
+\section{Limitations of Feedforward Networks for Sequential Data}
+\label{sec:ffnn_limitations}
+% ============================================================
+
+\subsection{Limitation 1: Fixed Window Cannot Model Long-Range Dependencies}
+\label{subsec:fixed_window}
+
+One naive approach to sequence modelling with FFNNs is to use a \emph{fixed
+sliding window} of $k$ preceding tokens as context.  Given the current
+position $t$, the network receives
+$(w_{t-k}, w_{t-k+1}, \ldots, w_{t-1})$ and predicts $w_t$.
+
+\begin{warningbox}
+A fixed window of size $k$ can only capture dependencies within a span of
+$k$ tokens.  Any dependency of length $> k$ is structurally invisible to
+the model, regardless of how many parameters are trained.
+\end{warningbox}
+
+The lecture illustrates this with the following sentence (from Ava Soleimany,
+MIT 6.S191, 2020):
+
+\begin{quote}
+``France is where I grew up, but I now live in Boston.
+ I speak fluent \underline{\hspace{1.5cm}}.''
+\end{quote}
+
+The blank depends on the word ``France'' which appears many tokens earlier.
+A short fixed window sees only ``\ldots live in Boston. I speak fluent'' and
+might incorrectly predict ``English'' rather than ``French.''
+
+\vspace{0.5em}
+The fundamental limitation can be expressed as:
+
+\begin{equation}
+  \label{eq:fixed_window}
+  P(w_t \mid w_{t-1}, w_{t-2}, \ldots, w_1)
+  \;\neq\;
+  P(w_t \mid w_{t-1}, w_{t-2}, \ldots, w_{t-k})
+  \quad \text{when the dependency length} > k.
+\end{equation}
+
+\subsection{Limitation 2: Variable-Length Input Dimension}
+\label{subsec:variable_length}
+
+Consider a corpus $\mathcal{C}$ of sentences, each sentence
+$s_i = (w_1^{(i)}, w_2^{(i)}, \ldots, w_{N_i}^{(i)})$ having $N_i$ words,
+where $N_i$ varies across sentences.  Using one-hot encoding with vocabulary
+size $V$, the flattened input for sentence $s_i$ has dimension $N_i \times V$.
+
+\Cref{tab:varlen} reproduces the slide from the
+\texttt{07-PyTorchDL-TransferLearning} deck (slide 7/29).
+
+\begin{table}[ht]
+  \centering
+  \caption{Text input dimension as a function of sentence length.
+           $V = $ vocabulary size.}
+  \label{tab:varlen}
+  \begin{tabular}{lcl}
+    \toprule
+    \textbf{Input Sentence} & \textbf{\# Words} ($N$) &
+    \textbf{Network Input Size} \\
+    \midrule
+    We study ML               & 3 & $3 \times V$ \\
+    We are in LLM class       & 5 & $5 \times V$ \\
+    Today we study neural networks & 5 & $5 \times V$ \\
+    Deep learning is powerful & 4 & $4 \times V$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+An ANN requires a \emph{fixed} input dimension $d_{\text{in}}$.  Thus the
+input dimension must be set to $d_{\text{in}} = N_{\max} \times V$, where
+$N_{\max}$ is the length of the longest sentence in the corpus.  Shorter
+sentences are \emph{zero-padded} to length $N_{\max}$.
+
+\subsubsection*{Numerical Scale of the Problem}
+
+Suppose $V = 1000$ unique words and $N_{\max} = 100$ words.  Then:
+
+\begin{align}
+  d_{\text{in}} &= N_{\max} \times V = 100 \times 1000 = 100{,}000, \\
+  \#\text{weights (input}\to\text{hidden)} &= d_{\text{in}} \times H
+    = 100{,}000 \times H.
+\end{align}
+
+For even a modest hidden layer of $H = 3$, this yields $3 \times 10^5$
+weights---applied \emph{identically} to a sentence with only 5 words (which
+contributes a mere $5 \times 1000 = 5{,}000$ non-zero inputs, with the
+remaining $95{,}000$ inputs being zero padding).
+
+\begin{keyinsight}
+Zero-padding wastes computation proportionally to $(N_{\max} - N_i)/N_{\max}$
+for each sentence $s_i$.  In the worst case (a one-word sentence against a
+100-word maximum) 99\% of the input is padding noise, yet 99\% of the
+weight multiplications are still performed.
+\end{keyinsight}
+
+Furthermore, at test time, if a sentence arrives with $N > N_{\max}$ words,
+the network has no architectural mechanism to handle it---a hard failure.
+
+\subsection{Limitation 3: Loss of Sequence Order Information}
+\label{subsec:order_loss}
+
+Even if the variable-length problem is ``solved'' by zero-padding, the FFNN
+still suffers from order blindness.  When the entire sentence is flattened
+into a single input vector and fed to the network in one forward pass, the
+network has no way to distinguish \emph{which word came first}.
+
+\begin{example}[title={Order Blindness in ANN}]
+Consider the sentence ``We are in LLM class'' with vocabulary
+$\mathcal{V} = \{\text{We, are, in, LLM, class}\}$.  The network input is
+a $25$-dimensional vector (5 words $\times$ 5-dimensional one-hot each),
+shown schematically below:
+
+\vspace{0.3em}
+\begin{center}
+\begin{tikzpicture}[
+    word/.style={draw,rounded corners,fill=green!10,minimum width=1.5cm,
+                 minimum height=0.6cm,font=\small},
+    arr/.style={-{Stealth},thick}
+  ]
+  \node[word] (w1) at (0,0)   {We};
+  \node[word] (w2) at (1.8,0) {are};
+  \node[word] (w3) at (3.6,0) {in};
+  \node[word] (w4) at (5.4,0) {LLM};
+  \node[word] (w5) at (7.2,0) {class};
+
+  \node[draw,fill=yellow!20,minimum width=3cm,minimum height=0.7cm,
+        font=\small] (flat) at (3.6,-1.5) {Flattened: 25-dim vector};
+
+  \draw[arr] (w1.south) -- ++(0,-0.5) -| (flat.north west);
+  \draw[arr] (w2.south) -- ++(0,-0.5) -| (flat.north);
+  \draw[arr] (w3.south) -- (flat.north);
+  \draw[arr] (w4.south) -- ++(0,-0.5) -| (flat.north east);
+  \draw[arr] (w5.south) -- ++(0,-0.5) -| (flat.east |- flat.north);
+
+  \node[draw,fill=orange!15,minimum width=1.4cm,minimum height=0.6cm,
+        font=\small] (h) at (3.6,-3.0) {Hidden: 3};
+  \node[draw,fill=red!15,minimum width=1.2cm,minimum height=0.6cm,
+        font=\small] (o) at (3.6,-4.2) {Output: 1};
+
+  \draw[arr] (flat.south) -- (h.north);
+  \draw[arr] (h.south) -- (o.north);
+
+  \node[font=\footnotesize,text=gray] at (7.5,-1.5)
+    {All words fed simultaneously};
+  \node[font=\footnotesize,text=gray] at (7.5,-2.0)
+    {$\Rightarrow$ order is invisible};
+\end{tikzpicture}
+\end{center}
+\vspace{0.3em}
+The sentence ``class LLM in are We'' produces an \emph{identical} input
+vector (up to reordering within the flattened representation), so the
+network's output is the same regardless of word order.
+\end{example}
+
+\begin{remark}
+\label{rem:order_loss}
+This is a fundamental architectural limitation, not a data or training
+deficiency.  No amount of additional data or regularisation can teach an
+ANN to distinguish word order when the order information is discarded before
+the first matrix multiplication.
+\end{remark}
+
+\subsection{Summary of FFNN Limitations for Sequential Data}
+\label{subsec:ffnn_summary}
+
+\begin{table}[ht]
+  \centering
+  \caption{Summary of feedforward network limitations for sequential data.}
+  \label{tab:ffnn_limits}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Limitation} & \textbf{Description} & \textbf{Consequence} \\
+    \midrule
+    Fixed input size &
+      FFNN requires all inputs to have identical dimension &
+      Cannot process variable-length sequences without padding \\
+    Long-range dependency &
+      Fixed window of size $k$ misses dependencies $> k$ &
+      Important contextual cues (e.g., ``France $\to$ French'') are lost \\
+    Order blindness &
+      Parallel input processing ignores token position &
+      Permutations of the same words produce the same output \\
+    Parameter explosion &
+      Zero-padding inflates input dimension to $N_{\max} \times V$ &
+      Computation/memory scale with worst-case sequence length \\
+    Poor generalisation &
+      Model trained on max length $N_{\max}$ fails on $N > N_{\max}$ &
+      Hard failure at test time on unseen longer sequences \\
+    No parameter sharing &
+      Each position has independent weight matrix in a position-wise MLP &
+      The same word at different positions is processed differently \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ============================================================
+\section{From FFNN to RNN: The Architectural Transition}
+\label{sec:ffnn_to_rnn}
+% ============================================================
+
+\subsection{Conceptual Transition}
+\label{subsec:conceptual_transition}
+
+The core idea behind the FFNN $\to$ RNN transition is to \emph{unfold} the
+network across time and then introduce \emph{weight sharing} across positions,
+together with a \emph{recurrent connection} that carries information from
+the previous time step.
+
+Prof.\ Prasanna explains the progression in three steps:
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Multiple FFNNs side by side.} Place one FFNN per token
+        position, processing each token independently.  This is conceptually
+        correct for position-by-position processing but does not share
+        parameters and grows with sequence length.
+  \item \textbf{Collapse to simplified notation.} Represent each FFNN
+        (input layer $\to$ hidden layers $\to$ output layer) as a single
+        compact symbol $x \to [h] \to y$.
+  \item \textbf{Add the recurrent connection.} Instead of replicating the
+        compact symbol horizontally (one per position), \emph{rotate it} and
+        add a self-loop (arrow $C$) on the hidden node.  This loop carries the
+        hidden state $h_{t-1}$ forward to time $t$, sharing the same weights
+        across all time steps.
+\end{enumerate}
+
+\subsection{FFNN vs.\ RNN Architecture Diagram}
+\label{subsec:arch_diagram}
+
+\Cref{fig:ffnn_vs_rnn} reproduces the key comparison from slide V03
+(\texttt{05-DL-RNN}, slide 15/63).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.6cm,
+      layer/.style={draw,rounded corners,fill=blue!10,minimum width=1.2cm,
+                    minimum height=0.8cm,font=\small\bfseries},
+      hlayer/.style={draw,rounded corners,fill=yellow!20,minimum width=1.2cm,
+                     minimum height=0.8cm,font=\small\bfseries},
+      olayer/.style={draw,rounded corners,fill=red!15,minimum width=1.2cm,
+                     minimum height=0.8cm,font=\small\bfseries},
+      arr/.style={-{Stealth[length=6pt]},thick},
+      label/.style={font=\small\itshape}
+    ]
+
+    %% ─── FFNN (top) ──────────────────────────────────────────────────
+    \node[font=\bfseries\small] at (-3.5,3.6) {Feedforward Neural Network};
+    \node[layer]  (fx) at (-3.5,2.6) {$x$};
+    \node[hlayer] (fh) at (-3.5,1.3) {$h$};
+    \node[olayer] (fy) at (-3.5,0.0) {$\hat{y}$};
+
+    \draw[arr] (fx) -- (fh) node[midway,right,label]{$W_1$};
+    \draw[arr] (fh) -- (fy) node[midway,right,label]{$W_2$};
+
+    \node[font=\footnotesize,text=gray] at (-3.5,-0.7)
+      {(simplified: one block per layer)};
+
+    %% ─── RNN (bottom) ────────────────────────────────────────────────
+    \node[font=\bfseries\small] at (2.5,3.6) {Recurrent Neural Network};
+
+    % Unrolled version
+    \foreach \t/\lbl in {0/t{-}1,2.5/t,5.0/t{+}1}{
+      \node[layer]  (rx\t) at (\t+0.0, 2.6) {$x_{\lbl}$};
+      \node[hlayer] (rh\t) at (\t+0.0, 1.3) {$h_{\lbl}$};
+      \node[olayer] (ry\t) at (\t+0.0, 0.0) {$y_{\lbl}$};
+
+      \draw[arr] (rx\t) -- (rh\t);
+      \draw[arr] (rh\t) -- (ry\t);
+    }
+
+    % Recurrent connections
+    \draw[arr] (rh0) -- (rh2.5) node[midway,above,label]{$\Whh$};
+    \draw[arr] (rh2.5) -- (rh5.0) node[midway,above,label]{$\Whh$};
+
+    % Ellipses
+    \node at (-1.0,1.3) {$\cdots$};
+    \node at (6.6,1.3)  {$\cdots$};
+
+    %% ─── Compact RNN symbol ──────────────────────────────────────────
+    \node[font=\bfseries\small] at (10.0,3.6) {Compact form};
+    \node[layer]  (cx) at (10.0,2.6) {$x_t$};
+    \node[hlayer] (ch) at (10.0,1.3) {$h_t$};
+    \node[olayer] (cy) at (10.0,0.0) {$y_t$};
+
+    \draw[arr] (cx) -- (ch) node[midway,right,label]{$B$};
+    \draw[arr] (ch) -- (cy) node[midway,right,label]{$A$};
+
+    % Self-loop
+    \draw[arr] (ch.east) to[out=0,in=0,looseness=3]
+               node[right,label]{$C$ ($\Whh$)} (ch.east |- ch.south)
+               to[out=180,in=270] (ch.south);
+
+    % Labels for connections
+    \node[font=\footnotesize,text=blue!70!black] at (10.0,-0.8)
+      {$A$: output conn.\ ($h \to y$)};
+    \node[font=\footnotesize,text=blue!70!black] at (10.0,-1.2)
+      {$B$: input conn.\ ($x \to h$)};
+    \node[font=\footnotesize,text=blue!70!black] at (10.0,-1.6)
+      {$C$: recurrent conn.\ ($h \to h$)};
+
+  \end{tikzpicture}
+  \caption{Comparison of FFNN (left) and RNN (right).  The RNN unrolled over
+           time (centre) shares weights $\Whh$, $\Wxh$, $\Why$ across all
+           time steps.  The compact form (right) uses a self-loop on the
+           hidden node to denote the recurrence.}
+  \label{fig:ffnn_vs_rnn}
+\end{figure}
+
+\subsection{RNN Forward Pass Equations}
+\label{subsec:forward_pass}
+
+The RNN computes, at each time step $t$:
+
+\begin{align}
+  \label{eq:rnn_hidden}
+  \ht &= \tanh\!\left(\Wxh\, \xt + \Whh\, h_{t-1} + \mathbf{b}_h\right), \\
+  \label{eq:rnn_output}
+  \yt &= \text{softmax}\!\left(\Why\, \ht + \mathbf{b}_y\right),
+\end{align}
+
+where:
+\begin{itemize}[nosep]
+  \item $\xt \in \mathbb{R}^{d_x}$ is the input at time $t$,
+  \item $h_{t-1} \in \mathbb{R}^{d_h}$ is the hidden state from the previous
+        time step,
+  \item $\Wxh \in \mathbb{R}^{d_h \times d_x}$ maps input to hidden,
+  \item $\Whh \in \mathbb{R}^{d_h \times d_h}$ maps hidden to hidden
+        (the recurrent weight),
+  \item $\Why \in \mathbb{R}^{d_y \times d_h}$ maps hidden to output.
+\end{itemize}
+
+\begin{keyinsight}
+The three weight matrices $\Wxh$, $\Whh$, $\Why$ are \textbf{shared across
+all time steps}.  This is the mechanism by which the number of parameters
+becomes \emph{independent} of sequence length, satisfying requirement
+\ref{req:params} from \cref{subsec:requirements}.
+\end{keyinsight}
+
+\subsection{How the RNN Addresses Each FFNN Limitation}
+
+\begin{table}[ht]
+  \centering
+  \caption{How RNN architecture addresses the limitations of FFNNs.}
+  \label{tab:rnn_solutions}
+  \begin{tabularx}{\linewidth}{lX}
+    \toprule
+    \textbf{FFNN Limitation} & \textbf{RNN Solution} \\
+    \midrule
+    Fixed input size &
+      Each token $x_t$ is fed one at a time; no need to specify sequence
+      length at network-design time \\
+    Long-range dependency &
+      $h_t$ accumulates information from all previous steps; theoretically
+      unlimited context window (bounded in practice for vanilla RNN) \\
+    Order blindness &
+      Tokens are processed sequentially; $h_t$ at step $t$ encodes the
+      entire history $x_1, \ldots, x_t$ in a fixed-size summary \\
+    Parameter explosion &
+      $\Wxh, \Whh, \Why$ are shared; parameter count is $O(d_h^2 + d_h d_x)$,
+      independent of $N$ \\
+    Poor generalisation &
+      The same shared weights can process sequences of any length at test time \\
+    No parameter sharing &
+      Weight sharing is the \emph{defining feature} of the recurrent connection \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ============================================================
+\section{Detailed Analysis: Text Input and FFNN Problems}
+\label{sec:text_input}
+% ============================================================
+
+\subsection{Text Representation Pipeline}
+\label{subsec:text_pipeline}
+
+Dr.\ Saumya's portion of the session works through a concrete text example
+to make the FFNN limitations tangible.  The pipeline for representing a
+sentence as input to a neural network is:
+
+\begin{enumerate}[leftmargin=2em]
+  \item \textbf{Tokenise} the sentence into individual words.
+  \item \textbf{Build a vocabulary} $\mathcal{V}$ of all unique tokens.
+  \item \textbf{Assign integer indices} to each token.
+  \item \textbf{One-hot encode} each token using \cref{eq:onehot}.
+  \item \textbf{Flatten} all one-hot vectors into a single input vector of
+        dimension $N \times V$.
+\end{enumerate}
+
+\Cref{alg:text_to_input} formalises this pipeline.
+
+\begin{algorithm}[ht]
+  \caption{Text-to-Input Vector for an ANN}
+  \label{alg:text_to_input}
+  \SetAlgoLined
+  \KwIn{Sentence $s = (w_1, w_2, \ldots, w_N)$; vocabulary $\mathcal{V}$,
+        $|\mathcal{V}| = V$; max length $N_{\max}$}
+  \KwOut{Flattened input vector $\mathbf{x} \in \mathbb{R}^{N_{\max} \times V}$}
+
+  \BlankLine
+  Initialise $\mathbf{x} \leftarrow \mathbf{0}_{N_{\max} \times V}$
+  \tcp*[r]{zero padding by default}
+
+  \For{$t \leftarrow 1$ \KwTo $N$}{
+    $i \leftarrow \text{index of } w_t \text{ in } \mathcal{V}$\;
+    $\mathbf{e}_t \leftarrow \mathbf{0}_V$\;
+    $[\mathbf{e}_t]_i \leftarrow 1$
+    \tcp*[r]{one-hot vector}
+    $\mathbf{x}[(t-1)V : tV] \leftarrow \mathbf{e}_t$
+    \tcp*[r]{insert into flattened vector}
+  }
+  \tcp*[r]{positions $N+1$ to $N_{\max}$ remain zero-padded}
+  \Return $\mathbf{x}$\;
+\end{algorithm}
+
+\subsection{Why Parallel Feeding Destroys Order}
+\label{subsec:parallel_destroys_order}
+
+When $\mathbf{x}$ is constructed as above and fed to a standard ANN, the
+hidden layer computes:
+
+\begin{equation}
+  \label{eq:ann_hidden}
+  \mathbf{h} = \sigma(W_1 \mathbf{x} + \mathbf{b}_1),
+\end{equation}
+
+where $W_1 \in \mathbb{R}^{H \times (N_{\max} V)}$.  Each column of $W_1$
+is associated with a specific position-word combination, not with a word
+independent of its position.  Crucially, all components of $\mathbf{x}$
+enter the summation simultaneously---there is no mechanism by which the
+computation at position $t$ can condition on the result of computation at
+position $t-1$.
+
+\begin{remark}
+This is fundamentally different from the way humans process language.  When
+reading ``We are in LLM class'', the human brain processes each word
+sequentially, updating an internal representation after each word.  The ANN
+instead ``sees'' all five words at once, without any notion of what came
+before what.
+\end{remark}
+
+\subsection{The Stochastic Model Predecessor: Hidden Markov Models}
+\label{subsec:hmm}
+
+Prof.\ Prasanna notes that before deep learning models, \emph{Hidden Markov
+Models (HMMs)} were the dominant approach to sequence modelling (e.g., in
+speech recognition and NLP).  HMMs encode sequence knowledge probabilistically
+via state-transition probabilities:
+
+\begin{equation}
+  \label{eq:hmm}
+  P(w_1, w_2, \ldots, w_T) = \prod_{t=1}^{T} P(w_t \mid w_{t-1}),
+\end{equation}
+
+(under the first-order Markov assumption).  The success of HMMs demonstrated
+that sequence knowledge could be modelled formally, inspiring the development
+of recurrent neural architectures that could represent richer, learned
+sequence dynamics.
+
+% ============================================================
+\section{RNN Architecture: Formal Development}
+\label{sec:rnn_formal}
+% ============================================================
+
+\subsection{Unrolled Computation Graph}
+\label{subsec:unrolled}
+
+The RNN processes a sequence $(x_1, x_2, \ldots, x_T)$ by unrolling the
+recurrent computation across $T$ time steps.  \Cref{fig:rnn_unrolled}
+shows the unrolled computation graph.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      node distance=2.2cm,
+      block/.style={draw,rounded corners,fill=yellow!20,minimum width=1.0cm,
+                    minimum height=0.8cm,font=\small},
+      input/.style={draw,rounded corners,fill=blue!12,minimum width=0.9cm,
+                    minimum height=0.7cm,font=\small},
+      output/.style={draw,rounded corners,fill=red!12,minimum width=0.9cm,
+                     minimum height=0.7cm,font=\small},
+      arr/.style={-{Stealth[length=5pt]},thick},
+      lab/.style={font=\scriptsize,midway,above}
+    ]
+
+    \node[input]  (x0) at (0.0,0) {$x_1$};
+    \node[input]  (x1) at (2.2,0) {$x_2$};
+    \node[input]  (x2) at (4.4,0) {$x_3$};
+    \node[input]  (x3) at (6.6,0) {$\cdots$};
+    \node[input]  (x4) at (8.8,0) {$x_T$};
+
+    \node[block]  (h0) at (0.0,1.6) {$h_1$};
+    \node[block]  (h1) at (2.2,1.6) {$h_2$};
+    \node[block]  (h2) at (4.4,1.6) {$h_3$};
+    \node         (hd) at (6.6,1.6) {$\cdots$};
+    \node[block]  (h4) at (8.8,1.6) {$h_T$};
+
+    \node[output] (y0) at (0.0,3.2) {$y_1$};
+    \node[output] (y1) at (2.2,3.2) {$y_2$};
+    \node[output] (y2) at (4.4,3.2) {$y_3$};
+    \node[output] (y4) at (8.8,3.2) {$y_T$};
+
+    % Input to hidden
+    \draw[arr] (x0) -- (h0) node[lab,right]{$\Wxh$};
+    \draw[arr] (x1) -- (h1) node[lab,right]{$\Wxh$};
+    \draw[arr] (x2) -- (h2) node[lab,right]{$\Wxh$};
+    \draw[arr] (x4) -- (h4) node[lab,right]{$\Wxh$};
+
+    % Hidden to output
+    \draw[arr] (h0) -- (y0) node[lab,right]{$\Why$};
+    \draw[arr] (h1) -- (y1) node[lab,right]{$\Why$};
+    \draw[arr] (h2) -- (y2) node[lab,right]{$\Why$};
+    \draw[arr] (h4) -- (y4) node[lab,right]{$\Why$};
+
+    % Recurrent connections
+    \draw[arr] (h0) -- (h1) node[font=\scriptsize,midway,above]{$\Whh$};
+    \draw[arr] (h1) -- (h2) node[font=\scriptsize,midway,above]{$\Whh$};
+    \draw[arr] (h2) -- (hd) node[font=\scriptsize,midway,above]{$\Whh$};
+    \draw[arr] (hd) -- (h4) node[font=\scriptsize,midway,above]{$\Whh$};
+
+    % Initial hidden state
+    \node[font=\small] (h_init) at (-1.6,1.6) {$h_0{=}\mathbf{0}$};
+    \draw[arr] (h_init) -- (h0) node[font=\scriptsize,midway,above]{$\Whh$};
+
+    % Annotation
+    \draw[decorate,decoration={brace,amplitude=6pt,mirror},
+          draw=blue!60,thick]
+      (0.0,-0.6) -- (8.8,-0.6)
+      node[midway,below=8pt,font=\footnotesize,text=blue!60]
+        {same $\Wxh$, $\Whh$, $\Why$ shared across all $T$ steps};
+
+  \end{tikzpicture}
+  \caption{Unrolled RNN computation graph.  The initial hidden state $h_0$
+           is typically set to zero.  At each step $t$, the hidden state
+           $h_t$ is computed from the current input $x_t$ and the previous
+           hidden state $h_{t-1}$ using the \emph{same} weight matrices
+           $\Wxh$ and $\Whh$.}
+  \label{fig:rnn_unrolled}
+\end{figure}
+
+\subsection{Hidden State as Sequence Memory}
+\label{subsec:hidden_state_memory}
+
+The hidden state $h_t$ is the core mechanism by which an RNN remembers
+past context.  Substituting \cref{eq:rnn_hidden} recursively:
+
+\begin{align}
+  h_1 &= \tanh(\Wxh x_1 + \Whh h_0 + \mathbf{b}_h), \\
+  h_2 &= \tanh(\Wxh x_2 + \Whh h_1 + \mathbf{b}_h), \\
+      &\;\vdots \notag \\
+  h_t &= \tanh\!\Bigl(\Wxh x_t + \Whh \tanh\!\bigl(\Wxh x_{t-1} + \cdots
+         \bigr) + \mathbf{b}_h\Bigr).
+\end{align}
+
+Thus $h_t$ is a \emph{nonlinear function of all past inputs}
+$x_1, \ldots, x_t$.  This is the sense in which the RNN has ``memory.''
+
+\begin{keyinsight}
+The memory of an RNN is not an explicit data structure---it is \emph{encoded
+in the activations of the hidden state}.  The hidden state $h_t$ is a
+$d_h$-dimensional summary of the entire history $x_1, \ldots, x_t$.  The
+quality of this summary---and how far back in time it can reach---is
+determined by $d_h$ and the spectral properties of $\Whh$.
+\end{keyinsight}
+
+\subsection{Sequence Modelling Tasks and RNN Variants}
+\label{subsec:rnn_variants}
+
+As introduced by Prof.\ Prasanna, the RNN family includes several variants
+that address specific shortcomings of the vanilla architecture.
+\Cref{tab:rnn_variants} provides an overview.
+
+\begin{table}[ht]
+  \centering
+  \caption{Overview of the RNN family.}
+  \label{tab:rnn_variants}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Model} & \textbf{Key Feature} & \textbf{Primary Use Case} \\
+    \midrule
+    Vanilla RNN &
+      Single recurrent connection; $h_t = \tanh(\Wxh x_t + \Whh h_{t-1})$ &
+      Short-term sequence modelling \\
+    GRU (Gated Recurrent Unit) &
+      Update gate and reset gate control information flow &
+      Medium-range dependencies; fewer params than LSTM \\
+    LSTM (Long Short-Term Memory) &
+      Separate cell state $c_t$ and hidden state $h_t$; three gates &
+      Long-range dependencies; speech, text \\
+    Bidirectional RNN &
+      Two RNNs: left-to-right and right-to-left; outputs concatenated &
+      Tasks requiring full sentence context (e.g., NER) \\
+    TDNN (Time Delay Neural Network) &
+      Fixed dilation pattern on input; no true recurrence &
+      Acoustic modelling in speech \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{remark}
+As discussed in the session, vanilla RNNs still struggle with very
+long-range dependencies in practice due to the \emph{vanishing gradient
+problem}: gradients of the loss with respect to early time steps decay
+exponentially as they are backpropagated through many tanh nonlinearities
+and the recurrent weight matrix $\Whh$.  LSTM was specifically designed to
+address this by introducing a cell state that can carry gradients through
+long sequences with minimal decay.
+\end{remark}
+
+% ============================================================
+\section{Sequence Types and Input/Output Configurations}
+\label{sec:io_configs}
+% ============================================================
+
+RNNs are flexible in their input/output structure.  The lecture implicitly
+introduces several configurations through the application examples.
+
+\begin{table}[ht]
+  \centering
+  \caption{RNN input/output configurations.}
+  \label{tab:io_configs}
+  \begin{tabularx}{\linewidth}{lllX}
+    \toprule
+    \textbf{Configuration} & \textbf{Input} & \textbf{Output} & \textbf{Example} \\
+    \midrule
+    One-to-one   & Single $x$      & Single $y$       & Standard classification \\
+    One-to-many  & Single $x$      & Sequence $y_{1:T}$ & Image captioning \\
+    Many-to-one  & Sequence $x_{1:T}$ & Single $y$    & Sentiment classification \\
+    Many-to-many (sync) & Seq $x_{1:T}$ & Seq $y_{1:T}$ & POS tagging, NER \\
+    Many-to-many (async) & Seq $x_{1:T}$ & Seq $y_{1:T'}$ & Machine translation \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+% ============================================================
+\section{Summary and Conclusion}
+\label{sec:conclusion}
+% ============================================================
+
+Session~16 laid the motivational foundation for the entire RNN module of the
+course.  The key takeaways are:
+
+\begin{enumerate}[leftmargin=2em,label=\textbf{\arabic*.}]
+  \item \textbf{Sequential data is pervasive.} Speech, text, video, and
+        financial time series all require models that can exploit the ordering
+        of observations.  This is not a niche requirement---it is central to
+        the majority of modern AI applications.
+
+  \item \textbf{FFNNs fail for sequential data on three fronts.}
+        \begin{itemize}[nosep]
+          \item Fixed input size prevents processing variable-length sequences.
+          \item Parallel input processing destroys word order.
+          \item Zero-padding ``fixes'' the length problem but at enormous
+                computational cost and with poor generalisation to unseen lengths.
+        \end{itemize}
+
+  \item \textbf{The RNN solves all three problems.}  By processing one token
+        at a time with shared weights and a recurrent hidden state, the RNN:
+        (a) handles arbitrary sequence lengths, (b) preserves order (since
+        $h_t$ depends on $h_{t-1}$), and (c) keeps parameter count
+        $O(d_h^2 + d_h d_x)$ independent of sequence length.
+
+  \item \textbf{The hidden state $h_t$ is the key novelty.}  It is a
+        $d_h$-dimensional running summary of the sequence up to time $t$,
+        updated at every step by the same matrix $\Whh$.
+
+  \item \textbf{Vanilla RNN is a starting point.}  GRU and LSTM extend the
+        vanilla RNN with gating mechanisms to address the vanishing gradient
+        problem and improve long-range memory.  These will be the subject of
+        subsequent sessions.
+\end{enumerate}
+
+\begin{keyinsight}
+The word ``recurrent'' in \emph{Recurrent Neural Network} refers to the
+\emph{recurrence} (repetition/sharing) of the same weight matrix $\Whh$
+across every position in the sequence.  This is the architectural realisation
+of the principle that the same learned transformation should apply at every
+time step---analogous to how convolutional filters are shared spatially in a
+CNN.
+\end{keyinsight}
+
+\vspace{1.5em}
+\noindent\textbf{Preview of Upcoming Sessions.}  The next session will
+derive the full forward and backward passes of the vanilla RNN, introduce the
+Backpropagation Through Time (BPTT) algorithm, and demonstrate the vanishing
+gradient problem quantitatively.  Subsequent sessions will cover GRU, LSTM,
+bidirectional RNNs, and ultimately attention mechanisms and the Transformer
+architecture.
+
+% ─── Bibliography placeholder ──────────────────────────────────────────────
+\vspace{2em}
+\noindent\rule{\linewidth}{0.4pt}
+\begin{small}
+\noindent\textbf{References and Source Materials}\\[3pt]
+Slide deck \texttt{05-DL-RNN}, January 11, 2026.
+Sunil Saumya \& S.\ R.\ Mahadeva Prasanna, IIITDwd.\\[2pt]
+Slide deck \texttt{07-PyTorchDL-TransferLearning}, January 12, 2026.
+Sunil Saumya \& S.\ R.\ Mahadeva Prasanna, IIITDwd.\\[2pt]
+Ava Soleimany, ``Deep Sequence Modeling,'' MIT 6.S191 (2020):
+Recurrent Neural Networks.\\[2pt]
+Lecture transcript: Vimeo \texttt{https://vimeo.com/1153669483},
+Session~16, IIITDwd Deep Learning Course, January 2026.
+\end{small}
+
+\end{document}

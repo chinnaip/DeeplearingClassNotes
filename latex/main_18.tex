@@ -1,0 +1,1177 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{graphicx}
+\usepackage{booktabs,tabularx,multirow}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+%% ── tcolorbox environments ──────────────────────────────────────────────────
+\newtcolorbox{keyinsight}[1][]{colback=blue!5!white,colframe=blue!75!black,fonttitle=\bfseries,title=Key Insight,#1}
+\newtcolorbox{example}[1][]{colback=green!5!white,colframe=green!75!black,fonttitle=\bfseries,title=Example,#1}
+\newtcolorbox{warningbox}[1][]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Warning,#1}
+
+%% ── amsthm environments ─────────────────────────────────────────────────────
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+%% ── header / footer ─────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Session 18 -- RNN Hands-On \& LSTM Introduction}
+\lhead{Deep Learning Course}
+\rfoot{\thepage}
+
+%% ── hyperref ────────────────────────────────────────────────────────────────
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,urlcolor=blue!60!black,
+            citecolor=green!50!black}
+
+%% ── convenience macros ──────────────────────────────────────────────────────
+\newcommand{\xt}{x_t}
+\newcommand{\ht}{h_t}
+\newcommand{\hprev}{h_{t-1}}
+\newcommand{\tanh}{\operatorname{tanh}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ── Title page ──────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Huge\bfseries Deep Learning Course\\[0.4em]
+   Session 18 Lecture Notes\par}
+  \vspace{1.2cm}
+  {\LARGE\itshape RNN Hands-On Implementation \&\\[0.3em]
+   Introduction to LSTM\par}
+  \vspace{1.5cm}
+  \rule{\linewidth}{0.6pt}\\[0.4cm]
+  \begin{tabular}{ll}
+    \textbf{Session Number:}  & 18 \\[4pt]
+    \textbf{Topic:}           & Recurrent Neural Networks -- hands-on; \\
+                              & unrolled RNN as feedforward network; \\
+                              & motivation for LSTM \\[4pt]
+    \textbf{Date:}            & January 17, 2026 \\[4pt]
+    \textbf{Instructors:}     & Prof.\ S R M Prasanna \& Dr.\ Sunil Saumya \\[4pt]
+    \textbf{Institution:}     & IIIT Dharwad \\[4pt]
+    \textbf{Slide Deck:}      & \texttt{08-PyTorchDL-RNN} (slide 20/29) \\[4pt]
+    \textbf{Notebook:}        & \texttt{RNNClassification.ipynb} (Google Colab) \\[4pt]
+    \textbf{Dataset:}         & IMDB Movie Reviews (50\,000 samples) \\
+                              & Shakespeare Dataset (500 plays) via Kaggle \\
+  \end{tabular}
+  \rule{\linewidth}{0.6pt}
+  \vfill
+  {\large These notes synthesise the lecture transcript and visual slide
+   extractions for Session~18 of the deep learning course at IIIT Dharwad.
+   They cover the architecture of simple RNNs, text pre-processing,
+   the PyTorch implementation of a sentiment-analysis RNN, and the
+   theoretical motivation for LSTM.\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Session~18 is a pivotal bridge between RNN theory and real-world
+implementation.  The session opened with a brief review of L2
+regularisation and a Q\&A on assignments, then devoted the majority of
+its $\approx 1$h\,52\,min runtime to two interlocking themes:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{RNN as an unrolled feedforward network.}  The instructor
+        revisited the computational graph of an RNN unrolled to time step
+        $t=3$, establishing the shared weight matrices $W$ and $U$, and
+        deriving the hidden-state update equation.
+  \item \textbf{Hands-on sentiment analysis.}  A complete PyTorch
+        implementation of a simple RNN for IMDB movie-review sentiment
+        classification was built from scratch inside a Google Colab
+        notebook (\texttt{RNNClassification.ipynb}).  Every stage of the
+        pipeline -- data loading, text pre-processing, vocabulary
+        construction, dataset/dataloader classes, model definition, and
+        training loop -- was coded and explained live.
+\end{enumerate}
+
+The session concluded by returning to the unrolled RNN diagram to
+explain \emph{why} long sequences create a vanishing-gradient problem,
+directly motivating the LSTM architecture to be introduced in the
+next session.
+
+\begin{keyinsight}
+The central architectural difference between a standard ANN and an RNN
+is the \emph{recurrent connection}: when processing word $x_t$, the
+network also receives the hidden state $h_{t-1}$ produced when
+processing $x_{t-1}$.  This allows the network to maintain a
+``memory'' of previous inputs, which is essential for sequential data.
+\end{keyinsight}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Background and Prerequisites}
+\label{sec:background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Sequential Data and the Limits of ANNs}
+\label{subsec:ann_limits}
+
+A standard feed-forward neural network (ANN) treats every input
+independently.  Given a vocabulary of size $V$, each word $w$ is
+represented as a one-hot vector $\mathbf{x} \in \{0,1\}^V$, and the
+network applies:
+
+\begin{equation}
+  \mathbf{o} = f\!\left(W_{\text{in}}\,\mathbf{x} + \mathbf{b}\right),
+  \label{eq:ann_forward}
+\end{equation}
+
+where $f$ is a non-linear activation function.  Two limitations arise
+immediately:
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Vocabulary-sized input.}  For $V = 75\,509$ (the vocabulary
+        of the IMDB corpus used in this session), $W_{\text{in}}$ has
+        $75\,509 \times h$ parameters for a hidden layer of width $h$.
+        At $h=64$ that is already $\approx 4.8$\,M weights \emph{just}
+        for the first layer.
+  \item \textbf{No temporal dependency.}  Processing the words
+        ``\emph{not}'' and ``\emph{good}'' simultaneously in a window
+        discards the positional relationship between them.  The network
+        sees both as part of a fixed-length input vector; it does not
+        ``know'' which came first.
+\end{enumerate}
+
+Window-based approaches (feeding $k$ consecutive words as a single
+input) partially address (b) but cannot handle variable-length
+sequences without padding, and they still treat the $k$ words as a
+single unordered bag.
+
+\subsection{L2 Regularisation Review}
+\label{subsec:l2_review}
+
+The session opened with a clarification about L2 regularisation,
+which had appeared in an assignment question.  The standard form adds
+a penalty proportional to the squared weight magnitudes to the loss:
+
+\begin{equation}
+  \mathcal{L}_{\text{reg}} = \mathcal{L} + \frac{\lambda}{2}
+  \sum_{j} w_j^2,
+  \label{eq:l2_regularisation}
+\end{equation}
+
+where $\lambda$ is the regularisation strength (\texttt{weight\_decay}
+in PyTorch optimisers).  The factor of $\tfrac{1}{2}$ is a
+mathematical convenience: when differentiating, the $2$ in the
+exponent cancels with $\tfrac{1}{2}$, yielding the clean gradient
+$\nabla_{w_j}\mathcal{L}_{\text{reg}} = \nabla_{w_j}\mathcal{L} +
+\lambda w_j$.
+
+\begin{example}[title=L2 Penalty Calculation]
+  Given $\lambda = 10^{-4}$ and a weight $w = 2.0$:
+  \begin{align}
+    \text{With factor } \tfrac{1}{2}:&\quad
+      \frac{\lambda}{2} w^2 = \frac{10^{-4}}{2} \times 4 = 2 \times 10^{-4} \\
+    \text{Without factor } \tfrac{1}{2}:&\quad
+      \lambda w^2 = 10^{-4} \times 4 = 4 \times 10^{-4}
+  \end{align}
+  Both forms are mathematically valid; the choice must be consistent
+  with the convention used when defining the loss function.
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{RNN Architecture: Unrolled View}
+\label{sec:rnn_architecture}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hidden-State Update Equation}
+\label{subsec:hidden_state}
+
+At every time step $t$, a simple RNN computes:
+
+\begin{equation}
+  \boxed{h_t = f\!\left(W\,h_{t-1} + U\,x_t + b\right)}
+  \label{eq:rnn_update}
+\end{equation}
+
+where:
+\begin{itemize}[noitemsep]
+  \item $x_t \in \mathbb{R}^{d}$ is the embedding of the word at
+        position $t$ ($d = 100$ in the notebook);
+  \item $h_t \in \mathbb{R}^{n_h}$ is the hidden state ($n_h = 64$
+        neurons);
+  \item $W \in \mathbb{R}^{n_h \times n_h}$ is the
+        \emph{hidden-to-hidden} weight matrix (shared across all $t$);
+  \item $U \in \mathbb{R}^{n_h \times d}$ is the
+        \emph{input-to-hidden} weight matrix (shared across all $t$);
+  \item $b \in \mathbb{R}^{n_h}$ is the bias vector;
+  \item $f$ is a point-wise non-linearity (typically $\tanh$).
+\end{itemize}
+
+The output at time step $t=3$ as shown on slide V01 is:
+
+\begin{equation}
+  O_3 = f\!\left(W \cdot O_2 + U \cdot X_3\right),
+  \label{eq:o3}
+\end{equation}
+
+which is the equation explicitly displayed on the course slide.
+
+\begin{keyinsight}[title=Parameter Sharing is the Key]
+  The matrices $W$ and $U$ are \textbf{identical} at every time step.
+  This is why an RNN can handle sequences of any length without
+  increasing the number of parameters.  A 391-word review and a
+  61-word review both use the same $W$ and $U$; only the number of
+  times they are applied differs.
+\end{keyinsight}
+
+\subsection{Unrolled RNN as a Deep Feedforward Network}
+\label{subsec:unrolled}
+
+\Cref{fig:rnn_unrolled} shows the unrolled computational graph for a
+sequence of length $T$.  Each column corresponds to one time step;
+the rows represent layers.  The horizontal arrows represent the flow
+of hidden state from $h_{t-1}$ to $h_t$, while the vertical arrows
+represent the local computation within each time step.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      node distance=1.8cm and 2.2cm,
+      box/.style={draw,rounded corners=3pt,minimum width=1.4cm,
+                  minimum height=0.8cm,fill=blue!10,font=\small},
+      inp/.style={draw,circle,minimum size=0.7cm,fill=orange!20,font=\small},
+      out/.style={draw,circle,minimum size=0.7cm,fill=green!20,font=\small},
+      arr/.style={-{Stealth[length=5pt]},thick},
+      rarr/.style={-{Stealth[length=5pt]},thick,blue!70!black}
+    ]
+
+    %% Hidden state nodes
+    \node[box] (h0) {$h_0$};
+    \node[box,right=of h0] (h1) {$h_1$};
+    \node[box,right=of h1] (h2) {$h_2$};
+    \node[box,right=of h2] (h3) {$h_3$};
+
+    %% Recurrent arrows
+    \draw[rarr] (h0) -- node[above,font=\tiny]{$W$} (h1);
+    \draw[rarr] (h1) -- node[above,font=\tiny]{$W$} (h2);
+    \draw[rarr] (h2) -- node[above,font=\tiny]{$W$} (h3);
+
+    %% Input nodes (below)
+    \node[inp,below=1.2cm of h0] (x0) {$x_0$};
+    \node[inp,below=1.2cm of h1] (x1) {$x_1$};
+    \node[inp,below=1.2cm of h2] (x2) {$x_2$};
+    \node[inp,below=1.2cm of h3] (x3) {$x_3$};
+
+    %% Input arrows
+    \draw[arr] (x0) -- node[right,font=\tiny]{$U$} (h0);
+    \draw[arr] (x1) -- node[right,font=\tiny]{$U$} (h1);
+    \draw[arr] (x2) -- node[right,font=\tiny]{$U$} (h2);
+    \draw[arr] (x3) -- node[right,font=\tiny]{$U$} (h3);
+
+    %% Output nodes (above)
+    \node[out,above=1.2cm of h0] (o0) {$O_0$};
+    \node[out,above=1.2cm of h1] (o1) {$O_1$};
+    \node[out,above=1.2cm of h2] (o2) {$O_2$};
+    \node[out,above=1.2cm of h3] (o3) {$O_3$};
+
+    %% Output arrows
+    \draw[arr] (h0) -- (o0);
+    \draw[arr] (h1) -- (o1);
+    \draw[arr] (h2) -- (o2);
+    \draw[arr] (h3) -- (o3);
+
+    %% Labels
+    \node[font=\footnotesize,below=0.2cm of x0] {$t=0$};
+    \node[font=\footnotesize,below=0.2cm of x1] {$t=1$};
+    \node[font=\footnotesize,below=0.2cm of x2] {$t=2$};
+    \node[font=\footnotesize,below=0.2cm of x3] {$t=3$};
+
+    %% Initial state h_{-1}
+    \node[left=1.2cm of h0,font=\small] (hinit) {$h_{-1}=\mathbf{0}$};
+    \draw[rarr] (hinit) -- node[above,font=\tiny]{$W$} (h0);
+
+  \end{tikzpicture}
+  \caption{RNN unrolled over four time steps $t = 0, 1, 2, 3$.  The
+           weight matrices $W$ (hidden-to-hidden) and $U$
+           (input-to-hidden) are \emph{shared} at every column.
+           The highlighted output $O_3$ at $t=3$ satisfies
+           $O_3 = f(W \cdot O_2 + U \cdot X_3)$, as shown on slide V01.}
+  \label{fig:rnn_unrolled}
+\end{figure}
+
+\begin{remark}
+  The unrolled view makes clear that an RNN with sequence length $T$
+  is equivalent to a feedforward network of depth $T$.  For a 391-word
+  IMDB review, the unrolled network has 391 ``layers'', all sharing
+  the same parameters $W$, $U$.  This depth is precisely why
+  gradients can vanish during backpropagation through time (BPTT).
+\end{remark}
+
+\subsection{ANN vs.\ RNN: Architectural Comparison}
+\label{subsec:ann_vs_rnn}
+
+\Cref{tab:ann_vs_rnn} summarises the key differences between a
+standard ANN and an RNN for sequential NLP tasks, as discussed by
+the instructor during the session.
+
+\begin{table}[ht]
+  \centering
+  \caption{ANN versus RNN for sequential text processing.}
+  \label{tab:ann_vs_rnn}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Property} & \textbf{ANN} & \textbf{RNN} \\
+    \midrule
+    Input at time $t$ & Fixed-size window of $k$ words
+                      & Single word $x_t$; also receives $h_{t-1}$ \\
+    \addlinespace
+    Sequence order & Implicit (position in window)
+                   & Explicit (strictly sequential) \\
+    \addlinespace
+    Variable-length input & Requires padding to fixed $k$
+                          & Handled naturally (no padding needed) \\
+    \addlinespace
+    Parameter count & $V \times h$ for first layer ($V = 75\,509$)
+                    & $d \times n_h + n_h \times n_h$ (after embedding) \\
+    \addlinespace
+    Long-range context & Limited to window size $k$
+                       & Theoretically unlimited (in practice limited by vanishing gradient) \\
+    \addlinespace
+    Parallelism & All words in window processed simultaneously
+                & Sequential -- $t+1$ requires $h_t$ \\
+    \addlinespace
+    Typical use & Classification with fixed context
+                & Sequence classification, language modelling \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Text Pre-Processing Pipeline}
+\label{sec:preprocessing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The IMDB dataset contains 50\,000 labelled movie reviews (25\,000
+positive, 25\,000 negative).  The session used a randomly sampled
+subset of 5\,000 reviews to keep training times manageable on Colab.
+\Cref{fig:preprocessing_pipeline} illustrates the five-stage pipeline.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      stage/.style={draw,rectangle,rounded corners=4pt,
+                    minimum width=2.4cm,minimum height=0.9cm,
+                    fill=teal!15,font=\small,align=center,thick},
+      arr/.style={-{Stealth[length=6pt]},thick,teal!60!black}
+    ]
+    \node[stage] (s1) {Raw\\Text};
+    \node[stage,right=1.3cm of s1] (s2) {Lower-\\case};
+    \node[stage,right=1.3cm of s2] (s3) {Remove\\Punct.};
+    \node[stage,right=1.3cm of s3] (s4) {Tokenise};
+    \node[stage,right=1.3cm of s4] (s5) {Build\\Vocab};
+    \node[stage,below=1.2cm of s5] (s6) {Text\\$\to$ Indices};
+    \node[stage,below=1.2cm of s3] (s7) {Tensor\\Dataset};
+    \node[stage,below=1.2cm of s1] (s8) {Data\\Loader};
+
+    \draw[arr] (s1) -- (s2);
+    \draw[arr] (s2) -- (s3);
+    \draw[arr] (s3) -- (s4);
+    \draw[arr] (s4) -- (s5);
+    \draw[arr] (s5) -- (s6);
+    \draw[arr] (s6) -- (s7);
+    \draw[arr] (s7) -- (s8);
+
+    %% labels below arrows
+    \node[font=\tiny,below=0.1cm of s2] {step 1};
+    \node[font=\tiny,below=0.1cm of s3] {step 2};
+    \node[font=\tiny,below=0.1cm of s4] {step 3};
+    \node[font=\tiny,below=0.1cm of s5] {step 4};
+  \end{tikzpicture}
+  \caption{Five-stage text pre-processing pipeline implemented in
+           \texttt{RNNClassification.ipynb}.}
+  \label{fig:preprocessing_pipeline}
+\end{figure}
+
+\subsection{Tokenisation and Cleaning}
+\label{subsec:tokenisation}
+
+The \texttt{tokenize(text)} function applied the following
+transformations in sequence:
+
+\begin{enumerate}[label=\arabic*.]
+  \item Convert to lower-case.
+  \item Remove all punctuation characters using the \texttt{string.punctuation} set.
+  \item Split on whitespace to produce a list of tokens.
+\end{enumerate}
+
+These three steps are illustrated below in Python pseudocode:
+
+\begin{verbatim}
+import string
+
+def tokenize(text):
+    text = text.lower()
+    text = ''.join(c for c in text if c not in string.punctuation)
+    tokens = text.split()
+    return tokens
+\end{verbatim}
+
+\begin{example}[title=Tokenisation in Action]
+  Input: \texttt{``One of the most beautifully crafted films you'll ever see.''}\\[4pt]
+  After lower-case: \texttt{``one of the most beautifully crafted films youll ever see''}\\[4pt]
+  After removing punctuation: same (apostrophe removed; ``you'll'' $\to$ ``youll'')\\[4pt]
+  After splitting: \texttt{[`one', `of', `the', `most', `beautifully', `crafted', `films', `youll', `ever', `see']}
+\end{example}
+
+Note that the apostrophe in ``you'll'' is stripped, making the
+token \texttt{youll} (index~190 in the vocabulary).  A student asked
+why this was not classified as the \texttt{<UNK>} token -- the answer
+is that tokenisation removes the apostrophe \emph{before} vocabulary
+lookup, so \texttt{youll} appears as a known token in the vocabulary.
+
+\subsection{Vocabulary Construction}
+\label{subsec:vocabulary}
+
+The vocabulary is a Python dictionary mapping each unique token to an
+integer index:
+
+\begin{equation}
+  \text{vocab} = \bigl\{\,\text{token} \mapsto \text{index}\,\bigr\}
+  \label{eq:vocab}
+\end{equation}
+
+Two special tokens are pre-inserted before any text is processed:
+
+\begin{center}
+  \begin{tabular}{cll}
+    \toprule
+    \textbf{Index} & \textbf{Token} & \textbf{Purpose} \\
+    \midrule
+    0 & \texttt{<PAD>} & Padding (needed when batches contain variable-length sequences) \\
+    1 & \texttt{<UNK>} & Unknown token (used at inference for out-of-vocabulary words) \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+Every new unique token encountered while iterating through the 5\,000
+training reviews is assigned the next available index
+($|\text{vocab}|$ at the time of insertion):
+
+\begin{verbatim}
+def build_vocab(texts):
+    vocab = {'<PAD>': 0, '<UNK>': 1}
+    for text in texts:
+        for token in tokenize(text):
+            if token not in vocab:
+                vocab[token] = len(vocab)
+    return vocab
+\end{verbatim}
+
+After processing all 5\,000 rows the vocabulary contained
+$|\text{vocab}| = 75\,509$ unique tokens.  The instructor noted that
+processing the full 50\,000-sample dataset would likely exceed
+100\,000 unique tokens.
+
+\begin{keyinsight}[title=Why Both \texttt{<PAD>} and \texttt{<UNK>}?]
+  \textbf{\texttt{<UNK>}} (index 1) handles out-of-vocabulary words at
+  test time.  If a review contains a word not seen during training, it
+  is mapped to index~1.  \textbf{\texttt{<PAD>}} (index 0) is included
+  as a standard convention even though this notebook processes each
+  review individually (batch size = 1), so no padding is actually
+  applied.  Padding becomes necessary when batching multiple
+  variable-length sequences together.
+\end{keyinsight}
+
+\subsection{Text-to-Indices Conversion}
+\label{subsec:text_to_indices}
+
+The function \texttt{text\_to\_indices(text, vocab)} converts a raw
+review string into a tensor of vocabulary indices:
+
+\begin{verbatim}
+def text_to_indices(text, vocab):
+    tokens = tokenize(text)
+    return [vocab[t] if t in vocab else vocab['<UNK>'] for t in tokens]
+\end{verbatim}
+
+The sequence of indices preserves the word order of the original
+review.  For example, the sentence ``one of the \ldots'' maps to the
+integer sequence $[162, 12, 16, \ldots]$.  This is the input
+$[x_0, x_1, x_2, \ldots]$ that will be fed token-by-token to the RNN.
+
+\subsection{Padding and Batch Processing Trade-offs}
+\label{subsec:padding}
+
+A student raised the question of padding during the live session.
+\Cref{tab:padding_tradeoffs} summarises the trade-offs discussed:
+
+\begin{table}[ht]
+  \centering
+  \caption{Trade-offs between padded batching and individual sequence processing.}
+  \label{tab:padding_tradeoffs}
+  \begin{tabularx}{\linewidth}{lXX}
+    \toprule
+    \textbf{Property} & \textbf{Batch with Padding} & \textbf{Batch Size = 1} \\
+    \midrule
+    GPU utilisation & Higher (parallelism) & Lower \\
+    \addlinespace
+    Information loss & Yes -- zeros dilute gradient signal & None \\
+    \addlinespace
+    Memory & Fixed (max-length sequences) & Variable \\
+    \addlinespace
+    Implementation & Requires \texttt{<PAD>} masking & Simple \\
+    \addlinespace
+    Recommended for RNN & Only when resource-constrained & Preferred \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{warningbox}
+  Padding with zeros is never ideal for RNNs.  The padded time steps
+  produce meaningless hidden-state updates, dilute the gradient signal
+  during backpropagation, and can degrade model performance.  The
+  best practice is to process each sequence individually
+  (\texttt{batch\_size = 1}) or to use \texttt{pack\_padded\_sequence}
+  in PyTorch, which skips padded positions entirely.
+\end{warningbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PyTorch Dataset and DataLoader}
+\label{sec:dataset_dataloader}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Custom Dataset Class}
+\label{subsec:custom_dataset}
+
+Following the standard PyTorch pattern introduced in earlier sessions,
+a custom \texttt{IMDBDataset} class was defined by inheriting from
+\texttt{torch.utils.data.Dataset} and implementing three methods:
+
+\begin{itemize}[noitemsep]
+  \item \texttt{\_\_init\_\_(self, df, vocab)}: Stores the DataFrame
+        (with a reset index) and the vocabulary dictionary.
+  \item \texttt{\_\_len\_\_(self)}: Returns the number of reviews.
+  \item \texttt{\_\_getitem\_\_(self, idx)}: Converts the $idx$-th
+        review to a tensor of indices and returns the
+        (review\_tensor, label\_tensor) pair.
+\end{itemize}
+
+The \texttt{\_\_getitem\_\_} method calls \texttt{text\_to\_indices}
+on-the-fly, so no pre-encoded copy of the entire dataset needs to be
+held in memory.  The label is returned as a floating-point tensor
+($0.0$ for negative, $1.0$ for positive) to match the binary
+cross-entropy loss expectation.
+
+\begin{verbatim}
+class IMDBDataset(Dataset):
+    def __init__(self, df, vocab):
+        self.df = df.reset_index(drop=True)
+        self.vocab = vocab
+
+    def __len__(self):
+        return len(self.df)
+
+    def __getitem__(self, idx):
+        review = self.df.loc[idx, 'review']
+        label  = self.df.loc[idx, 'sentiment']
+        x = torch.tensor(text_to_indices(review, self.vocab))
+        y = torch.tensor(float(label))
+        return x, y
+\end{verbatim}
+
+The reason for \texttt{reset\_index(drop=True)} is that the 5\,000
+rows were drawn by \emph{random sampling} from the original 50\,000,
+so the index values are non-contiguous (e.g.\ 4, 312, 7003, \ldots).
+Resetting creates a clean 0-to-4999 integer index that \texttt{iloc}
+can use directly.
+
+\subsection{DataLoader Configuration}
+\label{subsec:dataloader}
+
+The DataLoader was configured with \texttt{batch\_size = 1} for the
+reasons discussed in \cref{subsec:padding}:
+
+\begin{verbatim}
+train_loader = DataLoader(train_dataset,
+                          batch_size=1,
+                          shuffle=True)
+\end{verbatim}
+
+Iterating the loader yields batches of shape
+$1 \times T_i$ for the review tensor (where $T_i$ is the number of
+tokens in the $i$-th review) and shape $1$ for the label scalar.  The
+instructor demonstrated this live, showing:
+
+\begin{itemize}[noitemsep]
+  \item Batch 0: review shape $1 \times 61$ (61 tokens) -- label: positive.
+  \item Batch 1: review shape $1 \times 391$ (391 tokens) -- label: negative.
+  \item Batch 2: review shape $1 \times 173$ (173 tokens).
+\end{itemize}
+
+This confirms that RNNs handle variable-length inputs naturally -- the
+DataLoader does not need to pad or truncate any sequence.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Simple RNN Model Implementation}
+\label{sec:model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Model Architecture Overview}
+\label{subsec:model_overview}
+
+The \texttt{SimpleRNN} model consists of exactly three learnable
+components stacked in sequence:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Embedding layer} (\texttt{nn.Embedding}): maps each
+        integer token index to a dense $d$-dimensional vector.
+  \item \textbf{RNN layer} (\texttt{nn.RNN}): processes the embedded
+        sequence token-by-token, maintaining a hidden state.
+  \item \textbf{Linear (fully-connected) layer} (\texttt{nn.Linear}):
+        maps the final hidden state to a scalar sentiment score.
+\end{enumerate}
+
+\Cref{fig:model_architecture} illustrates the full forward pass.
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[
+      layer/.style={draw,rectangle,rounded corners=5pt,
+                    minimum width=3.5cm,minimum height=0.9cm,
+                    fill=violet!12,font=\small,align=center,thick},
+      data/.style={draw,rectangle,rounded corners=3pt,
+                   minimum width=3.5cm,minimum height=0.7cm,
+                   fill=gray!12,font=\small,align=center},
+      arr/.style={-{Stealth[length=6pt]},thick}
+    ]
+
+    \node[data]  (inp)   {Token indices $[i_0,i_1,\ldots,i_{T-1}]$};
+    \node[layer,below=0.8cm of inp]  (emb)
+        {Embedding\\$V \times 100 \to T \times 100$};
+    \node[layer,below=0.8cm of emb]  (rnn)
+        {RNN\\input=100, hidden=64\\(batch\_first=True)};
+    \node[data,below=0.6cm of rnn]   (hn)
+        {$h_T \in \mathbb{R}^{64}$ (final hidden state)};
+    \node[layer,below=0.6cm of hn]   (fc)
+        {Linear $64 \to 1$};
+    \node[data,below=0.6cm of fc]    (out)
+        {Scalar logit $\hat{y} \in \mathbb{R}$};
+    \node[layer,below=0.6cm of out,fill=orange!15]  (loss)
+        {BCEWithLogitsLoss\\$\mathcal{L}(\hat{y}, y)$};
+
+    \draw[arr] (inp)  -- (emb);
+    \draw[arr] (emb)  -- node[right,font=\tiny]{embedded sequence} (rnn);
+    \draw[arr] (rnn)  -- node[right,font=\tiny]{output, $h_n$} (hn);
+    \draw[arr] (hn)   -- (fc);
+    \draw[arr] (fc)   -- (out);
+    \draw[arr] (out)  -- (loss);
+
+  \end{tikzpicture}
+  \caption{Forward pass of the \texttt{SimpleRNN} model used in the
+           session.  $V = 75\,509$ (vocabulary size), $T$ = sequence
+           length (variable), $d = 100$ (embedding dimension),
+           $n_h = 64$ (RNN hidden size).}
+  \label{fig:model_architecture}
+\end{figure}
+
+\subsection{The Embedding Layer}
+\label{subsec:embedding}
+
+The embedding layer performs two roles simultaneously:
+
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{One-hot encoding:} internally, the layer treats each
+        integer index as selecting the corresponding row from a learnable
+        weight matrix $E \in \mathbb{R}^{V \times d}$.  This is
+        mathematically identical to multiplying a one-hot vector by $E$.
+  \item \textbf{Dimensionality reduction:} the 75\,509-dimensional
+        one-hot vector is compressed to a dense $d=100$-dimensional
+        vector.
+\end{enumerate}
+
+\begin{equation}
+  \mathbf{e}_t = E[i_t] \in \mathbb{R}^{d}, \quad d = 100
+  \label{eq:embedding}
+\end{equation}
+
+The two key advantages of using embeddings rather than raw one-hot
+vectors:
+
+\begin{enumerate}[noitemsep]
+  \item \textbf{Parameter reduction:} the input-to-hidden weight
+        matrix changes from $V \times n_h = 75\,509 \times 64
+        \approx 4.8$\,M parameters to $d \times n_h = 100 \times 64
+        = 6\,400$ parameters -- a reduction by a factor of $\approx 750$.
+  \item \textbf{Denser gradients:} a one-hot vector with 75\,508 zeros
+        produces almost no gradient signal.  A dense embedding vector
+        with non-zero values everywhere propagates gradients more
+        effectively.
+\end{enumerate}
+
+\begin{keyinsight}[title=Embedding Layer as Fully-Connected Layer]
+  Conceptually, the embedding layer is simply a fully-connected layer
+  (without bias or activation) placed \emph{before} the main
+  architecture starts.  Its weights $E$ are initialised randomly and
+  learned by gradient descent along with all other parameters.  If
+  pre-trained word embeddings (Word2Vec, GloVe, FastText) are loaded
+  into $E$, the model can leverage semantic information from large
+  external corpora.
+\end{keyinsight}
+
+\subsection{The RNN Layer}
+\label{subsec:rnn_layer}
+
+The \texttt{nn.RNN} module implements \cref{eq:rnn_update} for every
+time step in a vectorised manner.  Key constructor arguments used:
+
+\begin{center}
+  \begin{tabular}{lll}
+    \toprule
+    \textbf{Argument} & \textbf{Value} & \textbf{Meaning} \\
+    \midrule
+    \texttt{input\_size}  & 100  & Dimension of each embedded token \\
+    \texttt{hidden\_size} & 64   & Width of the hidden state $h_t$ \\
+    \texttt{batch\_first} & \texttt{True} & Input tensor shape: $(B, T, d)$ not $(T, B, d)$ \\
+    \bottomrule
+  \end{tabular}
+\end{center}
+
+When called, \texttt{nn.RNN} returns two tensors:
+\begin{itemize}[noitemsep]
+  \item \texttt{output}: shape $(B, T, n_h)$ -- the hidden state at
+        \emph{every} time step.
+  \item \texttt{h\_n}: shape $(1, B, n_h)$ -- the hidden state at the
+        \emph{last} time step only.
+\end{itemize}
+
+For sentiment classification, only \texttt{h\_n} is needed because
+the final hidden state encodes a summary of the entire sequence.
+The instructor verified this by showing that the last row of
+\texttt{output} is numerically identical to \texttt{h\_n}.
+
+\subsection{Parameter Count}
+\label{subsec:param_count}
+
+The total number of trainable parameters in the model is:
+
+\begin{align}
+  \text{Embedding:} &\quad V \times d = 75\,509 \times 100 = 7\,550\,900 \label{eq:emb_params} \\
+  \text{RNN} \;(U): &\quad d \times n_h = 100 \times 64 = 6\,400 \label{eq:rnn_u} \\
+  \text{RNN} \;(W): &\quad n_h \times n_h = 64 \times 64 = 4\,096 \label{eq:rnn_w} \\
+  \text{RNN biases:}&\quad 2 \times n_h = 128 \label{eq:rnn_bias} \\
+  \text{Linear:}    &\quad n_h \times 1 + 1 = 65 \label{eq:fc_params} \\
+  \hline \nonumber \\
+  \text{Total:}     &\quad \approx 7\,561\,589 \label{eq:total_params}
+\end{align}
+
+The embedding layer dominates the parameter count.  This is typical
+for NLP models with large vocabularies; pre-training embeddings or
+using sub-word tokenisation (BPE) are common mitigations.
+
+\subsection{Forward Pass Code}
+\label{subsec:forward_pass}
+
+\begin{verbatim}
+class SimpleRNN(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_size, output_size):
+        super(SimpleRNN, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim)
+        self.rnn = nn.RNN(embed_dim, hidden_size, batch_first=True)
+        self.fc  = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        embedded = self.embedding(x)          # (B, T, 100)
+        _, h_n   = self.rnn(embedded)         # h_n: (1, B, 64)
+        h_n      = h_n.squeeze(0)             # (B, 64)
+        out      = self.fc(h_n)               # (B, 1)
+        return out
+\end{verbatim}
+
+The underscore \texttt{\_} discards the per-timestep output tensor;
+only the final hidden state \texttt{h\_n} is passed to the
+fully-connected layer.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Training Procedure}
+\label{sec:training}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Loss Function and Optimiser}
+\label{subsec:loss_optimiser}
+
+Binary cross-entropy with logits was used as the loss function:
+
+\begin{equation}
+  \mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N}
+    \Bigl[ y_i \log \sigma(\hat{y}_i)
+         + (1 - y_i) \log (1 - \sigma(\hat{y}_i)) \Bigr],
+  \label{eq:bce_loss}
+\end{equation}
+
+where $\sigma$ is the sigmoid function.  \texttt{BCEWithLogitsLoss}
+applies the sigmoid internally, which is numerically more stable than
+applying it explicitly and then computing the log.
+
+A student asked why a ``linear'' output layer is used instead of
+logistic regression.  The answer: the linear layer produces a logit
+$\hat{y}$; the \emph{sigmoid} non-linearity is applied inside
+\texttt{BCEWithLogitsLoss}, so the full model does implement logistic
+regression -- the non-linearity just appears in the loss function rather
+than in \texttt{forward()}.
+
+\subsection{Training Loop}
+\label{subsec:training_loop}
+
+\Cref{alg:training_loop} presents the training algorithm used in the
+session.
+
+\begin{algorithm}[ht]
+  \caption{RNN Sentiment Classifier Training Loop}
+  \label{alg:training_loop}
+  \SetAlgoLined
+  \KwIn{Training DataLoader \texttt{train\_loader}, number of epochs
+        \texttt{num\_epochs}, model, loss function \texttt{criterion},
+        optimiser \texttt{optimizer}}
+  \KwOut{Trained model parameters}
+  \BlankLine
+  model.train()\;
+  \For{epoch $\leftarrow 1$ \KwTo \texttt{num\_epochs}}{
+    epoch\_loss $\leftarrow 0$\;
+    \For{(review, label) \textbf{in} train\_loader}{
+      review, label $\leftarrow$ review.to(device), label.to(device)\;
+      optimizer.zero\_grad()\;
+      output $\leftarrow$ model(review)\tcp*{forward pass}
+      output $\leftarrow$ output.squeeze(1)\tcp*{match label shape}
+      loss $\leftarrow$ criterion(output, label)\tcp*{compute BCE loss}
+      loss.backward()\tcp*{backprop through time (BPTT)}
+      optimizer.step()\tcp*{SGD / Adam weight update}
+      epoch\_loss $\leftarrow$ epoch\_loss $+$ loss.item()\;
+    }
+    \textbf{print} epoch, epoch\_loss / len(train\_loader)\;
+  }
+\end{algorithm}
+
+\subsection{Key Training Observations}
+\label{subsec:training_observations}
+
+\begin{itemize}
+  \item The model was trained for 10 epochs on the 5\,000-sample subset.
+  \item The instructor showed the loss decreasing epoch by epoch,
+        confirming that the pipeline was correctly connected.
+  \item Because \texttt{batch\_size = 1}, each gradient step is computed
+        from a single review -- this is stochastic gradient descent
+        (SGD) in its purest form, with very noisy gradient estimates.
+  \item Moving to GPU (\texttt{device = 'cuda'} if available) was
+        highlighted as essential for larger datasets or more epochs.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hands-On: Shakespeare Next-Character Prediction}
+\label{sec:shakespeare}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The visual extractions (V02--V04) also captured code from a
+secondary notebook focused on \emph{next-character prediction} using
+the Kaggle Shakespeare dataset (500 plays).  This task trains an RNN
+to predict the next character $c_{t+1}$ given a sequence of
+characters $[c_1, c_2, \ldots, c_t]$.
+
+\subsection{Dataset Download}
+\label{subsec:shakespeare_data}
+
+\begin{verbatim}
+import kagglehub
+path = kagglehub.dataset_download(
+    "kylehobbsdev/shakespeare-dataset-of-500-shakespeare-plays"
+)
+print("Path to dataset files:", path)
+# Path to dataset files:
+#   /root/.cache/kaggle/datasets/kylehobbsdev/
+#   shakespeare-dataset-of-500-shakespeare-plays/versions/1
+\end{verbatim}
+
+\subsection{Sliding-Window Sequence Construction}
+\label{subsec:sliding_window}
+
+Given the encoded Shakespeare text $[c_1, c_2, \ldots, c_N]$ (where
+each $c_i$ is a character index), training pairs are constructed as:
+
+\begin{equation}
+  (x^{(k)},\, y^{(k)}) = \bigl([c_k, c_{k+1}, \ldots, c_{k+L-1}],\;
+                                 c_{k+L}\bigr), \quad
+  k = 1, 2, \ldots, N - L
+  \label{eq:sliding_window}
+\end{equation}
+
+where $L$ is the context length.  The session notebook constructed
+942 such training sequences from the sampled Shakespeare corpus.
+
+\begin{example}[title=Sliding Window Sequences]
+  For an encoded text starting with character indices $[3, 7, 5, 2, \ldots]$
+  with context length $L = 2$:
+  \begin{align*}
+    (x^{(1)}, y^{(1)}) &= ([3, 7],\; 5) \\
+    (x^{(2)}, y^{(2)}) &= ([3, 7, 5],\; 2) \\
+    (x^{(3)}, y^{(3)}) &= ([3, 7, 5, 2],\; \ldots)
+  \end{align*}
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vanishing Gradient and LSTM Motivation}
+\label{sec:lstm_motivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Backpropagation Through Time (BPTT)}
+\label{subsec:bptt}
+
+Training an RNN requires computing gradients of the loss
+$\mathcal{L}$ with respect to the shared weights $W$ and $U$.
+Because the hidden state at time $t$ depends on all previous hidden
+states, the chain rule produces products of the Jacobian matrices of
+$f$:
+
+\begin{equation}
+  \frac{\partial \mathcal{L}}{\partial W}
+    = \sum_{t=1}^{T} \frac{\partial \mathcal{L}}{\partial h_T}
+      \underbrace{\prod_{k=t}^{T-1}
+        \frac{\partial h_{k+1}}{\partial h_k}}_{\text{product of }T-t\text{ Jacobians}}
+      \frac{\partial h_t}{\partial W}.
+  \label{eq:bptt}
+\end{equation}
+
+If the spectral norm of each Jacobian $\tfrac{\partial h_{k+1}}{\partial h_k}$
+is less than 1 (which commonly occurs with $\tanh$ activations when
+$\|W\| < 1$), then for large $T$:
+
+\begin{equation}
+  \prod_{k=t}^{T-1} \left\| \frac{\partial h_{k+1}}{\partial h_k} \right\|
+  \;\longrightarrow\; 0 \quad \text{as } T - t \to \infty.
+  \label{eq:vanishing}
+\end{equation}
+
+This is the \textbf{vanishing gradient problem}: gradients for early
+time steps become negligibly small, making it impossible to learn
+long-range dependencies.
+
+\begin{keyinsight}[title=Unrolled View Explains Vanishing Gradients]
+  The unrolled RNN (slide V05) has \emph{depth} equal to sequence
+  length $T$.  A 391-word review produces an unrolled network 391
+  layers deep.  Just as very deep feedforward networks suffer from
+  vanishing gradients in their early layers, very long RNN sequences
+  lose gradient signal for early time steps.  LSTM (Long Short-Term
+  Memory) solves this by introducing a \emph{cell state} and
+  \emph{gating mechanisms} that allow gradients to flow through long
+  sequences without vanishing.
+\end{keyinsight}
+
+\subsection{Properties of Long Sequences in RNNs}
+\label{subsec:long_seq}
+
+Two further issues arise with long sequences:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Slow processing.}  Because computation is strictly
+        sequential (time step $t+1$ waits for $t$), a 500-word review
+        requires 500 sequential matrix-vector multiplications.
+        Compare this to a Transformer, which processes all positions
+        in parallel.
+  \item \textbf{Context degradation.}  Even without vanishing
+        gradients, the hidden state $h_t$ is a fixed-size vector
+        ($n_h = 64$) that must encode the entire history
+        $[x_0, \ldots, x_{t-1}]$.  For very long sequences, the
+        ``memory'' of the earliest tokens is overwritten by later ones.
+\end{enumerate}
+
+The instructor addressed a student's question about building a
+question-answering system from a 100-page PDF using RNNs:
+
+\begin{itemize}
+  \item Possible in principle: convert the PDF to a structured dataset
+        (e.g.\ one row per paragraph), then train a sequence-to-sequence
+        RNN.
+  \item Not ideal: RNNs struggle with the very long context of an entire
+        book, and modern systems (RAG + large language models) perform
+        significantly better on such tasks.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparison of RNN Variants}
+\label{sec:rnn_variants}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Cref{tab:rnn_variants} compares the vanilla RNN introduced in this
+session with the more advanced architectures (LSTM and GRU) mentioned
+as upcoming topics.
+
+\begin{table}[ht]
+  \centering
+  \caption{Comparison of RNN, LSTM, and GRU architectures.}
+  \label{tab:rnn_variants}
+  \begin{tabularx}{\linewidth}{lXXX}
+    \toprule
+    \textbf{Property} & \textbf{Vanilla RNN} & \textbf{LSTM} & \textbf{GRU} \\
+    \midrule
+    Hidden state & $h_t$ only & $h_t$ + cell state $c_t$ & $h_t$ only \\
+    \addlinespace
+    Gates & None & Input, forget, output (3) & Reset, update (2) \\
+    \addlinespace
+    Vanishing gradient & Severe for long $T$ & Mitigated by cell state & Partially mitigated \\
+    \addlinespace
+    Parameters (per layer) & $d n_h + n_h^2 + 2n_h$ & $4(d n_h + n_h^2 + 2n_h)$ & $3(d n_h + n_h^2 + 2n_h)$ \\
+    \addlinespace
+    Training speed & Fastest & Slowest & Intermediate \\
+    \addlinespace
+    Long-range dependency & Poor & Good & Good \\
+    \addlinespace
+    Best for & Short sequences & Long sequences & Long sequences \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\begin{remark}
+  For the IMDB sentiment task, both LSTM and GRU typically achieve
+  better accuracy than vanilla RNN because movie reviews can be
+  hundreds of words long and sentiment often depends on long-range
+  context (e.g.\ a negation at the start of the review).
+\end{remark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Summary and Conclusion}
+\label{sec:summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{What Was Covered}
+\label{subsec:covered}
+
+Session~18 covered the following material:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{L2 Regularisation Review.}  Both forms
+        ($\lambda \sum w^2$ and $\tfrac{\lambda}{2} \sum w^2$) are
+        mathematically valid; the $\tfrac{1}{2}$ factor is a
+        convenience that simplifies the gradient.
+
+  \item \textbf{RNN Architectural Motivation.}  The key change from
+        ANN to RNN is the recurrent connection that feeds the previous
+        hidden state $h_{t-1}$ as an additional input at each time
+        step $t$.  This gives the network an explicit ``memory'' of the
+        sequence so far.
+
+  \item \textbf{Text Pre-Processing Pipeline.}  A five-stage pipeline
+        was implemented: lower-casing, punctuation removal,
+        tokenisation, vocabulary construction (with \texttt{<PAD>} and
+        \texttt{<UNK>}), and text-to-index mapping.  The IMDB
+        5\,000-sample vocabulary contained 75\,509 unique tokens.
+
+  \item \textbf{PyTorch Dataset and DataLoader.}  A custom
+        \texttt{IMDBDataset} class was created following the standard
+        PyTorch pattern, with \texttt{batch\_size = 1} to avoid padding.
+
+  \item \textbf{SimpleRNN Model.}  The model comprises three layers:
+        \texttt{nn.Embedding}($V$, 100),
+        \texttt{nn.RNN}(100, 64, \texttt{batch\_first=True}), and
+        \texttt{nn.Linear}(64, 1).  The embedding layer converts sparse
+        one-hot vectors to dense 100-dimensional representations,
+        reducing parameter count by $\approx 750\times$.
+
+  \item \textbf{Forward Pass Mechanics.}  The RNN processes the embedded
+        sequence token by token.  After the final token, the hidden
+        state $h_T \in \mathbb{R}^{64}$ encodes the entire sequence
+        and is fed to the linear layer for binary classification.
+
+  \item \textbf{Training Loop.}  \texttt{BCEWithLogitsLoss} +
+        Adam optimiser; 10 epochs on 5\,000 samples.  Loss decreased
+        monotonically, confirming correct implementation.
+
+  \item \textbf{Vanishing Gradient and LSTM Motivation.}  The unrolled
+        RNN at depth $T$ suffers from vanishing gradients because
+        gradient products shrink exponentially.  LSTM addresses this
+        with a gated cell state; GRU uses a simplified two-gate design.
+\end{enumerate}
+
+\subsection{Key Equations}
+\label{subsec:key_equations}
+
+For quick reference, the three core equations from this session:
+
+\begin{align}
+  \text{Hidden state update:} &\quad
+    h_t = \tanh(W h_{t-1} + U x_t + b)
+    \label{eq:hidden_summary} \\
+  \text{Output at } t=3: &\quad
+    O_3 = f(W \cdot O_2 + U \cdot X_3)
+    \label{eq:o3_summary} \\
+  \text{Binary cross-entropy loss:} &\quad
+    \mathcal{L} = -\bigl[y \log \sigma(\hat{y})
+                       + (1-y)\log(1-\sigma(\hat{y}))\bigr]
+    \label{eq:bce_summary}
+\end{align}
+
+\subsection{Looking Ahead}
+\label{subsec:ahead}
+
+The next session will introduce \textbf{Long Short-Term Memory (LSTM)}
+networks.  Key topics to anticipate:
+
+\begin{itemize}[noitemsep]
+  \item The cell state $c_t$ as a ``conveyor belt'' for long-range information.
+  \item The forget gate, input gate, and output gate.
+  \item How LSTM mitigates the vanishing gradient problem.
+  \item PyTorch implementation using \texttt{nn.LSTM}.
+\end{itemize}
+
+Students were encouraged to practise by:
+\begin{enumerate}[noitemsep,label=(\roman*)]
+  \item Printing the output of every layer in the notebook to verify
+        shapes at each stage.
+  \item Extending the training to the full 50\,000-sample dataset and
+        comparing accuracy.
+  \item Replacing the embedding with pre-trained GloVe vectors and
+        observing any accuracy improvement.
+\end{enumerate}
+
+\begin{keyinsight}[title=The Big Picture]
+  The RNN family -- from the vanilla network in this session through
+  LSTM and GRU -- all share the fundamental design principle of
+  \cref{eq:rnn_update}: a hidden state that is updated at each time
+  step by combining the current input with the previous hidden state.
+  Every subsequent innovation (LSTM gates, attention mechanisms,
+  Transformers) can be understood as a solution to specific limitations
+  of this basic recurrence.
+\end{keyinsight}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% References / Resources
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Session Resources}
+\addcontentsline{toc}{section}{Session Resources}
+
+\begin{itemize}
+  \item \textbf{Video lecture:}
+        \url{https://vimeo.com/1156130746}
+  \item \textbf{Slide deck (PDF):}
+        \url{https://learning.iiitdwd.ac.in/mod/pdfprotect/view.php?id=1556}
+  \item \textbf{Notebook:} \texttt{RNNClassification.ipynb}
+        (shared via course portal; PyTorch implementation of the
+        IMDB sentiment classifier)
+  \item \textbf{Dataset -- IMDB:}
+        \texttt{datasets.load\_dataset("imdb")} via HuggingFace, or
+        download from Kaggle
+  \item \textbf{Dataset -- Shakespeare:}
+        \texttt{kylehobbsdev/shakespeare-dataset-of-500-shakespeare-plays}
+        on Kaggle Hub
+\end{itemize}
+
+\end{document}
