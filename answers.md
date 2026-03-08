@@ -6,7 +6,7 @@
 
 ```mermaid
 graph LR
-    A[Supervised Learning] --> B[Labeled Data<br/>X → Y]
+    A[Supervised Learning] --> B[Labeled Data<br/>X to Y]
     A --> C[Ex: Classification,<br/>Regression]
     
     D[Unsupervised Learning] --> E[Unlabeled Data<br/>Only X]
@@ -15,7 +15,7 @@ graph LR
 
 | Type | Definition | Example |
 |------|------------|---------|
-| **Supervised** | Learning with labeled input-output pairs (X,y) | MNIST digit classification: Image → Digit label |
+| **Supervised** | Learning with labeled input-output pairs (X,y) | MNIST digit classification: Image to Digit label |
 | **Unsupervised** | Finding patterns in unlabeled data | K-means clustering customer segments |
 
 ---
@@ -39,7 +39,7 @@ $$\mathcal{L}(\hat{y}, y) = \text{difference metric}$$
 
 ```mermaid
 graph TD
-    A[Overfitting] --> B[Training Error ↓<br/>Test Error ↑]
+    A[Overfitting] --> B[Training Error down<br/>Test Error up]
     B --> C[Model memorizes<br/>instead of generalizing]
     
     D[Solutions] --> E[Dropout<br/>Randomly drop neurons]
@@ -59,9 +59,9 @@ graph TD
 
 ```mermaid
 graph LR
-    A[Forward Pass<br/>Input → Output] --> B[Compute Loss<br/>L = f(ŷ,y)]
-    B --> C[Backward Pass<br/>∂L/∂w via Chain Rule]
-    C --> D[Update Weights<br/>w ← w - η∇L]
+    A[Forward Pass<br/>Input to Output] --> B[Compute Loss<br/>L = f of y-hat comma y]
+    B --> C[Backward Pass<br/>dL/dw via Chain Rule]
+    C --> D[Update Weights<br/>w = w - eta * grad L]
 ```
 
 **Backpropagation:** Algorithm to compute gradients by propagating error backwards through network.
@@ -78,24 +78,31 @@ $$\frac{\partial L}{\partial w_1} = \frac{\partial L}{\partial z_3} \cdot \frac{
 
 ### C1. CNN Pipeline [5]
 
-```mermaid
-graph LR
-    A[Input Image<br/>32×32×3] --> B[Conv + ReLU<br/>Filters extract features]
-    B --> C[Pooling<br/>Downsample 2×2]
-    C --> D[Conv + ReLU<br/>Higher-level features]
-    D --> E[Pooling]
-    E --> F[Flatten<br/>3D → 1D]
-    F --> G[FC Layers<br/>Classification]
-    G --> H[Softmax<br/>Class probabilities]
+```
+Input Image (32x32x3)
+        |
+  Conv + ReLU          <- filters extract low-level features (edges, colours)
+        |
+  MaxPool (2x2)        <- halve spatial dimensions
+        |
+  Conv + ReLU          <- filters extract higher-level features
+        |
+  MaxPool (2x2)        <- halve again
+        |
+  Flatten              <- reshape 3-D feature maps -> 1-D vector
+        |
+  FC Layers            <- learn class-discriminative combinations
+        |
+  Softmax              -> class probabilities
 ```
 
 | Component | Purpose | Parameters |
 |-----------|---------|------------|
-| **Convolution** | Feature extraction via filters | Weights $W_{k×k}$ |
+| **Convolution** | Feature extraction via filters | Weights W_{kxk} |
 | **Stride** | Step size for filter movement | s=1 or s=2 |
 | **Padding** | Border pixels to preserve size | p=(k-1)/2 |
-| **Pooling** | Spatial downsampling | 2×2 max pool |
-| **Flatten** | Convert 3D → 1D vector | No parameters |
+| **Pooling** | Spatial downsampling | 2x2 max pool |
+| **Flatten** | Convert 3D to 1D vector | No parameters |
 | **FC Layer** | Final classification | Weights + bias |
 
 **Why CNNs work for images:**
@@ -111,16 +118,25 @@ $$n_{out} = \left\lfloor\frac{n + 2p - k}{s}\right\rfloor + 1$$
 ### C2. Transformer Architecture [5]
 
 ```mermaid
-graph TB
-    A[Input Tokens] --> B[Positional<br/>Encoding<br/>sin/cos position info]
-    B --> C[Self-Attention<br/>Q, K, V matrices]
-    C --> D[Multi-Head<br/>Attention<br/>Parallel attention]
-    D --> E[Feed-Forward<br/>Layer]
-    E --> F[Output]
-    
-    G[Why Better<br/>than RNN?] --> H[Parallel<br/>Processing]
-    G --> I[Long-Range<br/>Dependencies]
-    G --> J[No Vanishing<br/>Gradient]
+flowchart TB
+    subgraph ENC["Encoder Block (xN)"]
+        E1["Input Embeddings + Positional Encoding"]
+        E1 --> MHA["Multi-Head Self-Attention"]
+        MHA --> AN1["Add and Norm"]
+        AN1 --> FFN["Feed-Forward Network"]
+        FFN --> AN2["Add and Norm"]
+    end
+    subgraph DEC["Decoder Block (xN)"]
+        D1["Output Embeddings + Positional Encoding"]
+        D1 --> MMHA["Masked Multi-Head Self-Attention"]
+        MMHA --> AN3["Add and Norm"]
+        AN3 --> MHA2["Cross-Attention Enc-Dec"]
+        MHA2 --> AN4["Add and Norm"]
+        AN4 --> FFN2["Feed-Forward Network"]
+        FFN2 --> AN5["Add and Norm"]
+    end
+    AN2 -->|"Key, Value"| MHA2
+    AN5 --> LIN["Linear + Softmax Output"]
 ```
 
 **Core Components:**
@@ -135,8 +151,8 @@ graph TB
 
 | Feature | RNN | Transformer |
 |---------|-----|-------------|
-| **Parallelization** | ❌ Sequential | ✅ Fully parallel |
-| **Long Dependencies** | ❌ Vanishing gradient | ✅ Direct attention |
+| **Parallelization** | Sequential | Fully parallel |
+| **Long Dependencies** | Vanishing gradient | Direct attention |
 | **Training Speed** | Slow | Fast (GPU-friendly) |
 
 **Attention Mechanism:**
