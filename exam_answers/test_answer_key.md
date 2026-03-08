@@ -1,6 +1,6 @@
 # Deep Learning — Test Answer Key
 
-> **Format guide**: Diagrams -> Mermaid | Math -> LaTeX | Tables -> Markdown
+> **Format guide**: Diagrams → Mermaid | Math → LaTeX | Tables → Markdown
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Feature | Supervised | Unsupervised |
 |---|---|---|
-| **Labels** | Required | None |
+| **Labels** | ✅ Required | ❌ None |
 | **Goal** | Learn mapping $f: X \to Y$ | Discover hidden structure |
 | **Output** | Class / Value | Cluster / Embedding |
 | **Examples** | Image classification, Regression | K-Means, Autoencoders |
@@ -49,7 +49,7 @@ $$\text{Unsupervised: minimise } \mathcal{L}(x, \hat{x}) \text{ or maximise clus
 ```mermaid
 flowchart LR
     Pred["Prediction y-hat"] & True["True Label y"] --> Loss["Loss L(y-hat, y)"]
-    Loss --> Grad["Gradient dL/d-theta"]
+    Loss --> Grad["Gradient dL/dtheta"]
     Grad --> Update["theta = theta - eta * grad L"]
 ```
 
@@ -64,7 +64,7 @@ flowchart LR
 ```mermaid
 graph LR
     subgraph Fit["Model Complexity"]
-        U["Underfitting high bias"] --> G["Good Fit"] --> O["Overfitting high variance"]
+        U["Underfitting\nhigh bias"] --> G["Good Fit"] --> O["Overfitting\nhigh variance"]
     end
 ```
 
@@ -78,7 +78,7 @@ graph LR
 
 $$\mathcal{L}_{\text{reg}} = \mathcal{L} + \frac{\lambda}{2}\|\theta\|^2$$
 
-- Penalises large weights -> forces simpler model
+- Penalises large weights → forces simpler model
 - $\lambda$ controls strength
 
 #### Technique 2 — Dropout
@@ -87,12 +87,12 @@ $$\tilde{h}_i = h_i \cdot \text{Bernoulli}(p) \quad \text{(during training)}$$
 
 ```
 Hidden layer          Next layer
-  h1  -------------->
-  h2  ---- DROPPED X
-  h3  -------------->  (activations)
-  h4  ---- DROPPED X
+  h1  ──────────────►
+  h2  ──── DROPPED ✗
+  h3  ──────────────►  (activations)
+  h4  ──── DROPPED ✗
 
-  p = 0.5 -> each neuron kept with probability 0.5
+  p = 0.5 → each neuron kept with probability 0.5
   At test time: all neurons active, weights scaled by p
 ```
 
@@ -100,7 +100,7 @@ Hidden layer          Next layer
 
 ### B2 · Backpropagation & Chain Rule
 
-> **Backpropagation** efficiently computes $\frac{\partial \mathcal{L}}{\partial \theta}$ for every parameter by applying the **chain rule** in reverse through the network.
+> **Backpropagation** efficiently computes the gradient of the loss for every parameter by applying the **chain rule** in reverse through the network.
 
 #### Chain Rule (core idea)
 
@@ -112,21 +112,21 @@ where $z = wx + b$, $a = \sigma(z)$.
 
 ```mermaid
 flowchart LR
-    x["x"] --> z1["z1=W1*x+b1"] --> a1["a1=sigma(z1)"]
-    a1 --> z2["z2=W2*a1+b2"] --> a2["a2=sigma(z2)"]
+    x["x"] --> z1["z1 = W1*x + b1"] --> a1["a1 = sigma(z1)"]
+    a1 --> z2["z2 = W2*a1 + b2"] --> a2["a2 = sigma(z2)"]
     a2 --> L["Loss"]
 
     L -->|"dL/da2"| da2["delta2"]
     da2 -->|"dL/dW2"| dW2["grad W2"]
-    da2 -->|"dL/da1 chain"| da1["delta1"]
+    da2 -->|"dL/da1 (chain)"| da1["delta1"]
     da1 -->|"dL/dW1"| dW1["grad W1"]
 ```
 
 | Step | Direction | Purpose |
 |---|---|---|
-| Forward Pass | $x \to \hat{y}$ | Compute predictions & loss |
-| Backward Pass | $\hat{y} \to x$ | Compute gradients via chain rule |
-| Update | — | $\theta \leftarrow \theta - \eta \nabla_\theta \mathcal{L}$ |
+| Forward Pass | x to y-hat | Compute predictions & loss |
+| Backward Pass | y-hat to x | Compute gradients via chain rule |
+| Update | — | theta = theta - eta * grad L |
 
 **Why chain rule is essential**: Layers are composed functions. Without the chain rule there is no way to propagate error signals back through multiple non-linear transformations.
 
@@ -138,29 +138,14 @@ flowchart LR
 
 ### C1 · CNN Pipeline for Image Classification
 
-```
-Input Image (HxWxC)
-        |
-  Conv Layer          <- filters, stride, padding
-        |
-  Activation (ReLU)
-        |
-  Pooling (Max/Avg)   <- reduce spatial size
-        |
-  [Conv -> ReLU -> Pool]  <- repeat N times for deeper features
-        |
-  Flatten (HxWxF -> vector)
-        |
-  Fully-Connected Layers
-        |
-  Softmax -> Class Probabilities
-```
+![CNN Architecture — LeNet (LeCun et al. 1998)](https://d2l.ai/_images/lenet.svg)
+*Source: D2L.ai — LeNet-style CNN architecture (LeCun et al. 1998)*
 
 #### Key Operations
 
 | Operation | Formula / Description |
 |---|---|
-| Convolution | $(I * K)_{i,j} = \sum_m \sum_n I_{i+m, j+n} \cdot K_{m,n}$ |
+| Convolution | $(\mathbf{I} * \mathbf{K})_{i,j} = \sum_m \sum_n \mathbf{I}_{i+m,\, j+n} \cdot \mathbf{K}_{m,n}$ |
 | Output size | $O = \dfrac{W - F + 2P}{S} + 1$ |
 | Stride $S$ | Step size of filter movement |
 | Padding $P$ | Zero-border added to preserve spatial size |
@@ -179,33 +164,14 @@ graph TD
 
 - **Local connectivity** — each neuron sees a small patch
 - **Parameter sharing** — same weights detect the same feature anywhere
-- **Hierarchical features** — early layers: edges -> deeper layers: shapes -> objects
+- **Hierarchical features** — early layers: edges → deeper layers: shapes → objects
 
 ---
 
 ### C2 · Transformer Architecture
 
-```mermaid
-flowchart TB
-    subgraph ENC["Encoder Block (xN)"]
-        E1["Input Embeddings + Positional Encoding"]
-        E1 --> MHA["Multi-Head Self-Attention"]
-        MHA --> AN1["Add and Norm"]
-        AN1 --> FFN["Feed-Forward Network"]
-        FFN --> AN2["Add and Norm"]
-    end
-    subgraph DEC["Decoder Block (xN)"]
-        D1["Output Embeddings + Positional Encoding"]
-        D1 --> MMHA["Masked Multi-Head Self-Attention"]
-        MMHA --> AN3["Add and Norm"]
-        AN3 --> MHA2["Cross-Attention Enc-Dec"]
-        MHA2 --> AN4["Add and Norm"]
-        AN4 --> FFN2["Feed-Forward Network"]
-        FFN2 --> AN5["Add and Norm"]
-    end
-    AN2 -->|"Key, Value"| MHA2
-    AN5 --> LIN["Linear + Softmax Output"]
-```
+![Transformer Architecture — Vaswani et al. 2017](https://d2l.ai/_images/transformer.svg)
+*Source: D2L.ai — Transformer architecture (Vaswani et al. 2017, "Attention Is All You Need")*
 
 #### Self-Attention
 
@@ -218,13 +184,16 @@ $$\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\r
 | $V$ | Value matrix ($n \times d_v$) |
 | $d_k$ | Dimension of keys (scaling factor) |
 
-#### Multi-Head Attention Intuition
+#### Multi-Head Attention
+
+![Multi-Head Attention — Vaswani et al. 2017](https://d2l.ai/_images/multi-head-attention.svg)
+*Source: D2L.ai — Multi-head attention mechanism*
 
 $$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O$$
 
 $$\text{head}_i = \text{Attention}(QW_i^Q,\; KW_i^K,\; VW_i^V)$$
 
-- Each head attends to **different aspects** of the sequence (syntax, semantics, co-reference)
+- Each head attends to **different aspects** of the sequence (syntax, semantics, co-reference…)
 
 #### Positional Encoding
 
@@ -236,8 +205,8 @@ $$PE_{(pos,\, 2i)} = \sin\!\left(\frac{pos}{10000^{2i/d}}\right), \quad PE_{(pos
 
 | Feature | RNN / LSTM | Transformer |
 |---|---|---|
-| **Parallelism** | Sequential (time steps) | All positions at once |
-| **Long-range deps** | Vanishing gradient | Direct attention |
+| **Parallelism** | ❌ Sequential (time steps) | ✅ All positions at once |
+| **Long-range deps** | ⚠️ Vanishing gradient | ✅ Direct attention |
 | **Training speed** | Slow (no GPU parallelism) | Fast |
 | **Context window** | Limited by memory | Fixed but large |
 | **Complexity** | $O(n \cdot d^2)$ | $O(n^2 \cdot d)$ |
