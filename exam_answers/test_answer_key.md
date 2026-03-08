@@ -1,6 +1,6 @@
 # Deep Learning — Test Answer Key
 
-> **Format guide**: Diagrams → Mermaid | Math → LaTeX | Tables → Markdown
+> **Format guide**: Diagrams -> Mermaid | Math -> LaTeX | Tables -> Markdown
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Feature | Supervised | Unsupervised |
 |---|---|---|
-| **Labels** | ✅ Required | ❌ None |
+| **Labels** | Required | None |
 | **Goal** | Learn mapping $f: X \to Y$ | Discover hidden structure |
 | **Output** | Class / Value | Cluster / Embedding |
 | **Examples** | Image classification, Regression | K-Means, Autoencoders |
@@ -48,9 +48,9 @@ $$\text{Unsupervised: minimise } \mathcal{L}(x, \hat{x}) \text{ or maximise clus
 
 ```mermaid
 flowchart LR
-    Pred["Prediction ŷ"] & True["True Label y"] --> Loss["Loss ℒ(ŷ, y)"]
-    Loss --> Grad["Gradient ∂ℒ/∂θ"]
-    Grad --> Update["θ ← θ − η∇ℒ"]
+    Pred["Prediction y-hat"] & True["True Label y"] --> Loss["Loss L(y-hat, y)"]
+    Loss --> Grad["Gradient dL/d-theta"]
+    Grad --> Update["theta = theta - eta * grad L"]
 ```
 
 ---
@@ -64,7 +64,7 @@ flowchart LR
 ```mermaid
 graph LR
     subgraph Fit["Model Complexity"]
-        U["Underfitting\nhigh bias"] --> G["Good Fit"] --> O["Overfitting\nhigh variance"]
+        U["Underfitting high bias"] --> G["Good Fit"] --> O["Overfitting high variance"]
     end
 ```
 
@@ -78,22 +78,22 @@ graph LR
 
 $$\mathcal{L}_{\text{reg}} = \mathcal{L} + \frac{\lambda}{2}\|\theta\|^2$$
 
-- Penalises large weights → forces simpler model  
+- Penalises large weights -> forces simpler model
 - $\lambda$ controls strength
 
 #### Technique 2 — Dropout
 
 $$\tilde{h}_i = h_i \cdot \text{Bernoulli}(p) \quad \text{(during training)}$$
 
-```mermaid
-flowchart LR
-    H1["h₁"] & H2["h₂"] & H3["h₃"] & H4["h₄"]
-    H1 -->|kept| N
-    H2 -->|"dropped ✗"| X:::drop
-    H3 -->|kept| N
-    H4 -->|"dropped ✗"| Y:::drop
-    N["Next Layer"]
-    classDef drop fill:#f88,stroke:#f00
+```
+Hidden layer          Next layer
+  h1  -------------->
+  h2  ---- DROPPED X
+  h3  -------------->  (activations)
+  h4  ---- DROPPED X
+
+  p = 0.5 -> each neuron kept with probability 0.5
+  At test time: all neurons active, weights scaled by p
 ```
 
 ---
@@ -112,14 +112,14 @@ where $z = wx + b$, $a = \sigma(z)$.
 
 ```mermaid
 flowchart LR
-    x["x"] --> z1["z¹=W¹x+b¹"] --> a1["a¹=σ(z¹)"]
-    a1 --> z2["z²=W²a¹+b²"] --> a2["a²=σ(z²)"]
-    a2 --> L["ℒ"]
+    x["x"] --> z1["z1=W1*x+b1"] --> a1["a1=sigma(z1)"]
+    a1 --> z2["z2=W2*a1+b2"] --> a2["a2=sigma(z2)"]
+    a2 --> L["Loss"]
 
-    L -->|"∂ℒ/∂a²"| da2["δ²"]
-    da2 -->|"∂ℒ/∂W²"| dW2["∇W²"]
-    da2 -->|"∂ℒ/∂a¹ (chain)"| da1["δ¹"]
-    da1 -->|"∂ℒ/∂W¹"| dW1["∇W¹"]
+    L -->|"dL/da2"| da2["delta2"]
+    da2 -->|"dL/dW2"| dW2["grad W2"]
+    da2 -->|"dL/da1 chain"| da1["delta1"]
+    da1 -->|"dL/dW1"| dW1["grad W1"]
 ```
 
 | Step | Direction | Purpose |
@@ -138,22 +138,29 @@ flowchart LR
 
 ### C1 · CNN Pipeline for Image Classification
 
-```mermaid
-flowchart LR
-    IMG["Input Image\nH×W×C"] --> CONV["Conv Layer\n(filters, stride, padding)"]
-    CONV --> ACT["Activation\nReLU"]
-    ACT --> POOL["Pooling\nMax/Avg"]
-    POOL --> CONV
-    POOL --> FLAT["Flatten\nH×W×F → vector"]
-    FLAT --> FC["Fully-Connected\nLayers"]
-    FC --> SOFT["Softmax → Class Probabilities"]
+```
+Input Image (HxWxC)
+        |
+  Conv Layer          <- filters, stride, padding
+        |
+  Activation (ReLU)
+        |
+  Pooling (Max/Avg)   <- reduce spatial size
+        |
+  [Conv -> ReLU -> Pool]  <- repeat N times for deeper features
+        |
+  Flatten (HxWxF -> vector)
+        |
+  Fully-Connected Layers
+        |
+  Softmax -> Class Probabilities
 ```
 
 #### Key Operations
 
 | Operation | Formula / Description |
 |---|---|
-| Convolution | $(\mathbf{I} * \mathbf{K})_{i,j} = \sum_m \sum_n \mathbf{I}_{i+m,\, j+n} \cdot \mathbf{K}_{m,n}$ |
+| Convolution | $(I * K)_{i,j} = \sum_m \sum_n I_{i+m, j+n} \cdot K_{m,n}$ |
 | Output size | $O = \dfrac{W - F + 2P}{S} + 1$ |
 | Stride $S$ | Step size of filter movement |
 | Padding $P$ | Zero-border added to preserve spatial size |
@@ -170,9 +177,9 @@ graph TD
     C --> D["Generalises to unseen positions"]
 ```
 
-- **Local connectivity** — each neuron sees a small patch  
-- **Parameter sharing** — same weights detect the same feature anywhere  
-- **Hierarchical features** — early layers: edges → deeper layers: shapes → objects
+- **Local connectivity** — each neuron sees a small patch
+- **Parameter sharing** — same weights detect the same feature anywhere
+- **Hierarchical features** — early layers: edges -> deeper layers: shapes -> objects
 
 ---
 
@@ -180,24 +187,24 @@ graph TD
 
 ```mermaid
 flowchart TB
-    subgraph ENC["Encoder Block (×N)"]
+    subgraph ENC["Encoder Block (xN)"]
         E1["Input Embeddings + Positional Encoding"]
         E1 --> MHA["Multi-Head Self-Attention"]
-        MHA --> AN1["Add & Norm"]
+        MHA --> AN1["Add and Norm"]
         AN1 --> FFN["Feed-Forward Network"]
-        FFN --> AN2["Add & Norm"]
+        FFN --> AN2["Add and Norm"]
     end
-    subgraph DEC["Decoder Block (×N)"]
+    subgraph DEC["Decoder Block (xN)"]
         D1["Output Embeddings + Positional Encoding"]
         D1 --> MMHA["Masked Multi-Head Self-Attention"]
-        MMHA --> AN3["Add & Norm"]
-        AN3 --> MHA2["Cross-Attention (Enc-Dec)"]
-        MHA2 --> AN4["Add & Norm"]
+        MMHA --> AN3["Add and Norm"]
+        AN3 --> MHA2["Cross-Attention Enc-Dec"]
+        MHA2 --> AN4["Add and Norm"]
         AN4 --> FFN2["Feed-Forward Network"]
-        FFN2 --> AN5["Add & Norm"]
+        FFN2 --> AN5["Add and Norm"]
     end
     AN2 -->|"Key, Value"| MHA2
-    AN5 --> LIN["Linear + Softmax → Output"]
+    AN5 --> LIN["Linear + Softmax Output"]
 ```
 
 #### Self-Attention
@@ -217,7 +224,7 @@ $$\text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W
 
 $$\text{head}_i = \text{Attention}(QW_i^Q,\; KW_i^K,\; VW_i^V)$$
 
-- Each head attends to **different aspects** of the sequence (syntax, semantics, co-reference…)
+- Each head attends to **different aspects** of the sequence (syntax, semantics, co-reference)
 
 #### Positional Encoding
 
@@ -229,8 +236,8 @@ $$PE_{(pos,\, 2i)} = \sin\!\left(\frac{pos}{10000^{2i/d}}\right), \quad PE_{(pos
 
 | Feature | RNN / LSTM | Transformer |
 |---|---|---|
-| **Parallelism** | ❌ Sequential (time steps) | ✅ All positions at once |
-| **Long-range deps** | ⚠️ Vanishing gradient | ✅ Direct attention |
+| **Parallelism** | Sequential (time steps) | All positions at once |
+| **Long-range deps** | Vanishing gradient | Direct attention |
 | **Training speed** | Slow (no GPU parallelism) | Fast |
 | **Context window** | Limited by memory | Fixed but large |
 | **Complexity** | $O(n \cdot d^2)$ | $O(n^2 \cdot d)$ |
