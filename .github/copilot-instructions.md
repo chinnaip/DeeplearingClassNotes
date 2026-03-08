@@ -58,35 +58,102 @@ these are raw session recordings and may contain informal or imprecise language.
 
 ---
 
-## Diagram Rules
+## Diagram Strategy — Priority Order
 
-| Content type | Format | Notes |
-|---|---|---|
-| Simple flows (training loop, forward/backward pass, supervised vs unsupervised) | Mermaid `flowchart LR` or `flowchart TD` | Works well on GitHub |
-| Transformer encoder/decoder architecture | Mermaid `flowchart TB` with `subgraph` blocks | Valid pattern — keep it |
-| CNN layer stacks | **ASCII art** | Required — Mermaid cannot handle layer cycles |
-| RNN/LSTM/GRU layer diagrams | **ASCII art** | Gate equations are better shown as math |
-| Parameter sharing / hierarchy diagrams | Mermaid `graph TD` simple chain | OK for 4-node linear chains |
+For every architecture or concept diagram, follow this waterfall. Stop at the first option that works.
 
-### Mermaid — what to avoid
+### Priority 1 — Embed a real image from the web (BEST)
 
-- **No cycle arrows**: patterns like `POOL --> CONV` where an earlier node is a target will cause
-  a "Diagram syntax error" on github.com. Never create cycles in Mermaid.
-- **No `classDef` + `:::` syntax**: `classDef foo fill:#f88` with `node:::foo` is not supported
-  in all GitHub Mermaid versions. Use plain nodes instead.
-- **No long Unicode math strings in node labels**: avoid `∂ℒ/∂W²` inside `[ ]` labels;
-  use short descriptive text and put the math below the diagram in a `$$` block.
+Search the web for a canonical, well-known diagram of the architecture by name and original author/paper.
+If a stable, publicly accessible image URL exists (Wikipedia, papers with code, original paper figures,
+Wikimedia Commons, CS231n, D2L.ai, distill.pub, etc.), embed it directly:
 
-### ASCII art layer stack pattern (CNN example)
+```
+![CNN Architecture — LeCun et al. 1998](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Typical_cnn.png/800px-Typical_cnn.png)
+*Source: LeCun et al. (1998) — LeNet architecture*
+```
+
+**Known canonical image sources to search first:**
+
+| Architecture | Search query / known source |
+|---|---|
+| CNN (LeNet) | "LeNet architecture diagram Wikimedia" or LeCun 1998 figure |
+| CNN (general) | CS231n Stanford — "typical CNN architecture" |
+| LSTM cell | "LSTM cell diagram Wikimedia" / Colah's blog (colah.github.io) |
+| GRU cell | "GRU diagram" — Cho et al. 2014 / Wikimedia |
+| Transformer | "Transformer architecture Vaswani 2017" — original paper Fig 1, or d2l.ai |
+| Attention mechanism | Bahdanau 2014 / distill.pub "attention" |
+| Encoder-Decoder | Sutskever 2014 seq2seq figure |
+| ResNet | He et al. 2015 residual block figure |
+| Backpropagation | CS231n backprop diagram |
+| Perceptron / MLP | Wikimedia "multilayer perceptron" |
+
+Rules for embedded images:
+- Prefer Wikimedia Commons, CS231n, D2L.ai, distill.pub — these have stable permanent URLs.
+- Always add a caption with `*Source: Author (Year)*` for attribution.
+- Use `![alt text](URL)` syntax — GitHub renders these natively.
+- Do NOT hotlink from arxiv PDF pages or personal websites that may go offline.
+
+---
+
+### Priority 2 — Hyperlink to a canonical diagram page
+
+If a stable embeddable image URL cannot be confirmed, provide a descriptive hyperlink instead:
+
+```
+**Architecture diagram**: [Transformer — Vaswani et al. 2017, Figure 1](https://arxiv.org/abs/1706.03762)
+
+**Interactive explainer**: [The Illustrated Transformer — Jay Alammar](https://jalammar.github.io/illustrated-transformer/)
+```
+
+**Known canonical reference pages:**
+
+| Architecture | Reference |
+|---|---|
+| Transformer | https://arxiv.org/abs/1706.03762 (Vaswani et al.) |
+| Transformer (visual) | https://jalammar.github.io/illustrated-transformer/ |
+| LSTM | https://colah.github.io/posts/2015-08-Understanding-LSTMs/ |
+| GRU | https://colah.github.io/posts/2015-08-Understanding-LSTMs/ |
+| CNN | https://cs231n.github.io/convolutional-networks/ |
+| Attention | https://distill.pub/2016/augmented-rnns/ |
+| Backpropagation | https://cs231n.github.io/optimization-2/ |
+
+---
+
+### Priority 3 — Mermaid flowchart (simple flows only)
+
+Use Mermaid **only** when the diagram is a simple linear/branching flow with fewer than ~8 nodes.
+Mermaid renders well on GitHub for: training loops, forward/backward pass, supervised vs unsupervised,
+loss computation pipelines, and simple decision flows.
+
+```mermaid
+flowchart LR
+    Input --> Model --> Loss --> Gradient --> Update
+```
+
+**Mermaid — hard rules (violations cause "Diagram syntax error" on GitHub):**
+- No cycle arrows: `A --> B --> A` patterns will fail
+- No `classDef` + `:::` syntax — not supported in GitHub's Mermaid version
+- No long Unicode math in node labels (e.g. `∂ℒ/∂W²`) — use plain short text
+- Max ~8 nodes before layout breaks; for larger graphs use Priority 1 or 2
+
+**When to use Mermaid:**
+- Training loop, forward pass, backprop flow: OK
+- Supervised vs unsupervised comparison: OK
+- Transformer encoder/decoder with subgraphs: OK (tested and works)
+- CNN layer stack, LSTM cell, RNN unroll: NOT OK — use Priority 1 or 2
+
+---
+
+### Priority 4 — ASCII art (LAST RESORT only)
+
+Use ASCII art **only** when all of the above have failed or are unavailable (e.g. offline/air-gapped
+environment, no web access). ASCII is always readable but least visually informative.
 
 ```
 Input (28x28x1)
       |
   Conv2D-32 (3x3, ReLU)   ->  320 params
-      |
-  MaxPool (2x2)            ->    0 params
-      |
-  Conv2D-64 (3x3, ReLU)   ->  18,496 params
       |
   MaxPool (2x2)            ->    0 params
       |
