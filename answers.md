@@ -59,9 +59,9 @@ graph TD
 
 ```mermaid
 graph LR
-    A[Forward Pass<br/>Input to Output] --> B[Compute Loss<br/>L = f of y-hat comma y]
-    B --> C[Backward Pass<br/>dL/dw via Chain Rule]
-    C --> D[Update Weights<br/>w = w - eta * grad L]
+    A[Forward Pass<br/>Input to Output] --> B[Compute Loss]
+    B --> C[Backward Pass<br/>Chain Rule]
+    C --> D[Update Weights]
 ```
 
 **Backpropagation:** Algorithm to compute gradients by propagating error backwards through network.
@@ -78,27 +78,12 @@ $$\frac{\partial L}{\partial w_1} = \frac{\partial L}{\partial z_3} \cdot \frac{
 
 ### C1. CNN Pipeline [5]
 
-```
-Input Image (32x32x3)
-        |
-  Conv + ReLU          <- filters extract low-level features (edges, colours)
-        |
-  MaxPool (2x2)        <- halve spatial dimensions
-        |
-  Conv + ReLU          <- filters extract higher-level features
-        |
-  MaxPool (2x2)        <- halve again
-        |
-  Flatten              <- reshape 3-D feature maps -> 1-D vector
-        |
-  FC Layers            <- learn class-discriminative combinations
-        |
-  Softmax              -> class probabilities
-```
+![CNN Architecture — LeNet (LeCun et al.)](https://d2l.ai/_images/lenet.svg)
+*Source: D2L.ai — LeNet-style CNN architecture (LeCun et al. 1998)*
 
 | Component | Purpose | Parameters |
 |-----------|---------|------------|
-| **Convolution** | Feature extraction via filters | Weights W_{kxk} |
+| **Convolution** | Feature extraction via filters | Weights $W_{k \times k}$ |
 | **Stride** | Step size for filter movement | s=1 or s=2 |
 | **Padding** | Border pixels to preserve size | p=(k-1)/2 |
 | **Pooling** | Spatial downsampling | 2x2 max pool |
@@ -117,27 +102,8 @@ $$n_{out} = \left\lfloor\frac{n + 2p - k}{s}\right\rfloor + 1$$
 
 ### C2. Transformer Architecture [5]
 
-```mermaid
-flowchart TB
-    subgraph ENC["Encoder Block (xN)"]
-        E1["Input Embeddings + Positional Encoding"]
-        E1 --> MHA["Multi-Head Self-Attention"]
-        MHA --> AN1["Add and Norm"]
-        AN1 --> FFN["Feed-Forward Network"]
-        FFN --> AN2["Add and Norm"]
-    end
-    subgraph DEC["Decoder Block (xN)"]
-        D1["Output Embeddings + Positional Encoding"]
-        D1 --> MMHA["Masked Multi-Head Self-Attention"]
-        MMHA --> AN3["Add and Norm"]
-        AN3 --> MHA2["Cross-Attention Enc-Dec"]
-        MHA2 --> AN4["Add and Norm"]
-        AN4 --> FFN2["Feed-Forward Network"]
-        FFN2 --> AN5["Add and Norm"]
-    end
-    AN2 -->|"Key, Value"| MHA2
-    AN5 --> LIN["Linear + Softmax Output"]
-```
+![Transformer Architecture — Vaswani et al. 2017](https://d2l.ai/_images/transformer.svg)
+*Source: D2L.ai — Transformer architecture (Vaswani et al. 2017, "Attention Is All You Need")*
 
 **Core Components:**
 
@@ -146,6 +112,11 @@ flowchart TB
 | **Self-Attention** | Words attend to all other words | $\text{Attention}(Q,K,V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$ |
 | **Multi-Head** | Multiple parallel attention mechanisms | 8-16 heads typical |
 | **Positional Encoding** | Add position information (no recurrence) | $PE_{pos,2i} = \sin(pos/10000^{2i/d})$ |
+
+**Multi-Head Attention:**
+
+![Multi-Head Attention — Vaswani et al. 2017](https://d2l.ai/_images/multi-head-attention.svg)
+*Source: D2L.ai — Multi-head attention mechanism*
 
 **Advantages over RNNs:**
 
